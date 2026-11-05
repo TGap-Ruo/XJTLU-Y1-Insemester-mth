@@ -1,0 +1,6752 @@
+[
+ {
+  "num": 1,
+  "stem": "1. Find the natural domain of log3 (−x 2−3x+28).",
+  "options": [
+   "(−∞,−7)∪(4,∞)",
+   "(−∞,−7)",
+   "None of the other four choices is correct.",
+   "\\[−7,4\\]",
+   "(−7,4)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "(−7,4)"
+ },
+ {
+  "num": 2,
+  "stem": "2. Find the natural domain of log2 (x 2+2x−15).",
+  "options": [
+   "None of the other four choices is correct.",
+   "(−∞,−5)∪(3,∞)",
+   "(−5,3)",
+   "\\[−5,3\\]",
+   "(−∞,−5)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "(−∞,−5)∪(3,∞)"
+ },
+ {
+  "num": 3,
+  "stem": "3. Find the natural domain of log3 (−x 2−10x−16).",
+  "options": [
+   "(−∞,−8)∪(−2,∞)",
+   "(−∞,−8)",
+   "(−8,−2)",
+   "None of the other four choices is correct.",
+   "\\[−8,−2\\]"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "(−8,−2)"
+ },
+ {
+  "num": 4,
+  "stem": "4. Find the natural domain of log3 (−x 2−2x+8).",
+  "options": [
+   "(−∞,−4)∪(2,∞)",
+   "(−∞,−4)",
+   "None of the other four choices is correct.",
+   "(−4,2)",
+   "\\[−4,2\\]"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "(−4,2)"
+ },
+ {
+  "num": 5,
+  "stem": "5. Find the natural domain of log3 (−x 2−7x−6).",
+  "options": [
+   "None of the other four choices is correct.",
+   "(−∞,−6)",
+   "(−∞,−6)∪(−1,∞)",
+   "(−6,−1)",
+   "\\[−6,−1\\]"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "(−6,−1)"
+ },
+ {
+  "num": 6,
+  "stem": "6. Find the natural domain of log3 ( x+5 4x+3 ).",
+  "options": [
+   "(−5,− 3 4 )",
+   "(−∞,−5)∪\\[− 3 4 ,∞)",
+   "(−∞,− 3 4 )∪(− 3 4 ,∞)",
+   "(−∞,−5)∪(− 3 4 ,∞)",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "(−∞,−5)∪(− 3 4 ,∞)"
+ },
+ {
+  "num": 7,
+  "stem": "7. Find the natural domain of log5 ( −3x−5 x+5 ).",
+  "options": [
+   "(−∞,−5)∪(−5,∞)",
+   "(−5,− 5 3 )",
+   "None of the other four choices is correct.",
+   "\\[−5,− 5 3 )",
+   "(−∞,−5)∪(− 5 3 ,∞)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 8,
+  "stem": "8. Find the natural domain of log7 ( −4x−5 x+5 ).",
+  "options": [
+   "(−5,− 5 4 )",
+   "(−∞,−5)∪(−5,∞)",
+   "None of the other four choices is correct.",
+   "(−∞,−5)∪(− 5 4 ,∞)",
+   "(−5,− 5 4 )"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "(−5,− 5 4 )"
+ },
+ {
+  "num": 9,
+  "stem": "9. Find the natural domain of log5 ( −x−6 4x−5 ).",
+  "options": [
+   "(−6, 5 4 )",
+   "\\[−6, 5 4 )",
+   "(−∞, 5 4 )∪( 5 4 ,∞)",
+   "(−∞,−6)∪( 5 4 ,∞)",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 10,
+  "stem": "10. Find the natural domain of log5 ( −x−6 x−2 ).",
+  "options": [
+   "\\[−6,2)",
+   "(−∞,2)∪(2,∞)",
+   "(−6,2)",
+   "(−6,2)",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 10 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "(−6,2)"
+ },
+ {
+  "num": 11,
+  "stem": "11. Let f(x)=3x, g(x)=sec(2x), and x0= π 6 . Find (g∘f)(x0 ).",
+  "options": [
+   "0",
+   "None of the other four choices is correct.",
+   "−1",
+   "1",
+   "π 2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−1"
+ },
+ {
+  "num": 12,
+  "stem": "12. Let f(x)=2−2x 2 , g(x)=cos(3x), and x0= π 6 . Find (f∘g)(x0 ).",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "None of the other four choices is correct.",
+   "1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "2"
+ },
+ {
+  "num": 13,
+  "stem": "13. Let f(x)=2x, g(x)=tan(4x), and x0= π 6 . Find (f∘g)(x0 ).",
+  "options": [
+   "None of the other four choices is correct.",
+   "−2 √3",
+   "2 √3",
+   "2 √3 3",
+   "−√3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−2 √3"
+ },
+ {
+  "num": 14,
+  "stem": "14. Let f(x)=2−2x 2 , g(x)=cos(2x), and x0= π 4 . Find (f∘g)(x0 ).",
+  "options": [
+   "0",
+   "None of the other four choices is correct.",
+   "3",
+   "1",
+   "2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "2"
+ },
+ {
+  "num": 15,
+  "stem": "15. Let f(x)=2x, g(x)=tan(2x), and x0= π 3 . Find (g∘f)(x0 ).",
+  "options": [
+   "−√3",
+   "None of the other four choices is correct.",
+   "3",
+   "√3",
+   "2π 3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "√3"
+ },
+ {
+  "num": 16,
+  "stem": "16. Let f(x)=2−x 2 , g(x)=cos(4x), and x0= 5π 24 . Find (f∘g)(x0 ).",
+  "options": [
+   "5 4",
+   "(√3 +4) 2 4",
+   "None of the other four choices is correct.",
+   "9 4",
+   "√3 2 +2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "5 4"
+ },
+ {
+  "num": 17,
+  "stem": "17. Let f(x)=2x, g(x)=sec(3x), and x0= 5π 18 . Find (f∘g)(x0 ).",
+  "options": [
+   "− 4 √3 3",
+   "None of the other four choices is correct.",
+   "− 2 √3 3",
+   "2",
+   "4 √3 3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "− 4 √3 3"
+ },
+ {
+  "num": 18,
+  "stem": "18. Let f(x)=2−x 2 , g(x)=tan(4x), and x0= 3π 16 . Find (f∘g)(x0 ).",
+  "options": [
+   "3",
+   "1",
+   "9",
+   "0",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "1"
+ },
+ {
+  "num": 19,
+  "stem": "19. Let f(x)=3x, g(x)=tan(x), and x0= π 3 . Find (g∘f)(x0 ).",
+  "options": [
+   "1",
+   "π",
+   "None of the other four choices is correct.",
+   "0",
+   "3 √3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "0"
+ },
+ {
+  "num": 20,
+  "stem": "20. Let f(x)=2−2x 2 , g(x)=sec(x), and x0= π 3 . Find (f∘g)(x0 ).",
+  "options": [
+   "4",
+   "10",
+   "None of the other four choices is correct.",
+   "−6",
+   "−14 参考答案 Answers（本考点 10 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−6"
+ },
+ {
+  "num": 20,
+  "stem": "20. −6\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n1 . 3 反 函 数 及 其 定 义 域 5 题\n2 1 . L e t f (x) = 1 − √ x 3 √ x + 1 . F i n d f− 1 (x) a n d s\n### ta\n### te\n### th\ne d o m a i n o f f− 1.",
+  "options": [
+   "−√x −3 2 √x −1 ; \\[0, 1 4 )∪( 1 4 ,∞)",
+   "None of the other four choices is correct.",
+   "(3x−1)2 (x+2)2 ; \\[0,∞)",
+   "(3x−1)2 (x+2)2 ; (−2, 1 3 )",
+   "(3x+1)2 (x+2)2 ; (−2, 1 3 )",
+   "−√x −3 2 √x −1 ; \\[0, 1 4 )∪( 1 4 ,∞)",
+   "None of the other four choices is correct.",
+   "(3x−1)2 (x+2)2 ; \\[0,∞)",
+   "(3x−1)2 (x+2)2 ; (−2, 1 3 )",
+   "(3x+1)2 (x+2)2 ; (−2, 1 3 )",
+   "−√x −3 2 √x −1 ; \\[0, 1 4 )∪( 1 4 ,∞)",
+   "None of the other four choices is correct.",
+   "(3x−1)2 (x+2)2 ; \\[0,∞)",
+   "(3x−1)2 (x+2)2 ; (−2, 1 3 )",
+   "(3x+1)2 (x+2)2 ; (−2, 1 3 )"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "−6"
+ },
+ {
+  "num": 24,
+  "stem": "24. Let f(x)= 2−√ x\n2 √ x +1 . Find f−1 (x) and state the domain of f−1 .",
+  "options": [
+   "(x−2) 2 (2x+1) 2 ; (− 1 2 ,2)",
+   "None of the other four choices is correct.",
+   "(x−2) 2 (2x+1) 2 ; \\[0,∞)",
+   "(x−2) 2 (2x+1) 2 ; \\[− 1 2 ,2)",
+   "−2 √x −1 √x −2 ; \\[0,4)∪(4,∞)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "(x−2) 2 (2x+1) 2 ; (− 1 2 ,2)"
+ },
+ {
+  "num": 25,
+  "stem": "25. Let f(x)= 2−3 √ x\n2 √ x +3 . Find f−1 (x) and state the domain of f−1 .",
+  "options": [
+   "(3x−2) 2 (2x+3) 2 ; (− 3 2 , 2 3 )",
+   "(3x−2) 2 (2x+3) 2 ; \\[− 3 2 , 2 3 )",
+   "(3x−2) 2 (2x+3) 2 ; \\[0,∞)",
+   "−2 √x −3 3 √x −2 ; \\[0, 4 9 )∪( 4 9 ,∞)",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "(3x−2) 2 (2x+3) 2 ; (− 3 2 , 2 3 )"
+ },
+ {
+  "num": 25,
+  "stem": "25. (3x−2) 2\n(2x+3) 2 ; (− 3 2 , 2 3 )\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n1 . 4 a 反 三 角 化 主 值 （ 同 函 数 ） 15 题\n2 6 .\n### Ev\na l u a\n### te\nc o s − 1 ( c o s ( 3 4 π 7 ) ).",
+  "options": [
+   "− 4π 5",
+   "− π 5",
+   "π 5",
+   "4π 5",
+   "None of the other four ch o i c e s i s c o r r e c t.",
+   "− 4π 5",
+   "− π 5",
+   "π 5",
+   "4π 5",
+   "None of the other four ch o i c e s i s c o r r e c t.",
+   "− 4π 5",
+   "− π 5",
+   "π 5",
+   "4π 5",
+   "None of the other four ch o i c e s i s c o r r e c t."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "(3x−2) 2 (2x+3) 2 ; (− 3 2 , 2 3 )"
+ },
+ {
+  "num": 29,
+  "stem": "29. Evaluate arccos(cos( 9π 7 )).",
+  "options": [
+   "12π 7",
+   "5π 7",
+   "2π 7",
+   "None of the other four choices is correct.",
+   "− 5π 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "5π 7"
+ },
+ {
+  "num": 30,
+  "stem": "30. Evaluate cos−1\n### (cos(\n72π 7 )).",
+  "options": [
+   "− 2π 7",
+   "72π 7",
+   "None of the other four choices is correct.",
+   "5π 7",
+   "2π 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "2π 7"
+ },
+ {
+  "num": 31,
+  "stem": "31. Evaluate sin−1\n### (sin(\n26π 5 )).",
+  "options": [
+   "26π 5",
+   "4π 5",
+   "− π 5",
+   "None of the other four choices is correct.",
+   "6π 5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "− π 5"
+ },
+ {
+  "num": 32,
+  "stem": "32. Evaluate arcsin(sin(− 59π 7 )).",
+  "options": [
+   "4π 7",
+   "None of the other four choices is correct.",
+   "− 59π 7",
+   "− 3π 7",
+   "10π 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "− 3π 7"
+ },
+ {
+  "num": 33,
+  "stem": "33. Evaluate arcsin(sin( 27π 7 )).",
+  "options": [
+   "6π 7",
+   "None of the other four choices is correct.",
+   "π 7",
+   "8π 7",
+   "− π 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "− π 7"
+ },
+ {
+  "num": 34,
+  "stem": "34. Evaluate sin−1\n### (sin(\n48π 7 )).",
+  "options": [
+   "6π 7",
+   "48π 7",
+   "None of the other four choices is correct.",
+   "− π 7",
+   "π 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "π 7"
+ },
+ {
+  "num": 35,
+  "stem": "35. Evaluate arcsin(sin(− 47π 7 )).",
+  "options": [
+   "2π 7",
+   "5π 7",
+   "None of the other four choices is correct.",
+   "9π 7",
+   "− 2π 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "− 2π 7"
+ },
+ {
+  "num": 36,
+  "stem": "36. Evaluate arctan(tan(− 29π 7 )).",
+  "options": [
+   "π 7",
+   "None of the other four choices is correct.",
+   "π 2",
+   "− π 7",
+   "6π 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "− π 7"
+ },
+ {
+  "num": 37,
+  "stem": "37. Evaluate tan−1\n### (tan(\n66π 7 )).",
+  "options": [
+   "− 3π 7",
+   "π 2",
+   "None of the other four choices is correct.",
+   "3π 7",
+   "66π 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "3π 7"
+ },
+ {
+  "num": 38,
+  "stem": "38. Evaluate tan−1\n### (tan(−\n2π 7 )).",
+  "options": [
+   "π 2",
+   "5π 7",
+   "− π 2",
+   "None of the other four choices is correct.",
+   "− 2π 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "− 2π 7"
+ },
+ {
+  "num": 39,
+  "stem": "39. Evaluate arctan(tan(− 7π 5 )).",
+  "options": [
+   "π 2",
+   "− 2π 5",
+   "3π 5",
+   "None of the other four choices is correct.",
+   "− 7π 5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "− 2π 5"
+ },
+ {
+  "num": 40,
+  "stem": "40. Evaluate tan−1\n### (tan(\n20π 7 )).",
+  "options": [
+   "20π 7",
+   "π 7",
+   "− π 7",
+   "None of the other four choices is correct.",
+   "6π 7 参考答案 Answers（本考点 15 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "− π 7"
+ },
+ {
+  "num": 41,
+  "stem": "41. Evaluate arccos(sin(− 23π 5 )).",
+  "options": [
+   "9π 10",
+   "51π 10",
+   "− 9π 10",
+   "None of the other four choices is correct.",
+   "− 2π 5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "9π 10"
+ },
+ {
+  "num": 42,
+  "stem": "42. Evaluate sin−1\n### (cos(−\n8π 7 )).",
+  "options": [
+   "23π 14",
+   "6π 7",
+   "− 8π 7",
+   "None of the other four choices is correct.",
+   "− 5π 14"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "− 5π 14"
+ },
+ {
+  "num": 43,
+  "stem": "43. Evaluate arcsin(cos(− 5π 7 )).",
+  "options": [
+   "None of the other four choices is correct.",
+   "3π 14",
+   "5π 7",
+   "− 3π 14",
+   "17π 14"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "− 3π 14"
+ },
+ {
+  "num": 44,
+  "stem": "44. Evaluate sin−1\n### (cos(\n30π 7 )).",
+  "options": [
+   "3π 14",
+   "2π 7",
+   "None of the other four choices is correct.",
+   "30π 7",
+   "− 53π 14"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "3π 14"
+ },
+ {
+  "num": 45,
+  "stem": "45. Evaluate sin−1\n### (cos(\n24π 7 )).",
+  "options": [
+   "24π 7",
+   "− 41π 14",
+   "4π 7",
+   "None of the other four choices is correct.",
+   "− π 14 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "− π 14"
+ },
+ {
+  "num": 45,
+  "stem": "45. − π 14\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n1 . 4 c 反 三 角 嵌 套 代 数 求 值 5 题\n4 6 .\n### Ev\na l u a\n### te\ns i n ( c o s − 1 ( 2 7 ) ).",
+  "options": [
+   "7 √3 12",
+   "− 7 √3 12",
+   "5 √2 7",
+   "4 √3 7",
+   "None of the other four c h o i c e s i s c o r r e c t.",
+   "7 √3 12",
+   "− 7 √3 12",
+   "5 √2 7",
+   "4 √3 7",
+   "None of the other four c h o i c e s i s c o r r e c t.",
+   "7 √3 12",
+   "− 7 √3 12",
+   "5 √2 7",
+   "4 √3 7",
+   "None of the other four c h o i c e s i s c o r r e c t."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "− π 14"
+ },
+ {
+  "num": 49,
+  "stem": "49. Evaluate sec(tan−1(−4)).",
+  "options": [
+   "√17 17",
+   "None of the other four choices is correct.",
+   "−4",
+   "√17",
+   "−√17"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "√17"
+ },
+ {
+  "num": 50,
+  "stem": "50. Evaluate sec(tan−1 (− 1 4 )).",
+  "options": [
+   "− 1 4",
+   "√17 4",
+   "17 16",
+   "− √17 4",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "√17 4"
+ },
+ {
+  "num": 51,
+  "stem": "51. Define the function:\nf(x)= { −3x−3, x≠−3 15, x=−3 Find limx→−3 f(x).",
+  "options": [
+   "None of the other four choices is correct.",
+   "DNE",
+   "15",
+   "6",
+   "−3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "6"
+ },
+ {
+  "num": 52,
+  "stem": "52. Define the function:\nf(x)= { 6−x, x≠−1\n−8, x=−1 Find limx→−1 f(x).",
+  "options": [
+   "1",
+   "7",
+   "None of the other four choices is correct.",
+   "DNE",
+   "−8"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "7"
+ },
+ {
+  "num": 53,
+  "stem": "53. Define the function:\nf(x)= { 3x+1, x≠1\n−3, x=1 Find limx→1 f(x).",
+  "options": [
+   "4",
+   "None of the other four choices is correct.",
+   "DNE",
+   "3",
+   "−3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "4"
+ },
+ {
+  "num": 54,
+  "stem": "54. Define the function:\nf(x)= { 5−2x, x≠−2\n−3, x=−2 Find limx→−2 f(x).",
+  "options": [
+   "None of the other four choices is correct.",
+   "−3",
+   "4",
+   "9",
+   "5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "9"
+ },
+ {
+  "num": 55,
+  "stem": "55. Define the function:\n### f(x)= {\n−4x−1, x≠3 9, x=3 Find limx→3\n### f(x).",
+  "options": [
+   "−1",
+   "−13",
+   "9",
+   "−12",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−13"
+ },
+ {
+  "num": 56,
+  "stem": "56. Define the function:\n### g(x)= {\n−2x−7, x<−4\n### −2x\n2−4x+17, x>−4 Find limx→−4g(x).",
+  "options": [
+   "None of the other four choices is correct.",
+   "17",
+   "1",
+   "8",
+   "−7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "1"
+ },
+ {
+  "num": 57,
+  "stem": "57. Define the function:\n### g(x)= {\nx−7, x<−3\n### −x\n2+5x+14, x>−3 Find limx→−3g(x).",
+  "options": [
+   "DNE",
+   "−7",
+   "−10",
+   "−3",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−10"
+ },
+ {
+  "num": 58,
+  "stem": "58. Define the function:\n### g(x)= {\n10−x, x<1\n3x 2−2x+8, x>1 Find limx→1g(x).",
+  "options": [
+   "9",
+   "8",
+   "−1",
+   "None of the other four choices is correct.",
+   "DNE"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "9"
+ },
+ {
+  "num": 59,
+  "stem": "59. Define the function:\n### g(x)= {\n−2x−5, x<3 2x 2−x−26, x>3 Find limx→3g(x).",
+  "options": [
+   "None of the other four choices is correct.",
+   "−5",
+   "−6",
+   "−11",
+   "−26"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−11"
+ },
+ {
+  "num": 60,
+  "stem": "60. Define the function:\n### g(x)= {\n19−3x, x<3\n2x 2+3x−17, x>3 Find limx→3g(x).",
+  "options": [
+   "10",
+   "None of the other four choices is correct.",
+   "19",
+   "DNE",
+   "−9 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "10"
+ },
+ {
+  "num": 60,
+  "stem": "60. 10\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n2 . 3 含 绝 对 值 的 极 限 5 题\n6 1 . F i n d\n### th\ne\n### fo\nl l o w i n g l i m i t:\nlimx→−4 3|x+4|\n2x2+17x+36",
+  "options": [
+   "0",
+   "DNE",
+   "− 4 5",
+   "− 5 4",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "0",
+   "DNE",
+   "− 4 5",
+   "− 5 4",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "0",
+   "DNE",
+   "− 4 5",
+   "− 5 4",
+   "None of the other fou r c h o i c e s i s c o r r e c t."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "10"
+ },
+ {
+  "num": 64,
+  "stem": "64. Find the following limit:\nlimx→−1 2|x+1|\n−x2+4x+5",
+  "options": [
+   "3",
+   "None of the other four choices is correct.",
+   "− 1 3",
+   "1 3",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 65,
+  "stem": "65. Find the following limit:\nlimx→−3 3|x+3|\n### −x\n### 2−8x−15",
+  "options": [
+   "0",
+   "− 2 3",
+   "3 2",
+   "None of the other four choices is correct.",
+   "− 3 2 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 66,
+  "stem": "66. Find the following limit:\nlimx→0\n### \\[sin(3−\n3 x )−5\\]",
+  "options": [
+   "−4",
+   "DNE",
+   "−6",
+   "None of the other four choices is correct.",
+   "−5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "DNE"
+ },
+ {
+  "num": 67,
+  "stem": "67. Find the following limit:\nlimx→0 \\[5 sin(2− 2 x )+2\\]",
+  "options": [
+   "12",
+   "DNE",
+   "−3",
+   "None of the other four choices is correct.",
+   "7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "DNE"
+ },
+ {
+  "num": 68,
+  "stem": "68. Find the following limit:\nlimx→0 \\[−5 sin(1− 6 x )−2\\]",
+  "options": [
+   "−7",
+   "None of the other four choices is correct.",
+   "3",
+   "8",
+   "−2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 69,
+  "stem": "69. Find the following limit:\nlimx→0\n### \\[−sin(3+\n4 x )−3\\]",
+  "options": [
+   "−3",
+   "−5",
+   "DNE",
+   "None of the other four choices is correct.",
+   "−4"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "DNE"
+ },
+ {
+  "num": 70,
+  "stem": "70. Find the following limit:\nlimx→0\n### \\[−sin(2−\n5 x )−6\\]",
+  "options": [
+   "None of the other four choices is correct.",
+   "DNE",
+   "−7",
+   "−5",
+   "−6 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "DNE"
+ },
+ {
+  "num": 70,
+  "stem": "70. DNE\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n2 . 5 0/0\n### 型：因\n式 分 解 约 简 10 题\n7 1 . F i n d\n### th\ne\n### fo\nl l o w i n g l i m i t:\nlimx→−5 −3x2−11x+20 x+5",
+  "options": [
+   "0",
+   "−30",
+   "20",
+   "−5",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "0",
+   "−30",
+   "20",
+   "−5",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "0",
+   "−30",
+   "20",
+   "−5",
+   "None of the other fou r c h o i c e s i s c o r r e c t."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "DNE"
+ },
+ {
+  "num": 74,
+  "stem": "74. Find the following limit:\nlimx→−4 3x2+14x+8\n−x2−7x−12",
+  "options": [
+   "10",
+   "−3",
+   "−10",
+   "DNE",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−10"
+ },
+ {
+  "num": 75,
+  "stem": "75. Find the following limit:\nlimx→−2 x 2+3x+2\nx+2",
+  "options": [
+   "DNE",
+   "−1",
+   "3",
+   "0",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−1"
+ },
+ {
+  "num": 76,
+  "stem": "76. Find the following limit:\nlimx→5 4x 2−26x+30\n### −x\n2+13x−40",
+  "options": [
+   "DNE",
+   "14 3",
+   "None of the other four choices is correct.",
+   "3 14",
+   "−4"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "14 3"
+ },
+ {
+  "num": 77,
+  "stem": "77. Find the following limit:\nlimx→−4 2x 2+4x−16\nx+4",
+  "options": [
+   "4",
+   "0",
+   "DNE",
+   "−12",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−12"
+ },
+ {
+  "num": 78,
+  "stem": "78. Find the following limit:\nlimx→−1\n### −4x\n2+x+5\nx+1",
+  "options": [
+   "0",
+   "None of the other four choices is correct.",
+   "DNE",
+   "1",
+   "9"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "9"
+ },
+ {
+  "num": 79,
+  "stem": "79. Find the following limit:\nlimx→4 2x\n### 2−11x+12\n### −2x\n2+5x+12",
+  "options": [
+   "−1",
+   "DNE",
+   "− 11 5",
+   "None of the other four choices is correct.",
+   "− 5 11"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "− 5 11"
+ },
+ {
+  "num": 80,
+  "stem": "80. Find the following limit:\nlimx→2 x 3−8\nx 2−x−2",
+  "options": [
+   "−4",
+   "8 3",
+   "4",
+   "None of the other four choices is correct.",
+   "DNE 参考答案 Answers（本考点 10 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "4"
+ },
+ {
+  "num": 80,
+  "stem": "80. 4\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n2 . 6 连 续 函 数 直 接 代 入 （ 含 根 式 ） 5 题\n8 1 . F i n d\n### th\ne\n### fo\nl l o w i n g l i m i t:\nlimx→3 √ 10−2x\n2x−14",
+  "options": [
+   "6",
+   "−√6",
+   "√6",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "√6 6",
+   "6",
+   "−√6",
+   "√6",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "√6 6",
+   "6",
+   "−√6",
+   "√6",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "√6 6",
+   "6",
+   "−√6",
+   "√6",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "√6 6"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "4"
+ },
+ {
+  "num": 85,
+  "stem": "85. Find the following limit:\nlimx→−3 √ −2x−4\n2x+11",
+  "options": [
+   "√2 5",
+   "− √2 5",
+   "None of the other four choices is correct.",
+   "2 5",
+   "5 √2 2 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "√2 5"
+ },
+ {
+  "num": 86,
+  "stem": "86. Suppose that\nlimx→−1 f(x)=−3, limx→−1g(x)=36, limx→−1h(x)=8\nFind the following limit:\nlimx→−1 (2 \\[f(x)\\] 3 √ g(x)\n### h(x)\n)",
+  "options": [
+   "− 8 81",
+   "− 81 2",
+   "− 27 2",
+   "None of the other four choices is correct.",
+   "− 27 4"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "− 81 2"
+ },
+ {
+  "num": 87,
+  "stem": "87. Suppose that limx→3 f(x)=−3, limx→3g(x)=25, limx→3h(x)=−10\nFind the following limit:\nlimx→3 (3 \\[f(x)\\] 3 √ g(x) h(x) )",
+  "options": [
+   "None of the other four choices is correct.",
+   "81 10",
+   "2 9",
+   "405 2",
+   "81 2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "81 2"
+ },
+ {
+  "num": 88,
+  "stem": "88. Suppose that limx→−1 f(x)=3, limx→−1g(x)=36, limx→−1h(x)=7\nFind the following limit:\nlimx→−1 (4 \\[f(x)\\] 3 √ g(x) h(x) )",
+  "options": [
+   "None of the other four choices is correct.",
+   "648 7",
+   "108 7",
+   "14 81",
+   "216 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "648 7"
+ },
+ {
+  "num": 89,
+  "stem": "89. Suppose that limx→3 f(x)=−4, limx→3g(x)=4, limx→3h(x)=4\nFind the following limit:\nlimx→3 (−\\[f(x)\\] 3 √ g(x) h(x) )",
+  "options": [
+   "16",
+   "32",
+   "None of the other four choices is correct.",
+   "6",
+   "64"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "32"
+ },
+ {
+  "num": 90,
+  "stem": "90. Suppose that limx→2 f(x)=−2, limx→2g(x)=9, limx→2h(x)=6\nFind the following limit:\nlimx→2 (−2 \\[f(x)\\] 2 √ g(x)\n### h(x)\n)",
+  "options": [
+   "−4",
+   "None of the other four choices is correct.",
+   "−1",
+   "− 4 3",
+   "4 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−4"
+ },
+ {
+  "num": 91,
+  "stem": "91. Find the following limit:\nlimx→5 √ 4x−18 −√ 27−5x\n### x−5",
+  "options": [
+   "− 9 √2 4",
+   "− √2 4",
+   "DNE",
+   "None of the other four choices is correct.",
+   "9 4"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 92,
+  "stem": "92. Find the following limit:\nlimx→−2 √ −5x−5 −√ 5x+15\nx+2",
+  "options": [
+   "√5",
+   "DNE",
+   "−1",
+   "None of the other four choices is correct.",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 93,
+  "stem": "93. Find the following limit:\nlimx→−2 √ 2x+20 −√ 10−3x\nx+2",
+  "options": [
+   "DNE",
+   "5 32",
+   "− 5 8",
+   "None of the other four choices is correct.",
+   "− 1 8"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 94,
+  "stem": "94. Find the following limit:\nlimx→2 √ 4x−7 −√ 3−x\n### x−2",
+  "options": [
+   "DNE",
+   "None of the other four choices is correct.",
+   "− 5 2",
+   "3 2",
+   "5 2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "5 2"
+ },
+ {
+  "num": 95,
+  "stem": "95. Find the following limit:\nlimx→−3 √ 2x+22 −√ 4x+28\nx+3",
+  "options": [
+   "3 4",
+   "DNE",
+   "− 1 16",
+   "1 4",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 96,
+  "stem": "96. Find the following limit:\nlimx→4 +\\[− 1\n### x−4\n\\]",
+  "options": [
+   "−∞",
+   "∞",
+   "−1",
+   "None of the other four choices is correct.",
+   "0 参考答案 Answers（本考点 1 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−∞"
+ },
+ {
+  "num": 97,
+  "stem": "97. Find the following limit:\nlimx→0 4x 2+4\n(1−2x) cos(x+ π 3 )",
+  "options": [
+   "−8",
+   "4",
+   "0",
+   "None of the other four choices is correct.",
+   "8"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "8"
+ },
+ {
+  "num": 98,
+  "stem": "98. Find the following limit:\nlimx→0 2x 2+4\n(2x+1) cos(4x+ π 3 )",
+  "options": [
+   "4",
+   "8",
+   "None of the other four choices is correct.",
+   "0",
+   "−8"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "8"
+ },
+ {
+  "num": 99,
+  "stem": "99. Find the following limit:\nlimx→0 (−2x 2−4) cos(2x+ π 4 )\n(4x−5) sin(2x+ π 4 )",
+  "options": [
+   "4 5",
+   "5 4",
+   "0",
+   "− 4 5",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "4 5"
+ },
+ {
+  "num": 100,
+  "stem": "100. Find the following limit:\nlimx→0 (−x 2−1) cos(3x+ π 3 )\n4−4x",
+  "options": [
+   "None of the other four choices is correct.",
+   "−8",
+   "− 1 4",
+   "− 1 8",
+   "1 8"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "− 1 8"
+ },
+ {
+  "num": 101,
+  "stem": "101. Find the following limit:\nlimx→0 (x 2+4) sin(3x+ π 6 )\nx+4",
+  "options": [
+   "0",
+   "None of the other four choices is correct.",
+   "1 2",
+   "2",
+   "1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "1 2"
+ },
+ {
+  "num": 102,
+  "stem": "102. Find the following limit:\nlimx→0 tan(4x) sin(5x)",
+  "options": [
+   "None of the other four choices is correct.",
+   "4 5",
+   "0",
+   "− 4 5",
+   "DNE"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "4 5"
+ },
+ {
+  "num": 103,
+  "stem": "103. Find the following limit:\nlimx→0\n### sin(8x)\n3x",
+  "options": [
+   "1 24",
+   "0",
+   "None of the other four choices is correct.",
+   "8 3",
+   "− 8 3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "8 3"
+ },
+ {
+  "num": 104,
+  "stem": "104. Find the following limit:\nlimx→0\n### sin(8x)\n5x",
+  "options": [
+   "DNE",
+   "0",
+   "− 8 5",
+   "None of the other four choices is correct.",
+   "8 5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "8 5"
+ },
+ {
+  "num": 105,
+  "stem": "105. Find the following limit:\nlimx→0 \\[−\n### tan(7x)\n### sin(3x)\n\\]",
+  "options": [
+   "0",
+   "None of the other four choices is correct.",
+   "− 7 3",
+   "− 1 21",
+   "DNE"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "− 7 3"
+ },
+ {
+  "num": 106,
+  "stem": "106. Find the following limit:\nlimx→0\n### tan(8x)\n### sin(6x)",
+  "options": [
+   "DNE",
+   "None of the other four choices is correct.",
+   "4 3",
+   "1 48",
+   "− 4 3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "4 3"
+ },
+ {
+  "num": 107,
+  "stem": "107. Find the following limit:\nlimx→0 \\[−\n### 1−cos(7x)\n5x 2 \\]",
+  "options": [
+   "49 10",
+   "− 49 10",
+   "− 10 49",
+   "None of the other four choices is correct.",
+   "− 7 5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "− 49 10"
+ },
+ {
+  "num": 108,
+  "stem": "108. Find the following limit:\nlimx→0 \\[−\n### 1−cos(2x)\nx 2 \\]",
+  "options": [
+   "DNE",
+   "None of the other four choices is correct.",
+   "−2",
+   "2",
+   "−4"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−2"
+ },
+ {
+  "num": 109,
+  "stem": "109. Find the following limit:\nlimx→0\n### 1−cos(2x)\n6x 2",
+  "options": [
+   "3",
+   "2 3",
+   "None of the other four choices is correct.",
+   "1 3",
+   "DNE"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "1 3"
+ },
+ {
+  "num": 110,
+  "stem": "110. Find the following limit:\nlimx→0 \\[−\n### 1−cos(5x)\n6x 2 \\]",
+  "options": [
+   "− 12 25",
+   "None of the other four choices is correct.",
+   "− 5 6",
+   "25 12",
+   "− 25 6"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 111,
+  "stem": "111. Find the following limit:\nlimx→0 \\[−\n### 1−cos(8x)\n2x 2 \\]",
+  "options": [
+   "−16",
+   "16",
+   "−32",
+   "None of the other four choices is correct.",
+   "− 1 16"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−16"
+ },
+ {
+  "num": 112,
+  "stem": "112. Find the following limit:\nlimx→∞\\[−4 √ x sin( 4 x )\\]",
+  "options": [
+   "4",
+   "None of the other four choices is correct.",
+   "DNE",
+   "0",
+   "1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "0"
+ },
+ {
+  "num": 113,
+  "stem": "113. Find the following limit:\nlimx→∞\\[−3 √ x sin( 4 x )\\]",
+  "options": [
+   "1",
+   "DNE",
+   "None of the other four choices is correct.",
+   "3",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "0"
+ },
+ {
+  "num": 114,
+  "stem": "114. Find the following limit:\nlimx→∞\\[√ x sin( 8 x )\\]",
+  "options": [
+   "−1",
+   "None of the other four choices is correct.",
+   "−17",
+   "1",
+   "DNE"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 115,
+  "stem": "115. Find the following limit:\nlimx→− π 2 +\\[ 2(x+ π 2 )\n3 tan (−x−π)\\]",
+  "options": [
+   "None of the other four choices is correct.",
+   "− 2 3",
+   "2",
+   "2 3",
+   "DNE"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "2 3"
+ },
+ {
+  "num": 116,
+  "stem": "116. Find the following limit:\nlimx→ π 2 \\[ −6(x− π 2 )\n5 tan (−4x+ 5π 2 )\\]",
+  "options": [
+   "− 3 10",
+   "− 24 5",
+   "0",
+   "3 10",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "− 3 10"
+ },
+ {
+  "num": 117,
+  "stem": "117. Find the following limit:\nlimx→ π 2 +\\[ (x− π 2 )\n3 tan (−6x+ 7π 2 )\\]",
+  "options": [
+   "− 1 18",
+   "None of the other four choices is correct.",
+   "1 6",
+   "0",
+   "1 18"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "1 18"
+ },
+ {
+  "num": 118,
+  "stem": "118. Find the following limit:\nlimx→− π 2 −\\[ −4(x+ π 2 )\n5 tan (4x+ 3π 2 )\\]",
+  "options": [
+   "16 5",
+   "None of the other four choices is correct.",
+   "1",
+   "1 5",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "1 5"
+ },
+ {
+  "num": 119,
+  "stem": "119. Find the following limit:\nlimx→ π 2 \\[ −5(x− π 2 )\n3 tan (2x− π 2 )\\]",
+  "options": [
+   "10 3",
+   "5 6",
+   "5 2",
+   "0",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "5 6"
+ },
+ {
+  "num": 120,
+  "stem": "120. Find the following limit:\nlimt→0 6t−2 sin(3t) 3t sec (2t)",
+  "options": [
+   "0",
+   "2",
+   "−2",
+   "None of the other four choices is correct.",
+   "1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "0"
+ },
+ {
+  "num": 121,
+  "stem": "121. Find the following limit:\nlimt→0 −8t+2 sin(4t) 5t sec (3t)",
+  "options": [
+   "−2",
+   "8 5",
+   "0",
+   "None of the other four choices is correct.",
+   "− 8 5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "0"
+ },
+ {
+  "num": 122,
+  "stem": "122. Find the following limit:\nlimt→0 −8t+sin(3t) 4t sec (2t)",
+  "options": [
+   "−2",
+   "− 9 4",
+   "None of the other four choices is correct.",
+   "3 4",
+   "− 5 4"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "− 5 4"
+ },
+ {
+  "num": 123,
+  "stem": "123. Find the following limit:\nlimt→0\n### 6t−sin(2t)\n4t sec (3t)",
+  "options": [
+   "7 4",
+   "3 2",
+   "None of the other four choices is correct.",
+   "− 1 2",
+   "1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "1"
+ },
+ {
+  "num": 124,
+  "stem": "124. Find the following limit:\nlimt→0\n### 7t−sin(4t)\n4t sec (4t)",
+  "options": [
+   "3 4",
+   "7 4",
+   "4 3",
+   "−1",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 28 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "3 4"
+ },
+ {
+  "num": 125,
+  "stem": "125. Find the following limit:\nlimx→0 \\[3x 3\n### sin(\n7\nx 2 )\\]",
+  "options": [
+   "0",
+   "−3",
+   "None of the other four choices is correct.",
+   "3",
+   "DNE"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "0"
+ },
+ {
+  "num": 126,
+  "stem": "126. Find the following limit:\nlimx→0 \\[3x 3\n### cos(\n6 x )−3\\]",
+  "options": [
+   "DNE",
+   "−2",
+   "−3",
+   "None of the other four choices is correct.",
+   "0 参考答案 Answers（本考点 2 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−3"
+ },
+ {
+  "num": 127,
+  "stem": "127. Find the following limit:\nlimx→−∞ 9−4x\n2x2−6x−4",
+  "options": [
+   "None of the other four choices is correct.",
+   "DNE",
+   "1",
+   "0",
+   "2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "0"
+ },
+ {
+  "num": 128,
+  "stem": "128. Find the following limit:\nlimx→∞ x+2\nx2−1",
+  "options": [
+   "1",
+   "0",
+   "None of the other four choices is correct.",
+   "−1",
+   "−17"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "0"
+ },
+ {
+  "num": 129,
+  "stem": "129. Find the following limit:\nlimx→−∞ 5x−9\n−4x2−x+3",
+  "options": [
+   "1",
+   "None of the other four choices is correct.",
+   "DNE",
+   "5 4",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "0"
+ },
+ {
+  "num": 130,
+  "stem": "130. Find the following limit:\nlimx→−∞ −2x2+2 cos(6x−5)\nx2",
+  "options": [
+   "−4",
+   "None of the other four choices is correct.",
+   "DNE",
+   "0",
+   "−2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "−2"
+ },
+ {
+  "num": 131,
+  "stem": "131. Find the following limit:\nlimx→∞ 4x 2+2\n### −2x\n2+7x",
+  "options": [
+   "1",
+   "None of the other four choices is correct.",
+   "−2",
+   "0",
+   "2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−2"
+ },
+ {
+  "num": 132,
+  "stem": "132. Find the following limit:\nlimx→∞\n### −2x−sin(2x+2)−2\nx",
+  "options": [
+   "−1",
+   "None of the other four choices is correct.",
+   "−4",
+   "−2",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−2"
+ },
+ {
+  "num": 133,
+  "stem": "133. Find the following limit:\nlimx→∞\n### −2x\n3−3x 2−5 sin(2x+6)\nx 3",
+  "options": [
+   "−5",
+   "None of the other four choices is correct.",
+   "0",
+   "−2",
+   "−7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−2"
+ },
+ {
+  "num": 134,
+  "stem": "134. Find the following limit:\nlimx→∞ x 3+x 2+6 cos(3x−2)\nx 3",
+  "options": [
+   "1",
+   "2",
+   "None of the other four choices is correct.",
+   "0",
+   "−5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "1"
+ },
+ {
+  "num": 135,
+  "stem": "135. Find the following limit:\nlimx→∞\n### −4x\n2−4x−6 sin(x+5)\nx 2",
+  "options": [
+   "−8",
+   "−10",
+   "2",
+   "−4",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−4"
+ },
+ {
+  "num": 136,
+  "stem": "136. Find the following limit:\nlimx→∞ 2x 3−2x 2+5x+1\nx\n### 2+6x−1",
+  "options": [
+   "2",
+   "0",
+   "∞",
+   "None of the other four choices is correct.",
+   "−∞ 参考答案 Answers（本考点 10 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "∞"
+ },
+ {
+  "num": 137,
+  "stem": "137. Find the following limit:\nlimx→−∞\n### 4x−5\n√ 16x\n### 2−7x+8",
+  "options": [
+   "−1",
+   "None of the other four choices is correct.",
+   "−17",
+   "0",
+   "DNE"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−1"
+ },
+ {
+  "num": 138,
+  "stem": "138. Find the following limit:\nlimx→−∞ 4x+8 √ 16x 2+7x+6",
+  "options": [
+   "1",
+   "None of the other four choices is correct.",
+   "−17",
+   "DNE",
+   "−1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "−1"
+ },
+ {
+  "num": 139,
+  "stem": "139. Find the following limit:\nlimx→−∞\n### −5x−2\n√ 25x\n### 2−8x+3",
+  "options": [
+   "−17",
+   "−1",
+   "DNE",
+   "1",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "1"
+ },
+ {
+  "num": 140,
+  "stem": "140. Find the following limit:\nlimx→∞\n### −5x−2\n√ 25x\n### 2+4x−7",
+  "options": [
+   "0",
+   "−17",
+   "1",
+   "None of the other four choices is correct.",
+   "DNE"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 141,
+  "stem": "141. Find the following limit:\nlimx→∞ √ 4x\n### 2+5x−5\n### −2x−2",
+  "options": [
+   "None of the other four choices is correct.",
+   "−1",
+   "1",
+   "DNE",
+   "0 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−1"
+ },
+ {
+  "num": 141,
+  "stem": "141. −1\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n3 . 3 根 式 差 的 无 穷 远 极 限 5 题\n1 4 2 . F i n d th e fo l l o w i n g l i m i t:\nlimx→∞(√ x2−9 −√ x2+ 5 x + 3 )",
+  "options": [
+   "N o n e o f th e o th e r fo u r c h o i c e s i s c o r r e c t.",
+   "0",
+   "3 32",
+   "− 3 8",
+   "3",
+   "N o n e o f th e o th e r fo u r c h o i c e s i s c o r r e c t.",
+   "0",
+   "3 32",
+   "− 3 8",
+   "3",
+   "N o n e o f th e o th e r fo u r c h o i c e s i s c o r r e c t.",
+   "0",
+   "3 32",
+   "− 3 8",
+   "3",
+   "N o n e o f th e o th e r fo u r c h o i c e s i s c o r r e c t.",
+   "0",
+   "3 32",
+   "− 3 8",
+   "3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "−1"
+ },
+ {
+  "num": 146,
+  "stem": "146. Find the following limit:\nlimx→∞(−√ 4x 2−5x+2 +√ 4x 2+x+2 )",
+  "options": [
+   "3 2",
+   "− 3 2",
+   "6",
+   "None of the other four choices is correct.",
+   "0 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "3 2"
+ },
+ {
+  "num": 147,
+  "stem": "147. Find the following limit:\nlimn→∞\n### 4−2n\n√ 9n\n### 2−9n−3",
+  "options": [
+   "− 3 2",
+   "None of the other four choices is correct.",
+   "2 3",
+   "− 1 3",
+   "− 2 3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "− 2 3"
+ },
+ {
+  "num": 148,
+  "stem": "148. Find the following limit:\nlimn→∞\n### 4−2n\n3n+3",
+  "options": [
+   "− 3 2",
+   "1 3",
+   "− 2 3",
+   "− 2 9",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "− 2 3"
+ },
+ {
+  "num": 149,
+  "stem": "149. Find the following limit:\nlimn→∞\n### 2n−2\n√ 25n 2+9n+1",
+  "options": [
+   "− 2 5",
+   "None of the other four choices is correct.",
+   "2 5",
+   "2 25",
+   "5 2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "2 5"
+ },
+ {
+  "num": 150,
+  "stem": "150. Find the following limit:\nlimn→∞ 6n+9 √ 36n 2+6n+3",
+  "options": [
+   "DNE",
+   "1",
+   "5 4",
+   "None of the other four choices is correct.",
+   "−1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "1"
+ },
+ {
+  "num": 151,
+  "stem": "151. Find the following limit:\nlimn→∞ 5n+6 √ 36n\n### 2−3n+7",
+  "options": [
+   "5 36",
+   "6 5",
+   "− 5 6",
+   "None of the other four choices is correct.",
+   "5 6 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "5 6"
+ },
+ {
+  "num": 152,
+  "stem": "152. Find the vertical and horizontal asymptotes of:\n### f(x)=\n### −4x−7\n5x+4",
+  "options": [
+   "None of the other four choices is correct.",
+   "There is no vertical asymptote, and There is no horizontal asymptote.",
+   "The vertical asymptote is x=− 4 5 , and The horizontal asymptote is y=− 4 5 .",
+   "The vertical asymptote is x=104, and The horizontal asymptote is y=−104.",
+   "The vertical asymptote is x= 4 5 , and The horizontal asymptote is y= 4 5 ."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "The vertical asymptote is x=− 4 5 , and The horizontal asymptote is y=− 4 5 ."
+ },
+ {
+  "num": 153,
+  "stem": "153. Find the vertical and horizontal asymptotes of:\n### f(x)=\n### −5x\n### 6−4x",
+  "options": [
+   "None of the other four choices is correct.",
+   "The vertical asymptote is x= 3 2 , and There is no horizontal asymptote.",
+   "There is no vertical asymptote, and There is no horizontal asymptote.",
+   "The vertical asymptote is x=− 3 2 , and The horizontal asymptote is y=− 5 4 .",
+   "The vertical asymptote is x= 3 2 , and The horizontal asymptote is y= 5 4 ."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "The vertical asymptote is x= 3 2 , and The horizontal asymptote is y= 5 4 ."
+ },
+ {
+  "num": 154,
+  "stem": "154. Find the vertical and horizontal asymptotes of:\n### f(x)=\n### 3x−7\n5x",
+  "options": [
+   "The vertical asymptote is x= 3 5 , and The horizontal asymptote is y=0.",
+   "None of the other four choices is correct.",
+   "There is no vertical asymptote, and There is no horizontal asymptote.",
+   "The vertical asymptote is x=0, and The horizontal asymptote is y=− 3 5 .",
+   "The vertical asymptote is x=0, and The horizontal asymptote is y= 3 5 ."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "The vertical asymptote is x=0, and The horizontal asymptote is y= 3 5 ."
+ },
+ {
+  "num": 155,
+  "stem": "155. Find the vertical and horizontal asymptotes of:\n### f(x)=\n### 2x−8\n### (x+3)(x+4)",
+  "options": [
+   "The vertical asymptote is x=0, and The horizontal asymptotes are y=−4 and y=−3.",
+   "The vertical asymptote is x=−4, and The horizontal asymptote is y=0.",
+   "The vertical asymptotes are x=−4 and x=−3, and The horizontal asymptote is y=0.",
+   "The vertical asymptotes are x=3 and x=4, and The horizontal asymptote is y=0.",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "The vertical asymptotes are x=−4 and x=−3, and The horizontal asymptote is y=0."
+ },
+ {
+  "num": 156,
+  "stem": "156. Find the vertical and horizontal asymptotes of:\n### f(x)=\nx+6\n### (x+4)(x+5)",
+  "options": [
+   "The vertical asymptote is x=0, and The horizontal asymptotes are y=−5 and y=−4.",
+   "None of the other four choices is correct.",
+   "The vertical asymptotes are x=−5 and x=−4, and The horizontal asymptote is y=0.",
+   "The vertical asymptotes are x=4 and x=5, and The horizontal asymptote is y=0.",
+   "The vertical asymptotes are x=−5 and x=−4, and There is no horizontal asymptote. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "The vertical asymptotes are x=−5 and x=−4, and The horizontal asymptote is y=0."
+ },
+ {
+  "num": 157,
+  "stem": "157. Evaluate the limit.\nlimx→∞2 3x+5",
+  "options": [
+   "0",
+   "∞",
+   "−∞",
+   "2",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "∞"
+ },
+ {
+  "num": 158,
+  "stem": "158. Evaluate the limit.\nlimx→−∞( 1 2 ) 4x−6",
+  "options": [
+   "1",
+   "None of the other four choices is correct.",
+   "−∞",
+   "0",
+   "∞"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "∞"
+ },
+ {
+  "num": 159,
+  "stem": "159. Evaluate the limit.\nlimx→∞e 2x−4",
+  "options": [
+   "1",
+   "None of the other four choices is correct.",
+   "e",
+   "0",
+   "−∞"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 160,
+  "stem": "160. Evaluate the limit.\nlimx→0 ( 1 2 ) x−2",
+  "options": [
+   "1",
+   "1 2",
+   "None of the other four choices is correct.",
+   "∞",
+   "4"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "4"
+ },
+ {
+  "num": 161,
+  "stem": "161. Evaluate the limit.\nlimx→∞e−x",
+  "options": [
+   "None of the other four choices is correct.",
+   "∞",
+   "0",
+   "e",
+   "−∞"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "0"
+ },
+ {
+  "num": 162,
+  "stem": "162. Evaluate the limit.\nlimx→−∞ e−x−3 5e−x+1",
+  "options": [
+   "1 5",
+   "1",
+   "None of the other four choices is correct.",
+   "−1",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "1 5"
+ },
+ {
+  "num": 163,
+  "stem": "163. Evaluate the limit.\nlimx→−∞ 5e−x−3\n3e−x+1",
+  "options": [
+   "1",
+   "−1",
+   "5 3",
+   "None of the other four choices is correct.",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "5 3"
+ },
+ {
+  "num": 164,
+  "stem": "164. Evaluate the limit.\nlimx→∞\n### −2e\nx−6\ne x+5",
+  "options": [
+   "2",
+   "−1",
+   "None of the other four choices is correct.",
+   "−2",
+   "1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−2"
+ },
+ {
+  "num": 165,
+  "stem": "165. Evaluate the limit.\nlimx→∞\n### −2e\nx+3\ne x+2",
+  "options": [
+   "−2",
+   "2",
+   "1",
+   "−1",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 9 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−2"
+ },
+ {
+  "num": 166,
+  "stem": "166. Evaluate the limit. limx→0 + ln(8x)",
+  "options": [
+   "None of the other four choices is correct.",
+   "0",
+   "−∞",
+   "−1",
+   "1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−∞"
+ },
+ {
+  "num": 167,
+  "stem": "167. Evaluate the limit.\nlimx→1\n### ln(3x\n4−3+e−2 )",
+  "options": [
+   "1",
+   "−∞",
+   "None of the other four choices is correct.",
+   "−2",
+   "∞"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−2"
+ },
+ {
+  "num": 168,
+  "stem": "168. Evaluate the limit.\nlimx→∞ ln(5x 3+1)",
+  "options": [
+   "∞",
+   "−1",
+   "1",
+   "None of the other four choices is correct.",
+   "−∞"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "∞"
+ },
+ {
+  "num": 169,
+  "stem": "169. Evaluate the limit.\nlimx→∞ ln(4x 6+1)",
+  "options": [
+   "−1",
+   "−∞",
+   "None of the other four choices is correct.",
+   "1",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 170,
+  "stem": "170. Evaluate the limit.\nlimx→0 + ln(4x 5 )",
+  "options": [
+   "1",
+   "−∞",
+   "∞",
+   "0",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−∞"
+ },
+ {
+  "num": 171,
+  "stem": "171. Evaluate the limit.\nlimx→0 +\n### lnx\n√ (lnx) 2+4",
+  "options": [
+   "None of the other four choices is correct.",
+   "2",
+   "−1",
+   "0",
+   "1 参考答案 Answers（本考点 1 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−1"
+ },
+ {
+  "num": 171,
+  "stem": "171. −1\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n4 . 4 1 ^ ∞ 型 凑 e 5 题\n1 7 2 . Ev a l u a te th e l i m i t.\nlimx→∞( x+4 x )4x − 4",
+  "options": [
+   "1 6",
+   "1",
+   "e 1 6",
+   "e 4",
+   "N o n e o f th e o th e r fo u r c h o i c e s i s c o r r e c t.",
+   "1 6",
+   "1",
+   "e 1 6",
+   "e 4",
+   "N o n e o f th e o th e r fo u r c h o i c e s i s c o r r e c t.",
+   "1 6",
+   "1",
+   "e 1 6",
+   "e 4",
+   "N o n e o f th e o th e r fo u r c h o i c e s i s c o r r e c t."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−1"
+ },
+ {
+  "num": 175,
+  "stem": "175. Evaluate the limit.\nlimx→5(26−5x) 5x−26 x−5",
+  "options": [
+   "e5",
+   "e−1",
+   "e−5",
+   "None of the other four choices is correct.",
+   "1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "e 5"
+ },
+ {
+  "num": 176,
+  "stem": "176. Evaluate the limit.\nlimx→1x 6−5x\nx−1",
+  "options": [
+   "1",
+   "e−1",
+   "None of the other four choices is correct.",
+   "1+e",
+   "−1+e 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 177,
+  "stem": "177. Evaluate the limit.\nlimx→−4\n### ln(5x+21)\n7x+28",
+  "options": [
+   "7 5",
+   "0",
+   "5 7",
+   "None of the other four choices is correct.",
+   "5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "5 7"
+ },
+ {
+  "num": 178,
+  "stem": "178. Evaluate the limit.\nlimx→−4 e−x−4−1\n### −x−4",
+  "options": [
+   "None of the other four choices is correct.",
+   "0",
+   "2",
+   "e",
+   "−1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 179,
+  "stem": "179. Evaluate the limit.\nlimx→−4\n### ln(−3x−11)\n5x+20",
+  "options": [
+   "− 3 5",
+   "− 5 3",
+   "None of the other four choices is correct.",
+   "−3",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "− 3 5"
+ },
+ {
+  "num": 180,
+  "stem": "180. Evaluate the limit.\nlimx→−4 e−x−4−1\n### −6x−24",
+  "options": [
+   "None of the other four choices is correct.",
+   "6",
+   "−1",
+   "0",
+   "−6"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 181,
+  "stem": "181. Evaluate the limit.\nlimx→−4 e 7x+28−1\n### −x−4",
+  "options": [
+   "7",
+   "0",
+   "− 1 7",
+   "None of the other four choices is correct.",
+   "−7 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−7"
+ },
+ {
+  "num": 181,
+  "stem": "181. −7\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n4 . 6 复 利 模 型 5 题\n1 8 2 . A n a m o u n t P = 4 4 0 0 i s i nv e s te d.\nThe annual interest rate is 2%, s o r = 1 50 .\nInterest is compounded monthly.\nFind the balance after t=8 years.\nGive your answer in exact form, not as a d e c i m a l.",
+  "options": [
+   "7 100 ln 2",
+   "None of the other four choices is correct.",
+   "100 7 ln 2",
+   "2 7 100",
+   "ln 2",
+   "7 100 ln 2",
+   "None of the other four choices is correct.",
+   "100 7 ln 2",
+   "2 7 100",
+   "ln 2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "−7"
+ },
+ {
+  "num": 184,
+  "stem": "184. An amount P=1500 is invested.\nThe annual interest rate is 5%, so r= 1 20 . Interest is compounded monthly.\nFind the balance after t=7 years.\nGive your answer in exact form, not as a decimal.",
+  "options": [
+   "1500(1+ 1 240 ) 7",
+   "1500(1+ 1 240 ) 84",
+   "None of the other four choices is correct.",
+   "1500e 7 20",
+   "1500(1+ 1 20 ) 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "1500(1+ 1 240 ) 84"
+ },
+ {
+  "num": 185,
+  "stem": "185. An amount P=3400 is invested.\nThe annual interest rate is 8%, so r= 2 25 . Interest is compounded continuously.\nFind the balance after t=8 years.\nGive your answer in exact form, not as a decimal.",
+  "options": [
+   "3400(1+ 2 25 ) 8",
+   "3400(1+ 2 25 ⋅8)",
+   "3400e 16 25",
+   "None of the other four choices is correct.",
+   "3400e 2 25"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "3400e 16 25"
+ },
+ {
+  "num": 186,
+  "stem": "186. An amount P=4900 is invested.\nThe annual interest rate is 7%, so r= 7 100 . Interest is compounded monthly.\nFind the balance after t=3 years.\nGive your answer in exact form, not as a decimal.",
+  "options": [
+   "4900(1+ 7 1200 ) 36",
+   "4900e 21 100",
+   "4900(1+ 7 100 ⋅3)",
+   "4900(1+ 7 1200 ) 3",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "4900(1+ 7 1200 ) 36"
+ },
+ {
+  "num": 187,
+  "stem": "187. The function f is defined below.\n### f(x)= {\n3x 2+4x−4\nx+2 , x≠−2\nL, x=−2 Find the value of L that makes f continuous at x=−2.",
+  "options": [
+   "−2",
+   "−6",
+   "−8",
+   "0",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−8"
+ },
+ {
+  "num": 188,
+  "stem": "188. The function f is defined below.\n### f(x)= {\nx 2+2x−8\nx+4 , x≠−4\nL, x=−4 Find the value of L that makes f continuous at x=−4.",
+  "options": [
+   "1",
+   "−6",
+   "−2",
+   "−4",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−6"
+ },
+ {
+  "num": 189,
+  "stem": "189. The function f is defined below.\n### f(x)= {\nx 2−x−20\nx+4 , x≠−4\nL, x=−4 Find the value of L that makes f continuous at x=−4.",
+  "options": [
+   "0",
+   "−5",
+   "None of the other four choices is correct.",
+   "−9",
+   "−4"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−9"
+ },
+ {
+  "num": 190,
+  "stem": "190. The function f is defined below.\n### f(x)= {\nsin (8(x+2)) 6(x+2) , x≠−2\nL, x=−2 Find the value of L that makes f continuous at x=−2.",
+  "options": [
+   "None of the other four choices is correct.",
+   "0",
+   "3 4",
+   "4 3",
+   "−2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "4 3"
+ },
+ {
+  "num": 191,
+  "stem": "191. The function f is defined below.\nf(x)= { 3x 2+3x−6\nx+2 , x≠−2\nL, x=−2 Find the value of L that makes f continuous at x=−2.",
+  "options": [
+   "3",
+   "−3",
+   "−9",
+   "−2",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−9"
+ },
+ {
+  "num": 192,
+  "stem": "192. f(x)= { −x−5, x<−3 x+1, x≥−3 Classify f at x=−3.",
+  "options": [
+   "The function is not continuous at the junction.",
+   "The function is differentiable because the right-hand limit in the definition of the derivative exists.",
+   "The function is continuous but not differentiable at the junction.",
+   "The function is differentiable at the junction.",
+   "The function is differentiable because it is continuous at the junction."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "The function is continuous but not differentiable at the junction."
+ },
+ {
+  "num": 193,
+  "stem": "193. f(x)= { 3x+1, x<−2\n−x 2−x−3, x≥−2 Classify f at x=−2.",
+  "options": [
+   "The function is not continuous at the junction.",
+   "The function is differentiable because the right-hand limit in the definition of the derivative exists.",
+   "The function is differentiable at the junction.",
+   "The function is continuous but not differentiable at the junction.",
+   "The function is differentiable because it is continuous at the junction."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "The function is differentiable at the junction."
+ },
+ {
+  "num": 194,
+  "stem": "194. f(x)= { −x−6, x<−3 x, x≥−3 Classify f at x=−3.",
+  "options": [
+   "The function is differentiable because the right-hand limit in the definition of the derivative exists.",
+   "The function is differentiable because it is continuous at the junction.",
+   "The function is continuous but not differentiable at the junction.",
+   "The function is not continuous at the junction.",
+   "The function is differentiable at the junction."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "The function is continuous but not differentiable at the junction."
+ },
+ {
+  "num": 195,
+  "stem": "195. f(x)= { −x−5, x<−3 2x+4, x≥−3 Classify f at x=−3.",
+  "options": [
+   "The function is differentiable at the junction.",
+   "The function is differentiable because it is continuous at the junction.",
+   "The function is not continuous at the junction.",
+   "The function is differentiable because the right-hand limit in the definition of the derivative exists.",
+   "The function is continuous but not differentiable at the junction."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "The function is continuous but not differentiable at the junction."
+ },
+ {
+  "num": 196,
+  "stem": "196. f(x)= { 2x+5, x<−3\n−x−4, x≥−3 Classify f at x=−3.",
+  "options": [
+   "The function is differentiable at the junction.",
+   "The function is continuous but not differentiable at the junction.",
+   "The function is not continuous at the junction.",
+   "The function is differentiable because the right-hand limit in the definition of the derivative exists.",
+   "The function is differentiable because it is continuous at the junction."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "The function is continuous but not differentiable at the junction."
+ },
+ {
+  "num": 197,
+  "stem": "197. The function f is defined below.\nf(x)= 4x 2−36x+56\nx−7 Find every discontinuity.\nClassify each discontinuity as removable or non-removable.",
+  "options": [
+   "{x=7: nonremovable}",
+   "None of the other four choices is correct.",
+   "{x=2: removable}",
+   "{x=7: removable}",
+   "∅"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "{x=7: removable}"
+ },
+ {
+  "num": 198,
+  "stem": "198. The function f is defined below.\nf(x)= 1\nx 2+7x+6\nFind every discontinuity.\nClassify each discontinuity as removable or non-removable.",
+  "options": [
+   "{x=−6: removable, x=−1: nonremovable}",
+   "{x=−6: nonremovable, x=−1: removable}",
+   "{x=−6: nonremovable, x=−1: nonremovable}",
+   "{x=−6: removable, x=−1: removable}",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "{x=−6: nonremovable, x=−1: nonremovable}"
+ },
+ {
+  "num": 199,
+  "stem": "199. The function f is defined below.\nf(x)= x 2−13x+40\nx 2−8x\nFind every discontinuity.\nClassify each discontinuity as removable or non-removable.",
+  "options": [
+   "None of the other four choices is correct.",
+   "{x=0: nonremovable, x=8: removable}",
+   "{x=0: nonremovable, x=8: nonremovable}",
+   "{x=0: removable, x=8: removable}",
+   "{x=0: removable, x=8: nonremovable}"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "{x=0: nonremovable, x=8: removable}"
+ },
+ {
+  "num": 200,
+  "stem": "200. The function f is defined below.\nf(x)= x 2−3x−28\nx 2−8x+7\nFind every discontinuity.\nClassify each discontinuity as removable or non-removable.",
+  "options": [
+   "None of the other four choices is correct.",
+   "{x=1: removable, x=7: nonremovable}",
+   "{x=1: removable, x=7: removable}",
+   "{x=1: nonremovable, x=7: nonremovable}",
+   "{x=1: nonremovable, x=7: removable}"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "{x=1: nonremovable, x=7: removable}"
+ },
+ {
+  "num": 201,
+  "stem": "201. The function f is defined below.\nf(x)= 4x 2+56x+192\nx+8 Find every discontinuity. Classify each discontinuity as removable or non-removable.",
+  "options": [
+   "None of the other four choices is correct.",
+   "{x=−8: nonremovable}",
+   "∅",
+   "{x=−6: removable}",
+   "{x=−8: removable} 参考答案 Answers（本考点 10 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "{x=−8: removable}"
+ },
+ {
+  "num": 202,
+  "stem": "202. The function f is defined below.\n### f(x)= {\n7x+3, x<−1 5x+q, x≥−1 Find the value of q that makes f continuous at x=−1.",
+  "options": [
+   "−4",
+   "−9",
+   "None of the other four choices is correct.",
+   "1",
+   "−5"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "1"
+ },
+ {
+  "num": 203,
+  "stem": "203. The function f is defined below.\n### f(x)= {\n9x−2, x<1\n6x+q, x≥1 Find the value of q that makes f continuous at x=1.",
+  "options": [
+   "None of the other four choices is correct.",
+   "5",
+   "13",
+   "7",
+   "1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "1"
+ },
+ {
+  "num": 204,
+  "stem": "204. The function f is defined below.\n### f(x)= {\n4x−1, x<2\n2x+q, x≥2 Find the value of q that makes f continuous at x=2.",
+  "options": [
+   "7",
+   "None of the other four choices is correct.",
+   "5",
+   "11",
+   "3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "3"
+ },
+ {
+  "num": 205,
+  "stem": "205. The function f is defined below.\n### f(x)= {\n5x−1, x<1\n4x+q, x≥1 Find the value of q that makes f continuous at x=1.",
+  "options": [
+   "2",
+   "0",
+   "None of the other four choices is correct.",
+   "4",
+   "8"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "0"
+ },
+ {
+  "num": 206,
+  "stem": "206. The function f is defined below.\n### f(x)= {\n2x−3, x<1\nux+v, 1≤x<4 3x−10, x≥4 Find the values of u and v that make f continuous at both junctions.",
+  "options": [
+   "u=2, v=−3",
+   "u=−2, v=1",
+   "u=1, v=−2",
+   "u=2, v=−6",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "u=1, v=−2"
+ },
+ {
+  "num": 207,
+  "stem": "207. The one-sided limits of f are shown below.\nlimx→−2 −f(x)=−4, limx→−2 +f(x)=4 Choose the correct statement about continuity at x=−2.",
+  "options": [
+   "The function has a non-removable discontinuity at x = -2.",
+   "The function is continuous at x = -2.",
+   "Equal one-sided limits alone are enough to determine continuity at x = -2.",
+   "The function has a removable discontinuity at x = -2.",
+   "The value f(-2) alone is enough to determine continuity."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "The function has a non-removable discontinuity at x = -2."
+ },
+ {
+  "num": 208,
+  "stem": "208. The following information is given about f. limx→−3 f(x)=4, f(−3)=5\nChoose the correct statement about continuity at x=−3.",
+  "options": [
+   "The value f(-3) alone is enough to determine continuity.",
+   "The function is continuous at x = -3.",
+   "Equal one-sided limits alone are enough to determine continuity at x = -3.",
+   "The function has a non-removable discontinuity at x = -3.",
+   "The function has a removable discontinuity at x = -3."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "The function has a removable discontinuity at x = -3."
+ },
+ {
+  "num": 209,
+  "stem": "209. The following information is given about f. limx→2 f(x)=−2, f(2)=−1\nChoose the correct statement about continuity at x=2.",
+  "options": [
+   "Equal one-sided limits alone are enough to determine continuity at x = 2.",
+   "The function is continuous at x = 2.",
+   "The value f(2) alone is enough to determine continuity.",
+   "The function has a removable discontinuity at x = 2.",
+   "The function has a non-removable discontinuity at x = 2."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "The function has a removable discontinuity at x = 2."
+ },
+ {
+  "num": 210,
+  "stem": "210. The following information is given about f. limx→1 f(x)=4, f(1)=5\nChoose the correct statement about continuity at x=1.",
+  "options": [
+   "The function has a non-removable discontinuity at x = 1.",
+   "The function is continuous at x = 1.",
+   "The value f(1) alone is enough to determine continuity.",
+   "Equal one-sided limits alone are enough to determine continuity at x = 1.",
+   "The function has a removable discontinuity at x = 1."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "The function has a removable discontinuity at x = 1."
+ },
+ {
+  "num": 211,
+  "stem": "211. The one-sided limits of f are shown below.\nlimx→−3 −f(x)=−1, limx→−3 +f(x)=1 Choose the correct statement about continuity at x=−3.",
+  "options": [
+   "The function has a removable discontinuity at x = -3.",
+   "The function is continuous at x = -3.",
+   "The value f(-3) alone is enough to determine continuity.",
+   "The function has a non-removable discontinuity at x = -3.",
+   "Equal one-sided limits alone are enough to determine continuity at x = -3. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "The function has a non-removable discontinuity at x = -3."
+ },
+ {
+  "num": 212,
+  "stem": "212. Consider the function f on the closed interval\\[1, 7 2 \\].\n### f(x)=ln(\n2x 5 )\nWhich statement about the Zero Point Theorem is correct?",
+  "options": [
+   "The Zero Point Theorem cannot be applied because the function is not continuous on the entire closed interval.",
+   "None of the other four choices is correct.",
+   "The Zero Point Theorem guarantees at least one root.",
+   "The Zero Point Theorem guarantees exactly one root.",
+   "The Zero Point Theorem guarantees that the midpoint of the interval is a root."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "The Zero Point Theorem guarantees at least one root."
+ },
+ {
+  "num": 213,
+  "stem": "213. Consider the function f on the closed interval\\[0,2\\].\n### f(x)=5x\n2+5x−1\nWhich statement about the Zero Point Theorem is correct?",
+  "options": [
+   "The Zero Point Theorem cannot be applied because the function is not continuous on the entire closed interval.",
+   "The Zero Point Theorem guarantees at least one root.",
+   "None of the other four choices is correct.",
+   "The Zero Point Theorem guarantees that the midpoint of the interval is a root.",
+   "The Zero Point Theorem guarantees exactly one root."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "The Zero Point Theorem guarantees at least one root."
+ },
+ {
+  "num": 214,
+  "stem": "214. Consider the function f on the closed interval\\[−3,3\\].\n### f(x)= {\n−3, x<0 3, x≥0 Which statement about the Zero Point Theorem is correct?",
+  "options": [
+   "The Zero Point Theorem guarantees that the midpoint of the interval is a root.",
+   "The Zero Point Theorem guarantees exactly one root.",
+   "None of the other four choices is correct.",
+   "The Zero Point Theorem guarantees at least one root.",
+   "The Zero Point Theorem cannot be applied because the function is not continuous on the entire closed interval."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "The Zero Point Theorem cannot be applied because the function is not continuous on the entire closed interval."
+ },
+ {
+  "num": 215,
+  "stem": "215. Consider the function f on the closed interval\\[0,2\\].\n### f(x)=2x\n2+2x−2\nWhich statement about the Zero Point Theorem is correct?",
+  "options": [
+   "The Zero Point Theorem guarantees at least one root.",
+   "None of the other four choices is correct.",
+   "The Zero Point Theorem guarantees that the midpoint of the interval is a root.",
+   "The Zero Point Theorem guarantees exactly one root.",
+   "The Zero Point Theorem cannot be applied because the function is not continuous on the entire closed interval."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "The Zero Point Theorem guarantees at least one root."
+ },
+ {
+  "num": 216,
+  "stem": "216. Consider the function f on the closed interval\\[−49,49\\].\n### f(x)=\n1 x Which statement about the Zero Point Theorem is correct?",
+  "options": [
+   "The Zero Point Theorem guarantees that the midpoint of the interval is a root.",
+   "The Zero Point Theorem cannot be applied because the function is not continuous on the entire closed interval.",
+   "The Zero Point Theorem guarantees exactly one root.",
+   "The Zero Point Theorem guarantees at least one root.",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "The Zero Point Theorem cannot be applied because the function is not continuous on the entire closed interval."
+ },
+ {
+  "num": 217,
+  "stem": "217. y=f(x)=x 2+3x−6. Find the slope of the tangent line at x=−3.",
+  "options": [
+   "−4",
+   "−2",
+   "−3",
+   "3",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−3"
+ },
+ {
+  "num": 218,
+  "stem": "218. y=f(x)=−x 3−4x 2−3x−6. Find the slope of the tangent line at x=−3.",
+  "options": [
+   "−6",
+   "None of the other four choices is correct.",
+   "−5",
+   "6",
+   "−7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−6"
+ },
+ {
+  "num": 219,
+  "stem": "219. y=f(x)=−x 3−6x 2−4x−2. Find the slope of the tangent line at x=−3.",
+  "options": [
+   "−5",
+   "6",
+   "None of the other four choices is correct.",
+   "10",
+   "4"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 220,
+  "stem": "220. y=f(x)=−x 3−4x 2+3x−3. Find the slope of the tangent line at x=−3.",
+  "options": [
+   "1",
+   "2",
+   "−1",
+   "0",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "0"
+ },
+ {
+  "num": 221,
+  "stem": "221. y=f(x)=−x 3−5x 2−3x−6. Find the slope of the tangent line at x=−3.",
+  "options": [
+   "−2",
+   "None of the other four choices is correct.",
+   "1",
+   "−1",
+   "2 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 221,
+  "stem": "221. None of the other four choices is correct.\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n6.2 某点的导数 5 题\n222.\n### f(x)=−\n4 √ 3x . Find f ′(27).",
+  "options": [
+   "None of the other four choices is correct.",
+   "− 2 243",
+   "245 243",
+   "− 241 243",
+   "2 243"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 223,
+  "stem": "223. f(x)=3 √ 2x . Find f ′(2).",
+  "options": [
+   "None of the other four choices is correct.",
+   "1 144",
+   "145 144",
+   "− 143 144",
+   "− 1 144 参考答案 Answers（本考点 5 题）",
+   "None of the other four choices is correct.",
+   "1 144",
+   "145 144",
+   "− 143 144",
+   "− 1 144 参考答案 Answers（本考点 5 题）",
+   "None of the other four choices is correct.",
+   "1 144",
+   "145 144",
+   "− 143 144",
+   "− 1 144 参考答案 Answers（本考点 5 题）",
+   "None of the other four choices is correct.",
+   "1 144",
+   "145 144",
+   "− 143 144",
+   "− 1 144 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 227,
+  "stem": "227. y= 6\nx 2+8 . Find the equation of the tangent line at (−1, 2 3 ).",
+  "options": [
+   "None of the other four choices is correct.",
+   "4x+27y−14=0",
+   "2x+27y−16=0",
+   "4x−27y+22=0",
+   "4x−3y+6=0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "4x−27y+22=0"
+ },
+ {
+  "num": 228,
+  "stem": "228. y=− 3\nx 2+4 . Find the equation of the tangent line at (−1,− 3 5 ).",
+  "options": [
+   "None of the other four choices is correct.",
+   "3x−25y−12=0",
+   "6x−25y−9=0",
+   "6x+25y+21=0",
+   "6x+5y+9=0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "6x+25y+21=0"
+ },
+ {
+  "num": 229,
+  "stem": "229. y= 11\nx 2+10 . Find the equation of the tangent line at (−1,1).",
+  "options": [
+   "2x−11y+13=0",
+   "None of the other four choices is correct.",
+   "x+11y−10=0",
+   "2x−y+3=0",
+   "2x+11y−9=0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "2x−11y+13=0"
+ },
+ {
+  "num": 230,
+  "stem": "230. y=− 2\nx 2+1 . Find the equation of the tangent line at (−1,−1).",
+  "options": [
+   "None of the other four choices is correct.",
+   "x−y=0",
+   "2x+y+3=0",
+   "x+y+2=0",
+   "x−2y−1=0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "x+y+2=0"
+ },
+ {
+  "num": 231,
+  "stem": "231. y= 2\nx 2+1 . Find the equation of the tangent line at (1,1).",
+  "options": [
+   "x+2y−3=0",
+   "None of the other four choices is correct.",
+   "2x+y−3=0",
+   "x−y=0",
+   "x+y−2=0 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "x+y−2=0"
+ },
+ {
+  "num": 231,
+  "stem": "231. x+y−2=0\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n6 . 4 基 本 求 导 （\n### 幂/三\n### 角/四\n则 ） 10 题\n2 3 2 . f (x) = − 7 c o s (x). F i n d f′ (x).",
+  "options": [
+   "−csc2(x) cos(x)+1",
+   "csc2(x) cos(x)",
+   "−csc2(x) cos(x)−1",
+   "csc(x)",
+   "None of the other fo u r c h o i c e s i s c o r r e c t.",
+   "−csc2(x) cos(x)+1",
+   "csc2(x) cos(x)",
+   "−csc2(x) cos(x)−1",
+   "csc(x)",
+   "None of the other fo u r c h o i c e s i s c o r r e c t.",
+   "−csc2(x) cos(x)+1",
+   "csc2(x) cos(x)",
+   "−csc2(x) cos(x)−1",
+   "csc(x)",
+   "None of the other fo u r c h o i c e s i s c o r r e c t.",
+   "−csc2(x) cos(x)+1",
+   "csc2(x) cos(x)",
+   "−csc2(x) cos(x)−1",
+   "csc(x)",
+   "None of the other fo u r c h o i c e s i s c o r r e c t."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "x+y−2=0"
+ },
+ {
+  "num": 236,
+  "stem": "236. f(x)=−2x3 tan(x). Find f′(x).",
+  "options": [
+   "−2x3 sec2(x)",
+   "None of the other four choices is correct.",
+   "−2x2 tan(x)−2x3 sec2(x)",
+   "−6x2 tan(x)",
+   "−6x2 tan(x)−2x3 sec2(x)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "−6x 2 tan(x)−2x 3 sec 2 (x)"
+ },
+ {
+  "num": 237,
+  "stem": "237. f(x)=−sin(x) cos(x). Find f ′(x).",
+  "options": [
+   "−cos(2x)",
+   "None of the other four choices is correct.",
+   "cos(2x)",
+   "−cos 2 (x)",
+   "sin 2 (x)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−cos(2x)"
+ },
+ {
+  "num": 238,
+  "stem": "238. f(x)=−3x 2 tan(x). Find f ′(x).",
+  "options": [
+   "−6x tan(x)",
+   "None of the other four choices is correct.",
+   "−6x tan(x)−3x 2 sec 2 (x)",
+   "−3x tan(x)−3x 2 sec 2 (x)",
+   "−3x 2 sec 2 (x)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−6x tan(x)−3x 2 sec 2 (x)"
+ },
+ {
+  "num": 239,
+  "stem": "239. f(x)=3 sin(x)+6 sec(x)−4 cot(x). Find f ′(x).",
+  "options": [
+   "−4 csc(x) cos(x)+6 sec(x)+3 sin(x)",
+   "4 csc 2 (x)+6 sec 2 (x) sin(x)+3 cos(x)+1",
+   "3 cos(x)+6 sec(x) tan(x)+4 csc 2 (x)",
+   "−4 csc 2 (x)−6 sec 2 (x) sin(x)−3 cos(x)",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "3 cos(x)+6 sec(x) tan(x)+4 csc 2 (x)"
+ },
+ {
+  "num": 240,
+  "stem": "240. f(x)=3 sin 4 (x)+ 2\nsin 4 (x) . Find f ′(x).",
+  "options": [
+   "3 sin 3 (x) cos(x)− 2 cos(x) sin 5 (x)",
+   "None of the other four choices is correct.",
+   "12 sin 3 (x) cos(x)+ 8 cos(x) sin 5 (x)",
+   "12 sin 3 (x) cos(x)− 8 cos(x) sin 5 (x)",
+   "12 sin 3 (x) cos(x)− 8 cos(x) sin 3 (x)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "12 sin 3 (x) cos(x)− 8 cos(x) sin 5 (x)"
+ },
+ {
+  "num": 241,
+  "stem": "241. f(x)=−sin 2 (x)+ 1\nsin 2 (x) . Find f ′(x).",
+  "options": [
+   "−2 sin(x) cos(x)− 2 cos(x) sin(x)",
+   "−2 sin(x) cos(x)+ 2 cos(x) sin 3 (x)",
+   "−2 sin(x)− 21 sin 3 (x)",
+   "−sin(x) cos(x)− cos(x) sin 3 (x)",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 10 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 242,
+  "stem": "242. Let F be differentiable. y=−4\\[F(x)\\] 3 . Find\n### dy\n### dx\n.",
+  "options": [
+   "None of the other four choices is correct.",
+   "−4\\[F (x)\\] 2F ′ (x)",
+   "−12\\[F (x)\\] 2F ′ (x)",
+   "−12\\[F (x)\\] 2",
+   "−12x 2F ′ (x 3 )"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−12\\[F (x)\\] 2F ′ (x)"
+ },
+ {
+  "num": 243,
+  "stem": "243. f(x)=(3x 2−5) 2 . Use the chain rule to find f ′(x).",
+  "options": [
+   "6x 2−10",
+   "6x",
+   "6x(3x 2−5)",
+   "None of the other four choices is correct.",
+   "6x(6x 2−10)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "6x(6x 2−10)"
+ },
+ {
+  "num": 244,
+  "stem": "244. f(x)=tan(x 2+5). Use the chain rule to find f ′(x).",
+  "options": [
+   "1 cos 2 (x 2+5)",
+   "2x",
+   "2x cos 2 (x 2+5)",
+   "None of the other four choices is correct.",
+   "2x cos(x 2+5)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "2x cos 2 (x 2+5)"
+ },
+ {
+  "num": 245,
+  "stem": "245. f(x)=(−3x 2−3) 3 . Use the chain rule to find f ′(x).",
+  "options": [
+   "−6x",
+   "None of the other four choices is correct.",
+   "−6x(−3x 2−3) 2",
+   "−18x(−3x 2−3) 2",
+   "3(−3x 2−3) 2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−18x(−3x 2−3) 2"
+ },
+ {
+  "num": 246,
+  "stem": "246. Let F be differentiable. y=8F (x 2 ). Find\n### dy\n### dx\n.",
+  "options": [
+   "16F (x)F ′ (x)",
+   "16 xF ′ (x 2 )",
+   "None of the other four choices is correct.",
+   "8F ′ (x 2 )",
+   "16 xF (x 2 )"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "16 xF ′ (x 2 )"
+ },
+ {
+  "num": 247,
+  "stem": "247. Let F be differentiable. y=7F (x 6 ). Find\n### dy\n### dx\n.",
+  "options": [
+   "42\\[F (x)\\] 5F ′ (x)",
+   "None of the other four choices is correct.",
+   "42x 5F (x 6 )",
+   "7F ′ (x 6 )",
+   "42x 5F ′ (x 6 )"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "42x 5F ′ (x 6 )"
+ },
+ {
+  "num": 248,
+  "stem": "248. Let F be differentiable. y=6F (x 4 ). Find\n### dy\n### dx\n.",
+  "options": [
+   "24x 3F ′ (x 4 )",
+   "24\\[F (x)\\] 3F ′ (x)",
+   "24x 3F (x 4 )",
+   "6F ′ (x 4 )",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "24x 3F ′ (x 4 )"
+ },
+ {
+  "num": 249,
+  "stem": "249. Let F be differentiable. y=−9F (x 2 ). Find\n### dy\n### dx\n.",
+  "options": [
+   "−18F (x)F ′ (x)",
+   "−18 xF (x 2 )",
+   "−9F ′ (x 2 )",
+   "−18 xF ′ (x 2 )",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−18 xF ′ (x 2 )"
+ },
+ {
+  "num": 250,
+  "stem": "250. f(x)=cos((5x 2−6) 2 ). Use the chain rule to find f ′(x).",
+  "options": [
+   "None of the other four choices is correct.",
+   "(12−10x 2 ) sin((5x 2−6) 2 )",
+   "−10x(10x 2−12) sin((5x 2−6) 2 )",
+   "−10x sin((5x 2−6) 2 )",
+   "10x(10x 2−12)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−10x(10x 2−12) sin((5x 2−6) 2 )"
+ },
+ {
+  "num": 251,
+  "stem": "251. f(x)=sin( 1\n((−x−2) 2 ) 2 ). Use the chain rule to find f ′(x).",
+  "options": [
+   "2 cos( 1 (−x−2) 4 ) (−x−2) 6",
+   "(−4x−8) cos( 1 (−x−2) 4 ) (−x−2) 6",
+   "(4x+8) cos( 1 (−x−2) 4 ) (−x−2) 6",
+   "None of the other four choices is correct.",
+   "(2x+4) cos( 1 (−x−2) 4 ) 参考答案 Answers（本考点 10 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "(−4x−8) cos( 1 (−x−2) 4 ) (−x−2) 6"
+ },
+ {
+  "num": 252,
+  "stem": "252. f(x)=−5x 2−5x. Find f ″(1).",
+  "options": [
+   "10",
+   "−10",
+   "−11",
+   "None of the other four choices is correct.",
+   "−9"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−10"
+ },
+ {
+  "num": 253,
+  "stem": "253. f(x)=−5x 2−6x−4. Find f ″(1).",
+  "options": [
+   "None of the other four choices is correct.",
+   "10",
+   "−9",
+   "−10",
+   "−11"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−10"
+ },
+ {
+  "num": 254,
+  "stem": "254. f(x)=−5x 3−6x 2−6x−3. Find f ″(1).",
+  "options": [
+   "−41",
+   "42",
+   "−42",
+   "−43",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−42"
+ },
+ {
+  "num": 255,
+  "stem": "255. f(x)=−5x 6−6x 5−6x 4−6x 3−6x 2−5x+5. Find f ″(1).",
+  "options": [
+   "390",
+   "−391",
+   "None of the other four choices is correct.",
+   "−390",
+   "−389"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−390"
+ },
+ {
+  "num": 256,
+  "stem": "256. f(x)=−5x 6−6x 5−6x 4−6x 3−6x 2−5x−4. Find f ″(1).",
+  "options": [
+   "−390",
+   "−391",
+   "−389",
+   "390",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−390"
+ },
+ {
+  "num": 257,
+  "stem": "257. f(x)=4 cos(4x). Find f (2)(x).",
+  "options": [
+   "−4⋅4 2 cos(4x)",
+   "−4⋅4 2 sin(4x)",
+   "None of the other four choices is correct.",
+   "4⋅4 2 cos(4x)",
+   "−4 2 cos(4x)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−4⋅4 2 cos(4x)"
+ },
+ {
+  "num": 258,
+  "stem": "258. f(x)=4 sin(x). Find f (3)(x).",
+  "options": [
+   "None of the other four choices is correct.",
+   "4 cos(x)",
+   "−4 cos(x)",
+   "−8 cos(x)",
+   "−4 sin(x)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−4 cos(x)"
+ },
+ {
+  "num": 259,
+  "stem": "259. f(x)=5 sin(5x). Find f (3)(x).",
+  "options": [
+   "−5 3 cos(5x)",
+   "None of the other four choices is correct.",
+   "−5⋅5 3 sin(5x)",
+   "5⋅5 3 cos(5x)",
+   "−5⋅5 4 cos(5x)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 260,
+  "stem": "260. f(x)=−cos(6x). Find f (10)(x).",
+  "options": [
+   "6 9 cos(6x)",
+   "None of the other four choices is correct.",
+   "6 10 sin(6x)",
+   "6 10 cos(6x)",
+   "−6 10 cos(6x)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "6 10 cos(6x)"
+ },
+ {
+  "num": 261,
+  "stem": "261. f(x)=−5 sin(x). Find f (11)(x).",
+  "options": [
+   "None of the other four choices is correct.",
+   "15 cos(x)",
+   "5 sin(x)",
+   "−5 cos(x)",
+   "10 cos(x) 参考答案 Answers（本考点 10 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 262,
+  "stem": "262. An object's position is s(t)=−5t 2−5 centimetres, where t≥0 is measured in seconds. Find the acceleration at t=3.",
+  "options": [
+   "10 cm/s 2",
+   "−9 cm/s 2",
+   "None of the other four choices is correct.",
+   "−11 cm/s 2",
+   "−10 cm/s 2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "−10 cm/s 2"
+ },
+ {
+  "num": 263,
+  "stem": "263. An object's position is s(t)=−5t 2−2t+4 centimetres, where t≥0 is measured in seconds. Find the velocity at t=5.",
+  "options": [
+   "None of the other four choices is correct.",
+   "−52 cm/s",
+   "52 cm/s",
+   "−51 cm/s",
+   "−53 cm/s"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−52 cm/s"
+ },
+ {
+  "num": 264,
+  "stem": "264. An object's position is s(t)=−5t 2−4t metres, where t≥0 is measured in seconds. Find the velocity at t=2.",
+  "options": [
+   "−25 m/s",
+   "24 m/s",
+   "None of the other four choices is correct.",
+   "−23 m/s",
+   "−24 m/s"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "−24 m/s"
+ },
+ {
+  "num": 265,
+  "stem": "265. An object's position is s(t)=−5t 3−6t 2−6t+5 centimetres, where t≥0 is measured in seconds. Find the\nacceleration a(t).",
+  "options": [
+   "−5t 3−6t 2−6t+5 cm/s 2",
+   "30t+12 cm/s 2",
+   "None of the other four choices is correct.",
+   "−30t−11 cm/s 2",
+   "−30t−12 cm/s 2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "−30t−12 cm/s 2"
+ },
+ {
+  "num": 266,
+  "stem": "266. An object's position is s(t)=−5t 3−6t 2−3t−1 centimetres, where t≥0 is measured in seconds. Find the acceleration\nat t=1.",
+  "options": [
+   "42 cm/s 2",
+   "−42 cm/s 2",
+   "None of the other four choices is correct.",
+   "−43 cm/s 2",
+   "−41 cm/s 2 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−42 cm/s 2"
+ },
+ {
+  "num": 267,
+  "stem": "267. Find d dx \\[ln √ 14x+15 \\].",
+  "options": [
+   "None of the other four choices is correct.",
+   "1 28x+30",
+   "14 14x+15",
+   "− 14 28x+30",
+   "14 28x+30"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "14 28x+30"
+ },
+ {
+  "num": 268,
+  "stem": "268. Find d dx \\[ln (10x 3−19x)\\].",
+  "options": [
+   "10x 2−19 10x 3−19x",
+   "19−30x 2 10x 3−19x",
+   "1 10x 3−19x",
+   "None of the other four choices is correct.",
+   "30x 2−19"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 269,
+  "stem": "269. Find d dx \\[ln (13x 2−19x)\\].",
+  "options": [
+   "13x−19 13x 2−19x",
+   "26x−19 13x 2−19x",
+   "26x−19",
+   "None of the other four choices is correct.",
+   "19−26x 13x 2−19x"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "26x−19 13x 2−19x"
+ },
+ {
+  "num": 270,
+  "stem": "270. Find d\n### dx\n\\[ln √ 7x−15 \\].",
+  "options": [
+   "None of the other four choices is correct.",
+   "1 14x−30",
+   "− 7 14x−30",
+   "7 14x−30",
+   "7 2 √7x−15"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "7 14x−30"
+ },
+ {
+  "num": 271,
+  "stem": "271. Find d\n### dx\n\\[ln (14x 6+13x)\\].",
+  "options": [
+   "84x 5+13 14x 6+13x",
+   "−84x 5−13 14x 6+13x",
+   "84x 5+13",
+   "1 14x 6+13x",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "84x 5+13 14x 6+13x"
+ },
+ {
+  "num": 272,
+  "stem": "272. Find d\n### dx\n(e 8x 2+4x+6 ).",
+  "options": [
+   "(16x+4)e 8x 2+4x+6",
+   "16 xe 8x 2+4x+6",
+   "(−16x−4)e 8x 2+4x+6",
+   "e 8x 2+4x+6",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "(16x+4)e 8x 2+4x+6"
+ },
+ {
+  "num": 273,
+  "stem": "273. Find d\n### dx\n(e−11x 2−6x+4 ).",
+  "options": [
+   "−22 xe −11x 2−6x+4",
+   "(22x+6)e−11x 2−6x+4",
+   "(−22x−6)e−11x 2−6x+4",
+   "e −11x 2−6x+4",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "(−22x−6)e −11x 2−6x+4"
+ },
+ {
+  "num": 274,
+  "stem": "274. Find d\n### dx\n(e −2x 2−7x+2 ).",
+  "options": [
+   "(−4x−7)e−2x 2−7x+2",
+   "(4x+7)e −2x 2−7x+2",
+   "−4 xe −2x 2−7x+2",
+   "e−2x 2−7x+2",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "(−4x−7)e−2x 2−7x+2"
+ },
+ {
+  "num": 275,
+  "stem": "275. Find d\n### dx\n(e−2x 2−x+6 ).",
+  "options": [
+   "(4x+1)e −2x 2−x+6",
+   "e−2x 2−x+6",
+   "−4 xe−2x 2−x+6",
+   "None of the other four choices is correct.",
+   "(−2x−1)e−2x 2−x+6"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 276,
+  "stem": "276. Find d\n### dx\n(e −x 2+x+1 ).",
+  "options": [
+   "(2x−1)e−x 2+x+1",
+   "−2 xe −x 2+x+1",
+   "None of the other four choices is correct.",
+   "e−x 2+x+1",
+   "(1−2x)e −x 2+x+1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "(1−2x)e −x2+x+1"
+ },
+ {
+  "num": 277,
+  "stem": "277. Find d\n### dx\n(e x 4 ln(17x)).",
+  "options": [
+   "−x 3 (4 ln(17x)+1)e x 4 ln(17x)",
+   "4x 3e x 4 ln(17x) ln(17x)",
+   "x 3 (4 ln(17x)+17)e x 4 ln(17x)",
+   "x 3 (4 ln(17x)+1)e x 4 ln(17x)",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "x 3 (4 ln(17x)+1)e x 4 ln(17x)"
+ },
+ {
+  "num": 278,
+  "stem": "278. Find d\n### dx\n(e −11x 5 ln(12x) ).",
+  "options": [
+   "−55x 4e−11x 5 ln(12x) ln(12x)",
+   "−11x 4 (5 ln(12x)+12)e −11x 5 ln(12x)",
+   "−11x 4 (5 ln(12x)+1)",
+   "−11x 4 (5 ln(12x)+1)e −11x 5 ln(12x)",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−11x 4 (5 ln(12x)+1)e −11x 5 ln(12x)"
+ },
+ {
+  "num": 279,
+  "stem": "279. Find d dx (e 11x ln(7x)).",
+  "options": [
+   "(11 ln(7x)+77)e 11x ln(7x)",
+   "None of the other four choices is correct.",
+   "(11 ln(7x)+11)e 11x ln(7x)",
+   "11e 11x ln(7x) ln(7x)",
+   "11 ln(7x)+11"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "(11 ln(7x)+11)e 11x ln(7x)"
+ },
+ {
+  "num": 280,
+  "stem": "280. Find d dx (e −x 6 ln(18x) ).",
+  "options": [
+   "−6x 5e−x 6 ln(18x) ln(18x)",
+   "−x 5 (6 ln(18x)+1)",
+   "−x 5 (6 ln(18x)+1)e−x 6 ln(18x)",
+   "None of the other four choices is correct.",
+   "x 5 (6 ln(18x)+1)e−x 6 ln(18x)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "−x 5 (6 ln(18x)+1)e −x6 ln(18x)"
+ },
+ {
+  "num": 281,
+  "stem": "281. Find d dx (e −4x 4 ln(17x) ).",
+  "options": [
+   "−4x 3 (4 ln(17x)+17)e−4x 4 ln(17x)",
+   "−4x 3 (4 ln(17x)+1)e −4x 4 ln(17x)",
+   "−4x 3 (4 ln(17x)+1)",
+   "4x 3 (4 ln(17x)+1)e −4x 4 ln(17x)",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−4x 3 (4 ln(17x)+1)e −4x 4 ln(17x)"
+ },
+ {
+  "num": 282,
+  "stem": "282. Find d dx ( √ 361−400x 2\n(10x+71) 2 3 ).",
+  "options": [
+   "√361−400x 2 (10x+71) 2 3 (− 400x 361−400x 2 + 20 3(10x+71) )",
+   "√361−400x 2 (10x+71) 2 3 ( 400x 361−400x 2 − 20 3(10x+71) )",
+   "None of the other four choices is correct.",
+   "√361−400x 2 (10x+71) 2 3 (− 400x 361−400x 2 − 10 10x+71 )",
+   "√361−400x 2 (10x+71) 2 3 (− 400x 361−400x 2 − 20 3(10x+71) ) 参考答案 Answers（本考点 16 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "√361−400x 2 (10x+71) 2 3 (− 400x 361−400x 2 − 20 3(10x+71) )"
+ },
+ {
+  "num": 283,
+  "stem": "283. Let f(x)=2x 3+12x−19. Find (f−1 ) ′(−195).",
+  "options": [
+   "1 6(−4) 2+12",
+   "1 2(−4) 2+12",
+   "1 6(−195) 2+12",
+   "None of the other four choices is correct.",
+   "6(−4) 2+12"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "1 6(−4) 2+12"
+ },
+ {
+  "num": 284,
+  "stem": "284. Let f(x)=9x 3+10x. Find (f−1 ) ′(−19).",
+  "options": [
+   "1 27(−19) 2+10",
+   "1 27(−1) 2+10",
+   "27(−1) 2+10",
+   "None of the other four choices is correct.",
+   "1 9(−1) 2+10"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "1 27(−1) 2+10"
+ },
+ {
+  "num": 285,
+  "stem": "285. Let f(x)=6x 3+9x−4. Find (f−1 )\n### ′(−424).",
+  "options": [
+   "1 18(−4) 2+9",
+   "18(−4) 2+9",
+   "1 18(−424) 2+9",
+   "None of the other four choices is correct.",
+   "1 6(−4) 2+9"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "1 18(−4) 2+9"
+ },
+ {
+  "num": 286,
+  "stem": "286. Let f(x)=12x 3+2x+18. Find (f−1 ) ′(348).",
+  "options": [
+   "36(3) 2+2",
+   "1 12(3) 2+2",
+   "1 36(348) 2+2",
+   "None of the other four choices is correct.",
+   "1 36(4) 2+2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 287,
+  "stem": "287. Let f(x)=5x 3+6x−19. Find (f−1 ) ′(33).",
+  "options": [
+   "1 15(3) 2+6",
+   "None of the other four choices is correct.",
+   "1 15(2) 2+6",
+   "1 15(33) 2+6",
+   "1 5(2) 2+6 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "1 15(2) 2+6"
+ },
+ {
+  "num": 287,
+  "stem": "287. 1 15(2) 2+6\n答案与上方题目编号一一对应；“None of the other four choices is correct.” 表示其余四个选项均不正确。\n7 . 3 反 三 角 函 数 求 导 5 题\n2 8 8 . F i n d d dx \\[ a r c c o s ( e − 6 8 x ) \\].",
+  "options": [
+   "− 225x2 √1−(75x3)2",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "225x2 1+(75x3)2",
+   "225x2 √1−(75x3)2",
+   "1 √1−(75x3)2",
+   "− 225x2 √1−(75x3)2",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "225x2 1+(75x3)2",
+   "225x2 √1−(75x3)2",
+   "1 √1−(75x3)2",
+   "− 225x2 √1−(75x3)2",
+   "None of the other fou r c h o i c e s i s c o r r e c t.",
+   "225x2 1+(75x3)2",
+   "225x2 √1−(75x3)2",
+   "1 √1−(75x3)2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": "1 15(2) 2+6"
+ },
+ {
+  "num": 291,
+  "stem": "291. Find d\n### dx\n\\[arccos (e−28x)\\].",
+  "options": [
+   "28e−28x √1−(e−28x) 2",
+   "None of the other four choices is correct.",
+   "28 √1−(e−28x) 2",
+   "28e−28x 1+(e−28x) 2",
+   "− 28e−28x √1−(e−28x) 2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "28e−28x √1−(e−28x) 2"
+ },
+ {
+  "num": 292,
+  "stem": "292. Find d\n### dx\n\\[arccos (e−70x)\\].",
+  "options": [
+   "None of the other four choices is correct.",
+   "− 1 √1−(e−70x) 2",
+   "70e−70x 1+(e−70x) 2",
+   "70e−70x √1−(e−70x) 2",
+   "− 70e−70x √1−(e−70x) 2 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "70e−70x √1−(e−70x) 2"
+ },
+ {
+  "num": 293,
+  "stem": "293. Find d dx ((sin(19x)+14) ln(19x)).",
+  "options": [
+   "(sin(19x)+14) ln(19x)( ln(sin(19x)+14) x )",
+   "(sin(19x)+14) ln(19x)( 19 ln(19x) cos(19x) sin(19x)+14 + ln(sin(19x)+14) x )",
+   "19 ln(19x) cos(19x) sin(19x)+14 + ln(sin(19x)+14) x",
+   "(sin(19x)+14) ln(19x)( ln(19x) cos(19x) sin(19x)+14 + ln(sin(19x)+14) x )",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "(sin(19x)+14) ln(19x)( 19 ln(19x) cos(19x) sin(19x)+14 + ln(sin(19x)+14) x )"
+ },
+ {
+  "num": 294,
+  "stem": "294. Find d dx ((9x 8+17) sin(9x)).",
+  "options": [
+   "(9x 8+17) sin(9x)( 72x 7 sin(9x) 9x 8+17 )",
+   "(9x 8+17) sin(9x)( 72x 7 sin(9x) 9x 8+17 +9 ln(9x 8+17) cos(9x))",
+   "None of the other four choices is correct.",
+   "72x 7 sin(9x) 9x 8+17 +9 ln(9x 8+17) cos(9x)",
+   "(9x 8+17) sin(9x)( x 7 sin(9x) 9x 8+17 +9 ln(9x 8+17) cos(9x))"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "(9x 8+17) sin(9x)( 72x 7 sin(9x) 9x 8+17 +9 ln(9x 8+17) cos(9x))"
+ },
+ {
+  "num": 295,
+  "stem": "295. Find d dx ((6x 2+18) sin(2x)).",
+  "options": [
+   "None of the other four choices is correct.",
+   "(6x 2+18) sin(2x)( 12x sin(2x) 6x 2+18 +2 ln(6x 2+18) cos(2x))",
+   "(6x 2+18) sin(2x)( x sin(2x) 6x 2+18 +2 ln(6x 2+18) cos(2x))",
+   "(6x 2+18) sin(2x)(2 ln(6x 2+18) cos(2x))",
+   "12x sin(2x) 6x 2+18 +2 ln(6x 2+18) cos(2x)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "(6x 2+18) sin(2x)( 12x sin(2x) 6x 2+18 +2 ln(6x 2+18) cos(2x))"
+ },
+ {
+  "num": 296,
+  "stem": "296. Let y=(7x 4+3) sin(7x) . Find y ′( π 7 ).",
+  "options": [
+   "−ln (7( π 7 ) 4+3)",
+   "−7 ln (7( π 7 ) 4+3)",
+   "0",
+   "7 ln (7( π 7 ) 4+3)",
+   "None of the other four choices is correct. 参考答案 Answers（本考点 4 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "−7 ln (7( π 7 ) 4+3)"
+ },
+ {
+  "num": 297,
+  "stem": "297. Assuming the equation 9x 4+9 xy=10y 2 defines y as a differentiable function of x, find dy dx at (−2,3).",
+  "options": [
+   "None of the other four choices is correct.",
+   "0",
+   "− 87 26",
+   "87 26",
+   "− 48 13"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "− 87 26"
+ },
+ {
+  "num": 298,
+  "stem": "298. Assuming the equation 6x 6+2 xy 2=5y 3 defines y as a differentiable function of x, find dy dx .",
+  "options": [
+   "−36x 5−2y 2 4 xy−15y 2",
+   "36x 5+2y 2 4 xy−15y 2",
+   "−36x 5−2y 2",
+   "None of the other four choices is correct.",
+   "0"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "−36x 5−2y 2 4 xy−15y 2"
+ },
+ {
+  "num": 299,
+  "stem": "299. Assuming the equation 18y 2−27y=2x 5 defines y as a differentiable function of x, find dy dx at (3,6).",
+  "options": [
+   "810",
+   "None of the other four choices is correct.",
+   "0",
+   "− 30 7",
+   "30 7"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "30 7"
+ },
+ {
+  "num": 300,
+  "stem": "300. Assuming the equation 8x 2+18 xy=−9y 2 defines y as a differentiable function of x, find dy dx at (−3,2).",
+  "options": [
+   "− 2 3",
+   "12",
+   "0",
+   "None of the other four choices is correct.",
+   "2 3"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "− 2 3"
+ },
+ {
+  "num": 301,
+  "stem": "301. Assuming the equation 13x 5+17 xy 3=−29y 4 defines y as a differentiable function of x, find dy dx .",
+  "options": [
+   "None of the other four choices is correct.",
+   "− 65x 4 51 xy 2+116y 3",
+   "0",
+   "−65x 4−17y 3 51 xy 2+116y 3",
+   "65x 4+17y 3 51 xy 2+116y 3 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "−65x 4−17y 3 51 xy 2+116y 3"
+ },
+ {
+  "num": 302,
+  "stem": "302. Find the equation of the tangent line to 5 √ y +4 xy 4=5 at (0,1).",
+  "options": [
+   "None of the other four choices is correct.",
+   "y=− 8x 5",
+   "y=1− 8x 5",
+   "y= 5x 8 +1",
+   "y= 8x 5 +1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "y=1− 8x 5"
+ },
+ {
+  "num": 303,
+  "stem": "303. Find the equation of the tangent line to 5 √ y +6 xy 3=5 at (0,1).",
+  "options": [
+   "y=− 12 5",
+   "y= 12x 5 +1",
+   "y= 5x 12 +1",
+   "y=− 12x 5",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 304,
+  "stem": "304. Find the equation of the tangent line to 9 √ y +8 xy 2=9 at (0,1).",
+  "options": [
+   "y=− 16 9",
+   "None of the other four choices is correct.",
+   "y=− 16x 9",
+   "y= 16x 9 +1",
+   "y= 9x 16 +1"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 305,
+  "stem": "305. Find the equation of the tangent line to 4 √ y +xy=0 at (−2,4).",
+  "options": [
+   "y=4",
+   "None of the other four choices is correct.",
+   "y=−4x−4",
+   "y=4x",
+   "y=4x+12"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "y=4x+12"
+ },
+ {
+  "num": 306,
+  "stem": "306. Find the equation of the tangent line to 8 √ y +5 xy=−2 at (−2,1).",
+  "options": [
+   "y=− 6x 5 − 7 5",
+   "None of the other four choices is correct.",
+   "y= 5x 6 + 8 3",
+   "y= 5x 6",
+   "y=− 5x 6 − 2 3 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "y= 5x 6 + 8 3"
+ },
+ {
+  "num": 307,
+  "stem": "307. A balloon is released 100 ft from an observer on level ground and rises vertically at 3 ft/s. How fast is its distance from\nthe observer increasing when its height is 120 ft?",
+  "options": [
+   "100⋅3 √100 2+120 2",
+   "3 √100 2+120 2",
+   "120⋅3",
+   "None of the other four choices is correct.",
+   "120⋅3 100+120"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 308,
+  "stem": "308. A balloon is released 170 ft from an observer on level ground and rises vertically at 6 ft/s. How fast is its distance from\nthe observer increasing when its height is 130 ft?",
+  "options": [
+   "130⋅6 170+130",
+   "None of the other four choices is correct.",
+   "130⋅6 √170 2+130 2",
+   "130⋅6",
+   "170⋅6 √170 2+130 2 参考答案 Answers（本考点 2 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "130⋅6 √170 2+130 2"
+ },
+ {
+  "num": 309,
+  "stem": "309. Water enters a conical tank at 27 ft 3/min. The tank is 25 ft high with top radius 7 ft. How fast is the water level rising\nwhen the depth is 10 ft?",
+  "options": [
+   "None of the other four choices is correct.",
+   "27 π7 2",
+   "27⋅25 2 3π7 210 2",
+   "27⋅25 π710 2",
+   "27⋅25 2 π7 210"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 310,
+  "stem": "310. Water enters a conical tank at 23 ft 3/min. The tank is 21 ft high with top radius 8 ft. How fast is the water level rising\nwhen the depth is 17 ft?",
+  "options": [
+   "23⋅21 2 3π8 217 2",
+   "None of the other four choices is correct.",
+   "23 π8 2",
+   "23⋅21 2 π8 217 2",
+   "23⋅21 π817 2 参考答案 Answers（本考点 2 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "23⋅21 2 π8 217 2"
+ },
+ {
+  "num": 311,
+  "stem": "311. A telescope is on a cliff 190 ft above the water. A boat approaches the shore at 15 ft/s. At what rate is the angle between\nthe vertical cliff and the line of sight changing when the boat is 310 ft from shore?",
+  "options": [
+   "None of the other four choices is correct.",
+   "− 15⋅190 190 2+310 2",
+   "− 15 190 2+310 2",
+   "− 15 190",
+   "15⋅190 190 2+310 2 参考答案 Answers（本考点 1 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "− 15⋅190 190 2+310 2"
+ },
+ {
+  "num": 312,
+  "stem": "312. Let f(x)=−(x+2) 3−3 on\\[−4,0\\]. Find the x-coordinates of all stationary and singular points.",
+  "options": [
+   "Stationary point: x=−2; there are no singular points.",
+   "There are no stationary points; singular point: x=−2.",
+   "None of the other four choices is correct.",
+   "Stationary points: x=−4, x=−2, and x=0; there are no singular points.",
+   "Stationary points: x=−4 and x=0; there are no singular points."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "Stationary point: x=−2; there are no singular points."
+ },
+ {
+  "num": 313,
+  "stem": "313. Let f(x)=2(x+2) 3+5 on\\[−4,0\\]. Find the x-coordinates of all stationary and singular points.",
+  "options": [
+   "None of the other four choices is correct.",
+   "There are no stationary points; singular point: x=−2.",
+   "Stationary points: x=−4 and x=0; there are no singular points.",
+   "Stationary point: x=−2; there are no singular points.",
+   "Stationary points: x=−4, x=−2, and x=0; there are no singular points."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "Stationary point: x=−2; there are no singular points."
+ },
+ {
+  "num": 314,
+  "stem": "314. Let f(x)=(x+1) 3−5 on\\[−3,1\\]. Find the x-coordinates of all stationary and singular points.",
+  "options": [
+   "There are no stationary points; singular point: x=−1.",
+   "None of the other four choices is correct.",
+   "Stationary points: x=−3 and x=1; there are no singular points.",
+   "Stationary point: x=−1; there are no singular points.",
+   "Stationary points: x=−3, x=−1, and x=1; there are no singular points."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "Stationary point: x=−1; there are no singular points."
+ },
+ {
+  "num": 315,
+  "stem": "315. Let f(x)=−( 3√ x+1 ) 2−1 on\\[−2,1\\]. Find the x-coordinates of all stationary and singular points.",
+  "options": [
+   "None of the other four choices is correct.",
+   "Stationary points: x=−2 and x=1; singular point: x=−1.",
+   "There are no stationary points; singular point: x=−1.",
+   "Stationary point: x=−1; there are no singular points.",
+   "Stationary points: x=−2 and x=1; there are no singular points."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "There are no stationary points; singular point: x=−1."
+ },
+ {
+  "num": 316,
+  "stem": "316. Let f(x)=−2 √ x+7 +3 on\\[−6,2\\]. Find the x-coordinates of all stationary and singular points.",
+  "options": [
+   "Stationary point: x=−2; there are no singular points.",
+   "Stationary points: x=−6 and x=2; there are no singular points.",
+   "None of the other four choices is correct.",
+   "There are no stationary points; there are no singular points.",
+   "There are no stationary points; singular point: x=−2. 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "There are no stationary points; there are no singular points."
+ },
+ {
+  "num": 317,
+  "stem": "317. Let f(x)=−2( 3√ x+2 ) 2−4 on\\[−3,0\\]. List all x-values at which f must be evaluated to determine its maximum and\nminimum values.",
+  "options": [
+   "x=−3, x=−2, and x=0",
+   "x=−2 and x=0",
+   "x=−3 and x=0",
+   "x=−3 and x=−2",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "x=−3, x=−2, and x=0"
+ },
+ {
+  "num": 318,
+  "stem": "318. Let f(x)=− ( 3√ x+2 ) 4\nx+5 −4 on\\[−4,4\\]. List all x-values at which f must be evaluated to determine its maximum and\nminimum values.",
+  "options": [
+   "x=−4 and x=4",
+   "x=−4, x=−2, and x=4",
+   "x=−2 and x=4",
+   "None of the other four choices is correct.",
+   "x=−4 and x=−2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "x=−4, x=−2, and x=4"
+ },
+ {
+  "num": 319,
+  "stem": "319. Let f(x)=−2 √ x+7 +2 on\\[−6,2\\]. List all x-values at which f must be evaluated to determine its maximum and\nminimum values.",
+  "options": [
+   "x=2",
+   "There are no x-values to evaluate.",
+   "x=−6 and x=2",
+   "None of the other four choices is correct.",
+   "x=−6"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "x=−6 and x=2"
+ },
+ {
+  "num": 320,
+  "stem": "320. Let f(x)=−( 3√ x+2 ) 2+10 on\\[−3,0\\]. List all x-values at which f must be evaluated to determine its maximum and\nminimum values.",
+  "options": [
+   "None of the other four choices is correct.",
+   "x=−3, x=−2, and x=0",
+   "x=−2 and x=0",
+   "x=−3 and x=0",
+   "x=−3 and x=−2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "x=−3, x=−2, and x=0"
+ },
+ {
+  "num": 321,
+  "stem": "321. Let f(x)=(−x−2)e−x−2+12 on\\[−2,2\\]. List all x-values at which f must be evaluated to determine its maximum and\nminimum values.",
+  "options": [
+   "None of the other four choices is correct.",
+   "x=−2 and x=−1",
+   "x=−1 and x=2",
+   "x=−1",
+   "x=−2 and x=2"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 322,
+  "stem": "322. Let f(x)=(x+1) 2 (4x−14) on\\[− 5 2 ,5\\]. Find all x-values where the maximum and minimum values are attained.",
+  "options": [
+   "Maximum attained at x=− 5 2 ; minimum attained at x=−1.",
+   "Maximum attained at x=5; minimum attained at x=− 5 2 and x=2.",
+   "Maximum attained at x=5; minimum attained at x=− 5 2 .",
+   "Maximum attained at x=− 5 2 and x=2; minimum attained at x=5.",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "Maximum attained at x=5; minimum attained at x=− 5 2 and x=2."
+ },
+ {
+  "num": 323,
+  "stem": "323. Let f(x)=( 3√ x+1 ) 2 on\\[−9,0\\]. Find all x-values where the maximum and minimum values are attained.",
+  "options": [
+   "None of the other four choices is correct.",
+   "Maximum attained at x=−9; minimum attained at x=−1.",
+   "Maximum attained at x=−1; minimum attained at x=0.",
+   "Maximum attained at x=−9; minimum attained at x=0.",
+   "Maximum attained at x=−1; minimum attained at x=−9."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "Maximum attained at x=−9; minimum attained at x=−1."
+ },
+ {
+  "num": 324,
+  "stem": "324. Let f(x)=−2( 3√ x−2 ) 2 on\\[−6,4\\]. Find all x-values where the maximum and minimum values are attained.",
+  "options": [
+   "Maximum attained at x=2; minimum attained at x=4.",
+   "Maximum attained at x=−6; minimum attained at x=4.",
+   "None of the other four choices is correct.",
+   "Maximum attained at x=−6; minimum attained at x=2.",
+   "Maximum attained at x=2; minimum attained at x=−6."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 4,
+  "answer_text": "Maximum attained at x=2; minimum attained at x=−6."
+ },
+ {
+  "num": 325,
+  "stem": "325. Let f(x)=(x−1) 2 (2x−5) on\\[ 1 2 ,3\\]. Find all x-values where the maximum and minimum values are attained.",
+  "options": [
+   "Maximum attained at x=3; minimum attained at x= 1 2 and x=2.",
+   "Maximum attained at x= 1 2 and x=2; minimum attained at x=3.",
+   "Maximum attained at x= 1 2 ; minimum attained at x=1.",
+   "None of the other four choices is correct.",
+   "Maximum attained at x=3; minimum attained at x= 1 2 ."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "Maximum attained at x=3; minimum attained at x= 1 2 and x=2."
+ },
+ {
+  "num": 326,
+  "stem": "326. Let f(x)=−2( 3√ x+1 ) 2 on\\[−9,7\\]. Find all x-values where the maximum and minimum values are attained.",
+  "options": [
+   "Maximum attained at x=−1; minimum attained at x=−9.",
+   "Maximum attained at x=−9 and x=7; minimum attained at x=−1.",
+   "None of the other four choices is correct.",
+   "Maximum attained at x=−1; minimum attained at x=−9 and x=7.",
+   "Maximum attained at x=−9; minimum attained at x=−1."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "Maximum attained at x=−1; minimum attained at x=−9 and x=7."
+ },
+ {
+  "num": 327,
+  "stem": "327. Let f(x)=3 ( 3√ x−2 ) 4\nx+1 on\\[0,8\\]. Find the maximum value and minimum value.",
+  "options": [
+   "Maximum value: 0; minimum value: −6 3√2 .",
+   "Maximum value: 6 3√2 ; minimum value: 2 3√6 .",
+   "None of the other four choices is correct.",
+   "Maximum value: 6 3√2 ; minimum value: 0.",
+   "Maximum value: 2 3√6 ; minimum value: 0."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "Maximum value: 6 3√2 ; minimum value: 0."
+ },
+ {
+  "num": 328,
+  "stem": "328. Let f(x)=3( 3√ x+1 ) 2 on\\[−2,1\\]. Find the maximum value and minimum value.",
+  "options": [
+   "Maximum value: 0; minimum value: −3⋅2 2 3 .",
+   "Maximum value: 12; minimum value: 0.",
+   "None of the other four choices is correct.",
+   "Maximum value: 3⋅2 2 3 ; minimum value: 3.",
+   "Maximum value: 3; minimum value: 0."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 329,
+  "stem": "329. Let f(x)=−√ x+7 on\\[−6,2\\]. Find the maximum value and minimum value.",
+  "options": [
+   "None of the other four choices is correct.",
+   "Maximum value: 3; minimum value: 1.",
+   "Maximum value: −√5 ; minimum value: −3.",
+   "Maximum value: −1; minimum value: −3.",
+   "Maximum value: −1; minimum value: −√5 ."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "Maximum value: −1; minimum value: −3."
+ },
+ {
+  "num": 330,
+  "stem": "330. Let f(x)=2 ( 3√ x ) 4\nx+3 +7 on\\[−2,6\\]. Find the maximum value and minimum value.",
+  "options": [
+   "None of the other four choices is correct.",
+   "Maximum value: 4 3√2 ; minimum value: 0.",
+   "Maximum value: 4 3√6 3 +7; minimum value: 7.",
+   "Maximum value: 7; minimum value: 7−4 3√2 .",
+   "Maximum value: 4 3√2 +7; minimum value: 4 3√6 3 +7."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 331,
+  "stem": "331. Let f(x)=−2 ( 3√ x−1 ) 4\nx+2 on\\[−1,7\\]. Find the maximum value and minimum value.",
+  "options": [
+   "Maximum value: 0; minimum value: − 4 3√6 3 .",
+   "None of the other four choices is correct.",
+   "Maximum value: 0; minimum value: −4 3√2 .",
+   "Maximum value: − 4 3√6 3 ; minimum value: −4 3√2 .",
+   "Maximum value: 4 3√2 ; minimum value: 0. 参考答案 Answers（本考点 15 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "Maximum value: 0; minimum value: −4 3√2 ."
+ },
+ {
+  "num": 332,
+  "stem": "332. Let f(x)=−x 3 . Find the maximal intervals on which f is increasing and on which it is decreasing.",
+  "options": [
+   ", Increasing on (−∞,∞).;, There is no interval on which f is decreasing.",
+   ", There is no interval on which f is increasing.;, There is no interval on which f is decreasing.",
+   "None of the other four choices is correct.",
+   ", There is no interval on which f is increasing.;, Decreasing on (−∞,∞).",
+   ", Increasing on (−∞,0).;, Decreasing on (0,∞)."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": ", There is no interval on which f is increasing.;, Decreasing on (−∞,∞)."
+ },
+ {
+  "num": 333,
+  "stem": "333. Let f(x)=\n### (8−(x+1)\n2 )(x+1) 2 4 . Find the maximal intervals on which f is increasing and on which it is decreasing.",
+  "options": [
+   ", There is no interval on which f is increasing.;, Decreasing on \\[−3,−1\\] and on \\[1,∞).",
+   ", Increasing on \\[−3,−1\\] and on \\[1,∞).;, Decreasing on (−∞,−3\\] and on \\[−1,1\\])",
+   "None of the other four choices is correct.",
+   ", Increasing on (−∞,−3\\] and on \\[−1,1\\].;, Decreasing on \\[−3,−1\\] and on \\[1,∞).",
+   ", Increasing on (−∞,−3\\] and on \\[−1,1\\].;, There is no interval on which f is decreasing)"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": ", Increasing on (−∞,−3\\] and on \\[−1,1\\].;, Decreasing on \\[−3,−1\\] and on \\[1,∞)."
+ },
+ {
+  "num": 334,
+  "stem": "334. Let f(x)=\n### (x−2)\n2\n### ((x−2)\n2−8)\n4 . Find the maximal intervals on which f is increasing and on which it is decreasing.",
+  "options": [
+   ", Increasing on \\[0,2\\] and on \\[4,∞).;, There is no interval on which f is decreasing.",
+   ", Increasing on \\[0,2\\] and on \\[4,∞).;, Decreasing on (−∞,0\\] and on \\[2,4\\])",
+   ", There is no interval on which f is increasing.;, Decreasing on (−∞,0\\] and on \\[2,4\\])",
+   "None of the other four choices is correct.",
+   ", Increasing on (−∞,0\\] and on \\[2,4\\].;, Decreasing on \\[0,2\\] and on \\[4,∞)."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": ", Increasing on \\[0,2\\] and on \\[4,∞).;, Decreasing on (−∞,0\\] and on \\[2,4\\])"
+ },
+ {
+  "num": 335,
+  "stem": "335. Let f(x)= x 2 (x 2−8)\n2 . Find the maximal intervals on which f is increasing and on which it is decreasing.",
+  "options": [
+   ", There is no interval on which f is increasing.;, Decreasing on (−∞,−2\\] and on \\[0,2\\])",
+   ", Increasing on \\[−2,0\\] and on \\[2,∞).;, There is no interval on which f is decreasing.",
+   ", Increasing on \\[−2,0\\] and on \\[2,∞).;, Decreasing on (−∞,−2\\] and on \\[0,2\\])",
+   ", Increasing on (−∞,−2\\] and on \\[0,2\\].;, Decreasing on \\[−2,0\\] and on \\[2,∞).",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": ", Increasing on \\[−2,0\\] and on \\[2,∞).;, Decreasing on (−∞,−2\\] and on \\[0,2\\])"
+ },
+ {
+  "num": 336,
+  "stem": "336. Let f(x)=2|x−1| 2 3 . Find the maximal intervals on which f is increasing and on which it is decreasing.",
+  "options": [
+   ", Increasing on \\[1,∞).;, There is no interval on which f is decreasing.",
+   "None of the other four choices is correct.",
+   ", There is no interval on which f is increasing.;, Decreasing on (−∞,1\\])",
+   ", Increasing on (−∞,1\\].;, Decreasing on \\[1,∞).",
+   ", Increasing on \\[1,∞).;, Decreasing on (−∞,1\\]) 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": ", Increasing on \\[1,∞).;, Decreasing on (−∞,1\\])"
+ },
+ {
+  "num": 337,
+  "stem": "337. Let f(x)=−ln(|x−2|+1)+3. Find the maximal open intervals on which f is concave up and on which it is concave down.",
+  "options": [
+   ", There is no interval on which f is concave up.;, Concave down on (−∞,2) and on (2,∞).",
+   ", There is no interval on which f is concave up.;, Concave down on (−∞,∞).",
+   "None of the other four choices is correct.",
+   ", Concave up on (−∞,∞).;, There is no interval on which f is concave down.",
+   ", There is no interval on which f is concave up.;, There is no interval on which f is concave down."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "None of the other four choices is correct."
+ },
+ {
+  "num": 338,
+  "stem": "338. Let f(x)=− 1 3√ x−1 +3. Find the maximal open intervals on which f is concave up and on which it is concave down.",
+  "options": [
+   ", Concave up on (−∞,1).;, Concave down on (1,∞).",
+   ", There is no interval on which f is concave up.;, Concave down on (1,∞).",
+   "None of the other four choices is correct.",
+   ", Concave up on (1,∞).;, Concave down on (−∞,1).",
+   ", Concave up on (−∞,1).;, There is no interval on which f is concave down."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": ", Concave up on (−∞,1).;, Concave down on (1,∞)."
+ },
+ {
+  "num": 339,
+  "stem": "339. Let f(x)=−2(3(x−1)\n### 2+sin\n2 (x−1)). Find the maximal open intervals on which f is concave up and on which it is\nconcave down.",
+  "options": [
+   ", Concave up on (−∞,∞).;, There is no interval on which f is concave down.",
+   "None of the other four choices is correct.",
+   ", There is no interval on which f is concave up.;, Concave down on (−∞,∞).",
+   ", There is no interval on which f is concave up.;, There is no interval on which f is concave down.",
+   ", Concave up on (−∞,1).;, Concave down on (1,∞)."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": ", There is no interval on which f is concave up.;, Concave down on (−∞,∞)."
+ },
+ {
+  "num": 340,
+  "stem": "340. Let f(x)=e (x+2) 2 . Find the maximal open intervals on which f is concave up and on which it is concave down.",
+  "options": [
+   ", Concave up on (−∞,−2).;, Concave down on (−2,∞).",
+   ", Concave up on (−∞,∞).;, There is no interval on which f is concave down.",
+   "None of the other four choices is correct.",
+   ", There is no interval on which f is concave up.;, There is no interval on which f is concave down.",
+   ", There is no interval on which f is concave up.;, Concave down on (−∞,∞)."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": null,
+  "answer_text": ", Concave up on (−∞,∞).;, There is no interval on which f is concave down. √ √ √"
+ },
+ {
+  "num": 341,
+  "stem": "341. Let f(x)=2 x+2 (x+2) 2+4 . Find the maximal open intervals on which f is concave up and on which it is concave down.",
+  "options": [
+   ", Concave up on (−2 √3 −2,−2) and on (−2+2 √3 ,∞).;, Concave down on (−∞,−2 √3 −2) and on (−2,−2+2 √3 ).",
+   ", Concave up on (−∞,−2 √3 −2) and on (−2,−2+2 √3 ).;, Concave down on (−2 √3 −2,−2) and on (−2+2 √3 ,∞).",
+   ", Concave up on (−2 √3 −2,−2) and on (−2+2 √3 ,∞).;, There is no interval on which f is concave down.",
+   "None of the other four choices is correct.",
+   ", There is no interval on which f is concave up.;, Concave down on (−∞,−2 √3 −2) and on (−2,−2+2 √3 )."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": ", Concave up on (−2 √3 −2,−2) and on (−2+2 √3 ,∞).;, Concave down on (−∞,−2 √3 −2) and on (−2,−2+2 √3 )."
+ },
+ {
+  "num": 342,
+  "stem": "342. Let f(x)=(x−2)e (x−2) 2 +2. Find all inflection points.",
+  "options": [
+   "There are no inflection points.",
+   "Inflection point: (1,2−e).",
+   "Inflection point: (2,2).",
+   "Inflection point: (3,2+e).",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "Inflection point: (2,2)."
+ },
+ {
+  "num": 343,
+  "stem": "343. Let f(x)=(x+1) 4+7. Find all inflection points.",
+  "options": [
+   "Inflection point: (−1,7).",
+   "There are no inflection points.",
+   "Inflection point: (0,8).",
+   "Inflection point: (−2,8).",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "There are no inflection points."
+ },
+ {
+  "num": 344,
+  "stem": "344. Let f(x)=2 3√ x+2 +2. Find all inflection points.",
+  "options": [
+   "None of the other four choices is correct.",
+   "Inflection point: (−1,4).",
+   "There are no inflection points.",
+   "Inflection point: (−2,2).",
+   "Inflection point: (−3,0)."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "Inflection point: (−2,2)."
+ },
+ {
+  "num": 345,
+  "stem": "345. Let f(x)=2 x x 2+9 +2. Find all inflection points.",
+  "options": [
+   "Inflection points: (0,2),(3 √3 , √3 6 +2).",
+   "Inflection points: (0,2),(−3 √3 ,2− √3 6 ),(3 √3 , √3 6 +2).",
+   "There are no inflection points.",
+   "Inflection points: (−3 √3 ,2− √3 6 ),(3 √3 , √3 6 +2).",
+   "None of the other four choices is correct."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "Inflection points: (0,2),(−3 √3 ,2− √3 6 ),(3 √3 , √3 6 +2)."
+ },
+ {
+  "num": 346,
+  "stem": "346. Let f(x)= 3√ x−2 +2. Find all inflection points.",
+  "options": [
+   "Inflection point: (1,1).",
+   "Inflection point: (2,2).",
+   "None of the other four choices is correct.",
+   "Inflection point: (3,3).",
+   "There are no inflection points. 参考答案 Answers（本考点 10 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "Inflection point: (2,2)."
+ },
+ {
+  "num": 347,
+  "stem": "347. Let f(x)=x 3+2x−8. Which statement about the real roots of f(x)=0 is correct?",
+  "options": [
+   "There is exactly one real root, lying in (2,3).",
+   "There is exactly one real root, lying in (0,1).",
+   "There is exactly one real root, lying in (1,2).",
+   "None of the other four choices is correct.",
+   "There are exactly two distinct real roots."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "There is exactly one real root, lying in (1,2)."
+ },
+ {
+  "num": 348,
+  "stem": "348. Let f(x)=x 3+2x+1. Which statement about the real roots of f(x)=0 is correct?",
+  "options": [
+   "There is exactly one real root, lying in (−2,−1).",
+   "None of the other four choices is correct.",
+   "There is exactly one real root, lying in (−1,0).",
+   "There are exactly two distinct real roots.",
+   "There is exactly one real root, lying in (0,1)."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 2,
+  "answer_text": "There is exactly one real root, lying in (−1,0)."
+ },
+ {
+  "num": 349,
+  "stem": "349. Let f(x)=x 3+4x−7. Which statement about the real roots of f(x)=0 is correct?",
+  "options": [
+   "There are exactly two distinct real roots.",
+   "There is exactly one real root, lying in (1,2).",
+   "There is exactly one real root, lying in (0,1).",
+   "None of the other four choices is correct.",
+   "There is exactly one real root, lying in (2,3)."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 1,
+  "answer_text": "There is exactly one real root, lying in (1,2)."
+ },
+ {
+  "num": 350,
+  "stem": "350. Let f(x)=x 3+x+1. Which statement about the real roots of f(x)=0 is correct?",
+  "options": [
+   "There is exactly one real root, lying in (−1,0).",
+   "None of the other four choices is correct.",
+   "There are exactly two distinct real roots.",
+   "There is exactly one real root, lying in (0,1).",
+   "There is exactly one real root, lying in (−2,−1)."
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 0,
+  "answer_text": "There is exactly one real root, lying in (−1,0)."
+ },
+ {
+  "num": 351,
+  "stem": "351. Let f(x)=x 3+4x+20. Which statement about the real roots of f(x)=0 is correct?",
+  "options": [
+   "There are exactly two distinct real roots.",
+   "None of the other four choices is correct.",
+   "There is exactly one real root, lying in (−2,−1).",
+   "There is exactly one real root, lying in (−3,−2).",
+   "There is exactly one real root, lying in (−4,−3). 参考答案 Answers（本考点 5 题）"
+  ],
+  "letters": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": 3,
+  "answer_text": "There is exactly one real root, lying in (−3,−2)."
+ }
+]

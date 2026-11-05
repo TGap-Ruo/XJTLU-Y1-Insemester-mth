@@ -1,0 +1,258 @@
+--- Q7 [1.1] Find the natural domainoflog_{5}(\frac{-3x-5}{x+5}).
+   A: A. (-\infty,-5)\cup(-5,\infty)
+   B: B. (-5,-\frac{5}{3})
+   C: C. Noneof theotherfourchoices is correct.
+   D: D. [-5,-\frac{5}{3})
+   E: E. (-\infty,-5)\cup(-\frac{5}{3},\infty) -4x-5
+--- Q9 [1.1] Find the natural domainoflog_{5}(\frac{-x-6}{4x-5}).
+   A: A. (-6,\frac{5}{4})
+   B: B. [-6,\frac{5}{4})
+   C: C. (-\infty,\frac{5}{4})\cup(\frac{5}{4},\infty)
+   D: D. (-\infty,-6)\cup(\frac{5}{4},\infty)
+   E: E. Noneof theotherfourchoices is correct.
+--- Q46 [1.4c] Evaluatesin(cos^{-1}(\frac{2}{7})).
+   A: A. Noneof theotherfourchoices is correct. \sqrt
+   B: B. -\frac{3 \sqrt{5}}{7}
+   C: C. \frac{2}{7\sqrt}
+   D: D. \frac{\sqrt{53}}{7}
+   E: E. \frac{45}{49} 2
+--- Q63 [2.3] Find the : lim_{x\to3}-\frac{ follo4w|xi-ng3 l|imit}{4x^{2}-29x+51}
+   A: A. 0
+   B: B. DNE
+   C: C. -\frac{4}{5}
+   D: D. -\frac{5}{4}
+   E: E. Noneof theotherfourchoices is correct.
+--- Q64 [2.3] Find the it: lim_{x\to-1}\frac{foll2o|wx+in1g| lim}{-x^{2}+4x+5}
+   A: A. 3
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. -\frac{1}{3}
+   D: D. \frac{1}{3}
+   E: E. 0
+--- Q65 [2.3] Find the : lim_{x\to-3}\frac{follo3w|xi+ng3 |limit}{-x^{2}-8x-15}
+   A: A. 0
+   B: B. -\frac{2}{3}
+   C: C. \frac{3}{2}
+   D: D. Noneof theotherfourchoices is correct.
+   E: E. -\frac{3}{2}
+--- Q68 [2.4] Find the following it: lim_{x\to0}[-5sin(1-\frac{ li6m}{x})-2]
+   A: A. -7
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. 3
+   D: D. 8
+   E: E. -2
+--- Q71 [2.5] Find the followinglimit: lim_{x\to-5}\frac{-3x^{2}-11x+20}{x+5}
+   A: A. -11
+   B: B. 4
+   C: C. 0
+   D: D. Noneof theotherfourchoices is correct.
+   E: E. DNE
+--- Q72 [2.5] Find the followinglimit: lim_{x\to-5}\frac{-3x^{2}-11x+20}{-x^{2}-11x-30}
+   A: A. 19
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. DNE
+   D: D. -\frac{1}{19}
+   E: E. 3
+--- Q81 [2.6] Find the followinglimit: lim_{x\to3}\frac{\sqrt{10-2x}}{2x-14}
+   A: A. Noneof theotherfourchoices is correct.
+   B: B. -\frac{1}{2}
+   C: C. -4
+   D: D. DNE
+   E: E. \frac{1}{4}
+--- Q83 [2.6] Find the followinglimit: lim_{x\to-4}\frac{\sqrt{-3x^{2}+4x+68}}{4x+9}
+   A: A. -\frac{7}{2}
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. DNE
+   D: D. \frac{2}{7}
+   E: E. -\frac{4}{7}
+--- Q91 [2.8] Find the followinglimit: lim_{x\to5}\frac{\sqrt{4x-18}-\sqrt{27-5x}}{x-5} \sqrt
+   A: A. -\frac{9 \sqrt{2}}{\sqrt4}
+   B: B. -\frac{\sqrt{2}}{4}
+   C: C. DNE
+   D: D. Noneof theotherfourchoices is correct.
+   E: E. \frac{9}{4}
+--- Q92 [2.8] Find the followinglimit: lim_{x\to-2}\frac{\sqrt{-5x-5}-\sqrt{5x+15}}{x+2} \sqrt
+   A: A. \sqrt{5}
+   B: B. DNE
+   C: C. -1
+   D: D. Noneof theotherfourchoices is correct.
+   E: E. 0
+--- Q93 [2.8] Find the followinglimit: lim_{x\to-2}\frac{\sqrt{2x+20}-\sqrt{10-3x}}{x+2}
+   A: A. DNE
+   B: B. \frac{5}{32}
+   C: C. -\frac{5}{8}
+   D: D. Noneof theotherfourchoices is correct.
+   E: E. -\frac{1}{8}
+--- Q95 [2.8] Find the followinglimit: lim_{x\to-3}\frac{\sqrt{2x+22}-\sqrt{4x+28}}{x+3}
+   A: A. \frac{3}{4}
+   B: B. DNE
+   C: C. -\frac{1}{16}
+   D: D. \frac{1}{4}
+   E: E. Noneof theotherfourchoices is correct.
+--- Q110 [2.10] Find the f t: lim_{x\to0}[-\frac{ol1lo-wcoinsg( 5lixm)i}{6x^{2}}]
+   A: A. -\frac{12}{25}
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. -\frac{5}{6}
+   D: D. \frac{25}{12}
+   E: E. -\frac{25}{6}
+--- Q114 [2.10] Find the followin mit: lim_{x\to\infty}[\sqrt{x} sin(\frac{g 8li}{x})]
+   A: A. -1
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. -17
+   D: D. 1
+   E: E. DNE
+--- Q140 [3.2] Findth lim_{x\to\infty}\frac{e follo-w5ixn-g 2limit:}{\sqrt{25x^{2}+4x-7}}
+   A: A. 0
+   B: B. -17
+   C: C. 1
+   D: D. Noneof theotherfourchoices is correct.
+   E: E. DNE
+--- Q145 [3.3] Find the followinglimit: lim_{x\to\infty}(-\sqrt{16x^{2}+3}+\sqrt{16x^{2}+3x+9})
+   A: A. Noneof theotherfourchoices is correct.
+   B: B. 0
+   C: C. \frac{3}{32}
+   D: D. -\frac{3}{8}
+   E: E. 3
+--- Q159 [4.1] Evaluate the limit. lim_{x\to\infty}e^{2x-4}
+   A: A. 1
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. e
+   D: D. 0
+   E: E. -\infty
+--- Q169 [4.2] Evaluate the limit. lim_{x\to\infty}ln(4x^{6}+1)
+   A: A. -1
+   B: B. -\infty
+   C: C. Noneof theotherfourchoices is correct.
+   D: D. 1
+   E: E. 0
+--- Q176 [4.4] Evaluate it. lim_{x\to1}x\frac{ t_{6}h_{-}e_{5} l_{x}im}{x-1}
+   A: A. 1
+   B: B. e^{-1}
+   C: C. Noneof theotherfourchoices is correct.
+   D: D. 1+e
+   E: E. -1+e
+--- Q178 [4.5] Evaluate the limit. lim_{x\to-4}\frac{e^{-x-4}-1}{-x-4}
+   A: A. Noneof theotherfourchoices is correct.
+   B: B. 0
+   C: C. 2
+   D: D. e
+   E: E. -1
+--- Q180 [4.5] Evaluate the limit. lim_{x\to-4}\frac{e^{-x-4}-1}{-6x-24}
+   A: A. Noneof theotherfourchoices is correct.
+   B: B. 6
+   C: C. -1
+   D: D. 0
+   E: E. -6
+--- Q183 [4.6] AnamountP=1100is invested. The a nnual interestrateis 7%, sor=\frac{7}{y.100}. Interestis compoundedcontinuousl Thetargetbalanceis 2200. This is twicetheinitial amount. Find the timet, inyears, neededtoreachthis balance. Giveyouranswerinexactform, notas adecimal.
+   A: A. \frac{7}{100} ln2
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. \frac{100}{ln7 2}
+   D: D. \frac{27}{100}
+   E: E. ln2
+--- Q219 [6.1] y=f(x)=-x^{3}-6x^{2}-4x-2. Find the slopeofthetangentlineatx=-3.
+   A: A. -5
+   B: B. 6
+   C: C. Noneof theotherfourchoices is correct.
+   D: D. 10
+   E: E. 4
+--- Q221 [6.1] y=f(x)=-x^{3}-5x^{2}-3x-6. Find the slopeofthetangentlineatx=-3.
+   A: A. -2
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. 1
+   D: D. -1
+   E: E. 2
+--- Q223 [6.2] f(x)=3 \sqrt{2x}. Findf^{′}(2).
+   A: A. \frac{5}{2}
+   B: B. -\frac{3}{2}
+   C: C. 3
+   D: D. \frac{1}{2}
+   E: E. Noneof theotherfourchoices is correct. 2
+--- Q235 [6.4] f(x)=csc(x). Findf^{′}(x).
+   A: A. -csc^{2}(x)cos(x)+1
+   B: B. csc^{2}(x)cos(x)
+   C: C. -csc^{2}(x)cos(x)-1
+   D: D. csc(x)
+   E: E. Noneof theotherfourchoices is correct.
+--- Q241 [6.4] f(x)=-sin^{2}(x)+\frac{1}{sin^{2}(x)}. Findf^{′}(x).
+   A: A. -2sin(x)cos(x)-\frac{2 cos(x)}{sin(x)}
+   B: B. -2sin(x)cos(x)+\frac{2 cos(x)}{sin^{3}(x)}
+   C: C. -2sin(x)-\frac{21}{sin^{3}(x)}
+   D: D. -sin(x)cos(x)-\frac{cos(x)}{sin^{3}(x)}
+   E: E. Noneof theotherfourchoices is correct.
+--- Q259 [6.6] f(x)=5sin(5x). Findf^{(3)}(x).
+   A: A. -5^{3}cos(5x)
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. -5⋅5^{3}sin(5x)
+   D: D. 5⋅5^{3}cos(5x)
+   E: E. -5⋅5^{4}cos(5x)
+--- Q261 [6.6] f(x)=-5sin(x). Findf^{(11)}(x).
+   A: A. Noneof theotherfourchoices is correct.
+   B: B. 15cos(x)
+   C: C. 5sin(x)
+   D: D. -5cos(x)
+   E: E. 10cos(x)
+--- Q268 [7.1] Find \frac{d}{dx}[ln(10x^{3}-19x)].
+   A: A. \frac{10x^{2}-19}{10x^{3}-19x}
+   B: B. \frac{19-30x^{2}}{10x^{3}-19x}
+   C: C. \frac{1}{10x^{3}-19x}
+   D: D. Noneof theotherfourchoices is correct.
+   E: E. 30x^{2}-19 d
+--- Q275 [7.1] Find \frac{d}{dx}(e^{-2x^{2}-x+6}).
+   A: A. (4x+1)e^{-2x^{2}-x+6}
+   B: B. -2x^{2}-x+6 e
+   C: C. -2x^{2}-x+6 -4xe
+   D: D. Noneof theotherfourchoices is correct.
+   E: E. (-2x-1)e^{-2x^{2}-x+6} d
+--- Q286 [7.2] Letf(x)=12x^{3}+2x+18. Find(f^{-1})^{′}(348).
+   A: A. 36(3)^{2}+2
+   B: B. \frac{1}{12(3)^{2}+2}
+   C: C. \frac{1}{36(348)^{2}+2}
+   D: D. Noneof theotherfourchoices is correct.
+   E: E. \frac{1}{36(4)^{2}+2}
+--- Q303 [7.6] Find the equationofthetangentlineto5 \sqrt{y}+6xy^{3}=5at(0,1).
+   A: A. y=-\frac{12}{5}
+   B: B. y=\frac{12x}{5}+1
+   C: C. y=\frac{5x}{12}+1
+   D: D. y=-\frac{12x}{5}
+   E: E. Noneof theotherfourchoices is correct.
+--- Q304 [7.6] Find the equationofthetangentlineto9 \sqrt{y}+8xy^{2}=9at(0,1).
+   A: A. y=-\frac{16}{9}
+   B: B. Noneof theotherfourchoices is correct.
+   C: C. y=-\frac{16x}{9}
+   D: D. y=\frac{16x}{9}+1
+   E: E. y=\frac{9x}{16}+1 \sqrt
+--- Q307 [8.1] Aballoonis released100ftfromanobserveronlevel groundandrises vertically at3ft/s. Howfastis its distancefrom theobserverincreasingwhenits heightis 120ft?
+   A: A. \frac{100⋅3}{\sqrt{100^{2}+120^{2}}}
+   B: B. \frac{3}{\sqrt{100^{2}+120^{2}}}
+   C: C. 120⋅3
+   D: D. Noneof theotherfourchoices is correct.
+   E: E. \frac{120⋅3}{100+120}
+--- Q309 [8.2] Waterenters aconical tankat27ft^{3}/min. Thetankis 25fthighwithtopradius 7ft. Howfastis thewaterlevel rising whenthedepthis 10ft?
+   A: A. Noneof theotherfourchoices is correct.
+   B: B. \frac{27}{\pi7^{2}}
+   C: C. \frac{27⋅25^{2}}{3\pi7^{2}10^{2}}
+   D: D. \frac{27⋅25}{\pi710^{2}}
+   E: E. \frac{27⋅25^{2}}{\pi7^{2}10}
+--- Q321 [9.2] Letf(x)=(-x-2)e^{-x-2}+12on[-2,2]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimumvalues.
+   A: A. Noneof theotherfourchoices is correct.
+   B: B. x=-2andx=-1
+   C: C. x=-1andx=2
+   D: D. x=-1
+   E: E. x=-2andx=2 5
+--- Q328 [9.2] Letf(x)=3(^{3}\sqrt{x+1})^{2}on[-2,1]. Find the maximumvalueandminimumvalue.
+   A: A. \frac{2}{3} Maximum value:0;minimum value:-3⋅2.
+   B: B. Maximum value:12;minimum value:0.
+   C: C. Noneof theotherfourchoices is correct.
+   D: D. \frac{2}{3} Maximum value:3⋅2;minimum value:3.
+   E: E. Maximum value:3;minimum value:0. \sqrt
+--- Q330 [9.2] Letf(x)=2\frac{(^{3}\sqrt{x})^{4}}{x+3}+7on[-2,6]. Find the maximumvalueandminimumvalue.
+   A: A. Noneof theotherfourchoices is correct. \sqrt
+   B: B. Maximum value:4^{3}\sqrt{\sqrt2}_{3};minimum value:0.
+   C: C. Maximum value: \frac{4 ^{3}\sqrt{6}}{3}+7;minimum value:7. \sqrt
+   D: D. Maximum value:7;minimum value:7-4^{3}\sqrt{2}. 3\sqrt
+   E: E. Maximum value:4^{3}\sqrt{2}+7;minimum value: \frac{4 ^{3}\sqrt{6}}{3}+7.
+--- Q337 [9.4] Letf(x)=-ln(|x-2|+1)+3. Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown.
+   A: A., Thereis no interval onwhichf is concaveup.;, Concavedownon(-\infty,2)andon(2,\infty).
+   B: B., Thereis no interval onwhichf is concaveup.;, Concavedownon(-\infty,\infty).
+   C: C. Noneof theotherfourchoices is correct.
+   D: D., Concaveupon(-\infty,\infty).;, Thereis no interval onwhichf is concavedown.
+   E: E., Thereis no interval onwhichf is concaveup.;, Thereis no interval onwhichf is concavedown. 1

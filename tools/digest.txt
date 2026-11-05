@@ -1,0 +1,351 @@
+1[1.1] Find the natural domainoflog_{3}(-x^{2}-3x+28).  =>E: (−7,4)
+2[1.1] Find the natural domainoflog_{2}(x^{2}+2x-15).  =>B: (−∞,−5)∪(3,∞)
+3[1.1] Find the natural domainoflog_{3}(-x^{2}-10x-16).  =>C: (−8,−2)
+4[1.1] Find the natural domainoflog_{3}(-x^{2}-2x+8).  =>D: (−4,2)
+5[1.1] Find the natural domainoflog_{3}(-x^{2}-7x-6).  =>D: (−6,−1)
+6[1.1] Find the natural domainoflog_{3}(\frac{x+5}{4x+3}).  =>D: (−∞,−5)∪(− 3 4 ,∞)
+7[1.1] Find the natural domainoflog_{5}(\frac{-3x-5}{x+5}).  =>C: None of the other four choices is correct.
+8[1.1] Find the natural domainoflog_{7}(\frac{-4x-5}{x+5}).  =>E: (−5,− 5 4 )
+9[1.1] Find the natural domainoflog_{5}(\frac{-x-6}{4x-5}).  =>E: None of the other four choices is correct.
+10[1.1] Find the natural domainoflog_{5}(\frac{-x-6}{x-2}).  =>D: (−6,2)
+11[1.2] Letf(x)=3x, g(x)=sec(2x), andx_{0}=\frac{\pi}{6}. Find(g∘f)(x_{0}).  =>C: −1
+12[1.2] Letf(x)=2-2x^{2}, g(x)=cos(3x), andx_{0}=\frac{\pi}{6}. Find(f∘g)(x_{0}).  =>A: 2
+13[1.2] Letf(x)=2x, g(x)=tan(4x), andx_{0}=\frac{\pi}{6}. Find(f∘g)(x_{0}).  =>B: −2 √3
+14[1.2] Letf(x)=2-2x^{2}, g(x)=cos(2x), andx_{0}=\frac{\pi}{4}. Find(f∘g)(x_{0}).  =>E: 2
+15[1.2] Letf(x)=2x, g(x)=tan(2x), andx_{0}=\frac{\pi}{3}. Find(g∘f)(x_{0}). \sqrt  =>D: √3
+16[1.2] Letf(x)=2-x^{2}, g(x)=cos(4x), andx_{0}=\frac{5\pi}{24}. Find(f∘g)(x_{0}).  =>A: 5 4
+17[1.2] Letf(x)=2x, g(x)=sec(3x), andx_{0}=\frac{5\pi}{18}. Find(f∘g)(x_{0}). \sqrt  =>A: − 4 √3 3
+18[1.2] Letf(x)=2-x^{2}, g(x)=tan(4x), andx_{0}=\frac{3\pi}{16}. Find(f∘g)(x_{0}).  =>B: 1
+19[1.2] Letf(x)=3x, g(x)=tan(x), andx_{0}=\frac{\pi}{3}. Find(g∘f)(x_{0}).  =>D: 0
+20[1.2] Letf(x)=2-2x^{2}, g(x)=sec(x), andx_{0}=\frac{\pi}{3}. Find(f∘g)(x_{0}).  =>D: −6
+21[1.3] Letf(x)=\frac{1-\sqrtx}{3 \sqrt{x}+1}. Findf^{-1}(x)andstatethedomainoff^{-1}.  =>A: (x−1) 2 (3x+1) 2 ; (− 1 3 ,1)
+22[1.3] Letf(x)=\frac{2-3 \sqrtx}{5 \sqrt{x}+2}. Findf^{-1}(x)andstatethedomainoff^{-1}.  =>A: 4(x−1) 2 (5x+3) 2 ; (− 3 5 ,1)
+23[1.3] Letf(x)=\frac{1-2 \sqrtx}{\sqrt{x}+3}. Findf^{-1}(x)andstatethedomainoff^{-1}. \sqrt  =>D: (3x−1) 2 (x+2) 2 ; (−2, 1 3 )
+24[1.3] Letf(x)=\frac{2-\sqrtx}{2 \sqrt{x}+1}. Findf^{-1}(x)andstatethedomainoff^{-1}.  =>A: (x−2) 2 (2x+1) 2 ; (− 1 2 ,2)
+25[1.3] Letf(x)=\frac{2-3 \sqrtx}{2 \sqrt{x}+3}. Findf^{-1}(x)andstatethedomainoff^{-1}.  =>A: (3x−2) 2
+26[1.4a] Evaluatecos^{-1}(cos(\frac{34\pi}{7})).  =>A: 6π 7
+27[1.4a] Evaluate a rccos(cos(\frac{17\pi}{7})).  =>A: 3π 7
+28[1.4a] Evaluate a rccos(cos(-\frac{\pi}{5})).  =>C: π 5
+29[1.4a] Evaluate a rccos(cos(\frac{9\pi}{7})).  =>B: 5π 7
+30[1.4a] Evaluatecos^{-1}(cos(\frac{72\pi}{7})).  =>E: 2π 7
+31[1.4a] Evaluatesin^{-1}(sin(\frac{26\pi}{5})).  =>C: − π 5
+32[1.4a] Evaluate a rcsin(sin(-\frac{59\pi}{7})).  =>D: − 3π 7
+33[1.4a] Evaluate a rcsin(sin(\frac{27\pi}{7})).  =>E: − π 7
+34[1.4a] Evaluatesin^{-1}(sin(\frac{48\pi}{7})).  =>E: π 7
+35[1.4a] Evaluate a rcsin(sin(-\frac{47\pi}{7})).  =>E: − 2π 7
+36[1.4a] Evaluate a rctan(tan(-\frac{29\pi}{7})).  =>D: − π 7
+37[1.4a] Evaluate tan^{-1}(tan(\frac{66\pi}{7})).  =>D: 3π 7
+38[1.4a] Evaluate tan^{-1}(tan(-\frac{2\pi}{7})).  =>E: − 2π 7
+39[1.4a] Evaluate a rctan(tan(-\frac{7\pi}{5})).  =>B: − 2π 5
+40[1.4a] Evaluate tan^{-1}(tan(\frac{20\pi}{7})).  =>C: − π 7
+41[1.4b] Evaluate a rccos(sin(-\frac{23\pi}{5})).  =>A: 9π 10
+42[1.4b] Evaluatesin^{-1}(cos(-\frac{8\pi}{7})).  =>E: − 5π 14
+43[1.4b] Evaluate a rcsin(cos(-\frac{5\pi}{7})).  =>D: − 3π 14
+44[1.4b] Evaluatesin^{-1}(cos(\frac{30\pi}{7})).  =>A: 3π 14
+45[1.4b] Evaluatesin^{-1}(cos(\frac{24\pi}{7})).  =>E: − π 14
+46[1.4c] Evaluatesin(cos^{-1}(\frac{2}{7})).  =>A: None of the other four choices is correct.
+47[1.4c] Evaluatesin(cos^{-1}(-\frac{2}{9})).  =>E: √77 9
+48[1.4c] Evaluatesec(arcsin(\frac{1}{7})). \sqrt  =>A: 7 √3 12
+49[1.4c] Evaluatesec(tan^{-1}(-4)). \sqrt  =>D: √17
+50[1.4c] Evaluatesec(tan^{-1}(-\frac{1}{4})).  =>B: √17 4
+51[2.1] Define the function: -3x-3, x\ne-3 {15, x=-3 f(x)= Findlim_{x\to-3}f(x).  =>D: 6
+52[2.1] Define the function: 6-x, x\ne-1 {-8, x=-1 f(x)= Findlim_{x\to-1}f(x).  =>B: 7
+53[2.1] Define the function: 3x+1, x\ne1 {-3, x=1 f(x)= Findlim_{x\to1}f(x).  =>A: 4
+54[2.1] Define the function: 5-2x, x\ne-2 {-3, x=-2 f(x)= Findlim_{x\to-2}f(x).  =>D: 9
+55[2.1] Define the function: -4x-1, x\ne3 {9, x=3 f(x)= Findlim_{x\to3}f(x).  =>B: −13
+56[2.2] Define the function: {-2x-7, x<-4 g(x)= Findlim_{x\to-4}g(x). -2x^{2}-4x+17, x>-4  =>C: 1
+57[2.2] Define the function: x-7, x<-3 {-x^{2}+5x+14, x>-3 g(x)= Findlim_{x\to-3}g(x).  =>C: −10
+58[2.2] Define the function: 10-x, x<1 {3x^{2}-2x+8, x>1 g(x)= Findlim_{x\to1}g(x).  =>A: 9
+59[2.2] Define the function: {-2x-5, x<3 g(x)= Findlim_{x\to3}g(x). 2x^{2}-x-26, x>3  =>D: −11
+60[2.2] Define the function: {19-3x, x<3 g(x)= Findlim_{x\to3}g(x). 2x^{2}+3x-17, x>3  =>A: 10
+61[2.3] Find the lim_{x\to-4}\frac{follo3w|xin+g4 l|imit:}{2x^{2}+17x+36}  =>D: DNE
+62[2.3] Find the it: lim_{x\to2}+\frac{ foll5o|wx-in2g| lim}{2x^{2}-2x-4}  =>C: 5 6
+63[2.3] Find the : lim_{x\to3}-\frac{ follo4w|xi-ng3 l|imit}{4x^{2}-29x+51}  =>E: None of the other four choices is correct.
+64[2.3] Find the it: lim_{x\to-1}\frac{foll2o|wx+in1g| lim}{-x^{2}+4x+5}  =>B: None of the other four choices is correct.
+65[2.3] Find the : lim_{x\to-3}\frac{follo3w|xi+ng3 |limit}{-x^{2}-8x-15}  =>D: None of the other four choices is correct.
+66[2.4] Find the follow limit: lim_{x\to0}[sin(3-\frac{in3g }{x})-5]  =>B: DNE
+67[2.4] Find the followin mit: lim_{x\to0}[5sin(2-\frac{g2 li}{x})+2]  =>B: DNE
+68[2.4] Find the following it: lim_{x\to0}[-5sin(1-\frac{ li6m}{x})-2]  =>B: None of the other four choices is correct.
+69[2.4] Find the followin mit: lim_{x\to0}[-sin(3+\frac{g4 li}{x})-3]  =>C: DNE
+70[2.4] Find the followin mit: lim_{x\to0}[-sin(2-\frac{g5 li}{x})-6]  =>B: DNE
+71[2.5] Find the followinglimit: lim_{x\to-5}\frac{-3x^{2}-11x+20}{x+5}  =>D: None of the other four choices is correct.
+72[2.5] Find the followinglimit: lim_{x\to-5}\frac{-3x^{2}-11x+20}{-x^{2}-11x-30}  =>B: None of the other four choices is correct.
+73[2.5] Find the followinglimit: lim_{x\to-5}\frac{5x^{2}+20x-25}{x+5}  =>B: −30
+74[2.5] Find the followinglimit: lim_{x\to-4}\frac{3x^{2}+14x+8}{-x^{2}-7x-12}  =>C: −10
+75[2.5] Find the followinglimit: lim_{x\to-2}\frac{x^{2}+3x+2}{x+2}  =>B: −1
+76[2.5] Find the followinglimit: lim_{x\to5}\frac{4x^{2}-26x+30}{-x^{2}+13x-40}  =>B: 14 3
+77[2.5] Find the followinglimit: lim_{x\to-4}\frac{2x^{2}+4x-16}{x+4}  =>D: −12
+78[2.5] Find the followinglimit: lim_{x\to-1}\frac{-4x^{2}+x+5}{x+1}  =>E: 9
+79[2.5] Find the followinglimit: lim_{x\to4}\frac{2x^{2}-11x+12}{-2x^{2}+5x+12}  =>E: − 5 11
+80[2.5] Find the followinglimit: lim_{x\to2}\frac{x^{3}-8}{x^{2}-x-2}  =>C: 4
+81[2.6] Find the followinglimit: lim_{x\to3}\frac{\sqrt{10-2x}}{2x-14}  =>A: None of the other four choices is correct.
+82[2.6] Find the followinglimit: lim_{x\to1}\frac{\sqrt{10-3x}}{-4x}  =>D: − √7 4
+83[2.6] Find the followinglimit: lim_{x\to-4}\frac{\sqrt{-3x^{2}+4x+68}}{4x+9}  =>B: None of the other four choices is correct.
+84[2.6] Find the followinglimit: lim_{x\to1}\frac{\sqrt{7-x^{2}}}{2-x}  =>C: √6
+85[2.6] Find the followinglimit: lim_{x\to-3}\frac{\sqrt{-2x-4}}{2x+11} \sqrt  =>A: √2 5
+86[2.7] Supposethat lim_{x_{x}\to_{\to}-_{-}1_{1}}f(x)=-3, lim_{x\to-1}g(x)=36, lim_{x\to-1}h(x)=8 Find the followinglimit: lim (2[f(x)]^{3}\frac{\sqrt{g(x)}}{h(x)})  =>B: − 81 2
+87[2.7] Supposethat lim_{x_{x}\to_{\to}3_{3}}f(x)=-3, lim_{x\to3}g(x)=25, lim_{x\to3}h(x)=-10 Find the followinglimit: lim (3[f(x)]^{3}\frac{\sqrt{g(x)}}{h(x)})  =>E: 81 2
+88[2.7] Supposethat lim_{x_{x}\to_{\to}-_{-}1_{1}}f(x)=3, l_{3}im_{x\to-1}g(x)=36, lim_{x\to-1}h(x)=7 Find the followinglimit: lim (4[f(x)] \frac{\sqrt{g(x)}}{h(x)})  =>B: 648 7
+89[2.7] Supposethat lim_{x_{x}\to_{\to}3_{3}}f(x)=-4, lim_{x\to3}g(x)=4, lim_{x\to3}h(x)=4 Find the followinglimit: lim (-[f(x)]^{3}\frac{\sqrt{g(x)}}{h(x)})  =>B: 32
+90[2.7] Supposethat lim_{x_{x}\to_{\to}2_{2}}f(x)=-2, l_{2}im_{x\to2}g(x)=9, lim_{x\to2}h(x)=6 Find the followinglimit: lim (-2[f(x)] \frac{\sqrt{g(x)}}{h(x)})  =>A: −4
+91[2.8] Find the followinglimit: lim_{x\to5}\frac{\sqrt{4x-18}-\sqrt{27-5x}}{x-5} \sqrt  =>D: None of the other four choices is correct.
+92[2.8] Find the followinglimit: lim_{x\to-2}\frac{\sqrt{-5x-5}-\sqrt{5x+15}}{x+2} \sqrt  =>D: None of the other four choices is correct.
+93[2.8] Find the followinglimit: lim_{x\to-2}\frac{\sqrt{2x+20}-\sqrt{10-3x}}{x+2}  =>D: None of the other four choices is correct.
+94[2.8] Find the followinglimit: lim_{x\to2}\frac{\sqrt{4x-7}-\sqrt{3-x}}{x-2}  =>E: 5 2
+95[2.8] Find the followinglimit: lim_{x\to-3}\frac{\sqrt{2x+22}-\sqrt{4x+28}}{x+3}  =>E: None of the other four choices is correct.
+96[2.9] Find the fo glimit: lim_{x\to4^{+}}[-\frac{llow1in}{x-4}]  =>A: −∞
+97[2.10] Find the followinglimit: lim_{x\to0}\frac{4x^{2}+4}{(1-2x) cos(x+\frac{\pi}{3})}  =>E: 8
+98[2.10] Find the followinglimit: lim_{x\to0}\frac{2x^{2}+4}{(2x+1) cos(4x+\frac{\pi}{3})}  =>B: 8
+99[2.10] Find the followinglimit: lim_{x\to0}\frac{(-2x^{2}-4) cos(2x+)}{(4x-5) sin(2x+)}\frac{\frac{\pi}{\pi4}}{4}  =>A: 4 5
+100[2.10] Find the followinglimit: lim_{x\to0}\frac{(-x^{2}-1) cos(3x+\frac{\pi}{3})}{4-4x}  =>D: − 1 8
+101[2.10] Find the followinglimit lim_{x\to0}\frac{(x^{2}+4) sin(3x+\frac{: \pi}{6})}{x+4}  =>C: 1 2
+102[2.10] Findth glimit: lim_{x\to0}\frac{e tfaonl(lo4wx)in}{sin(5x)}  =>B: 4 5
+103[2.10] Findth glimit: lim_{x\to0}\frac{e sfionl(lo8wx)in}{3x}  =>D: 8 3
+104[2.10] Findth glimit: lim_{x\to0}\frac{e sfionl(lo8wx)in}{5x}  =>E: 8 5
+105[2.10] Find the f imit: lim_{x\to0}[-\frac{oltlaonw(7inxg) l}{sin(3x)}]  =>C: − 7 3
+106[2.10] Findth glimit: lim_{x\to0}\frac{e tfaonl(lo8wx)in}{sin(6x)}  =>C: 4 3
+107[2.10] Find the f t: lim_{x\to0}[-\frac{ol1lo-wcoinsg( 7lixm)i}{5x^{2}}]  =>B: − 49 10
+108[2.10] Find the f t: lim_{x\to0}[-\frac{ol1lo-wcoinsg( 2lixm)i}{x^{2}}]  =>C: −2
+109[2.10] Findth mit: lim_{x\to0}\frac{e 1fo-lcloows(i2nxg) li}{6x^{2}}  =>D: 1 3
+110[2.10] Find the f t: lim_{x\to0}[-\frac{ol1lo-wcoinsg( 5lixm)i}{6x^{2}}]  =>B: None of the other four choices is correct.
+111[2.10] Find the f t: lim_{x\to0}[-\frac{ol1lo-wcoinsg( 8lixm)i}{2x^{2}}]  =>A: −16
+112[2.10] Find the followingli lim_{x\to\infty}[-4 \sqrt{x} sin(\frac{m4it:}{x})]  =>D: 0
+113[2.10] Find the followingli lim_{x\to\infty}[-3 \sqrt{x} sin(\frac{m4it:}{x})]  =>E: 0
+114[2.10] Find the followin mit: lim_{x\to\infty}[\sqrt{x} sin(\frac{g 8li}{x})]  =>B: None of the other four choices is correct.
+115[2.10] Find the following t: lim_{x\to-}\frac{\pi}{2}^{+}[\frac{2(x+\frac{li\pimi}{2}) }{3} tan(-x-\pi)]  =>D: 2 3
+116[2.10] Find the followin it: lim_{x\to}\frac{\pi}{2}[\frac{-6(x-\frac{g l\piim}{2}) }{5} tan(-4x+\frac{5\pi}{2})]  =>A: − 3 10
+117[2.10] Find the followi mit: (x-\frac{ng\pi li}{32}) lim_{x\to}\frac{\pi}{2}^{+}[ tan(-6x+\frac{7\pi}{2})]  =>E: 1 18
+118[2.10] Find the followingli lim_{x\to-}\frac{\pi}{2}^{-}[\frac{-4(x+\frac{m\piit:}{2}) }{5} tan(4x+\frac{3\pi}{2})]  =>D: 1 5
+119[2.10] Find the followin it: lim_{x\to}\frac{\pi}{2}[\frac{-5(x-\frac{g l\piim}{2}) }{3} tan(2x-\frac{\pi}{2})]  =>B: 5 6
+120[2.10] Findth it: lim_{t\to0}\frac{e6 fto-ll2o wsiinn(g3 tl)im}{3t sec (2t)}  =>A: 0
+121[2.10] Findth: lim_{t\to0}\frac{e- fo8ltl+ow2 isning (l4imt)it}{5t sec (3t)}  =>C: 0
+122[2.10] Findth it: lim_{t\to0}\frac{e- fo8ltl+owsiinn(g3 tl)im}{4t sec (2t)}  =>E: − 5 4
+123[2.10] Findth mit: lim_{t\to0}\frac{e6 fto-llsoiwn(i2ntg) li}{4t sec (3t)}  =>E: 1
+124[2.10] Findth mit: lim_{t\to0}\frac{e7 fto-llsoiwn(i4ntg) li}{4t sec (4t)}  =>A: 3 4
+125[2.11] Find the followi mit: lim_{x\to0}[3x^{3}sin(\frac{ng7 li}{x^{2}})]  =>A: 0
+126[2.11] Find the followi mit: lim_{x\to0}[3x^{3}cos(\frac{ng6 li}{x})-3]  =>C: −3
+127[3.1] Find the it: lim_{x\to-\infty}\frac{follo9w-in4gx lim}{2x^{2}-6x-4}  =>D: 0
+128[3.1] Findth inglimit: lim_{x\to\infty}\frac{e fxo+llo2w}{x^{2}-1}  =>B: 0
+129[3.1] Find the t: lim_{x\to-\infty}\frac{follo5wxi-ng9 limi}{-4x^{2}-x+3}  =>E: 0
+130[3.1] Find the followinglimit: lim_{x\to-\infty}\frac{-2x^{2}+2 cos(6x-5)}{x^{2}}  =>E: −2
+131[3.1] Find the followinglimit: lim_{x\to\infty}\frac{4x^{2}+2}{-2x^{2}+7x}  =>C: −2
+132[3.1] Findth lim_{x\to\infty}\frac{e f-o2llxo-wsiinng( 2lixm+i2t:)-2}{x}  =>D: −2
+133[3.1] Find the followinglimit: lim_{x\to\infty}\frac{-2x^{3}-3x^{2}-5 sin(2x+6)}{x^{3}}  =>D: −2
+134[3.1] Find the followinglimit: lim_{x\to\infty}\frac{x^{3}+x^{2}+6 cos(3x-2)}{x^{3}}  =>A: 1
+135[3.1] Find the followinglimit: lim_{x\to\infty}\frac{-4x^{2}-4x-6 sin(x+5)}{x^{2}}  =>D: −4
+136[3.1] Find the followinglimit: lim_{x\to\infty}\frac{2x^{3}-2x^{2}+5x+1}{x^{2}+6x-1}  =>C: ∞
+137[3.2] Find the lim_{x\to-\infty}\frac{follow4inxg- l5imit:}{\sqrt{16x^{2}-7x+8}}  =>A: −1
+138[3.2] Find the lim_{x\to-\infty}\frac{follow4inxg+ l8imit:}{\sqrt{16x^{2}+7x+6}}  =>E: −1
+139[3.2] Find the lim_{x\to-\infty}\frac{follow-in5gx -li2mit:}{\sqrt{25x^{2}-8x+3}}  =>D: 1
+140[3.2] Findth lim_{x\to\infty}\frac{e follo-w5ixn-g 2limit:}{\sqrt{25x^{2}+4x-7}}  =>D: None of the other four choices is correct.
+141[3.2] Find the followinglimit: lim_{x\to\infty}\frac{\sqrt{4x^{2}+5x-5}}{-2x-2}  =>B: −1
+142[3.3] Find the followinglimit: lim_{x\to\infty}(\sqrt{x^{2}-9}-\sqrt{x^{2}+5x+3})  =>D: − 5 2
+143[3.3] Find the followinglimit: lim_{x\to\infty}(\sqrt{9x^{2}-4x-5}-\sqrt{9x^{2}-x+6})  =>B: − 1 2
+144[3.3] Find the followinglimit: lim_{x\to-\infty}(-\sqrt{16x^{2}-3x-9}+\sqrt{16x^{2}+4x+3})  =>B: − 7 8
+145[3.3] Find the followinglimit: lim_{x\to\infty}(-\sqrt{16x^{2}+3}+\sqrt{16x^{2}+3x+9})  =>A: None of the other four choices is correct.
+146[3.3] Find the followinglimit: lim_{x\to\infty}(-\sqrt{4x^{2}-5x+2}+\sqrt{4x^{2}+x+2})  =>A: 3 2
+147[3.4] Findth lim_{n\to\infty}\frac{e follo4w-in2gn limit:}{\sqrt{9n^{2}-9n-3}}  =>E: − 2 3
+148[3.4] Findth nglimit: lim_{n\to\infty}\frac{e f4o-ll2onwi}{3n+3}  =>C: − 2 3
+149[3.4] Findth lim_{n\to\infty}\frac{e follow2nin-g2 limit:}{\sqrt{25n^{2}+9n+1}}  =>C: 2 5
+150[3.4] Findth lim_{n\to\infty}\frac{e follow6nin+g9 limit:}{\sqrt{36n^{2}+6n+3}}  =>B: 1
+151[3.4] Findth lim_{n\to\infty}\frac{e follow5nin+g6 limit:}{\sqrt{36n^{2}-3n+7}}  =>E: 5 6
+152[3.5] Find l andhorizontal asymptotes of: f(x)=\frac{th-e 4vxe-rt7ica}{5x+4}  =>C: The vertical asymptote is x=− 4 5 , and The horizontal asymp
+153[3.5] Find cal andhorizontal asymptotes of: f(x)=\frac{the- v5exrti}{6-4x}  =>E: The vertical asymptote is x= 3 2 , and The horizontal asympt
+154[3.5] Find cal andhorizontal asymptotes of: f(x)=\frac{th3ex v-e7rti}{5x}  =>E: The vertical asymptote is x=0, and The horizontal asymptote 
+155[3.5] Find dhorizontal asymptotes of: f(x)=\frac{the v2exrt-ic8al an}{(x+3)(x+4)}  =>C: The vertical asymptotes are x=−4 and x=−3, and The horizonta
+156[3.5] Find dhorizontal asymptotes of: f(x)=\frac{the vexr+ti6cal an}{(x+4)(x+5)}  =>C: The vertical asymptotes are x=−5 and x=−4, and The horizonta
+157[4.1] Evaluate the limit. lim_{x\to\infty}2^{3x+5}  =>B: ∞
+158[4.1] Evaluatet mit. lim_{x\to-\infty}(\frac{he1 li}{2})^{4x-6}  =>E: ∞
+159[4.1] Evaluate the limit. lim_{x\to\infty}e^{2x-4}  =>B: None of the other four choices is correct.
+160[4.1] Evaluat xl_{-}im_{2}it. lim_{x\to0}(\frac{e t1he}{2})  =>E: 4
+161[4.1] Evaluate the limit. lim_{x\to\infty}e^{-x}  =>C: 0
+162[4.1] Evaluate the limit. lim_{x\to-\infty}\frac{e^{-x}-3}{5e^{-x}+1}  =>A: 1 5
+163[4.1] Evaluate the limit. lim_{x\to-\infty}\frac{5e^{-x}-3}{3e^{-x}+1}  =>C: 5 3
+164[4.1] Evaluate the limit. lim_{x\to\infty}\frac{-2e^{x}-6}{e^{x}+5}  =>D: −2
+165[4.1] Evaluate the limit. lim_{x\to\infty}\frac{-2e^{x}+3}{e^{x}+2}  =>A: −2
+166[4.2] Evaluate the limit. lim_{x\to0^{+}}ln(8x)  =>C: −∞
+167[4.2] Evaluate the limit. lim_{x\to1}ln(3x^{4}-3+e^{-2})  =>D: −2
+168[4.2] Evaluate the limit. lim_{x\to\infty}ln(5x^{3}+1)  =>A: ∞
+169[4.2] Evaluate the limit. lim_{x\to\infty}ln(4x^{6}+1)  =>C: None of the other four choices is correct.
+170[4.2] Evaluate the limit. lim_{x\to0}+ln(4x^{5})  =>B: −∞
+171[4.3] Evaluate lim_{x\to0}+\frac{ the limlnixt.}{\sqrt{(lnx)^{2}+4}}  =>C: −1
+172[4.4] Evaluate it. lim_{x\to\infty}(\frac{ thx+e l4im}{x})^{4x-4}  =>B: e 16
+173[4.4] Evaluate xit_{+}._{1} lim_{x\to\infty}(\frac{ thx-e l4im}{x-3})  =>A: e−1
+174[4.4] Evaluate the lim\frac{it_{5}._{x-16}}{x-4} lim_{x\to4}(4x-15)  =>C: e 16
+175[4.4] Evaluate the lim lim_{x\to5}(26-5x)\frac{it_{5}._{x-26}}{x-5}  =>A: e 5
+176[4.4] Evaluate it. lim_{x\to1}x\frac{ t_{6}h_{-}e_{5} l_{x}im}{x-1}  =>C: None of the other four choices is correct.
+177[4.5] Evaluate lim_{x\to-4}\frac{ thlne( l5ixm+it2.1)}{7x+28}  =>C: 5 7
+178[4.5] Evaluate the limit. lim_{x\to-4}\frac{e^{-x-4}-1}{-x-4}  =>A: None of the other four choices is correct.
+179[4.5] Evaluate lim_{x\to-4}\frac{ thlne( l-im3xit-. 11)}{5x+20}  =>A: − 3 5
+180[4.5] Evaluate the limit. lim_{x\to-4}\frac{e^{-x-4}-1}{-6x-24}  =>A: None of the other four choices is correct.
+181[4.5] Evaluate the limit. lim_{x\to-4}\frac{e^{7x+28}-1}{-x-4}  =>E: −7
+182[4.6] AnamountP=4400is invested. The a nnual interestrateis 2%, sor=\frac{1}{50}. Interestis compoundedmonthly. Find the balanceaftert=8years. Giveyouranswerinexactform, notas adecimal.  =>B: 4400(1+ 1 600 ) 96
+183[4.6] AnamountP=1100is invested. The a nnual interestrateis 7%, sor=\frac{7}{y.100}. Interestis compoundedcontinuousl Thetargetbalanceis 2200. This is twicetheinitial amount. Find the timet, inyears, neededtoreachthis balance. Giveyouranswerinexactform, notas adecimal.  =>B: None of the other four choices is correct.
+184[4.6] AnamountP=1500is invested. The a nnual interestrateis 5%, sor=\frac{1}{20}. Interestis compoundedmonthly. Find the balanceaftert=7years. Giveyouranswerinexactform, notas adecimal.  =>B: 1500(1+ 1 240 ) 84
+185[4.6] AnamountP=3400is invested. The a nnual interestrateis 8%, sor=\frac{2}{y.25}. Interestis compoundedcontinuousl Find the balanceaftert=8years. Giveyouranswerinexactform, notas adecimal.  =>C: 3400e 16 25
+186[4.6] AnamountP=4900is invested. The a nnual interestrateis 7%, sor=\frac{7}{100}. Interestis compoundedmonthly. Find the balanceaftert=3years. Giveyouranswerinexactform, notas adecimal.  =>A: 4900(1+ 7 1200 ) 36
+187[5.1] Thefunctionfis definedbelow. f(x)= \frac{3x^{2}+4x-4}{L, x=x-+22} Find the valueofLthatmakes fcontinuous atx=-2. {, x\ne-2  =>C: −8
+188[5.1] Thefunctionfis definedbelow. f(x)= \frac{x^{2}+2x-8}{L, x=x+-44} Find the valueofLthatmakes fcontinuous atx=-4. {, x\ne-4  =>B: −6
+189[5.1] Thefunctionfis definedbelow. f(x)= \frac{x^{2}-x-20}{L, x=x+-44} Find the valueofLthatmakes fcontinuous atx=-4. {, x\ne-4  =>D: −9
+190[5.1] Thefun dbelow. { \frac{ctsiionn ( f8 i(sx +de2f)in)e}{L, x=6(-x+22)}, x\ne-2 f(x)= Find the valueofLthatmakes fcontinuous atx=-2.  =>D: 4 3
+191[5.1] Thefunctionfis definedbelow. f(x)= \frac{3x^{2}+3x-6}{L, x=x-+22} Find the valueofLthatmakes fcontinuous atx=-2. {, x\ne-2  =>C: −9
+192[5.2] -x-5, x<-3 {x+1, x\ge-3 f(x)= Classify fatx=-3.  =>C: The function is continuous but not differentiable at the jun
+193[5.2] 3x+1, x<-2 { f(x)= Classify fatx=-2. -x^{2}-x-3, x\ge-2  =>C: The function is differentiable at the junction.
+194[5.2] -x-6, x<-3 {x, x\ge-3 f(x)= Classify fatx=-3.  =>C: The function is continuous but not differentiable at the jun
+195[5.2] -x-5, x<-3 {2x+4, x\ge-3 f(x)= Classify fatx=-3.  =>E: The function is continuous but not differentiable at the jun
+196[5.2] 2x+5, x<-3 {-x-4, x\ge-3 f(x)= Classify fatx=-3.  =>B: The function is continuous but not differentiable at the jun
+197[5.2] Thefunctionfis definedbelow. f(x)=\frac{4x^{2}-36x+56}{every xd-is7contin} Find uity. Classify eachdiscontinuity as removableornon-removable.  =>D: {x=7: removable}
+198[5.2] Thef definedbelow. f(x)=\frac{unctio1n f is }{x^{2}+7x+6} Findevery discontinuity. Classify eachdiscontinuity as removableornon-removable.  =>C: {x=−6: nonremovable, x=−1: nonremovable}
+199[5.2] Thefunctionfis definedbelow. f(x)=\frac{x^{2}-13x+40}{x^{2}-8x} Findevery discontinuity. Classify eachdiscontinuity as removableornon-removable.  =>B: {x=0: nonremovable, x=8: removable}
+200[5.2] Thefunctionfis definedbelow. f(x)=\frac{x^{2}-3x-28}{x^{2}-8x+7} Findevery discontinuity. Classify eachdiscontinuity as removableornon-removable.  =>E: {x=1: nonremovable, x=7: removable}
+201[5.2] Thefunctionfis definedbelow. f(x)=\frac{4x^{2}+56x+192}{every dxi+sc8ontinui} Find ty. Classify eachdiscontinuity as removableornon-removable.  =>D: {x=−8: removable}
+202[5.3] Thefunctionfis definedbelow. 7x+3, x<-1 {5x+q, x\ge-1 f(x)= Find the valueofqthatmakes fcontinuous atx=-1.  =>D: 1
+203[5.3] Thefunctionfis definedbelow. 9x-2, x<1 {6x+q, x\ge1 f(x)= Find the valueofqthatmakes fcontinuous atx=1.  =>E: 1
+204[5.3] Thefunctionfis definedbelow. 4x-1, x<2 {2x+q, x\ge2 f(x)= Find the valueofqthatmakes fcontinuous atx=2.  =>E: 3
+205[5.3] Thefunctionfis definedbelow. 5x-1, x<1 {4x+q, x\ge1 f(x)= Find the valueofqthatmakes fcontinuous atx=1.  =>B: 0
+206[5.3] Thefunctionfis definedbelow. {2x-3, x<1 f(x)= ux+v, 1\lex<4Find the values ofuandv thatmakefcontinuous atbothjunctions. 3x-10, x\ge4  =>C: u=1, v=−2
+207[5.4] Theone-sidedlimits offareshownbelow. lim^{-}_{x\to-2}f(x)=-4, lim^{+}_{x\to-2}f(x)=4 Choosethecorrectstatementaboutcontinuity atx=-2.  =>A: The function has a non-removable discontinuity at x = -2.
+208[5.4] Thefollowinginformationis givenaboutf. lim_{x\to-3}f(x)=4, f(-3)=5 Choosethecorrectstatementaboutcontinuity atx=-3.  =>E: The function has a removable discontinuity at x = -3.
+209[5.4] Thefollowinginformationis givenaboutf. lim_{x\to2}f(x)=-2, f(2)=-1 Choosethecorrectstatementaboutcontinuity atx=2.  =>D: The function has a removable discontinuity at x = 2.
+210[5.4] Thefollowinginformationis givenaboutf. lim_{x\to1}f(x)=4, f(1)=5 Choosethecorrectstatementaboutcontinuity atx=1.  =>E: The function has a removable discontinuity at x = 1.
+211[5.4] Theone-sidedlimits offareshownbelow. lim_{x\to-3^{-}}f(x)=-1, lim_{x\to-3^{+}}f(x)=1 Choosethecorrectstatementaboutcontinuity atx=-3.  =>D: The function has a non-removable discontinuity at x = -3.
+212[5.5] Consider the functionfontheclosedinterval[1,\frac{7}{2}]. f(x)=ln(\frac{2x}{ta5tem}) Whichs entabouttheZeroPointTheoremis correct?  =>C: The Zero Point Theorem guarantees at least one root.
+213[5.5] Consider the functionfontheclosedinterval[0,2]. f(x)=5x^{2}+5x-1 WhichstatementabouttheZeroPointTheoremis correct?  =>B: The Zero Point Theorem guarantees at least one root.
+214[5.5] Consider the functionfontheclosedinterval[-3,3]. -3, x<0 {3, x\ge0 f(x)= WhichstatementabouttheZeroPointTheoremis correct?  =>E: The Zero Point Theorem cannot be applied because the functio
+215[5.5] Consider the functionfontheclosedinterval[0,2]. f(x)=2x^{2}+2x-2 WhichstatementabouttheZeroPointTheoremis correct?  =>A: The Zero Point Theorem guarantees at least one root.
+216[5.5] Cons thefunctionfontheclosedinterval[-49,49]. f(x)=\frac{id1er}{hx st} Whic atementabouttheZeroPointTheoremis correct?  =>B: The Zero Point Theorem cannot be applied because the functio
+217[6.1] y=f(x)=x^{2}+3x-6. Find the slopeofthetangentlineatx=-3.  =>C: −3
+218[6.1] y=f(x)=-x^{3}-4x^{2}-3x-6. Find the slopeofthetangentlineatx=-3.  =>A: −6
+219[6.1] y=f(x)=-x^{3}-6x^{2}-4x-2. Find the slopeofthetangentlineatx=-3.  =>C: None of the other four choices is correct.
+220[6.1] y=f(x)=-x^{3}-4x^{2}+3x-3. Find the slopeofthetangentlineatx=-3.  =>D: 0
+221[6.1] y=f(x)=-x^{3}-5x^{2}-3x-6. Find the slopeofthetangentlineatx=-3.  =>B: None of the other four choices is correct.
+222[6.2] f(x)=-\frac{4}{\sqrt{3x}}. Findf^{′}(27).  =>E: 2 243
+223[6.2] f(x)=3 \sqrt{2x}. Findf^{′}(2).  =>E: None of the other four choices is correct.
+224[6.2] f(x)=\frac{2}{\sqrt{7x}}. Findf^{′}(28).  =>E: − 1 392
+225[6.2] f(x)=-\frac{1}{\sqrt{5x}}. Findf^{′}(5).  =>B: 1 50
+226[6.2] f(x)=-\frac{4}{\sqrt{6x}}. Findf^{′}(24).  =>B: 1 144
+227[6.3] y=\frac{6}{x^{2}+8}. Find the equationofthetangentlineat(-1,\frac{2}{3}).  =>D: 4x−27y+22=0
+228[6.3] y=-\frac{3}{x^{2}+4}. Find the equationofthetangentlineat(-1,-\frac{3}{5}).  =>D: 6x+25y+21=0
+229[6.3] y=\frac{11}{x^{2}+10}. Find the equationofthetangentlineat(-1,1).  =>A: 2x−11y+13=0
+230[6.3] y=-\frac{2}{x^{2}+1}. Find the equationofthetangentlineat(-1,-1).  =>D: x+y+2=0
+231[6.3] y=\frac{2}{x^{2}+1}. Find the equationofthetangentlineat(1,1).  =>E: x+y−2=0
+232[6.4] f(x)=-7cos(x). Findf^{′}(x).  =>D: 7 sin(x)
+233[6.4] f(x)=10tan(x). Findf^{′}(x).  =>C: 10 sec 2 (x)
+234[6.4] f(x)=-6sin(x). Findf^{′}(x).  =>B: −6 cos(x)
+235[6.4] f(x)=csc(x). Findf^{′}(x).  =>E: None of the other four choices is correct.
+236[6.4] f(x)=-2x^{3}tan(x). Findf^{′}(x).  =>E: −6x 2 tan(x)−2x 3 sec 2 (x)
+237[6.4] f(x)=-sin(x)cos(x). Findf^{′}(x).  =>A: −cos(2x)
+238[6.4] f(x)=-3x^{2}tan(x). Findf^{′}(x).  =>C: −6x tan(x)−3x 2 sec 2 (x)
+239[6.4] f(x)=3sin(x)+6sec(x)-4cot(x). Findf^{′}(x).  =>C: 3 cos(x)+6 sec(x) tan(x)+4 csc 2 (x)
+240[6.4] f(x)=3sin^{4}(x)+\frac{2}{sin^{4}(x)}. Findf^{′}(x).  =>D: 12 sin 3 (x) cos(x)− 8 cos(x) sin 5 (x)
+241[6.4] f(x)=-sin^{2}(x)+\frac{1}{sin^{2}(x)}. Findf^{′}(x).  =>E: None of the other four choices is correct.
+242[6.5] LetFbedifferentiable. y=-4[F(x)]^{3}. Find \frac{dy}{dx}.  =>C: −12\[F (x)\] 2F ′ (x)
+243[6.5] f(x)=(3x^{2}-5)^{2}. Usethechainruletofindf^{′}(x).  =>E: 6x(6x 2−10)
+244[6.5] f(x)=tan(x^{2}+5). Usethechainruletofindf^{′}(x).  =>C: 2x cos 2 (x 2+5)
+245[6.5] f(x)=(-3x^{2}-3)^{3}. Usethechainruletofindf^{′}(x).  =>D: −18x(−3x 2−3) 2
+246[6.5] LetFbedifferentiable. y=8F(x^{2}). Find \frac{dy}{dx}.  =>B: 16 xF ′ (x 2 )
+247[6.5] LetFbedifferentiable. y=7F(x^{6}). Find \frac{dy}{dx}.  =>E: 42x 5F ′ (x 6 )
+248[6.5] LetFbedifferentiable. y=6F(x^{4}). Find \frac{dy}{dx}.  =>A: 24x 3F ′ (x 4 )
+249[6.5] LetFbedifferentiable. y=-9F(x^{2}). Find \frac{dy}{dx}.  =>D: −18 xF ′ (x 2 )
+250[6.5] f(x)=cos((5x^{2}-6)^{2}). Usethechainruletofindf^{′}(x).  =>C: −10x(10x 2−12) sin((5x 2−6) 2 )
+251[6.5] f(x)=sin(\frac{1}{((-x-2)^{2})^{2}}). Usethechainruletofindf^{′}(x).  =>B: (−4x−8) cos( 1 (−x−2) 4 )
+252[6.6] f(x)=-5x^{2}-5x. Findf^{″}(1).  =>B: −10
+253[6.6] f(x)=-5x^{2}-6x-4. Findf^{″}(1).  =>D: −10
+254[6.6] f(x)=-5x^{3}-6x^{2}-6x-3. Findf^{″}(1).  =>C: −42
+255[6.6] f(x)=-5x^{6}-6x^{5}-6x^{4}-6x^{3}-6x^{2}-5x+5. Findf^{″}(1).  =>D: −390
+256[6.6] f(x)=-5x^{6}-6x^{5}-6x^{4}-6x^{3}-6x^{2}-5x-4. Findf^{″}(1).  =>A: −390
+257[6.6] f(x)=4cos(4x). Findf^{(2)}(x).  =>A: −4⋅4 2 cos(4x)
+258[6.6] f(x)=4sin(x). Findf^{(3)}(x).  =>C: −4 cos(x)
+259[6.6] f(x)=5sin(5x). Findf^{(3)}(x).  =>B: None of the other four choices is correct.
+260[6.6] f(x)=-cos(6x). Findf^{(10)}(x).  =>D: 6 10 cos(6x)
+261[6.6] f(x)=-5sin(x). Findf^{(11)}(x).  =>A: None of the other four choices is correct.
+262[6.7] Anobject's positionis s(t)=-5t^{2}-5centimetres, wheret\ge0is measuredinseconds. Find the accelerationatt=3.  =>E: −10 cm/s 2
+263[6.7] Anobject's positionis s(t)=-5t^{2}-2t+4centimetres, wheret\ge0is measuredinseconds. Find the velocity att=5.  =>B: −52 cm/s
+264[6.7] Anobject's positionis s(t)=-5t^{2}-4tmetres, wheret\ge0is measuredinseconds. Find the velocity att=2.  =>E: −24 m/s
+265[6.7] Anobject's positionis s(t)=-5t^{3}-6t^{2}-6t+5centimetres, wheret\ge0is measuredinseconds. Find the accelerationa(t).  =>E: −30t−12 cm/s 2
+266[6.7] Anobject's positionis s(t)=-5t^{3}-6t^{2}-3t-1centimetres, wheret\ge0is measuredinseconds. Find the acceleration att=1.  =>B: −42 cm/s 2
+267[7.1] Find \frac{d}{dx}[ln \sqrt{14x+15}].  =>E: 14 28x+30
+268[7.1] Find \frac{d}{dx}[ln(10x^{3}-19x)].  =>D: None of the other four choices is correct.
+269[7.1] Find \frac{d}{dx}[ln(13x^{2}-19x)].  =>B: 26x−19 13x 2−19x
+270[7.1] Find \frac{d}{dx}[ln \sqrt{7x-15}].  =>D: 7 14x−30
+271[7.1] Find \frac{d}{dx}[ln(14x^{6}+13x)].  =>A: 84x 5+13 14x 6+13x
+272[7.1] Find \frac{d}{dx}(e^{8x^{2}+4x+6}).  =>A: (16x+4)e 8x 2+4x+6
+273[7.1] Find \frac{d}{dx}(e^{-11x^{2}-6x+4}).  =>C: (−22x−6)e −11x 2−6x+4
+274[7.1] Find \frac{d}{dx}(e^{-2x^{2}-7x+2}).  =>A: (−4x−7)e−2x 2−7x+2
+275[7.1] Find \frac{d}{dx}(e^{-2x^{2}-x+6}).  =>D: None of the other four choices is correct.
+276[7.1] Find \frac{d}{dx}(e^{-x^{2}+x+1}).  =>E: (1−2x)e −x2+x+1
+277[7.1] Find \frac{d}{dx}(e^{x^{4}ln(17x)}).  =>D: x 3 (4 ln(17x)+1)e x 4 ln(17x)
+278[7.1] Find \frac{d}{dx}(e^{-11x^{5}ln(12x)}).  =>D: −11x 4 (5 ln(12x)+1)e −11x 5 ln(12x)
+279[7.1] Find \frac{d}{dx}(e^{11xln(7x)}).  =>C: (11 ln(7x)+11)e 11x ln(7x)
+280[7.1] Find \frac{d}{dx}(e^{-x^{6}ln(18x)}).  =>C: −x 5 (6 ln(18x)+1)e −x6 ln(18x)
+281[7.1] Find \frac{d}{dx}(e^{-4x^{4}ln(17x)}).  =>B: −4x 3 (4 ln(17x)+1)e −4x 4 ln(17x)
+282[7.1] Find \frac{d}{dx}(\frac{\sqrt361-40 2}{(10x+71)}\frac{0_{2}x}{3}). \sqrt  =>B: √361−400x 2
+283[7.2] Letf(x)=2x^{3}+12x-19. Find(f^{-1})^{′}(-195).  =>A: 1 6(−4) 2+12
+284[7.2] Letf(x)=9x^{3}+10x. Find(f^{-1})^{′}(-19).  =>B: 1 27(−1) 2+10
+285[7.2] Letf(x)=6x^{3}+9x-4. Find(f^{-1})^{′}(-424).  =>A: 1 18(−4) 2+9
+286[7.2] Letf(x)=12x^{3}+2x+18. Find(f^{-1})^{′}(348).  =>D: None of the other four choices is correct.
+287[7.2] Letf(x)=5x^{3}+6x-19. Find(f^{-1})^{′}(33).  =>C: 1 15(2) 2+6
+288[7.3] Find \frac{d}{dx}[arccos (e^{-68x})].  =>E: 68e−68x √1−(e−68x) 2
+289[7.3] Find \frac{d}{dx}[arctan(8ln(10x)-1)].  =>C: 8 x(1+(8 ln(10x)−1) 2 )
+290[7.3] Find \frac{d}{dx}[arcsin(75x^{3})].  =>A: 225x 2 √1−(75x 3 ) 2
+291[7.3] Find \frac{d}{dx}[arccos (e^{-28x})].  =>A: 28e−28x √1−(e−28x) 2
+292[7.3] Find \frac{d}{dx}[arccos (e^{-70x})].  =>D: 70e−70x √1−(e−70x) 2
+293[7.4] Find \frac{d}{dx}((sin(19x)+14)^{ln(19x)}).  =>B: (sin(19x)+14) ln(19x)( 19 ln(19x) cos(19x) sin(19x)+14 + ln(
+294[7.4] Find \frac{d}{dx}((9x^{8}+17)^{sin(9x)}).  =>B: (9x 8+17) sin(9x)( 72x 7 sin(9x) 9x 8+17 +9 ln(9x 8+17) cos(
+295[7.4] Find \frac{d}{dx}((6x^{2}+18)^{sin(2x)}).  =>B: (6x 2+18) sin(2x)( 12x sin(2x) 6x 2+18 +2 ln(6x 2+18) cos(2x
+296[7.4] Lety=(7x^{4}+3)^{sin(7x)}. Findy^{′}(\frac{\pi}{7}).  =>B: −7 ln (7( π 7 ) 4+3)
+297[7.5] Assumingtheequation9x^{4}+9xy=10y^{2}defines y as adifferentiablefunctionofx, find \frac{dy}{dx} at(-2,3).  =>C: − 87 26
+298[7.5] Assumingtheequation6x^{6}+2xy^{2}=5y^{3}defines y as adifferentiablefunctionofx, find \frac{dy}{dx}.  =>A: −36x 5−2y 2 4 xy−15y 2
+299[7.5] Assumingtheequation18y^{2}-27y=2x^{5}defines y as adifferentiablefunctionofx, find \frac{dy}{dx} at(3,6).  =>E: 30 7
+300[7.5] Assumingtheequation8x^{2}+18xy=-9y^{2}defines y as adifferentiablefunctionofx, find \frac{dy}{dx} at(-3,2).  =>A: − 2 3
+301[7.5] Assumingtheequation13x^{5}+17xy^{3}=-29y^{4}defines y as adifferentiablefunctionofx, find \frac{dy}{dx}.  =>D: −65x 4−17y 3
+302[7.6] Find the equationofthetangentlineto5 \sqrt{y}+4xy^{4}=5at(0,1).  =>C: y=1− 8x 5
+303[7.6] Find the equationofthetangentlineto5 \sqrt{y}+6xy^{3}=5at(0,1).  =>E: None of the other four choices is correct.
+304[7.6] Find the equationofthetangentlineto9 \sqrt{y}+8xy^{2}=9at(0,1).  =>B: None of the other four choices is correct.
+305[7.6] Find the equationofthetangentlineto4 \sqrty +xy=0at(-2,4).  =>E: y=4x+12
+306[7.6] Find the equationofthetangentlineto8 \sqrty +5xy=-2at(-2,1).  =>C: y= 5x 6 + 8 3
+307[8.1] Aballoonis released100ftfromanobserveronlevel groundandrises vertically at3ft/s. Howfastis its distancefrom theobserverincreasingwhenits heightis 120ft?  =>D: None of the other four choices is correct.
+308[8.1] Aballoonis released170ftfromanobserveronlevel groundandrises vertically at6ft/s. Howfastis its distancefrom theobserverincreasingwhenits heightis 130ft?  =>C: 130⋅6 √170 2+130 2
+309[8.2] Waterenters aconical tankat27ft^{3}/min. Thetankis 25fthighwithtopradius 7ft. Howfastis thewaterlevel rising whenthedepthis 10ft?  =>A: None of the other four choices is correct.
+310[8.2] Waterenters aconical tankat23ft^{3}/min. Thetankis 21fthighwithtopradius 8ft. Howfastis thewaterlevel rising whenthedepthis 17ft?  =>D: 23⋅21 2
+311[8.3] Atelescopeis onacliff190ftabovethewater. Aboatapproaches theshoreat15ft/s. Atwhatrateis theanglebetween thevertical cliffandthelineofsightchangingwhentheboatis 310ftfromshore?  =>B: − 15⋅190 190 2+310 2
+312[9.1] Letf(x)=-(x+2)^{3}-3on[-4,0]. Find the x-coordinates ofall stationary andsingularpoints.  =>A: Stationary point: x=−2; there are no singular points.
+313[9.1] Letf(x)=2(x+2)^{3}+5on[-4,0]. Find the x-coordinates ofall stationary andsingularpoints.  =>D: Stationary point: x=−2; there are no singular points.
+314[9.1] Letf(x)=(x+1)^{3}-5on[-3,1]. Find the x-coordinates ofall stationary andsingularpoints.  =>D: Stationary point: x=−1; there are no singular points.
+315[9.1] Letf(x)=-(^{3}\sqrt{x+1})^{2}-1on[-2,1]. Find the x-coordinates ofall stationary andsingularpoints.  =>C: There are no stationary points; singular point: x=−1.
+316[9.1] Letf(x)=-2 \sqrtx+7+3on[-6,2]. Find the x-coordinates ofall stationary andsingularpoints.  =>D: There are no stationary points; there are no singular points
+317[9.2] Letf(x)=-2(^{3}\sqrt{x+2})^{2}-4on[-3,0]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimumvalues.  =>A: x=−3, x=−2, and x=0
+318[9.2] Letf(x)=-\frac{(^{3}\sqrt{x+2})^{4}}{valuexs+. 5}-4on[-4,4]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimum  =>B: x=−4, x=−2, and x=4
+319[9.2] Letf(x)=-2 \sqrtx+7+2on[-6,2]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimumvalues.  =>C: x=−6 and x=2
+320[9.2] Letf(x)=-( \sqrt{x+2})^{2}+10on[-3,0]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimumva^{3}lues.  =>B: x=−3, x=−2, and x=0
+321[9.2] Letf(x)=(-x-2)e^{-x-2}+12on[-2,2]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimumvalues.  =>A: None of the other four choices is correct.
+322[9.2] Letf(x)=(x+1)^{2}(4x-14)on[-\frac{5}{2},5]. Find a ll x-values wherethemaximumandminimumvalues areattained.  =>B: Maximum attained at x=5; minimum attained at x=− 5 2 and x=2
+323[9.2] Letf(x)=(^{3}\sqrt{x+1})^{2}on[-9,0]. Find a ll x-values wherethemaximumandminimumvalues areattained.  =>B: Maximum attained at x=−9; minimum attained at x=−1.
+324[9.2] Letf(x)=-2(^{3}\sqrt{x-2})^{2}on[-6,4]. Find a ll x-values wherethemaximumandminimumvalues areattained.  =>E: Maximum attained at x=2; minimum attained at x=−6.
+325[9.2] Letf(x)=(x-1)^{2}(2x-5)on[\frac{1}{2},3]. Find a ll x-values wherethemaximumandminimumvalues areattained.  =>A: Maximum attained at x=3; minimum attained at x= 1 2 and x=2.
+326[9.2] Letf(x)=-2(^{3}\sqrt{x+1})^{2}on[-9,7]. Find a ll x-values wherethemaximumandminimumvalues areattained.  =>D: Maximum attained at x=−1; minimum attained at x=−9 and x=7.
+327[9.2] Letf(x)=3\frac{(^{3}\sqrt{x-2})^{4}}{x+1} on[0,8]. Find the maximumvalueandminimumvalue. \sqrt  =>D: Maximum value: 6 3√2 ; minimum value: 0.
+328[9.2] Letf(x)=3(^{3}\sqrt{x+1})^{2}on[-2,1]. Find the maximumvalueandminimumvalue.  =>C: None of the other four choices is correct.
+329[9.2] Letf(x)=-\sqrtx+7 on[-6,2]. Find the maximumvalueandminimumvalue.  =>D: Maximum value: −1; minimum value: −3.
+330[9.2] Letf(x)=2\frac{(^{3}\sqrt{x})^{4}}{x+3}+7on[-2,6]. Find the maximumvalueandminimumvalue.  =>A: None of the other four choices is correct.
+331[9.2] Letf(x)=-2\frac{(^{3}\sqrt{x-1})^{4}}{x+2} on[-1,7]. Find the maximumvalueandminimumvalue. 3\sqrt  =>C: Maximum value: 0; minimum value: −4 3√2 .
+332[9.3] Letf(x)=-x^{3}. Find the maximal intervals onwhichfis increasingandonwhichitis decreasing.  =>D: , There is no interval on which f is increasing.;, Decreasin
+333[9.3] Letf(x)=\frac{(8-(x+1)^{2})(x+1)^{2}}{4}. Find the maximal intervals onwhichfis increasingandonwhichitis decreasing.  =>D: , Increasing on (−∞,−3\] and on \[−1,1\].;, Decreasing on \[
+334[9.3] Letf(x)=\frac{(x-2)^{2}((x-2)^{2}-8)}{4}. Find the maximal intervals onwhichfis increasingandonwhichitis decreasing.  =>B: , Increasing on \[0,2\] and on \[4,∞).;, Decreasing on (−∞,0
+335[9.3] Letf(x)=\frac{x^{2}(x^{2}-8)}{2}. Find the maximal intervals onwhichfis increasingandonwhichitis decreasing.  =>C: , Increasing on \[−2,0\] and on \[2,∞).;, Decreasing on (−∞,
+336[9.3] \frac{2}{3} Letf(x)=2|x-1|. Find the maximal intervals onwhichfis increasingandonwhichitis decreasing.  =>E: , Increasing on \[1,∞).;, Decreasing on (−∞,1\])
+337[9.4] Letf(x)=-ln(|x-2|+1)+3. Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown.  =>C: None of the other four choices is correct.
+338[9.4] Letf(x)=-\frac{1}{3\sqrt{x-1}}+3. Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown.  =>A: , Concave up on (−∞,1).;, Concave down on (1,∞).
+339[9.4] Letf(x)=-2(3(x-1)^{2}+sin^{2}(x-1)). Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown.  =>C: , There is no interval on which f is concave up.;, Concave d
+340[9.4] Letf(x)=e^{(x+2)^{2}}. Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown.  =>B: , Concave up on (−∞,∞).;, There is no interval on which f is
+341[9.4] Letf(x)=2\frac{x+2}{(x+2)^{2}+4}. Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown. \sqrt \sqrt \sqrt  =>A: , Concave up on (−2 √3 −2,−2) and on (−2+2 √3 ,∞).;, Concave
+342[9.4] Letf(x)=(x-2)e^{(x-2)^{2}}+2. Find a ll inflectionpoints.  =>C: Inflection point: (2,2).
+343[9.4] Letf(x)=(x+1)^{4}+7. Find a ll inflectionpoints.  =>B: There are no inflection points.
+344[9.4] Letf(x)=2^{3}\sqrtx+2+2. Find a ll inflectionpoints.  =>D: Inflection point: (−2,2).
+345[9.4] Letf(x)=2\frac{x}{x^{2}+9}+2. Find a ll inflectionpoints. \sqrt  =>B: Inflection points: (0,2),(−3 √3 ,2− √3 6 ),(3 √3 , √3 6 +2).
+346[9.4] Letf(x)=^{3}\sqrtx-2+2. Find a ll inflectionpoints.  =>B: Inflection point: (2,2).
+347[9.5] Letf(x)=x^{3}+2x-8. Whichstatementaboutthereal roots off(x)=0is correct?  =>C: There is exactly one real root, lying in (1,2).
+348[9.5] Letf(x)=x^{3}+2x+1. Whichstatementaboutthereal roots off(x)=0is correct?  =>C: There is exactly one real root, lying in (−1,0).
+349[9.5] Letf(x)=x^{3}+4x-7. Whichstatementaboutthereal roots off(x)=0is correct?  =>B: There is exactly one real root, lying in (1,2).
+350[9.5] Letf(x)=x^{3}+x+1. Whichstatementaboutthereal roots off(x)=0is correct?  =>A: There is exactly one real root, lying in (−1,0).
+351[9.5] Letf(x)=x^{3}+4x+20. Whichstatementaboutthereal roots off(x)=0is correct?  =>D: There is exactly one real root, lying in (−3,−2).

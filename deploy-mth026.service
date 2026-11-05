@@ -1,0 +1,15 @@
+[Unit]
+Description=MTH026 question bank and smart quiz (static, port 8088)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/mth026
+ExecStart=/usr/bin/python3 -m http.server 8088 --bind 0.0.0.0 --directory /var/www/mth026
+Restart=always
+RestartSec=3
+User=root
+
+[Install]
+WantedBy=multi-user.target

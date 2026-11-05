@@ -1,0 +1,3512 @@
+{
+"1": {
+"stem": "1. Find the natural domainoflog_{3}(-x^{2}-3x+28).",
+"opts": {
+"A": "A. (-\\infty,-7)\\cup(4,\\infty)",
+"B": "B. (-\\infty,-7)",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. [-7,4]",
+"E": "E. (-7,4)"
+}
+},
+"2": {
+"stem": "2. Find the natural domainoflog_{2}(x^{2}+2x-15).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. (-\\infty,-5)\\cup(3,\\infty)",
+"C": "C. (-5,3)",
+"D": "D. [-5,3]",
+"E": "E. (-\\infty,-5)"
+}
+},
+"3": {
+"stem": "3. Find the natural domainoflog_{3}(-x^{2}-10x-16).",
+"opts": {
+"A": "A. (-\\infty,-8)\\cup(-2,\\infty)",
+"B": "B. (-\\infty,-8)",
+"C": "C. (-8,-2)",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. [-8,-2]"
+}
+},
+"4": {
+"stem": "4. Find the natural domainoflog_{3}(-x^{2}-2x+8).",
+"opts": {
+"A": "A. (-\\infty,-4)\\cup(2,\\infty)",
+"B": "B. (-\\infty,-4)",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. (-4,2)",
+"E": "E. [-4,2]"
+}
+},
+"5": {
+"stem": "5. Find the natural domainoflog_{3}(-x^{2}-7x-6).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. (-\\infty,-6)",
+"C": "C. (-\\infty,-6)\\cup(-1,\\infty)",
+"D": "D. (-6,-1)",
+"E": "E. [-6,-1]"
+}
+},
+"6": {
+"stem": "6. Find the natural domainoflog_{3}(\\frac{x+5}{4x+3}).",
+"opts": {
+"A": "A. (-5,-\\frac{3}{4})",
+"B": "B. (-\\infty,-5)\\cup[-\\frac{3}{4},\\infty)",
+"C": "C. (-\\infty,-\\frac{3}{4})\\cup(-\\frac{3}{4},\\infty)",
+"D": "D. (-\\infty,-5)\\cup(-\\frac{3}{4},\\infty)",
+"E": "E. Noneof theotherfourchoices is correct. -3x-5"
+}
+},
+"7": {
+"stem": "7. Find the natural domainoflog_{5}(\\frac{-3x-5}{x+5}).",
+"opts": {
+"A": "A. (-\\infty,-5)\\cup(-5,\\infty)",
+"B": "B. (-5,-\\frac{5}{3})",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. [-5,-\\frac{5}{3})",
+"E": "E. (-\\infty,-5)\\cup(-\\frac{5}{3},\\infty) -4x-5"
+}
+},
+"8": {
+"stem": "8. Find the natural domainoflog_{7}(\\frac{-4x-5}{x+5}).",
+"opts": {
+"A": "A. (-5,-\\frac{5}{4})",
+"B": "B. (-\\infty,-5)\\cup(-5,\\infty)",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. (-\\infty,-5)\\cup(-\\frac{5}{4},\\infty)",
+"E": "E. (-5,-\\frac{5}{4}) -x-6"
+}
+},
+"9": {
+"stem": "9. Find the natural domainoflog_{5}(\\frac{-x-6}{4x-5}).",
+"opts": {
+"A": "A. (-6,\\frac{5}{4})",
+"B": "B. [-6,\\frac{5}{4})",
+"C": "C. (-\\infty,\\frac{5}{4})\\cup(\\frac{5}{4},\\infty)",
+"D": "D. (-\\infty,-6)\\cup(\\frac{5}{4},\\infty)",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"10": {
+"stem": "10. Find the natural domainoflog_{5}(\\frac{-x-6}{x-2}).",
+"opts": {
+"A": "A. [-6,2)",
+"B": "B. (-\\infty,2)\\cup(2,\\infty)",
+"C": "C. (-6,2)",
+"D": "D. (-6,2)",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"11": {
+"stem": "11. Letf(x)=3x, g(x)=sec(2x), andx_{0}=\\frac{\\pi}{6}. Find(g∘f)(x_{0}).",
+"opts": {
+"A": "A. 0",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -1",
+"D": "D. 1",
+"E": "E. \\frac{\\pi}{2} \\pi"
+}
+},
+"12": {
+"stem": "12. Letf(x)=2-2x^{2}, g(x)=cos(3x), andx_{0}=\\frac{\\pi}{6}. Find(f∘g)(x_{0}).",
+"opts": {
+"A": "A. 2",
+"B": "B. 3",
+"C": "C. 4",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 1"
+}
+},
+"13": {
+"stem": "13. Letf(x)=2x, g(x)=tan(4x), andx_{0}=\\frac{\\pi}{6}. Find(f∘g)(x_{0}).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct. \\sqrt",
+"B": "B. -2 \\sqrt{3} \\sqrt",
+"C": "C. 2 \\sqrt{\\sqrt3}",
+"D": "D. \\frac{2 \\sqrt{3}}{\\sqrt3}",
+"E": "E. -\\sqrt{3} \\pi"
+}
+},
+"14": {
+"stem": "14. Letf(x)=2-2x^{2}, g(x)=cos(2x), andx_{0}=\\frac{\\pi}{4}. Find(f∘g)(x_{0}).",
+"opts": {
+"A": "A. 0",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 3",
+"D": "D. 1",
+"E": "E. 2 \\pi"
+}
+},
+"15": {
+"stem": "15. Letf(x)=2x, g(x)=tan(2x), andx_{0}=\\frac{\\pi}{3}. Find(g∘f)(x_{0}). \\sqrt",
+"opts": {
+"A": "A. -\\sqrt{3}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 3 \\sqrt",
+"D": "D. \\sqrt{3}",
+"E": "E. \\frac{2\\pi}{3} 5\\pi"
+}
+},
+"16": {
+"stem": "16. Letf(x)=2-x^{2}, g(x)=cos(4x), andx_{0}=\\frac{5\\pi}{24}. Find(f∘g)(x_{0}).",
+"opts": {
+"A": "A. \\frac{5}{4}",
+"B": "B. \\frac{(\\sqrt{3}+4)^{2}}{4}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{9}{4\\sqrt}",
+"E": "E. \\frac{\\sqrt{3}}{2}+2 5\\pi"
+}
+},
+"17": {
+"stem": "17. Letf(x)=2x, g(x)=sec(3x), andx_{0}=\\frac{5\\pi}{18}. Find(f∘g)(x_{0}). \\sqrt",
+"opts": {
+"A": "A. -\\frac{4 \\sqrt{3}}{3}",
+"B": "B. Noneof theotherfourchoices is correct. \\sqrt",
+"C": "C. -\\frac{2 \\sqrt{3}}{3}",
+"D": "D. 2 \\sqrt",
+"E": "E. \\frac{4 \\sqrt{3}}{3}"
+}
+},
+"18": {
+"stem": "18. Letf(x)=2-x^{2}, g(x)=tan(4x), andx_{0}=\\frac{3\\pi}{16}. Find(f∘g)(x_{0}).",
+"opts": {
+"A": "A. 3",
+"B": "B. 1",
+"C": "C. 9",
+"D": "D. 0",
+"E": "E. Noneof theotherfourchoices is correct. \\pi"
+}
+},
+"19": {
+"stem": "19. Letf(x)=3x, g(x)=tan(x), andx_{0}=\\frac{\\pi}{3}. Find(g∘f)(x_{0}).",
+"opts": {
+"A": "A. 1",
+"B": "B. \\pi",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 0 \\sqrt",
+"E": "E. 3 \\sqrt{3} \\pi"
+}
+},
+"20": {
+"stem": "20. Letf(x)=2-2x^{2}, g(x)=sec(x), andx_{0}=\\frac{\\pi}{3}. Find(f∘g)(x_{0}).",
+"opts": {
+"A": "A. 4",
+"B": "B. 10",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -6",
+"E": "E. -14"
+}
+},
+"21": {
+"stem": "21. Letf(x)=\\frac{1-\\sqrtx}{3 \\sqrt{x}+1}. Findf^{-1}(x)andstatethedomainoff^{-1}.",
+"opts": {
+"A": "A. \\frac{(x-1)^{2}}{(3x+\\sqrt1)^{2}};(-\\frac{1}{3},1)",
+"B": "B. \\frac{-3 \\sqrt{x}-1}{\\sqrt{x}-1};[0,1)\\cup(1,\\infty)",
+"C": "C. \\frac{(x-1)^{2}}{(3x+1)^{2}};[-\\frac{1}{3},1)",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{(x-1)^{2}}{(3x+1)^{2}};[0,\\infty) 2-3 \\sqrt"
+}
+},
+"22": {
+"stem": "22. Letf(x)=\\frac{2-3 \\sqrtx}{5 \\sqrt{x}+2}. Findf^{-1}(x)andstatethedomainoff^{-1}.",
+"opts": {
+"A": "A. \\frac{4(x-1)^{2}}{(5x+3)^{2}};[-\\frac{3}{5},1)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{4(x-1)^{2}}{(5x+3)^{2}};[0,\\infty)",
+"D": "D. \\frac{4(x+1)^{2}}{(5x+3)^{2}};(-\\frac{3}{5},1)",
+"E": "E. \\frac{4(x-1)^{2}}{(5x+3)^{2}};(-\\frac{3}{5},1) 1-2 \\sqrt"
+}
+},
+"23": {
+"stem": "23. Letf(x)=\\frac{1-2 \\sqrtx}{\\sqrt{x}+3}. Findf^{-1}(x)andstatethedomainoff^{-1}. \\sqrt",
+"opts": {
+"A": "A. \\frac{-\\sqrt{x}-3}{2 \\sqrt{x}-1};[0,\\frac{1}{4})\\cup(\\frac{1}{4},\\infty)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{(3x-1)^{2}}{(x+2)^{2}};[0,\\infty)",
+"D": "D. \\frac{(3x-1)^{2}}{(x+2)^{2}};(-2,\\frac{1}{3})",
+"E": "E. \\frac{(3x+1)^{2}}{(x+2)^{2}};(-2,\\frac{1}{3})"
+}
+},
+"24": {
+"stem": "24. Letf(x)=\\frac{2-\\sqrtx}{2 \\sqrt{x}+1}. Findf^{-1}(x)andstatethedomainoff^{-1}.",
+"opts": {
+"A": "A. \\frac{(x-2)^{2}}{(2x+1)^{2}};(-\\frac{1}{2},2)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{(x-2)^{2}}{(2x+1)^{2}};[0,\\infty)",
+"D": "D. \\frac{(x-2)^{2}}{(2x+1)^{2}};[-\\frac{1}{2},2) \\sqrt",
+"E": "E. \\frac{-2 \\sqrt{x}-1}{\\sqrt{x}-2};[0,4)\\cup(4,\\infty) 2-3 \\sqrt"
+}
+},
+"25": {
+"stem": "25. Letf(x)=\\frac{2-3 \\sqrtx}{2 \\sqrt{x}+3}. Findf^{-1}(x)andstatethedomainoff^{-1}.",
+"opts": {
+"A": "A. \\frac{(3x-2)^{2}}{(2x+3)^{2}};(-\\frac{3}{2},\\frac{2}{3})",
+"B": "B. \\frac{(3x-2)^{2}}{(2x+3)^{2}};[-\\frac{3}{2},\\frac{2}{3})",
+"C": "C. \\frac{(3x-2)^{2}}{(2x+3)^{2}};[0,\\infty) \\sqrt",
+"D": "D. \\frac{-2 \\sqrt{x}-3}{3 \\sqrt{x}-2};[0,\\frac{4}{9})\\cup(\\frac{4}{9},\\infty)",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"26": {
+"stem": "26. Evaluatecos^{-1}(cos(\\frac{34\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{6\\pi}{7}",
+"B": "B. \\frac{\\pi}{7}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -\\frac{6\\pi}{7}",
+"E": "E. \\frac{34\\pi}{7} 17\\pi"
+}
+},
+"27": {
+"stem": "27. Evaluate a rccos(cos(\\frac{17\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{3\\pi}{7}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{4\\pi}{7}",
+"D": "D. -\\frac{3\\pi}{7}",
+"E": "E. \\frac{10\\pi}{7} \\pi"
+}
+},
+"28": {
+"stem": "28. Evaluate a rccos(cos(-\\frac{\\pi}{5})).",
+"opts": {
+"A": "A. -\\frac{4\\pi}{5}",
+"B": "B. -\\frac{\\pi}{5}",
+"C": "C. \\frac{\\pi}{5}",
+"D": "D. \\frac{4\\pi}{5}",
+"E": "E. Noneof theotherfourchoices is correct. 9\\pi"
+}
+},
+"29": {
+"stem": "29. Evaluate a rccos(cos(\\frac{9\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{12\\pi}{7}",
+"B": "B. \\frac{5\\pi}{7}",
+"C": "C. \\frac{2\\pi}{7}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{5\\pi}{7}"
+}
+},
+"30": {
+"stem": "30. Evaluatecos^{-1}(cos(\\frac{72\\pi}{7})).",
+"opts": {
+"A": "A. -\\frac{2\\pi}{7}",
+"B": "B. \\frac{72\\pi}{7}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{5\\pi}{7}",
+"E": "E. \\frac{2\\pi}{7} 26\\pi"
+}
+},
+"31": {
+"stem": "31. Evaluatesin^{-1}(sin(\\frac{26\\pi}{5})).",
+"opts": {
+"A": "A. \\frac{26\\pi}{5}",
+"B": "B. \\frac{4\\pi}{5}",
+"C": "C. -\\frac{\\pi}{5}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{6\\pi}{5} 59\\pi"
+}
+},
+"32": {
+"stem": "32. Evaluate a rcsin(sin(-\\frac{59\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{4\\pi}{7}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -\\frac{59\\pi}{7}",
+"D": "D. -\\frac{3\\pi}{7}",
+"E": "E. \\frac{10\\pi}{7} 27\\pi"
+}
+},
+"33": {
+"stem": "33. Evaluate a rcsin(sin(\\frac{27\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{6\\pi}{7}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{\\pi}{7}",
+"D": "D. \\frac{8\\pi}{7}",
+"E": "E. -\\frac{\\pi}{7}"
+}
+},
+"34": {
+"stem": "34. Evaluatesin^{-1}(sin(\\frac{48\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{6\\pi}{7}",
+"B": "B. \\frac{48\\pi}{7}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -\\frac{\\pi}{7}",
+"E": "E. \\frac{\\pi}{7} 47\\pi"
+}
+},
+"35": {
+"stem": "35. Evaluate a rcsin(sin(-\\frac{47\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{2\\pi}{7}",
+"B": "B. \\frac{5\\pi}{7}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{9\\pi}{7}",
+"E": "E. -\\frac{2\\pi}{7} 29\\pi"
+}
+},
+"36": {
+"stem": "36. Evaluate a rctan(tan(-\\frac{29\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{\\pi}{7}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{\\pi}{2}",
+"D": "D. -\\frac{\\pi}{7}",
+"E": "E. \\frac{6\\pi}{7} 66\\pi"
+}
+},
+"37": {
+"stem": "37. Evaluate tan^{-1}(tan(\\frac{66\\pi}{7})).",
+"opts": {
+"A": "A. -\\frac{3\\pi}{7}",
+"B": "B. \\frac{\\pi}{2}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{3\\pi}{7}",
+"E": "E. \\frac{66\\pi}{7}"
+}
+},
+"38": {
+"stem": "38. Evaluate tan^{-1}(tan(-\\frac{2\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{\\pi}{2}",
+"B": "B. \\frac{5\\pi}{7}",
+"C": "C. -\\frac{\\pi}{2}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{2\\pi}{7} 7\\pi"
+}
+},
+"39": {
+"stem": "39. Evaluate a rctan(tan(-\\frac{7\\pi}{5})).",
+"opts": {
+"A": "A. \\frac{\\pi}{2}",
+"B": "B. -\\frac{2\\pi}{5}",
+"C": "C. \\frac{3\\pi}{5}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{7\\pi}{5} 20\\pi"
+}
+},
+"40": {
+"stem": "40. Evaluate tan^{-1}(tan(\\frac{20\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{20\\pi}{7}",
+"B": "B. \\frac{\\pi}{7}",
+"C": "C. -\\frac{\\pi}{7}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{6\\pi}{7}"
+}
+},
+"41": {
+"stem": "41. Evaluate a rccos(sin(-\\frac{23\\pi}{5})).",
+"opts": {
+"A": "A. \\frac{9\\pi}{10}",
+"B": "B. \\frac{51\\pi}{10}",
+"C": "C. -\\frac{9\\pi}{10}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{2\\pi}{5} 8\\pi"
+}
+},
+"42": {
+"stem": "42. Evaluatesin^{-1}(cos(-\\frac{8\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{23\\pi}{14}",
+"B": "B. \\frac{6\\pi}{7}",
+"C": "C. -\\frac{8\\pi}{7}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{5\\pi}{14}"
+}
+},
+"43": {
+"stem": "43. Evaluate a rcsin(cos(-\\frac{5\\pi}{7})).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{3\\pi}{14}",
+"C": "C. \\frac{5\\pi}{7}",
+"D": "D. -\\frac{3\\pi}{14}",
+"E": "E. \\frac{17\\pi}{14} 30\\pi"
+}
+},
+"44": {
+"stem": "44. Evaluatesin^{-1}(cos(\\frac{30\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{3\\pi}{14}",
+"B": "B. \\frac{2\\pi}{7}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{30\\pi}{7}",
+"E": "E. -\\frac{53\\pi}{14} 24\\pi"
+}
+},
+"45": {
+"stem": "45. Evaluatesin^{-1}(cos(\\frac{24\\pi}{7})).",
+"opts": {
+"A": "A. \\frac{24\\pi}{7}",
+"B": "B. -\\frac{41\\pi}{14}",
+"C": "C. \\frac{4\\pi}{7}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{\\pi}{14}"
+}
+},
+"46": {
+"stem": "46. Evaluatesin(cos^{-1}(\\frac{2}{7})).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct. \\sqrt",
+"B": "B. -\\frac{3 \\sqrt{5}}{7}",
+"C": "C. \\frac{2}{7\\sqrt}",
+"D": "D. \\frac{\\sqrt{53}}{7}",
+"E": "E. \\frac{45}{49} 2"
+}
+},
+"47": {
+"stem": "47. Evaluatesin(cos^{-1}(-\\frac{2}{9})).",
+"opts": {
+"A": "A. \\frac{77}{81\\sqrt}",
+"B": "B. -\\frac{\\sqrt{77}}{9}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -\\frac{2}{\\sqrt9}",
+"E": "E. \\frac{\\sqrt{77}}{9} 1"
+}
+},
+"48": {
+"stem": "48. Evaluatesec(arcsin(\\frac{1}{7})). \\sqrt",
+"opts": {
+"A": "A. \\frac{7 \\sqrt{3}}{12\\sqrt}",
+"B": "B. -\\frac{7 \\sqrt{3}}{\\sqrt12}",
+"C": "C. \\frac{5 \\sqrt{2}}{\\sqrt7}",
+"D": "D. \\frac{4 \\sqrt{3}}{7}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"49": {
+"stem": "49. Evaluatesec(tan^{-1}(-4)). \\sqrt",
+"opts": {
+"A": "A. \\frac{\\sqrt{17}}{17}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -4 \\sqrt",
+"D": "D. \\sqrt{\\sqrt17}",
+"E": "E. -\\sqrt{17}"
+}
+},
+"50": {
+"stem": "50. Evaluatesec(tan^{-1}(-\\frac{1}{4})).",
+"opts": {
+"A": "A. -\\frac{1}{\\sqrt4}",
+"B": "B. \\frac{\\sqrt{17}}{4}",
+"C": "C. \\frac{17}{16\\sqrt}",
+"D": "D. -\\frac{\\sqrt{17}}{4}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"51": {
+"stem": "51. Define the function: -3x-3, x\\ne-3 {15, x=-3 f(x)= Findlim_{x\\to-3}f(x).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. DNE",
+"C": "C. 15",
+"D": "D. 6",
+"E": "E. -3"
+}
+},
+"52": {
+"stem": "52. Define the function: 6-x, x\\ne-1 {-8, x=-1 f(x)= Findlim_{x\\to-1}f(x).",
+"opts": {
+"A": "A. 1",
+"B": "B. 7",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. DNE",
+"E": "E. -8"
+}
+},
+"53": {
+"stem": "53. Define the function: 3x+1, x\\ne1 {-3, x=1 f(x)= Findlim_{x\\to1}f(x).",
+"opts": {
+"A": "A. 4",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. DNE",
+"D": "D. 3",
+"E": "E. -3"
+}
+},
+"54": {
+"stem": "54. Define the function: 5-2x, x\\ne-2 {-3, x=-2 f(x)= Findlim_{x\\to-2}f(x).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -3",
+"C": "C. 4",
+"D": "D. 9",
+"E": "E. 5"
+}
+},
+"55": {
+"stem": "55. Define the function: -4x-1, x\\ne3 {9, x=3 f(x)= Findlim_{x\\to3}f(x).",
+"opts": {
+"A": "A. -1",
+"B": "B. -13",
+"C": "C. 9",
+"D": "D. -12",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"56": {
+"stem": "56. Define the function: {-2x-7, x<-4 g(x)= Findlim_{x\\to-4}g(x). -2x^{2}-4x+17, x>-4",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 17",
+"C": "C. 1",
+"D": "D. 8",
+"E": "E. -7"
+}
+},
+"57": {
+"stem": "57. Define the function: x-7, x<-3 {-x^{2}+5x+14, x>-3 g(x)= Findlim_{x\\to-3}g(x).",
+"opts": {
+"A": "A. DNE",
+"B": "B. -7",
+"C": "C. -10",
+"D": "D. -3",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"58": {
+"stem": "58. Define the function: 10-x, x<1 {3x^{2}-2x+8, x>1 g(x)= Findlim_{x\\to1}g(x).",
+"opts": {
+"A": "A. 9",
+"B": "B. 8",
+"C": "C. -1",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. DNE"
+}
+},
+"59": {
+"stem": "59. Define the function: {-2x-5, x<3 g(x)= Findlim_{x\\to3}g(x). 2x^{2}-x-26, x>3",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -5",
+"C": "C. -6",
+"D": "D. -11",
+"E": "E. -26"
+}
+},
+"60": {
+"stem": "60. Define the function: {19-3x, x<3 g(x)= Findlim_{x\\to3}g(x). 2x^{2}+3x-17, x>3",
+"opts": {
+"A": "A. 10",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 19",
+"D": "D. DNE",
+"E": "E. -9"
+}
+},
+"61": {
+"stem": "61. Find the lim_{x\\to-4}\\frac{follo3w|xin+g4 l|imit:}{2x^{2}+17x+36}",
+"opts": {
+"A": "A. -3",
+"B": "B. \\frac{1}{3}",
+"C": "C. 3",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. DNE"
+}
+},
+"62": {
+"stem": "62. Find the it: lim_{x\\to2}+\\frac{ foll5o|wx-in2g| lim}{2x^{2}-2x-4}",
+"opts": {
+"A": "A. \\frac{6}{5}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{5}{6}",
+"D": "D. -\\frac{5}{6}",
+"E": "E. DNE"
+}
+},
+"63": {
+"stem": "63. Find the : lim_{x\\to3}-\\frac{ follo4w|xi-ng3 l|imit}{4x^{2}-29x+51}",
+"opts": {
+"A": "A. 0",
+"B": "B. DNE",
+"C": "C. -\\frac{4}{5}",
+"D": "D. -\\frac{5}{4}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"64": {
+"stem": "64. Find the it: lim_{x\\to-1}\\frac{foll2o|wx+in1g| lim}{-x^{2}+4x+5}",
+"opts": {
+"A": "A. 3",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -\\frac{1}{3}",
+"D": "D. \\frac{1}{3}",
+"E": "E. 0"
+}
+},
+"65": {
+"stem": "65. Find the : lim_{x\\to-3}\\frac{follo3w|xi+ng3 |limit}{-x^{2}-8x-15}",
+"opts": {
+"A": "A. 0",
+"B": "B. -\\frac{2}{3}",
+"C": "C. \\frac{3}{2}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{3}{2}"
+}
+},
+"66": {
+"stem": "66. Find the follow limit: lim_{x\\to0}[sin(3-\\frac{in3g }{x})-5]",
+"opts": {
+"A": "A. -4",
+"B": "B. DNE",
+"C": "C. -6",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -5"
+}
+},
+"67": {
+"stem": "67. Find the followin mit: lim_{x\\to0}[5sin(2-\\frac{g2 li}{x})+2]",
+"opts": {
+"A": "A. 12",
+"B": "B. DNE",
+"C": "C. -3",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 7"
+}
+},
+"68": {
+"stem": "68. Find the following it: lim_{x\\to0}[-5sin(1-\\frac{ li6m}{x})-2]",
+"opts": {
+"A": "A. -7",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 3",
+"D": "D. 8",
+"E": "E. -2"
+}
+},
+"69": {
+"stem": "69. Find the followin mit: lim_{x\\to0}[-sin(3+\\frac{g4 li}{x})-3]",
+"opts": {
+"A": "A. -3",
+"B": "B. -5",
+"C": "C. DNE",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -4"
+}
+},
+"70": {
+"stem": "70. Find the followin mit: lim_{x\\to0}[-sin(2-\\frac{g5 li}{x})-6]",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. DNE",
+"C": "C. -7",
+"D": "D. -5",
+"E": "E. -6"
+}
+},
+"71": {
+"stem": "71. Find the followinglimit: lim_{x\\to-5}\\frac{-3x^{2}-11x+20}{x+5}",
+"opts": {
+"A": "A. -11",
+"B": "B. 4",
+"C": "C. 0",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. DNE"
+}
+},
+"72": {
+"stem": "72. Find the followinglimit: lim_{x\\to-5}\\frac{-3x^{2}-11x+20}{-x^{2}-11x-30}",
+"opts": {
+"A": "A. 19",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. DNE",
+"D": "D. -\\frac{1}{19}",
+"E": "E. 3"
+}
+},
+"73": {
+"stem": "73. Find the followinglimit: lim_{x\\to-5}\\frac{5x^{2}+20x-25}{x+5}",
+"opts": {
+"A": "A. 0",
+"B": "B. -30",
+"C": "C. 20",
+"D": "D. -5",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"74": {
+"stem": "74. Find the followinglimit: lim_{x\\to-4}\\frac{3x^{2}+14x+8}{-x^{2}-7x-12}",
+"opts": {
+"A": "A. 10",
+"B": "B. -3",
+"C": "C. -10",
+"D": "D. DNE",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"75": {
+"stem": "75. Find the followinglimit: lim_{x\\to-2}\\frac{x^{2}+3x+2}{x+2}",
+"opts": {
+"A": "A. DNE",
+"B": "B. -1",
+"C": "C. 3",
+"D": "D. 0",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"76": {
+"stem": "76. Find the followinglimit: lim_{x\\to5}\\frac{4x^{2}-26x+30}{-x^{2}+13x-40}",
+"opts": {
+"A": "A. DNE",
+"B": "B. \\frac{14}{3}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{3}{14}",
+"E": "E. -4"
+}
+},
+"77": {
+"stem": "77. Find the followinglimit: lim_{x\\to-4}\\frac{2x^{2}+4x-16}{x+4}",
+"opts": {
+"A": "A. 4",
+"B": "B. 0",
+"C": "C. DNE",
+"D": "D. -12",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"78": {
+"stem": "78. Find the followinglimit: lim_{x\\to-1}\\frac{-4x^{2}+x+5}{x+1}",
+"opts": {
+"A": "A. 0",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. DNE",
+"D": "D. 1",
+"E": "E. 9"
+}
+},
+"79": {
+"stem": "79. Find the followinglimit: lim_{x\\to4}\\frac{2x^{2}-11x+12}{-2x^{2}+5x+12}",
+"opts": {
+"A": "A. -1",
+"B": "B. DNE",
+"C": "C. -\\frac{11}{5}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{5}{11}"
+}
+},
+"80": {
+"stem": "80. Find the followinglimit: lim_{x\\to2}\\frac{x^{3}-8}{x^{2}-x-2}",
+"opts": {
+"A": "A. -4",
+"B": "B. \\frac{8}{3}",
+"C": "C. 4",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. DNE"
+}
+},
+"81": {
+"stem": "81. Find the followinglimit: lim_{x\\to3}\\frac{\\sqrt{10-2x}}{2x-14}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -\\frac{1}{2}",
+"C": "C. -4",
+"D": "D. DNE",
+"E": "E. \\frac{1}{4}"
+}
+},
+"82": {
+"stem": "82. Find the followinglimit: lim_{x\\to1}\\frac{\\sqrt{10-3x}}{-4x}",
+"opts": {
+"A": "A. DNE \\sqrt",
+"B": "B. -\\frac{\\sqrt{7}}{4}",
+"C": "C. Noneof theotherfourchoices is correct. \\sqrt",
+"D": "D. \\frac{\\sqrt{7}}{4}",
+"E": "E. -\\frac{7}{4}"
+}
+},
+"83": {
+"stem": "83. Find the followinglimit: lim_{x\\to-4}\\frac{\\sqrt{-3x^{2}+4x+68}}{4x+9}",
+"opts": {
+"A": "A. -\\frac{7}{2}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. DNE",
+"D": "D. \\frac{2}{7}",
+"E": "E. -\\frac{4}{7}"
+}
+},
+"84": {
+"stem": "84. Find the followinglimit: lim_{x\\to1}\\frac{\\sqrt{7-x^{2}}}{2-x}",
+"opts": {
+"A": "A. 6 \\sqrt",
+"B": "B. -\\sqrt{6} \\sqrt",
+"C": "C. \\sqrt{6}",
+"D": "D. Noneof theotherfourchoices is correct. \\sqrt",
+"E": "E. \\frac{\\sqrt{6}}{6}"
+}
+},
+"85": {
+"stem": "85. Find the followinglimit: lim_{x\\to-3}\\frac{\\sqrt{-2x-4}}{2x+11} \\sqrt",
+"opts": {
+"A": "A. \\frac{\\sqrt{2}}{5\\sqrt}",
+"B": "B. -\\frac{\\sqrt{2}}{5}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{2}{5} \\sqrt",
+"E": "E. \\frac{5 \\sqrt{2}}{2}"
+}
+},
+"86": {
+"stem": "86. Supposethat lim_{x_{x}\\to_{\\to}-_{-}1_{1}}f(x)=-3, lim_{x\\to-1}g(x)=36, lim_{x\\to-1}h(x)=8 Find the followinglimit: lim (2[f(x)]^{3}\\frac{\\sqrt{g(x)}}{h(x)})",
+"opts": {
+"A": "A. -\\frac{8}{81}",
+"B": "B. -\\frac{81}{2}",
+"C": "C. -\\frac{27}{2}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{27}{4}"
+}
+},
+"87": {
+"stem": "87. Supposethat lim_{x_{x}\\to_{\\to}3_{3}}f(x)=-3, lim_{x\\to3}g(x)=25, lim_{x\\to3}h(x)=-10 Find the followinglimit: lim (3[f(x)]^{3}\\frac{\\sqrt{g(x)}}{h(x)})",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{81}{10}",
+"C": "C. \\frac{2}{9}",
+"D": "D. \\frac{405}{2}",
+"E": "E. \\frac{81}{2}"
+}
+},
+"88": {
+"stem": "88. Supposethat lim_{x_{x}\\to_{\\to}-_{-}1_{1}}f(x)=3, l_{3}im_{x\\to-1}g(x)=36, lim_{x\\to-1}h(x)=7 Find the followinglimit: lim (4[f(x)] \\frac{\\sqrt{g(x)}}{h(x)})",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{648}{7}",
+"C": "C. \\frac{108}{7}",
+"D": "D. \\frac{14}{81}",
+"E": "E. \\frac{216}{7}"
+}
+},
+"89": {
+"stem": "89. Supposethat lim_{x_{x}\\to_{\\to}3_{3}}f(x)=-4, lim_{x\\to3}g(x)=4, lim_{x\\to3}h(x)=4 Find the followinglimit: lim (-[f(x)]^{3}\\frac{\\sqrt{g(x)}}{h(x)})",
+"opts": {
+"A": "A. 16",
+"B": "B. 32",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 6",
+"E": "E. 64"
+}
+},
+"90": {
+"stem": "90. Supposethat lim_{x_{x}\\to_{\\to}2_{2}}f(x)=-2, l_{2}im_{x\\to2}g(x)=9, lim_{x\\to2}h(x)=6 Find the followinglimit: lim (-2[f(x)] \\frac{\\sqrt{g(x)}}{h(x)})",
+"opts": {
+"A": "A. -4",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -1",
+"D": "D. -\\frac{4}{3}",
+"E": "E. 4"
+}
+},
+"91": {
+"stem": "91. Find the followinglimit: lim_{x\\to5}\\frac{\\sqrt{4x-18}-\\sqrt{27-5x}}{x-5} \\sqrt",
+"opts": {
+"A": "A. -\\frac{9 \\sqrt{2}}{\\sqrt4}",
+"B": "B. -\\frac{\\sqrt{2}}{4}",
+"C": "C. DNE",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{9}{4}"
+}
+},
+"92": {
+"stem": "92. Find the followinglimit: lim_{x\\to-2}\\frac{\\sqrt{-5x-5}-\\sqrt{5x+15}}{x+2} \\sqrt",
+"opts": {
+"A": "A. \\sqrt{5}",
+"B": "B. DNE",
+"C": "C. -1",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 0"
+}
+},
+"93": {
+"stem": "93. Find the followinglimit: lim_{x\\to-2}\\frac{\\sqrt{2x+20}-\\sqrt{10-3x}}{x+2}",
+"opts": {
+"A": "A. DNE",
+"B": "B. \\frac{5}{32}",
+"C": "C. -\\frac{5}{8}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{1}{8}"
+}
+},
+"94": {
+"stem": "94. Find the followinglimit: lim_{x\\to2}\\frac{\\sqrt{4x-7}-\\sqrt{3-x}}{x-2}",
+"opts": {
+"A": "A. DNE",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -\\frac{5}{2}",
+"D": "D. \\frac{3}{2}",
+"E": "E. \\frac{5}{2}"
+}
+},
+"95": {
+"stem": "95. Find the followinglimit: lim_{x\\to-3}\\frac{\\sqrt{2x+22}-\\sqrt{4x+28}}{x+3}",
+"opts": {
+"A": "A. \\frac{3}{4}",
+"B": "B. DNE",
+"C": "C. -\\frac{1}{16}",
+"D": "D. \\frac{1}{4}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"96": {
+"stem": "96. Find the fo glimit: lim_{x\\to4^{+}}[-\\frac{llow1in}{x-4}]",
+"opts": {
+"A": "A. -\\infty",
+"B": "B. \\infty",
+"C": "C. -1",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 0"
+}
+},
+"97": {
+"stem": "97. Find the followinglimit: lim_{x\\to0}\\frac{4x^{2}+4}{(1-2x) cos(x+\\frac{\\pi}{3})}",
+"opts": {
+"A": "A. -8",
+"B": "B. 4",
+"C": "C. 0",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 8"
+}
+},
+"98": {
+"stem": "98. Find the followinglimit: lim_{x\\to0}\\frac{2x^{2}+4}{(2x+1) cos(4x+\\frac{\\pi}{3})}",
+"opts": {
+"A": "A. 4",
+"B": "B. 8",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 0",
+"E": "E. -8"
+}
+},
+"99": {
+"stem": "99. Find the followinglimit: lim_{x\\to0}\\frac{(-2x^{2}-4) cos(2x+)}{(4x-5) sin(2x+)}\\frac{\\frac{\\pi}{\\pi4}}{4}",
+"opts": {
+"A": "A. \\frac{4}{5}",
+"B": "B. \\frac{5}{4}",
+"C": "C. 0",
+"D": "D. -\\frac{4}{5}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"100": {
+"stem": "100. Find the followinglimit: lim_{x\\to0}\\frac{(-x^{2}-1) cos(3x+\\frac{\\pi}{3})}{4-4x}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -8",
+"C": "C. -\\frac{1}{4}",
+"D": "D. -\\frac{1}{8}",
+"E": "E. \\frac{1}{8}"
+}
+},
+"101": {
+"stem": "101. Find the followinglimit lim_{x\\to0}\\frac{(x^{2}+4) sin(3x+\\frac{: \\pi}{6})}{x+4}",
+"opts": {
+"A": "A. 0",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{1}{2}",
+"D": "D. 2",
+"E": "E. 1"
+}
+},
+"102": {
+"stem": "102. Findth glimit: lim_{x\\to0}\\frac{e tfaonl(lo4wx)in}{sin(5x)}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{4}{5}",
+"C": "C. 0",
+"D": "D. -\\frac{4}{5}",
+"E": "E. DNE"
+}
+},
+"103": {
+"stem": "103. Findth glimit: lim_{x\\to0}\\frac{e sfionl(lo8wx)in}{3x}",
+"opts": {
+"A": "A. \\frac{1}{24}",
+"B": "B. 0",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{8}{3}",
+"E": "E. -\\frac{8}{3}"
+}
+},
+"104": {
+"stem": "104. Findth glimit: lim_{x\\to0}\\frac{e sfionl(lo8wx)in}{5x}",
+"opts": {
+"A": "A. DNE",
+"B": "B. 0",
+"C": "C. -\\frac{8}{5}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{8}{5}"
+}
+},
+"105": {
+"stem": "105. Find the f imit: lim_{x\\to0}[-\\frac{oltlaonw(7inxg) l}{sin(3x)}]",
+"opts": {
+"A": "A. 0",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -\\frac{7}{3}",
+"D": "D. -\\frac{1}{21}",
+"E": "E. DNE"
+}
+},
+"106": {
+"stem": "106. Findth glimit: lim_{x\\to0}\\frac{e tfaonl(lo8wx)in}{sin(6x)}",
+"opts": {
+"A": "A. DNE",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{4}{3}",
+"D": "D. \\frac{1}{48}",
+"E": "E. -\\frac{4}{3}"
+}
+},
+"107": {
+"stem": "107. Find the f t: lim_{x\\to0}[-\\frac{ol1lo-wcoinsg( 7lixm)i}{5x^{2}}]",
+"opts": {
+"A": "A. \\frac{49}{10}",
+"B": "B. -\\frac{49}{10}",
+"C": "C. -\\frac{10}{49}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{7}{5}"
+}
+},
+"108": {
+"stem": "108. Find the f t: lim_{x\\to0}[-\\frac{ol1lo-wcoinsg( 2lixm)i}{x^{2}}]",
+"opts": {
+"A": "A. DNE",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -2",
+"D": "D. 2",
+"E": "E. -4"
+}
+},
+"109": {
+"stem": "109. Findth mit: lim_{x\\to0}\\frac{e 1fo-lcloows(i2nxg) li}{6x^{2}}",
+"opts": {
+"A": "A. 3",
+"B": "B. \\frac{2}{3}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{1}{3}",
+"E": "E. DNE"
+}
+},
+"110": {
+"stem": "110. Find the f t: lim_{x\\to0}[-\\frac{ol1lo-wcoinsg( 5lixm)i}{6x^{2}}]",
+"opts": {
+"A": "A. -\\frac{12}{25}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -\\frac{5}{6}",
+"D": "D. \\frac{25}{12}",
+"E": "E. -\\frac{25}{6}"
+}
+},
+"111": {
+"stem": "111. Find the f t: lim_{x\\to0}[-\\frac{ol1lo-wcoinsg( 8lixm)i}{2x^{2}}]",
+"opts": {
+"A": "A. -16",
+"B": "B. 16",
+"C": "C. -32",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{1}{16}"
+}
+},
+"112": {
+"stem": "112. Find the followingli lim_{x\\to\\infty}[-4 \\sqrt{x} sin(\\frac{m4it:}{x})]",
+"opts": {
+"A": "A. 4",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. DNE",
+"D": "D. 0",
+"E": "E. 1"
+}
+},
+"113": {
+"stem": "113. Find the followingli lim_{x\\to\\infty}[-3 \\sqrt{x} sin(\\frac{m4it:}{x})]",
+"opts": {
+"A": "A. 1",
+"B": "B. DNE",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 3",
+"E": "E. 0"
+}
+},
+"114": {
+"stem": "114. Find the followin mit: lim_{x\\to\\infty}[\\sqrt{x} sin(\\frac{g 8li}{x})]",
+"opts": {
+"A": "A. -1",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -17",
+"D": "D. 1",
+"E": "E. DNE"
+}
+},
+"115": {
+"stem": "115. Find the following t: lim_{x\\to-}\\frac{\\pi}{2}^{+}[\\frac{2(x+\\frac{li\\pimi}{2}) }{3} tan(-x-\\pi)]",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -\\frac{2}{3}",
+"C": "C. 2",
+"D": "D. \\frac{2}{3}",
+"E": "E. DNE"
+}
+},
+"116": {
+"stem": "116. Find the followin it: lim_{x\\to}\\frac{\\pi}{2}[\\frac{-6(x-\\frac{g l\\piim}{2}) }{5} tan(-4x+\\frac{5\\pi}{2})]",
+"opts": {
+"A": "A. -\\frac{3}{10}",
+"B": "B. -\\frac{24}{5}",
+"C": "C. 0",
+"D": "D. \\frac{3}{10}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"117": {
+"stem": "117. Find the followi mit: (x-\\frac{ng\\pi li}{32}) lim_{x\\to}\\frac{\\pi}{2}^{+}[ tan(-6x+\\frac{7\\pi}{2})]",
+"opts": {
+"A": "A. -\\frac{1}{18}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{1}{6}",
+"D": "D. 0",
+"E": "E. \\frac{1}{18}"
+}
+},
+"118": {
+"stem": "118. Find the followingli lim_{x\\to-}\\frac{\\pi}{2}^{-}[\\frac{-4(x+\\frac{m\\piit:}{2}) }{5} tan(4x+\\frac{3\\pi}{2})]",
+"opts": {
+"A": "A. \\frac{16}{5}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 1",
+"D": "D. \\frac{1}{5}",
+"E": "E. 0"
+}
+},
+"119": {
+"stem": "119. Find the followin it: lim_{x\\to}\\frac{\\pi}{2}[\\frac{-5(x-\\frac{g l\\piim}{2}) }{3} tan(2x-\\frac{\\pi}{2})]",
+"opts": {
+"A": "A. \\frac{10}{3}",
+"B": "B. \\frac{5}{6}",
+"C": "C. \\frac{5}{2}",
+"D": "D. 0",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"120": {
+"stem": "120. Findth it: lim_{t\\to0}\\frac{e6 fto-ll2o wsiinn(g3 tl)im}{3t sec (2t)}",
+"opts": {
+"A": "A. 0",
+"B": "B. 2",
+"C": "C. -2",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 1"
+}
+},
+"121": {
+"stem": "121. Findth: lim_{t\\to0}\\frac{e- fo8ltl+ow2 isning (l4imt)it}{5t sec (3t)}",
+"opts": {
+"A": "A. -2",
+"B": "B. \\frac{8}{5}",
+"C": "C. 0",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\frac{8}{5}"
+}
+},
+"122": {
+"stem": "122. Findth it: lim_{t\\to0}\\frac{e- fo8ltl+owsiinn(g3 tl)im}{4t sec (2t)}",
+"opts": {
+"A": "A. -2",
+"B": "B. -\\frac{9}{4}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{3}{4}",
+"E": "E. -\\frac{5}{4}"
+}
+},
+"123": {
+"stem": "123. Findth mit: lim_{t\\to0}\\frac{e6 fto-llsoiwn(i2ntg) li}{4t sec (3t)}",
+"opts": {
+"A": "A. \\frac{7}{4}",
+"B": "B. \\frac{3}{2}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -\\frac{1}{2}",
+"E": "E. 1"
+}
+},
+"124": {
+"stem": "124. Findth mit: lim_{t\\to0}\\frac{e7 fto-llsoiwn(i4ntg) li}{4t sec (4t)}",
+"opts": {
+"A": "A. \\frac{3}{4}",
+"B": "B. \\frac{7}{4}",
+"C": "C. \\frac{4}{3}",
+"D": "D. -1",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"125": {
+"stem": "125. Find the followi mit: lim_{x\\to0}[3x^{3}sin(\\frac{ng7 li}{x^{2}})]",
+"opts": {
+"A": "A. 0",
+"B": "B. -3",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 3",
+"E": "E. DNE"
+}
+},
+"126": {
+"stem": "126. Find the followi mit: lim_{x\\to0}[3x^{3}cos(\\frac{ng6 li}{x})-3]",
+"opts": {
+"A": "A. DNE",
+"B": "B. -2",
+"C": "C. -3",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 0"
+}
+},
+"127": {
+"stem": "127. Find the it: lim_{x\\to-\\infty}\\frac{follo9w-in4gx lim}{2x^{2}-6x-4}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. DNE",
+"C": "C. 1",
+"D": "D. 0",
+"E": "E. 2"
+}
+},
+"128": {
+"stem": "128. Findth inglimit: lim_{x\\to\\infty}\\frac{e fxo+llo2w}{x^{2}-1}",
+"opts": {
+"A": "A. 1",
+"B": "B. 0",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -1",
+"E": "E. -17"
+}
+},
+"129": {
+"stem": "129. Find the t: lim_{x\\to-\\infty}\\frac{follo5wxi-ng9 limi}{-4x^{2}-x+3}",
+"opts": {
+"A": "A. 1",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. DNE",
+"D": "D. \\frac{5}{4}",
+"E": "E. 0"
+}
+},
+"130": {
+"stem": "130. Find the followinglimit: lim_{x\\to-\\infty}\\frac{-2x^{2}+2 cos(6x-5)}{x^{2}}",
+"opts": {
+"A": "A. -4",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. DNE",
+"D": "D. 0",
+"E": "E. -2"
+}
+},
+"131": {
+"stem": "131. Find the followinglimit: lim_{x\\to\\infty}\\frac{4x^{2}+2}{-2x^{2}+7x}",
+"opts": {
+"A": "A. 1",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -2",
+"D": "D. 0",
+"E": "E. 2"
+}
+},
+"132": {
+"stem": "132. Findth lim_{x\\to\\infty}\\frac{e f-o2llxo-wsiinng( 2lixm+i2t:)-2}{x}",
+"opts": {
+"A": "A. -1",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -4",
+"D": "D. -2",
+"E": "E. 0"
+}
+},
+"133": {
+"stem": "133. Find the followinglimit: lim_{x\\to\\infty}\\frac{-2x^{3}-3x^{2}-5 sin(2x+6)}{x^{3}}",
+"opts": {
+"A": "A. -5",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 0",
+"D": "D. -2",
+"E": "E. -7"
+}
+},
+"134": {
+"stem": "134. Find the followinglimit: lim_{x\\to\\infty}\\frac{x^{3}+x^{2}+6 cos(3x-2)}{x^{3}}",
+"opts": {
+"A": "A. 1",
+"B": "B. 2",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 0",
+"E": "E. -5"
+}
+},
+"135": {
+"stem": "135. Find the followinglimit: lim_{x\\to\\infty}\\frac{-4x^{2}-4x-6 sin(x+5)}{x^{2}}",
+"opts": {
+"A": "A. -8",
+"B": "B. -10",
+"C": "C. 2",
+"D": "D. -4",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"136": {
+"stem": "136. Find the followinglimit: lim_{x\\to\\infty}\\frac{2x^{3}-2x^{2}+5x+1}{x^{2}+6x-1}",
+"opts": {
+"A": "A. 2",
+"B": "B. 0",
+"C": "C. \\infty",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\infty"
+}
+},
+"137": {
+"stem": "137. Find the lim_{x\\to-\\infty}\\frac{follow4inxg- l5imit:}{\\sqrt{16x^{2}-7x+8}}",
+"opts": {
+"A": "A. -1",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -17",
+"D": "D. 0",
+"E": "E. DNE"
+}
+},
+"138": {
+"stem": "138. Find the lim_{x\\to-\\infty}\\frac{follow4inxg+ l8imit:}{\\sqrt{16x^{2}+7x+6}}",
+"opts": {
+"A": "A. 1",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -17",
+"D": "D. DNE",
+"E": "E. -1"
+}
+},
+"139": {
+"stem": "139. Find the lim_{x\\to-\\infty}\\frac{follow-in5gx -li2mit:}{\\sqrt{25x^{2}-8x+3}}",
+"opts": {
+"A": "A. -17",
+"B": "B. -1",
+"C": "C. DNE",
+"D": "D. 1",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"140": {
+"stem": "140. Findth lim_{x\\to\\infty}\\frac{e follo-w5ixn-g 2limit:}{\\sqrt{25x^{2}+4x-7}}",
+"opts": {
+"A": "A. 0",
+"B": "B. -17",
+"C": "C. 1",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. DNE"
+}
+},
+"141": {
+"stem": "141. Find the followinglimit: lim_{x\\to\\infty}\\frac{\\sqrt{4x^{2}+5x-5}}{-2x-2}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -1",
+"C": "C. 1",
+"D": "D. DNE",
+"E": "E. 0"
+}
+},
+"142": {
+"stem": "142. Find the followinglimit: lim_{x\\to\\infty}(\\sqrt{x^{2}-9}-\\sqrt{x^{2}+5x+3})",
+"opts": {
+"A": "A. \\frac{5}{2}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -5",
+"D": "D. -\\frac{5}{2}",
+"E": "E. 0"
+}
+},
+"143": {
+"stem": "143. Find the followinglimit: lim_{x\\to\\infty}(\\sqrt{9x^{2}-4x-5}-\\sqrt{9x^{2}-x+6})",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -\\frac{1}{2}",
+"C": "C. 0",
+"D": "D. -\\frac{1}{6}",
+"E": "E. -3"
+}
+},
+"144": {
+"stem": "144. Find the followinglimit: lim_{x\\to-\\infty}(-\\sqrt{16x^{2}-3x-9}+\\sqrt{16x^{2}+4x+3})",
+"opts": {
+"A": "A. 7",
+"B": "B. -\\frac{7}{8}",
+"C": "C. \\frac{7}{8}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 0"
+}
+},
+"145": {
+"stem": "145. Find the followinglimit: lim_{x\\to\\infty}(-\\sqrt{16x^{2}+3}+\\sqrt{16x^{2}+3x+9})",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 0",
+"C": "C. \\frac{3}{32}",
+"D": "D. -\\frac{3}{8}",
+"E": "E. 3"
+}
+},
+"146": {
+"stem": "146. Find the followinglimit: lim_{x\\to\\infty}(-\\sqrt{4x^{2}-5x+2}+\\sqrt{4x^{2}+x+2})",
+"opts": {
+"A": "A. \\frac{3}{2}",
+"B": "B. -\\frac{3}{2}",
+"C": "C. 6",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 0"
+}
+},
+"147": {
+"stem": "147. Findth lim_{n\\to\\infty}\\frac{e follo4w-in2gn limit:}{\\sqrt{9n^{2}-9n-3}}",
+"opts": {
+"A": "A. -\\frac{3}{2}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{2}{3}",
+"D": "D. -\\frac{1}{3}",
+"E": "E. -\\frac{2}{3}"
+}
+},
+"148": {
+"stem": "148. Findth nglimit: lim_{n\\to\\infty}\\frac{e f4o-ll2onwi}{3n+3}",
+"opts": {
+"A": "A. -\\frac{3}{2}",
+"B": "B. \\frac{1}{3}",
+"C": "C. -\\frac{2}{3}",
+"D": "D. -\\frac{2}{9}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"149": {
+"stem": "149. Findth lim_{n\\to\\infty}\\frac{e follow2nin-g2 limit:}{\\sqrt{25n^{2}+9n+1}}",
+"opts": {
+"A": "A. -\\frac{2}{5}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{2}{5}",
+"D": "D. \\frac{2}{25}",
+"E": "E. \\frac{5}{2}"
+}
+},
+"150": {
+"stem": "150. Findth lim_{n\\to\\infty}\\frac{e follow6nin+g9 limit:}{\\sqrt{36n^{2}+6n+3}}",
+"opts": {
+"A": "A. DNE",
+"B": "B. 1",
+"C": "C. \\frac{5}{4}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -1"
+}
+},
+"151": {
+"stem": "151. Findth lim_{n\\to\\infty}\\frac{e follow5nin+g6 limit:}{\\sqrt{36n^{2}-3n+7}}",
+"opts": {
+"A": "A. \\frac{5}{36}",
+"B": "B. \\frac{6}{5}",
+"C": "C. -\\frac{5}{6}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{5}{6}"
+}
+},
+"152": {
+"stem": "152. Find l andhorizontal asymptotes of: f(x)=\\frac{th-e 4vxe-rt7ica}{5x+4}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. Thereis no vertical asymptote, andThereis no horizontal asymptote.",
+"C": "C. Thevertical asymptoteis x=-\\frac{4}{5}, andThehorizontal asymptoteis y=-\\frac{4}{5}.",
+"D": "D. Thevertical asymptoteis x=104, andThehorizontal asymptoteis y=-104.",
+"E": "E. Thevertical asymptoteis x=\\frac{4}{5}, andThehorizontal asymptoteis y=\\frac{4}{5}."
+}
+},
+"153": {
+"stem": "153. Find cal andhorizontal asymptotes of: f(x)=\\frac{the- v5exrti}{6-4x}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. Thevertical asymptoteis x=\\frac{3}{2}, andThereis no horizontal asymptote.",
+"C": "C. Thereis no vertical asymptote, andThereis no horizontal asymptote.",
+"D": "D. Thevertical asymptoteis x=-\\frac{3}{2}, andThehorizontal asymptoteis y=-\\frac{5}{4}.",
+"E": "E. Thevertical asymptoteis x=\\frac{3}{2}, andThehorizontal asymptoteis y=\\frac{5}{4}."
+}
+},
+"154": {
+"stem": "154. Find cal andhorizontal asymptotes of: f(x)=\\frac{th3ex v-e7rti}{5x}",
+"opts": {
+"A": "A. Thevertical asymptoteis x=\\frac{3}{5}, andThehorizontal asymptoteis y=0.",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. Thereis no vertical asymptote, andThereis no horizontal asymptote.",
+"D": "D. Thevertical asymptoteis x=0, andThehorizontal asymptoteis y=-\\frac{3}{5}.",
+"E": "E. Thevertical asymptoteis x=0, andThehorizontal asymptoteis y=\\frac{3}{5}."
+}
+},
+"155": {
+"stem": "155. Find dhorizontal asymptotes of: f(x)=\\frac{the v2exrt-ic8al an}{(x+3)(x+4)}",
+"opts": {
+"A": "A. Thevertical asymptoteis x=0, andThehorizontal asymptotes arey=-4andy=-3.",
+"B": "B. Thevertical asymptoteis x=-4, andThehorizontal asymptoteis y=0.",
+"C": "C. Thevertical asymptotes arex=-4andx=-3, andThehorizontal asymptoteis y=0.",
+"D": "D. Thevertical asymptotes arex=3andx=4, andThehorizontal asymptoteis y=0.",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"156": {
+"stem": "156. Find dhorizontal asymptotes of: f(x)=\\frac{the vexr+ti6cal an}{(x+4)(x+5)}",
+"opts": {
+"A": "A. Thevertical asymptoteis x=0, andThehorizontal asymptotes arey=-5andy=-4.",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. Thevertical asymptotes arex=-5andx=-4, andThehorizontal asymptoteis y=0.",
+"D": "D. Thevertical asymptotes arex=4andx=5, andThehorizontal asymptoteis y=0.",
+"E": "E. Thevertical asymptotes arex=-5andx=-4, andThereis no horizontal asymptote."
+}
+},
+"157": {
+"stem": "157. Evaluate the limit. lim_{x\\to\\infty}2^{3x+5}",
+"opts": {
+"A": "A. 0",
+"B": "B. \\infty",
+"C": "C. -\\infty",
+"D": "D. 2",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"158": {
+"stem": "158. Evaluatet mit. lim_{x\\to-\\infty}(\\frac{he1 li}{2})^{4x-6}",
+"opts": {
+"A": "A. 1",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -\\infty",
+"D": "D. 0",
+"E": "E. \\infty"
+}
+},
+"159": {
+"stem": "159. Evaluate the limit. lim_{x\\to\\infty}e^{2x-4}",
+"opts": {
+"A": "A. 1",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. e",
+"D": "D. 0",
+"E": "E. -\\infty"
+}
+},
+"160": {
+"stem": "160. Evaluat xl_{-}im_{2}it. lim_{x\\to0}(\\frac{e t1he}{2})",
+"opts": {
+"A": "A. 1",
+"B": "B. \\frac{1}{2}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\infty",
+"E": "E. 4"
+}
+},
+"161": {
+"stem": "161. Evaluate the limit. lim_{x\\to\\infty}e^{-x}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\infty",
+"C": "C. 0",
+"D": "D. e",
+"E": "E. -\\infty"
+}
+},
+"162": {
+"stem": "162. Evaluate the limit. lim_{x\\to-\\infty}\\frac{e^{-x}-3}{5e^{-x}+1}",
+"opts": {
+"A": "A. \\frac{1}{5}",
+"B": "B. 1",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -1",
+"E": "E. 0"
+}
+},
+"163": {
+"stem": "163. Evaluate the limit. lim_{x\\to-\\infty}\\frac{5e^{-x}-3}{3e^{-x}+1}",
+"opts": {
+"A": "A. 1",
+"B": "B. -1",
+"C": "C. \\frac{5}{3}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 0"
+}
+},
+"164": {
+"stem": "164. Evaluate the limit. lim_{x\\to\\infty}\\frac{-2e^{x}-6}{e^{x}+5}",
+"opts": {
+"A": "A. 2",
+"B": "B. -1",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -2",
+"E": "E. 1"
+}
+},
+"165": {
+"stem": "165. Evaluate the limit. lim_{x\\to\\infty}\\frac{-2e^{x}+3}{e^{x}+2}",
+"opts": {
+"A": "A. -2",
+"B": "B. 2",
+"C": "C. 1",
+"D": "D. -1",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"166": {
+"stem": "166. Evaluate the limit. lim_{x\\to0^{+}}ln(8x)",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 0",
+"C": "C. -\\infty",
+"D": "D. -1",
+"E": "E. 1"
+}
+},
+"167": {
+"stem": "167. Evaluate the limit. lim_{x\\to1}ln(3x^{4}-3+e^{-2})",
+"opts": {
+"A": "A. 1",
+"B": "B. -\\infty",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -2",
+"E": "E. \\infty"
+}
+},
+"168": {
+"stem": "168. Evaluate the limit. lim_{x\\to\\infty}ln(5x^{3}+1)",
+"opts": {
+"A": "A. \\infty",
+"B": "B. -1",
+"C": "C. 1",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -\\infty"
+}
+},
+"169": {
+"stem": "169. Evaluate the limit. lim_{x\\to\\infty}ln(4x^{6}+1)",
+"opts": {
+"A": "A. -1",
+"B": "B. -\\infty",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 1",
+"E": "E. 0"
+}
+},
+"170": {
+"stem": "170. Evaluate the limit. lim_{x\\to0}+ln(4x^{5})",
+"opts": {
+"A": "A. 1",
+"B": "B. -\\infty",
+"C": "C. \\infty",
+"D": "D. 0",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"171": {
+"stem": "171. Evaluate lim_{x\\to0}+\\frac{ the limlnixt.}{\\sqrt{(lnx)^{2}+4}}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 2",
+"C": "C. -1",
+"D": "D. 0",
+"E": "E. 1"
+}
+},
+"172": {
+"stem": "172. Evaluate it. lim_{x\\to\\infty}(\\frac{ thx+e l4im}{x})^{4x-4}",
+"opts": {
+"A": "A. 16",
+"B": "B. e^{16}",
+"C": "C. e^{-16}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. e^{4}"
+}
+},
+"173": {
+"stem": "173. Evaluate xit_{+}._{1} lim_{x\\to\\infty}(\\frac{ thx-e l4im}{x-3})",
+"opts": {
+"A": "A. e^{-1}",
+"B": "B. 1",
+"C": "C. -1+e^{-1}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. e^{-1}+1"
+}
+},
+"174": {
+"stem": "174. Evaluate the lim\\frac{it_{5}._{x-16}}{x-4} lim_{x\\to4}(4x-15)",
+"opts": {
+"A": "A. 16",
+"B": "B. 1",
+"C": "C. e^{16}",
+"D": "D. e^{4}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"175": {
+"stem": "175. Evaluate the lim lim_{x\\to5}(26-5x)\\frac{it_{5}._{x-26}}{x-5}",
+"opts": {
+"A": "A. e^{5}",
+"B": "B. e^{-1}",
+"C": "C. e^{-5}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 1"
+}
+},
+"176": {
+"stem": "176. Evaluate it. lim_{x\\to1}x\\frac{ t_{6}h_{-}e_{5} l_{x}im}{x-1}",
+"opts": {
+"A": "A. 1",
+"B": "B. e^{-1}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 1+e",
+"E": "E. -1+e"
+}
+},
+"177": {
+"stem": "177. Evaluate lim_{x\\to-4}\\frac{ thlne( l5ixm+it2.1)}{7x+28}",
+"opts": {
+"A": "A. \\frac{7}{5}",
+"B": "B. 0",
+"C": "C. \\frac{5}{7}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 5"
+}
+},
+"178": {
+"stem": "178. Evaluate the limit. lim_{x\\to-4}\\frac{e^{-x-4}-1}{-x-4}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 0",
+"C": "C. 2",
+"D": "D. e",
+"E": "E. -1"
+}
+},
+"179": {
+"stem": "179. Evaluate lim_{x\\to-4}\\frac{ thlne( l-im3xit-. 11)}{5x+20}",
+"opts": {
+"A": "A. -\\frac{3}{5}",
+"B": "B. -\\frac{5}{3}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -3",
+"E": "E. 0"
+}
+},
+"180": {
+"stem": "180. Evaluate the limit. lim_{x\\to-4}\\frac{e^{-x-4}-1}{-6x-24}",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 6",
+"C": "C. -1",
+"D": "D. 0",
+"E": "E. -6"
+}
+},
+"181": {
+"stem": "181. Evaluate the limit. lim_{x\\to-4}\\frac{e^{7x+28}-1}{-x-4}",
+"opts": {
+"A": "A. 7",
+"B": "B. 0",
+"C": "C. -\\frac{1}{7}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -7"
+}
+},
+"182": {
+"stem": "182. AnamountP=4400is invested. The a nnual interestrateis 2%, sor=\\frac{1}{50}. Interestis compoundedmonthly. Find the balanceaftert=8years. Giveyouranswerinexactform, notas adecimal.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 4400(1+\\frac{1}{600})^{96}",
+"C": "C. 4400(1+\\frac{1}{50}⋅8)",
+"D": "D. 4400(1+\\frac{1}{50})^{8}",
+"E": "E. 4400(1+\\frac{1}{600})^{8}"
+}
+},
+"183": {
+"stem": "183. AnamountP=1100is invested. The a nnual interestrateis 7%, sor=\\frac{7}{y.100}. Interestis compoundedcontinuousl Thetargetbalanceis 2200. This is twicetheinitial amount. Find the timet, inyears, neededtoreachthis balance. Giveyouranswerinexactform, notas adecimal.",
+"opts": {
+"A": "A. \\frac{7}{100} ln2",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{100}{ln7 2}",
+"D": "D. \\frac{27}{100}",
+"E": "E. ln2"
+}
+},
+"184": {
+"stem": "184. AnamountP=1500is invested. The a nnual interestrateis 5%, sor=\\frac{1}{20}. Interestis compoundedmonthly. Find the balanceaftert=7years. Giveyouranswerinexactform, notas adecimal.",
+"opts": {
+"A": "A. 1500(1+\\frac{1}{240})^{7}",
+"B": "B. 1500(1+\\frac{1}{240})^{84}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{7}{20} 1500e",
+"E": "E. 1500(1+\\frac{1}{20})^{7}"
+}
+},
+"185": {
+"stem": "185. AnamountP=3400is invested. The a nnual interestrateis 8%, sor=\\frac{2}{y.25}. Interestis compoundedcontinuousl Find the balanceaftert=8years. Giveyouranswerinexactform, notas adecimal.",
+"opts": {
+"A": "A. 3400(1+\\frac{2}{25})^{8}",
+"B": "B. 3400(1+\\frac{2}{25}⋅8)",
+"C": "C. \\frac{16}{25} 3400e",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{2}{25} 3400e"
+}
+},
+"186": {
+"stem": "186. AnamountP=4900is invested. The a nnual interestrateis 7%, sor=\\frac{7}{100}. Interestis compoundedmonthly. Find the balanceaftert=3years. Giveyouranswerinexactform, notas adecimal.",
+"opts": {
+"A": "A. 4900(1+\\frac{7}{1200})^{36}",
+"B": "B. \\frac{21}{100} 4900e",
+"C": "C. 4900(1+\\frac{7}{100}⋅3)",
+"D": "D. 4900(1+\\frac{7}{1200})^{3}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"187": {
+"stem": "187. Thefunctionfis definedbelow. f(x)= \\frac{3x^{2}+4x-4}{L, x=x-+22} Find the valueofLthatmakes fcontinuous atx=-2. {, x\\ne-2",
+"opts": {
+"A": "A. -2",
+"B": "B. -6",
+"C": "C. -8",
+"D": "D. 0",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"188": {
+"stem": "188. Thefunctionfis definedbelow. f(x)= \\frac{x^{2}+2x-8}{L, x=x+-44} Find the valueofLthatmakes fcontinuous atx=-4. {, x\\ne-4",
+"opts": {
+"A": "A. 1",
+"B": "B. -6",
+"C": "C. -2",
+"D": "D. -4",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"189": {
+"stem": "189. Thefunctionfis definedbelow. f(x)= \\frac{x^{2}-x-20}{L, x=x+-44} Find the valueofLthatmakes fcontinuous atx=-4. {, x\\ne-4",
+"opts": {
+"A": "A. 0",
+"B": "B. -5",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -9",
+"E": "E. -4"
+}
+},
+"190": {
+"stem": "190. Thefun dbelow. { \\frac{ctsiionn ( f8 i(sx +de2f)in)e}{L, x=6(-x+22)}, x\\ne-2 f(x)= Find the valueofLthatmakes fcontinuous atx=-2.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 0",
+"C": "C. \\frac{3}{4}",
+"D": "D. \\frac{4}{3}",
+"E": "E. -2"
+}
+},
+"191": {
+"stem": "191. Thefunctionfis definedbelow. f(x)= \\frac{3x^{2}+3x-6}{L, x=x-+22} Find the valueofLthatmakes fcontinuous atx=-2. {, x\\ne-2",
+"opts": {
+"A": "A. 3",
+"B": "B. -3",
+"C": "C. -9",
+"D": "D. -2",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"192": {
+"stem": "192. -x-5, x<-3 {x+1, x\\ge-3 f(x)= Classify fatx=-3.",
+"opts": {
+"A": "A. Thefunctionis notcontinuous atthejunction.",
+"B": "B. Thefunctionis differentiablebecausetheright-handlimitinthedefinitionof thederivativeexists.",
+"C": "C. Thefunctionis continuous butnotdifferentiableatthejunction.",
+"D": "D. Thefunctionis differentiableatthejunction.",
+"E": "E. Thefunctionis differentiablebecauseitis continuous atthejunction."
+}
+},
+"193": {
+"stem": "193. 3x+1, x<-2 { f(x)= Classify fatx=-2. -x^{2}-x-3, x\\ge-2",
+"opts": {
+"A": "A. Thefunctionis notcontinuous atthejunction.",
+"B": "B. Thefunctionis differentiablebecausetheright-handlimitinthedefinitionof thederivativeexists.",
+"C": "C. Thefunctionis differentiableatthejunction.",
+"D": "D. Thefunctionis continuous butnotdifferentiableatthejunction.",
+"E": "E. Thefunctionis differentiablebecauseitis continuous atthejunction."
+}
+},
+"194": {
+"stem": "194. -x-6, x<-3 {x, x\\ge-3 f(x)= Classify fatx=-3.",
+"opts": {
+"A": "A. Thefunctionis differentiablebecausetheright-handlimitinthedefinitionof thederivativeexists.",
+"B": "B. Thefunctionis differentiablebecauseitis continuous atthejunction.",
+"C": "C. Thefunctionis continuous butnotdifferentiableatthejunction.",
+"D": "D. Thefunctionis notcontinuous atthejunction.",
+"E": "E. Thefunctionis differentiableatthejunction."
+}
+},
+"195": {
+"stem": "195. -x-5, x<-3 {2x+4, x\\ge-3 f(x)= Classify fatx=-3.",
+"opts": {
+"A": "A. Thefunctionis differentiableatthejunction.",
+"B": "B. Thefunctionis differentiablebecauseitis continuous atthejunction.",
+"C": "C. Thefunctionis notcontinuous atthejunction.",
+"D": "D. Thefunctionis differentiablebecausetheright-handlimitinthedefinitionof thederivativeexists.",
+"E": "E. Thefunctionis continuous butnotdifferentiableatthejunction."
+}
+},
+"196": {
+"stem": "196. 2x+5, x<-3 {-x-4, x\\ge-3 f(x)= Classify fatx=-3.",
+"opts": {
+"A": "A. Thefunctionis differentiableatthejunction.",
+"B": "B. Thefunctionis continuous butnotdifferentiableatthejunction.",
+"C": "C. Thefunctionis notcontinuous atthejunction.",
+"D": "D. Thefunctionis differentiablebecausetheright-handlimitinthedefinitionof thederivativeexists.",
+"E": "E. Thefunctionis differentiablebecauseitis continuous atthejunction."
+}
+},
+"197": {
+"stem": "197. Thefunctionfis definedbelow. f(x)=\\frac{4x^{2}-36x+56}{every xd-is7contin} Find uity. Classify eachdiscontinuity as removableornon-removable.",
+"opts": {
+"A": "A. {x=7:nonremovable}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. {x=2:removable}",
+"D": "D. {x=7:removable}",
+"E": "E. \\varnothing"
+}
+},
+"198": {
+"stem": "198. Thef definedbelow. f(x)=\\frac{unctio1n f is }{x^{2}+7x+6} Findevery discontinuity. Classify eachdiscontinuity as removableornon-removable.",
+"opts": {
+"A": "A. {x=-6:removable, x=-1:nonremovable}",
+"B": "B. {x=-6:nonremovable, x=-1:removable}",
+"C": "C. {x=-6:nonremovable, x=-1:nonremovable}",
+"D": "D. {x=-6:removable, x=-1:removable}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"199": {
+"stem": "199. Thefunctionfis definedbelow. f(x)=\\frac{x^{2}-13x+40}{x^{2}-8x} Findevery discontinuity. Classify eachdiscontinuity as removableornon-removable.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. {x=0:nonremovable, x=8:removable}",
+"C": "C. {x=0:nonremovable, x=8:nonremovable}",
+"D": "D. {x=0:removable, x=8:removable}",
+"E": "E. {x=0:removable, x=8:nonremovable}"
+}
+},
+"200": {
+"stem": "200. Thefunctionfis definedbelow. f(x)=\\frac{x^{2}-3x-28}{x^{2}-8x+7} Findevery discontinuity. Classify eachdiscontinuity as removableornon-removable.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. {x=1:removable, x=7:nonremovable}",
+"C": "C. {x=1:removable, x=7:removable}",
+"D": "D. {x=1:nonremovable, x=7:nonremovable}",
+"E": "E. {x=1:nonremovable, x=7:removable}"
+}
+},
+"201": {
+"stem": "201. Thefunctionfis definedbelow. f(x)=\\frac{4x^{2}+56x+192}{every dxi+sc8ontinui} Find ty. Classify eachdiscontinuity as removableornon-removable.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. {x=-8:nonremovable}",
+"C": "C. \\varnothing",
+"D": "D. {x=-6:removable}",
+"E": "E. {x=-8:removable}"
+}
+},
+"202": {
+"stem": "202. Thefunctionfis definedbelow. 7x+3, x<-1 {5x+q, x\\ge-1 f(x)= Find the valueofqthatmakes fcontinuous atx=-1.",
+"opts": {
+"A": "A. -4",
+"B": "B. -9",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 1",
+"E": "E. -5"
+}
+},
+"203": {
+"stem": "203. Thefunctionfis definedbelow. 9x-2, x<1 {6x+q, x\\ge1 f(x)= Find the valueofqthatmakes fcontinuous atx=1.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 5",
+"C": "C. 13",
+"D": "D. 7",
+"E": "E. 1"
+}
+},
+"204": {
+"stem": "204. Thefunctionfis definedbelow. 4x-1, x<2 {2x+q, x\\ge2 f(x)= Find the valueofqthatmakes fcontinuous atx=2.",
+"opts": {
+"A": "A. 7",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 5",
+"D": "D. 11",
+"E": "E. 3"
+}
+},
+"205": {
+"stem": "205. Thefunctionfis definedbelow. 5x-1, x<1 {4x+q, x\\ge1 f(x)= Find the valueofqthatmakes fcontinuous atx=1.",
+"opts": {
+"A": "A. 2",
+"B": "B. 0",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 4",
+"E": "E. 8"
+}
+},
+"206": {
+"stem": "206. Thefunctionfis definedbelow. {2x-3, x<1 f(x)= ux+v, 1\\lex<4Find the values ofuandv thatmakefcontinuous atbothjunctions. 3x-10, x\\ge4",
+"opts": {
+"A": "A. u=2, v=-3",
+"B": "B. u=-2, v=1",
+"C": "C. u=1, v=-2",
+"D": "D. u=2, v=-6",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"207": {
+"stem": "207. Theone-sidedlimits offareshownbelow. lim^{-}_{x\\to-2}f(x)=-4, lim^{+}_{x\\to-2}f(x)=4 Choosethecorrectstatementaboutcontinuity atx=-2.",
+"opts": {
+"A": "A. Thefunctionhas anon-removablediscontinuity atx= -2.",
+"B": "B. Thefunctionis continuous atx= -2.",
+"C": "C. Equal one-sidedlimits aloneareenoughto determinecontinuity atx= -2.",
+"D": "D. Thefunctionhas aremovablediscontinuity atx= -2.",
+"E": "E. Thevaluef(-2)aloneis enoughto determinecontinuity."
+}
+},
+"208": {
+"stem": "208. Thefollowinginformationis givenaboutf. lim_{x\\to-3}f(x)=4, f(-3)=5 Choosethecorrectstatementaboutcontinuity atx=-3.",
+"opts": {
+"A": "A. Thevaluef(-3)aloneis enoughto determinecontinuity.",
+"B": "B. Thefunctionis continuous atx= -3.",
+"C": "C. Equal one-sidedlimits aloneareenoughto determinecontinuity atx= -3.",
+"D": "D. Thefunctionhas anon-removablediscontinuity atx= -3.",
+"E": "E. Thefunctionhas aremovablediscontinuity atx= -3."
+}
+},
+"209": {
+"stem": "209. Thefollowinginformationis givenaboutf. lim_{x\\to2}f(x)=-2, f(2)=-1 Choosethecorrectstatementaboutcontinuity atx=2.",
+"opts": {
+"A": "A. Equal one-sidedlimits aloneareenoughto determinecontinuity atx= 2.",
+"B": "B. Thefunctionis continuous atx= 2.",
+"C": "C. Thevaluef(2)aloneis enoughto determinecontinuity.",
+"D": "D. Thefunctionhas aremovablediscontinuity atx= 2.",
+"E": "E. Thefunctionhas anon-removablediscontinuity atx= 2."
+}
+},
+"210": {
+"stem": "210. Thefollowinginformationis givenaboutf. lim_{x\\to1}f(x)=4, f(1)=5 Choosethecorrectstatementaboutcontinuity atx=1.",
+"opts": {
+"A": "A. Thefunctionhas anon-removablediscontinuity atx= 1.",
+"B": "B. Thefunctionis continuous atx= 1.",
+"C": "C. Thevaluef(1)aloneis enoughto determinecontinuity.",
+"D": "D. Equal one-sidedlimits aloneareenoughto determinecontinuity atx= 1.",
+"E": "E. Thefunctionhas aremovablediscontinuity atx= 1."
+}
+},
+"211": {
+"stem": "211. Theone-sidedlimits offareshownbelow. lim_{x\\to-3^{-}}f(x)=-1, lim_{x\\to-3^{+}}f(x)=1 Choosethecorrectstatementaboutcontinuity atx=-3.",
+"opts": {
+"A": "A. Thefunctionhas aremovablediscontinuity atx= -3.",
+"B": "B. Thefunctionis continuous atx= -3.",
+"C": "C. Thevaluef(-3)aloneis enoughto determinecontinuity.",
+"D": "D. Thefunctionhas anon-removablediscontinuity atx= -3.",
+"E": "E. Equal one-sidedlimits aloneareenoughto determinecontinuity atx= -3."
+}
+},
+"212": {
+"stem": "212. Consider the functionfontheclosedinterval[1,\\frac{7}{2}]. f(x)=ln(\\frac{2x}{ta5tem}) Whichs entabouttheZeroPointTheoremis correct?",
+"opts": {
+"A": "A. TheZero PointTheorem cannotbeappliedbecausethefunctionis notcontinuous ontheentireclosedinterval.",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. TheZero PointTheorem guarantees atleastoneroot.",
+"D": "D. TheZero PointTheorem guarantees exactly oneroot.",
+"E": "E. TheZero PointTheorem guarantees thatthemidpointof theinterval is aroot."
+}
+},
+"213": {
+"stem": "213. Consider the functionfontheclosedinterval[0,2]. f(x)=5x^{2}+5x-1 WhichstatementabouttheZeroPointTheoremis correct?",
+"opts": {
+"A": "A. TheZero PointTheorem cannotbeappliedbecausethefunctionis notcontinuous ontheentireclosedinterval.",
+"B": "B. TheZero PointTheorem guarantees atleastoneroot.",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. TheZero PointTheorem guarantees thatthemidpointof theinterval is aroot.",
+"E": "E. TheZero PointTheorem guarantees exactly oneroot."
+}
+},
+"214": {
+"stem": "214. Consider the functionfontheclosedinterval[-3,3]. -3, x<0 {3, x\\ge0 f(x)= WhichstatementabouttheZeroPointTheoremis correct?",
+"opts": {
+"A": "A. TheZero PointTheorem guarantees thatthemidpointof theinterval is aroot.",
+"B": "B. TheZero PointTheorem guarantees exactly oneroot.",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. TheZero PointTheorem guarantees atleastoneroot.",
+"E": "E. TheZero PointTheorem cannotbeappliedbecausethefunctionis notcontinuous ontheentireclosedinterval."
+}
+},
+"215": {
+"stem": "215. Consider the functionfontheclosedinterval[0,2]. f(x)=2x^{2}+2x-2 WhichstatementabouttheZeroPointTheoremis correct?",
+"opts": {
+"A": "A. TheZero PointTheorem guarantees atleastoneroot.",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. TheZero PointTheorem guarantees thatthemidpointof theinterval is aroot.",
+"D": "D. TheZero PointTheorem guarantees exactly oneroot.",
+"E": "E. TheZero PointTheorem cannotbeappliedbecausethefunctionis notcontinuous ontheentireclosedinterval."
+}
+},
+"216": {
+"stem": "216. Cons thefunctionfontheclosedinterval[-49,49]. f(x)=\\frac{id1er}{hx st} Whic atementabouttheZeroPointTheoremis correct?",
+"opts": {
+"A": "A. TheZero PointTheorem guarantees thatthemidpointof theinterval is aroot.",
+"B": "B. TheZero PointTheorem cannotbeappliedbecausethefunctionis notcontinuous ontheentireclosedinterval.",
+"C": "C. TheZero PointTheorem guarantees exactly oneroot.",
+"D": "D. TheZero PointTheorem guarantees atleastoneroot.",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"217": {
+"stem": "217. y=f(x)=x^{2}+3x-6. Find the slopeofthetangentlineatx=-3.",
+"opts": {
+"A": "A. -4",
+"B": "B. -2",
+"C": "C. -3",
+"D": "D. 3",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"218": {
+"stem": "218. y=f(x)=-x^{3}-4x^{2}-3x-6. Find the slopeofthetangentlineatx=-3.",
+"opts": {
+"A": "A. -6",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -5",
+"D": "D. 6",
+"E": "E. -7"
+}
+},
+"219": {
+"stem": "219. y=f(x)=-x^{3}-6x^{2}-4x-2. Find the slopeofthetangentlineatx=-3.",
+"opts": {
+"A": "A. -5",
+"B": "B. 6",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 10",
+"E": "E. 4"
+}
+},
+"220": {
+"stem": "220. y=f(x)=-x^{3}-4x^{2}+3x-3. Find the slopeofthetangentlineatx=-3.",
+"opts": {
+"A": "A. 1",
+"B": "B. 2",
+"C": "C. -1",
+"D": "D. 0",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"221": {
+"stem": "221. y=f(x)=-x^{3}-5x^{2}-3x-6. Find the slopeofthetangentlineatx=-3.",
+"opts": {
+"A": "A. -2",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 1",
+"D": "D. -1",
+"E": "E. 2"
+}
+},
+"222": {
+"stem": "222. f(x)=-\\frac{4}{\\sqrt{3x}}. Findf^{′}(27).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -\\frac{2}{243}",
+"C": "C. \\frac{245}{243}",
+"D": "D. -\\frac{241}{243}",
+"E": "E. \\frac{2}{243}"
+}
+},
+"223": {
+"stem": "223. f(x)=3 \\sqrt{2x}. Findf^{′}(2).",
+"opts": {
+"A": "A. \\frac{5}{2}",
+"B": "B. -\\frac{3}{2}",
+"C": "C. 3",
+"D": "D. \\frac{1}{2}",
+"E": "E. Noneof theotherfourchoices is correct. 2"
+}
+},
+"224": {
+"stem": "224. f(x)=\\frac{2}{\\sqrt{7x}}. Findf^{′}(28).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{391}{392}",
+"C": "C. -\\frac{393}{392}",
+"D": "D. \\frac{1}{392}",
+"E": "E. -\\frac{1}{392}"
+}
+},
+"225": {
+"stem": "225. f(x)=-\\frac{1}{\\sqrt{5x}}. Findf^{′}(5).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{1}{50}",
+"C": "C. -\\frac{1}{50}",
+"D": "D. -\\frac{49}{50}",
+"E": "E. \\frac{51}{50} 4"
+}
+},
+"226": {
+"stem": "226. f(x)=-\\frac{4}{\\sqrt{6x}}. Findf^{′}(24).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{1}{144}",
+"C": "C. \\frac{145}{144}",
+"D": "D. -\\frac{143}{144}",
+"E": "E. -\\frac{1}{144}"
+}
+},
+"227": {
+"stem": "227. y=\\frac{6}{x^{2}+8}. Find the equationofthetangentlineat(-1,\\frac{2}{3}).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 4x+27y-14=0",
+"C": "C. 2x+27y-16=0",
+"D": "D. 4x-27y+22=0",
+"E": "E. 4x-3y+6=0"
+}
+},
+"228": {
+"stem": "228. y=-\\frac{3}{x^{2}+4}. Find the equationofthetangentlineat(-1,-\\frac{3}{5}).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 3x-25y-12=0",
+"C": "C. 6x-25y-9=0",
+"D": "D. 6x+25y+21=0",
+"E": "E. 6x+5y+9=0 11"
+}
+},
+"229": {
+"stem": "229. y=\\frac{11}{x^{2}+10}. Find the equationofthetangentlineat(-1,1).",
+"opts": {
+"A": "A. 2x-11y+13=0",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. x+11y-10=0",
+"D": "D. 2x-y+3=0",
+"E": "E. 2x+11y-9=0 2"
+}
+},
+"230": {
+"stem": "230. y=-\\frac{2}{x^{2}+1}. Find the equationofthetangentlineat(-1,-1).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. x-y=0",
+"C": "C. 2x+y+3=0",
+"D": "D. x+y+2=0",
+"E": "E. x-2y-1=0 2"
+}
+},
+"231": {
+"stem": "231. y=\\frac{2}{x^{2}+1}. Find the equationofthetangentlineat(1,1).",
+"opts": {
+"A": "A. x+2y-3=0",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 2x+y-3=0",
+"D": "D. x-y=0",
+"E": "E. x+y-2=0"
+}
+},
+"232": {
+"stem": "232. f(x)=-7cos(x). Findf^{′}(x).",
+"opts": {
+"A": "A. -7sin(x)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -7cos(x)",
+"D": "D. 7sin(x)",
+"E": "E. 7sin(x)+1"
+}
+},
+"233": {
+"stem": "233. f(x)=10tan(x). Findf^{′}(x).",
+"opts": {
+"A": "A. 10tan(x)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 10sec^{2}(x)",
+"D": "D. 10sec^{2}(x)+1",
+"E": "E. -10sec^{2}(x)"
+}
+},
+"234": {
+"stem": "234. f(x)=-6sin(x). Findf^{′}(x).",
+"opts": {
+"A": "A. 6cos(x)",
+"B": "B. 1-6cos(x)",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -6sin(x)",
+"E": "E. -6cos(x)"
+}
+},
+"235": {
+"stem": "235. f(x)=csc(x). Findf^{′}(x).",
+"opts": {
+"A": "A. -csc^{2}(x)cos(x)+1",
+"B": "B. csc^{2}(x)cos(x)",
+"C": "C. -csc^{2}(x)cos(x)-1",
+"D": "D. csc(x)",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"236": {
+"stem": "236. f(x)=-2x^{3}tan(x). Findf^{′}(x).",
+"opts": {
+"A": "A. -2x^{3}sec^{2}(x)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -2x^{2}tan(x)-2x^{3}sec^{2}(x)",
+"D": "D. -6x^{2}tan(x)",
+"E": "E. -6x^{2}tan(x)-2x^{3}sec^{2}(x)"
+}
+},
+"237": {
+"stem": "237. f(x)=-sin(x)cos(x). Findf^{′}(x).",
+"opts": {
+"A": "A. -cos(2x)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. cos(2x)",
+"D": "D. -cos^{2}(x)",
+"E": "E. sin^{2}(x)"
+}
+},
+"238": {
+"stem": "238. f(x)=-3x^{2}tan(x). Findf^{′}(x).",
+"opts": {
+"A": "A. -6xtan(x)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -6xtan(x)-3x^{2}sec^{2}(x)",
+"D": "D. -3xtan(x)-3x^{2}sec^{2}(x)",
+"E": "E. -3x^{2}sec^{2}(x)"
+}
+},
+"239": {
+"stem": "239. f(x)=3sin(x)+6sec(x)-4cot(x). Findf^{′}(x).",
+"opts": {
+"A": "A. -4csc(x)cos(x)+6sec(x)+3sin(x)",
+"B": "B. 4csc^{2}(x)+6sec^{2}(x)sin(x)+3cos(x)+1",
+"C": "C. 3cos(x)+6sec(x)tan(x)+4csc^{2}(x)",
+"D": "D. -4csc^{2}(x)-6sec^{2}(x)sin(x)-3cos(x)",
+"E": "E. Noneof theotherfourchoices is correct. 2"
+}
+},
+"240": {
+"stem": "240. f(x)=3sin^{4}(x)+\\frac{2}{sin^{4}(x)}. Findf^{′}(x).",
+"opts": {
+"A": "A. 3sin^{3}(x)cos(x)-\\frac{2 cos(x)}{sin^{5}(x)}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 12sin^{3}(x)cos(x)+\\frac{8 cos(x)}{sin^{5}(x)}",
+"D": "D. 12sin^{3}(x)cos(x)-\\frac{8 cos(x)}{sin^{5}(x)}",
+"E": "E. 12sin^{3}(x)cos(x)-\\frac{8 cos(x)}{sin^{3}(x)} 1"
+}
+},
+"241": {
+"stem": "241. f(x)=-sin^{2}(x)+\\frac{1}{sin^{2}(x)}. Findf^{′}(x).",
+"opts": {
+"A": "A. -2sin(x)cos(x)-\\frac{2 cos(x)}{sin(x)}",
+"B": "B. -2sin(x)cos(x)+\\frac{2 cos(x)}{sin^{3}(x)}",
+"C": "C. -2sin(x)-\\frac{21}{sin^{3}(x)}",
+"D": "D. -sin(x)cos(x)-\\frac{cos(x)}{sin^{3}(x)}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"242": {
+"stem": "242. LetFbedifferentiable. y=-4[F(x)]^{3}. Find \\frac{dy}{dx}.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -4[F (x)]^{2}F^{′}(x)",
+"C": "C. -12[F (x)]^{2}F^{′}(x)",
+"D": "D. -12[F (x)]^{2}",
+"E": "E. -12x^{2}F^{′}(x^{3})"
+}
+},
+"243": {
+"stem": "243. f(x)=(3x^{2}-5)^{2}. Usethechainruletofindf^{′}(x).",
+"opts": {
+"A": "A. 6x^{2}-10",
+"B": "B. 6x",
+"C": "C. 6x(3x^{2}-5)",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 6x(6x^{2}-10)"
+}
+},
+"244": {
+"stem": "244. f(x)=tan(x^{2}+5). Usethechainruletofindf^{′}(x).",
+"opts": {
+"A": "A. \\frac{1}{cos^{2}(x^{2}+5)}",
+"B": "B. 2x",
+"C": "C. \\frac{2x}{cos^{2}(x^{2}+5)}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{2x}{cos(x^{2}+5)}"
+}
+},
+"245": {
+"stem": "245. f(x)=(-3x^{2}-3)^{3}. Usethechainruletofindf^{′}(x).",
+"opts": {
+"A": "A. -6x",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -6x(-3x^{2}-3)^{2}",
+"D": "D. -18x(-3x^{2}-3)^{2}",
+"E": "E. 3(-3x^{2}-3)^{2} dy"
+}
+},
+"246": {
+"stem": "246. LetFbedifferentiable. y=8F(x^{2}). Find \\frac{dy}{dx}.",
+"opts": {
+"A": "A. 16F (x)F^{′}(x)",
+"B": "B. 16xF^{′}(x^{2})",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 8F^{′}(x^{2})",
+"E": "E. 16xF (x^{2}) dy"
+}
+},
+"247": {
+"stem": "247. LetFbedifferentiable. y=7F(x^{6}). Find \\frac{dy}{dx}.",
+"opts": {
+"A": "A. 42[F (x)]^{5}F^{′}(x)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 42x^{5}F (x^{6})",
+"D": "D. 7F^{′}(x^{6})",
+"E": "E. 42x^{5}F^{′}(x^{6}) dy"
+}
+},
+"248": {
+"stem": "248. LetFbedifferentiable. y=6F(x^{4}). Find \\frac{dy}{dx}.",
+"opts": {
+"A": "A. 24x^{3}F^{′}(x^{4})",
+"B": "B. 24[F (x)]^{3}F^{′}(x)",
+"C": "C. 24x^{3}F (x^{4})",
+"D": "D. 6F^{′}(x^{4})",
+"E": "E. Noneof theotherfourchoices is correct. dy"
+}
+},
+"249": {
+"stem": "249. LetFbedifferentiable. y=-9F(x^{2}). Find \\frac{dy}{dx}.",
+"opts": {
+"A": "A. -18F (x)F^{′}(x)",
+"B": "B. -18xF (x^{2})",
+"C": "C. -9F^{′}(x^{2})",
+"D": "D. -18xF^{′}(x^{2})",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"250": {
+"stem": "250. f(x)=cos((5x^{2}-6)^{2}). Usethechainruletofindf^{′}(x).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. (12-10x^{2})sin((5x^{2}-6)^{2})",
+"C": "C. -10x(10x^{2}-12)sin((5x^{2}-6)^{2})",
+"D": "D. -10xsin((5x^{2}-6)^{2})",
+"E": "E. 10x(10x^{2}-12) 1"
+}
+},
+"251": {
+"stem": "251. f(x)=sin(\\frac{1}{((-x-2)^{2})^{2}}). Usethechainruletofindf^{′}(x).",
+"opts": {
+"A": "A. \\frac{2 cos()}{(-x-2)}\\frac{1}{(-x-_{6}2)^{4}}",
+"B": "B. \\frac{(-4x-8) cos()}{(-x-2)}\\frac{1}{(-_{6}x-2)^{4}}",
+"C": "C. \\frac{(4x+8) cos()}{(-x-2)}\\frac{1}{(-_{6}x-2)^{4}}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. (2x+4)cos(\\frac{1}{(-x-2)^{4}})"
+}
+},
+"252": {
+"stem": "252. f(x)=-5x^{2}-5x. Findf^{″}(1).",
+"opts": {
+"A": "A. 10",
+"B": "B. -10",
+"C": "C. -11",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. -9"
+}
+},
+"253": {
+"stem": "253. f(x)=-5x^{2}-6x-4. Findf^{″}(1).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 10",
+"C": "C. -9",
+"D": "D. -10",
+"E": "E. -11"
+}
+},
+"254": {
+"stem": "254. f(x)=-5x^{3}-6x^{2}-6x-3. Findf^{″}(1).",
+"opts": {
+"A": "A. -41",
+"B": "B. 42",
+"C": "C. -42",
+"D": "D. -43",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"255": {
+"stem": "255. f(x)=-5x^{6}-6x^{5}-6x^{4}-6x^{3}-6x^{2}-5x+5. Findf^{″}(1).",
+"opts": {
+"A": "A. 390",
+"B": "B. -391",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -390",
+"E": "E. -389"
+}
+},
+"256": {
+"stem": "256. f(x)=-5x^{6}-6x^{5}-6x^{4}-6x^{3}-6x^{2}-5x-4. Findf^{″}(1).",
+"opts": {
+"A": "A. -390",
+"B": "B. -391",
+"C": "C. -389",
+"D": "D. 390",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"257": {
+"stem": "257. f(x)=4cos(4x). Findf^{(2)}(x).",
+"opts": {
+"A": "A. -4⋅4^{2}cos(4x)",
+"B": "B. -4⋅4^{2}sin(4x)",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. 4⋅4^{2}cos(4x)",
+"E": "E. -4^{2}cos(4x)"
+}
+},
+"258": {
+"stem": "258. f(x)=4sin(x). Findf^{(3)}(x).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 4cos(x)",
+"C": "C. -4cos(x)",
+"D": "D. -8cos(x)",
+"E": "E. -4sin(x)"
+}
+},
+"259": {
+"stem": "259. f(x)=5sin(5x). Findf^{(3)}(x).",
+"opts": {
+"A": "A. -5^{3}cos(5x)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. -5⋅5^{3}sin(5x)",
+"D": "D. 5⋅5^{3}cos(5x)",
+"E": "E. -5⋅5^{4}cos(5x)"
+}
+},
+"260": {
+"stem": "260. f(x)=-cos(6x). Findf^{(10)}(x).",
+"opts": {
+"A": "A. 6^{9}cos(6x)",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 6^{10}sin(6x)",
+"D": "D. 6^{10}cos(6x)",
+"E": "E. -6^{10}cos(6x)"
+}
+},
+"261": {
+"stem": "261. f(x)=-5sin(x). Findf^{(11)}(x).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 15cos(x)",
+"C": "C. 5sin(x)",
+"D": "D. -5cos(x)",
+"E": "E. 10cos(x)"
+}
+},
+"262": {
+"stem": "262. Anobject's positionis s(t)=-5t^{2}-5centimetres, wheret\\ge0is measuredinseconds. Find the accelerationatt=3.",
+"opts": {
+"A": "A. 10cm/s^{2}",
+"B": "B. -9cm/s^{2}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -11cm/s^{2}",
+"E": "E. -10cm/s^{2}"
+}
+},
+"263": {
+"stem": "263. Anobject's positionis s(t)=-5t^{2}-2t+4centimetres, wheret\\ge0is measuredinseconds. Find the velocity att=5.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -52cm/s",
+"C": "C. 52cm/s",
+"D": "D. -51cm/s",
+"E": "E. -53cm/s"
+}
+},
+"264": {
+"stem": "264. Anobject's positionis s(t)=-5t^{2}-4tmetres, wheret\\ge0is measuredinseconds. Find the velocity att=2.",
+"opts": {
+"A": "A. -25m/s",
+"B": "B. 24m/s",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -23m/s",
+"E": "E. -24m/s"
+}
+},
+"265": {
+"stem": "265. Anobject's positionis s(t)=-5t^{3}-6t^{2}-6t+5centimetres, wheret\\ge0is measuredinseconds. Find the accelerationa(t).",
+"opts": {
+"A": "A. -5t^{3}-6t^{2}-6t+5cm/s^{2}",
+"B": "B. 30t+12cm/s^{2}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -30t-11cm/s^{2}",
+"E": "E. -30t-12cm/s^{2}"
+}
+},
+"266": {
+"stem": "266. Anobject's positionis s(t)=-5t^{3}-6t^{2}-3t-1centimetres, wheret\\ge0is measuredinseconds. Find the acceleration att=1.",
+"opts": {
+"A": "A. 42cm/s^{2}",
+"B": "B. -42cm/s^{2}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -43cm/s^{2}",
+"E": "E. -41cm/s^{2}"
+}
+},
+"267": {
+"stem": "267. Find \\frac{d}{dx}[ln \\sqrt{14x+15}].",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{1}{28x+30}",
+"C": "C. \\frac{14}{14x+15}",
+"D": "D. -\\frac{14}{28x+30}",
+"E": "E. \\frac{14}{28x+30} d"
+}
+},
+"268": {
+"stem": "268. Find \\frac{d}{dx}[ln(10x^{3}-19x)].",
+"opts": {
+"A": "A. \\frac{10x^{2}-19}{10x^{3}-19x}",
+"B": "B. \\frac{19-30x^{2}}{10x^{3}-19x}",
+"C": "C. \\frac{1}{10x^{3}-19x}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 30x^{2}-19 d"
+}
+},
+"269": {
+"stem": "269. Find \\frac{d}{dx}[ln(13x^{2}-19x)].",
+"opts": {
+"A": "A. \\frac{13x-19}{13x^{2}-19x}",
+"B": "B. \\frac{26x-19}{13x^{2}-19x}",
+"C": "C. 26x-19",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{19-26x}{13x^{2}-19x}"
+}
+},
+"270": {
+"stem": "270. Find \\frac{d}{dx}[ln \\sqrt{7x-15}].",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{1}{14x-30}",
+"C": "C. -\\frac{7}{14x-30}",
+"D": "D. \\frac{7}{14x-30}",
+"E": "E. \\frac{7}{2 \\sqrt{7x-15}} d"
+}
+},
+"271": {
+"stem": "271. Find \\frac{d}{dx}[ln(14x^{6}+13x)].",
+"opts": {
+"A": "A. \\frac{84x^{5}+13}{14x^{6}+13x}",
+"B": "B. \\frac{-84x^{5}-13}{14x^{6}+13x}",
+"C": "C. 84x^{5}+13",
+"D": "D. \\frac{1}{14x^{6}+13x}",
+"E": "E. Noneof theotherfourchoices is correct. d"
+}
+},
+"272": {
+"stem": "272. Find \\frac{d}{dx}(e^{8x^{2}+4x+6}).",
+"opts": {
+"A": "A. (16x+4)e^{8x^{2}+4x+6}",
+"B": "B. 8x^{2}+4x+6 16xe",
+"C": "C. (-16x-4)e^{8x^{2}+4x+6}",
+"D": "D. 8x^{2}+4x+6 e",
+"E": "E. Noneof theotherfourchoices is correct. d"
+}
+},
+"273": {
+"stem": "273. Find \\frac{d}{dx}(e^{-11x^{2}-6x+4}).",
+"opts": {
+"A": "A. -11x^{2}-6x+4 -22xe",
+"B": "B. (22x+6)e^{-11x^{2}-6x+4}",
+"C": "C. (-22x-6)e^{-11x^{2}-6x+4}",
+"D": "D. -11x^{2}-6x+4 e",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"274": {
+"stem": "274. Find \\frac{d}{dx}(e^{-2x^{2}-7x+2}).",
+"opts": {
+"A": "A. (-4x-7)e^{-2x^{2}-7x+2}",
+"B": "B. (4x+7)e^{-2x^{2}-7x+2}",
+"C": "C. -2x^{2}-7x+2 -4xe",
+"D": "D. -2x^{2}-7x+2 e",
+"E": "E. Noneof theotherfourchoices is correct. d"
+}
+},
+"275": {
+"stem": "275. Find \\frac{d}{dx}(e^{-2x^{2}-x+6}).",
+"opts": {
+"A": "A. (4x+1)e^{-2x^{2}-x+6}",
+"B": "B. -2x^{2}-x+6 e",
+"C": "C. -2x^{2}-x+6 -4xe",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. (-2x-1)e^{-2x^{2}-x+6} d"
+}
+},
+"276": {
+"stem": "276. Find \\frac{d}{dx}(e^{-x^{2}+x+1}).",
+"opts": {
+"A": "A. (2x-1)e^{-x^{2}+x+1}",
+"B": "B. -2xe^{-x^{2}+x+1}",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. -x^{2}+x+1 e",
+"E": "E. (1-2x)e^{-x^{2}+x+1} d"
+}
+},
+"277": {
+"stem": "277. Find \\frac{d}{dx}(e^{x^{4}ln(17x)}).",
+"opts": {
+"A": "A. -x^{3}(4ln(17x)+1)e^{x^{4}ln(17x)}",
+"B": "B. 4x^{3}e^{x^{4}ln(17x)}ln(17x)",
+"C": "C. x^{3}(4ln(17x)+17)e^{x^{4}ln(17x)}",
+"D": "D. x^{3}(4ln(17x)+1)e^{x^{4}ln(17x)}",
+"E": "E. Noneof theotherfourchoices is correct. d"
+}
+},
+"278": {
+"stem": "278. Find \\frac{d}{dx}(e^{-11x^{5}ln(12x)}).",
+"opts": {
+"A": "A. -55x^{4}e^{-11x^{5}ln(12x)}ln(12x)",
+"B": "B. -11x^{4}(5ln(12x)+12)e^{-11x^{5}ln(12x)}",
+"C": "C. -11x^{4}(5ln(12x)+1)",
+"D": "D. -11x^{4}(5ln(12x)+1)e^{-11x^{5}ln(12x)}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"279": {
+"stem": "279. Find \\frac{d}{dx}(e^{11xln(7x)}).",
+"opts": {
+"A": "A. (11ln(7x)+77)e^{11xln(7x)}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. (11ln(7x)+11)e^{11xln(7x)}",
+"D": "D. 11e^{11xln(7x)}ln(7x)",
+"E": "E. 11ln(7x)+11 d"
+}
+},
+"280": {
+"stem": "280. Find \\frac{d}{dx}(e^{-x^{6}ln(18x)}).",
+"opts": {
+"A": "A. -6x^{5}e^{-x^{6}ln(18x)}ln(18x)",
+"B": "B. -x^{5}(6ln(18x)+1)",
+"C": "C. -x^{5}(6ln(18x)+1)e^{-x^{6}ln(18x)}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. x^{5}(6ln(18x)+1)e^{-x^{6}ln(18x)} d"
+}
+},
+"281": {
+"stem": "281. Find \\frac{d}{dx}(e^{-4x^{4}ln(17x)}).",
+"opts": {
+"A": "A. -4x^{3}(4ln(17x)+17)e^{-4x^{4}ln(17x)}",
+"B": "B. -4x^{3}(4ln(17x)+1)e^{-4x^{4}ln(17x)}",
+"C": "C. -4x^{3}(4ln(17x)+1)",
+"D": "D. 4x^{3}(4ln(17x)+1)e^{-4x^{4}ln(17x)}",
+"E": "E. Noneof theotherfourchoices is correct. \\sqrt"
+}
+},
+"282": {
+"stem": "282. Find \\frac{d}{dx}(\\frac{\\sqrt361-40 2}{(10x+71)}\\frac{0_{2}x}{3}). \\sqrt",
+"opts": {
+"A": "A. \\frac{\\sqrt{361-400x^{2}}}{(10x+71)\\frac{2}{3}}(-\\frac{400x}{361-400x^{2}}+\\frac{20}{3(10x+71)}) \\sqrt",
+"B": "B. \\frac{\\sqrt{361-400x^{2}}}{(10x+71)\\frac{2}{3}}(\\frac{400x}{361-400x^{2}}-\\frac{20}{3(10x+71)})",
+"C": "C. Noneof theotherfourchoices is correct. \\sqrt",
+"D": "D. \\frac{\\sqrt{361-400x^{2}}}{(10x+71)\\frac{2}{3}}(-\\frac{400x}{361-400x^{2}}-\\frac{10}{10x+71}) \\sqrt",
+"E": "E. \\frac{\\sqrt{361-400x^{2}}}{(10x+71)\\frac{2}{3}}(-\\frac{400x}{361-400x^{2}}-\\frac{20}{3(10x+71)})"
+}
+},
+"283": {
+"stem": "283. Letf(x)=2x^{3}+12x-19. Find(f^{-1})^{′}(-195).",
+"opts": {
+"A": "A. \\frac{1}{6(-4)^{2}+12}",
+"B": "B. \\frac{1}{2(-4)^{2}+12}",
+"C": "C. \\frac{1}{6(-195)^{2}+12}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 6(-4)^{2}+12"
+}
+},
+"284": {
+"stem": "284. Letf(x)=9x^{3}+10x. Find(f^{-1})^{′}(-19).",
+"opts": {
+"A": "A. \\frac{1}{27(-19)^{2}+10}",
+"B": "B. \\frac{1}{27(-1)^{2}+10}",
+"C": "C. 27(-1)^{2}+10",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{1}{9(-1)^{2}+10}"
+}
+},
+"285": {
+"stem": "285. Letf(x)=6x^{3}+9x-4. Find(f^{-1})^{′}(-424).",
+"opts": {
+"A": "A. \\frac{1}{18(-4)^{2}+9}",
+"B": "B. 18(-4)^{2}+9",
+"C": "C. \\frac{1}{18(-424)^{2}+9}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{1}{6(-4)^{2}+9}"
+}
+},
+"286": {
+"stem": "286. Letf(x)=12x^{3}+2x+18. Find(f^{-1})^{′}(348).",
+"opts": {
+"A": "A. 36(3)^{2}+2",
+"B": "B. \\frac{1}{12(3)^{2}+2}",
+"C": "C. \\frac{1}{36(348)^{2}+2}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{1}{36(4)^{2}+2}"
+}
+},
+"287": {
+"stem": "287. Letf(x)=5x^{3}+6x-19. Find(f^{-1})^{′}(33).",
+"opts": {
+"A": "A. \\frac{1}{15(3)^{2}+6}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{1}{15(2)^{2}+6}",
+"D": "D. \\frac{1}{15(33)^{2}+6}",
+"E": "E. \\frac{1}{5(2)^{2}+6}"
+}
+},
+"288": {
+"stem": "288. Find \\frac{d}{dx}[arccos (e^{-68x})].",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{68}{\\sqrt{1-(e^{-68x})^{2}}}",
+"C": "C. -\\frac{68e^{-68x}}{\\sqrt{1-(e^{-68x})^{2}}}",
+"D": "D. \\frac{68e^{-68x}}{1+(e^{-68x})^{2}}",
+"E": "E. \\frac{68e^{-68x}}{\\sqrt{1-(e^{-68x})^{2}}} d"
+}
+},
+"289": {
+"stem": "289. Find \\frac{d}{dx}[arctan(8ln(10x)-1)].",
+"opts": {
+"A": "A. \\frac{8}{1+(8 ln(10x)-1)^{2}}",
+"B": "B. \\frac{8}{x \\sqrt{1+(8 ln(10x)-1)^{2}}}",
+"C": "C. \\frac{8}{x(1+(8 ln(10x)-1)^{2})}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{1}{1+(8 ln(10x)-1)^{2}} d"
+}
+},
+"290": {
+"stem": "290. Find \\frac{d}{dx}[arcsin(75x^{3})].",
+"opts": {
+"A": "A. -\\frac{225x^{2}}{\\sqrt{1-(75x^{3})^{2}}}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{225x^{2}}{1+(75x^{3})^{2}}",
+"D": "D. \\frac{225x^{2}}{\\sqrt{1-(75x^{3})^{2}}}",
+"E": "E. \\frac{1}{\\sqrt{1-(75x^{3})^{2}}}"
+}
+},
+"291": {
+"stem": "291. Find \\frac{d}{dx}[arccos (e^{-28x})].",
+"opts": {
+"A": "A. \\frac{28e^{-28x}}{\\sqrt{1-(e^{-28x})^{2}}}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{28}{\\sqrt{1-(e^{-28x})^{2}}}",
+"D": "D. \\frac{28e^{-28x}}{1+(e^{-28x})^{2}}",
+"E": "E. -\\frac{28e^{-28x}}{\\sqrt{1-(e^{-28x})^{2}}} d"
+}
+},
+"292": {
+"stem": "292. Find \\frac{d}{dx}[arccos (e^{-70x})].",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -\\frac{1}{\\sqrt{1-(e^{-70x})^{2}}}",
+"C": "C. \\frac{70e^{-70x}}{1+(e^{-70x})^{2}}",
+"D": "D. \\frac{70e^{-70x}}{\\sqrt{1-(e^{-70x})^{2}}}",
+"E": "E. -\\frac{70e^{-70x}}{\\sqrt{1-(e^{-70x})^{2}}}"
+}
+},
+"293": {
+"stem": "293. Find \\frac{d}{dx}((sin(19x)+14)^{ln(19x)}).",
+"opts": {
+"A": "A. (sin(19x)+14)^{ln(19x)}(\\frac{ln(sin(19x)+14)}{x})",
+"B": "B. (sin(19x)+14)^{ln(19x)}(\\frac{19 ln(19x) cos(19x)}{sin(19x)+14}+\\frac{ln(sin(19x)+14)}{x})",
+"C": "C. \\frac{19 ln(19x) cos(19x)}{sin(19x)+14}+\\frac{ln(sin(19x)+14)}{x}",
+"D": "D. (sin(19x)+14)^{ln(19x)}(\\frac{ln(19x) cos(19x)}{sin(19x)+14}+\\frac{ln(sin(19x)+14)}{x})",
+"E": "E. Noneof theotherfourchoices is correct. d"
+}
+},
+"294": {
+"stem": "294. Find \\frac{d}{dx}((9x^{8}+17)^{sin(9x)}).",
+"opts": {
+"A": "A. (9x^{8}+17)^{sin(9x)}(\\frac{72x^{7} sin(9x)}{9x^{8}+17})",
+"B": "B. (9x^{8}+17)^{sin(9x)}(\\frac{72x^{7} sin(9x)}{9x^{8}+17}+9ln(9x^{8}+17)cos(9x))",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{72x^{7} sin(9x)}{9x^{8}+17}+9ln(9x^{8}+17)cos(9x)",
+"E": "E. (9x^{8}+17)^{sin(9x)}(\\frac{x^{7} sin(9x)}{9x^{8}+17}+9ln(9x^{8}+17)cos(9x)) d"
+}
+},
+"295": {
+"stem": "295. Find \\frac{d}{dx}((6x^{2}+18)^{sin(2x)}).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. (6x^{2}+18)^{sin(2x)}(\\frac{12x sin(2x)}{6x^{2}+18}+2ln(6x^{2}+18)cos(2x))",
+"C": "C. (6x^{2}+18)^{sin(2x)}(\\frac{x sin(2x)}{6x^{2}+18}+2ln(6x^{2}+18)cos(2x))",
+"D": "D. (6x^{2}+18)^{sin(2x)}(2ln(6x^{2}+18)cos(2x))",
+"E": "E. \\frac{12x sin(2x)}{6x^{2}+18}+2ln(6x^{2}+18)cos(2x) \\pi"
+}
+},
+"296": {
+"stem": "296. Lety=(7x^{4}+3)^{sin(7x)}. Findy^{′}(\\frac{\\pi}{7}).",
+"opts": {
+"A": "A. -ln(7(\\frac{\\pi}{7})^{4}+3)",
+"B": "B. -7ln(7(\\frac{\\pi}{7})^{4}+3)",
+"C": "C. 0",
+"D": "D. 7ln(7(\\frac{\\pi}{7})^{4}+3)",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"297": {
+"stem": "297. Assumingtheequation9x^{4}+9xy=10y^{2}defines y as adifferentiablefunctionofx, find \\frac{dy}{dx} at(-2,3).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. 0",
+"C": "C. -\\frac{87}{26}",
+"D": "D. \\frac{87}{26}",
+"E": "E. -\\frac{48}{13} dy"
+}
+},
+"298": {
+"stem": "298. Assumingtheequation6x^{6}+2xy^{2}=5y^{3}defines y as adifferentiablefunctionofx, find \\frac{dy}{dx}.",
+"opts": {
+"A": "A. \\frac{-36x^{5}-2y^{2}}{4 xy-15y^{2}}",
+"B": "B. \\frac{36x^{5}+2y^{2}}{4 xy-15y^{2}}",
+"C": "C. -36x^{5}-2y^{2}",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. 0 dy"
+}
+},
+"299": {
+"stem": "299. Assumingtheequation18y^{2}-27y=2x^{5}defines y as adifferentiablefunctionofx, find \\frac{dy}{dx} at(3,6).",
+"opts": {
+"A": "A. 810",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. 0",
+"D": "D. -\\frac{30}{7}",
+"E": "E. \\frac{30}{7}"
+}
+},
+"300": {
+"stem": "300. Assumingtheequation8x^{2}+18xy=-9y^{2}defines y as adifferentiablefunctionofx, find \\frac{dy}{dx} at(-3,2).",
+"opts": {
+"A": "A. -\\frac{2}{3}",
+"B": "B. 12",
+"C": "C. 0",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{2}{3} dy"
+}
+},
+"301": {
+"stem": "301. Assumingtheequation13x^{5}+17xy^{3}=-29y^{4}defines y as adifferentiablefunctionofx, find \\frac{dy}{dx}.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -\\frac{65x^{4}}{51 xy^{2}+116y^{3}}",
+"C": "C. 0",
+"D": "D. \\frac{-65x^{4}-17y^{3}}{51 xy^{2}+116y^{3}}",
+"E": "E. \\frac{65x^{4}+17y^{3}}{51 xy^{2}+116y^{3}}"
+}
+},
+"302": {
+"stem": "302. Find the equationofthetangentlineto5 \\sqrt{y}+4xy^{4}=5at(0,1).",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. y=-\\frac{8x}{5}",
+"C": "C. y=1-\\frac{8x}{5}",
+"D": "D. y=\\frac{5x}{8}+1",
+"E": "E. y=\\frac{8x}{5}+1"
+}
+},
+"303": {
+"stem": "303. Find the equationofthetangentlineto5 \\sqrt{y}+6xy^{3}=5at(0,1).",
+"opts": {
+"A": "A. y=-\\frac{12}{5}",
+"B": "B. y=\\frac{12x}{5}+1",
+"C": "C. y=\\frac{5x}{12}+1",
+"D": "D. y=-\\frac{12x}{5}",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"304": {
+"stem": "304. Find the equationofthetangentlineto9 \\sqrt{y}+8xy^{2}=9at(0,1).",
+"opts": {
+"A": "A. y=-\\frac{16}{9}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. y=-\\frac{16x}{9}",
+"D": "D. y=\\frac{16x}{9}+1",
+"E": "E. y=\\frac{9x}{16}+1 \\sqrt"
+}
+},
+"305": {
+"stem": "305. Find the equationofthetangentlineto4 \\sqrty +xy=0at(-2,4).",
+"opts": {
+"A": "A. y=4",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. y=-4x-4",
+"D": "D. y=4x",
+"E": "E. y=4x+12 \\sqrt"
+}
+},
+"306": {
+"stem": "306. Find the equationofthetangentlineto8 \\sqrty +5xy=-2at(-2,1).",
+"opts": {
+"A": "A. y=-\\frac{6x}{5}-\\frac{7}{5}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. y=\\frac{5x}{6}+\\frac{8}{3}",
+"D": "D. y=\\frac{5x}{6}",
+"E": "E. y=-\\frac{5x}{6}-\\frac{2}{3}"
+}
+},
+"307": {
+"stem": "307. Aballoonis released100ftfromanobserveronlevel groundandrises vertically at3ft/s. Howfastis its distancefrom theobserverincreasingwhenits heightis 120ft?",
+"opts": {
+"A": "A. \\frac{100⋅3}{\\sqrt{100^{2}+120^{2}}}",
+"B": "B. \\frac{3}{\\sqrt{100^{2}+120^{2}}}",
+"C": "C. 120⋅3",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. \\frac{120⋅3}{100+120}"
+}
+},
+"308": {
+"stem": "308. Aballoonis released170ftfromanobserveronlevel groundandrises vertically at6ft/s. Howfastis its distancefrom theobserverincreasingwhenits heightis 130ft?",
+"opts": {
+"A": "A. \\frac{130⋅6}{170+130}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{130⋅6}{\\sqrt{170^{2}+130^{2}}}",
+"D": "D. 130⋅6",
+"E": "E. \\frac{170⋅6}{\\sqrt{170^{2}+130^{2}}}"
+}
+},
+"309": {
+"stem": "309. Waterenters aconical tankat27ft^{3}/min. Thetankis 25fthighwithtopradius 7ft. Howfastis thewaterlevel rising whenthedepthis 10ft?",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. \\frac{27}{\\pi7^{2}}",
+"C": "C. \\frac{27⋅25^{2}}{3\\pi7^{2}10^{2}}",
+"D": "D. \\frac{27⋅25}{\\pi710^{2}}",
+"E": "E. \\frac{27⋅25^{2}}{\\pi7^{2}10}"
+}
+},
+"310": {
+"stem": "310. Waterenters aconical tankat23ft^{3}/min. Thetankis 21fthighwithtopradius 8ft. Howfastis thewaterlevel rising whenthedepthis 17ft?",
+"opts": {
+"A": "A. \\frac{23⋅21^{2}}{3\\pi8^{2}17^{2}}",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. \\frac{23}{\\pi8^{2}}",
+"D": "D. \\frac{23⋅21^{2}}{\\pi8^{2}17^{2}}",
+"E": "E. \\frac{23⋅21}{\\pi817^{2}}"
+}
+},
+"311": {
+"stem": "311. Atelescopeis onacliff190ftabovethewater. Aboatapproaches theshoreat15ft/s. Atwhatrateis theanglebetween thevertical cliffandthelineofsightchangingwhentheboatis 310ftfromshore?",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. -\\frac{15⋅190}{190^{2}+310^{2}}",
+"C": "C. -\\frac{15}{190^{2}+310^{2}}",
+"D": "D. -\\frac{15}{190}",
+"E": "E. \\frac{15⋅190}{190^{2}+310^{2}}"
+}
+},
+"312": {
+"stem": "312. Letf(x)=-(x+2)^{3}-3on[-4,0]. Find the x-coordinates ofall stationary andsingularpoints.",
+"opts": {
+"A": "A. Stationary point:x=-2;thereareno singularpoints.",
+"B": "B. Thereareno stationary points;singularpoint:x=-2.",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. Stationary points:x=-4, x=-2, andx=0;thereareno singularpoints.",
+"E": "E. Stationary points:x=-4andx=0;thereareno singularpoints."
+}
+},
+"313": {
+"stem": "313. Letf(x)=2(x+2)^{3}+5on[-4,0]. Find the x-coordinates ofall stationary andsingularpoints.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. Thereareno stationary points;singularpoint:x=-2.",
+"C": "C. Stationary points:x=-4andx=0;thereareno singularpoints.",
+"D": "D. Stationary point:x=-2;thereareno singularpoints.",
+"E": "E. Stationary points:x=-4, x=-2, andx=0;thereareno singularpoints."
+}
+},
+"314": {
+"stem": "314. Letf(x)=(x+1)^{3}-5on[-3,1]. Find the x-coordinates ofall stationary andsingularpoints.",
+"opts": {
+"A": "A. Thereareno stationary points;singularpoint:x=-1.",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. Stationary points:x=-3andx=1;thereareno singularpoints.",
+"D": "D. Stationary point:x=-1;thereareno singularpoints.",
+"E": "E. Stationary points:x=-3, x=-1, andx=1;thereareno singularpoints."
+}
+},
+"315": {
+"stem": "315. Letf(x)=-(^{3}\\sqrt{x+1})^{2}-1on[-2,1]. Find the x-coordinates ofall stationary andsingularpoints.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. Stationary points:x=-2andx=1;singularpoint:x=-1.",
+"C": "C. Thereareno stationary points;singularpoint:x=-1.",
+"D": "D. Stationary point:x=-1;thereareno singularpoints.",
+"E": "E. Stationary points:x=-2andx=1;thereareno singularpoints. \\sqrt"
+}
+},
+"316": {
+"stem": "316. Letf(x)=-2 \\sqrtx+7+3on[-6,2]. Find the x-coordinates ofall stationary andsingularpoints.",
+"opts": {
+"A": "A. Stationary point:x=-2;thereareno singularpoints.",
+"B": "B. Stationary points:x=-6andx=2;thereareno singularpoints.",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. Thereareno stationary points;thereareno singularpoints.",
+"E": "E. Thereareno stationary points;singularpoint:x=-2."
+}
+},
+"317": {
+"stem": "317. Letf(x)=-2(^{3}\\sqrt{x+2})^{2}-4on[-3,0]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimumvalues.",
+"opts": {
+"A": "A. x=-3, x=-2, andx=0",
+"B": "B. x=-2andx=0",
+"C": "C. x=-3andx=0",
+"D": "D. x=-3andx=-2",
+"E": "E. Noneof theother_{4}fourchoices is correct."
+}
+},
+"318": {
+"stem": "318. Letf(x)=-\\frac{(^{3}\\sqrt{x+2})^{4}}{valuexs+. 5}-4on[-4,4]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimum",
+"opts": {
+"A": "A. x=-4andx=4",
+"B": "B. x=-4, x=-2, andx=4",
+"C": "C. x=-2andx=4",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. x=-4andx=-2 \\sqrt"
+}
+},
+"319": {
+"stem": "319. Letf(x)=-2 \\sqrtx+7+2on[-6,2]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimumvalues.",
+"opts": {
+"A": "A. x=2",
+"B": "B. Thereareno x-values to evaluate.",
+"C": "C. x=-6andx=2",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. x=-6"
+}
+},
+"320": {
+"stem": "320. Letf(x)=-( \\sqrt{x+2})^{2}+10on[-3,0]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimumva^{3}lues.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. x=-3, x=-2, andx=0",
+"C": "C. x=-2andx=0",
+"D": "D. x=-3andx=0",
+"E": "E. x=-3andx=-2"
+}
+},
+"321": {
+"stem": "321. Letf(x)=(-x-2)e^{-x-2}+12on[-2,2]. Listall x-values atwhichfmustbeevaluatedtodetermineits maximumand minimumvalues.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. x=-2andx=-1",
+"C": "C. x=-1andx=2",
+"D": "D. x=-1",
+"E": "E. x=-2andx=2 5"
+}
+},
+"322": {
+"stem": "322. Letf(x)=(x+1)^{2}(4x-14)on[-\\frac{5}{2},5]. Find a ll x-values wherethemaximumandminimumvalues areattained.",
+"opts": {
+"A": "A. Maximum attainedatx=-\\frac{5}{2};minimum attainedatx=-1.",
+"B": "B. Maximum attainedatx=5;minimum attainedatx=-\\frac{5}{2} andx=2.",
+"C": "C. Maximum attainedatx=5;minimum attainedatx=-\\frac{5}{2}.",
+"D": "D. Maximum attainedatx=-\\frac{5}{2} andx=2;minimum attainedatx=5.",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"323": {
+"stem": "323. Letf(x)=(^{3}\\sqrt{x+1})^{2}on[-9,0]. Find a ll x-values wherethemaximumandminimumvalues areattained.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. Maximum attainedatx=-9;minimum attainedatx=-1.",
+"C": "C. Maximum attainedatx=-1;minimum attainedatx=0.",
+"D": "D. Maximum attainedatx=-9;minimum attainedatx=0.",
+"E": "E. Maximum attainedatx=-1;minimum attainedatx=-9."
+}
+},
+"324": {
+"stem": "324. Letf(x)=-2(^{3}\\sqrt{x-2})^{2}on[-6,4]. Find a ll x-values wherethemaximumandminimumvalues areattained.",
+"opts": {
+"A": "A. Maximum attainedatx=2;minimum attainedatx=4.",
+"B": "B. Maximum attainedatx=-6;minimum attainedatx=4.",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. Maximum attainedatx=-6;minimum attainedatx=2.",
+"E": "E. Maximum attainedatx=2;minimum attainedatx=-6. 1"
+}
+},
+"325": {
+"stem": "325. Letf(x)=(x-1)^{2}(2x-5)on[\\frac{1}{2},3]. Find a ll x-values wherethemaximumandminimumvalues areattained.",
+"opts": {
+"A": "A. Maximum attainedatx=3;minimum attainedatx=\\frac{1}{2} andx=2.",
+"B": "B. Maximum attainedatx=\\frac{1}{2} andx=2;minimum attainedatx=3.",
+"C": "C. Maximum attainedatx=\\frac{1}{2};minimum attainedatx=1.",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. Maximum attainedatx=3;minimum attainedatx=\\frac{1}{2}."
+}
+},
+"326": {
+"stem": "326. Letf(x)=-2(^{3}\\sqrt{x+1})^{2}on[-9,7]. Find a ll x-values wherethemaximumandminimumvalues areattained.",
+"opts": {
+"A": "A. Maximum attainedatx=-1;minimum attainedatx=-9.",
+"B": "B. Maximum attainedatx=-9andx=7;minimum attainedatx=-1.",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. Maximum attainedatx=-1;minimum attainedatx=-9andx=7.",
+"E": "E. Maximum attaine_{4}datx=-9;minimum attainedatx=-1."
+}
+},
+"327": {
+"stem": "327. Letf(x)=3\\frac{(^{3}\\sqrt{x-2})^{4}}{x+1} on[0,8]. Find the maximumvalueandminimumvalue. \\sqrt",
+"opts": {
+"A": "A. Maximum value:0;minimum value:-6^{3}\\sqrt{2}. \\sqrt \\sqrt",
+"B": "B. Maximum value:6^{3}\\sqrt{2};minimum value:2^{3}\\sqrt{6}.",
+"C": "C. Noneof theotherfourchoices is correct. \\sqrt",
+"D": "D. Maximum value:6 \\sqrt{2};minimum value:0. 3\\sqrt",
+"E": "E. Maximum value:2^{3}\\sqrt{6};minimum value:0."
+}
+},
+"328": {
+"stem": "328. Letf(x)=3(^{3}\\sqrt{x+1})^{2}on[-2,1]. Find the maximumvalueandminimumvalue.",
+"opts": {
+"A": "A. \\frac{2}{3} Maximum value:0;minimum value:-3⋅2.",
+"B": "B. Maximum value:12;minimum value:0.",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. \\frac{2}{3} Maximum value:3⋅2;minimum value:3.",
+"E": "E. Maximum value:3;minimum value:0. \\sqrt"
+}
+},
+"329": {
+"stem": "329. Letf(x)=-\\sqrtx+7 on[-6,2]. Find the maximumvalueandminimumvalue.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. Maximum value:3;minimum value:1. \\sqrt",
+"C": "C. Maximum value:-\\sqrt{5};minimum value:-3.",
+"D": "D. Maximum value:-1;minimum value:-3. \\sqrt",
+"E": "E. Maximum valu_{4}e:-1;minimum value:-\\sqrt{5}."
+}
+},
+"330": {
+"stem": "330. Letf(x)=2\\frac{(^{3}\\sqrt{x})^{4}}{x+3}+7on[-2,6]. Find the maximumvalueandminimumvalue.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct. \\sqrt",
+"B": "B. Maximum value:4^{3}\\sqrt{\\sqrt2}_{3};minimum value:0.",
+"C": "C. Maximum value: \\frac{4 ^{3}\\sqrt{6}}{3}+7;minimum value:7. \\sqrt",
+"D": "D. Maximum value:7;minimum value:7-4^{3}\\sqrt{2}. 3\\sqrt",
+"E": "E. Maximum value:4^{3}\\sqrt{2}+7;minimum value: \\frac{4 ^{3}\\sqrt{6}}{3}+7."
+}
+},
+"331": {
+"stem": "331. Letf(x)=-2\\frac{(^{3}\\sqrt{x-1})^{4}}{x+2} on[-1,7]. Find the maximumvalueandminimumvalue. 3\\sqrt",
+"opts": {
+"A": "A. Maximum value:0;minimum value:-\\frac{4 ^{3}\\sqrt{6}}{3}.",
+"B": "B. Noneof theotherfourchoices is correct.\\sqrt",
+"C": "C. Maximum value:0;minimum value:-4^{3}\\sqrt{2}. 3\\sqrt",
+"D": "D. Maximum value:-\\frac{4 ^{3}\\sqrt{6}}{\\sqrt 3};minimum value:-4^{3}\\sqrt{2}.",
+"E": "E. Maximum value:4^{3}\\sqrt{2};minimum value:0."
+}
+},
+"332": {
+"stem": "332. Letf(x)=-x^{3}. Find the maximal intervals onwhichfis increasingandonwhichitis decreasing.",
+"opts": {
+"A": "A., Increasingon(-\\infty,\\infty).;, Thereis no interval onwhichf is decreasing.",
+"B": "B., Thereis no interval onwhichf is increasing.;, Thereis no interval onwhichf is decreasing.",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D., Thereis no interval onwhichf is increasing.;, Decreasingon(-\\infty,\\infty).",
+"E": "E., Increasingon(-\\infty,0).;, Decreasingon(0,\\infty)."
+}
+},
+"333": {
+"stem": "333. Letf(x)=\\frac{(8-(x+1)^{2})(x+1)^{2}}{4}. Find the maximal intervals onwhichfis increasingandonwhichitis decreasing.",
+"opts": {
+"A": "A., Thereis no interval onwhichf is increasing.;, Decreasingon[-3,-1] andon[1,\\infty).",
+"B": "B., Increasingon[-3,-1] andon[1,\\infty).;, Decreasingon(-\\infty,-3] andon[-1,1])",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D., Increasingon(-\\infty,-3] andon[-1,1].;, Decreasingon[-3,-1] andon[1,\\infty).",
+"E": "E., Increasingo_{2}n(-\\infty,_{2}-3] andon[-1,1].;, Thereis no interval onwhichf is decreasing)"
+}
+},
+"334": {
+"stem": "334. Letf(x)=\\frac{(x-2)^{2}((x-2)^{2}-8)}{4}. Find the maximal intervals onwhichfis increasingandonwhichitis decreasing.",
+"opts": {
+"A": "A., Increasingon[0,2] andon[4,\\infty).;, Thereis no interval onwhichf is decreasing.",
+"B": "B., Increasingon[0,2] andon[4,\\infty).;, Decreasingon(-\\infty,0] andon[2,4])",
+"C": "C., Thereis no interval onwhichf is increasing.;, Decreasingon(-\\infty,0] andon[2,4])",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E., Increa_{2}sin_{2}gon(-\\infty,0] andon[2,4].;, Decreasingon[0,2] andon[4,\\infty)."
+}
+},
+"335": {
+"stem": "335. Letf(x)=\\frac{x^{2}(x^{2}-8)}{2}. Find the maximal intervals onwhichfis increasingandonwhichitis decreasing.",
+"opts": {
+"A": "A., Thereis no interval onwhichf is increasing.;, Decreasingon(-\\infty,-2] andon[0,2])",
+"B": "B., Increasingon[-2,0] andon[2,\\infty).;, Thereis no interval onwhichf is decreasing.",
+"C": "C., Increasingon[-2,0] andon[2,\\infty).;, Decreasingon(-\\infty,-2] andon[0,2])",
+"D": "D., Increasingon(-\\infty,-2] andon[0,2].;, Decreasingon[-2,0] andon[2,\\infty).",
+"E": "E. Noneof theo_{2}therfourchoices is correct."
+}
+},
+"336": {
+"stem": "336. \\frac{2}{3} Letf(x)=2|x-1|. Find the maximal intervals onwhichfis increasingandonwhichitis decreasing.",
+"opts": {
+"A": "A., Increasingon[1,\\infty).;, Thereis no interval onwhichf is decreasing.",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C., Thereis no interval onwhichf is increasing.;, Decreasingon(-\\infty,1])",
+"D": "D., Increasingon(-\\infty,1].;, Decreasingon[1,\\infty).",
+"E": "E., Increasingon[1,\\infty).;, Decreasingon(-\\infty,1])"
+}
+},
+"337": {
+"stem": "337. Letf(x)=-ln(|x-2|+1)+3. Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown.",
+"opts": {
+"A": "A., Thereis no interval onwhichf is concaveup.;, Concavedownon(-\\infty,2)andon(2,\\infty).",
+"B": "B., Thereis no interval onwhichf is concaveup.;, Concavedownon(-\\infty,\\infty).",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D., Concaveupon(-\\infty,\\infty).;, Thereis no interval onwhichf is concavedown.",
+"E": "E., Thereis no interval onwhichf is concaveup.;, Thereis no interval onwhichf is concavedown. 1"
+}
+},
+"338": {
+"stem": "338. Letf(x)=-\\frac{1}{3\\sqrt{x-1}}+3. Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown.",
+"opts": {
+"A": "A., Concaveupon(-\\infty,1).;, Concavedownon(1,\\infty).",
+"B": "B., Thereis no interval onwhichf is concaveup.;, Concavedownon(1,\\infty).",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D., Concaveupon(1,\\infty).;, Concavedownon(-\\infty,1).",
+"E": "E., Concaveupon(-\\infty,1).;, Thereis no interval onwhichf is concavedown."
+}
+},
+"339": {
+"stem": "339. Letf(x)=-2(3(x-1)^{2}+sin^{2}(x-1)). Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown.",
+"opts": {
+"A": "A., Concaveupon(-\\infty,\\infty).;, Thereis no interval onwhichf is concavedown.",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C., Thereis no interval onwhichf is concaveup.;, Concavedownon(-\\infty,\\infty).",
+"D": "D., Thereis no interval onwhichf is concaveup.;, Thereis no interval onwhichf is concavedown.",
+"E": "E., Concaveup_{2} on(-\\infty,1).;, Concavedownon(1,\\infty)."
+}
+},
+"340": {
+"stem": "340. Letf(x)=e^{(x+2)^{2}}. Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown.",
+"opts": {
+"A": "A., Concaveupon(-\\infty,-2).;, Concavedownon(-2,\\infty).",
+"B": "B., Concaveupon(-\\infty,\\infty).;, Thereis no interval onwhichf is concavedown.",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D., Thereis no interval onwhichf is concaveup.;, Thereis no interval onwhichf is concavedown.",
+"E": "E., Thereis no interval onwhichf is concaveup.;, Concavedownon(-\\infty,\\infty). x+2"
+}
+},
+"341": {
+"stem": "341. Letf(x)=2\\frac{x+2}{(x+2)^{2}+4}. Find the maximal openintervals onwhichfis concaveupandonwhichitis concavedown. \\sqrt \\sqrt \\sqrt",
+"opts": {
+"A": "A., Concaveupon(-2 \\sqrt{3}-2,-2)andon(-2+2 \\sqrt{3},\\infty).;, Concavedownon(-\\infty,-2 \\sqrt{3}-2)andon(-2,-2+2 \\sqrt{3}). \\sqrt \\sqrt \\sqrt \\sqrt",
+"B": "B., Concaveupon(-\\infty,-2 \\sqrt{3}-2)andon(-2,-2+2 \\sqrt{3}).;, Concavedownon(-2 \\sqrt{3}-2,-2)andon(-2+2 \\sqrt{3} ,\\infty). \\sqrt \\sqrt",
+"C": "C., Concaveupon(-2 \\sqrt{3}-2,-2)andon(-2+2 \\sqrt{3},\\infty).;, Thereis no interval onwhichf is concavedown.",
+"D": "D. Noneof theotherfourchoices is correct. \\sqrt \\sqrt",
+"E": "E., Thereis no interval onwhichf is concaveup.;, Concavedownon(-\\infty,-2 \\sqrt{3}-2)andon(-2,-2+2 \\sqrt{3})."
+}
+},
+"342": {
+"stem": "342. Letf(x)=(x-2)e^{(x-2)^{2}}+2. Find a ll inflectionpoints.",
+"opts": {
+"A": "A. Thereareno inflectionpoints.",
+"B": "B. Inflectionpoint:(1,2-e).",
+"C": "C. Inflectionpoint:(2,2).",
+"D": "D. Inflectionpoint:(3,2+e).",
+"E": "E. Noneof theotherfourchoices is correct."
+}
+},
+"343": {
+"stem": "343. Letf(x)=(x+1)^{4}+7. Find a ll inflectionpoints.",
+"opts": {
+"A": "A. Inflectionpoint:(-1,7).",
+"B": "B. Thereareno inflectionpoints.",
+"C": "C. Inflectionpoint:(0,8).",
+"D": "D. Inflectionpoint:(-2,8).",
+"E": "E. Noneo_{3}f theotherfourchoices is correct. \\sqrt"
+}
+},
+"344": {
+"stem": "344. Letf(x)=2^{3}\\sqrtx+2+2. Find a ll inflectionpoints.",
+"opts": {
+"A": "A. Noneof theotherfourchoices is correct.",
+"B": "B. Inflectionpoint:(-1,4).",
+"C": "C. Thereareno inflectionpoints.",
+"D": "D. Inflectionpoint:(-2,2).",
+"E": "E. Inflectionpoint:(-3,0). x"
+}
+},
+"345": {
+"stem": "345. Letf(x)=2\\frac{x}{x^{2}+9}+2. Find a ll inflectionpoints. \\sqrt",
+"opts": {
+"A": "A. Inflectionpoints:(0,2),(3 \\sqrt{3},\\frac{\\sqrt{3}}{6}+2). \\sqrt \\sqrt",
+"B": "B. Inflectionpoints:(0,2),(-3 \\sqrt{3},2-\\frac{\\sqrt{3}}{6}),(3 \\sqrt{3},\\frac{\\sqrt{3}}{6}+2).",
+"C": "C. Thereareno inflectionpoints. \\sqrt \\sqrt",
+"D": "D. Inflectionpoints:(-3 \\sqrt{3},2-\\frac{\\sqrt{3}}{6}),(3 \\sqrt{3},\\frac{\\sqrt{3}}{6}+2).",
+"E": "E. None_{3}of theotherfourchoices is correct. \\sqrt"
+}
+},
+"346": {
+"stem": "346. Letf(x)=^{3}\\sqrtx-2+2. Find a ll inflectionpoints.",
+"opts": {
+"A": "A. Inflectionpoint:(1,1).",
+"B": "B. Inflectionpoint:(2,2).",
+"C": "C. Noneof theotherfourchoices is correct.",
+"D": "D. Inflectionpoint:(3,3).",
+"E": "E. Thereareno inflectionpoints."
+}
+},
+"347": {
+"stem": "347. Letf(x)=x^{3}+2x-8. Whichstatementaboutthereal roots off(x)=0is correct?",
+"opts": {
+"A": "A. Thereis exactly onereal root, lyingin(2,3).",
+"B": "B. Thereis exactly onereal root, lyingin(0,1).",
+"C": "C. Thereis exactly onereal root, lyingin(1,2).",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. Thereareexactly two distinctreal roots."
+}
+},
+"348": {
+"stem": "348. Letf(x)=x^{3}+2x+1. Whichstatementaboutthereal roots off(x)=0is correct?",
+"opts": {
+"A": "A. Thereis exactly onereal root, lyingin(-2,-1).",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. Thereis exactly onereal root, lyingin(-1,0).",
+"D": "D. Thereareexactly two distinctreal roots.",
+"E": "E. Thereis exactly onereal root, lyingin(0,1)."
+}
+},
+"349": {
+"stem": "349. Letf(x)=x^{3}+4x-7. Whichstatementaboutthereal roots off(x)=0is correct?",
+"opts": {
+"A": "A. Thereareexactly two distinctreal roots.",
+"B": "B. Thereis exactly onereal root, lyingin(1,2).",
+"C": "C. Thereis exactly onereal root, lyingin(0,1).",
+"D": "D. Noneof theotherfourchoices is correct.",
+"E": "E. Thereis exactly onereal root, lyingin(2,3)."
+}
+},
+"350": {
+"stem": "350. Letf(x)=x^{3}+x+1. Whichstatementaboutthereal roots off(x)=0is correct?",
+"opts": {
+"A": "A. Thereis exactly onereal root, lyingin(-1,0).",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. Thereareexactly two distinctreal roots.",
+"D": "D. Thereis exactly onereal root, lyingin(0,1).",
+"E": "E. Thereis exactly onereal root, lyingin(-2,-1)."
+}
+},
+"351": {
+"stem": "351. Letf(x)=x^{3}+4x+20. Whichstatementaboutthereal roots off(x)=0is correct?",
+"opts": {
+"A": "A. Thereareexactly two distinctreal roots.",
+"B": "B. Noneof theotherfourchoices is correct.",
+"C": "C. Thereis exactly onereal root, lyingin(-2,-1).",
+"D": "D. Thereis exactly onereal root, lyingin(-3,-2).",
+"E": "E. Thereis exactly onereal root, lyingin(-4,-3)."
+}
+}
+}
