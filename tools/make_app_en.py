@@ -103,10 +103,12 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:12px;height:58px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;white-space:nowrap;min-width:0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;white-space:nowrap;min-width:0;flex:0 0 auto}
 .brand .mark{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#16406e,#2c6ba8);
   color:#fff;display:grid;place-items:center;font-size:10px;font-weight:800;letter-spacing:.03em}
-.brand small{display:block;font-size:10.5px;color:var(--ink3);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.brand small{display:block;font-size:10.5px;color:var(--ink3);font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.brand>div:last-child{min-width:0;overflow:hidden}
 .spacer{flex:1}
 .chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);
   border-radius:100px;padding:5px 11px;font-size:12.5px;color:var(--ink2);white-space:nowrap}
@@ -118,7 +120,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .btn.ghost:hover{border-color:#c9d5e3;background:#fafcfe}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 /* the bar carries a lot of chrome; drop the least important chips first */
-@media(max-width:1180px){#cStreak{display:none}}
+@media(max-width:1300px){#cStreak{display:none}}
 @media(max-width:1080px){.brand small{display:none}}
 @media(max-width:1010px){#cAns,#cAcc{display:none}}
 @media(max-width:860px){.top .wrap{gap:8px}.brand>div{font-size:13.5px}}
@@ -163,17 +165,49 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .bar{width:112px;height:7px;border-radius:100px;background:#eef2f7;overflow:hidden;flex:0 0 auto}
 .bar i{display:block;height:100%;background:var(--pri2);border-radius:100px;transition:.3s}
 .bar i.ok{background:#2f9e6b}.bar i.warn{background:#e0a33a}.bar i.bad{background:#cf5b4a}
-.sec-n{font-size:12px;color:var(--ink3);font-variant-numeric:tabular-nums;width:56px;text-align:right}
+.sec-n{font-size:12px;color:var(--ink3);font-variant-numeric:tabular-nums;width:96px;text-align:right;flex:0 0 auto}
+.sec-n .miss{color:var(--red);font-weight:700;font-size:11px;margin-left:3px}
+
+/* bilingual labels: English stays primary, Chinese rides along in grey */
+.zhx,.tz{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:11.5px;font-weight:500;letter-spacing:0;color:var(--ink4)}
+.sec-t .tz{margin-left:6px;font-size:11.5px}
+.k .zhx{margin-left:5px;text-transform:none;letter-spacing:0;font-size:11px}
+.btn .zhx{margin-left:4px;font-size:11px;opacity:.7;color:inherit}
+@media(max-width:1320px){.navz{display:none}}
+.hero .zh{color:#bdd3ea;font-size:13px;margin-top:8px;max-width:58ch;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.hero .zh b{color:#fff}
+
+/* engine status strip */
+.eng{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);
+  border-left:3px solid var(--pri2);border-radius:12px;padding:10px 15px;margin:0 0 18px;font-size:12.5px;
+  color:var(--ink2);box-shadow:var(--sh)}
+.eng b{color:var(--ink);font-variant-numeric:tabular-nums}
+.eng .sep{color:var(--line);font-size:14px}
+.eng .zhx{font-size:11.5px}
+.eng .lnk{font-size:12px;color:var(--pri2);text-decoration:underline;text-underline-offset:2px}
+.why{display:flex;align-items:flex-start;gap:8px;background:#f7fafd;border:1px dashed #cfdcea;
+  border-radius:10px;padding:8px 12px;margin:0 0 12px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+.why .tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--pri2);font-weight:700;flex:0 0 auto}
+@media(max-width:640px){
+  .sec-t{white-space:normal;line-height:1.45;font-size:13px}
+  .sec-t .tz{display:inline;margin-left:5px;font-size:11px}
+  .sec-n{width:74px;font-size:11.5px}
+  .bar{width:76px}
+  .sec-row{padding:10px 0}
+}
 
 /* quiz */
 .qwrap{max-width:760px;margin:22px auto 60px;min-height:calc(100vh - 190px);display:flex;flex-direction:column;justify-content:center}
 .qwrap>*{flex:0 0 auto}
 .qcard{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh2);overflow:hidden}
 .qhead{display:flex;align-items:center;gap:10px;padding:12px 18px;background:#f7fafd;border-bottom:1px solid var(--line)}
-.qno{font-size:12px;font-weight:700;color:#fff;background:var(--pri2);border-radius:6px;padding:2px 9px}
-.qsec{font-size:12px;color:var(--ink3)}
-.qprog{margin-left:auto;display:flex;align-items:center;gap:8px}
-.qprog .track{width:130px;height:6px;background:#e7edf4;border-radius:100px;overflow:hidden}
+.qno{font-size:12px;font-weight:700;color:#fff;background:var(--pri2);border-radius:6px;padding:2px 9px;flex:0 0 auto}
+.qsec{font-size:12px;color:var(--ink3);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qprog{margin-left:auto;display:flex;align-items:center;gap:8px;flex:0 0 auto;white-space:nowrap}
+@media(max-width:760px){.qprog .track{display:none}}
+.qprog .track{width:96px;height:6px;background:#e7edf4;border-radius:100px;overflow:hidden}
 .qprog .track i{display:block;height:100%;background:linear-gradient(90deg,#2c6ba8,#3f86c9);border-radius:100px}
 .qbody{padding:16px 18px 6px}
 .qimg{display:block;width:100%;height:auto;border-radius:8px}
@@ -308,11 +342,12 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 <body>
 <div class="top"><div class="wrap">
   <div class="brand"><div class="mark">26</div>
-    <div>MTH026 <small>Calculus I · 674 items · 54 topics</small></div></div>
+    <div title="MTH026 微积分（一） · 674 道题 · 54 个考点">MTH026
+      <small>Calculus I · 674 items · 54 topics</small></div></div>
   <div class="spacer"></div>
-  <button class="btn ghost" onclick="route('home')">Practice</button>
-  <button class="btn ghost" onclick="route('ref')">Reference</button>
-  <button class="btn ghost" onclick="route('browse')">Bank</button>
+  <button class="btn ghost" onclick="route('home')">Practice<span class="zhx navz">练习</span></button>
+  <button class="btn ghost" onclick="route('ref')">Reference<span class="zhx navz">手册</span></button>
+  <button class="btn ghost" onclick="route('browse')">Bank<span class="zhx navz">题库</span></button>
   <div class="chip" id="cAns">Answered <b>0</b></div>
   <div class="chip" id="cAcc">Accuracy <b>—</b></div>
   <div class="chip" id="cStreak">Streak <b>0</b></div>
@@ -340,6 +375,14 @@ const BYID = {}; ITEMS.forEach(q=>BYID[q.id]=q);
 const SECMAP = {}; SECS.forEach(s=>SECMAP[s.id]=s);
 PQ.forEach(p=>{ BYID[p.id]={id:p.id, s:p.s, c:p.c, p:p.p, pq:1}; });
 const PQBYSEC = {}; PQ.forEach(p=>{ (PQBYSEC[p.s]=PQBYSEC[p.s]||[]).push(p.id); });
+/* one topic = both decks. Graded items first, then the originals served for it,
+   so a topic is fully covered only when every item of either deck has been seen. */
+const ALLBYSEC = {};
+SECS.forEach(s=>{ const a=[];
+  for(let i=s.from;i<=s.to;i++) a.push(i);
+  (PQBYSEC[s.id]||[]).forEach(p=>a.push(p));
+  ALLBYSEC[s.id]=a;
+});
 const TOTAL_PQ = PQ.length;
 const REF = DATA.ref || [], FORMS = DATA.forms || [], GLOSS = DATA.gloss || [];
 let store = {h:{}, fav:{}, streak:0, best:0};
@@ -434,40 +477,44 @@ function renderAcct(){
   const t=document.getElementById('mTitle'), b=document.getElementById('mBody');
   if(!t||!b) return;
   if(acctMode==='me' && ACCT){
-    t.textContent='Your account';
+    t.textContent='Your account · 我的账号';
     const n=Object.keys(store.h).length;
     b.innerHTML=`
       <div class="who"><div class="av">${(ACCT.display||'?').charAt(0).toUpperCase()}</div>
         <div><div style="font-weight:700">${ACCT.display}</div>
         <div class="muted" style="font-size:12px">${n} records on this device ·
-          ${SYNC==='on'?'synced':(SYNC==='err'?'last sync failed':'not synced yet')}</div></div></div>
+          ${SYNC==='on'?'synced':(SYNC==='err'?'last sync failed':'not synced yet')}<br>
+          <span class="zhx">本机 ${n} 条记录 · ${SYNC==='on'?'已同步':(SYNC==='err'?'上次同步失败':'尚未同步')}</span></div></div></div>
       <button class="btn ghost" style="width:100%;margin-bottom:8px"
-        onclick="syncNow().then(()=>{renderAcct();toast('Synced');})">Sync now</button>
-      <button class="btn ghost" style="width:100%;color:var(--red)" onclick="doLogout()">Sign out</button>
+        onclick="syncNow().then(()=>{renderAcct();toast('Synced · 已同步');})">Sync now <span class="zhx">立即同步</span></button>
+      <button class="btn ghost" style="width:100%;color:var(--red)" onclick="doLogout()">Sign out <span class="zhx">退出登录</span></button>
       <p class="mnote">Signing out ends this session but keeps the records on this device.
-      Sign in on another device with the same username and the two sets are merged question by question.</p>`;
+      Sign in on another device with the same username and the two sets are merged question by question.<br>
+      <span class="zhx">退出只结束本次登录，本机记录保留；在另一台设备用同一账号登录后，两边的答题记录会按题目逐条合并。</span></p>`;
     return;
   }
   const up = acctMode==='up';
-  t.textContent = up? 'Create an account' : 'Sign in';
+  t.textContent = up? 'Create an account · 注册' : 'Sign in · 登录';
   b.innerHTML=`
     <div class="mtabs">
-      <button class="${up?'':'on'}" onclick="switchAcct('in')">Sign in</button>
-      <button class="${up?'on':''}" onclick="switchAcct('up')">Create account</button>
+      <button class="${up?'':'on'}" onclick="switchAcct('in')">Sign in <span class="zhx">登录</span></button>
+      <button class="${up?'on':''}" onclick="switchAcct('up')">Create account <span class="zhx">注册</span></button>
     </div>
-    <div class="fld"><label for="au">Username</label>
+    <div class="fld"><label for="au">Username <span class="zhx">用户名</span></label>
       <input id="au" autocomplete="username" placeholder="3–24 characters, letters or digits"
         onkeydown="if(event.key==='Enter')submitAcct()"></div>
-    <div class="fld"><label for="ap">Password</label>
+    <div class="fld"><label for="ap">Password <span class="zhx">密码</span></label>
       <input id="ap" type="password" autocomplete="${up?'new-password':'current-password'}"
         placeholder="${up?'at least 6 characters':'your password'}"
         onkeydown="if(event.key==='Enter')submitAcct()"></div>
     <div id="mErr"></div>
-    <button class="btn pri" id="mGo" style="width:100%;margin-top:2px" onclick="submitAcct()">${up?'Create account':'Sign in'}</button>
+    <button class="btn pri" id="mGo" style="width:100%;margin-top:2px" onclick="submitAcct()">${up?'Create account':'Sign in'}
+      <span class="zhx">${up?'注册':'登录'}</span></button>
     <p class="mnote">${up
       ? 'No email, no verification — a username and a password is all. The '
         +Object.keys(store.h).length+' records already on this device move into the new account.'
-      : 'Progress kept in this browser is merged with whatever the account already holds; the newest answer wins per question.'}</p>`;
+      : 'Progress kept in this browser is merged with whatever the account already holds; the newest answer wins per question.'}
+      <br><span class="zhx">不需要邮箱验证；本机已有的记录会并入账号，同一道题以最新一次作答为准。</span></p>`;
 }
 
 function submitAcct(){
@@ -532,49 +579,107 @@ function resetAll(){
   paintTop(); route('home');
 }
 
-/* ---------- smart engine ---------- */
-function untouchedSecs(){
-  return SECS.filter(s=>{
-    for(let i=s.from;i<=s.to;i++) if(store.h[i]) return false;
-    return true;
-  });
+/* ---------- smart engine ----------
+   Round 1 walks every topic once (coverage). After that every topic is scored:
+   open mistakes (dominant) + measured weakness + unseen material + forgetting,
+   minus a penalty for the topic just served. Inside the winning topic the exact
+   item you missed is re-tested before anything new is served. */
+const SKIP_TTL = 12*3600*1000;
+
+function skips(){
+  const raw=store.skip||{}, now=Date.now(), out={q:{},s:{}};
+  ['q','s'].forEach(k=>Object.keys(raw[k]||{}).forEach(key=>{
+    if(now-(+raw[k][key]||0) < SKIP_TTL) out[k][key]=+raw[k][key];
+  }));
+  return out;
 }
-function nextSmart(){
-  // phase 1: one pass through every topic
-  const un=untouchedSecs();
-  if(un.length){
-    const s=un[0];
-    // the easiest unanswered item in that topic = first one
-    for(let i=s.from;i<=s.to;i++) if(!store.h[i]) return i;
-  }
-  // phase 2: weakest topic first, prefer unseen then most-missed then stalest
-  let best=null, bestScore=-1;
-  for(const s of SECS){
-    const st=secStat(s.id);
-    const gap=1-st.acc;
-    if(gap<=0) continue;
-    // unseen item inside this topic
-    let cand=null;
-    for(let i=s.from;i<=s.to;i++){ if(!store.h[i]){ cand=i; break; } }
-    if(cand===null){
-      // most recently wrong / stalest
-      let worst=null, wt=Infinity;
-      for(let i=s.from;i<=s.to;i++){
-        const r=store.h[i];
-        if(!r.ok && (r.t||0)<wt){ wt=r.t||0; worst=i; }
-      }
-      cand=worst;
-      if(cand===null){ // all correct: pick stalest
-        let st2=Infinity;
-        for(let i=s.from;i<=s.to;i++){ const t=store.h[i].t||0; if(t<st2){st2=t; cand=i;} }
-      }
-    }
-    const score = gap*1000 + (1 - Math.min(st.done/st.n,1))*100;
-    if(score>bestScore){ bestScore=score; best=cand; }
-  }
-  if(best!==null) return best;
-  return ITEMS[Math.floor(Math.random()*ITEMS.length)].id;
+function addSkip(kind,key){
+  store.skip=store.skip||{q:{},s:{}};
+  store.skip[kind]=store.skip[kind]||{};
+  store.skip[kind][key]=Date.now();
+  save();
 }
+function clearSkips(){
+  store.skip={q:{},s:{}}; save();
+  toast('Skip list cleared · 跳过记录已清空');
+  viewHome(); paintTop();
+}
+function cycleState(){
+  if(!store.cyc || !store.cyc.seen) store.cyc={n:(store.cyc&&store.cyc.n)||1, seen:{}};
+  return store.cyc;
+}
+function cycleInfo(){ const c=cycleState(); return {n:c.n||1, seen:Object.keys(c.seen).length, all:SECS.length}; }
+function markCycle(sec){
+  const c=cycleState();
+  c.seen[sec]=1;
+  if(Object.keys(c.seen).length>=SECS.length){ c.n=(c.n||1)+1; c.seen={}; return true; }
+  return false;
+}
+
+/* one topic measured across both decks */
+function diag(id){
+  const all=ALLBYSEC[id];
+  let done=0, ok=0, miss=0, unseen=0, last=Infinity;
+  for(const i of all){
+    const r=store.h[i];
+    if(!r){ unseen++; continue; }
+    done++; if(r.ok) ok++; else miss++;
+    if((r.t||0)<last) last=r.t||0;
+  }
+  return {id, n:all.length, done, ok, miss, unseen,
+          acc: done? ok/done : 0, cov: all.length? done/all.length : 0, last: last===Infinity?0:last};
+}
+function days(t){ return t? Math.min((Date.now()-t)/86400000, 30) : 30; }
+function weakness(d){
+  let s=0;
+  s += 5.0*Math.min(d.miss,3);              // every open mistake outranks everything else
+  s += 2.2*(1-d.acc)*Math.min(d.done,4);    // weakness, but only as far as evidence goes
+  s += 1.5*(1-d.cov);                       // material never seen still needs covering
+  s += 0.7*Math.min(days(d.last)/7,4);      // forgetting: 0-4 weeks
+  if(store.lastSec===d.id) s -= 1.2;        // never the same topic twice in a row
+  return s;
+}
+function pickFrom(d, sk){
+  const all=ALLBYSEC[d.id], free=i=>!sk.q[i];
+  const open=all.filter(i=>store.h[i] && !store.h[i].ok && free(i))
+                .sort((a,b)=>(store.h[a].t||0)-(store.h[b].t||0));
+  if(open.length) return {id:open[0], kind:'retry'};
+  const fresh=all.filter(i=>!store.h[i] && free(i));
+  if(fresh.length) return {id:fresh[0], kind:'new'};
+  const rest=all.filter(free).sort((a,b)=>((store.h[a]||{}).t||0)-((store.h[b]||{}).t||0));
+  return rest.length? {id:rest[0], kind:'stale'} : null;
+}
+function whyText(d,c){
+  const n=d.miss;
+  if(c.kind==='retry') return n+' open '+(n===1?'mistake':'mistakes')+' in this topic · 这类还有 '+n+' 道错题没订正';
+  if(c.kind==='new') return d.unseen+' item'+(d.unseen===1?'':'s')+' never seen · 这类还有 '+d.unseen+' 道没做过';
+  const dd=d.last? Math.max(1,Math.round(days(d.last))) : 0;
+  return (dd? 'gone '+dd+' days' : 'not seen yet')+' without practice · 这类'+(dd? '已 '+dd+' 天没练':'还没练过');
+}
+function pickSmart(){
+  const sk=skips();
+  let pool=SECS.filter(s=>!sk.s[s.id]);
+  if(!pool.length){ store.skip={q:{},s:{}}; save(true); pool=SECS.slice(); }
+  const ds=pool.map(s=>diag(s.id));
+  // phase 1 — one pass through every topic, syllabus order
+  const un=ds.filter(d=>d.done===0);
+  for(const d of un){
+    const c=pickFrom(d,sk);
+    if(c) return {id:c.id, why:whyText(d,c), phase:1, sec:d.id, kind:c.kind};
+  }
+  // phase 2 — everything ranked, mistakes first
+  let best=null, bestSc=-9e9;
+  for(const d of ds){
+    if(d.done===0) continue;
+    const c=pickFrom(d,sk); if(!c) continue;
+    const sc=weakness(d);
+    if(sc>bestSc){ bestSc=sc; best={d,c}; }
+  }
+  if(best) return {id:best.c.id, why:whyText(best.d,best.c), phase:2, sec:best.d.id, kind:best.c.kind};
+  return null;
+}
+function untouchedSecs(){ return SECS.filter(s=>diag(s.id).done===0); }
+
 function buildMock(n){
   const pool=[]; const per={};
   SECS.forEach(s=>per[s.id]=[]);
@@ -604,13 +709,38 @@ function route(v,arg){ window.scrollTo(0,0);
 }
 function start(mode){
   let list=[];
-  if(mode==='smart') list=[nextSmart()];
-  else if(mode==='mock') list=buildMock(20);
+  if(mode==='smart'){
+    let p=pickSmart();
+    if(!p){ store.skip={q:{},s:{}}; save(true); p=pickSmart(); }
+    if(!p){ toast('Everything is answered — clearing skips.'); return; }
+    list=[p.id];
+    store.lastSec=p.sec; save(true);
+    round={list, i:0, mode, picked:null, done:false, t0:Date.now(), ok:0, ans:0,
+           why:p.why, phase:p.phase, sec:p.sec};
+    route('quiz'); return;
+  }
+  if(mode==='mock') list=buildMock(20);
   else if(mode==='wrong') list=wrongQueue();
   else if(mode==='pq'){ startPq(10); return; }
   if(!list.length){ toast('Nothing to review — all clear.'); return; }
   round={list, i:0, mode, picked:null, done:false, t0:Date.now(), ok:0, ans:0};
   route('quiz');
+}
+/* skip controls — smart round only. Both are remembered for 12 h so the same
+   item or topic is not immediately handed back to you. */
+function skipQ(){
+  const id=round.list[round.i];
+  addSkip('q', id);
+  toast('Skipped · 已跳过这题');
+  start('smart');
+}
+function skipSec(){
+  const id=round.list[round.i], q=BYID[id], sec=q.s;
+  addSkip('s', sec);
+  const done=markCycle(sec); save();
+  toast('Skipping '+(SECMAP[sec]? SECMAP[sec].en : sec)+' · 暂时跳过这类');
+  if(done) toast('Round complete — mistakes go first · 本轮完成，错题优先');
+  start('smart');
 }
 function startPq(n){
   // same weighting as the smart engine: weakest topic first, unseen item first
@@ -639,6 +769,14 @@ function startTopic(id){
   round={list, i:0, mode:'topic', picked:null, done:false, t0:Date.now(), ok:0, ans:0};
   route('quiz');
 }
+/* mastery row: the topic as measured — graded items first, then its originals */
+function startTopicAll(id){
+  const list=(ALLBYSEC[id]||[]).slice()
+    .sort((a,b)=>(store.h[a]?1:0)-(store.h[b]?1:0) || (a-b));
+  if(!list.length){ toast('Nothing in this topic.'); return; }
+  round={list, i:0, mode:'topic', picked:null, done:false, t0:Date.now(), ok:0, ans:0};
+  route('quiz');
+}
 
 /* ---------- views ---------- */
 function viewHome(){
@@ -646,36 +784,60 @@ function viewHome(){
   const pq=pqStat();
   const un=untouchedSecs().length;
   const wrong=wrongQueue().length;
-  const nextId=nextSmart();
+  const cy=cycleInfo();
+  const sk=skips(), skSec=Object.keys(sk.s).length, skQ=Object.keys(sk.q).length;
+  let openMiss=0;
+  SECS.forEach(s=>{ openMiss+=diag(s.id).miss; });
   const rows = SECS.map(s=>{
-    const st=secStat(s.id);
-    const pct=Math.round(st.acc*100);
-    const cls= st.done===0? '' : (pct>=80?'ok':(pct>=50?'warn':'bad'));
-    return '<div class="sec-row" onclick="startTopic(\''+s.id+'\')" style="cursor:pointer">'
+    const d=diag(s.id);
+    const pct=Math.round(d.acc*100);
+    const cov=Math.round(d.cov*100);
+    const cls= d.done===0? '' : (pct>=80?'ok':(pct>=50?'warn':'bad'));
+    const pqn=(PQBYSEC[s.id]||[]).length;
+    return '<div class="sec-row" onclick="startTopicAll(\''+s.id+'\')" style="cursor:pointer" '
+      +'title="'+s.id+' · '+d.ok+'/'+d.done+' correct, '+d.miss+' open, '+d.unseen+' unseen">'
       +'<span class="sec-id">'+s.id+'</span>'
-      +'<span class="sec-t">'+s.en+(PQBYSEC[s.id]
+      +'<span class="sec-t">'+s.en+'<span class="tz">'+s.zh+'</span>'+(pqn
           ? ' <span class="pill" style="font-size:11px;padding:1px 7px" '
-            +'onclick="event.stopPropagation();startTopicPq(\''+s.id+'\')">'+PQBYSEC[s.id].length+'P</span>' : '')
+            +'onclick="event.stopPropagation();startTopicPq(\''+s.id+'\')">'+pqn+'P</span>' : '')
       +'</span>'
-      +'<span class="bar"><i class="'+cls+'" style="width:'+(st.done? Math.max(pct,6):0)+'%"></i></span>'
-      +'<span class="sec-n">'+st.done+'/'+st.n+'</span></div>';
+      +'<span class="bar" title="'+cov+'% covered · '+pct+'% correct"><i class="'+cls+'" style="width:'+(d.done? Math.max(cov,5):0)+'%"></i></span>'
+      +'<span class="sec-n">'+d.done+'/'+d.n+(d.miss? '<span class="miss">'+d.miss+'&#10005;</span>':'')+'</span></div>';
   }).join('');
+  const fresh = o.done+pq.done===0;
   document.getElementById('view').innerHTML = `
   <div class="wrap">
     <div class="hero">
-      <h1>${o.done===0? 'Start where it matters' : 'Keep the streak alive'}</h1>
-      <p>${o.done===0
-        ? 'The engine walks you through <b>one question from every topic first</b>, then re-weights towards whatever you keep missing. No setup needed.'
-        : 'You have answered <b>'+o.done+'</b> of 351 items at <b>'+Math.round(o.acc*100)+'%</b>. Topics untouched: '+un+'.'}</p>
+      <h1>${fresh? 'Start where it matters' : 'Keep the streak alive'}
+        <span class="zh" style="display:inline;font-size:15px">${fresh? '从最该练的地方开始' : '继续保持手感'}</span></h1>
+      <p>${fresh
+        ? 'The engine walks you through <b>one question from every topic first</b> — all <b>674</b> items, both decks — then scores every topic on open mistakes, weakness and forgetting, so what you got wrong comes back first.'
+        : 'You have answered <b>'+o.done+'</b> of 351 graded items and <b>'+pq.done+'</b> of 323 originals. Round '+cy.n+' has covered '+cy.seen+'/'+cy.all+' topics.'}</p>
+      <p class="zh">${fresh
+        ? '先每个考点过一遍（共 674 道，两套题合一），之后按「<b>未订正的错题</b> → 薄弱程度 → 多久没练」给考点打分，错得多的题型优先回来。'
+        : '本轮已过 <b>'+cy.seen+'/'+cy.all+'</b> 个考点，还有 <b>'+openMiss+'</b> 道错题没订正，它们会排在下一轮最前面。'}</p>
       <div class="row">
-        <button class="btn white" onclick="start('smart')">${o.done? 'Continue smart round':'Start smart round'}</button>
-        <button class="btn light" onclick="start('mock')">Mock test · 20</button>
-        <button class="btn light" onclick="start('pq')">Quiz originals · 10</button>
-        <button class="btn light" onclick="route('browse')">Browse all 674</button>
+        <button class="btn white" onclick="start('smart')">${un<SECS.length? 'Continue smart round':'Start smart round'}
+          <span class="zhx">${un<SECS.length? '继续智能刷题':'开始智能刷题'}</span></button>
+        <button class="btn light" onclick="start('mock')">Mock test · 20 <span class="zhx">模拟卷</span></button>
+        <button class="btn light" onclick="start('pq')">Quiz originals · 10 <span class="zhx">原题</span></button>
+        <button class="btn light" onclick="route('browse')">Browse all 674 <span class="zhx">全部题目</span></button>
       </div>
     </div>
+    <div class="eng">
+      <span>Round <b>${cy.n}</b> <span class="zhx">第 ${cy.n} 轮</span></span>
+      <span class="sep">|</span>
+      <span><b>${cy.seen}/${cy.all}</b> topics this round <span class="zhx">本轮已过考点</span></span>
+      <span class="sep">|</span>
+      <span><b>${openMiss}</b> open mistakes <span class="zhx">待订正错题</span></span>
+      ${skSec||skQ? `<span class="sep">|</span>
+        <span>skipped <b>${skSec}</b> topics / <b>${skQ}</b> questions <span class="zhx">已跳过</span>
+        <button class="lnk" onclick="clearSkips()">clear <span class="zhx">清除</span></button></span>`:''}
+      <span class="sep">|</span>
+      <span class="zhx">推荐依据：错题数 → 正确率 → 覆盖度 → 遗忘天数</span>
+    </div>
     <div class="card click" onclick="start('pq')" style="display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap">
-      <div style="min-width:120px"><div class="k">From your practice quizzes</div>
+      <div style="min-width:120px"><div class="k">From your practice quizzes <span class="zhx">来自你的练习卷</span></div>
         <div class="stat" style="font-size:26px">${pq.done}<small>/ ${TOTAL_PQ}</small></div></div>
       <div style="flex:1;min-width:240px">
         <p style="margin:0 0 4px"><b>The 323 items you were actually served</b> — question, the paper's own
@@ -684,25 +846,29 @@ function viewHome(){
         page. Pick a letter, compare it with the printed answer, then mark yourself —
         ${pq.done? 'accuracy so far '+Math.round(pq.acc*100)+'%' : 'nothing marked yet'}.</p>
       </div>
-      <div><button class="btn pri">Open a set of 10</button></div>
+      <div><button class="btn pri">Open a set of 10 <span class="zhx">打开 10 题</span></button></div>
     </div>
     <div class="grid g3" style="margin-bottom:18px">
-      <div class="card"><div class="k">Progress</div><div class="stat">${o.done+pq.done}<small>/ ${ITEMS.length+TOTAL_PQ}</small></div>
+      <div class="card"><div class="k">Progress <span class="zhx">总进度</span></div><div class="stat">${o.done+pq.done}<small>/ ${ITEMS.length+TOTAL_PQ}</small></div>
         <p>${un===0? 'Every topic has been started.' : un+' topics not started yet.'}
         ${o.done}/${ITEMS.length} graded &middot; ${pq.done}/${TOTAL_PQ} originals.</p></div>
-      <div class="card"><div class="k">Accuracy</div><div class="stat">${o.done? Math.round(o.acc*100)+'%':'—'}</div>
-        <p>${o.ok} correct out of ${o.done} answered.</p></div>
+      <div class="card"><div class="k">Accuracy <span class="zhx">精编题正确率</span></div><div class="stat">${o.done? Math.round(o.acc*100)+'%':'—'}</div>
+        <p>${o.ok} correct out of ${o.done} answered. Originals are self-marked, so they are counted per topic below
+        instead of here.</p></div>
       <div class="card click" onclick="${wrong? "start('wrong')":"toast('No mistakes recorded yet.')"}">
-        <div class="k">Review</div><div class="stat">${wrong}</div>
+        <div class="k">Review <span class="zhx">错题复习</span></div><div class="stat">${wrong}</div>
         <p>${wrong? 'Questions you got wrong — tap to drill them.':'Nothing to repair yet.'}</p></div>
     </div>
     <div class="card" style="padding:16px 20px 6px">
-      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px">
-        <h3 style="margin:0">Topic mastery</h3>
-        <span class="muted">click a topic to drill it</span>
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:2px;flex-wrap:wrap">
+        <h3 style="margin:0">Topic mastery <span class="tz" style="font-size:12.5px">考点掌握度</span></h3>
+        <span class="muted">graded + originals · 精编与原题合并计算</span>
         <div class="spacer" style="flex:1"></div>
-        <span class="muted">answered</span>
+        <span class="muted">answered <span class="zhx">已做/总题</span></span>
       </div>
+      <p class="muted" style="margin:0 0 8px;font-size:11.5px">
+        Bar = how much is covered, colour = accuracy · 进度条为覆盖度，颜色代表正确率 ·
+        <span style="color:var(--red)">3&#10005;</span> = open mistakes · 未订正错题</p>
       ${rows}
     </div>
     <p class="muted" style="margin:18px 0 40px;text-align:center">
@@ -719,11 +885,13 @@ function viewQuiz(){
   if(q && q.pq) return viewPq();
   const rec=store.h[id];
   const solo = round.mode==='smart' && round.list.length===1;
-  const covered = SECS.length - untouchedSecs().length;
+  const cy=cycleInfo();
+  const covered = cy.seen;
   const pct = solo ? Math.round(covered/SECS.length*100)
                    : Math.round(((round.i)/round.list.length)*100);
+  const phase = untouchedSecs().length? 1:2;
   const progLabel = solo
-    ? (untouchedSecs().length? 'Phase 1 · ' : 'Phase 2 · ') + covered + '/' + SECS.length + ' topics'
+    ? 'Phase '+phase+' · '+covered+'/'+SECS.length+' topics'
     : (round.i+1) + '/' + round.list.length;
   const letters=['A','B','C','D','E'];
   const picked = round.picked;
@@ -738,10 +906,14 @@ function viewQuiz(){
     </div>` : '';
   document.getElementById('view').innerHTML = `
   <div class="wrap"><div class="qwrap">
+    ${solo && round.why? `<div class="why"><span class="tag">Why this one · 为什么推这题</span>
+      <span>${round.why}</span></div>`:''}
     <div class="qcard">
       <div class="qhead">
-        <span class="qno">Q${q.id}</span><span class="qsec">${q.s} · ${SECMAP[q.s].en}</span>
-        <div class="qprog"><span class="muted" style="font-size:12px">${progLabel}</span>
+        <span class="qno">Q${q.id}</span>
+        <span class="qsec" title="${q.s} · ${SECMAP[q.s].en} · ${SECMAP[q.s].zh}">${q.s} · ${SECMAP[q.s].en}<span class="tz"> ${SECMAP[q.s].zh}</span></span>
+        <div class="qprog" title="Round ${cy.n} · 第 ${cy.n} 轮">
+          <span class="muted" style="font-size:12px">${progLabel}</span>
           <span class="track"><i style="width:${pct}%"></i></span></div>
       </div>
       <div class="qbody"><img class="qimg" src="q/q${String(q.id).padStart(3,'0')}.png" alt="Question ${q.id}"></div>
@@ -752,14 +924,18 @@ function viewQuiz(){
       }).join('')}</div>
       ${fb}
     </div>
-    <div style="display:flex;gap:10px;margin-top:14px;align-items:center">
-      <button class="btn ghost" onclick="route('home')">Exit</button>
+    <div style="display:flex;gap:8px;margin-top:14px;align-items:center;flex-wrap:wrap">
+      <button class="btn ghost" onclick="route('home')">Exit <span class="zhx">退出</span></button>
+      ${solo? `<button class="btn ghost sm" onclick="skipQ()">Skip question <span class="zhx">跳过这题</span></button>
+      <button class="btn ghost sm" onclick="skipSec()">Skip topic <span class="zhx">跳过这类</span></button>`:''}
       <div class="spacer" style="flex:1"></div>
       ${shown? (solo
         ? `<button class="btn pri" onclick="start('smart')">Next question &rarr;</button>`
         : `<button class="btn pri" onclick="advance()">${round.i+1>=round.list.length?'See results':'Next question'}</button>`):''}
     </div>
-    <p class="muted" style="text-align:center;margin-top:14px">Pick a letter. The full worked solution appears straight after.</p>
+    <p class="muted" style="text-align:center;margin-top:14px">${solo
+      ? 'Shortcut: <b>A–E</b> to answer · <b>S</b> to skip the question · <b>T</b> to skip the topic.'
+      : 'Pick a letter. The full worked solution appears straight after.'}</p>
   </div></div>`;
   paintTop();
 }
@@ -772,6 +948,7 @@ function pick(L){
   store.h[q.id]={a:L, ok, t:Date.now()};
   if(ok){ store.streak++; if(store.streak>store.best) store.best=store.streak; }
   else store.streak=0;
+  markCycle(q.s);
   save(); viewQuiz(); renderMath();
   const fb = document.querySelector('.fb');
   if(fb && fb.getBoundingClientRect().bottom > innerHeight - 8){
@@ -789,6 +966,12 @@ function viewPq(){
   const id=round.list[round.i], q=BYID[id];
   const p=String(q.p).padStart(3,'0');
   const picked=round.picked, shown=picked!==null;
+  // inside a smart round the originals are served one at a time, mixed with the
+  // graded items, so grading must hand over to "next" instead of ending a round
+  const solo = round.mode==='smart' && round.list.length===1;
+  const graded = solo && round.marked;
+  const cy = cycleInfo();
+  const unLeft = solo? SECS.length-cy.seen : 0;
   const letters=['A','B','C','D','E'];
   const opts = letters.map(L=>{
     let cls='opt';
@@ -806,32 +989,47 @@ function viewPq(){
       <div style="padding:2px 14px 14px">
         <a href="pq/p${p}_s.jpg" target="_blank" title="Open full size">
           <img class="qimg" src="pq/p${p}_s.jpg" alt="Solution"></a></div>
-      <div style="display:flex;gap:10px;padding:0 14px 16px">
-        <button class="btn pri" onclick="gradePq(1)">My pick was right</button>
-        <button class="btn ghost" onclick="gradePq(0)">I missed it</button>
+      <div style="display:flex;gap:10px;padding:0 14px 16px;align-items:center">
+        ${graded
+          ? `<span class="muted" style="font-size:13px">Recorded — you marked this ${store.h[q.id]&&store.h[q.id].ok? 'correct':'as missed'}.</span>`
+          : `<button class="btn pri" onclick="gradePq(1)">My pick was right</button>
+        <button class="btn ghost" onclick="gradePq(0)">I missed it</button>`}
       </div>
     </div>` : '';
   document.getElementById('view').innerHTML = `
   <div class="wrap"><div class="qwrap">
+    ${solo && round.why? `<div class="why"><span class="tag">Why this one · 为什么推这题</span>
+      <span>${round.why}</span></div>`:''}
     <div class="qcard">
       <div class="qhead">
         <span class="qno" style="background:#9a6a1c">P${q.p}</span>
-        <span class="qsec">${q.s} · ${SECMAP[q.s].en}</span>
-        <div class="qprog"><span class="muted" style="font-size:12px">Originals · ${round.i+1}/${round.list.length}</span>
-          <span class="track"><i style="width:${Math.round(round.i/round.list.length*100)}%"></i></span></div>
+        <span class="qsec" title="${q.s} · ${SECMAP[q.s].en} · ${SECMAP[q.s].zh}">${q.s} · ${SECMAP[q.s].en}<span class="tz"> ${SECMAP[q.s].zh}</span></span>
+        <div class="qprog" title="Round ${cy.n} · 第 ${cy.n} 轮">
+          <span class="muted" style="font-size:12px">${solo
+          ? 'Phase '+(untouchedSecs().length?1:2)+' · '+cy.seen+'/'+SECS.length+' topics'
+          : 'Originals · '+(round.i+1)+'/'+round.list.length}</span>
+          <span class="track"><i style="width:${solo
+            ? Math.round((SECS.length-unLeft)/SECS.length*100)
+            : Math.round(round.i/round.list.length*100)}%"></i></span></div>
       </div>
       <div class="qbody"><img class="qimg" src="pq/p${p}_q.jpg" alt="Question"></div>
       <div class="opts">${opts}</div>
       ${reveal}
     </div>
-    <div style="display:flex;gap:10px;margin-top:14px;align-items:center">
-      <button class="btn ghost" onclick="route('home')">Exit</button>
+    <div style="display:flex;gap:8px;margin-top:14px;align-items:center;flex-wrap:wrap">
+      <button class="btn ghost" onclick="route('home')">Exit <span class="zhx">退出</span></button>
+      ${solo? `<button class="btn ghost sm" onclick="skipQ()">Skip question <span class="zhx">跳过这题</span></button>
+      <button class="btn ghost sm" onclick="skipSec()">Skip topic <span class="zhx">跳过这类</span></button>`:''}
       <div class="spacer" style="flex:1"></div>
-      ${shown? `<button class="btn ghost" onclick="advance()">${round.i+1>=round.list.length?'Skip to results':'Skip'}</button>`:''}
+      ${shown? (solo
+        ? (graded? `<button class="btn pri" onclick="start('smart')">Next question &rarr;</button>`: '')
+        : `<button class="btn ghost" onclick="advance()">${round.i+1>=round.list.length?'Skip to results':'Skip'}</button>`):''}
     </div>
     <p class="muted" style="text-align:center;margin-top:14px">${shown
-      ? 'Compare with the printed answer, then mark your own attempt.'
-      : 'Pick the letter you would have chosen. Nothing is scored until you mark it.'}</p>
+      ? (graded? 'Marked. The engine picks the next item from whatever you keep missing.'
+               : 'Compare with the printed answer, then mark your own attempt.')
+      : (solo? 'Pick the letter you would have chosen, or skip — <b>S</b> skips the question, <b>T</b> the whole topic.'
+              : 'Pick the letter you would have chosen. Nothing is scored until you mark it.')}</p>
   </div></div>`;
   paintTop();
 }
@@ -847,7 +1045,12 @@ function gradePq(ok){
   store.h[q.id]={a:round.picked, ok:!!ok, t:Date.now(), self:1};
   if(ok){ store.streak++; if(store.streak>store.best) store.best=store.streak; }
   else store.streak=0;
-  save(); advance();
+  if(round.mode==='smart') markCycle(q.s);
+  save();
+  if(round.mode==='smart' && round.list.length===1){
+    round.marked=true; viewQuiz(); return;   // smart round: wait for "next"
+  }
+  advance();
 }
 
 function viewRes(){
@@ -862,7 +1065,8 @@ function viewRes(){
       return {s, b, p};
     }).sort((a,b)=>a.p-b.p).map(r=>{
       const s=r.s, b=r.b, p=r.p;
-      return '<div class="sec-row"><span class="sec-id">'+s+'</span><span class="sec-t">'+SECMAP[s].en+'</span>'
+      return '<div class="sec-row"><span class="sec-id">'+s+'</span><span class="sec-t">'+SECMAP[s].en
+        +(SECMAP[s].zh? '<span class="tz">'+SECMAP[s].zh+'</span>':'')+'</span>'
         +'<span class="bar"><i class="'+(p>=80?'ok':(p>=50?'warn':'bad'))+'" style="width:'+Math.max(p,6)+'%"></i></span>'
         +'<span class="sec-n">'+b.ok+'/'+b.n+'</span></div>';
     }).join('');
@@ -872,18 +1076,19 @@ function viewRes(){
   document.getElementById('view').innerHTML=`
   <div class="wrap"><div class="res">
     <div class="card" style="text-align:center;padding:30px 24px">
-      <div class="k">${round.mode==='mock'?'Mock test complete':(round.mode==='wrong'?'Repair round complete':(round.mode==='pq'?'Originals round complete':'Round complete'))}</div>
+      <div class="k">${round.mode==='mock'?'Mock test complete':(round.mode==='wrong'?'Repair round complete':(round.mode==='pq'?'Originals round complete':'Round complete'))}
+        <span class="zhx">${round.mode==='mock'?'模拟卷完成':(round.mode==='wrong'?'错题复习完成':(round.mode==='pq'?'原题一组完成':'本轮完成'))}</span></div>
       <div class="bigscore">${pct}%</div>
       <p class="muted" style="margin-top:6px">${ok} of ${total} correct${round.mode==='mock'?' · 20-item mock':' · this round'}</p>
       ${total? `<p style="margin-top:10px">${round.list.map(id=>{
           const r=store.h[id]; const nm = id>=1000? 'P'+(id-1000) : 'Q'+id;
           return `<span class="pill">${nm} ${r&&r.ok?'✓':'✕'}</span>`;}).join('')}</p>`:''}
     </div>
-    ${rows? '<div class="card" style="margin-top:14px"><h3>By topic</h3>'+rows+'</div>':''}
+    ${rows? '<div class="card" style="margin-top:14px"><h3>By topic <span class="tz">按考点</span></h3>'+rows+'</div>':''}
     <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
       <button class="btn pri" onclick="start('${round.mode==='pq'?'pq':'smart'}')">${round.mode==='pq'?'Another set of 10':'Continue smart round'}</button>
-      <button class="btn ghost" onclick="start('wrong')">Drill my mistakes</button>
-      <button class="btn ghost" onclick="route('home')">Back to overview</button>
+      <button class="btn ghost" onclick="start('wrong')">Drill my mistakes <span class="zhx">只刷错题</span></button>
+      <button class="btn ghost" onclick="route('home')">Back to overview <span class="zhx">返回首页</span></button>
     </div>
   </div></div>`;
   paintTop();
@@ -893,11 +1098,13 @@ let refTab='topics', refCh='all';
 function viewRef(tab, ch){
   if(tab) refTab=tab;
   if(ch!==undefined) refCh=ch;
-  const tabs = [['topics','Topics '+REF.length],['forms','Formula sheet'],['gloss','Terminology']]
+  const tabs = [['topics','Topics <span class="zhx">考点</span> '+REF.length],
+                ['forms','Formula sheet <span class="zhx">公式表</span>'],
+                ['gloss','Terminology <span class="zhx">术语表</span>']]
     .map(p=>`<button class="${refTab===p[0]?'on':''}" onclick="viewRef('${p[0]}')">${p[1]}</button>`).join('');
   let body='';
   if(refTab==='topics'){
-    const chips = [`<button class="${refCh==='all'?'on':''}" onclick="viewRef('topics','all')">All chapters</button>`]
+    const chips = [`<button class="${refCh==='all'?'on':''}" onclick="viewRef('topics','all')">All chapters <span class="zhx">全部章节</span></button>`]
       .concat(CHS.map((c,i)=>`<button class="${refCh===i?'on':''}" onclick="viewRef('topics',${i})">Ch ${i+1}</button>`)).join('');
     body = `<div class="tabs">${chips}</div>` + CHS.map((c,i)=>{
       if(refCh!=='all' && refCh!==i) return '';
@@ -907,13 +1114,14 @@ function viewRef(tab, ch){
         + list.map(r=>`<div class="ref-card" id="r${r.id}">
             <div class="ref-h"><span class="ref-id">${r.id}</span><span class="ref-en">${r.en}</span>
               <span class="ref-zh">${r.zh}</span></div>
-            <div class="ref-k">What it tests</div><p class="ref-focus">${r.focus}</p>
-            <div class="ref-k">How to do it</div><ol class="ref-steps">${r.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+            <div class="ref-k">What it tests <span class="zhx">考什么</span></div><p class="ref-focus">${r.focus}</p>
+            <div class="ref-k">How to do it <span class="zhx">怎么做</span></div><ol class="ref-steps">${r.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
             ${r.note? `<p class="ref-note">${r.note}</p>`:''}
-            ${r.trap? `<div class="ref-trap"><b>Trap</b> &middot; ${r.trap}</div>`:''}
+            ${r.trap? `<div class="ref-trap"><b>Trap</b> &middot; <span class="zhx" style="color:var(--red)">易错点</span> ${r.trap}</div>`:''}
             <div style="margin-top:11px;display:flex;gap:8px;flex-wrap:wrap">
-              <button class="btn ghost" onclick="startTopic('${r.id}')">Drill ${r.n} items</button>
-              ${PQBYSEC[r.id]? `<button class="btn ghost" onclick="startTopicPq('${r.id}')">${PQBYSEC[r.id].length} originals</button>`:''}
+              <button class="btn ghost" onclick="startTopic('${r.id}')">Drill ${r.n} graded <span class="zhx">精编</span></button>
+              ${PQBYSEC[r.id]? `<button class="btn ghost" onclick="startTopicPq('${r.id}')">${PQBYSEC[r.id].length} originals <span class="zhx">原题</span></button>`:''}
+              <button class="btn ghost" onclick="startTopicAll('${r.id}')">Whole topic <span class="zhx">整个考点</span></button>
             </div></div>`).join('');
     }).join('');
   } else if(refTab==='forms'){
@@ -928,8 +1136,9 @@ function viewRef(tab, ch){
   document.getElementById('view').innerHTML = `
   <div class="wrap">
     <div style="display:flex;align-items:baseline;gap:12px;margin:26px 0 14px;flex-wrap:wrap">
-      <h2 style="margin:0;font-size:22px">Reference</h2>
-      <span class="muted">method &middot; steps &middot; trap for every topic, plus the formula sheet and terminology</span></div>
+      <h2 style="margin:0;font-size:22px">Reference <span class="tz" style="font-size:14px">考点手册</span></h2>
+      <span class="muted">method &middot; steps &middot; trap for every topic, plus the formula sheet and terminology
+        <span class="zhx">每个考点的方法、步骤与陷阱，附公式表和术语表</span></span></div>
     <div class="tabs">${tabs}</div>
     ${body}
     <p class="muted" style="margin:22px 0 40px;text-align:center">
@@ -950,16 +1159,17 @@ function viewBrowse(ch){
   document.getElementById('view').innerHTML=`
   <div class="wrap"><div class="res">
     <div class="card">
-      <h3 style="margin-bottom:2px">The whole bank</h3>
+      <h3 style="margin-bottom:2px">The whole bank <span class="tz" style="font-size:12.5px">全部题库</span></h3>
       <p class="muted">All ${UNI.length} items in one index — ${ITEMS.length} compiled (Q) and
-        ${PQ.length} from your own attempts (P). Tap a number to open it on its own.</p>
+        ${PQ.length} from your own attempts (P). Tap a number to open it on its own.
+        <span class="zhx">674 道题汇总：351 道精编（Q）+ 323 道练习卷原题（P），点编号单独打开。</span></p>
       <div class="filter" id="idxType"></div>
       <div class="filter" id="idxCh"></div>
-      <div class="idxsearch"><input id="idxQ" placeholder="Find a number — 12, Q12, P7, or a topic id like 2.5" oninput="setSearch(this.value)"></div>
+      <div class="idxsearch"><input id="idxQ" placeholder="Find a number — 12, Q12, P7, or a topic id like 2.5 / 搜题号或考点" oninput="setSearch(this.value)"></div>
       <div class="idxmeta" id="idxMeta"></div>
       <div class="idxgrid" id="idxGrid"></div>
     </div>
-    <div style="margin-top:14px"><button class="btn ghost" onclick="route('home')">Back</button></div>
+    <div style="margin-top:14px"><button class="btn ghost" onclick="route('home')">Back <span class="zhx">返回</span></button></div>
   </div></div>`;
   paintIdx();
   paintTop();
@@ -974,9 +1184,11 @@ function setSearch(v){
 function paintIdx(){
   const tEl=document.getElementById('idxType'), cEl=document.getElementById('idxCh');
   if(!tEl||!cEl) return;
-  tEl.innerHTML=[['all','All '+UNI.length],['q','Compiled '+ITEMS.length],['p','Originals '+PQ.length]]
+  tEl.innerHTML=[['all','All <span class="zhx">全部</span> '+UNI.length],
+                 ['q','Compiled <span class="zhx">精编</span> '+ITEMS.length],
+                 ['p','Originals <span class="zhx">原题</span> '+PQ.length]]
     .map(([k,t])=>`<button class="${browseType===k?'on':''}" onclick="setType('${k}')">${t}</button>`).join('');
-  cEl.innerHTML=['<button class="'+(browseCh==='all'?'on':'')+'" onclick="viewBrowse(\'all\')">All chapters</button>']
+  cEl.innerHTML=['<button class="'+(browseCh==='all'?'on':'')+'" onclick="viewBrowse(\'all\')">All chapters <span class="zhx">全部章节</span></button>']
     .concat(CHS.map((c,i)=>`<button class="${browseCh==i?'on':''}" onclick="viewBrowse(${i})">Ch ${i+1}</button>`)).join('');
 
   const box=document.getElementById('idxQ');
@@ -1003,12 +1215,12 @@ function paintIdx(){
     const st=r?(r.ok?'ok':'bad'):'new';
     const sec=SECMAP[it.s];
     return `<button class="idx-b ${st}${it.p?' p':''}" onclick="startSingle(${it.id})"
-      title="${it.lb} · ${it.s}${sec? ' · '+sec.en : ''}"><b>${it.lb}</b><i>${it.s}</i>${r?(r.ok?'<u>✓</u>':'<u>✕</u>'):''}</button>`;
+      title="${it.lb} · ${it.s}${sec? ' · '+sec.en+' · '+sec.zh : ''}"><b>${it.lb}</b><i>${it.s}</i>${r?(r.ok?'<u>✓</u>':'<u>✕</u>'):''}</button>`;
   }).join('');
   const meta=document.getElementById('idxMeta'), grid=document.getElementById('idxGrid');
   meta.textContent=list.length
-    ? `${list.length} item${list.length===1?'':'s'} · ${seen} attempted · ${ok} correct`
-    : 'Nothing matches that filter.';
+    ? `${list.length} item${list.length===1?'':'s'} · ${seen} attempted · ${ok} correct ／ 共 ${list.length} 题，已做 ${seen}，正确 ${ok}`
+    : 'Nothing matches that filter. ／ 没有匹配的题目。';
   grid.innerHTML=cells || '<p class="muted" style="padding:8px 0;grid-column:1/-1">No item in this slice.</p>';
 }
 function startSingle(id){
@@ -1027,9 +1239,13 @@ const _route=route;
 route=function(v,a){ _route(v,a); renderMath(); };
 
 document.addEventListener('keydown',e=>{
+  if(e.target && /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
   const L=['a','b','c','d','e'], k=e.key.toLowerCase();
+  const solo = round.mode==='smart' && round.list.length===1;
   if(L.includes(k)){ const b=[...document.querySelectorAll('.opt')][L.indexOf(k)];
     if(b&&!b.disabled) b.click(); }
+  if(solo && k==='s'){ skipQ(); return; }
+  if(solo && k==='t'){ skipSec(); return; }
   if(e.key==='Enter'){ const n=[...document.querySelectorAll('.btn.pri')].pop(); if(n) n.click(); }
 });
 paintTop(); viewHome(); renderMath();

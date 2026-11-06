@@ -55,19 +55,37 @@ SQLite on the server. Reset clears both.
 
 ## Using it / 怎么用
 
-- **Practice** — smart round. Phase 1 walks one question from every topic; phase 2
-  re-weights towards whatever you keep missing. Both decks are in the same pool,
-  so the round covers all 674 items: a topic counts as *started* when either a
-  graded item **or** one of its originals has an answer, and once a topic's
-  graded items are used up the engine serves its originals (self-marked, gold `P`
-  badge). Accuracy stays graded-only — the originals never dilute the figure the
-  engine steers by.
+- **Practice** — the smart round, one question at a time over all 674 items.
+  - **Phase 1 — coverage.** Every topic is served once, in syllabus order. A topic
+    counts as *started* when a graded item **or** one of its originals has an answer.
+  - **Phase 2 — weakness.** Every topic is scored and the highest wins:
+    `5·min(open mistakes, 3)` + `2.2·(1−accuracy)·min(answered, 4)` +
+    `1.5·(1−coverage)` + `0.7·min(days since last try, 30)/7`, minus `1.2` for the
+    topic served last. Open mistakes dominate, so a finished round always reopens on
+    what you got wrong; the anti-repeat term only breaks near-ties.
+  - **Inside the winning topic** the engine re-tests *the exact item you missed*
+    first, then something you have never seen, then the stalest item.
+  - **Rounds.** Each answer marks its topic as seen; when all 54 are seen the round
+    counter advances and the next round starts from the error list.
+  - **Skip.** *Skip question* (key `S`) hides that item for 12 h, *Skip topic*
+    (key `T`) hides the whole topic — both jump straight to the next pick. The home
+    screen lists how much is skipped and clears it in one click.
+  - The card states **why** it chose that item, in both languages
+    ("3 open mistakes in this topic · 这类还有 3 道错题没订正").
+- **Topic mastery** measures each topic across both decks: `done/total` counts
+  graded **and** originals, the bar is coverage, its colour is accuracy, and
+  `n✕` is the number of open mistakes. Clicking a row drills the whole topic,
+  graded first.
 - **Quiz originals · 10** — the 323 items you were served, self-marked against the
   printed answer.
 - **Reference** — 54 topics × (what it tests · how to do it · the trap), formula
-  sheet, terminology.
+  sheet, terminology; each topic can be drilled as graded-only, originals-only or
+  the whole topic.
 - **Bank** — all 674 items in one index: filter by compiled/originals and by
   chapter, or jump straight to `Q12`, `P7` or a topic id such as `2.5`.
+- **Bilingual** — every module carries Chinese beside the English (topic names,
+  card labels, reference headings, the mastery table, the account dialog). English
+  stays primary; Chinese never replaces a label.
 - Deep links: `#pq`, `#ref`, `#bank`.
 
 ## Accounts & sync / 账号与同步
