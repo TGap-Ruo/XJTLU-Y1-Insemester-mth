@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>MTH026 · Admin 后台管理</title>
+<style>
+:root{
+  --ink:#101827; --ink2:#3a4759; --ink3:#6c7b90; --ink4:#96a3b4;
+  --line:#e3e9f1; --line2:#eef3f8; --bg:#f4f7fb; --paper:#fff;
+  --pri:#16406e; --pri2:#2c6ba8; --pri3:#eaf1fa;
+  --gold:#9a6a1c; --gold-bg:#fdf7ea; --gold-line:#eddfc0;
+  --red:#b3261e; --red-bg:#fdf0ef; --red-line:#f2cfcb;
+  --green:#1d6b47; --green-bg:#edf8f1; --green-line:#bfe2cd;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.zh{color:var(--ink3);font-size:12px;margin-left:6px;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+button{font:inherit;cursor:pointer}
+input,select{font:inherit;color:inherit}
+.hide{display:none !important}
+
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  padding:10px 20px;background:var(--paper);border-bottom:1px solid var(--line)}
+.mark{width:32px;height:32px;border-radius:8px;background:var(--pri);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
+.brand{font-weight:700;line-height:1.2}
+.brand small{display:block;font-size:10.5px;font-weight:500;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink3);white-space:nowrap}
+.sp{flex:1}
+.pill{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--pri3);
+  color:var(--pri);font-weight:600;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);
+  background:var(--paper);color:var(--ink2);border-radius:8px;padding:7px 13px;
+  font-size:13px;white-space:nowrap;transition:.15s}
+.btn:hover{border-color:#cbd6e3;background:#fbfdff}
+.btn.pri{background:var(--pri);border-color:var(--pri);color:#fff}
+.btn.pri:hover{background:#123457}
+.btn.danger{color:var(--red);border-color:var(--red-line);background:var(--red-bg)}
+.btn.danger:hover{background:#fbe4e1}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sm{padding:4px 9px;font-size:12px;border-radius:6px}
+
+.gate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.gate .card{width:100%;max-width:390px;background:var(--paper);border:1px solid var(--line);
+  border-radius:14px;padding:28px 26px;box-shadow:0 12px 40px rgba(16,24,39,.07)}
+.gate h1{margin:14px 0 4px;font-size:20px;letter-spacing:-.01em}
+.gate p{margin:0 0 20px;color:var(--ink3);font-size:13px}
+.fld{margin-bottom:12px}
+.fld label{display:block;font-size:12px;font-weight:600;color:var(--ink2);margin-bottom:5px}
+.fld input,.fld select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;
+  background:#fbfdff;outline:none}
+.fld input:focus,.fld select:focus{border-color:var(--pri2);background:#fff;box-shadow:0 0 0 3px rgba(44,107,168,.12)}
+.err{min-height:18px;color:var(--red);font-size:12.5px;margin:2px 0 10px}
+.tiny{font-size:11.5px;color:var(--ink4);margin-top:14px;line-height:1.6}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;background:#f2f6fb;padding:1px 4px;border-radius:4px}
+
+.wrap{max-width:1180px;margin:0 auto;padding:20px}
+h2{font-size:15px;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+h2 .zh{margin-left:0}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:18px}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+.kpi .k{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink3)}
+.kpi .v{font-size:23px;font-weight:700;letter-spacing:-.02em;margin-top:2px;font-variant-numeric:tabular-nums}
+.kpi .s{font-size:11.5px;color:var(--ink4);margin-top:1px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:18px}
+.split{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}
+@media(max-width:900px){.split{grid-template-columns:1fr}.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr)}.wrap{padding:14px}}
+
+.bars{display:flex;align-items:flex-end;gap:5px;height:112px;margin-top:8px}
+.bars .b{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;gap:3px}
+.bars .b i{display:block;background:linear-gradient(180deg,var(--pri2),#5b93c8);border-radius:3px 3px 0 0;min-height:2px}
+.bars .b.today i{background:linear-gradient(180deg,var(--gold),#c39441)}
+.bars .b span{text-align:center;font-size:10px;color:var(--ink3);font-variant-numeric:tabular-nums;line-height:1.2}
+.barsx{display:flex;gap:5px;margin-top:4px}
+.barsx span{flex:1;text-align:center;font-size:9px;color:var(--ink4);white-space:nowrap}
+@media(max-width:640px){
+  .top{padding:8px 12px;gap:8px}
+  .brand small{display:none}
+  #livePill{display:none}
+  .top .btn .zh{display:none}
+}
+
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.tools input[type=search]{flex:1;min-width:180px;padding:8px 11px;border:1px solid var(--line);
+  border-radius:8px;background:#fbfdff;outline:none}
+.tools input[type=search]:focus{border-color:var(--pri2);background:#fff}
+.tools select{padding:8px 9px;border:1px solid var(--line);border-radius:8px;background:#fbfdff}
+.meta{font-size:12px;color:var(--ink3);margin-bottom:8px;font-variant-numeric:tabular-nums}
+.tblwrap{overflow-x:auto;margin:0 -4px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);
+  font-weight:600;padding:8px 9px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px;border-bottom:1px solid var(--line2);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#fafcff}
+.who b{display:block;font-weight:600}
+.who em{font-style:normal;font-size:11px;color:var(--ink4);font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.acc{display:flex;align-items:center;gap:7px;min-width:96px}
+.acc .t{width:46px;height:5px;border-radius:999px;background:var(--line);overflow:hidden;flex:none}
+.acc .t i{display:block;height:100%;border-radius:999px}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;
+  border:1px solid transparent;white-space:nowrap;font-weight:600}
+.tag.ok{background:var(--green-bg);color:var(--green);border-color:var(--green-line)}
+.tag.ban{background:var(--red-bg);color:var(--red);border-color:var(--red-line)}
+.tag.idle{background:#f3f6fa;color:var(--ink3);border-color:var(--line)}
+.tag.new{background:var(--gold-bg);color:var(--gold);border-color:var(--gold-line)}
+.acts{display:flex;gap:5px;justify-content:flex-end;flex-wrap:nowrap}
+.only-narrow{display:none}
+@media(max-width:760px){.wide-only{display:none}.only-narrow{display:inline-flex}}
+.menu{display:flex;flex-direction:column;gap:8px}
+.menu .btn{justify-content:flex-start;width:100%}
+.empty{padding:26px;text-align:center;color:var(--ink4);font-size:13px}
+.pager{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:12.5px;color:var(--ink3)}
+@media(max-width:760px){
+  table th:nth-child(2),table td:nth-child(2),
+  table th:nth-child(4),table td:nth-child(4){display:none}
+  th,td{padding:8px 5px}
+  th:last-child{font-size:0}
+  th:last-child::after{content:"···";font-size:11px}
+  .who b{max-width:118px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .acc{min-width:72px}
+  .acts .btn{padding:4px 6px}
+  th:first-child,td:first-child{position:sticky;left:0;background:var(--paper);z-index:1}
+}
+
+.log{font-size:12.5px;max-height:320px;overflow:auto}
+.log table td{padding:6px 8px;border-bottom:1px solid var(--line2)}
+.log .a{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:var(--pri2)}
+
+.scrim{position:fixed;inset:0;background:rgba(16,24,39,.42);display:flex;align-items:center;
+  justify-content:center;padding:20px;z-index:60}
+.scrim .card{width:100%;max-width:400px;margin:0;padding:22px 22px 18px;box-shadow:0 20px 60px rgba(16,24,39,.25)}
+.scrim h3{margin:0 0 3px;font-size:16px}
+.scrim .sub{color:var(--ink3);font-size:12.5px;margin:0 0 16px}
+.scrim .row{display:flex;gap:9px;justify-content:flex-end;margin-top:16px}
+
+.toasts{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:8px;z-index:80}
+.toast{background:#111c2e;color:#fff;padding:9px 14px;border-radius:9px;font-size:13px;
+  box-shadow:0 8px 24px rgba(16,24,39,.22)}
+.toast.bad{background:var(--red)}
+</style>
+</head>
+<body>
+
+<div class="gate" id="gate">
+  <div class="card">
+    <div class="mark" style="width:38px;height:38px;font-size:15px">26</div>
+    <h1>Admin console <span class="zh">后台管理</span></h1>
+    <p>MTH026 · 674 items · 54 topics — accounts, progress, suspensions.</p>
+    <div class="fld">
+      <label for="pw">Admin password <span class="zh">管理员口令</span></label>
+      <input id="pw" type="password" autocomplete="current-password" placeholder="admin password · 口令">
+    </div>
+    <div class="err" id="gateErr"></div>
+    <button class="btn pri" id="go" style="width:100%;justify-content:center">Sign in <span class="zh" style="color:#cfe0f2">登录</span></button>
+    <p class="tiny">The password lives in <code>/opt/mth026/admin.env</code> on the box, not in the user
+      table — registering a username called “admin” grants nothing.<br>
+      口令存放在服务器环境文件，与普通用户表完全分离。</p>
+  </div>
+</div>
+
+<div id="app" class="hide">
+  <div class="top">
+    <div class="mark">26</div>
+    <div class="brand">MTH026 Admin<small>后台管理 · accounts &amp; progress</small></div>
+    <div class="sp"></div>
+    <span class="pill" id="livePill">—</span>
+    <button class="btn sm" id="refresh">Refresh <span class="zh">刷新</span></button>
+    <button class="btn sm" id="signout">Sign out <span class="zh">退出</span></button>
+  </div>
+
+  <div class="wrap">
+    <div class="grid" id="kpis"></div>
+
+    <div class="split">
+      <div class="card">
+        <h2>Registrations <span class="zh">近 14 天注册</span></h2>
+        <div class="bars" id="regBars"></div>
+        <div class="barsx" id="regAxis"></div>
+      </div>
+      <div class="card">
+        <h2>Activity <span class="zh">答题与规模</span></h2>
+        <div id="loadBox"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Users <span class="zh">用户</span></h2>
+      <div class="tools">
+        <input type="search" id="q" placeholder="Search username or id · 搜索用户名或编号">
+        <select id="sort">
+          <option value="new">Newest first · 最近注册</option>
+          <option value="active">Recently active · 最近活跃</option>
+          <option value="answered">Most answered · 答题最多</option>
+          <option value="worst">Lowest accuracy · 正确率最低</option>
+          <option value="name">Username A–Z · 用户名</option>
+        </select>
+        <button class="btn sm" id="csv">Export CSV <span class="zh">导出</span></button>
+      </div>
+      <div class="meta" id="meta">—</div>
+      <div class="tblwrap">
+        <table>
+          <thead><tr>
+            <th>User</th><th>Registered</th><th>Last seen</th><th>Sessions</th>
+            <th>Answered</th><th>Accuracy</th><th>Status</th><th style="text-align:right">Actions</th>
+          </tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div class="pager">
+        <button class="btn sm" id="prev">← Prev</button>
+        <span id="pageInfo"></span>
+        <button class="btn sm" id="next">Next →</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Audit trail <span class="zh">操作日志</span> <span class="pill" id="auditPill">—</span></h2>
+      <div class="log"><table><tbody id="audit"></tbody></table></div>
+      <p class="zh" style="margin:10px 0 0">每次写入都会记一条，保留最近 2000 条。</p>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts"></div>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+function ago(t) {
+  if (!t) return 'never';
+  const s = Math.max(0, Math.floor(Date.now() / 1000 - t));
+  if (s < 60) return s + 's ago';
+  if (s < 3600) return Math.floor(s / 60) + ' min ago';
+  if (s < 86400) return Math.floor(s / 3600) + ' h ago';
+  const d = Math.floor(s / 86400);
+  return d === 1 ? 'yesterday' : d + ' d ago';
+}
+function when(t) {
+  if (!t) return '—';
+  const d = new Date(t * 1000), p = n => String(n).padStart(2, '0');
+  return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
+}
+function bytes(n) {
+  if (!n) return '—';
+  if (n < 1024) return n + ' B';
+  if (n < 1048576) return (n / 1024).toFixed(1) + ' KB';
+  return (n / 1048576).toFixed(1) + ' MB';
+}
+function toast(msg, bad) {
+  const d = document.createElement('div');
+  d.className = 'toast' + (bad ? ' bad' : '');
+  d.textContent = msg;
+  $('#toasts').appendChild(d);
+  setTimeout(() => d.remove(), 3400);
+}
+
+async function api(path, opts) {
+  const r = await fetch(path, Object.assign({ credentials: 'same-origin' }, opts || {}));
+  if (r.status === 401) { showGate(); throw new Error('signed out'); }
+  const txt = await r.text();
+  let data = {};
+  try { data = txt ? JSON.parse(txt) : {}; } catch (e) { data = {}; }
+  if (!r.ok) throw new Error(data.error || ('HTTP ' + r.status));
+  return data;
+}
+const post = (p, body) => api(p, {
+  method: 'POST', headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(body || {})
+});
+
+const S = { rows: [], total: 0, offset: 0, limit: 50, q: '', sort: 'new', stats: null, busy: false };
+
+/* ---------------------------------------------------------------- sign in */
+function showGate() {
+  $('#app').classList.add('hide');
+  $('#gate').classList.remove('hide');
+  $('#pw').value = '';
+  setTimeout(() => $('#pw').focus(), 30);
+}
+async function signIn() {
+  const pw = $('#pw').value;
+  if (!pw) return;
+  $('#go').disabled = true;
+  $('#gateErr').textContent = '';
+  try {
+    await post('/api/admin/login', { p: pw });
+    $('#gate').classList.add('hide');
+    $('#app').classList.remove('hide');
+    boot();
+  } catch (e) {
+    $('#gateErr').textContent = /wrong/i.test(e.message) ? 'Wrong password · 口令错误' : e.message;
+  } finally {
+    $('#go').disabled = false;
+  }
+}
+$('#go').addEventListener('click', signIn);
+$('#pw').addEventListener('keydown', e => { if (e.key === 'Enter') signIn(); });
+
+/* ---------------------------------------------------------------- KPIs */
+function paintStats(s) {
+  const acc = s.answered ? Math.round(s.correct * 100 / s.answered) : null;
+  const cards = [
+    ['Users', '用户', s.users, s.new_7d + ' new this week'],
+    ['New today', '今日新增', s.new_today, 'since local midnight'],
+    ['Active 7d', '近7天活跃', s.active_7d, s.sessions + ' sessions total'],
+    ['Answered', '累计答题', s.answered.toLocaleString(), (acc === null ? '—' : acc + '% correct')],
+    ['Suspended', '封禁中', s.banned, s.banned ? 'logins refused' : 'all clear'],
+    ['Database', '数据库', bytes(s.db_bytes), s.audit + ' audit lines'],
+  ];
+  $('#kpis').innerHTML = cards.map(c =>
+    '<div class="kpi"><div class="k">' + c[0] + ' <span class="zh">' + c[1] + '</span></div>' +
+    '<div class="v">' + c[2] + '</div><div class="s">' + esc(c[3]) + '</div></div>').join('');
+
+  const max = Math.max(1, ...s.regs.map(r => r.n));
+  $('#regBars').innerHTML = s.regs.map((r, i) =>
+    '<div class="b' + (i === s.regs.length - 1 ? ' today' : '') + '" title="' + r.d + ' · ' + r.n + ' new">' +
+    '<span>' + (r.n ? r.n : '') + '</span>' +
+    '<i style="height:' + Math.max(2, Math.round(r.n / max * 82)) + 'px"></i></div>').join('');
+  $('#regAxis').innerHTML = s.regs.map((r, i) =>
+    '<span>' + (i % 2 === 0 || i === s.regs.length - 1 ? r.d : '') + '</span>').join('');
+
+  $('#loadBox').innerHTML =
+    '<div class="kpi" style="border:none;padding:0">' +
+    '<div style="display:flex;gap:22px;flex-wrap:wrap">' +
+    '<div><div class="k">Correct <span class="zh">答对</span></div><div class="v">' + s.correct +
+      '<small style="font-size:13px;color:var(--ink3)"> / ' + s.answered + '</small></div></div>' +
+    '<div><div class="k">Originals <span class="zh">原题</span></div><div class="v">' + s.originals + '</div></div>' +
+    '<div><div class="k">Progress rows <span class="zh">进度记录</span></div><div class="v">' + s.progress_rows + '</div></div>' +
+    '</div>' +
+    '<div style="margin-top:14px"><div class="k" style="margin-bottom:5px">Overall accuracy <span class="zh">总体正确率</span></div>' +
+    '<div class="acc" style="min-width:0"><span class="t" style="width:100%;height:7px"><i style="width:' +
+      (acc === null ? 0 : acc) + '%;background:' + (acc === null ? 'var(--line)' : (acc >= 70 ? 'var(--green)' : (acc >= 45 ? 'var(--gold)' : 'var(--red)'))) +
+      '"></i></span><b>' + (acc === null ? '—' : acc + '%') + '</b></div></div>' +
+    '<p class="zh" style="margin:14px 0 0">原题（id ≥ 1000）是自评，单独计数；正确率是否采用由前台决定。</p>' +
+    '</div>';
+  $('#livePill').textContent = 'live · ' + new Date().toLocaleTimeString();
+}
+
+/* ---------------------------------------------------------------- rows */
+function statusTag(r) {
+  if (r.banned) return '<span class="tag ban" title="until ' + when(r.banned) + '">suspended</span>';
+  if (r.answered === 0 && !r.last) return '<span class="tag idle">never used</span>';
+  if (r.last && (Date.now() / 1000 - r.last) < 86400) return '<span class="tag ok">active</span>';
+  return '<span class="tag idle">idle</span>';
+}
+function paintRows() {
+  const tbody = $('#rows');
+  if (!S.rows.length) {
+    tbody.innerHTML = '<tr><td colspan="8" class="empty">Nobody matches that search · 没有匹配的用户</td></tr>';
+  } else {
+    tbody.innerHTML = S.rows.map(r => {
+      const acc = r.acc;
+      const col = acc === null ? 'var(--line)' : (acc >= 70 ? 'var(--green)' : (acc >= 45 ? 'var(--gold)' : 'var(--red)'));
+      return '<tr>' +
+        '<td class="who"><b>' + esc(r.display) + '</b><em>#' + r.id + ' · ' + esc(r.name) + '</em></td>' +
+        '<td class="num" title="' + when(r.created) + '">' + ago(r.created) + '</td>' +
+        '<td class="num" title="' + when(r.last) + '">' + ago(r.last) + '</td>' +
+        '<td class="num">' + r.sessions + '</td>' +
+        '<td class="num">' + r.answered + (r.answered ? ' <span style="color:var(--ink4)">(' + r.correct + ' ✓)</span>' : '') + '</td>' +
+        '<td><div class="acc"><span class="t"><i style="width:' + (acc === null ? 0 : acc) + '%;background:' + col + '"></i></span>' +
+          '<span class="num">' + (acc === null ? '—' : acc + '%') + '</span></div></td>' +
+        '<td>' + statusTag(r) + '</td>' +
+        '<td><div class="acts wide-only">' +
+          '<button class="btn sm" data-act="pw" data-id="' + r.id + '" data-name="' + esc(r.name) + '">Password</button>' +
+          '<button class="btn sm" data-act="reset" data-id="' + r.id + '" data-name="' + esc(r.name) + '">Clear</button>' +
+          '<button class="btn sm" data-act="kick" data-id="' + r.id + '" data-name="' + esc(r.name) + '">Sign out</button>' +
+          (r.banned
+            ? '<button class="btn sm" data-act="unban" data-id="' + r.id + '" data-name="' + esc(r.name) + '">Unban</button>'
+            : '<button class="btn sm danger" data-act="ban" data-id="' + r.id + '" data-name="' + esc(r.name) + '">Ban</button>') +
+          '<button class="btn sm danger" data-act="del" data-id="' + r.id + '" data-name="' + esc(r.name) + '">Delete</button>' +
+        '</div><button class="btn sm only-narrow" data-act="more" data-id="' + r.id + '" data-name="' + esc(r.name) + '" title="More actions">⋯</button></td></tr>';
+    }).join('');
+  }
+  const from = S.total ? S.offset + 1 : 0;
+  const to = Math.min(S.offset + S.limit, S.total);
+  $('#meta').textContent = S.total + ' user' + (S.total === 1 ? '' : 's') +
+    (S.q ? ' matching “' + S.q + '”' : '') + ' · signed-in accounts only, progress rows are per user';
+  $('#pageInfo').textContent = from + '–' + to + ' of ' + S.total;
+  $('#prev').disabled = S.offset <= 0;
+  $('#next').disabled = S.offset + S.limit >= S.total;
+}
+
+async function loadUsers() {
+  const qs = '?q=' + encodeURIComponent(S.q) + '&sort=' + S.sort +
+             '&limit=' + S.limit + '&offset=' + S.offset;
+  const d = await api('/api/admin/users' + qs);
+  S.rows = d.rows;
+  S.total = d.total;
+  paintRows();
+}
+
+async function loadAudit() {
+  const d = await api('/api/admin/audit');
+  $('#auditPill').textContent = d.rows.length + ' recent';
+  $('#audit').innerHTML = d.rows.length ? d.rows.map(r =>
+    '<tr><td class="num" style="width:120px" title="' + when(r.t) + '">' + ago(r.t) + '</td>' +
+    '<td class="a" style="width:150px">' + esc(r.a) + '</td>' +
+    '<td class="num" style="width:70px">' + esc(r.target || '—') + '</td>' +
+    '<td>' + esc(r.d || '') + '</td>' +
+    '<td class="num" style="width:120px;color:var(--ink4)">' + esc(r.ip || '') + '</td></tr>').join('')
+    : '<tr><td class="empty">No writes yet · 暂无操作</td></tr>';
+}
+
+async function refresh() {
+  try {
+    const s = await api('/api/admin/stats');
+    S.stats = s;
+    paintStats(s);
+    await Promise.all([loadUsers(), loadAudit()]);
+  } catch (e) {
+    if (e.message !== 'signed out') toast(e.message, true);
+  }
+}
+
+/* ---------------------------------------------------------------- modal */
+let closeModal = null;
+function modal(cfg) {
+  const sc = document.createElement('div');
+  sc.className = 'scrim';
+  const menu = cfg.actions
+    ? '<div class="menu">' + cfg.actions.map((a, i) =>
+        '<button class="btn ' + (a.danger ? 'danger' : '') + '" data-a="' + i + '">' + a.label + '</button>').join('') +
+      '</div>'
+    : '';
+  sc.innerHTML = '<div class="card"><h3>' + cfg.title + '</h3>' +
+    '<p class="sub">' + cfg.sub + '</p>' + menu +
+    (cfg.field ? '<div class="fld"><label>' + cfg.field.label + '</label>' +
+      '<input id="mv" type="' + (cfg.field.type || 'text') + '" value="' + (cfg.field.value || '') +
+      '" placeholder="' + (cfg.field.ph || '') + '"></div>' : '') +
+    '<div class="err" id="mErr"></div>' +
+    '<div class="row"><button class="btn" data-x="0">' + (cfg.actions ? 'Close' : 'Cancel') +
+    ' <span class="zh">' + (cfg.actions ? '关闭' : '取消') + '</span></button>' +
+    (cfg.actions ? '' : '<button class="btn ' + (cfg.danger ? 'danger' : 'pri') + '" data-x="1">' + cfg.ok + '</button>') +
+    '</div></div>';
+  document.body.appendChild(sc);
+  const input = $('#mv', sc);
+  if (input) setTimeout(() => input.focus(), 40);
+  const close = () => { sc.remove(); closeModal = null; };
+  closeModal = close;
+  const run = async ok => {
+    const btn = sc.querySelector('[data-x="1"]');
+    btn.disabled = true;
+    $('#mErr', sc).textContent = '';
+    try {
+      const val = input ? input.value : '';
+      if (cfg.validate && !cfg.validate(val)) throw new Error(cfg.validateMsg || 'check that value');
+      await cfg.run(val);
+      close();
+      toast(cfg.done || 'Done · 完成');
+      refresh();
+    } catch (e) {
+      if (e.message === 'signed out') return close();
+      $('#mErr', sc).textContent = e.message;
+      btn.disabled = false;
+    }
+  };
+  sc.addEventListener('click', e => {
+    if (e.target === sc) return close();
+    const a = e.target.closest('[data-a]');
+    if (a && cfg.actions) { const hit = cfg.actions[+a.dataset.a]; close(); return hit.run(); }
+    const b = e.target.closest('[data-x]');
+    if (!b) return;
+    if (b.dataset.x === '0') close(); else run();
+  });
+  sc.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  if (input) input.addEventListener('keydown', e => { if (e.key === 'Enter') run(); });
+}
+
+/* ---------------------------------------------------------------- actions */
+document.addEventListener('click', async e => {
+  const b = e.target.closest('[data-act]');
+  if (!b || S.busy) return;
+  const id = +b.dataset.id, name = b.dataset.name, act = b.dataset.act;
+
+  if (act === 'more') {
+    const row = S.rows.filter(x => x.id === id)[0] || {};
+    const pick = a => {
+      const el = document.querySelector('[data-act="' + a + '"][data-id="' + id + '"]');
+      if (el) el.click();
+    };
+    return modal({
+      title: 'Actions <span class="zh">操作</span>',
+      sub: '<b>' + esc(name) + '</b> · #' + id +
+        (row.banned ? ' · <span class="tag ban">suspended</span>' : ''),
+      actions: [
+        { label: 'Reset password · 重置密码', run: () => pick('pw') },
+        { label: 'Clear progress · 清空进度', danger: true, run: () => pick('reset') },
+        { label: 'Sign out everywhere · 强制下线', danger: true, run: () => pick('kick') },
+        (row.banned
+          ? { label: 'Lift suspension · 解封', run: () => pick('unban') }
+          : { label: 'Suspend account · 封禁', danger: true, run: () => pick('ban') }),
+        { label: 'Delete account · 删除账号', danger: true, run: () => pick('del') }
+      ]
+    });
+  }
+
+  if (act === 'pw') return modal({
+    title: 'Reset password <span class="zh">重置密码</span>',
+    sub: 'For <b>' + esc(name) + '</b>. All of their sessions are signed out immediately.<br>' +
+         '该用户所有设备会立刻退出登录。',
+    field: { label: 'New password · 新密码 (6–72)', type: 'password', ph: 'at least 6 characters' },
+    ok: 'Reset',
+    validate: v => v.length >= 6 && v.length <= 72,
+    validateMsg: 'password must be 6-72 characters',
+    run: v => post('/api/admin/user/pw', { id: id, p: v }),
+    done: 'Password reset · 密码已重置'
+  });
+
+  if (act === 'reset') return modal({
+    title: 'Clear progress <span class="zh">清空进度</span>',
+    sub: 'Deletes every recorded answer for <b>' + esc(name) + '</b>. The account and password stay.<br>' +
+         '只删答题记录，账号保留。',
+    ok: 'Clear', danger: true,
+    run: () => post('/api/admin/user/reset', { id: id }),
+    done: 'Progress cleared · 进度已清空'
+  });
+
+  if (act === 'kick') return modal({
+    title: 'Sign out everywhere <span class="zh">强制下线</span>',
+    sub: 'Kills every active session of <b>' + esc(name) + '</b>. They can sign back in straight away.<br>' +
+         '不封禁，只是让已登录的设备掉线。',
+    ok: 'Sign out', danger: true,
+    run: () => post('/api/admin/user/kick', { id: id }),
+    done: 'Sessions cleared · 已下线'
+  });
+
+  if (act === 'ban') return modal({
+    title: 'Suspend account <span class="zh">封禁账号</span>',
+    sub: 'Login for <b>' + esc(name) + '</b> is refused until the suspension ends. Sessions are killed now.<br>' +
+         '留空 = 10 年（等于永久）。',
+    field: { label: 'Days · 天数', type: 'number', ph: 'leave blank for permanent', value: '7' },
+    ok: 'Suspend', danger: true,
+    run: v => post('/api/admin/user/ban', { id: id, days: v === '' ? 0 : Math.max(0, parseInt(v, 10) || 0) }),
+    done: 'Account suspended · 已封禁'
+  });
+
+  if (act === 'unban') {
+    try {
+      S.busy = true;
+      await post('/api/admin/user/unban', { id: id });
+      toast('Unsuspended · 已解封');
+      refresh();
+    } catch (err) { if (err.message !== 'signed out') toast(err.message, true); }
+    finally { S.busy = false; }
+    return;
+  }
+
+  if (act === 'del') return modal({
+    title: 'Delete account <span class="zh">删除账号</span>',
+    sub: 'Permanently deletes <b>' + esc(name) + '</b> with all progress and sessions. This cannot be undone.<br>' +
+         '输入用户名以确认，操作不可撤销。',
+    field: { label: 'Type ' + esc(name) + ' to confirm', ph: name },
+    ok: 'Delete forever', danger: true,
+    validate: v => v.trim() === name,
+    validateMsg: 'username does not match',
+    run: () => post('/api/admin/user/del', { id: id }),
+    done: 'Account deleted · 已删除'
+  });
+});
+
+/* ---------------------------------------------------------------- chrome */
+$('#refresh').addEventListener('click', refresh);
+$('#signout').addEventListener('click', async () => {
+  try { await post('/api/admin/logout', {}); } catch (e) {}
+  showGate();
+});
+$('#csv').addEventListener('click', () => { location.href = '/api/admin/export.csv'; });
+$('#prev').addEventListener('click', () => { S.offset = Math.max(0, S.offset - S.limit); loadUsers(); });
+$('#next').addEventListener('click', () => { S.offset += S.limit; loadUsers(); });
+$('#sort').addEventListener('change', e => { S.sort = e.target.value; S.offset = 0; loadUsers(); });
+let tmr = null;
+$('#q').addEventListener('input', e => {
+  clearTimeout(tmr);
+  tmr = setTimeout(() => { S.q = e.target.value.trim(); S.offset = 0; loadUsers(); }, 220);
+});
+
+async function boot() {
+  try {
+    const st = await api('/api/admin/state');
+    if (!st.enabled) { $('#gateErr').textContent = 'Admin console is disabled on the server.'; return; }
+    if (!st.signed_in) return showGate();
+    $('#gate').classList.add('hide');
+    $('#app').classList.remove('hide');
+    refresh();
+  } catch (e) { showGate(); }
+}
+
+/* auto-refresh the dashboards every 60 s while visible */
+setInterval(() => { if (!$('#app').classList.contains('hide') && !document.hidden) refresh(); }, 60000);
+
+boot();
+</script>
+</body>
+</html>

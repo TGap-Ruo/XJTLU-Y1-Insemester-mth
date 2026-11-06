@@ -119,10 +119,61 @@ How it is stored and protected:
   rejected on the `Origin` header; static paths resolved with `realpath` and
   confined to the document root.
 
-Not included, on purpose: password reset by email, account deletion, HTTPS. The
-cookie is not marked `Secure` because the site is served over plain HTTP on :8088
-— put nginx (or Caddy) in front with a certificate before treating this as
-anything more than a study aid.
+Not included, on purpose: password reset by email and HTTPS. The cookie is not
+marked `Secure` because the site is served over plain HTTP on :8088 — put nginx
+(or Caddy) in front with a certificate before treating this as anything more than
+a study aid. Password reset and account deletion exist, but only from the **admin
+console** below, not for end users.
+
+## Admin console / 后台管理
+
+<http://183.66.27.19:58621/admin> — a separate page with its own password, its own
+cookie and its own audit trail. It is **not** a role in the `users` table: the
+password lives in `/opt/mth026/admin.env`, so registering a username called `admin`
+grants nothing.
+
+```bash
+# on the server, once
+printf 'MTH026_ADMIN_PW=%s\n' "$(python3 -c 'import secrets;print(secrets.token_urlsafe(18))')" \
+  > /opt/mth026/admin.env
+chmod 600 /opt/mth026/admin.env
+systemctl restart mth026        # the unit reads it through EnvironmentFile=-
+```
+
+Without that file the console is disabled and `/api/admin/*` answers 503 — the
+public site is unaffected.
+
+What it shows: users, new today / this week, 7-day active sessions, total answers,
+overall accuracy, suspensions, database size, a 14-day registration chart, and a
+searchable / sortable user table (`newest`, `recently active`, `most answered`,
+`lowest accuracy`, `username`) with per-user answered / correct / accuracy / session
+count / last seen.
+
+What it can do — every write is recorded in `audit` (last 2000 kept):
+
+| Action | Effect |
+|---|---|
+| Reset password | new PBKDF2 hash, **all sessions of that user killed** |
+| Clear progress | deletes their progress blob, keeps the account |
+| Sign out everywhere | kills sessions without suspending |
+| Suspend / lift | login refused with 403 until the date; sessions killed now |
+| Delete account | removes user + sessions + progress, irreversible |
+| Export CSV | all users with progress roll-ups, BOM so Excel reads UTF-8 |
+
+Admin endpoints, all requiring the `mth026_admin` cookie
+(`HttpOnly; SameSite=Strict`, 12 h, stored hashed):
+
+```
+POST /api/admin/login {p}      POST /api/admin/logout    GET /api/admin/state
+GET  /api/admin/stats          GET  /api/admin/users?q=&sort=&limit=&offset=
+GET  /api/admin/audit          GET  /api/admin/export.csv
+POST /api/admin/user/pw {id,p}       POST /api/admin/user/reset {id}
+POST /api/admin/user/kick {id}       POST /api/admin/user/ban {id,days}   (0 = 10 years)
+POST /api/admin/user/unban {id}      POST /api/admin/user/del {id}
+```
+
+`/api/health` now returns only `{"ok":true,"port":…}` — it used to leak the user
+count to anyone who asked.
 
 ## Deployment / 部署
 

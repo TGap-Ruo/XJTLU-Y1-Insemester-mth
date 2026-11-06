@@ -15,9 +15,11 @@ Env:
   MTH026_PORT   listen port             (default 8088)
 """
 
+import csv
 import gzip
 import hashlib
 import hmac
+import io
 import json
 import mimetypes
 import os
@@ -27,13 +29,16 @@ import sqlite3
 import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import unquote, urlsplit
+from urllib.parse import parse_qs, unquote, urlsplit
 
 ROOT = os.path.realpath(os.environ.get("MTH026_ROOT", "/var/www/mth026"))
 DB_PATH = os.environ.get("MTH026_DB", "/opt/mth026/data/app.db")
 PORT = int(os.environ.get("MTH026_PORT", "8088"))
+ADMIN_PW = os.environ.get("MTH026_ADMIN_PW", "").strip()
 
 COOKIE = "mth026_sid"
+ADMIN_COOKIE = "mth026_admin"
+ADMIN_SESSION_SECS = 12 * 3600
 SESSION_SECS = 30 * 24 * 3600
 MAX_BODY = 512 * 1024          # 674 items with metadata stay well under this
 PBKDF2_ROUNDS = 200_000
@@ -102,11 +107,43 @@ def init_db():
             blob    TEXT NOT NULL,
             updated REAL NOT NULL
         );
+        CREATE TABLE IF NOT EXISTS admin_sessions(
+            token   TEXT PRIMARY KEY,
+            created REAL NOT NULL,
+            seen    REAL NOT NULL,
+            ip      TEXT
+        );
+        CREATE TABLE IF NOT EXISTS audit(
+            id      INTEGER PRIMARY KEY,
+            ts      REAL NOT NULL,
+            ip      TEXT,
+            action  TEXT NOT NULL,
+            target  TEXT,
+            detail  TEXT
+        );
         CREATE INDEX IF NOT EXISTS sessions_uid ON sessions(uid);
+        CREATE INDEX IF NOT EXISTS audit_ts ON audit(ts);
         """
     )
+    cols = {r["name"] for r in con.execute("PRAGMA table_info(users)")}
+    if "banned" not in cols:                      # suspension: epoch until which
+        con.execute("ALTER TABLE users ADD COLUMN banned REAL NOT NULL DEFAULT 0")
     con.commit()
     con.close()
+
+
+def audit(ip, action, target, detail=""):
+    """Append one line to the admin audit trail, trimmed to the last 2000."""
+    con = connect()
+    try:
+        con.execute(
+            "INSERT INTO audit(ts, ip, action, target, detail) VALUES(?,?,?,?,?)",
+            (time.time(), ip, action, str(target)[:64], str(detail)[:300]),
+        )
+        con.execute("DELETE FROM audit WHERE id <= (SELECT MAX(id) - 2000 FROM audit)")
+        con.commit()
+    finally:
+        con.close()
 
 
 def hash_pw(password, salt):
@@ -259,11 +296,13 @@ class App(BaseHTTPRequestHandler):
         con = connect()
         try:
             row = con.execute(
-                "SELECT u.id, u.name, u.display, u.created FROM sessions s "
+                "SELECT u.id, u.name, u.display, u.created, u.banned FROM sessions s "
                 "JOIN users u ON u.id = s.uid WHERE s.token = ?", (key,)
             ).fetchone()
             if not row:
                 return None
+            if row["banned"] and row["banned"] > time.time():
+                return None                       # suspended mid-session
             con.execute("UPDATE sessions SET seen = ? WHERE token = ?", (time.time(), key))
             con.commit()
             return row
@@ -338,12 +377,10 @@ class App(BaseHTTPRequestHandler):
             return self._err(403, "bad origin")
 
         if api == "health":
-            con = connect()
-            try:
-                n = con.execute("SELECT COUNT(*) c FROM users").fetchone()["c"]
-            finally:
-                con.close()
-            return self._json(200, {"ok": True, "users": n, "port": PORT})
+            return self._json(200, {"ok": True, "port": PORT})
+
+        if api == "admin" or api.startswith("admin/"):
+            return self._admin(method, path)
 
         if api == "me":
             row = self._user()
@@ -421,13 +458,17 @@ class App(BaseHTTPRequestHandler):
         pw = str(data.get("p") or "")
         con = connect()
         try:
-            row = con.execute("SELECT id, name, display, salt, hash, created FROM users WHERE name = ?",
-                              (name,)).fetchone()
+            row = con.execute(
+                "SELECT id, name, display, salt, hash, created, banned FROM users WHERE name = ?",
+                (name,)).fetchone()
         finally:
             con.close()
         if not row or not hmac.compare_digest(hash_pw(pw, row["salt"]), row["hash"]):
             note_fail(ip)
             return self._err(401, "wrong username or password")
+        if row["banned"] and row["banned"] > time.time():
+            note_fail(ip)
+            return self._err(403, "this account is suspended")
         clear_fail(ip)
         token = self._start_session(row["id"])
         self._json(200, {"user": {"name": row["name"], "display": row["display"],
@@ -488,10 +529,377 @@ class App(BaseHTTPRequestHandler):
         merged["updated"] = int(now)
         return self._json(200, merged)
 
+    # ---- admin
+    def _admin_token(self):
+        for part in (self.headers.get("Cookie") or "").split(";"):
+            k, _, v = part.strip().partition("=")
+            if k == ADMIN_COOKIE and v:
+                return v
+        return None
+
+    def _admin_ok(self):
+        if not ADMIN_PW:
+            return False
+        tok = self._admin_token()
+        if not tok:
+            return False
+        key = token_key(tok)
+        now = time.time()
+        con = connect()
+        try:
+            row = con.execute("SELECT created FROM admin_sessions WHERE token = ?", (key,)).fetchone()
+            if not row:
+                return False
+            if row["created"] < now - ADMIN_SESSION_SECS:
+                con.execute("DELETE FROM admin_sessions WHERE token = ?", (key,))
+                con.commit()
+                return False
+            con.execute("UPDATE admin_sessions SET seen = ? WHERE token = ?", (now, key))
+            con.commit()
+            return True
+        finally:
+            con.close()
+
+    def _admin(self, method, path):
+        api = path[len("/api/admin"):].strip("/")
+
+        if api == "login" and method == "POST":
+            return self._admin_login()
+        if api == "logout" and method == "POST":
+            return self._admin_logout()
+        if api == "state":
+            return self._json(200, {"enabled": bool(ADMIN_PW), "signed_in": self._admin_ok()})
+        if not self._admin_ok():
+            return self._err(401, "admin sign-in required")
+
+        if api == "stats":
+            return self._admin_stats()
+        if api == "users":
+            return self._admin_users()
+        if api == "audit":
+            return self._admin_audit()
+        if api == "export.csv":
+            return self._admin_csv()
+        if api == "user/pw" and method == "POST":
+            return self._admin_pw()
+        if api == "user/reset" and method == "POST":
+            return self._admin_reset()
+        if api == "user/kick" and method == "POST":
+            return self._admin_kick()
+        if api == "user/ban" and method == "POST":
+            return self._admin_ban()
+        if api == "user/unban" and method == "POST":
+            return self._admin_unban()
+        if api == "user/del" and method == "POST":
+            return self._admin_del()
+        return self._err(404, "no such endpoint")
+
+    def _admin_login(self):
+        if not ADMIN_PW:
+            return self._err(503, "admin console disabled: set MTH026_ADMIN_PW")
+        ip = client_ip(self)
+        gate = "admin:" + ip
+        if too_many(gate):
+            return self._err(429, "too many attempts, wait a few minutes")
+        pw = str(self._body().get("p") or "")
+        if not hmac.compare_digest(pw.encode("utf-8"), ADMIN_PW.encode("utf-8")):
+            note_fail(gate)
+            audit(ip, "admin.login.fail", "-", "")
+            return self._err(401, "wrong admin password")
+        clear_fail(gate)
+        tok = secrets.token_urlsafe(32)
+        now = time.time()
+        con = connect()
+        try:
+            con.execute("INSERT INTO admin_sessions(token, created, seen, ip) VALUES(?,?,?,?)",
+                        (token_key(tok), now, now, ip))
+            con.execute("DELETE FROM admin_sessions WHERE seen < ?", (now - ADMIN_SESSION_SECS,))
+            con.commit()
+        finally:
+            con.close()
+        audit(ip, "admin.login", "-", "")
+        self._json(200, {"ok": True},
+                   extra=[("Set-Cookie", "%s=%s; Path=/; HttpOnly; SameSite=Strict; Max-Age=%d"
+                                          % (ADMIN_COOKIE, tok, ADMIN_SESSION_SECS))])
+
+    def _admin_logout(self):
+        tok = self._admin_token()
+        if tok:
+            con = connect()
+            try:
+                con.execute("DELETE FROM admin_sessions WHERE token = ?", (token_key(tok),))
+                con.commit()
+            finally:
+                con.close()
+        self._json(200, {"ok": True},
+                   extra=[("Set-Cookie", "%s=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0" % ADMIN_COOKIE)])
+
+    # ---- admin: read
+    def _admin_stats(self):
+        now = time.time()
+        day = 86400
+        con = connect()
+        try:
+            users = con.execute("SELECT id, created, banned FROM users").fetchall()
+            sess = con.execute("SELECT COUNT(*) c, COUNT(DISTINCT uid) u FROM sessions WHERE seen > ?",
+                               (now - 7 * day,)).fetchone()
+            all_sess = con.execute("SELECT COUNT(*) c FROM sessions").fetchone()["c"]
+            prog = con.execute("SELECT blob, updated FROM progress").fetchall()
+            audits = con.execute("SELECT COUNT(*) c FROM audit").fetchone()["c"]
+        finally:
+            con.close()
+
+        answered = correct = originals = 0
+        for r in prog:
+            try:
+                h = (json.loads(r["blob"]) or {}).get("h") or {}
+            except (json.JSONDecodeError, AttributeError):
+                h = {}
+            answered += len(h)
+            correct += sum(1 for v in h.values() if isinstance(v, dict) and v.get("ok"))
+            originals += sum(1 for k in h if str(k).isdigit() and int(k) >= 1000)
+
+        # 14 local-day buckets, so "today" matches the box's clock
+        today = time.mktime(time.strptime(time.strftime("%Y-%m-%d", time.localtime(now)), "%Y-%m-%d"))
+        regs = []
+        for i in range(13, -1, -1):
+            start = today - i * day
+            regs.append({
+                "d": time.strftime("%m-%d", time.localtime(start)),
+                "n": sum(1 for u in users if start <= u["created"] < start + day),
+            })
+        banned = sum(1 for u in users if u["banned"] and u["banned"] > now)
+
+        try:
+            db_size = os.path.getsize(DB_PATH)
+        except OSError:
+            db_size = 0
+
+        self._json(200, {
+            "users": len(users),
+            "new_today": sum(1 for u in users if u["created"] >= today),
+            "new_7d": sum(1 for u in users if u["created"] >= now - 7 * day),
+            "active_7d": sess["u"],
+            "sessions": all_sess,
+            "banned": banned,
+            "answered": answered,
+            "correct": correct,
+            "originals": originals,
+            "progress_rows": len(prog),
+            "audit": audits,
+            "db_bytes": db_size,
+            "regs": regs,
+            "now": int(now),
+        })
+
+    def _admin_audit(self):
+        con = connect()
+        try:
+            rows = con.execute("SELECT ts, ip, action, target, detail FROM audit "
+                               "ORDER BY id DESC LIMIT 120").fetchall()
+        finally:
+            con.close()
+        self._json(200, {"rows": [{"t": int(r["ts"]), "ip": r["ip"], "a": r["action"],
+                                   "target": r["target"], "d": r["detail"]} for r in rows]})
+
+    def _collect(self):
+        """Every user with its roll-up of progress — the console filters in memory."""
+        con = connect()
+        try:
+            rows = con.execute(
+                "SELECT u.id, u.name, u.display, u.created, u.banned, p.updated, p.blob, "
+                " (SELECT COUNT(*) FROM sessions s WHERE s.uid = u.id) nsess, "
+                " (SELECT MAX(s.seen) FROM sessions s WHERE s.uid = u.id) last_seen "
+                "FROM users u LEFT JOIN progress p ON p.uid = u.id"
+            ).fetchall()
+        finally:
+            con.close()
+        out = []
+        for r in rows:
+            h = {}
+            if r["blob"]:
+                try:
+                    h = (json.loads(r["blob"]) or {}).get("h") or {}
+                except (json.JSONDecodeError, AttributeError):
+                    h = {}
+            answered = len(h)
+            correct = sum(1 for v in h.values() if isinstance(v, dict) and v.get("ok"))
+            out.append({
+                "id": r["id"], "name": r["name"], "display": r["display"],
+                "created": int(r["created"]), "banned": int(r["banned"] or 0),
+                "sessions": r["nsess"], "last": int(r["last_seen"] or 0),
+                "updated": int(r["updated"] or 0),
+                "answered": answered, "correct": correct,
+                "acc": round(correct * 100.0 / answered) if answered else None,
+                "originals": sum(1 for k in h if str(k).isdigit() and int(k) >= 1000),
+            })
+        return out
+
+    def _admin_users(self):
+        q = parse_qs(urlsplit(self.path).query)
+        needle = (q.get("q") or [""])[0].strip().lower()
+        sort = (q.get("sort") or ["new"])[0]
+        try:
+            limit = max(1, min(int((q.get("limit") or ["50"])[0]), 200))
+        except ValueError:
+            limit = 50
+        try:
+            off = max(0, int((q.get("offset") or ["0"])[0]))
+        except ValueError:
+            off = 0
+
+        rows = self._collect()
+        if needle:
+            rows = [r for r in rows
+                    if needle in r["name"].lower() or needle in (r["display"] or "").lower()
+                    or needle == str(r["id"])]
+        keys = {
+            "new": (lambda r: -r["created"]),
+            "old": (lambda r: r["created"]),
+            "name": (lambda r: r["name"]),
+            "answered": (lambda r: -r["answered"]),
+            "active": (lambda r: -r["last"]),
+            "worst": (lambda r: (r["acc"] if r["acc"] is not None else 999, -r["answered"])),
+        }
+        rows.sort(key=keys.get(sort, keys["new"]))
+        self._json(200, {"total": len(rows), "offset": off, "limit": limit,
+                         "rows": rows[off:off + limit]})
+
+    def _admin_csv(self):
+        rows = sorted(self._collect(), key=lambda r: r["created"])
+        buf = io.StringIO()
+        w = csv.writer(buf)
+        w.writerow(["id", "username", "display", "registered", "last_seen", "sessions",
+                    "answered", "correct", "accuracy_pct", "originals", "progress_updated",
+                    "banned_until"])
+        fmt = lambda t: time.strftime("%Y-%m-%d %H:%M", time.localtime(t)) if t else ""
+        for r in rows:
+            w.writerow([r["id"], r["name"], r["display"], fmt(r["created"]), fmt(r["last"]),
+                        r["sessions"], r["answered"], r["correct"],
+                        "" if r["acc"] is None else r["acc"], r["originals"],
+                        fmt(r["updated"]), fmt(r["banned"])])
+        body = buf.getvalue().encode("utf-8-sig")     # BOM so Excel reads UTF-8
+        audit(client_ip(self), "admin.export", "users", "%d rows" % len(rows))
+        self._send(200, body, "text/csv; charset=utf-8",
+                   [("Content-Disposition", 'attachment; filename="mth026-users.csv"')])
+
+    # ---- admin: writes
+    def _target_id(self, data):
+        try:
+            return int(data.get("id"))
+        except (TypeError, ValueError):
+            return None
+
+    def _admin_pw(self):
+        data = self._body()
+        uid = self._target_id(data)
+        pw = str(data.get("p") or "")
+        if uid is None:
+            return self._err(400, "missing id")
+        if not MIN_PW <= len(pw) <= MAX_PW:
+            return self._err(400, "password must be 6-72 characters")
+        salt = secrets.token_bytes(16)
+        con = connect()
+        try:
+            cur = con.execute("UPDATE users SET salt = ?, hash = ? WHERE id = ?",
+                              (salt, hash_pw(pw, salt), uid))
+            if cur.rowcount == 0:
+                return self._err(404, "no such user")
+            con.execute("DELETE FROM sessions WHERE uid = ?", (uid,))
+            con.commit()
+        finally:
+            con.close()
+        audit(client_ip(self), "user.password", str(uid), "reset, sessions cleared")
+        self._json(200, {"ok": True})
+
+    def _admin_reset(self):
+        uid = self._target_id(self._body())
+        if uid is None:
+            return self._err(400, "missing id")
+        con = connect()
+        try:
+            con.execute("DELETE FROM progress WHERE uid = ?", (uid,))
+            con.commit()
+        finally:
+            con.close()
+        audit(client_ip(self), "user.progress.clear", str(uid), "")
+        self._json(200, {"ok": True})
+
+    def _admin_kick(self):
+        uid = self._target_id(self._body())
+        if uid is None:
+            return self._err(400, "missing id")
+        con = connect()
+        try:
+            cur = con.execute("DELETE FROM sessions WHERE uid = ?", (uid,))
+            n = cur.rowcount
+            con.commit()
+        finally:
+            con.close()
+        audit(client_ip(self), "user.signout", str(uid), "%d sessions" % n)
+        self._json(200, {"ok": True, "cleared": n})
+
+    def _admin_ban(self):
+        data = self._body()
+        uid = self._target_id(data)
+        if uid is None:
+            return self._err(400, "missing id")
+        try:
+            days = int(data.get("days") or 0)
+        except (TypeError, ValueError):
+            days = 0
+        days = max(0, min(days, 3650))
+        until = time.time() + (days or 3650) * 86400
+        con = connect()
+        try:
+            cur = con.execute("UPDATE users SET banned = ? WHERE id = ?", (until, uid))
+            if cur.rowcount == 0:
+                return self._err(404, "no such user")
+            con.execute("DELETE FROM sessions WHERE uid = ?", (uid,))
+            con.commit()
+        finally:
+            con.close()
+        audit(client_ip(self), "user.ban", str(uid), "%d days" % (days or 3650))
+        self._json(200, {"ok": True, "until": int(until)})
+
+    def _admin_unban(self):
+        uid = self._target_id(self._body())
+        if uid is None:
+            return self._err(400, "missing id")
+        con = connect()
+        try:
+            con.execute("UPDATE users SET banned = 0 WHERE id = ?", (uid,))
+            con.commit()
+        finally:
+            con.close()
+        audit(client_ip(self), "user.unban", str(uid), "")
+        self._json(200, {"ok": True})
+
+    def _admin_del(self):
+        data = self._body()
+        uid = self._target_id(data)
+        if uid is None:
+            return self._err(400, "missing id")
+        con = connect()
+        try:
+            row = con.execute("SELECT name FROM users WHERE id = ?", (uid,)).fetchone()
+            if not row:
+                return self._err(404, "no such user")
+            con.execute("DELETE FROM sessions WHERE uid = ?", (uid,))
+            con.execute("DELETE FROM progress WHERE uid = ?", (uid,))
+            con.execute("DELETE FROM users WHERE id = ?", (uid,))
+            con.commit()
+        finally:
+            con.close()
+        audit(client_ip(self), "user.delete", str(uid), row["name"])
+        self._json(200, {"ok": True})
+
     # ---- static
     def _static(self, path, head_only=False):
         if path in ("", "/"):
             path = "/index.html"
+        elif path in ("/admin", "/admin/"):
+            path = "/admin.html"
         rel = path.lstrip("/")
         full = os.path.realpath(os.path.join(ROOT, rel))
         if not (full == ROOT or full.startswith(ROOT + os.sep)):
@@ -537,6 +945,8 @@ def main():
     httpd = ThreadingHTTPServer(("0.0.0.0", PORT), App)
     httpd.daemon_threads = True
     print("mth026 serving %s on 0.0.0.0:%d (db %s)" % (ROOT, PORT, DB_PATH), flush=True)
+    print("admin console: %s" % ("/admin (password set)" if ADMIN_PW
+                                 else "/admin disabled — set MTH026_ADMIN_PW"), flush=True)
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

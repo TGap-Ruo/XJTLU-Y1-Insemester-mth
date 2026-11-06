@@ -9,6 +9,8 @@ WorkingDirectory=/opt/mth026
 Environment=MTH026_ROOT=/var/www/mth026
 Environment=MTH026_DB=/opt/mth026/data/app.db
 Environment=MTH026_PORT=8088
+# admin console password lives here, chmod 600, never in git
+EnvironmentFile=-/opt/mth026/admin.env
 ExecStart=/usr/bin/python3 /opt/mth026/server.py
 Restart=always
 RestartSec=3
