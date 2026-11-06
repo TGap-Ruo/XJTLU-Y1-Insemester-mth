@@ -39,14 +39,19 @@ attempt — the deck on the home screen is exactly that.
 
 ## Running it locally / 本地运行
 
-No build step, no dependencies, no network:
+One file, standard library only:
 
 ```bash
-python3 -m http.server 8088 --directory .
+MTH026_ROOT=$PWD MTH026_DB=/tmp/mth026.db MTH026_PORT=8088 \
+  python3 server/server.py
 # open http://localhost:8088/
 ```
 
-Progress is stored in `localStorage` under `mth026.en.v1`; Reset clears it.
+Opening `index.html` straight from disk also works, but then there is no server:
+the page falls back to guest mode and keeps progress in `localStorage` only.
+
+Progress lives in `localStorage` under `mth026.en.v1` **and**, when signed in, in
+SQLite on the server. Reset clears both.
 
 ## Using it / 怎么用
 
@@ -56,21 +61,63 @@ Progress is stored in `localStorage` under `mth026.en.v1`; Reset clears it.
   printed answer.
 - **Reference** — 54 topics × (what it tests · how to do it · the trap), formula
   sheet, terminology.
-- **Bank** — browse Q1–Q351 by chapter, open any item on its own.
+- **Bank** — all 674 items in one index: filter by compiled/originals and by
+  chapter, or jump straight to `Q12`, `P7` or a topic id such as `2.5`.
 - Deep links: `#pq`, `#ref`, `#bank`.
+
+## Accounts & sync / 账号与同步
+
+Sign in from the top bar with a username and a password — no email, no
+verification. What it buys you is one progress list across devices.
+
+| Endpoint | Purpose |
+|---|---|
+| `POST /api/register` `{u,p}` | create the account and start a session |
+| `POST /api/login` `{u,p}` | sign in on another device |
+| `POST /api/logout` | end the session |
+| `GET /api/me` | who is signed in, or `null` |
+| `GET /api/progress` | this user's records |
+| `PUT /api/progress` | merge records, returns the merged set |
+| `DELETE /api/progress` | wipe them (the Reset button does this when signed in) |
+
+Merging is **per item, newest timestamp wins**, with `streak`/`best` taking the
+maximum. Two devices therefore cannot erase each other's work: each fills in what
+the other has not answered, and a re-answer overrides the older attempt.
+
+How it is stored and protected:
+
+* `users` — username (case-insensitive unique), 16-byte salt, PBKDF2-HMAC-SHA256
+  digest at 200 000 rounds. Plaintext passwords are never written anywhere.
+* `sessions` — a 43-character random token in an `HttpOnly; SameSite=Lax` cookie;
+  only its SHA-256 is stored server-side, 30-day expiry, pruned on each login.
+* `progress` — one JSON blob per user; the server accepts at most 512 KB and keeps
+  only the fields the app actually writes.
+* 10 failed logins per IP per 10 minutes, then 429; cross-origin `POST`/`PUT`
+  rejected on the `Origin` header; static paths resolved with `realpath` and
+  confined to the document root.
+
+Not included, on purpose: password reset by email, account deletion, HTTPS. The
+cookie is not marked `Secure` because the site is served over plain HTTP on :8088
+— put nginx (or Caddy) in front with a certificate before treating this as
+anything more than a study aid.
 
 ## Deployment / 部署
 
-Static files, served by a systemd unit running Python's `http.server`:
+Two pieces: the generated site in `/var/www/mth026`, the server in `/opt/mth026`
+with its SQLite file next to it.
 
 ```bash
-scp -r . user@host:/var/www/mth026/
+rsync -az index.html katex q pq user@host:/var/www/mth026/
+ssh user@host 'mkdir -p /opt/mth026/data'
+scp server/server.py user@host:/opt/mth026/server.py
 scp deploy-mth026.service user@host:/etc/systemd/system/mth026.service
 ssh user@host 'systemctl daemon-reload && systemctl enable --now mth026'
 ```
 
 `deploy-mth026.service` binds `0.0.0.0:8088`; the host maps that to
-`183.66.27.19:58621` on its elastic public IP.
+`183.66.27.19:58621` on its elastic public IP. The service creates the schema on
+first start and restarts on failure. Text responses are gzipped (`index.html`
+259 KB → 65 KB) and the two crop folders are served `immutable` for 30 days.
 
 ## Regenerating / 重新生成
 

@@ -1,12 +1,15 @@
 [Unit]
-Description=MTH026 question bank and smart quiz (static, port 8088)
+Description=MTH026 question bank, smart quiz and account API (port 8088)
 After=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/var/www/mth026
-ExecStart=/usr/bin/python3 -m http.server 8088 --bind 0.0.0.0 --directory /var/www/mth026
+WorkingDirectory=/opt/mth026
+Environment=MTH026_ROOT=/var/www/mth026
+Environment=MTH026_DB=/opt/mth026/data/app.db
+Environment=MTH026_PORT=8088
+ExecStart=/usr/bin/python3 /opt/mth026/server.py
 Restart=always
 RestartSec=3
 User=root

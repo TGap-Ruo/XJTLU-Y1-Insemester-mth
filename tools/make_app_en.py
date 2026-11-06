@@ -103,7 +103,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:12px;height:58px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;white-space:nowrap;min-width:0}
 .brand .mark{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#16406e,#2c6ba8);
   color:#fff;display:grid;place-items:center;font-size:10px;font-weight:800;letter-spacing:.03em}
 .brand small{display:block;font-size:10.5px;color:var(--ink3);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
@@ -111,12 +111,21 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);
   border-radius:100px;padding:5px 11px;font-size:12.5px;color:var(--ink2);white-space:nowrap}
 .chip b{color:var(--ink);font-variant-numeric:tabular-nums}
-.btn{border-radius:10px;padding:9px 16px;font-size:14px;font-weight:600;transition:.16s}
+.btn{border-radius:10px;padding:9px 16px;font-size:14px;font-weight:600;transition:.16s;white-space:nowrap}
 .btn.pri{background:var(--pri);color:#fff;box-shadow:0 1px 2px rgba(22,64,110,.3)}
 .btn.pri:hover{background:#12365e}
 .btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink2)}
 .btn.ghost:hover{border-color:#c9d5e3;background:#fafcfe}
 .btn:disabled{opacity:.45;cursor:not-allowed}
+/* the bar carries a lot of chrome; drop the least important chips first */
+@media(max-width:1180px){#cStreak{display:none}}
+@media(max-width:1080px){.brand small{display:none}}
+@media(max-width:1010px){#cAns,#cAcc{display:none}}
+@media(max-width:860px){.top .wrap{gap:8px}.brand>div{font-size:13.5px}}
+@media(max-width:560px){#acctName{display:none}#btnAcct{padding:9px 11px}
+  .brand>div{display:none}.top .wrap{gap:6px}
+  .top .btn.ghost{font-size:13px;padding:8px 11px}}
+@media(max-width:520px){#btnReset,.brand{display:none}}
 
 /* hero */
 .hero{margin:26px 0 20px;background:linear-gradient(130deg,#12325a,#1e5289 60%,#2e6fae);
@@ -244,6 +253,52 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .filter button{font-size:13px;padding:6px 13px;border-radius:100px;border:1px solid var(--line);
   background:#fff;color:var(--ink2)}
 .filter button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+/* unified item index */
+.idxsearch{margin:2px 0 10px}
+.idxsearch input{width:100%;max-width:440px;font:inherit;font-size:13.5px;padding:9px 13px;
+  border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none}
+.idxsearch input:focus{border-color:#a9c6e4;box-shadow:0 0 0 3px rgba(44,107,168,.10)}
+.idxmeta{font-size:12px;color:var(--ink3);margin:0 0 10px;font-variant-numeric:tabular-nums}
+.idxgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:7px;
+  max-height:58vh;overflow:auto;padding:2px}
+.idx-b{display:flex;flex-direction:column;align-items:flex-start;position:relative;border:1px solid var(--line);
+  background:#fff;border-radius:9px;padding:6px 9px;font-variant-numeric:tabular-nums;transition:.14s}
+.idx-b b{font-size:13px;font-weight:700;color:var(--ink2);line-height:1.3}
+.idx-b i{font-size:10px;color:var(--ink4);font-style:normal;line-height:1.2}
+.idx-b u{position:absolute;right:7px;top:5px;font-size:10px;text-decoration:none}
+.idx-b.p b{color:#8a5a12}
+.idx-b:hover{border-color:#a9c6e4;background:#f7fbff}
+.idx-b.ok{border-color:var(--green-line);background:var(--green-bg)}
+.idx-b.ok u{color:var(--green)}
+.idx-b.bad{border-color:var(--red-line);background:var(--red-bg)}
+.idx-b.bad u{color:var(--red)}
+
+/* account */
+.dot{width:7px;height:7px;border-radius:50%;background:#c3ccd8;display:inline-block;flex:0 0 auto}
+.dot.on{background:#2f9e6b}.dot.err{background:#cf5b4a}
+.modal{position:fixed;inset:0;background:rgba(12,22,36,.42);display:none;z-index:80;
+  align-items:center;justify-content:center;padding:20px}
+.modal.on{display:flex}
+.mbox{background:#fff;border-radius:18px;box-shadow:var(--sh2);width:100%;max-width:404px;padding:22px 24px 20px;
+  max-height:88vh;overflow:auto}
+.mhd{display:flex;align-items:flex-start;gap:10px}
+.mhd h3{margin:0;font-size:17px}
+.mhd .x{margin-left:auto;font-size:14px;color:var(--ink3);padding:2px 7px;border-radius:8px;line-height:1.4}
+.mhd .x:hover{background:#f2f6fb}
+.mtabs{display:flex;gap:8px;margin:14px 0 14px}
+.mtabs button{flex:1;padding:8px 0;font-size:13.5px;border-radius:9px;border:1px solid var(--line);
+  background:#fff;color:var(--ink2)}
+.mtabs button.on{background:var(--pri3);border-color:#bcd2e8;color:var(--pri);font-weight:700}
+.fld{margin-bottom:11px}
+.fld label{display:block;font-size:12px;color:var(--ink3);margin-bottom:4px;font-weight:600}
+.fld input{width:100%;font:inherit;font-size:14px;padding:9px 12px;border:1px solid var(--line);
+  border-radius:9px;outline:none;background:#fff;color:var(--ink)}
+.fld input:focus{border-color:#a9c6e4;box-shadow:0 0 0 3px rgba(44,107,168,.10)}
+.merr{font-size:12.5px;color:var(--red);background:var(--red-bg);border-radius:8px;padding:7px 11px;margin:0 0 11px}
+.mnote{font-size:12px;color:var(--ink3);margin:12px 0 0;line-height:1.6}
+.who{display:flex;align-items:center;gap:12px;margin:14px 0 16px}
+.who .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#16406e,#2c6ba8);
+  color:#fff;display:grid;place-items:center;font-weight:800;font-size:16px;flex:0 0 auto}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
   background:rgba(16,24,39,.92);color:#fff;padding:10px 18px;border-radius:100px;font-size:13.5px;
   opacity:0;transition:.24s;z-index:99;pointer-events:none}
@@ -261,8 +316,17 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
   <div class="chip" id="cAns">Answered <b>0</b></div>
   <div class="chip" id="cAcc">Accuracy <b>—</b></div>
   <div class="chip" id="cStreak">Streak <b>0</b></div>
-  <button class="btn ghost" onclick="resetAll()">Reset</button>
+  <button class="btn ghost" id="btnAcct" onclick="openAcct()" style="display:flex;align-items:center;gap:7px">
+    <span class="dot" id="acctDot"></span><span id="acctName">Sign in</span></button>
+  <button class="btn ghost" id="btnReset" onclick="resetAll()">Reset</button>
 </div></div>
+<div class="modal" id="mAcct" onclick="if(event.target===this) closeAcct()">
+  <div class="mbox">
+    <div class="mhd"><h3 id="mTitle">Account</h3>
+      <button class="x" onclick="closeAcct()" aria-label="Close">&#10005;</button></div>
+    <div id="mBody"></div>
+  </div>
+</div>
 <div id="view"></div>
 <div class="toast" id="toast"></div>
 <script>const DATA = __DATA__;</script>
@@ -280,7 +344,158 @@ const TOTAL_PQ = PQ.length;
 const REF = DATA.ref || [], FORMS = DATA.forms || [], GLOSS = DATA.gloss || [];
 let store = {h:{}, fav:{}, streak:0, best:0};
 try{ const raw=localStorage.getItem(LS); if(raw) store=Object.assign(store,JSON.parse(raw)); }catch(e){}
-function save(){ try{localStorage.setItem(LS,JSON.stringify(store))}catch(e){} }
+function save(quiet){
+  try{localStorage.setItem(LS,JSON.stringify(store))}catch(e){}
+  if(!quiet) schedulePush();
+}
+
+/* ---------- account + cloud sync ----------
+   Signed out, the browser is the only store. Signed in, the server keeps a
+   copy and the two are merged per item by timestamp, so no device can erase
+   what another device recorded. */
+const CAN_API = location.protocol==='http:' || location.protocol==='https:';
+let ACCT=null, SYNC=CAN_API?'guest':'local', acctMode='in', pushTimer=null;
+
+function api(path, opts){
+  opts=opts||{};
+  opts.credentials='same-origin';
+  opts.headers=Object.assign({'Content-Type':'application/json'}, opts.headers||{});
+  return fetch(path, opts)
+    .then(r=>r.json().catch(()=>({})).then(d=>({ok:r.ok, status:r.status, d:d||{}})))
+    .catch(()=>null);
+}
+
+function mergeInto(dst, src){
+  const h=(src&&src.h)||{};
+  Object.keys(h).forEach(k=>{
+    const a=dst.h[k], b=h[k]||{};
+    if(!a || (+b.t||0)>=(+a.t||0)) dst.h[k]=b;
+  });
+  dst.streak=Math.max(+dst.streak||0, +src.streak||0);
+  dst.best=Math.max(+dst.best||0, +src.best||0);
+}
+
+function setSync(s){ SYNC=s; paintAcct(); }
+
+function schedulePush(){
+  if(!ACCT||!CAN_API) return;
+  clearTimeout(pushTimer);
+  pushTimer=setTimeout(()=>syncNow(), 700);
+}
+
+function syncNow(){
+  if(!ACCT||!CAN_API) return Promise.resolve();
+  setSync('busy');
+  return api('api/progress',{method:'PUT',
+      body:JSON.stringify({h:store.h, streak:store.streak, best:store.best})})
+    .then(r=>{
+      if(!r){ setSync('err'); return; }
+      if(r.status===401){ ACCT=null; setSync('guest'); paintTop(); return; }
+      if(!r.ok){ setSync('err'); return; }
+      mergeInto(store, r.d);
+      save(true);
+      setSync('on');
+    });
+}
+
+function bootAcct(){
+  if(!CAN_API){ setSync('local'); return Promise.resolve(); }
+  return api('api/me').then(r=>{
+    if(!r){ setSync('err'); return; }
+    if(!r.d || !r.d.user){ setSync('guest'); return; }
+    ACCT=r.d.user; setSync('busy');
+    return api('api/progress').then(g=>{
+      if(g && g.ok){ mergeInto(store, g.d); save(true); }
+      return syncNow();
+    });
+  });
+}
+
+function paintAcct(){
+  const n=document.getElementById('acctName'), d=document.getElementById('acctDot');
+  if(!n||!d) return;
+  n.textContent = ACCT? ACCT.display : (CAN_API? 'Sign in' : 'Local only');
+  const label={on:'Synced to your account', busy:'Syncing…', err:'Sync failed',
+               guest:'Not signed in — saved in this browser', local:'Saved in this browser'};
+  d.className='dot'+(SYNC==='on'?' on':(SYNC==='err'?' err':''));
+  d.title=label[SYNC]||'';
+}
+
+function openAcct(){
+  acctMode = ACCT? 'me':'in';
+  renderAcct();
+  document.getElementById('mAcct').classList.add('on');
+  if(acctMode!=='me') setTimeout(()=>{ const i=document.getElementById('au'); if(i) i.focus(); },60);
+}
+function closeAcct(){ document.getElementById('mAcct').classList.remove('on'); }
+function switchAcct(m){ acctMode=m; renderAcct(); }
+
+function renderAcct(){
+  const t=document.getElementById('mTitle'), b=document.getElementById('mBody');
+  if(!t||!b) return;
+  if(acctMode==='me' && ACCT){
+    t.textContent='Your account';
+    const n=Object.keys(store.h).length;
+    b.innerHTML=`
+      <div class="who"><div class="av">${(ACCT.display||'?').charAt(0).toUpperCase()}</div>
+        <div><div style="font-weight:700">${ACCT.display}</div>
+        <div class="muted" style="font-size:12px">${n} records on this device ·
+          ${SYNC==='on'?'synced':(SYNC==='err'?'last sync failed':'not synced yet')}</div></div></div>
+      <button class="btn ghost" style="width:100%;margin-bottom:8px"
+        onclick="syncNow().then(()=>{renderAcct();toast('Synced');})">Sync now</button>
+      <button class="btn ghost" style="width:100%;color:var(--red)" onclick="doLogout()">Sign out</button>
+      <p class="mnote">Signing out ends this session but keeps the records on this device.
+      Sign in on another device with the same username and the two sets are merged question by question.</p>`;
+    return;
+  }
+  const up = acctMode==='up';
+  t.textContent = up? 'Create an account' : 'Sign in';
+  b.innerHTML=`
+    <div class="mtabs">
+      <button class="${up?'':'on'}" onclick="switchAcct('in')">Sign in</button>
+      <button class="${up?'on':''}" onclick="switchAcct('up')">Create account</button>
+    </div>
+    <div class="fld"><label for="au">Username</label>
+      <input id="au" autocomplete="username" placeholder="3–24 characters, letters or digits"
+        onkeydown="if(event.key==='Enter')submitAcct()"></div>
+    <div class="fld"><label for="ap">Password</label>
+      <input id="ap" type="password" autocomplete="${up?'new-password':'current-password'}"
+        placeholder="${up?'at least 6 characters':'your password'}"
+        onkeydown="if(event.key==='Enter')submitAcct()"></div>
+    <div id="mErr"></div>
+    <button class="btn pri" id="mGo" style="width:100%;margin-top:2px" onclick="submitAcct()">${up?'Create account':'Sign in'}</button>
+    <p class="mnote">${up
+      ? 'No email, no verification — a username and a password is all. The '
+        +Object.keys(store.h).length+' records already on this device move into the new account.'
+      : 'Progress kept in this browser is merged with whatever the account already holds; the newest answer wins per question.'}</p>`;
+}
+
+function submitAcct(){
+  const u=((document.getElementById('au')||{}).value||'').trim();
+  const p=(document.getElementById('ap')||{}).value||'';
+  const err=document.getElementById('mErr'), go=document.getElementById('mGo');
+  const up = acctMode==='up';
+  if(!err||!go) return;
+  if(!u||!p){ err.innerHTML='<div class="merr">Fill in both fields.</div>'; return; }
+  err.innerHTML=''; go.disabled=true; go.textContent= up?'Creating…':'Signing in…';
+  api(up?'api/register':'api/login',{method:'POST',body:JSON.stringify({u:u,p:p})}).then(r=>{
+    const reset=()=>{ go.disabled=false; go.textContent= up?'Create account':'Sign in'; };
+    if(!r){ err.innerHTML='<div class="merr">No answer from the server. Check your connection.</div>'; reset(); return; }
+    if(!r.ok){ err.innerHTML='<div class="merr">'+((r.d&&r.d.error)||'Something went wrong')+'</div>'; reset(); return; }
+    ACCT=r.d.user; acctMode='me';
+    return syncNow().then(()=>{
+      closeAcct(); paintTop(); viewHome();
+      toast(up? 'Account created — progress will follow you' : 'Signed in as '+ACCT.display);
+    });
+  });
+}
+
+function doLogout(){
+  api('api/logout',{method:'POST'}).then(()=>{
+    ACCT=null; setSync(CAN_API?'guest':'local');
+    closeAcct(); paintTop(); viewHome(); toast('Signed out');
+  });
+}
 
 /* ---------- stats ---------- */
 function secStat(id){
@@ -305,11 +520,17 @@ function paintTop(){
   document.getElementById('cAns').innerHTML='Answered <b>'+o.done+'</b>';
   document.getElementById('cAcc').innerHTML='Accuracy <b>'+(o.done? Math.round(o.acc*100)+'%':'—')+'</b>';
   document.getElementById('cStreak').innerHTML='Streak <b>'+store.streak+'</b>';
+  paintAcct();
 }
 function toast(m){ const t=document.getElementById('toast'); t.textContent=m; t.classList.add('on');
   clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('on'),1600); }
-function resetAll(){ if(!confirm('Clear all progress?')) return;
-  store={h:{},fav:{},streak:0,best:0}; save(); paintTop(); route('home'); }
+function resetAll(){
+  const extra = ACCT? ' This also clears the copy kept by your account.' : '';
+  if(!confirm('Clear all progress?'+extra)) return;
+  store={h:{},fav:{},streak:0,best:0}; save(true);
+  if(ACCT&&CAN_API){ api('api/progress',{method:'DELETE'}).then(()=>setSync('on')); }
+  paintTop(); route('home');
+}
 
 /* ---------- smart engine ---------- */
 function untouchedSecs(){
@@ -450,7 +671,7 @@ function viewHome(){
         <button class="btn white" onclick="start('smart')">${o.done? 'Continue smart round':'Start smart round'}</button>
         <button class="btn light" onclick="start('mock')">Mock test · 20</button>
         <button class="btn light" onclick="start('pq')">Quiz originals · 10</button>
-        <button class="btn light" onclick="route('browse')">Browse all 351</button>
+        <button class="btn light" onclick="route('browse')">Browse all 674</button>
       </div>
     </div>
     <div class="card click" onclick="start('pq')" style="display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap">
@@ -466,8 +687,9 @@ function viewHome(){
       <div><button class="btn pri">Open a set of 10</button></div>
     </div>
     <div class="grid g3" style="margin-bottom:18px">
-      <div class="card"><div class="k">Progress</div><div class="stat">${o.done}<small>/ 351</small></div>
-        <p>${un===0? 'Every topic has been started.' : un+' topics not started yet.'}</p></div>
+      <div class="card"><div class="k">Progress</div><div class="stat">${o.done+pq.done}<small>/ ${ITEMS.length+TOTAL_PQ}</small></div>
+        <p>${un===0? 'Every topic has been started.' : un+' topics not started yet.'}
+        ${o.done}/${ITEMS.length} graded &middot; ${pq.done}/${TOTAL_PQ} originals.</p></div>
       <div class="card"><div class="k">Accuracy</div><div class="stat">${o.done? Math.round(o.acc*100)+'%':'—'}</div>
         <p>${o.ok} correct out of ${o.done} answered.</p></div>
       <div class="card click" onclick="${wrong? "start('wrong')":"toast('No mistakes recorded yet.')"}">
@@ -484,7 +706,10 @@ function viewHome(){
       ${rows}
     </div>
     <p class="muted" style="margin:18px 0 40px;text-align:center">
-      Progress is stored in this browser only. Questions are the original page crops — nothing is re-typed.</p>
+      ${ACCT? 'Progress saves to your account <b>'+ACCT.display+'</b> and to this browser.'
+             : (CAN_API? 'Progress saves in this browser only — sign in to carry it across devices.'
+                        : 'Opened as a local file, so progress stays in this browser only.')}
+      Questions are the original page crops — nothing is re-typed.</p>
   </div>`;
 }
 
@@ -664,7 +889,6 @@ function viewRes(){
   paintTop();
 }
 
-let browseCh='all';
 let refTab='topics', refCh='all';
 function viewRef(tab, ch){
   if(tab) refTab=tab;
@@ -713,26 +937,79 @@ function viewRef(tab, ch){
   </div>`;
   paintTop(); renderMath();
 }
+/* every item in one index: the 351 compiled Q items and the 323 originals,
+   so a number printed on the PDF can always be found here */
+const UNI = ITEMS.map(q=>({id:q.id, lb:'Q'+q.id, s:q.s, c:q.c, p:0}))
+  .concat(PQ.map(p=>({id:p.id, lb:'P'+p.p, s:p.s, c:p.c, p:1})));
+let browseCh='all', browseType='all';
+
+function setType(k){ browseType=k; viewBrowse(); }
+
 function viewBrowse(ch){
   if(ch!==undefined) browseCh=ch;
-  const filters = ['<button class="'+(browseCh==='all'?'on':'')+'" onclick="viewBrowse(\'all\')">All chapters</button>']
-    .concat(CHS.map((c,i)=>`<button class="${browseCh==i?'on':''}" onclick="viewBrowse(${i})">Ch ${i+1}</button>`)).join('');
-  const list = ITEMS.filter(q=>browseCh==='all'||q.c===browseCh).map(q=>{
-    const r=store.h[q.id];
-    const mark = r? (r.ok? '<span style="color:#1d6b47;font-weight:700">✓</span>':'<span style="color:#a8352a;font-weight:700">✕</span>') : '';
-    return `<button class="pill" style="cursor:pointer" onclick="startSingle(${q.id})">Q${q.id} &nbsp;<span style="color:#96a3b4">${q.s}</span> ${mark}</button>`;
-  }).join('');
   document.getElementById('view').innerHTML=`
   <div class="wrap"><div class="res">
     <div class="card">
-      <h3 style="margin-bottom:2px">Browse the bank</h3>
-      <p class="muted">Tap any item to open it on its own. ${ITEMS.length} items, 54 topics.</p>
-      <div class="filter">${filters}</div>
-      <div style="max-height:62vh;overflow:auto;line-height:2.4">${list}</div>
+      <h3 style="margin-bottom:2px">The whole bank</h3>
+      <p class="muted">All ${UNI.length} items in one index — ${ITEMS.length} compiled (Q) and
+        ${PQ.length} from your own attempts (P). Tap a number to open it on its own.</p>
+      <div class="filter" id="idxType"></div>
+      <div class="filter" id="idxCh"></div>
+      <div class="idxsearch"><input id="idxQ" placeholder="Find a number — 12, Q12, P7, or a topic id like 2.5" oninput="setSearch(this.value)"></div>
+      <div class="idxmeta" id="idxMeta"></div>
+      <div class="idxgrid" id="idxGrid"></div>
     </div>
     <div style="margin-top:14px"><button class="btn ghost" onclick="route('home')">Back</button></div>
   </div></div>`;
+  paintIdx();
   paintTop();
+}
+
+function setSearch(v){
+  const box=document.getElementById('idxQ');
+  if(box) box._v=v;
+  paintIdx();
+}
+
+function paintIdx(){
+  const tEl=document.getElementById('idxType'), cEl=document.getElementById('idxCh');
+  if(!tEl||!cEl) return;
+  tEl.innerHTML=[['all','All '+UNI.length],['q','Compiled '+ITEMS.length],['p','Originals '+PQ.length]]
+    .map(([k,t])=>`<button class="${browseType===k?'on':''}" onclick="setType('${k}')">${t}</button>`).join('');
+  cEl.innerHTML=['<button class="'+(browseCh==='all'?'on':'')+'" onclick="viewBrowse(\'all\')">All chapters</button>']
+    .concat(CHS.map((c,i)=>`<button class="${browseCh==i?'on':''}" onclick="viewBrowse(${i})">Ch ${i+1}</button>`)).join('');
+
+  const box=document.getElementById('idxQ');
+  const raw=box? (box._v!==undefined? box._v : box.value) : '';
+  const q=raw.trim().toLowerCase();
+  const num=q.match(/^([qp]?)\s*0*(\d{1,3})$/);
+  const list=UNI.filter(it=>{
+    if(browseCh!=='all' && it.c!==browseCh) return false;
+    if(browseType==='q' && it.p) return false;
+    if(browseType==='p' && !it.p) return false;
+    if(!q) return true;
+    if(num){
+      const pre=num[1], n=Number(num[2]);
+      if(pre==='q' && it.p) return false;
+      if(pre==='p' && !it.p) return false;
+      return Number(it.lb.slice(1))===n;
+    }
+    return it.s.indexOf(q)===0;
+  });
+
+  let ok=0, seen=0;
+  const cells=list.map(it=>{
+    const r=store.h[it.id]; if(r){seen++; if(r.ok) ok++;}
+    const st=r?(r.ok?'ok':'bad'):'new';
+    const sec=SECMAP[it.s];
+    return `<button class="idx-b ${st}${it.p?' p':''}" onclick="startSingle(${it.id})"
+      title="${it.lb} · ${it.s}${sec? ' · '+sec.en : ''}"><b>${it.lb}</b><i>${it.s}</i>${r?(r.ok?'<u>✓</u>':'<u>✕</u>'):''}</button>`;
+  }).join('');
+  const meta=document.getElementById('idxMeta'), grid=document.getElementById('idxGrid');
+  meta.textContent=list.length
+    ? `${list.length} item${list.length===1?'':'s'} · ${seen} attempted · ${ok} correct`
+    : 'Nothing matches that filter.';
+  grid.innerHTML=cells || '<p class="muted" style="padding:8px 0;grid-column:1/-1">No item in this slice.</p>';
 }
 function startSingle(id){
   round={list:[id], i:0, mode:'single', picked:null, done:false, t0:Date.now()};
@@ -759,6 +1036,7 @@ paintTop(); viewHome(); renderMath();
 if(location.hash==='#pq') start('pq');
 else if(location.hash==='#ref') route('ref');
 else if(location.hash==='#bank') route('browse');
+bootAcct().then(()=>paintTop());
 </script>
 </body>
 </html>
