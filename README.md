@@ -56,7 +56,12 @@ SQLite on the server. Reset clears both.
 ## Using it / 怎么用
 
 - **Practice** — smart round. Phase 1 walks one question from every topic; phase 2
-  re-weights towards whatever you keep missing.
+  re-weights towards whatever you keep missing. Both decks are in the same pool,
+  so the round covers all 674 items: a topic counts as *started* when either a
+  graded item **or** one of its originals has an answer, and once a topic's
+  graded items are used up the engine serves its originals (self-marked, gold `P`
+  badge). Accuracy stays graded-only — the originals never dilute the figure the
+  engine steers by.
 - **Quiz originals · 10** — the 323 items you were served, self-marked against the
   printed answer.
 - **Reference** — 54 topics × (what it tests · how to do it · the trap), formula

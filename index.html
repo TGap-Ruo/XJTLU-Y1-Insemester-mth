@@ -267,6 +267,14 @@ const BYID = {}; ITEMS.forEach(q=>BYID[q.id]=q);
 const SECMAP = {}; SECS.forEach(s=>SECMAP[s.id]=s);
 PQ.forEach(p=>{ BYID[p.id]={id:p.id, s:p.s, c:p.c, p:p.p, pq:1}; });
 const PQBYSEC = {}; PQ.forEach(p=>{ (PQBYSEC[p.s]=PQBYSEC[p.s]||[]).push(p.id); });
+/* one topic = both decks. Graded items first, then the originals served for it,
+   so a topic is fully covered only when every item of either deck has been seen. */
+const ALLBYSEC = {};
+SECS.forEach(s=>{ const a=[];
+  for(let i=s.from;i<=s.to;i++) a.push(i);
+  (PQBYSEC[s.id]||[]).forEach(p=>a.push(p));
+  ALLBYSEC[s.id]=a;
+});
 const TOTAL_PQ = PQ.length;
 const REF = DATA.ref || [], FORMS = DATA.forms || [], GLOSS = DATA.gloss || [];
 let store = {h:{}, fav:{}, streak:0, best:0};
@@ -460,47 +468,60 @@ function resetAll(){
 }
 
 /* ---------- smart engine ---------- */
+function secCov(id){
+  const all=ALLBYSEC[id]; let done=0;
+  for(const i of all) if(store.h[i]) done++;
+  return {done, n:all.length};
+}
 function untouchedSecs(){
   return SECS.filter(s=>{
-    for(let i=s.from;i<=s.to;i++) if(store.h[i]) return false;
+    for(const i of ALLBYSEC[s.id]) if(store.h[i]) return false;
     return true;
   });
 }
 function nextSmart(){
-  // phase 1: one pass through every topic
+  // phase 1: one pass through every topic — either deck counts as "started"
   const un=untouchedSecs();
   if(un.length){
     const s=un[0];
-    // the easiest unanswered item in that topic = first one
-    for(let i=s.from;i<=s.to;i++) if(!store.h[i]) return i;
+    // graded item first; if the topic has none left, its quiz originals
+    for(const i of ALLBYSEC[s.id]) if(!store.h[i]) return i;
   }
-  // phase 2: weakest topic first, prefer unseen then most-missed then stalest
+  // phase 2: weakest topic first, across both decks:
+  // unseen first, then most-missed, then stalest
   let best=null, bestScore=-1;
   for(const s of SECS){
     const st=secStat(s.id);
+    const cv=secCov(s.id);
     const gap=1-st.acc;
-    if(gap<=0) continue;
-    // unseen item inside this topic
-    let cand=null;
-    for(let i=s.from;i<=s.to;i++){ if(!store.h[i]){ cand=i; break; } }
+    let unseen=null;
+    for(const i of ALLBYSEC[s.id]) if(!store.h[i]){ unseen=i; break; }
+    if(gap<=0 && unseen===null) continue;   // mastered and fully covered
+    let cand=unseen;
     if(cand===null){
-      // most recently wrong / stalest
+      // most recently wrong / stalest — self-marked originals count as misses too
       let worst=null, wt=Infinity;
-      for(let i=s.from;i<=s.to;i++){
+      for(const i of ALLBYSEC[s.id]){
         const r=store.h[i];
-        if(!r.ok && (r.t||0)<wt){ wt=r.t||0; worst=i; }
+        if(r && !r.ok && (r.t||0)<wt){ wt=r.t||0; worst=i; }
       }
       cand=worst;
       if(cand===null){ // all correct: pick stalest
         let st2=Infinity;
-        for(let i=s.from;i<=s.to;i++){ const t=store.h[i].t||0; if(t<st2){st2=t; cand=i;} }
+        for(const i of ALLBYSEC[s.id]){ const t=(store.h[i]||{}).t||0; if(t<st2){st2=t; cand=i;} }
       }
     }
-    const score = gap*1000 + (1 - Math.min(st.done/st.n,1))*100;
+    const score = gap*1000 + (1 - Math.min(cv.done/cv.n,1))*100;
     if(score>bestScore){ bestScore=score; best=cand; }
   }
   if(best!==null) return best;
-  return ITEMS[Math.floor(Math.random()*ITEMS.length)].id;
+  // everything answered: least-recently-seen item, either deck
+  let cand=null, oldest=Infinity;
+  for(const s of SECS) for(const i of ALLBYSEC[s.id]){
+    const t=(store.h[i]||{}).t||0;
+    if(t<oldest){ oldest=t; cand=i; }
+  }
+  return cand!==null? cand : ITEMS[0].id;
 }
 function buildMock(n){
   const pool=[]; const per={};
@@ -590,12 +611,12 @@ function viewHome(){
   document.getElementById('view').innerHTML = `
   <div class="wrap">
     <div class="hero">
-      <h1>${o.done===0? 'Start where it matters' : 'Keep the streak alive'}</h1>
-      <p>${o.done===0
-        ? 'The engine walks you through <b>one question from every topic first</b>, then re-weights towards whatever you keep missing. No setup needed.'
-        : 'You have answered <b>'+o.done+'</b> of 351 items at <b>'+Math.round(o.acc*100)+'%</b>. Topics untouched: '+un+'.'}</p>
+      <h1>${o.done+pq.done===0? 'Start where it matters' : 'Keep the streak alive'}</h1>
+      <p>${o.done+pq.done===0
+        ? 'The engine walks you through <b>one question from every topic first</b> — all <b>674</b> items, both decks — then re-weights towards whatever you keep missing. No setup needed.'
+        : 'You have answered <b>'+o.done+'</b> of 351 graded items and <b>'+pq.done+'</b> of 323 originals. Topics untouched: '+un+'.'}</p>
       <div class="row">
-        <button class="btn white" onclick="start('smart')">${o.done? 'Continue smart round':'Start smart round'}</button>
+        <button class="btn white" onclick="start('smart')">${un<SECS.length? 'Continue smart round':'Start smart round'}</button>
         <button class="btn light" onclick="start('mock')">Mock test · 20</button>
         <button class="btn light" onclick="start('pq')">Quiz originals · 10</button>
         <button class="btn light" onclick="route('browse')">Browse all 674</button>
@@ -716,6 +737,11 @@ function viewPq(){
   const id=round.list[round.i], q=BYID[id];
   const p=String(q.p).padStart(3,'0');
   const picked=round.picked, shown=picked!==null;
+  // inside a smart round the originals are served one at a time, mixed with the
+  // graded items, so grading must hand over to "next" instead of ending a round
+  const solo = round.mode==='smart' && round.list.length===1;
+  const graded = solo && round.marked;
+  const unLeft = solo? untouchedSecs().length : 0;
   const letters=['A','B','C','D','E'];
   const opts = letters.map(L=>{
     let cls='opt';
@@ -733,9 +759,11 @@ function viewPq(){
       <div style="padding:2px 14px 14px">
         <a href="pq/p${p}_s.jpg" target="_blank" title="Open full size">
           <img class="qimg" src="pq/p${p}_s.jpg" alt="Solution"></a></div>
-      <div style="display:flex;gap:10px;padding:0 14px 16px">
-        <button class="btn pri" onclick="gradePq(1)">My pick was right</button>
-        <button class="btn ghost" onclick="gradePq(0)">I missed it</button>
+      <div style="display:flex;gap:10px;padding:0 14px 16px;align-items:center">
+        ${graded
+          ? `<span class="muted" style="font-size:13px">Recorded — you marked this ${store.h[q.id]&&store.h[q.id].ok? 'correct':'as missed'}.</span>`
+          : `<button class="btn pri" onclick="gradePq(1)">My pick was right</button>
+        <button class="btn ghost" onclick="gradePq(0)">I missed it</button>`}
       </div>
     </div>` : '';
   document.getElementById('view').innerHTML = `
@@ -744,8 +772,12 @@ function viewPq(){
       <div class="qhead">
         <span class="qno" style="background:#9a6a1c">P${q.p}</span>
         <span class="qsec">${q.s} · ${SECMAP[q.s].en}</span>
-        <div class="qprog"><span class="muted" style="font-size:12px">Originals · ${round.i+1}/${round.list.length}</span>
-          <span class="track"><i style="width:${Math.round(round.i/round.list.length*100)}%"></i></span></div>
+        <div class="qprog"><span class="muted" style="font-size:12px">${solo
+          ? (unLeft? 'Phase 1 · ':'Phase 2 · ')+(SECS.length-unLeft)+'/'+SECS.length+' topics'
+          : 'Originals · '+(round.i+1)+'/'+round.list.length}</span>
+          <span class="track"><i style="width:${solo
+            ? Math.round((SECS.length-unLeft)/SECS.length*100)
+            : Math.round(round.i/round.list.length*100)}%"></i></span></div>
       </div>
       <div class="qbody"><img class="qimg" src="pq/p${p}_q.jpg" alt="Question"></div>
       <div class="opts">${opts}</div>
@@ -754,10 +786,13 @@ function viewPq(){
     <div style="display:flex;gap:10px;margin-top:14px;align-items:center">
       <button class="btn ghost" onclick="route('home')">Exit</button>
       <div class="spacer" style="flex:1"></div>
-      ${shown? `<button class="btn ghost" onclick="advance()">${round.i+1>=round.list.length?'Skip to results':'Skip'}</button>`:''}
+      ${shown? (solo
+        ? (graded? `<button class="btn pri" onclick="start('smart')">Next question &rarr;</button>`: '')
+        : `<button class="btn ghost" onclick="advance()">${round.i+1>=round.list.length?'Skip to results':'Skip'}</button>`):''}
     </div>
     <p class="muted" style="text-align:center;margin-top:14px">${shown
-      ? 'Compare with the printed answer, then mark your own attempt.'
+      ? (graded? 'Marked. The engine picks the next item from whatever you keep missing.'
+               : 'Compare with the printed answer, then mark your own attempt.')
       : 'Pick the letter you would have chosen. Nothing is scored until you mark it.'}</p>
   </div></div>`;
   paintTop();
@@ -774,7 +809,11 @@ function gradePq(ok){
   store.h[q.id]={a:round.picked, ok:!!ok, t:Date.now(), self:1};
   if(ok){ store.streak++; if(store.streak>store.best) store.best=store.streak; }
   else store.streak=0;
-  save(); advance();
+  save();
+  if(round.mode==='smart' && round.list.length===1){
+    round.marked=true; viewQuiz(); return;   // smart round: wait for "next"
+  }
+  advance();
 }
 
 function viewRes(){
