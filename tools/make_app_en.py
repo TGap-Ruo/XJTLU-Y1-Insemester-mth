@@ -85,7 +85,7 @@ HTML = r"""<!DOCTYPE html>
   --pri:#16406e; --pri2:#2c6ba8; --pri3:#eaf1fa;
   --green:#1d6b47; --green-bg:#edf8f1; --green-line:#bfe2cd;
   --red:#a8352a; --red-bg:#fdf1ef; --red-line:#f0cdc7;
-  --amber:#98621a; --amber-bg:#fdf7ec;
+  --amber:#98621a; --amber-bg:#fdf7ec; --gold:#c8922e;
   --sh:0 1px 2px rgba(16,32,56,.05),0 10px 26px -14px rgba(16,32,56,.18);
   --sh2:0 2px 6px rgba(16,32,56,.07),0 22px 48px -20px rgba(16,32,56,.24);
   --r:14px;
@@ -337,6 +337,74 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
   background:rgba(16,24,39,.92);color:#fff;padding:10px 18px;border-radius:100px;font-size:13.5px;
   opacity:0;transition:.24s;z-index:99;pointer-events:none}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* star / favourites */
+.star{flex:0 0 auto;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;
+  font-size:18px;line-height:1;color:var(--ink4);border:1px solid var(--line);border-radius:9px;
+  background:#fff;padding:0;transition:.14s}
+.star:hover{border-color:var(--gold);color:var(--gold);background:#fffaf0}
+.star.on{color:var(--gold);border-color:#e6cf9c;background:#fff8e8}
+.qhead>.star{margin-left:auto}
+.qhead>.star+.qprog{margin-left:8px}
+.btn.ic{padding:9px 12px;font-size:15px;flex:0 0 auto}
+.btn.ic .zhx{font-size:11px;margin-left:4px}
+@media(max-width:1320px){#btnFav .zhx{display:none}}
+@media(max-width:560px){.btn.ic{padding:8px 9px;font-size:14px}#btnFav{padding:8px 9px}}
+
+/* preview + favourites board */
+.pv-hd2{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:24px 0 4px}
+.pv-hd2 h2{margin:0;font-size:22px}
+.pv-sub{color:var(--ink3);font-size:13px;margin:0 0 14px}
+.pv-tools{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:0 0 12px}
+.pv-grid{max-height:180px}
+.pv-count{font-size:12px;color:var(--ink3);margin:0 0 8px;font-variant-numeric:tabular-nums}
+.pv-cards{display:grid;grid-template-columns:1fr;gap:14px;margin:14px 0}
+.pv-card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--sh);
+  overflow:hidden;scroll-margin-top:78px}
+.pv-card.hl{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,146,46,.28),var(--sh2)}
+.pv-hd{display:flex;align-items:center;gap:9px;padding:10px 14px;background:#f7fafd;
+  border-bottom:1px solid var(--line);flex-wrap:wrap}
+.pv-hd .qno{flex:0 0 auto}
+.qno.pq{background:#9a6a1c}
+.pv-sec{font-size:12.5px;color:var(--ink2);min-width:0;flex:1 1 auto;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.pv-done{font-size:11.5px;color:var(--ink4);flex:0 0 auto;white-space:nowrap}
+.pv-done.ok{color:var(--green)}.pv-done.bad{color:var(--red)}
+.pv-img{padding:12px 14px 2px}
+.pv-img img{display:block;width:100%;height:auto;border-radius:8px}
+.pv-ans{margin:10px 14px 0;background:var(--green-bg);border:1px solid var(--green-line);
+  border-radius:10px;padding:9px 13px;font-size:14px;color:var(--green);font-weight:700}
+.pv-ans b{font-size:16px}
+.pv-note{margin:10px 14px 0;font-size:12px;color:var(--amber);background:var(--amber-bg);
+  border-radius:9px;padding:7px 11px}
+.pv-aimg,.pv-simg{margin:10px 14px 0}
+.pv-aimg img{display:block;max-width:100%;max-height:74px;width:auto;height:auto;border-radius:6px}
+.pv-simg img{display:block;width:100%;height:auto;border-radius:8px}
+.pv-det{margin:10px 14px 0;border:1px solid var(--line);border-radius:10px;background:#fcfdff;overflow:hidden}
+.pv-det>summary{cursor:pointer;padding:9px 13px;font-size:13px;font-weight:600;color:var(--pri2);
+  list-style:none;display:flex;align-items:center;gap:8px}
+.pv-det>summary::-webkit-details-marker{display:none}
+.pv-det>summary:before{content:'\25B8';font-size:12px;color:var(--ink4)}
+.pv-det[open]>summary:before{content:'\25BE'}
+.pv-det .sol{padding:0 14px 12px}
+.pv-ft{display:flex;gap:9px;align-items:center;flex-wrap:wrap;padding:12px 14px 14px}
+.pv-fav{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);background:#fff;
+  border-radius:10px;padding:8px 13px;font-size:13px;font-weight:600;color:var(--ink2)}
+.pv-fav .ico{font-size:15px;color:var(--ink4)}
+.pv-fav.on{border-color:#e6cf9c;background:#fff8e8;color:#8a6014}
+.pv-fav.on .ico{color:var(--gold)}
+.pv-pager{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;margin:16px 0}
+.pv-empty{text-align:center;padding:38px 20px;color:var(--ink3)}
+.idx-b.fav:before{content:'\2605';position:absolute;right:6px;bottom:4px;font-size:10px;
+  color:var(--gold);line-height:1}
+@media(max-width:520px){
+  .star{width:27px;height:27px;font-size:16px}
+  .qhead{padding:10px 12px;gap:7px}
+  .pv-hd{gap:7px;padding:10px 11px}
+  .pv-sec{white-space:normal;flex-basis:55%}
+  .pv-hd2 h2{font-size:19px}
+  .pv-ft .btn{padding:8px 12px}
+}
 </style>
 </head>
 <body>
@@ -348,6 +416,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
   <button class="btn ghost" onclick="route('home')">Practice<span class="zhx navz">练习</span></button>
   <button class="btn ghost" onclick="route('ref')">Reference<span class="zhx navz">手册</span></button>
   <button class="btn ghost" onclick="route('browse')">Bank<span class="zhx navz">题库</span></button>
+  <button class="btn ghost ic" id="btnFav" onclick="route('fav')" title="Favourites 收藏夹">★<span class="zhx navz">收藏</span></button>
   <div class="chip" id="cAns">Answered <b>0</b></div>
   <div class="chip" id="cAcc">Accuracy <b>—</b></div>
   <div class="chip" id="cStreak">Streak <b>0</b></div>
@@ -387,6 +456,27 @@ const TOTAL_PQ = PQ.length;
 const REF = DATA.ref || [], FORMS = DATA.forms || [], GLOSS = DATA.gloss || [];
 let store = {h:{}, fav:{}, streak:0, best:0};
 try{ const raw=localStorage.getItem(LS); if(raw) store=Object.assign(store,JSON.parse(raw)); }catch(e){}
+/* Old localStorage blobs may hold fav[id]=true/false/null or padded keys.
+   The server skips bool/null and abs>1e14, so normalise before anything is
+   uploaded: keys become canonical integer strings, values signed ms ints. */
+function normFav(f){
+  /* Same whitelist as the server's _fav_int(): a favourite is a signed ms
+     timestamp, nothing else. Booleans/nulls are dropped rather than turned into
+     1/0 — the server would accept 1 as a real (tiny) timestamp and isFav() would
+     then show a ghost star that can never be explained. */
+  const out={};
+  Object.keys(f||{}).forEach(k=>{
+    const key=String(Number(k));
+    if(!/^\d+$/.test(key) || !(+key>0)) return;
+    const raw=f[k];
+    if(typeof raw==='boolean' || raw==null) return;
+    const v=+raw;
+    if(!Number.isFinite(v) || v===0 || Math.abs(v)>1e14) return;
+    out[key]=v;
+  });
+  return out;
+}
+store.fav=normFav(store.fav);
 function save(quiet){
   try{localStorage.setItem(LS,JSON.stringify(store))}catch(e){}
   if(!quiet) schedulePush();
@@ -414,6 +504,12 @@ function mergeInto(dst, src){
     const a=dst.h[k], b=h[k]||{};
     if(!a || (+b.t||0)>=(+a.t||0)) dst.h[k]=b;
   });
+  dst.fav=dst.fav||{};
+  const f=(src&&src.fav)||{};
+  Object.keys(f).forEach(k=>{
+    const a=+(dst.fav[k])||0, b=+(f[k])||0;          // true->1, false/null->0
+    if(Math.abs(b)>=Math.abs(a)) dst.fav[k]=b;        // newest abs wins; deletions too
+  });
   dst.streak=Math.max(+dst.streak||0, +src.streak||0);
   dst.best=Math.max(+dst.best||0, +src.best||0);
 }
@@ -430,7 +526,7 @@ function syncNow(){
   if(!ACCT||!CAN_API) return Promise.resolve();
   setSync('busy');
   return api('api/progress',{method:'PUT',
-      body:JSON.stringify({h:store.h, streak:store.streak, best:store.best})})
+      body:JSON.stringify({h:store.h, streak:store.streak, best:store.best, fav:store.fav})})
     .then(r=>{
       if(!r){ setSync('err'); return; }
       if(r.status===401){ ACCT=null; setSync('guest'); paintTop(); return; }
@@ -567,6 +663,7 @@ function paintTop(){
   document.getElementById('cAns').innerHTML='Answered <b>'+o.done+'</b>';
   document.getElementById('cAcc').innerHTML='Accuracy <b>'+(o.done? Math.round(o.acc*100)+'%':'—')+'</b>';
   document.getElementById('cStreak').innerHTML='Streak <b>'+store.streak+'</b>';
+  document.querySelectorAll('[data-fav-count]').forEach(el=>{ el.textContent=favCount(); });
   paintAcct();
 }
 function toast(m){ const t=document.getElementById('toast'); t.textContent=m; t.classList.add('on');
@@ -577,6 +674,60 @@ function resetAll(){
   store={h:{},fav:{},streak:0,best:0}; save(true);
   if(ACCT&&CAN_API){ api('api/progress',{method:'DELETE'}).then(()=>setSync('on')); }
   paintTop(); route('home');
+}
+
+/* ---------- favourites ----------
+   store.fav[id] = signed epoch ms. >0 is starred, <0 is a "tombstone" for an
+   un-star. abs() is the operation time, so a later deletion still wins when two
+   devices are merged. Legacy booleans read as 1 / 0 via +v. */
+function isFav(id){ return (+((store.fav||{})[id])||0) > 0; }
+function favCount(){ return Object.keys(store.fav||{}).filter(k=>isFav(k)).length; }
+function starBtn(id){
+  const on=isFav(id);
+  return `<button class="star${on?' on':''}" data-star="${id}" onclick="toggleFav(${id})" title="Favourite 收藏" aria-label="Favourite">${on?'★':'☆'}</button>`;
+}
+function favBtn(id){
+  const on=isFav(id);
+  return `<button class="pv-fav${on?' on':''}" data-star="${id}" onclick="toggleFav(${id})">`
+    +`<span class="ico">${on?'★':'☆'}</span> `
+    +`<span class="lb-en">${on?'Starred':'Favourite'}</span> `
+    +`<span class="zhx lb-zh">${on?'已收藏':'收藏'}</span></button>`;
+}
+function toggleFav(id){
+  const was=isFav(id);
+  store.fav=store.fav||{};
+  store.fav[id]= was? -Date.now() : Date.now();
+  save();
+  const now=!was;
+  document.querySelectorAll('[data-star="'+id+'"]').forEach(b=>{
+    b.classList.toggle('on', now);
+    const ico=b.querySelector('.ico');
+    if(ico) ico.textContent= now?'★':'☆'; else b.textContent= now?'★':'☆';
+    const en=b.querySelector('.lb-en'), zh=b.querySelector('.lb-zh');
+    if(en) en.textContent= now?'Starred':'Favourite';
+    if(zh) zh.textContent= now?'已收藏':'收藏';
+  });
+  document.querySelectorAll('[data-fav-count]').forEach(el=>{ el.textContent=favCount(); });
+  toast(now? 'Starred · 已收藏' : 'Removed · 已取消');
+  /* Quiz cards must never be redrawn (that would erase the picked answer and
+     the revealed solution). On the Preview / Favourites board there is no such
+     state to lose, so refresh the index and paged list in place. pvPaint() keeps
+     scroll position and the search box; renderPv() would rebuild everything. */
+  if(!document.querySelector('.qcard') && document.getElementById('pvCards')) pvPaint();
+}
+function clearFav(){
+  if(!favCount()) return;
+  if(!confirm('Remove all favourites? · 清空收藏夹？')) return;
+  const t=Date.now();
+  Object.keys(store.fav).forEach(k=>{ if(isFav(k)) store.fav[k]=-t; });
+  save(); route('fav'); toast('Favourites cleared · 已清空');
+}
+function currentFavId(){
+  if(document.querySelector('.qcard') && round && round.list && round.list.length)
+    return round.list[round.i];
+  const el=document.querySelector('.pv-card.hl') || document.querySelector('.pv-card');
+  if(el) return +el.getAttribute('data-id');
+  return null;
 }
 
 /* ---------- smart engine ----------
@@ -702,9 +853,13 @@ function wrongQueue(){
 /* ---------- routing ---------- */
 let round={list:[],i:0,mode:'smart',picked:null,done:false,t0:0};
 function route(v,arg){ window.scrollTo(0,0);
+  const HASHV={home:'#home', ref:'#ref', browse:'#bank', preview:'#preview', fav:'#fav'};
+  try{ if(HASHV[v] && location.hash!==HASHV[v]) history.replaceState(null,'',HASHV[v]); }catch(e){}
   if(v==='home') viewHome(); else if(v==='quiz') viewQuiz();
   else if(v==='res') viewRes(); else if(v==='browse') viewBrowse(arg||'all');
   else if(v==='ref') viewRef(arg);
+  else if(v==='preview') viewPreview();
+  else if(v==='fav') viewFav();
   paintTop();
 }
 function start(mode){
@@ -822,6 +977,8 @@ function viewHome(){
         <button class="btn light" onclick="start('mock')">Mock test · 20 <span class="zhx">模拟卷</span></button>
         <button class="btn light" onclick="start('pq')">Quiz originals · 10 <span class="zhx">原题</span></button>
         <button class="btn light" onclick="route('browse')">Browse all 674 <span class="zhx">全部题目</span></button>
+        <button class="btn light" onclick="route('preview')">Preview <span class="zhx">题库速览</span></button>
+        <button class="btn light" onclick="route('fav')">★ Favourites · <span data-fav-count>${favCount()}</span> <span class="zhx">收藏夹</span></button>
       </div>
     </div>
     <div class="eng">
@@ -912,6 +1069,7 @@ function viewQuiz(){
       <div class="qhead">
         <span class="qno">Q${q.id}</span>
         <span class="qsec" title="${q.s} · ${SECMAP[q.s].en} · ${SECMAP[q.s].zh}">${q.s} · ${SECMAP[q.s].en}<span class="tz"> ${SECMAP[q.s].zh}</span></span>
+        ${starBtn(id)}
         <div class="qprog" title="Round ${cy.n} · 第 ${cy.n} 轮">
           <span class="muted" style="font-size:12px">${progLabel}</span>
           <span class="track"><i style="width:${pct}%"></i></span></div>
@@ -1004,6 +1162,7 @@ function viewPq(){
       <div class="qhead">
         <span class="qno" style="background:#9a6a1c">P${q.p}</span>
         <span class="qsec" title="${q.s} · ${SECMAP[q.s].en} · ${SECMAP[q.s].zh}">${q.s} · ${SECMAP[q.s].en}<span class="tz"> ${SECMAP[q.s].zh}</span></span>
+        ${starBtn(id)}
         <div class="qprog" title="Round ${cy.n} · 第 ${cy.n} 轮">
           <span class="muted" style="font-size:12px">${solo
           ? 'Phase '+(untouchedSecs().length?1:2)+' · '+cy.seen+'/'+SECS.length+' topics'
@@ -1214,7 +1373,7 @@ function paintIdx(){
     const r=store.h[it.id]; if(r){seen++; if(r.ok) ok++;}
     const st=r?(r.ok?'ok':'bad'):'new';
     const sec=SECMAP[it.s];
-    return `<button class="idx-b ${st}${it.p?' p':''}" onclick="startSingle(${it.id})"
+    return `<button class="idx-b ${st}${it.p?' p':''}${isFav(it.id)?' fav':''}" onclick="startSingle(${it.id})"
       title="${it.lb} · ${it.s}${sec? ' · '+sec.en+' · '+sec.zh : ''}"><b>${it.lb}</b><i>${it.s}</i>${r?(r.ok?'<u>✓</u>':'<u>✕</u>'):''}</button>`;
   }).join('');
   const meta=document.getElementById('idxMeta'), grid=document.getElementById('idxGrid');
@@ -1227,6 +1386,188 @@ function startSingle(id){
   round={list:[id], i:0, mode:'single', picked:null, done:false, t0:Date.now()};
   route('quiz');
 }
+
+/* ---------- preview / favourites board ----------
+   Pure browsing: answers are shown immediately; nothing is answered or scored.
+   viewFav reuses the same renderer with the data source limited to starred ids. */
+let pvType='all', pvCh='all', pvQ='', pvPage=0, pvScope='all', pvMode='preview';
+const PV_PER=6;
+function pvEsc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/"/g,'&quot;')
+  .replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function pvMatch(it, q){
+  if(!q) return true;
+  const num=q.match(/^([qp]?)\s*0*(\d{1,3})$/);
+  if(num){
+    const pre=num[1], n=Number(num[2]);
+    if(pre==='q' && it.p) return false;
+    if(pre==='p' && !it.p) return false;
+    return Number(it.lb.slice(1))===n;
+  }
+  if(it.s.indexOf(q)===0) return true;                     // topic id, e.g. 2.5
+  const sec=SECMAP[it.s];
+  if(sec && (sec.en.toLowerCase().indexOf(q)>=0 || sec.zh.indexOf(q)>=0)) return true;
+  return it.lb.toLowerCase().indexOf(q)>=0;                // Q12 / P7 fallback
+}
+function pvList(){
+  const q=(pvQ||'').trim().toLowerCase();
+  return UNI.filter(it=>{
+    if(pvCh!=='all' && it.c!==pvCh) return false;
+    if(pvScope==='fav' && !isFav(it.id)) return false;
+    if(pvType==='q' && it.p) return false;
+    if(pvType==='p' && !it.p) return false;
+    if(pvScope==='all' && pvType==='fav' && !isFav(it.id)) return false;
+    return pvMatch(it, q);
+  });
+}
+function pvSetType(k){ pvType=k; pvPage=0; renderPv(pvMode); }
+function pvSetCh(c){ pvCh=c; pvPage=0; renderPv(pvMode); }
+function pvSetQ(v){ pvQ=v; pvPage=0; pvPaint(); }
+function pvPageGo(n){ pvPage=n; pvPaint();
+  const el=document.getElementById('pvCards'); if(el) el.scrollIntoView({block:'start',behavior:'smooth'}); }
+function pvGo(id){
+  const list=pvList(), idx=list.findIndex(x=>x.id===id);
+  if(idx<0) return;
+  pvPage=Math.floor(idx/PV_PER); pvPaint();
+  const el=document.querySelector('.pv-card[data-id="'+id+'"]');
+  if(el){ el.classList.add('hl'); el.scrollIntoView({block:'center',behavior:'smooth'}); }
+}
+
+function previewCard(id){
+  const q=BYID[id], sec=SECMAP[q.s]||{en:'',zh:''}, rec=store.h[id];
+  const isP=q.pq===1;
+  const badge=isP? 'P'+q.p : 'Q'+q.id;
+  const done=rec? (rec.ok? '<span class="pv-done ok">✓ Done · 已做对</span>'
+                        : '<span class="pv-done bad">✕ Missed · 做错过</span>')
+                : '<span class="pv-done">Not tried · 未做</span>';
+  let qimg, ans;
+  if(isP){
+    const p=String(q.p).padStart(3,'0');
+    qimg=`<img src="pq/p${p}_q.jpg" alt="Question ${p}" loading="lazy">`;
+    ans=`<div class="pv-note">Self-marked · 原题无标准选项，答案取自原卷打印行
+        <span class="tz">printed answer, not a reconstructed letter · 答案取自原卷打印行，非反推的选项字母</span></div>
+      <div class="pv-ans">Answer · 打印答案行 <span class="tz">答案以下图为准</span></div>
+      <div class="pv-aimg"><a href="pq/p${p}_a.jpg" target="_blank" title="Open full size">
+        <img src="pq/p${p}_a.jpg" alt="Printed answer" loading="lazy"></a></div>
+      <details class="pv-det"><summary>Printed solution 打印解答 <span class="tz">展开查看</span></summary>
+        <div class="pv-simg"><a href="pq/p${p}_s.jpg" target="_blank" title="Open full size">
+          <img src="pq/p${p}_s.jpg" alt="Printed solution" loading="lazy"></a></div>
+      </details>`;
+  } else {
+    const n=String(q.id).padStart(3,'0');
+    qimg=`<img src="q/q${n}.png" alt="Question ${q.id}" loading="lazy">`;
+    ans=`<div class="pv-ans">Answer: <b>${q.a}</b> <span class="tz">答案</span></div>
+      <details class="pv-det"><summary>Solution 解析 <span class="tz">展开查看</span></summary>
+        <div class="sol">
+          <div class="col"><div class="lb">Solution</div>${q.en}</div>
+          <div class="col zh"><div class="lb">中文解析</div>${q.zh}</div>
+          ${q.focus? `<div class="col"><div class="lb">Focus 考点</div>${q.focus}</div>`:''}
+          ${q.trap? `<div class="col"><div class="lb">Trap 易错点</div>${q.trap}</div>`:''}
+        </div>
+      </details>`;
+  }
+  return `<article class="pv-card" data-id="${id}" id="pv${id}">
+    <div class="pv-hd">
+      <span class="qno${isP?' pq':''}">${badge}</span>
+      <span class="pv-sec" title="${q.s} · ${sec.en} · ${sec.zh}">${q.s} · ${sec.en}<span class="tz"> ${sec.zh}</span></span>
+      ${starBtn(id)}
+      ${done}
+    </div>
+    <div class="pv-img">${qimg}</div>
+    ${ans}
+    <div class="pv-ft">
+      <button class="btn ghost" onclick="startSingle(${id})">Practice this <span class="zhx">做这题</span></button>
+      ${favBtn(id)}
+    </div>
+  </article>`;
+}
+
+function pvPaint(){
+  const g=document.getElementById('pvGrid'), c=document.getElementById('pvCards');
+  if(!g||!c) return;
+  const list=pvList();
+  const pages=Math.max(1,Math.ceil(list.length/PV_PER));
+  if(pvPage>=pages) pvPage=pages-1;
+  if(pvPage<0) pvPage=0;
+  const page=list.slice(pvPage*PV_PER,(pvPage+1)*PV_PER);
+  g.innerHTML=list.map(it=>{
+    const r=store.h[it.id], st=r?(r.ok?'ok':'bad'):'new';
+    return `<button class="idx-b ${st}${it.p?' p':''}${isFav(it.id)?' fav':''}" onclick="pvGo(${it.id})"
+      title="${it.lb} · ${it.s}"><b>${it.lb}</b><i>${it.s}</i>${r?(r.ok?'<u>✓</u>':'<u>✕</u>'):''}</button>`;
+  }).join('') || '<p class="muted" style="grid-column:1/-1">No item in this slice.</p>';
+  c.innerHTML=list.length? page.map(it=>previewCard(it.id)).join('')
+    : `<div class="card pv-empty">
+        <div style="font-size:30px">☆</div>
+        <h3 style="margin:8px 0 4px">${pvScope==='fav'? 'No favourites yet' : 'Nothing matches'}</h3>
+        <p class="muted">${pvScope==='fav'
+          ? 'Tap the ★ on any question to keep it here — answers are shown straight away.'
+          : 'Try another type, chapter or search term.'}</p>
+        <p class="muted"><span class="zhx">${pvScope==='fav'
+          ? '在任何题上点 ★ 即可加入收藏夹，这里会直接显示答案。' : '换个类型、章节或关键词试试。'}</span></p>
+        <button class="btn ghost" style="margin-top:10px" onclick="route('browse')">Browse the bank <span class="zhx">去题库</span></button>
+      </div>`;
+  const meta=document.getElementById('pvMeta');
+  if(meta) meta.textContent=list.length
+    ? `${list.length} item${list.length===1?'':'s'} · page ${pvPage+1}/${pages} ／ 共 ${list.length} 题，第 ${pvPage+1}/${pages} 页`
+    : '0 items ／ 共 0 题';
+  const pager=document.getElementById('pvPager');
+  if(pager) pager.innerHTML=`
+    <button class="btn ghost" ${pvPage<=0?'disabled':''} onclick="pvPageGo(${pvPage-1})">&larr; Prev <span class="zhx">上一页</span></button>
+    <span class="muted">Page ${pvPage+1} / ${pages}</span>
+    <button class="btn ghost" ${pvPage>=pages-1?'disabled':''} onclick="pvPageGo(${pvPage+1})">Next <span class="zhx">下一页</span> &rarr;</button>`;
+  renderMath();
+}
+
+function renderPv(mode){
+  pvMode=mode; pvScope= mode==='fav'? 'fav':'all';
+  if(pvScope==='fav' && pvType==='fav') pvType='all';
+  const favOnly=pvScope==='fav';
+  const types = favOnly
+    ? [['all','All favourites <span class="zhx">全部收藏</span> '+favCount()],
+       ['q','Compiled <span class="zhx">精编</span>'],
+       ['p','Originals <span class="zhx">原题</span>']]
+    : [['all','All <span class="zhx">全部</span> '+UNI.length],
+       ['q','Compiled <span class="zhx">精编</span> '+ITEMS.length],
+       ['p','Originals <span class="zhx">原题</span> '+PQ.length],
+       ['fav','★ Favourites <span class="zhx">收藏</span> '+favCount()]];
+  const typeHtml=types.map(([k,t])=>`<button class="${pvType===k?'on':''}" onclick="pvSetType('${k}')">${t}</button>`).join('');
+  const chHtml=['<button class="'+(pvCh==='all'?'on':'')+'" onclick="pvSetCh(\'all\')">All chapters <span class="zhx">全部章节</span></button>']
+    .concat(CHS.map((c,i)=>`<button class="${pvCh===i?'on':''}" onclick="pvSetCh(${i})">Ch ${i+1}</button>`)).join('');
+  const tools = favOnly
+    ? `<div class="pv-tools">
+        <span class="chip">★ <b data-fav-count>${favCount()}</b> starred <span class="zhx">已收藏</span></span>
+        ${favCount()? '<button class="btn ghost" onclick="clearFav()">Clear all <span class="zhx">清空</span></button>':''}
+        <button class="btn ghost" onclick="route('preview')">Full preview <span class="zhx">题库速览</span></button>
+      </div>`
+    : '';
+  document.getElementById('view').innerHTML=`
+  <div class="wrap pv-wrap">
+    <div class="pv-hd2">
+      <h2>${favOnly? 'Favourites <span class="tz">收藏夹</span>' : 'Preview <span class="tz">题库速览</span>'}</h2>
+      <span class="muted">${favOnly? 'Your starred items · 只看收藏题'
+        : 'Answers shown immediately — no answering, no scoring'}</span>
+    </div>
+    <p class="pv-sub">Answers shown immediately — no answering, no scoring · 直接看题与答案，不记分</p>
+    ${tools}
+    <div class="card" style="padding:14px 16px">
+      <div class="filter" id="pvType">${typeHtml}</div>
+      <div class="filter" id="pvCh">${chHtml}</div>
+      <div class="idxsearch"><input id="pvQ" value="${pvEsc(pvQ)}"
+        placeholder="Find 12 / Q12 / P7 / 2.5 / a topic name · 搜题号、考点或名称"
+        oninput="pvSetQ(this.value)"></div>
+      <div class="pv-count" id="pvMeta"></div>
+      <div class="idxgrid pv-grid" id="pvGrid"></div>
+    </div>
+    <div class="pv-cards" id="pvCards"></div>
+    <div class="pv-pager" id="pvPager"></div>
+    <div style="margin:6px 0 40px"><button class="btn ghost" onclick="route('home')">Back <span class="zhx">返回</span></button></div>
+  </div>`;
+  pvPaint();
+  paintTop();
+}
+
+function viewPreview(){ pvPage=0; renderPv('preview'); }
+function viewFav(){ pvPage=0; renderPv('fav'); }
 
 /* math render */
 function renderMath(){
@@ -1241,6 +1582,13 @@ route=function(v,a){ _route(v,a); renderMath(); };
 document.addEventListener('keydown',e=>{
   if(e.target && /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
   const L=['a','b','c','d','e'], k=e.key.toLowerCase();
+  if(k==='f'){
+    const m=document.getElementById('mAcct');
+    if(m && m.classList.contains('on')) return;
+    const id=currentFavId();
+    if(id!=null){ e.preventDefault(); toggleFav(id); }
+    return;
+  }
   const solo = round.mode==='smart' && round.list.length===1;
   if(L.includes(k)){ const b=[...document.querySelectorAll('.opt')][L.indexOf(k)];
     if(b&&!b.disabled) b.click(); }
@@ -1248,10 +1596,16 @@ document.addEventListener('keydown',e=>{
   if(solo && k==='t'){ skipSec(); return; }
   if(e.key==='Enter'){ const n=[...document.querySelectorAll('.btn.pri')].pop(); if(n) n.click(); }
 });
+/* Deep links survive a reload. replaceState never fires hashchange, so the
+   listener below cannot recurse; quiz/res are deliberately not in the map. */
+const HASHROUTE={'#home':'home','#ref':'ref','#bank':'browse','#preview':'preview','#fav':'fav'};
+window.addEventListener('hashchange',()=>{ const v=HASHROUTE[location.hash]; if(v) route(v); });
 paintTop(); viewHome(); renderMath();
 if(location.hash==='#pq') start('pq');
 else if(location.hash==='#ref') route('ref');
 else if(location.hash==='#bank') route('browse');
+else if(location.hash==='#preview') route('preview');
+else if(location.hash==='#fav') route('fav');
 bootAcct().then(()=>paintTop());
 </script>
 </body>

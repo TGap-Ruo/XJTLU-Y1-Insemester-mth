@@ -155,12 +155,36 @@ def token_key(token):
 
 
 # ---------------------------------------------------------------- progress
+def _fav_int(v):
+    """Normalise one fav value to a signed int; None means skip this item.
+
+    Only signed millisecond timestamps are kept.  booleans/None, unparseable
+    values and out-of-range magnitudes are dropped so one device cannot pin a
+    key forever or create a ghost favourite.
+    """
+    if isinstance(v, bool) or v is None:
+        return None
+    try:
+        n = int(v)
+    except (TypeError, ValueError, OverflowError):
+        return None
+    return n if abs(n) <= 10**14 else None
+
+
+def _h_ts(rec):
+    """Tolerate junk/Infinity h timestamps (historical blobs); default 0."""
+    try:
+        return int(float((rec or {}).get("t") or 0))
+    except (TypeError, ValueError, OverflowError, AttributeError):
+        return 0
+
+
 def clean_progress(payload):
     """Keep only the shape the app actually writes."""
     if not isinstance(payload, dict):
         payload = {}
+    out = {"h": {}, "streak": 0, "best": 0, "fav": {}}
     raw = payload.get("h")
-    out = {"h": {}}
     if isinstance(raw, dict):
         for k, v in list(raw.items())[:MAX_ITEMS]:
             try:
@@ -171,14 +195,22 @@ def clean_progress(payload):
                 continue
             letter = v.get("a")
             letter = letter if isinstance(letter, str) and len(letter) == 1 else None
-            try:
-                ts = int(float(v.get("t") or 0))
-            except (TypeError, ValueError):
-                ts = 0
+            ts = _h_ts(v)
             rec = {"a": letter, "ok": bool(v.get("ok")), "t": ts}
             if v.get("self"):
                 rec["self"] = 1
             out["h"][key] = rec
+    raw_fav = payload.get("fav")
+    if isinstance(raw_fav, dict):
+        for k, v in list(raw_fav.items())[:MAX_ITEMS]:
+            try:
+                key = str(int(k))
+            except (TypeError, ValueError):
+                continue
+            val = _fav_int(v)
+            if val is None:
+                continue
+            out["fav"][key] = val
     for field in ("streak", "best"):
         try:
             out[field] = max(0, int(payload.get(field) or 0))
@@ -189,17 +221,30 @@ def clean_progress(payload):
 
 def merge(old, new):
     """Per-item last write wins, so two devices never erase each other."""
-    out = {"h": {}, "streak": 0, "best": 0}
+    out = {"h": {}, "streak": 0, "best": 0, "fav": {}}
     for src in (old or {}, new or {}):
         for k, v in (src.get("h") or {}).items():
             prev = out["h"].get(k)
-            if prev is None or int(v.get("t") or 0) >= int(prev.get("t") or 0):
+            if prev is None or _h_ts(v) >= _h_ts(prev):
                 out["h"][k] = v
         for field in ("streak", "best"):
             try:
                 out[field] = max(out[field], int(src.get(field) or 0))
             except (TypeError, ValueError):
                 pass
+        fav = src.get("fav") or {}
+        if isinstance(fav, dict):
+            for k, v in list(fav.items())[:MAX_ITEMS]:
+                try:
+                    key = str(int(k))
+                except (TypeError, ValueError):
+                    continue
+                val = _fav_int(v)
+                if val is None:
+                    continue
+                cur = out["fav"].get(key)
+                if cur is None or abs(val) >= abs(cur):
+                    out["fav"][key] = val
     return out
 
 
@@ -413,7 +458,7 @@ class App(BaseHTTPRequestHandler):
                     con.commit()
                 finally:
                     con.close()
-                return self._json(200, {"h": {}, "streak": 0, "best": 0, "updated": 0})
+                return self._json(200, {"h": {}, "streak": 0, "best": 0, "fav": {}, "updated": 0})
 
         return self._err(404, "no such endpoint")
 
@@ -497,11 +542,17 @@ class App(BaseHTTPRequestHandler):
         finally:
             con.close()
         if not row:
-            return self._json(200, {"h": {}, "streak": 0, "best": 0, "updated": 0})
+            return self._json(200, {"h": {}, "streak": 0, "best": 0, "fav": {}, "updated": 0})
         try:
             data = json.loads(row["blob"])
         except json.JSONDecodeError:
             data = {}
+        if not isinstance(data, dict):
+            data = {}
+        data.setdefault("h", {})
+        data.setdefault("streak", 0)
+        data.setdefault("best", 0)
+        data.setdefault("fav", {})
         data["updated"] = int(row["updated"])
         return self._json(200, data)
 

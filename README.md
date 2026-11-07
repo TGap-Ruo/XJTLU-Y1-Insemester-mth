@@ -83,10 +83,27 @@ SQLite on the server. Reset clears both.
   the whole topic.
 - **Bank** — all 674 items in one index: filter by compiled/originals and by
   chapter, or jump straight to `Q12`, `P7` or a topic id such as `2.5`.
+- **Preview · 题库速览** — the whole bank with the answers **shown immediately**.
+  No picking a letter, no scoring, nothing written to your history. Filter by
+  compiled / originals / favourites and by chapter, search `12`, `Q12`, `P7` or a
+  topic name, then page through six fully expanded cards at a time. A compiled card
+  prints `Answer: B` plus a fold-out English/Chinese worked solution; an original
+  card shows the printed `Answer:` crop and the printed solution crop. Every card
+  can jump straight into `Practice this` when you do want to be tested.
+  Deep link `#preview`.
+- **Favourites · 收藏** — the star on any question card (or key `F`) bookmarks that
+  item. Stars work in the smart round, in topic drills and in the preview cards.
+  The bank index shows a ★ marker on starred items, but it is a jump list —
+  toggle a star on a question card instead. `#fav` opens the favourites shelf,
+  which reuses the preview cards
+  so you can revise them with answers visible. The star state syncs with your
+  account, and *un-starring* syncs too (a signed timestamp tombstone, so a stale
+  device cannot resurrect a removed bookmark).
+  Deep link `#fav`.
 - **Bilingual** — every module carries Chinese beside the English (topic names,
   card labels, reference headings, the mastery table, the account dialog). English
   stays primary; Chinese never replaces a label.
-- Deep links: `#pq`, `#ref`, `#bank`.
+- Deep links: `#pq`, `#ref`, `#bank`, `#preview`, `#fav`.
 
 ## Accounts & sync / 账号与同步
 
@@ -106,6 +123,19 @@ verification. What it buys you is one progress list across devices.
 Merging is **per item, newest timestamp wins**, with `streak`/`best` taking the
 maximum. Two devices therefore cannot erase each other's work: each fills in what
 the other has not answered, and a re-answer overrides the older attempt.
+
+`fav` is a map of `item id -> signed timestamp`: positive means starred, negative
+is a tombstone meaning un-starred, and the larger absolute timestamp wins. That
+is what makes removing a favourite propagate instead of being re-added by an
+older device. The server whitelists this field in `clean_progress()` and merges it
+in `merge()` alongside the answer history. Values that are not signed ms
+timestamps (booleans, nulls, unparseable strings, magnitudes above `10^14`) are
+dropped, so a malformed or oversized value cannot pin a key forever.
+
+One deliberate limitation: progress is merged, not replaced. On a shared browser,
+signing out of account A and into account B keeps A's local records on the device,
+and the next push can copy them into B. Progress and favourites are per account on
+the server, but the local cache is not partitioned by account.
 
 How it is stored and protected:
 
