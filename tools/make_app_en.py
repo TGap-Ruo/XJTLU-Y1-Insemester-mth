@@ -1545,7 +1545,7 @@ function renderPv(mode){
     <div class="pv-hd2">
       <h2>${favOnly? 'Favourites <span class="tz">收藏夹</span>' : 'Preview <span class="tz">题库速览</span>'}</h2>
       <span class="muted">${favOnly? 'Your starred items · 只看收藏题'
-        : 'Answers shown immediately — no answering, no scoring'}</span>
+        : 'Browse the whole bank · 通览全部 674 题'}</span>
     </div>
     <p class="pv-sub">Answers shown immediately — no answering, no scoring · 直接看题与答案，不记分</p>
     ${tools}
