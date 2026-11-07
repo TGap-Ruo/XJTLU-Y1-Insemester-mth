@@ -190,11 +190,54 @@ def _h_ts(rec):
         return 0
 
 
+def _miss_row(v):
+    """Normalise one mistake-book entry; None means skip it."""
+    if not isinstance(v, dict):
+        return None
+    try:
+        n = max(0, min(999, int(v.get("n") or 0)))
+    except (TypeError, ValueError):
+        n = 0
+    def _i(x):
+        try:
+            return max(0, int(x or 0))
+        except (TypeError, ValueError):
+            return 0
+    return {"n": n, "first": _i(v.get("first")), "last": _i(v.get("last")),
+            "rep": bool(v.get("rep")), "repAt": _i(v.get("repAt"))}
+
+
+def _clean_miss(raw):
+    out = {}
+    if isinstance(raw, dict):
+        for k, v in list(raw.items())[:MAX_ITEMS]:
+            try:
+                key = str(int(k))
+            except (TypeError, ValueError):
+                continue
+            row = _miss_row(v)
+            if row:
+                out[key] = row
+    return out
+
+
+def _merge_miss(dst, src):
+    for k, b in (src or {}).items():
+        a = dst.get(k) or {}
+        dst[k] = {
+            "n": max(int(a.get("n") or 0), int(b.get("n") or 0)),
+            "first": min(a.get("first") or b.get("first") or 0, b.get("first") or 0),
+            "last": max(a.get("last") or 0, b.get("last") or 0),
+            "rep": bool(a.get("rep") or b.get("rep")),
+            "repAt": max(a.get("repAt") or 0, b.get("repAt") or 0),
+        }
+
+
 def clean_progress(payload):
     """Keep only the shape the app actually writes."""
     if not isinstance(payload, dict):
         payload = {}
-    out = {"h": {}, "streak": 0, "best": 0, "fav": {}}
+    out = {"h": {}, "streak": 0, "best": 0, "fav": {}, "miss": {}}
     raw = payload.get("h")
     if isinstance(raw, dict):
         for k, v in list(raw.items())[:MAX_ITEMS]:
@@ -222,6 +265,7 @@ def clean_progress(payload):
             if val is None:
                 continue
             out["fav"][key] = val
+    out["miss"] = _clean_miss(payload.get("miss"))
     for field in ("streak", "best"):
         try:
             out[field] = max(0, int(payload.get(field) or 0))
@@ -232,7 +276,7 @@ def clean_progress(payload):
 
 def merge(old, new):
     """Per-item last write wins, so two devices never erase each other."""
-    out = {"h": {}, "streak": 0, "best": 0, "fav": {}}
+    out = {"h": {}, "streak": 0, "best": 0, "fav": {}, "miss": {}}
     for src in (old or {}, new or {}):
         for k, v in (src.get("h") or {}).items():
             prev = out["h"].get(k)
@@ -256,6 +300,7 @@ def merge(old, new):
                 cur = out["fav"].get(key)
                 if cur is None or abs(val) >= abs(cur):
                     out["fav"][key] = val
+        _merge_miss(out["miss"], src.get("miss"))
     return out
 
 
@@ -518,7 +563,7 @@ class App(BaseHTTPRequestHandler):
                     con.commit()
                 finally:
                     con.close()
-                return self._json(200, {"h": {}, "streak": 0, "best": 0, "fav": {}, "updated": 0})
+                return self._json(200, {"h": {}, "streak": 0, "best": 0, "fav": {}, "miss": {}, "updated": 0})
 
         return self._err(404, "no such endpoint")
 
@@ -602,7 +647,7 @@ class App(BaseHTTPRequestHandler):
         finally:
             con.close()
         if not row:
-            return self._json(200, {"h": {}, "streak": 0, "best": 0, "fav": {}, "updated": 0})
+            return self._json(200, {"h": {}, "streak": 0, "best": 0, "fav": {}, "miss": {}, "updated": 0})
         try:
             data = json.loads(row["blob"])
         except json.JSONDecodeError:
@@ -613,6 +658,7 @@ class App(BaseHTTPRequestHandler):
         data.setdefault("streak", 0)
         data.setdefault("best", 0)
         data.setdefault("fav", {})
+        data["miss"] = _clean_miss(data.get("miss"))
         data["updated"] = int(row["updated"])
         return self._json(200, data)
 

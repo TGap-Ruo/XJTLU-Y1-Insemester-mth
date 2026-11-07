@@ -409,12 +409,44 @@ function normFav(f){
   });
   return out;
 }
-function emptyStore(){ return {h:{}, fav:{}, streak:0, best:0}; }
+/* A mistake log is append-only and sits BELOW the live h record:
+   - a wrong attempt always bumps miss[id] (count, first/last time, rep=false)
+   - a later correct answer only flips rep=true ("已订正") — it never deletes the row,
+     so the question stays in the mistake book and still nudges the smart engine. */
+function emptyStore(){ return {h:{}, fav:{}, streak:0, best:0, miss:{}}; }
+function normMiss(m){
+  const out={};
+  if(m && typeof m==='object'){
+    Object.keys(m).forEach(k=>{
+      const key=String(Number(k));
+      if(!/^\d+$/.test(key)) return;
+      const v=m[k]||{};
+      const n=Math.max(0, Math.min(999, parseInt(v.n,10)||0));
+      out[key]={n:n, first:+v.first||0, last:+v.last||0,
+                rep:!!v.rep, repAt:+v.repAt||0};
+    });
+  }
+  return out;
+}
 function loadBucket(key){
   let s=emptyStore();
   try{ const raw=localStorage.getItem(key); if(raw) s=Object.assign(s,JSON.parse(raw)); }catch(e){}
   s.fav=normFav(s.fav);
+  s.miss=normMiss(s.miss);
   return s;
+}
+/* Record one attempt.  ok=true on a previously-missed question marks it repaired,
+   it never erases the historical mistake row. */
+function logMiss(id, ok){
+  if(!store.miss) store.miss={};
+  const now=Date.now();
+  if(!ok){
+    const m=store.miss[id] || {n:0, first:now, last:now, rep:false, repAt:0};
+    m.n=(m.n||0)+1; m.last=now; m.rep=false;
+    store.miss[id]=m;
+  } else if(store.miss[id]){
+    store.miss[id].rep=true; store.miss[id].repAt=now;
+  }
 }
 let store = loadBucket(LS);   // boot from the guest bucket: old data is never lost
 function save(quiet){
@@ -452,6 +484,20 @@ function mergeInto(dst, src){
   });
   dst.streak=Math.max(+dst.streak||0, +src.streak||0);
   dst.best=Math.max(+dst.best||0, +src.best||0);
+  // mistake log: union per id; keep the stronger row (more misses, newer times,
+  // repaired if either side repaired it)
+  dst.miss=dst.miss||{};
+  const sm=normMiss(src.miss);
+  Object.keys(sm).forEach(k=>{
+    const a=dst.miss[k]||{}, b=sm[k];
+    dst.miss[k]={
+      n:Math.max(a.n||0, b.n||0),
+      first:Math.min(a.first||b.first||0, b.first||0),
+      last:Math.max(a.last||0, b.last||0),
+      rep:!!(a.rep||b.rep),
+      repAt:Math.max(a.repAt||0, b.repAt||0)
+    };
+  });
 }
 
 /* Switch the local bucket to `name` (ACCT.name, lowercase).  Call only after
@@ -488,6 +534,7 @@ function redrawAfterSwitch(){
   else if(curView==='res') viewRes();
   else if(curView==='preview') viewPreview();
   else if(curView==='fav') viewFav();
+  else if(curView==='book') viewBook();
   else if(curView==='ref') viewRef();
   else if(curView==='browse') viewBrowse();
   paintTop();
@@ -505,7 +552,7 @@ function syncNow(){
   if(!ACCT||!CAN_API) return Promise.resolve();
   setSync('busy');
   return api('api/progress',{method:'PUT',
-      body:JSON.stringify({h:store.h, streak:store.streak, best:store.best, fav:store.fav})})
+      body:JSON.stringify({h:store.h, streak:store.streak, best:store.best, fav:store.fav, miss:store.miss})})
     .then(r=>{
       if(!r){ setSync('err'); return; }
       if(r.status===401){
@@ -773,23 +820,28 @@ function markCycle(sec){
   return false;
 }
 
-/* one topic measured across both decks */
+/* one topic measured across both decks.  miss = still-open mistakes (live record
+   is wrong); rep = mistakes you have since corrected — kept as history so the topic
+   still nudges the engine but no longer dominates. */
 function diag(id){
   const all=ALLBYSEC[id];
-  let done=0, ok=0, miss=0, unseen=0, last=Infinity;
+  let done=0, ok=0, miss=0, rep=0, unseen=0, last=Infinity;
+  const M=store.miss||{};
   for(const i of all){
     const r=store.h[i];
     if(!r){ unseen++; continue; }
     done++; if(r.ok) ok++; else miss++;
+    if(M[i] && M[i].rep) rep++;
     if((r.t||0)<last) last=r.t||0;
   }
-  return {id, n:all.length, done, ok, miss, unseen,
+  return {id, n:all.length, done, ok, miss, rep, unseen,
           acc: done? ok/done : 0, cov: all.length? done/all.length : 0, last: last===Infinity?0:last};
 }
 function days(t){ return t? Math.min((Date.now()-t)/86400000, 30) : 30; }
 function weakness(d){
   let s=0;
   s += 5.0*Math.min(d.miss,3);              // every open mistake outranks everything else
+  s += 1.5*Math.min(d.rep,3);               // repaired mistakes still bias the topic gently
   s += 2.2*(1-d.acc)*Math.min(d.done,4);    // weakness, but only as far as evidence goes
   s += 1.5*(1-d.cov);                       // material never seen still needs covering
   s += 0.7*Math.min(days(d.last)/7,4);      // forgetting: 0-4 weeks
@@ -867,17 +919,28 @@ function wrongQueue(){
   return Object.keys(store.h).filter(k=>!store.h[k].ok).map(Number)
     .sort((a,b)=>(store.h[a].t||0)-(store.h[b].t||0));
 }
+/* Full mistake book: every question ever missed.  Open ones (live record still
+   wrong) come first, repaired ones after — both are kept permanently. */
+function mistakeBook(){
+  const M=store.miss||{};
+  return Object.keys(M).map(Number).sort((a,b)=>{
+    const oa=!(store.h[a]&&store.h[a].ok), ob=!(store.h[b]&&store.h[b].ok);
+    if(oa!==ob) return oa? -1:1;                 // open first
+    return (M[a].last||0)-(M[b].last||0);         // then most recent miss
+  });
+}
 
 /* ---------- routing ---------- */
 let round={list:[],i:0,mode:'smart',picked:null,done:false,t0:0};
 function route(v,arg){ curView=v; window.scrollTo(0,0);
-  const HASHV={home:'#home', ref:'#ref', browse:'#bank', preview:'#preview', fav:'#fav'};
+  const HASHV={home:'#home', ref:'#ref', browse:'#bank', preview:'#preview', fav:'#fav', book:'#book'};
   try{ if(HASHV[v] && location.hash!==HASHV[v]) history.replaceState(null,'',HASHV[v]); }catch(e){}
   if(v==='home') viewHome(); else if(v==='quiz') viewQuiz();
   else if(v==='res') viewRes(); else if(v==='browse') viewBrowse(arg||'all');
   else if(v==='ref') viewRef(arg);
   else if(v==='preview') viewPreview();
   else if(v==='fav') viewFav();
+  else if(v==='book') viewBook();
   paintTop();
 }
 function start(mode){
@@ -957,6 +1020,8 @@ function viewHome(){
   const pq=pqStat();
   const un=untouchedSecs().length;
   const wrong=wrongQueue().length;
+  const bookN=mistakeBook().length;
+  const repN=bookN-wrong;
   const cy=cycleInfo();
   const sk=skips(), skSec=Object.keys(sk.s).length, skQ=Object.keys(sk.q).length;
   let openMiss=0;
@@ -1031,9 +1096,12 @@ function viewHome(){
       <div class="card"><div class="k">Accuracy <span class="zhx">自动判分正确率</span></div><div class="stat">${o.done? Math.round(o.acc*100)+'%':'—'}</div>
         <p>${o.ok} correct out of ${o.done} auto-graded answers (graded Q + auto-marked P).
         ${o.selfDone? o.selfDone+' older self-marked records count as answered but not in accuracy.':''}</p></div>
-      <div class="card click" onclick="${wrong? "start('wrong')":"toast('No mistakes recorded yet.')"}">
-        <div class="k">Review <span class="zhx">错题复习</span></div><div class="stat">${wrong}</div>
-        <p>${wrong? 'Questions you got wrong — tap to drill them.':'Nothing to repair yet.'}</p></div>
+      <div class="card click" onclick="${wrong? "start('wrong')":"toast('No open mistakes.')"}">
+        <div class="k">Review <span class="zhx">待订正错题</span></div><div class="stat">${wrong}</div>
+        <p>${wrong? 'Open mistakes — tap to drill them.':'Nothing open to repair.'}</p></div>
+      <div class="card click" onclick="${bookN? "route('book')":"toast('No mistakes recorded yet.')"}">
+        <div class="k">Mistake book <span class="zhx">错题本</span></div><div class="stat">${bookN}</div>
+        <p>${bookN? (repN? repN+' corrected & kept as history.':'Every missed question on record.') : 'Questions you miss are kept here forever.'}</p></div>
     </div>
     <div class="card" style="padding:16px 20px 6px">
       <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:2px;flex-wrap:wrap">
@@ -1123,6 +1191,7 @@ function pick(L){
   round.picked=L;
   const ok = L===q.a;
   store.h[q.id]={a:L, ok, t:Date.now()};
+  logMiss(q.id, ok);
   if(ok){ store.streak++; if(store.streak>store.best) store.best=store.streak; }
   else store.streak=0;
   markCycle(q.s);
@@ -1245,6 +1314,7 @@ function pickPq(L){
     // automatic grading: same contract as the graded Q deck, no self:1 marker
     const ok=L===q.a;
     store.h[q.id]={a:L, ok, t:Date.now()};
+    logMiss(q.id, ok);
     if(ok){ store.streak++; if(store.streak>store.best) store.best=store.streak; }
     else store.streak=0;
     markCycle(q.s);
@@ -1260,6 +1330,7 @@ function gradePq(ok){
   const q=BYID[round.list[round.i]];
   if(q.a) return;                        // auto-graded items never reach here
   store.h[q.id]={a:round.picked, ok:!!ok, t:Date.now(), self:1};
+  logMiss(q.id, !!ok);
   if(ok){ store.streak++; if(store.streak>store.best) store.best=store.streak; }
   else store.streak=0;
   if(round.mode==='smart') markCycle(q.s);
@@ -1308,6 +1379,60 @@ function viewRes(){
       <button class="btn ghost" onclick="start('wrong')">Drill my mistakes <span class="zhx">只刷错题</span></button>
       <button class="btn ghost" onclick="route('home')">Back to overview <span class="zhx">返回首页</span></button>
     </div>
+  </div></div>`;
+  paintTop();
+}
+
+/* ---------- mistake book ----------
+   Two-layer: live "open" mistakes are red / drillable now; questions you later got
+   right stay here as green "已订正" history — they still bias the smart engine but
+   no longer read as currently-wrong. */
+let bookFilter='all';
+function setBookFilter(f){ bookFilter=f; viewBook(); }
+function viewBook(){
+  const M=store.miss||{};
+  const all=mistakeBook();
+  const open=all.filter(id=>!(store.h[id]&&store.h[id].ok));
+  const rep=all.filter(id=>store.h[id]&&store.h[id].ok);
+  const list= bookFilter==='open'? open : (bookFilter==='rep'? rep : all);
+  const cards=list.map(id=>{
+    const q=BYID[id]; if(!q) return '';
+    const m=M[id]||{};
+    const isP=q.pq===1;
+    const nm=isP? 'P'+q.p : 'Q'+q.id;
+    const sec=SECMAP[q.s];
+    const isOpen=!(store.h[id]&&store.h[id].ok);
+    const badge= isOpen
+      ? '<span class="pv-done bad">✕ 未订正 · open</span>'
+      : '<span class="pv-done ok">✓ 已订正 · repaired</span>';
+    const p=isP? String(q.p).padStart(3,'0') : null;
+    const thumb= isP
+      ? `<img src="pq/p${p}_q.jpg" alt="P${q.p}" loading="lazy">`
+      : `<img src="q/q${String(q.id).padStart(3,'0')}.png" alt="Q${q.id}" loading="lazy">`;
+    const times= m.n>1? ` · missed ${m.n}×` : '';
+    return `<div class="pv-card" onclick="startSingle(${id})" style="cursor:pointer">
+      <div class="pv-img">${thumb}</div>
+      <div class="pv-sec"><b>${nm}</b> · ${q.s}${sec? ' · '+sec.en:''} ${badge}</div>
+      <div class="muted" style="font-size:11.5px">${times}last miss ${m.last? new Date(m.last).toLocaleDateString():'—'}</div>
+    </div>`;
+  }).join('');
+  document.getElementById('view').innerHTML=`
+  <div class="wrap"><div class="res">
+    <div class="card">
+      <h3 style="margin-bottom:2px">Mistake book <span class="tz" style="font-size:12.5px">错题本</span></h3>
+      <p class="muted">Every question you have ever missed, kept even after you correct it.
+        <span style="color:var(--red)">未订正</span> still need drilling;
+        <span style="color:#1a7f37">已订正</span> are history that gently steers recommendations.
+        <span class="zhx">做错过的题永久保留：未订正红色待重练，已订正绿色留档，仍会影响智能推荐。</span></p>
+      <div class="tabs" style="margin:10px 0">
+        <button class="${bookFilter==='all'?'on':''}" onclick="setBookFilter('all')">All · ${all.length}</button>
+        <button class="${bookFilter==='open'?'on':''}" onclick="setBookFilter('open')">Open · ${open.length}</button>
+        <button class="${bookFilter==='rep'?'on':''}" onclick="setBookFilter('rep')">Repaired · ${rep.length}</button>
+      </div>
+      ${open.length? `<button class="btn pri" onclick="start('wrong')">Drill ${open.length} open mistake${open.length>1?'s':''} <span class="zhx">重练未订正</span></button>`:''}
+    </div>
+    <div class="grid g2" style="margin-top:14px">${cards || '<p class="muted" style="grid-column:1/-1">No mistakes recorded yet. · 还没有错题记录。</p>'}</div>
+    <div style="margin-top:14px"><button class="btn ghost" onclick="route('home')">Back <span class="zhx">返回</span></button></div>
   </div></div>`;
   paintTop();
 }
