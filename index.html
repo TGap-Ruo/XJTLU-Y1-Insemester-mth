@@ -48,6 +48,22 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink2)}
 .btn.ghost:hover{border-color:#c9d5e3;background:#fafcfe}
 .btn:disabled{opacity:.45;cursor:not-allowed}
+
+/* mock test layout */
+.mockbar{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);
+  border-radius:12px;padding:10px 16px;margin:18px 0 14px;flex-wrap:wrap}
+.mockbar .timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:18px;color:var(--pri)}
+.mockbar .timer.warn{color:#c0392b}
+.mockgrid{display:grid;grid-template-columns:1fr 220px;gap:16px;align-items:start}
+@media(max-width:900px){.mockgrid{grid-template-columns:1fr}}
+.mockside{position:sticky;top:72px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.mockside h4{margin:0 0 10px;font-size:13px;color:var(--ink2)}
+.mocknums{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.mocknum{aspect-ratio:1;border-radius:8px;border:1px solid var(--line);background:#f6f8fb;
+  font-size:13px;font-weight:600;color:var(--ink2);cursor:pointer}
+.mocknum.done{background:#e6f4ea;border-color:#9fd3b0;color:#1a7f37}
+.mocknum.cur{outline:2px solid var(--pri);background:#fff}
+.mocknav{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
 /* the bar carries a lot of chrome; drop the least important chips first so the
    account button is never pushed off-screen */
 @media(max-width:1500px){#cStreak{display:none}}
@@ -934,16 +950,17 @@ function pickSmart(){
 function untouchedSecs(){ return SECS.filter(s=>diag(s.id).done===0); }
 
 function buildMock(n){
-  const pool=[]; const per={};
-  SECS.forEach(s=>per[s.id]=[]);
-  ITEMS.forEach(q=>per[q.s].push(q.id));
-  const ids=Object.keys(per);
-  let i=0;
-  while(pool.length<n && i<n*30){
-    const s=ids[Math.floor(Math.random()*ids.length)];
-    if(!per[s].length) { i++; continue; }
-    const k=Math.floor(Math.random()*per[s].length);
-    pool.push(per[s].splice(k,1)[0]); i++;
+  // Stratified: shuffle both decks, then pick at most 2 per topic so the 25
+  // questions spread across many sections rather than clustering.
+  const all = ITEMS.map(q=>q.id).concat(PQ.map(p=>p.id));
+  for(let i=all.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [all[i],all[j]]=[all[j],all[i]]; }
+  const perSec={}; const pool=[];
+  for(const id of all){
+    const q=BYID[id]; if(!q) continue;
+    perSec[q.s]=(perSec[q.s]||0);
+    if(perSec[q.s]>=2) continue;
+    pool.push(id); perSec[q.s]++;
+    if(pool.length>=n) break;
   }
   return pool;
 }
@@ -987,7 +1004,13 @@ function start(mode){
            why:p.why, phase:p.phase, sec:p.sec};
     route('quiz'); return;
   }
-  if(mode==='mock') list=buildMock(20);
+  if(mode==='mock'){
+    list=buildMock(25);
+    if(!list.length){ toast('Not enough questions for a mock.'); return; }
+    round={list, i:0, mode, picked:null, done:false, t0:Date.now(), ok:0, ans:0,
+           picks:{}, deadline:Date.now()+90*60*1000};
+    route('quiz'); return;
+  }
   else if(mode==='wrong') list=wrongQueue();
   else if(mode==='pq'){ startPq(10); return; }
   if(!list.length){ toast('Nothing to review — all clear.'); return; }
@@ -1089,7 +1112,7 @@ function viewHome(){
       <div class="row">
         <button class="btn white" onclick="start('smart')">${un<SECS.length? 'Continue smart round':'Start smart round'}
           <span class="zhx">${un<SECS.length? '继续智能刷题':'开始智能刷题'}</span></button>
-        <button class="btn light" onclick="start('mock')">Mock test · 20 <span class="zhx">模拟卷</span></button>
+        <button class="btn light" onclick="start('mock')">Mock test · 25 <span class="zhx">模拟卷</span></button>
         <button class="btn light" onclick="start('pq')">Quiz originals · 10 <span class="zhx">原题</span></button>
         <button class="btn light" onclick="route('browse')">Browse all 674 <span class="zhx">全部题目</span></button>
         <button class="btn light" onclick="route('preview')">Preview <span class="zhx">题库速览</span></button>
@@ -1157,6 +1180,7 @@ function viewHome(){
 
 function viewQuiz(){
   if(round.i>=round.list.length){ round.done=true; return viewRes(); }
+  if(round.mode==='mock') return viewMock();
   const id=round.list[round.i], q=BYID[id];
   if(q && q.pq) return viewPq();
   const rec=store.h[id];
@@ -1373,6 +1397,108 @@ function gradePq(ok){
   advance();
 }
 
+/* ---------- mock test: 25 stratified items, 90-min countdown, side navigator ---------- */
+let mockTimerId=null;
+function mockStartTimer(){
+  if(mockTimerId) clearInterval(mockTimerId);
+  mockTimerId=setInterval(()=>{
+    const el=document.getElementById('mockTimer');
+    if(!el){ clearInterval(mockTimerId); mockTimerId=null; return; }
+    const left=(round.deadline||0)-Date.now();
+    if(left<=0){ el.textContent='00:00'; submitMock(); return; }
+    const m=Math.floor(left/60000), s=Math.floor((left%60000)/1000);
+    el.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+    el.classList.toggle('warn', left<10*60000);
+  },1000);
+}
+function viewMock(){
+  if(round.done) return viewRes();
+  const i=round.i, id=round.list[i], q=BYID[id];
+  const isP=!!q.pq;
+  const p=isP? String(q.p).padStart(3,'0') : null;
+  const img=isP
+    ? `<img class="qimg" src="pq/p${p}_q.jpg" alt="Question ${p}">`
+    : `<img class="qimg" src="q/q${String(q.id).padStart(3,'0')}.png" alt="Question ${q.id}">`;
+  const letters=['A','B','C','D','E'];
+  const picked=(round.picks||{})[id];
+  const answeredCount=Object.keys(round.picks||{}).length;
+  const nums=round.list.map((oid,idx)=>{
+    const done=!!(round.picks||{})[oid];
+    return `<button class="mocknum ${done?'done':''} ${idx===i?'cur':''}" onclick="mockJump(${idx})">${idx+1}</button>`;
+  }).join('');
+  const sec=SECMAP[q.s];
+  document.getElementById('view').innerHTML=`
+  <div class="wrap">
+    <div class="mockbar">
+      <b>Mock test 模拟卷</b>
+      <span class="muted">25 items · 90 min · 做完再交卷</span>
+      <div class="spacer"></div>
+      <span class="muted">Answered <b id="mockAnswered">${answeredCount}/25</b></span>
+      <span class="timer" id="mockTimer">90:00</span>
+      <button class="btn ghost" onclick="mockExit()">Exit <span class="zhx">退出</span></button>
+      <button class="btn pri" onclick="submitMock()">交卷 Submit</button>
+    </div>
+    <div class="mockgrid">
+      <div class="qcard">
+        <div class="qhead">
+          <span class="qno" style="${isP?'background:#9a6a1c':''}">${isP? 'P'+q.p : 'Q'+q.id}</span>
+          <span class="qsec">${q.s} · ${sec? sec.en:''}<span class="tz">${sec? ' '+sec.zh:''}</span></span>
+          <span class="muted" style="font-size:12px">Question ${i+1} / ${round.list.length}</span>
+        </div>
+        <div class="qbody">${img}</div>
+        <div class="opts">${letters.map(L=>`
+          <button class="opt ${picked===L?' sel':''}" onclick="mockPick('${L}')">${L}</button>`).join('')}</div>
+        <div class="mocknav">
+          <button class="btn ghost" ${i===0?'disabled':''} onclick="mockJump(${i-1})">&larr; Prev</button>
+          <div class="spacer"></div>
+          <button class="btn ghost" ${i>=round.list.length-1?'disabled':''} onclick="mockJump(${i+1})">Next &rarr;</button>
+        </div>
+      </div>
+      <div class="mockside">
+        <h4>Answer sheet 答题卡</h4>
+        <div class="mocknums">${nums}</div>
+        <p class="muted" style="font-size:11.5px;margin:10px 0 0">Green = answered · click to jump back and change.</p>
+      </div>
+    </div>
+  </div>`;
+  paintTop(); renderMath();
+  mockStartTimer();
+}
+function mockPick(L){
+  const id=round.list[round.i];
+  round.picks=round.picks||{};
+  round.picks[id]=L;
+  viewMock();
+}
+function mockJump(i){
+  round.i=Math.max(0, Math.min(round.list.length-1, i));
+  viewMock();
+}
+function mockExit(){
+  if(mockTimerId){ clearInterval(mockTimerId); mockTimerId=null; }
+  route('home');
+}
+function submitMock(){
+  if(mockTimerId){ clearInterval(mockTimerId); mockTimerId=null; }
+  // grade all picked answers
+  let ok=0, scored=0;
+  round.list.forEach(id=>{
+    const q=BYID[id], pick=(round.picks||{})[id];
+    if(q.a && pick){
+      scored++;
+      const good=pick===q.a;
+      if(good) ok++;
+      store.h[id]={a:pick, ok:good, t:Date.now()};
+      logMiss(id, good);
+      if(good){ store.streak++; if(store.streak>store.best) store.best=store.streak; }
+    }
+  });
+  if(!store.streak) store.streak=0;
+  save(true);
+  round.done=true; round.ok=ok; round.scored=scored;
+  viewRes();
+}
+
 function viewRes(){
   const total=round.list.length;
   let ok=0, scored=0, rows='';
@@ -1394,20 +1520,36 @@ function viewRes(){
   }
   round.list.forEach(id=>{ const r=store.h[id]; if(r&&!r.self){ scored++; if(r.ok) ok++; } });
   const pct= scored? Math.round(ok/scored*100):0;
+  let review='';
+  if(round.mode==='mock'){
+    review='<div class="card" style="margin-top:14px"><h3>Answer review <span class="tz">逐题答案</span></h3>'
+      +'<table class="gl" style="font-size:13px"><tr><th>#</th><th>题</th><th>考点</th><th>你的选择</th><th>正确答案</th></tr>'
+      +round.list.map((id,idx)=>{
+        const q=BYID[id], r=store.h[id]||{};
+        const pick=round.picks? round.picks[id] : r.a;
+        const sec=SECMAP[q.s];
+        return `<tr><td>${idx+1}</td><td>${id>=1000?'P'+(id-1000):'Q'+id}</td>`
+          +`<td>${q.s}</td>`
+          +`<td style="color:${pick?(pick===q.a?'#1a7f37':'#c0392b'):'#999'}">${pick||'—'}</td>`
+          +`<td style="color:#1a7f37;font-weight:700">${q.a||'—'}</td></tr>`;
+      }).join('')+'</table></div>';
+  }
   document.getElementById('view').innerHTML=`
   <div class="wrap"><div class="res">
     <div class="card" style="text-align:center;padding:30px 24px">
       <div class="k">${round.mode==='mock'?'Mock test complete':(round.mode==='wrong'?'Repair round complete':(round.mode==='pq'?'Originals round complete':'Round complete'))}
         <span class="zhx">${round.mode==='mock'?'模拟卷完成':(round.mode==='wrong'?'错题复习完成':(round.mode==='pq'?'原题一组完成':'本轮完成'))}</span></div>
       <div class="bigscore">${pct}%</div>
-      <p class="muted" style="margin-top:6px">${ok} of ${scored} correct${round.mode==='mock'?' · 20-item mock':' · this round'}</p>
+      <p class="muted" style="margin-top:6px">${ok} of ${scored} correct${round.mode==='mock'?' · 25-item mock':' · this round'}</p>
       ${total? `<p style="margin-top:10px">${round.list.map(id=>{
           const r=store.h[id]; const nm = id>=1000? 'P'+(id-1000) : 'Q'+id;
           return `<span class="pill">${nm} ${r&&r.ok?'✓':'✕'}</span>`;}).join('')}</p>`:''}
     </div>
     ${rows? '<div class="card" style="margin-top:14px"><h3>By topic <span class="tz">按考点</span></h3>'+rows+'</div>':''}
+    ${review}
     <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
       <button class="btn pri" onclick="start('${round.mode==='pq'?'pq':'smart'}')">${round.mode==='pq'?'Another set of 10':'Continue smart round'}</button>
+      <button class="btn ghost" onclick="start('mock')">New mock test <span class="zhx">再做一套</span></button>
       <button class="btn ghost" onclick="start('wrong')">Drill my mistakes <span class="zhx">只刷错题</span></button>
       <button class="btn ghost" onclick="route('home')">Back to overview <span class="zhx">返回首页</span></button>
     </div>
