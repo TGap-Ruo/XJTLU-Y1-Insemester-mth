@@ -63,8 +63,11 @@ SQLite on the server. Reset clears both.
     `1.5·(1−coverage)` + `0.7·min(days since last try, 30)/7`, minus `1.2` for the
     topic served last. Open mistakes dominate, so a finished round always reopens on
     what you got wrong; the anti-repeat term only breaks near-ties.
-  - **Inside the winning topic** the engine re-tests *the exact item you missed*
-    first, then something you have never seen, then the stalest item.
+  - **Inside the winning topic** picks are **randomised, originals first**: an open
+    mistake is retested first (originals before compiled), then an unseen original,
+    then an unseen compiled item, then one of the three stalest at random. Both
+    decks therefore appear every round, with the paper you actually sat leading —
+    but the order inside each band is random, so you cannot memorise a sequence.
   - **Rounds.** Each answer marks its topic as seen; when all 54 are seen the round
     counter advances and the next round starts from the error list.
   - **Skip.** *Skip question* (key `S`) hides that item for 12 h, *Skip topic*
@@ -76,8 +79,12 @@ SQLite on the server. Reset clears both.
   graded **and** originals, the bar is coverage, its colour is accuracy, and
   `n✕` is the number of open mistakes. Clicking a row drills the whole topic,
   graded first.
-- **Quiz originals · 10** — the 323 items you were served, self-marked against the
-  printed answer.
+- **Quiz originals · 10** — the 323 items you were served. **321 now mark
+  themselves**: their correct letter was recovered from the paper's own review line
+  `The correct answer is:`, matched against the five option blocks by their
+  three-line fraction structure (the earlier attempt used the `Answer:` line, which
+  is what the *student* wrote — that is why it never matched). The two items nobody
+  answered keep the printed-answer crop and self-marking.
 - **Reference** — 54 topics × (what it tests · how to do it · the trap), formula
   sheet, terminology; each topic can be drilled as graded-only, originals-only or
   the whole topic.
@@ -132,10 +139,12 @@ in `merge()` alongside the answer history. Values that are not signed ms
 timestamps (booleans, nulls, unparseable strings, magnitudes above `10^14`) are
 dropped, so a malformed or oversized value cannot pin a key forever.
 
-One deliberate limitation: progress is merged, not replaced. On a shared browser,
-signing out of account A and into account B keeps A's local records on the device,
-and the next push can copy them into B. Progress and favourites are per account on
-the server, but the local cache is not partitioned by account.
+Local storage is partitioned per account. The guest bucket is `mth026.en.v1`; each
+account gets `mth026.en.v1@<username>`. Signing in for the first time folds the
+guest's records into that account, so work done before registering is not lost.
+Switching accounts only swaps buckets and never merges them — account A's answers
+and stars can no longer leak into account B, which is what the old single bucket
+did.
 
 How it is stored and protected:
 
@@ -205,6 +214,39 @@ POST /api/admin/user/unban {id}      POST /api/admin/user/del {id}
 `/api/health` now returns only `{"ok":true,"port":…}` — it used to leak the user
 count to anyone who asked.
 
+### Bank editor / 题库管理
+
+The **Bank 题库** tab lists all 674 items with their built-in answer and the current
+one, filterable by compiled / originals and by *changed* / *missing*, searchable by
+`Q12`, `P7` or a topic id. Editing an answer writes one row to `bank_overrides`; the
+app fetches `GET /api/overrides` at boot and patches the in-memory question object,
+so **no rebuild of `index.html` is needed**.
+
+```
+GET  /api/overrides                                  (public: {v, rows:[{id,a,note}]})
+GET  /api/admin/bank?q=&k=&filter=&offset=&limit=
+POST /api/admin/bank/ans {id, a}      a = "A".."E", or null to clear
+POST /api/admin/bank/note {id, note}
+```
+
+Four rules that are easy to get wrong:
+
+- **Clearing an override deletes the row**, restoring the built-in letter.
+- **`/api/overrides` only ever returns valid `A`–`E`.** It must never return null:
+  assigning null to a compiled item's answer makes `L===q.a` false forever and the
+  question unanswerable.
+- **History is not recomputed.** An old `ok` is frozen, and neither the local blob
+  nor the server stores what the answer was at the time, so a retroactive regrade is
+  not possible (and re-stamping timestamps would overwrite other devices).
+- **Change the answer, then reload before answering.** A page opened before the
+  change still grades with the old letter, and that verdict is permanent. The app
+  deliberately does not hot-reload answers mid-round, because repainting a question
+  card would erase the picked answer and the revealed solution.
+
+Editing counts as an override only for display and future grading; the built-in
+letters come from `build/bank_index.json`, which is also what the console shows as
+"original answer".
+
 ## Deployment / 部署
 
 Two pieces: the generated site in `/var/www/mth026`, the server in `/opt/mth026`
@@ -214,6 +256,8 @@ with its SQLite file next to it.
 rsync -az index.html katex q pq user@host:/var/www/mth026/
 ssh user@host 'mkdir -p /opt/mth026/data'
 scp server/server.py user@host:/opt/mth026/server.py
+scp server/bank_index.json user@host:/opt/mth026/bank_index.json   # 674 built-in answers
+scp admin.html user@host:/var/www/mth026/admin.html
 scp deploy-mth026.service user@host:/etc/systemd/system/mth026.service
 ssh user@host 'systemctl daemon-reload && systemctl enable --now mth026'
 ```

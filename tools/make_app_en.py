@@ -16,6 +16,12 @@ QSRC = os.path.join(ROOT, "qbank", "q")
 ASSETS = os.path.join(ROOT, "assets")
 ANS = json.load(open(os.path.join(ROOT, "build", "answers_final.json")))
 PIT = json.load(open(os.path.join(ROOT, "build", "pitems.json")))
+# Part B answer letters, recovered offline from the Moodle review line
+# "The correct answer is:" (matched against the five option blocks by their
+# three-line fraction structure).  321 of 323; the two missing were never
+# answered, so the paper prints no correct answer for them.
+PANSW = os.path.join(ROOT, "build", "panswers.json")
+PANS = json.load(open(PANSW))["answers"] if os.path.exists(PANSW) else {}
 
 M = {**M1, **M2}
 
@@ -45,12 +51,14 @@ def build_data():
              "from": s["start"], "to": s["end"]} for s in SECTIONS]
     chs = [{"n": c[0], "en": c[1], "zh": c[2]} for c in CHAPTERS]
     # Part B: ids sit in their own range so they can never collide with Q1-Q351.
-    # No letter is stored — the printed answer is an image, and guessing which
-    # option it matches is exactly the guess that failed before.  The reader
-    # grades their own pick instead.
+    # Every item now carries its answer letter, recovered from the paper's own
+    # "The correct answer is:" line, so the app can mark Part B automatically
+    # instead of asking the reader to grade their own pick.  Two items (p31,
+    # p63) were never answered on the paper and therefore print no correct
+    # answer; they keep a null letter and fall back to self-marking.
     pqch = {s["id"]: s["ch"] for s in SECTIONS}
     pq = [{"id": 1000 + it["pid"], "s": it["sec"], "c": pqch.get(it["sec"], 0),
-           "p": it["pid"]} for it in PIT]
+           "p": it["pid"], "a": PANS.get(str(it["pid"]))} for it in PIT]
     # the knowledge map, folded in so the page needs nothing but itself
     ref = []
     for s in SECTIONS:
@@ -442,7 +450,7 @@ const ITEMS = DATA.items, SECS = DATA.sections, CHS = DATA.chapters;
 const PQ = DATA.pq || [];
 const BYID = {}; ITEMS.forEach(q=>BYID[q.id]=q);
 const SECMAP = {}; SECS.forEach(s=>SECMAP[s.id]=s);
-PQ.forEach(p=>{ BYID[p.id]={id:p.id, s:p.s, c:p.c, p:p.p, pq:1}; });
+PQ.forEach(p=>{ BYID[p.id]={id:p.id, s:p.s, c:p.c, p:p.p, pq:1, a:p.a}; });
 const PQBYSEC = {}; PQ.forEach(p=>{ (PQBYSEC[p.s]=PQBYSEC[p.s]||[]).push(p.id); });
 /* one topic = both decks. Graded items first, then the originals served for it,
    so a topic is fully covered only when every item of either deck has been seen. */
@@ -454,8 +462,14 @@ SECS.forEach(s=>{ const a=[];
 });
 const TOTAL_PQ = PQ.length;
 const REF = DATA.ref || [], FORMS = DATA.forms || [], GLOSS = DATA.gloss || [];
-let store = {h:{}, fav:{}, streak:0, best:0};
-try{ const raw=localStorage.getItem(LS); if(raw) store=Object.assign(store,JSON.parse(raw)); }catch(e){}
+/* Each account owns its own localStorage bucket.  curOwner===null is the guest
+   bucket (the historical key, so old data survives).  A signed-in account uses
+   mth026.en.v1@<name>; name is already lower-cased by the server. */
+let curOwner = null, curView = 'home';
+function lsKey(){ return curOwner===null? LS : LS+'@'+curOwner; }
+function hasRecords(s){
+  return Object.keys((s&&s.h)||{}).length>0 || Object.keys((s&&s.fav)||{}).length>0;
+}
 /* Old localStorage blobs may hold fav[id]=true/false/null or padded keys.
    The server skips bool/null and abs>1e14, so normalise before anything is
    uploaded: keys become canonical integer strings, values signed ms ints. */
@@ -476,9 +490,16 @@ function normFav(f){
   });
   return out;
 }
-store.fav=normFav(store.fav);
+function emptyStore(){ return {h:{}, fav:{}, streak:0, best:0}; }
+function loadBucket(key){
+  let s=emptyStore();
+  try{ const raw=localStorage.getItem(key); if(raw) s=Object.assign(s,JSON.parse(raw)); }catch(e){}
+  s.fav=normFav(s.fav);
+  return s;
+}
+let store = loadBucket(LS);   // boot from the guest bucket: old data is never lost
 function save(quiet){
-  try{localStorage.setItem(LS,JSON.stringify(store))}catch(e){}
+  try{localStorage.setItem(lsKey(),JSON.stringify(store))}catch(e){}
   if(!quiet) schedulePush();
 }
 
@@ -514,6 +535,45 @@ function mergeInto(dst, src){
   dst.best=Math.max(+dst.best||0, +src.best||0);
 }
 
+/* Switch the local bucket to `name` (ACCT.name, lowercase).  Call only after
+   the server has confirmed the session.  Cancel any pending debounced push
+   FIRST, so the previous owner's store can never be uploaded under the new
+   account.  Then carry a guest's progress into the account exactly once, or
+   move between two account buckets, and finally load the target bucket. */
+function switchOwner(name){
+  if(pushTimer){ clearTimeout(pushTimer); pushTimer=null; }
+  if(curOwner===name) return;
+  if(curOwner===null){
+    const guest=loadBucket(LS), acctKey=LS+'@'+name;
+    if(hasRecords(guest)){
+      const acct=loadBucket(acctKey);
+      mergeInto(acct, guest);
+      try{ localStorage.setItem(acctKey,JSON.stringify(acct)); }catch(e){}
+      try{ localStorage.removeItem(LS); }catch(e){}   // retire the guest key
+    }
+    curOwner=name;
+    store=loadBucket(acctKey);
+  } else {
+    save(true);                     // flush the old account's bucket
+    curOwner=name;
+    store=loadBucket(lsKey());      // new account's bucket, or an empty store
+  }
+}
+/* Repaint whatever the reader is looking at after the active bucket changed,
+   otherwise the header and cards keep showing the previous account's numbers.
+   Quiet in an in-flight quiz: viewQuiz()/viewPq() only render round state, they
+   never reset round.picked, so a revealed answer survives the switch. */
+function redrawAfterSwitch(){
+  if(curView==='home') viewHome();
+  else if(curView==='quiz') viewQuiz();
+  else if(curView==='res') viewRes();
+  else if(curView==='preview') viewPreview();
+  else if(curView==='fav') viewFav();
+  else if(curView==='ref') viewRef();
+  else if(curView==='browse') viewBrowse();
+  paintTop();
+}
+
 function setSync(s){ SYNC=s; paintAcct(); }
 
 function schedulePush(){
@@ -529,7 +589,14 @@ function syncNow(){
       body:JSON.stringify({h:store.h, streak:store.streak, best:store.best, fav:store.fav})})
     .then(r=>{
       if(!r){ setSync('err'); return; }
-      if(r.status===401){ ACCT=null; setSync('guest'); paintTop(); return; }
+      if(r.status===401){
+        // Session expired: leave the account bucket too, or a later save would
+        // write its records into the guest key and leak into the next login.
+        if(pushTimer){ clearTimeout(pushTimer); pushTimer=null; }
+        save(true); ACCT=null; curOwner=null;
+        store=loadBucket(LS); setSync('guest'); redrawAfterSwitch();
+        return;
+      }
       if(!r.ok){ setSync('err'); return; }
       mergeInto(store, r.d);
       save(true);
@@ -542,11 +609,12 @@ function bootAcct(){
   return api('api/me').then(r=>{
     if(!r){ setSync('err'); return; }
     if(!r.d || !r.d.user){ setSync('guest'); return; }
+    switchOwner(r.d.user.name);      // bucket first, then any cloud traffic
     ACCT=r.d.user; setSync('busy');
     return api('api/progress').then(g=>{
       if(g && g.ok){ mergeInto(store, g.d); save(true); }
       return syncNow();
-    });
+    }).then(()=>{ redrawAfterSwitch(); });
   });
 }
 
@@ -626,8 +694,9 @@ function submitAcct(){
     if(!r){ err.innerHTML='<div class="merr">No answer from the server. Check your connection.</div>'; reset(); return; }
     if(!r.ok){ err.innerHTML='<div class="merr">'+((r.d&&r.d.error)||'Something went wrong')+'</div>'; reset(); return; }
     ACCT=r.d.user; acctMode='me';
+    switchOwner(r.d.user.name);
     return syncNow().then(()=>{
-      closeAcct(); paintTop(); viewHome();
+      closeAcct(); redrawAfterSwitch(); viewHome();
       toast(up? 'Account created — progress will follow you' : 'Signed in as '+ACCT.display);
     });
   });
@@ -635,8 +704,11 @@ function submitAcct(){
 
 function doLogout(){
   api('api/logout',{method:'POST'}).then(()=>{
-    ACCT=null; setSync(CAN_API?'guest':'local');
-    closeAcct(); paintTop(); viewHome(); toast('Signed out');
+    if(pushTimer){ clearTimeout(pushTimer); pushTimer=null; }
+    save(true);                       // persist the account's bucket first
+    ACCT=null; curOwner=null; setSync(CAN_API?'guest':'local');
+    store=loadBucket(LS);             // back to the guest bucket (or empty)
+    closeAcct(); redrawAfterSwitch(); viewHome(); toast('Signed out');
   });
 }
 
@@ -646,21 +718,36 @@ function secStat(id){
   for(let i=s.from;i<=s.to;i++){ const r=store.h[i]; if(r){done++; if(r.ok) ok++;} }
   return {done, ok, n:s.n, acc: done? ok/done : 0};
 }
+/* Accuracy counts every automatically graded record (Q + P items that carry a
+   recovered answer letter).  Legacy self-marked P records (self:1) are still
+   "answered", but their reader-supplied verdict must not move the accuracy the
+   engine steers by — they are reported separately as selfDone. */
 function overall(){
-  // graded items only: the originals deck is self-marked and must not dilute
-  // the accuracy figure the engine steers by
-  const ks=Object.keys(store.h).filter(k=>+k<1000); let ok=0;
-  ks.forEach(k=>{ if(store.h[k].ok) ok++; });
-  return {done:ks.length, ok, acc: ks.length? ok/ks.length : 0};
+  let done=0, ok=0, selfDone=0, qDone=0, pDone=0;
+  Object.keys(store.h).forEach(k=>{
+    const r=store.h[k], isP=+k>=1000;
+    if(r.self){ selfDone++; if(isP) pDone++; return; }
+    done++; if(r.ok) ok++;
+    if(isP) pDone++; else qDone++;
+  });
+  return {done, ok, selfDone, answered:done+selfDone, qDone, pDone,
+          acc: done? ok/done : 0};
 }
+/* Only auto-graded P records feed this accuracy.  History kept from the old
+   self-marking flow is listed on its own so the two are never mixed. */
 function pqStat(){
-  let done=0, ok=0;
-  PQ.forEach(p=>{ const r=store.h[p.id]; if(r){done++; if(r.ok) ok++;} });
-  return {done, ok, acc: done? ok/done : 0};
+  let done=0, ok=0, selfDone=0;
+  PQ.forEach(p=>{
+    const r=store.h[p.id];
+    if(!r) return;
+    if(r.self){ selfDone++; return; }
+    done++; if(r.ok) ok++;
+  });
+  return {done, ok, selfDone, acc: done? ok/done : 0};
 }
 function paintTop(){
   const o=overall();
-  document.getElementById('cAns').innerHTML='Answered <b>'+o.done+'</b>';
+  document.getElementById('cAns').innerHTML='Answered <b>'+o.answered+'</b>';
   document.getElementById('cAcc').innerHTML='Accuracy <b>'+(o.done? Math.round(o.acc*100)+'%':'—')+'</b>';
   document.getElementById('cStreak').innerHTML='Streak <b>'+store.streak+'</b>';
   document.querySelectorAll('[data-fav-count]').forEach(el=>{ el.textContent=favCount(); });
@@ -671,7 +758,7 @@ function toast(m){ const t=document.getElementById('toast'); t.textContent=m; t.
 function resetAll(){
   const extra = ACCT? ' This also clears the copy kept by your account.' : '';
   if(!confirm('Clear all progress?'+extra)) return;
-  store={h:{},fav:{},streak:0,best:0}; save(true);
+  store=emptyStore(); save(true);   // only the current bucket is cleared
   if(ACCT&&CAN_API){ api('api/progress',{method:'DELETE'}).then(()=>setSync('on')); }
   paintTop(); route('home');
 }
@@ -790,15 +877,27 @@ function weakness(d){
   if(store.lastSec===d.id) s -= 1.2;        // never the same topic twice in a row
   return s;
 }
-function pickFrom(d, sk){
+/* Choose one item inside a topic.  `rnd` is injectable so tests can pin the
+   draw; it defaults to Math.random.  Mistakes first (P mistakes before Q),
+   then unseen P, then unseen Q, then one of the three longest-untouched items.
+   The topic-level weakness score in pickSmart() is deliberately untouched. */
+function pickFrom(d, sk, rnd){
+  rnd = rnd || Math.random;
   const all=ALLBYSEC[d.id], free=i=>!sk.q[i];
-  const open=all.filter(i=>store.h[i] && !store.h[i].ok && free(i))
-                .sort((a,b)=>(store.h[a].t||0)-(store.h[b].t||0));
-  if(open.length) return {id:open[0], kind:'retry'};
-  const fresh=all.filter(i=>!store.h[i] && free(i));
-  if(fresh.length) return {id:fresh[0], kind:'new'};
-  const rest=all.filter(free).sort((a,b)=>((store.h[a]||{}).t||0)-((store.h[b]||{}).t||0));
-  return rest.length? {id:rest[0], kind:'stale'} : null;
+  const one=a=>a[Math.min(a.length-1, Math.max(0, Math.floor(rnd()*a.length)))];
+  const isP=i=>i>=1000;
+  const open=all.filter(i=>store.h[i] && !store.h[i].ok && free(i));
+  if(open.length){
+    const p=open.filter(isP), q=open.filter(i=>!isP(i));
+    return {id:one(p.length? p : (q.length? q : open)), kind:'retry'};
+  }
+  const freshP=all.filter(i=>isP(i) && !store.h[i] && free(i));
+  if(freshP.length) return {id:one(freshP), kind:'new'};
+  const freshQ=all.filter(i=>!isP(i) && !store.h[i] && free(i));
+  if(freshQ.length) return {id:one(freshQ), kind:'new'};
+  const rest=all.filter(free)
+    .sort((a,b)=>((store.h[a]||{}).t||0)-((store.h[b]||{}).t||0)).slice(0,3);
+  return rest.length? {id:one(rest), kind:'stale'} : null;
 }
 function whyText(d,c){
   const n=d.miss;
@@ -852,7 +951,7 @@ function wrongQueue(){
 
 /* ---------- routing ---------- */
 let round={list:[],i:0,mode:'smart',picked:null,done:false,t0:0};
-function route(v,arg){ window.scrollTo(0,0);
+function route(v,arg){ curView=v; window.scrollTo(0,0);
   const HASHV={home:'#home', ref:'#ref', browse:'#bank', preview:'#preview', fav:'#fav'};
   try{ if(HASHV[v] && location.hash!==HASHV[v]) history.replaceState(null,'',HASHV[v]); }catch(e){}
   if(v==='home') viewHome(); else if(v==='quiz') viewQuiz();
@@ -959,7 +1058,7 @@ function viewHome(){
       +'<span class="bar" title="'+cov+'% covered · '+pct+'% correct"><i class="'+cls+'" style="width:'+(d.done? Math.max(cov,5):0)+'%"></i></span>'
       +'<span class="sec-n">'+d.done+'/'+d.n+(d.miss? '<span class="miss">'+d.miss+'&#10005;</span>':'')+'</span></div>';
   }).join('');
-  const fresh = o.done+pq.done===0;
+  const fresh = o.answered===0;
   document.getElementById('view').innerHTML = `
   <div class="wrap">
     <div class="hero">
@@ -967,7 +1066,7 @@ function viewHome(){
         <span class="zh" style="display:inline;font-size:15px">${fresh? '从最该练的地方开始' : '继续保持手感'}</span></h1>
       <p>${fresh
         ? 'The engine walks you through <b>one question from every topic first</b> — all <b>674</b> items, both decks — then scores every topic on open mistakes, weakness and forgetting, so what you got wrong comes back first.'
-        : 'You have answered <b>'+o.done+'</b> of 351 graded items and <b>'+pq.done+'</b> of 323 originals. Round '+cy.n+' has covered '+cy.seen+'/'+cy.all+' topics.'}</p>
+        : 'You have answered <b>'+o.qDone+'</b> of 351 graded items and <b>'+o.pDone+'</b> of 323 originals. Round '+cy.n+' has covered '+cy.seen+'/'+cy.all+' topics.'}</p>
       <p class="zh">${fresh
         ? '先每个考点过一遍（共 674 道，两套题合一），之后按「<b>未订正的错题</b> → 薄弱程度 → 多久没练」给考点打分，错得多的题型优先回来。'
         : '本轮已过 <b>'+cy.seen+'/'+cy.all+'</b> 个考点，还有 <b>'+openMiss+'</b> 道错题没订正，它们会排在下一轮最前面。'}</p>
@@ -999,19 +1098,20 @@ function viewHome(){
       <div style="flex:1;min-width:240px">
         <p style="margin:0 0 4px"><b>The 323 items you were actually served</b> — question, the paper's own
         “Answer:” line and its printed solution, all page crops.</p>
-        <p class="muted" style="margin:0">Numbers are randomised per attempt, so no letter can be recovered from the
-        page. Pick a letter, compare it with the printed answer, then mark yourself —
-        ${pq.done? 'accuracy so far '+Math.round(pq.acc*100)+'%' : 'nothing marked yet'}.</p>
+        <p class="muted" style="margin:0">Most items carry a recovered answer letter, so your pick is marked
+        automatically. Two items (p31, p63) have no printable answer and still use self-marking —
+        ${pq.done? 'accuracy on auto-marked items so far '+Math.round(pq.acc*100)+'%' : 'nothing marked yet'}
+        ${pq.selfDone? '&middot; '+pq.selfDone+' older self-marked records (answered only, not in accuracy)':''}.</p>
       </div>
       <div><button class="btn pri">Open a set of 10 <span class="zhx">打开 10 题</span></button></div>
     </div>
     <div class="grid g3" style="margin-bottom:18px">
-      <div class="card"><div class="k">Progress <span class="zhx">总进度</span></div><div class="stat">${o.done+pq.done}<small>/ ${ITEMS.length+TOTAL_PQ}</small></div>
+      <div class="card"><div class="k">Progress <span class="zhx">总进度</span></div><div class="stat">${o.answered}<small>/ ${ITEMS.length+TOTAL_PQ}</small></div>
         <p>${un===0? 'Every topic has been started.' : un+' topics not started yet.'}
-        ${o.done}/${ITEMS.length} graded &middot; ${pq.done}/${TOTAL_PQ} originals.</p></div>
-      <div class="card"><div class="k">Accuracy <span class="zhx">精编题正确率</span></div><div class="stat">${o.done? Math.round(o.acc*100)+'%':'—'}</div>
-        <p>${o.ok} correct out of ${o.done} answered. Originals are self-marked, so they are counted per topic below
-        instead of here.</p></div>
+        ${o.qDone}/${ITEMS.length} graded &middot; ${o.pDone}/${TOTAL_PQ} originals.</p></div>
+      <div class="card"><div class="k">Accuracy <span class="zhx">自动判分正确率</span></div><div class="stat">${o.done? Math.round(o.acc*100)+'%':'—'}</div>
+        <p>${o.ok} correct out of ${o.done} auto-graded answers (graded Q + auto-marked P).
+        ${o.selfDone? o.selfDone+' older self-marked records count as answered but not in accuracy.':''}</p></div>
       <div class="card click" onclick="${wrong? "start('wrong')":"toast('No mistakes recorded yet.')"}">
         <div class="k">Review <span class="zhx">错题复习</span></div><div class="stat">${wrong}</div>
         <p>${wrong? 'Questions you got wrong — tap to drill them.':'Nothing to repair yet.'}</p></div>
@@ -1119,41 +1219,62 @@ function advance(){
   viewQuiz(); renderMath();
 }
 
-/* ---------- Part B: the items you were served (self-marked) ---------- */
+/* ---------- Part B: the items you were served ----------
+   Most P items now carry a recovered answer letter (BYID[id].a), so they are
+   graded automatically exactly like the Q deck.  p31 / p63 have no printable
+   answer (a === null) and fall back to the old reader self-marking flow. */
 function viewPq(){
   const id=round.list[round.i], q=BYID[id];
   const p=String(q.p).padStart(3,'0');
+  const auto=!!q.a;                       // a letter => automatic grading
   const picked=round.picked, shown=picked!==null;
   // inside a smart round the originals are served one at a time, mixed with the
   // graded items, so grading must hand over to "next" instead of ending a round
   const solo = round.mode==='smart' && round.list.length===1;
-  const graded = solo && round.marked;
+  const selfGraded = solo && round.marked;   // only the fallback path uses this
+  const canNext = auto? shown : selfGraded;  // auto is done as soon as a letter is picked
   const cy = cycleInfo();
   const unLeft = solo? SECS.length-cy.seen : 0;
   const letters=['A','B','C','D','E'];
   const opts = letters.map(L=>{
     let cls='opt';
-    if(shown && L===picked) cls+=' sel';
+    if(shown){
+      if(auto){ if(L===q.a) cls+=' ok'; else if(L===picked) cls+=' bad'; }
+      else if(L===picked) cls+=' sel';
+    }
     return `<button class="${cls}" ${shown?'disabled':''} onclick="pickPq('${L}')">${L}</button>`;
   }).join('');
-  const reveal = shown ? `
+  const ansImg=`<a href="pq/p${p}_a.jpg" target="_blank" title="Open full size">
+        <img src="pq/p${p}_a.jpg" alt="Answer" style="display:block;max-height:74px;max-width:100%;width:auto"></a>`;
+  const solImg=`<a href="pq/p${p}_s.jpg" target="_blank" title="Open full size">
+        <img class="qimg" src="pq/p${p}_s.jpg" alt="Solution"></a>`;
+  let reveal='';
+  if(shown && auto){
+    const ok=picked===q.a;
+    reveal = `
+    <div class="fb ${ok?'ok':'bad'}">
+      <div class="h">${ok?'Correct':'Not quite'} <span class="tag">answer ${q.a}</span></div>
+      <div style="padding:2px 14px 0">${ansImg}</div>
+      <div class="h" style="padding-top:12px">Their worked solution
+        <span class="tag">tap to zoom</span></div>
+      <div style="padding:2px 14px 14px">${solImg}</div>
+    </div>`;
+  } else if(shown){
+    reveal = `
     <div class="fb" style="background:#fffdf8;border-color:#e7dcc6">
       <div class="h" style="color:#8a5a12">Answer, as printed <span class="tag">you picked ${picked}</span></div>
-      <div style="padding:2px 14px 0">
-        <a href="pq/p${p}_a.jpg" target="_blank" title="Open full size">
-          <img src="pq/p${p}_a.jpg" alt="Answer" style="display:block;max-height:74px;max-width:100%;width:auto"></a></div>
+      <div style="padding:2px 14px 0">${ansImg}</div>
       <div class="h" style="color:#8a5a12;padding-top:12px">Their worked solution
         <span class="tag" style="background:#f3ece0;color:#8a7550">tap to zoom</span></div>
-      <div style="padding:2px 14px 14px">
-        <a href="pq/p${p}_s.jpg" target="_blank" title="Open full size">
-          <img class="qimg" src="pq/p${p}_s.jpg" alt="Solution"></a></div>
+      <div style="padding:2px 14px 14px">${solImg}</div>
       <div style="display:flex;gap:10px;padding:0 14px 16px;align-items:center">
-        ${graded
+        ${selfGraded
           ? `<span class="muted" style="font-size:13px">Recorded — you marked this ${store.h[q.id]&&store.h[q.id].ok? 'correct':'as missed'}.</span>`
           : `<button class="btn pri" onclick="gradePq(1)">My pick was right</button>
         <button class="btn ghost" onclick="gradePq(0)">I missed it</button>`}
       </div>
-    </div>` : '';
+    </div>`;
+  }
   document.getElementById('view').innerHTML = `
   <div class="wrap"><div class="qwrap">
     ${solo && round.why? `<div class="why"><span class="tag">Why this one · 为什么推这题</span>
@@ -1181,26 +1302,44 @@ function viewPq(){
       <button class="btn ghost sm" onclick="skipSec()">Skip topic <span class="zhx">跳过这类</span></button>`:''}
       <div class="spacer" style="flex:1"></div>
       ${shown? (solo
-        ? (graded? `<button class="btn pri" onclick="start('smart')">Next question &rarr;</button>`: '')
-        : `<button class="btn ghost" onclick="advance()">${round.i+1>=round.list.length?'Skip to results':'Skip'}</button>`):''}
+        ? (canNext? `<button class="btn pri" onclick="start('smart')">Next question &rarr;</button>`: '')
+        : `<button class="btn ${auto?'pri':'ghost'}" onclick="advance()">${auto
+            ? (round.i+1>=round.list.length?'See results':'Next question')
+            : (round.i+1>=round.list.length?'Skip to results':'Skip')}</button>`):''}
     </div>
-    <p class="muted" style="text-align:center;margin-top:14px">${shown
-      ? (graded? 'Marked. The engine picks the next item from whatever you keep missing.'
-               : 'Compare with the printed answer, then mark your own attempt.')
-      : (solo? 'Pick the letter you would have chosen, or skip — <b>S</b> skips the question, <b>T</b> the whole topic.'
-              : 'Pick the letter you would have chosen. Nothing is scored until you mark it.')}</p>
+    <p class="muted" style="text-align:center;margin-top:14px">${auto
+      ? (shown? 'Marked automatically — the engine has recorded your answer.'
+              : 'Pick a letter — the answer is marked automatically.')
+      : (shown
+        ? (selfGraded? 'Marked. The engine picks the next item from whatever you keep missing.'
+                     : 'Compare with the printed answer, then mark your own attempt.')
+        : (solo? 'Pick the letter you would have chosen, or skip — <b>S</b> skips the question, <b>T</b> the whole topic.'
+                : 'Pick the letter you would have chosen. Nothing is scored until you mark it.'))}</p>
   </div></div>`;
   paintTop();
 }
 function pickPq(L){
   if(round.picked!==null) return;
+  const q=BYID[round.list[round.i]];
   round.picked=L;
+  if(q.a){
+    // automatic grading: same contract as the graded Q deck, no self:1 marker
+    const ok=L===q.a;
+    store.h[q.id]={a:L, ok, t:Date.now()};
+    if(ok){ store.streak++; if(store.streak>store.best) store.best=store.streak; }
+    else store.streak=0;
+    markCycle(q.s);
+    save();
+  }
   viewQuiz(); renderMath();
   const fb=document.querySelector('.fb');
   if(fb && fb.getBoundingClientRect().top > innerHeight-120) fb.scrollIntoView({block:'center',behavior:'smooth'});
 }
+/* Fallback only: items whose answer letter is null keep the old self-marking
+   contract (self:1), which the accuracy stats deliberately exclude. */
 function gradePq(ok){
   const q=BYID[round.list[round.i]];
+  if(q.a) return;                        // auto-graded items never reach here
   store.h[q.id]={a:round.picked, ok:!!ok, t:Date.now(), self:1};
   if(ok){ store.streak++; if(store.streak>store.best) store.best=store.streak; }
   else store.streak=0;
@@ -1214,11 +1353,12 @@ function gradePq(ok){
 
 function viewRes(){
   const total=round.list.length;
-  let ok=0, rows='';
+  let ok=0, scored=0, rows='';
   if(round.mode==='mock'){
     const bySec={};
     round.list.forEach(id=>{ const q=BYID[id]; const r=store.h[id];
-      bySec[q.s]=bySec[q.s]||{n:0,ok:0}; bySec[q.s].n++; if(r&&r.ok) bySec[q.s].ok++; });
+      if(!r||r.self) return;                 // self-marked history is not scored
+      bySec[q.s]=bySec[q.s]||{n:0,ok:0}; bySec[q.s].n++; if(r.ok) bySec[q.s].ok++; });
     rows=Object.keys(bySec).map(s=>{
       const b=bySec[s]; const p=Math.round(b.ok/b.n*100);
       return {s, b, p};
@@ -1230,15 +1370,15 @@ function viewRes(){
         +'<span class="sec-n">'+b.ok+'/'+b.n+'</span></div>';
     }).join('');
   }
-  total && round.list.forEach(id=>{ if(store.h[id]&&store.h[id].ok) ok++; });
-  const pct= total? Math.round(ok/total*100):0;
+  round.list.forEach(id=>{ const r=store.h[id]; if(r&&!r.self){ scored++; if(r.ok) ok++; } });
+  const pct= scored? Math.round(ok/scored*100):0;
   document.getElementById('view').innerHTML=`
   <div class="wrap"><div class="res">
     <div class="card" style="text-align:center;padding:30px 24px">
       <div class="k">${round.mode==='mock'?'Mock test complete':(round.mode==='wrong'?'Repair round complete':(round.mode==='pq'?'Originals round complete':'Round complete'))}
         <span class="zhx">${round.mode==='mock'?'模拟卷完成':(round.mode==='wrong'?'错题复习完成':(round.mode==='pq'?'原题一组完成':'本轮完成'))}</span></div>
       <div class="bigscore">${pct}%</div>
-      <p class="muted" style="margin-top:6px">${ok} of ${total} correct${round.mode==='mock'?' · 20-item mock':' · this round'}</p>
+      <p class="muted" style="margin-top:6px">${ok} of ${scored} correct${round.mode==='mock'?' · 20-item mock':' · this round'}</p>
       ${total? `<p style="margin-top:10px">${round.list.map(id=>{
           const r=store.h[id]; const nm = id>=1000? 'P'+(id-1000) : 'Q'+id;
           return `<span class="pill">${nm} ${r&&r.ok?'✓':'✕'}</span>`;}).join('')}</p>`:''}
@@ -1444,15 +1584,19 @@ function previewCard(id){
   if(isP){
     const p=String(q.p).padStart(3,'0');
     qimg=`<img src="pq/p${p}_q.jpg" alt="Question ${p}" loading="lazy">`;
-    ans=`<div class="pv-note">Self-marked · 原题无标准选项，答案取自原卷打印行
-        <span class="tz">printed answer, not a reconstructed letter · 答案取自原卷打印行，非反推的选项字母</span></div>
-      <div class="pv-ans">Answer · 打印答案行 <span class="tz">答案以下图为准</span></div>
-      <div class="pv-aimg"><a href="pq/p${p}_a.jpg" target="_blank" title="Open full size">
+    const imgs=`<div class="pv-aimg"><a href="pq/p${p}_a.jpg" target="_blank" title="Open full size">
         <img src="pq/p${p}_a.jpg" alt="Printed answer" loading="lazy"></a></div>
       <details class="pv-det"><summary>Printed solution 打印解答 <span class="tz">展开查看</span></summary>
         <div class="pv-simg"><a href="pq/p${p}_s.jpg" target="_blank" title="Open full size">
           <img src="pq/p${p}_s.jpg" alt="Printed solution" loading="lazy"></a></div>
       </details>`;
+    if(q.a){
+      ans=`<div class="pv-ans">Answer: <b>${q.a}</b> <span class="tz">答案 · 自动判分</span></div>`+imgs;
+    } else {
+      ans=`<div class="pv-note">Self-marked · 原题无标准选项，答案取自原卷打印行
+        <span class="tz">printed answer, not a reconstructed letter · 答案取自原卷打印行，非反推的选项字母</span></div>
+      <div class="pv-ans">Answer · 打印答案行 <span class="tz">答案以下图为准</span></div>`+imgs;
+    }
   } else {
     const n=String(q.id).padStart(3,'0');
     qimg=`<img src="q/q${n}.png" alt="Question ${q.id}" loading="lazy">`;
@@ -1600,12 +1744,40 @@ document.addEventListener('keydown',e=>{
    listener below cannot recurse; quiz/res are deliberately not in the map. */
 const HASHROUTE={'#home':'home','#ref':'ref','#bank':'browse','#preview':'preview','#fav':'fav'};
 window.addEventListener('hashchange',()=>{ const v=HASHROUTE[location.hash]; if(v) route(v); });
+
+/* ---------- admin answer overrides ----------
+   The admin console can correct an answer letter.  The endpoint only ever
+   returns valid A-E letters — clearing an override simply drops the row, so the
+   built-in answer stays in force.  That is why we never assign `null` here: for
+   a compiled item it would erase the built-in letter and `L===q.a` could never
+   be true again, leaving the question unanswerable forever.
+
+   Apply on every successful fetch (assigning a value twice is harmless) and only
+   repaint when a letter actually changed.  We deliberately do NOT cache the
+   version to skip work: a skipped apply is a silently stale answer. */
+function applyOverrides(){
+  return api('api/overrides').then(r=>{
+    if(!r || !r.ok || !r.d || !Array.isArray(r.d.rows)) return;
+    let changed=false;
+    r.d.rows.forEach(row=>{
+      const q=BYID[row.id];
+      if(q && /^[A-E]$/.test(row.a||'') && q.a!==row.a){ q.a=row.a; changed=true; }
+    });
+    if(!changed) return;
+    // Answer letters are printed on the preview / favourites board: refresh it.
+    // Never repaint a quiz here — an in-flight round must keep its revealed state.
+    if(curView==='preview') viewPreview();
+    else if(curView==='fav') viewFav();
+  });
+}
+
 paintTop(); viewHome(); renderMath();
 if(location.hash==='#pq') start('pq');
 else if(location.hash==='#ref') route('ref');
 else if(location.hash==='#bank') route('browse');
 else if(location.hash==='#preview') route('preview');
 else if(location.hash==='#fav') route('fav');
+if(CAN_API) applyOverrides();
 bootAcct().then(()=>paintTop());
 </script>
 </body>

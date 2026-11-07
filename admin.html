@@ -121,15 +121,17 @@ tbody tr:hover{background:#fafcff}
 .empty{padding:26px;text-align:center;color:var(--ink4);font-size:13px}
 .pager{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:12.5px;color:var(--ink3)}
 @media(max-width:760px){
-  table th:nth-child(2),table td:nth-child(2),
-  table th:nth-child(4),table td:nth-child(4){display:none}
-  th,td{padding:8px 5px}
-  th:last-child{font-size:0}
-  th:last-child::after{content:"···";font-size:11px}
+  #viewUsers table th:nth-child(2),#viewUsers table td:nth-child(2),
+  #viewUsers table th:nth-child(4),#viewUsers table td:nth-child(4){display:none}
+  #viewUsers th,#viewUsers td{padding:8px 5px}
+  #viewUsers th:last-child{font-size:0}
+  #viewUsers th:last-child::after{content:"···";font-size:11px}
   .who b{max-width:118px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .acc{min-width:72px}
   .acts .btn{padding:4px 6px}
   th:first-child,td:first-child{position:sticky;left:0;background:var(--paper);z-index:1}
+  #viewBank .tools input[type=search]{min-width:100%}
+  #viewBank table{font-size:12.5px}
 }
 
 .log{font-size:12.5px;max-height:320px;overflow:auto}
@@ -147,6 +149,29 @@ tbody tr:hover{background:#fafcff}
 .toast{background:#111c2e;color:#fff;padding:9px 14px;border-radius:9px;font-size:13px;
   box-shadow:0 8px 24px rgba(16,24,39,.22)}
 .toast.bad{background:var(--red)}
+
+/* ---- question bank tab ---- */
+.tabs{display:inline-flex;gap:2px;background:var(--line2);padding:3px;border-radius:9px}
+.tab{border:0;background:transparent;color:var(--ink3);padding:6px 13px;border-radius:7px;
+  font-size:13px;font-weight:600;white-space:nowrap}
+.tab.active{background:var(--paper);color:var(--pri);box-shadow:0 1px 3px rgba(16,24,39,.1)}
+.tab .zh{font-size:11px}
+.bankstats{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-bottom:12px}
+.bankstats .st{background:var(--pri3);color:var(--pri);border:1px solid transparent;border-radius:999px;
+  padding:4px 13px;font-size:12.5px;font-weight:600}
+.bankstats .st.jump{cursor:pointer}
+.bankstats .st.jump:hover{border-color:var(--pri2)}
+.bankstats .st.warn{background:var(--gold-bg);color:var(--gold);border-color:var(--gold-line)}
+.bankstats .st.miss{background:var(--red-bg);color:var(--red);border-color:var(--red-line)}
+.lbq{color:var(--pri);font-weight:700}
+.lbp{color:var(--gold);font-weight:700}
+.cellbase{color:var(--ink4);font-weight:600}
+.cellnow{font-weight:700;color:var(--ink)}
+.anssel{padding:5px 7px;border:1px solid var(--line);border-radius:7px;background:#fbfdff;
+  font-size:12px;max-width:140px}
+.banknote{display:inline-block;max-width:150px;overflow:hidden;text-overflow:ellipsis;
+  white-space:nowrap;vertical-align:middle;color:var(--ink2)}
+.bankacts{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap}
 </style>
 </head>
 <body>
@@ -173,12 +198,16 @@ tbody tr:hover{background:#fafcff}
     <div class="mark">26</div>
     <div class="brand">MTH026 Admin<small>后台管理 · accounts &amp; progress</small></div>
     <div class="sp"></div>
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-tab="users">Users <span class="zh">用户</span></button>
+      <button class="tab" data-tab="bank">Bank <span class="zh">题库</span></button>
+    </div>
     <span class="pill" id="livePill">—</span>
     <button class="btn sm" id="refresh">Refresh <span class="zh">刷新</span></button>
     <button class="btn sm" id="signout">Sign out <span class="zh">退出</span></button>
   </div>
 
-  <div class="wrap">
+  <div class="wrap" id="viewUsers">
     <div class="grid" id="kpis"></div>
 
     <div class="split">
@@ -228,6 +257,55 @@ tbody tr:hover{background:#fafcff}
       <div class="log"><table><tbody id="audit"></tbody></table></div>
       <p class="zh" style="margin:10px 0 0">每次写入都会记一条，保留最近 2000 条。</p>
     </div>
+  </div>
+
+  <div class="wrap hide" id="viewBank">
+    <div class="card">
+      <h2>Question Bank <span class="zh">题库</span>
+        <span class="pill" id="bankPill" style="margin-left:auto">—</span></h2>
+      <div class="bankstats" id="bankStats"><span class="st">—</span></div>
+      <div class="tools">
+        <input type="search" id="bankQ" placeholder="题号 12 / Q12 / P7 / 考点 2.5 · Find number or topic">
+        <select id="bankK">
+          <option value="all">全部类型 · All</option>
+          <option value="Q">精编 Q</option>
+          <option value="P">原题 P</option>
+        </select>
+        <select id="bankFilter">
+          <option value="all">全部状态 · All</option>
+          <option value="changed">只看已修改 · Changed</option>
+          <option value="missing">缺答案 · Missing</option>
+        </select>
+        <select id="bankLimit">
+          <option value="25">25 / page</option>
+          <option value="50" selected>50 / page</option>
+          <option value="100">100 / page</option>
+          <option value="200">200 / page</option>
+        </select>
+      </div>
+      <div class="meta" id="bankMeta">—</div>
+      <div class="tblwrap">
+        <table>
+          <thead><tr>
+            <th>Item <span class="zh">题号</span></th>
+            <th>Type <span class="zh">类型</span></th>
+            <th>Topic <span class="zh">考点</span></th>
+            <th>Base <span class="zh">原始答案</span></th>
+            <th>Current <span class="zh">当前答案</span></th>
+            <th>Status <span class="zh">状态</span></th>
+            <th>Note <span class="zh">备注</span></th>
+            <th style="text-align:right">Actions <span class="zh">操作</span></th>
+          </tr></thead>
+          <tbody id="bankRows"></tbody>
+        </table>
+      </div>
+      <div class="pager">
+        <button class="btn sm" id="bankPrev">← Prev</button>
+        <span id="bankPageInfo"></span>
+        <button class="btn sm" id="bankNext">Next →</button>
+      </div>
+    </div>
+    <p class="zh" style="margin:0">改答案写入运行时覆盖表，前台下次启动拉取 <code>/api/overrides</code> 后立即生效；清除覆盖恢复构建期原始答案。纯备注不改变判分。</p>
   </div>
 </div>
 
@@ -280,7 +358,9 @@ const post = (p, body) => api(p, {
   body: JSON.stringify(body || {})
 });
 
-const S = { rows: [], total: 0, offset: 0, limit: 50, q: '', sort: 'new', stats: null, busy: false };
+const S = { rows: [], total: 0, offset: 0, limit: 50, q: '', sort: 'new', stats: null, busy: false,
+            tab: 'users',
+            bank: { rows: [], total: 0, offset: 0, limit: 50, q: '', k: 'all', filter: 'all' } };
 
 /* ---------------------------------------------------------------- sign in */
 function showGate() {
@@ -413,7 +493,90 @@ async function loadAudit() {
     : '<tr><td class="empty">No writes yet · 暂无操作</td></tr>';
 }
 
+/* ---------------------------------------------------------------- bank */
+const B = S.bank;
+function bankLabel(r) {
+  const n = r.k === 'Q' ? r.id : r.id - 1000;
+  return '<span class="' + (r.k === 'Q' ? 'lbq' : 'lbp') + '">' + r.k + n + '</span>';
+}
+function bankStatus(r) {
+  if (r.base == null) return '<span class="tag ban">缺答案 · missing</span>';
+  if (r.changed) return '<span class="tag new">已修改 · changed</span>';
+  return '<span class="tag idle">正常 · ok</span>';
+}
+function bankRowHtml(r) {
+  const cur = r.a != null ? r.a : r.base;
+  const letters = ['A', 'B', 'C', 'D', 'E'].map(x =>
+    '<option value="' + x + '">' + x + '</option>').join('');
+  return '<tr data-row="' + r.id + '">' +
+    '<td class="num">' + bankLabel(r) + '</td>' +
+    '<td>' + (r.k === 'Q' ? '精编 Q' : '原题 P') + '</td>' +
+    '<td class="num">' + esc(r.s == null ? '—' : r.s) + '</td>' +
+    '<td class="cellbase">' + (r.base == null ? '<span class="tag ban">none</span>' : esc(r.base)) + '</td>' +
+    '<td class="cellnow">' + (cur == null ? '—' : esc(cur)) +
+      (r.a != null ? ' <span class="zh" style="color:var(--gold);margin:0">覆盖</span>' : '') + '</td>' +
+    '<td>' + bankStatus(r) + '</td>' +
+    '<td>' + (r.note
+      ? '<span class="banknote" title="' + esc(r.note) + '">' + esc(r.note) + '</span>'
+      : '<span class="zh" style="color:var(--ink4);margin:0">—</span>') + '</td>' +
+    '<td><div class="bankacts">' +
+      '<select class="anssel" data-act="bank-ans" data-id="' + r.id + '" title="改答案 · Set answer">' +
+        '<option value="">改答案…</option>' + letters +
+        '<option value="__clear__">清除覆盖 · 恢复原始</option></select>' +
+      '<button class="btn sm" data-act="bank-note" data-id="' + r.id + '" ' +
+        'data-note="' + esc(r.note == null ? '' : r.note) + '">Note <span class="zh">备注</span></button>' +
+    '</div></td></tr>';
+}
+function paintBank() {
+  const tbody = $('#bankRows');
+  if (!B.rows.length) {
+    tbody.innerHTML = '<tr><td colspan="8" class="empty">没有匹配的题目 · Nothing matches</td></tr>';
+  } else {
+    tbody.innerHTML = B.rows.map(bankRowHtml).join('');
+  }
+  const from = B.total ? B.offset + 1 : 0;
+  const to = Math.min(B.offset + B.limit, B.total);
+  $('#bankMeta').textContent = B.total + ' items' + (B.q ? ' matching “' + B.q + '”' : '');
+  $('#bankPageInfo').textContent = from + '–' + to + ' of ' + B.total;
+  $('#bankPrev').disabled = B.offset <= 0;
+  $('#bankNext').disabled = B.offset + B.limit >= B.total;
+}
+async function loadBank() {
+  const qs = '?q=' + encodeURIComponent(B.q) + '&k=' + B.k + '&filter=' + B.filter +
+             '&limit=' + B.limit + '&offset=' + B.offset;
+  const d = await api('/api/admin/bank' + qs);
+  B.rows = d.rows; B.total = d.total;
+  paintBank();
+}
+async function loadBankStats() {
+  const [all, ch, mi] = await Promise.all([
+    api('/api/admin/bank?limit=1'),
+    api('/api/admin/bank?filter=changed&limit=1'),
+    api('/api/admin/bank?filter=missing&limit=1')
+  ]);
+  $('#bankStats').innerHTML =
+    '<span class="st">' + all.total + ' 题 · items</span>' +
+    '<span class="st warn jump" data-jump="changed" title="只看已修改">已修改 ' + ch.total + ' · changed</span>' +
+    '<span class="st miss jump" data-jump="missing" title="只看缺答案">缺答案 ' + mi.total + ' · missing</span>';
+  $('#bankPill').textContent = all.total + ' items';
+}
+async function refreshBank() {
+  try {
+    await Promise.all([loadBankStats(), loadBank()]);
+  } catch (e) {
+    if (e.message !== 'signed out') toast(e.message, true);
+  }
+}
+function setTab(t) {
+  S.tab = t;
+  $('#viewUsers').classList.toggle('hide', t !== 'users');
+  $('#viewBank').classList.toggle('hide', t !== 'bank');
+  document.querySelectorAll('#tabs .tab').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
+  if (t === 'bank') refreshBank(); else refresh();
+}
+
 async function refresh() {
+  if (S.tab === 'bank') return refreshBank();
   try {
     const s = await api('/api/admin/stats');
     S.stats = s;
@@ -437,7 +600,7 @@ function modal(cfg) {
   sc.innerHTML = '<div class="card"><h3>' + cfg.title + '</h3>' +
     '<p class="sub">' + cfg.sub + '</p>' + menu +
     (cfg.field ? '<div class="fld"><label>' + cfg.field.label + '</label>' +
-      '<input id="mv" type="' + (cfg.field.type || 'text') + '" value="' + (cfg.field.value || '') +
+      '<input id="mv" type="' + (cfg.field.type || 'text') + '" value="' + esc(cfg.field.value || '') +
       '" placeholder="' + (cfg.field.ph || '') + '"></div>' : '') +
     '<div class="err" id="mErr"></div>' +
     '<div class="row"><button class="btn" data-x="0">' + (cfg.actions ? 'Close' : 'Cancel') +
@@ -483,6 +646,15 @@ document.addEventListener('click', async e => {
   const b = e.target.closest('[data-act]');
   if (!b || S.busy) return;
   const id = +b.dataset.id, name = b.dataset.name, act = b.dataset.act;
+
+  if (act === 'bank-note') return modal({
+    title: 'Note <span class="zh">备注</span>',
+    sub: '题号 <b>#' + id + '</b> 的备注，仅供内部记录，不影响判分。<br>Internal note only; scoring is unchanged.',
+    field: { label: 'Note · 备注', value: b.dataset.note || '', ph: 'leave blank to clear · 留空清除' },
+    ok: 'Save',
+    run: v => post('/api/admin/bank/note', { id: id, note: v }),
+    done: 'Note saved · 备注已保存'
+  });
 
   if (act === 'more') {
     const row = S.rows.filter(x => x.id === id)[0] || {};
@@ -584,6 +756,43 @@ let tmr = null;
 $('#q').addEventListener('input', e => {
   clearTimeout(tmr);
   tmr = setTimeout(() => { S.q = e.target.value.trim(); S.offset = 0; loadUsers(); }, 220);
+});
+
+/* ---- bank tab: chrome ---- */
+$('#tabs').addEventListener('click', e => {
+  const t = e.target.closest('[data-tab]');
+  if (t) setTab(t.dataset.tab);
+});
+$('#bankStats').addEventListener('click', e => {
+  const j = e.target.closest('[data-jump]');
+  if (!j) return;
+  B.filter = j.dataset.jump; B.offset = 0;
+  $('#bankFilter').value = B.filter;
+  refreshBank();
+});
+let bankTmr = null;
+$('#bankQ').addEventListener('input', e => {
+  clearTimeout(bankTmr);
+  bankTmr = setTimeout(() => { B.q = e.target.value.trim(); B.offset = 0; loadBank(); }, 220);
+});
+$('#bankK').addEventListener('change', e => { B.k = e.target.value; B.offset = 0; loadBank(); });
+$('#bankFilter').addEventListener('change', e => { B.filter = e.target.value; B.offset = 0; loadBank(); });
+$('#bankLimit').addEventListener('change', e => { B.limit = +e.target.value; B.offset = 0; loadBank(); });
+$('#bankPrev').addEventListener('click', () => { B.offset = Math.max(0, B.offset - B.limit); loadBank(); });
+$('#bankNext').addEventListener('click', () => { B.offset += B.limit; loadBank(); });
+document.addEventListener('change', async e => {
+  const s = e.target.closest('[data-act="bank-ans"]');
+  if (!s || !s.value) return;
+  const id = +s.dataset.id, v = s.value;
+  s.disabled = true;
+  try {
+    await post('/api/admin/bank/ans', { id: id, a: v === '__clear__' ? null : v });
+    toast(v === '__clear__' ? 'Override cleared · 已恢复原始答案' : 'Answer saved · 答案已保存');
+    await refreshBank();
+  } catch (err) {
+    if (err.message !== 'signed out') toast(err.message, true);
+    s.value = ''; s.disabled = false;
+  }
 });
 
 async function boot() {

@@ -10,9 +10,11 @@ Standard library only, so the box needs nothing but python3.  It replaces
   * sane static   path-traversal guard, gzip, long cache on the crop folders
 
 Env:
-  MTH026_ROOT   document root           (default /var/www/mth026)
-  MTH026_DB     sqlite file             (default /opt/mth026/data/app.db)
-  MTH026_PORT   listen port             (default 8088)
+  MTH026_ROOT         document root        (default /var/www/mth026)
+  MTH026_DB           sqlite file          (default /opt/mth026/data/app.db)
+  MTH026_PORT         listen port          (default 8088)
+  MTH026_ADMIN_PW     admin console password
+  MTH026_BANK_INDEX   bank index json      (default /opt/mth026/bank_index.json)
 """
 
 import csv
@@ -45,6 +47,9 @@ PBKDF2_ROUNDS = 200_000
 MIN_PW, MAX_PW = 6, 72
 NAME_RE = re.compile(r"^[A-Za-z0-9_.\-]{3,24}$")
 MAX_ITEMS = 900
+
+BANK_INDEX_PATH = os.environ.get("MTH026_BANK_INDEX", "/opt/mth026/bank_index.json")
+_BANK_CACHE = None            # lazy {id: row} of the build-time answer index
 
 LOCK = threading.Lock()
 
@@ -120,6 +125,12 @@ def init_db():
             action  TEXT NOT NULL,
             target  TEXT,
             detail  TEXT
+        );
+        CREATE TABLE IF NOT EXISTS bank_overrides(
+            item_id INTEGER PRIMARY KEY,
+            ans     TEXT,
+            note    TEXT,
+            updated REAL NOT NULL
         );
         CREATE INDEX IF NOT EXISTS sessions_uid ON sessions(uid);
         CREATE INDEX IF NOT EXISTS audit_ts ON audit(ts);
@@ -246,6 +257,52 @@ def merge(old, new):
                 if cur is None or abs(val) >= abs(cur):
                     out["fav"][key] = val
     return out
+
+
+# ------------------------------------------------------------- bank index
+def bank_base_map():
+    """Build-time answers keyed by id; empty when the index file is absent.
+
+    The 674 answers are baked into the static site at build time.  A missing
+    or corrupt file degrades to an empty map, so override-only rows still show.
+    """
+    global _BANK_CACHE
+    if _BANK_CACHE is None:
+        try:
+            with open(BANK_INDEX_PATH, "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+            _BANK_CACHE = {r["id"]: r for r in data
+                           if isinstance(r, dict) and isinstance(r.get("id"), int)}
+        except (OSError, ValueError, TypeError, KeyError):
+            _BANK_CACHE = {}
+    return _BANK_CACHE
+
+
+def bank_base(iid):
+    row = bank_base_map().get(iid)
+    return row["a"] if row else None
+
+
+def bank_match(r, q):
+    """Same search grammar as the front-end Bank view: 12 / Q12 / P7 / 2.5."""
+    m = re.match(r"^([qp]?)\s*0*(\d{1,3})$", q)
+    if m:
+        pre, n = m.group(1), int(m.group(2))
+        if pre == "q" and r["k"] == "P":
+            return False
+        if pre == "p" and r["k"] == "Q":
+            return False
+        return r["n"] == n
+    if r["s"] and r["s"].startswith(q):
+        return True
+    return q in r["lb"]
+
+
+def bank_now(con):
+    """Timestamp strictly newer than every stored override, so two writes in
+    the same millisecond still get distinct versions."""
+    m = con.execute("SELECT COALESCE(MAX(updated), 0) m FROM bank_overrides").fetchone()["m"]
+    return max(time.time(), m + 0.001)
 
 
 # ------------------------------------------------------------- rate limit
@@ -423,6 +480,9 @@ class App(BaseHTTPRequestHandler):
 
         if api == "health":
             return self._json(200, {"ok": True, "port": PORT})
+
+        if api == "overrides" and method == "GET":
+            return self._overrides()
 
         if api == "admin" or api.startswith("admin/"):
             return self._admin(method, path)
@@ -629,6 +689,12 @@ class App(BaseHTTPRequestHandler):
             return self._admin_users()
         if api == "audit":
             return self._admin_audit()
+        if api == "bank" and method == "GET":
+            return self._admin_bank()
+        if api == "bank/ans" and method == "POST":
+            return self._admin_bank_ans()
+        if api == "bank/note" and method == "POST":
+            return self._admin_bank_note()
         if api == "export.csv":
             return self._admin_csv()
         if api == "user/pw" and method == "POST":
@@ -944,6 +1010,157 @@ class App(BaseHTTPRequestHandler):
             con.close()
         audit(client_ip(self), "user.delete", str(uid), row["name"])
         self._json(200, {"ok": True})
+
+    # ---- bank: runtime answer overrides
+    def _overrides(self):
+        con = connect()
+        try:
+            vrow = con.execute(
+                "SELECT COALESCE(MAX(updated), 0) m, COUNT(*) c FROM bank_overrides"
+            ).fetchone()
+            ov = con.execute(
+                "SELECT item_id, ans, note FROM bank_overrides "
+                "WHERE ans IS NOT NULL ORDER BY item_id"
+            ).fetchall()
+        finally:
+            con.close()
+        v = int(vrow["m"] * 1000)
+        # combine v and row count: deleting the newest row shrinks MAX(updated),
+        # so v alone could match an earlier ETag and hand the client a stale 304
+        etag = '"%x-%x"' % (v, vrow["c"])
+        extra = [("Cache-Control", "no-cache"), ("ETag", etag)]
+        if self.headers.get("If-None-Match") == etag:
+            return self._send(304, b"", None, extra, head_only=True)
+        rows = [{"id": r["item_id"], "a": r["ans"], "note": r["note"]} for r in ov]
+        return self._json(200, {"v": v, "rows": rows}, extra)
+
+    def _admin_bank(self):
+        q = parse_qs(urlsplit(self.path).query)
+        arg = lambda k, d: (q.get(k) or [d])[0]
+        kind = arg("k", "all")
+        filt = arg("filter", "all")
+        needle = arg("q", "").strip().lower()
+        try:
+            limit = max(1, min(int(arg("limit", "50")), 200))
+        except ValueError:
+            limit = 50
+        try:
+            off = max(0, int(arg("offset", "0")))
+        except ValueError:
+            off = 0
+
+        base = bank_base_map()
+        con = connect()
+        try:
+            ov = {r["item_id"]: r for r in con.execute(
+                "SELECT item_id, ans, note, updated FROM bank_overrides")}
+        finally:
+            con.close()
+
+        rows = []
+        for iid in set(base) | set(ov):
+            b = base.get(iid)
+            k = b["k"] if b else ("P" if iid >= 1000 else "Q")
+            n = iid if k == "Q" else iid - 1000
+            o = ov.get(iid)
+            a = o["ans"] if o else None
+            bval = b["a"] if b else None
+            rows.append({
+                "id": iid, "k": k, "s": b["s"] if b else None, "base": bval,
+                "a": a, "note": o["note"] if o else None,
+                "updated": int(o["updated"]) if o else None,
+                "changed": a is not None and a != bval,
+                "n": n, "lb": (k + str(n)).lower(),
+            })
+        if kind in ("Q", "P"):
+            rows = [r for r in rows if r["k"] == kind]
+        if filt == "changed":
+            rows = [r for r in rows if r["changed"]]
+        elif filt == "missing":
+            rows = [r for r in rows if r["base"] is None]
+        if needle:
+            rows = [r for r in rows if bank_match(r, needle)]
+        rows.sort(key=lambda r: r["id"])
+        total = len(rows)
+        page = rows[off:off + limit]
+        for r in page:
+            r.pop("n")
+            r.pop("lb")
+        return self._json(200, {"total": total, "rows": page})
+
+    def _admin_bank_ans(self):
+        data = self._body()
+        try:
+            iid = int(data.get("id"))
+        except (TypeError, ValueError):
+            return self._err(400, "missing id")
+        if iid not in bank_base_map():
+            return self._err(404, "no such item")
+        a = data.get("a")
+        if a is not None:
+            a = str(a).strip().upper()
+            if not a:
+                a = None
+        if a is not None and (len(a) != 1 or a not in "ABCDE"):
+            return self._err(400, "answer must be A-E")
+        base = bank_base(iid)
+        with LOCK:
+            con = connect()
+            try:
+                old = con.execute(
+                    "SELECT ans FROM bank_overrides WHERE item_id = ?", (iid,)
+                ).fetchone()
+                now = bank_now(con)
+                if a is None:
+                    if old:                              # clear -> delete the override row
+                        con.execute("DELETE FROM bank_overrides WHERE item_id = ?", (iid,))
+                elif old:                                # keep any existing note
+                    con.execute(
+                        "UPDATE bank_overrides SET ans = ?, updated = ? WHERE item_id = ?",
+                        (a, now, iid))
+                else:
+                    con.execute(
+                        "INSERT INTO bank_overrides(item_id, ans, note, updated) VALUES(?,?,NULL,?)",
+                        (iid, a, now))
+                con.commit()
+            finally:
+                con.close()
+        prev = old["ans"] if (old and old["ans"] is not None) else base
+        new = a if a is not None else "base(%s)" % (base or "-")
+        audit(client_ip(self), "bank.ans", str(iid), "%s->%s" % (prev or "-", new))
+        return self._json(200, {"ok": True})
+
+    def _admin_bank_note(self):
+        data = self._body()
+        try:
+            iid = int(data.get("id"))
+        except (TypeError, ValueError):
+            return self._err(400, "missing id")
+        if iid not in bank_base_map():
+            return self._err(404, "no such item")
+        note = data.get("note")
+        note = "" if note is None else str(note)[:300]
+        with LOCK:
+            con = connect()
+            try:
+                old = con.execute(
+                    "SELECT note FROM bank_overrides WHERE item_id = ?", (iid,)
+                ).fetchone()
+                now = bank_now(con)
+                if old:
+                    con.execute(
+                        "UPDATE bank_overrides SET note = ?, updated = ? WHERE item_id = ?",
+                        (note, now, iid))
+                else:                                    # pure note: ans stays NULL, never shipped
+                    con.execute(
+                        "INSERT INTO bank_overrides(item_id, ans, note, updated) VALUES(?,NULL,?,?)",
+                        (iid, note, now))
+                con.commit()
+            finally:
+                con.close()
+        audit(client_ip(self), "bank.note", str(iid),
+              "%s->%s" % ((old["note"] if old else "") or "-", note or "-"))
+        return self._json(200, {"ok": True})
 
     # ---- static
     def _static(self, path, head_only=False):
