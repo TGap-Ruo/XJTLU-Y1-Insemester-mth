@@ -852,15 +852,29 @@ function weakness(d){
    draw; it defaults to Math.random.  Mistakes first (P mistakes before Q),
    then unseen P, then unseen Q, then one of the three longest-untouched items.
    The topic-level weakness score in pickSmart() is deliberately untouched. */
+/* A corrected ("repaired") mistake is pulled back for a retention check once it
+   ages past REPAIR_RECALL_MS — this is the underlying mistake log driving recall,
+   not the surface "ok" flag.  It sits after still-open mistakes, before new items. */
+const REPAIR_RECALL_MS = 2*86400000;
 function pickFrom(d, sk, rnd){
   rnd = rnd || Math.random;
   const all=ALLBYSEC[d.id], free=i=>!sk.q[i];
   const one=a=>a[Math.min(a.length-1, Math.max(0, Math.floor(rnd()*a.length)))];
   const isP=i=>i>=1000;
+  const M=store.miss||{};
   const open=all.filter(i=>store.h[i] && !store.h[i].ok && free(i));
   if(open.length){
     const p=open.filter(isP), q=open.filter(i=>!isP(i));
     return {id:one(p.length? p : (q.length? q : open)), kind:'retry'};
+  }
+  const now=Date.now();
+  const dueRep=all.filter(i=>{
+    const m=M[i];
+    return m && m.rep && free(i) && (now-(m.repAt||0) >= REPAIR_RECALL_MS);
+  });
+  if(dueRep.length){
+    const p=dueRep.filter(isP), q=dueRep.filter(i=>!isP(i));
+    return {id:one(p.length? p : (q.length? q : dueRep)), kind:'recall'};
   }
   const freshP=all.filter(i=>isP(i) && !store.h[i] && free(i));
   if(freshP.length) return {id:one(freshP), kind:'new'};
@@ -873,6 +887,7 @@ function pickFrom(d, sk, rnd){
 function whyText(d,c){
   const n=d.miss;
   if(c.kind==='retry') return n+' open '+(n===1?'mistake':'mistakes')+' in this topic · 这类还有 '+n+' 道错题没订正';
+  if(c.kind==='recall') return d.rep+' previously missed, now repaired — refreshing your memory · 这类有 '+d.rep+' 道错题已订正，回来复习防遗忘';
   if(c.kind==='new') return d.unseen+' item'+(d.unseen===1?'':'s')+' never seen · 这类还有 '+d.unseen+' 道没做过';
   const dd=d.last? Math.max(1,Math.round(days(d.last))) : 0;
   return (dd? 'gone '+dd+' days' : 'not seen yet')+' without practice · 这类'+(dd? '已 '+dd+' 天没练':'还没练过');
