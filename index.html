@@ -46,10 +46,11 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink2)}
 .btn.ghost:hover{border-color:#c9d5e3;background:#fafcfe}
 .btn:disabled{opacity:.45;cursor:not-allowed}
-/* the bar carries a lot of chrome; drop the least important chips first */
-@media(max-width:1300px){#cStreak{display:none}}
+/* the bar carries a lot of chrome; drop the least important chips first so the
+   account button is never pushed off-screen */
+@media(max-width:1500px){#cStreak{display:none}}
+@media(max-width:1320px){#cAns,#cAcc{display:none}}
 @media(max-width:1080px){.brand small{display:none}}
-@media(max-width:1010px){#cAns,#cAcc{display:none}}
 @media(max-width:860px){.top .wrap{gap:8px}.brand>div{font-size:13.5px}}
 @media(max-width:560px){#acctName{display:none}#btnAcct{padding:9px 11px}
   .brand>div{display:none}.top .wrap{gap:6px}
@@ -433,7 +434,21 @@ function loadBucket(key){
   try{ const raw=localStorage.getItem(key); if(raw) s=Object.assign(s,JSON.parse(raw)); }catch(e){}
   s.fav=normFav(s.fav);
   s.miss=normMiss(s.miss);
+  backfillMiss(s);
   return s;
+}
+/* Migration: accounts created before the two-layer book only stored the latest
+   answer in h (ok=false for an open mistake).  Seed those open mistakes into the
+   append-only miss log so the book and recall engine are not empty.  Idempotent —
+   existing miss rows are never overwritten. */
+function backfillMiss(s){
+  s.miss=s.miss||{};
+  Object.keys(s.h||{}).forEach(k=>{
+    const r=s.h[k]||{};
+    if(!r.ok && !r.self && !s.miss[k]){
+      s.miss[k]={n:1, first:r.t||0, last:r.t||0, rep:false, repAt:0};
+    }
+  });
 }
 /* Record one attempt.  ok=true on a previously-missed question marks it repaired,
    it never erases the historical mistake row. */
