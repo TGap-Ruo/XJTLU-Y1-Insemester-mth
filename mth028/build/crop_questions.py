@@ -112,7 +112,10 @@ def main():
         if r["correct"]:
             ap, ay = r["correct"][0]
             af = "%s/q%d-%02d.png" % (ADIR, qi, qno)
-            if render(doc, ap, ay - 6, min(ay + 84, FOOTER_Y), af):
+            # The anchor y is the text baseline of "The correct answer is:".
+            # Tall matrices extend ~25pt above and ~40pt below it, so widen the
+            # window upward (the old ay-6 cut off the top row of 3-row vectors).
+            if render(doc, ap, max(0, ay - 30), min(ay + 55, FOOTER_Y), af):
                 ans_img = "img/a/q%d-%02d.png" % (qi, qno)
         manifest.append({
             "qid": r["qid"], "quiz": qi, "qno": qno, "type": r["type"],
