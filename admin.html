@@ -265,11 +265,16 @@ tbody tr:hover{background:#fafcff}
         <span class="pill" id="bankPill" style="margin-left:auto">—</span></h2>
       <div class="bankstats" id="bankStats"><span class="st">—</span></div>
       <div class="tools">
-        <input type="search" id="bankQ" placeholder="题号 12 / Q12 / P7 / 考点 2.5 · Find number or topic">
+        <div class="tabs" id="courseTabs" style="margin-right:4px">
+          <button class="tab" data-course="26">MTH026</button>
+          <button class="tab active" data-course="28">MTH028</button>
+        </div>
+        <input type="search" id="bankQ" placeholder="题号 Q1-13 / 考点 1.2 · qid or topic">
         <select id="bankK">
           <option value="all">全部类型 · All</option>
-          <option value="Q">精编 Q</option>
-          <option value="P">原题 P</option>
+          <option value="choice">Choice 选择题</option>
+          <option value="fill">Fill 填空题</option>
+          <option value="cloze">Cloze 多空题</option>
         </select>
         <select id="bankFilter">
           <option value="all">全部状态 · All</option>
@@ -287,7 +292,7 @@ tbody tr:hover{background:#fafcff}
       <div class="tblwrap">
         <table>
           <thead><tr>
-            <th>Item <span class="zh">题号</span></th>
+            <th>QID <span class="zh">题号</span></th>
             <th>Type <span class="zh">类型</span></th>
             <th>Topic <span class="zh">考点</span></th>
             <th>Base <span class="zh">原始答案</span></th>
@@ -495,44 +500,90 @@ async function loadAudit() {
 
 /* ---------------------------------------------------------------- bank */
 const B = S.bank;
-function bankLabel(r) {
-  const n = r.k === 'Q' ? r.id : r.id - 1000;
-  return '<span class="' + (r.k === 'Q' ? 'lbq' : 'lbp') + '">' + r.k + n + '</span>';
+B.course = '28';   // default to MTH028
+
+function bankLabel28(r) {
+  return '<span class=”lbq”>' + esc(r.label || r.qid) + '</span>';
 }
-function bankStatus(r) {
-  if (r.base == null) return '<span class="tag ban">缺答案 · missing</span>';
-  if (r.changed) return '<span class="tag new">已修改 · changed</span>';
-  return '<span class="tag idle">正常 · ok</span>';
+function bankStatus28(r) {
+  if (!r.current) return '<span class=”tag ban”>缺答案 · missing</span>';
+  if (r.changed) return '<span class=”tag new”>已修改 · changed</span>';
+  return '<span class=”tag idle”>正常 · ok</span>';
 }
+function typeLabel(t) {
+  return {choice:'Choice', fill:'Fill', cloze:'Cloze'}[t] || t;
+}
+function bankRowHtml28(r) {
+  let ansCtrl;
+  if (r.type === 'choice') {
+    const letters = ['A','B','C','D'].map(x =>
+      '<option value=”' + x + '”' + (r.current === x ? ' selected' : '') + '>' + x + '</option>').join('');
+    ansCtrl = '<select class=”anssel” data-act=”bank28-ans” data-id=”' + r.id + '” title=”改答案”>' +
+      '<option value=””>改答案…</option>' + letters +
+      '<option value=”__clear__”>清除覆盖</option></select>';
+  } else {
+    ansCtrl = '<button class=”btn sm” data-act=”bank28-ans-edit” data-id=”' + r.id + '” ' +
+      'data-current=”' + esc(r.current) + '” data-blanks=”' + (r.blanks||1) + '” ' +
+      'data-type=”' + r.type + '”>改答案 <span class=”zh”>编辑</span></button>';
+  }
+  return '<tr data-row=”' + r.id + '”>' +
+    '<td class=”num”>' + bankLabel28(r) + '</td>' +
+    '<td><span class=”tag idle”>' + typeLabel(r.type) + '</span></td>' +
+    '<td class=”num”>' + esc(r.topic || '—') + '</td>' +
+    '<td class=”cellbase”>' + (r.base ? esc(r.base) : '<span class=”tag ban”>none</span>') + '</td>' +
+    '<td class=”cellnow”>' + (r.current ? esc(r.current) : '—') +
+      (r.changed ? ' <span class=”zh” style=”color:var(--gold);margin:0”>覆盖</span>' : '') + '</td>' +
+    '<td>' + bankStatus28(r) + '</td>' +
+    '<td>' + (r.note
+      ? '<span class=”banknote” title=”' + esc(r.note) + '”>' + esc(r.note) + '</span>'
+      : '<span class=”zh” style=”color:var(--ink4);margin:0”>—</span>') + '</td>' +
+    '<td><div class=”bankacts”>' + ansCtrl +
+      '<button class=”btn sm” data-act=”bank28-view” data-id=”' + r.id + '” ' +
+      'data-img=”' + esc(r.img) + '” data-aimg=”' + esc(r.answerImg || '') + '” title=”查看截图”>图</button>' +
+      '<button class=”btn sm” data-act=”bank28-note” data-id=”' + r.id + '” ' +
+      'data-note=”' + esc(r.note || '') + '”>Note</button>' +
+    '</div></td></tr>';
+}
+
+/* MTH026 legacy row renderer */
 function bankRowHtml(r) {
   const cur = r.a != null ? r.a : r.base;
   const letters = ['A', 'B', 'C', 'D', 'E'].map(x =>
-    '<option value="' + x + '">' + x + '</option>').join('');
-  return '<tr data-row="' + r.id + '">' +
-    '<td class="num">' + bankLabel(r) + '</td>' +
+    '<option value=”' + x + '”>' + x + '</option>').join('');
+  return '<tr data-row=”' + r.id + '”>' +
+    '<td class=”num”>' + '<span class=”' + (r.k === 'Q' ? 'lbq' : 'lbp') + '”>' + r.k + (r.k==='Q'?r.id:r.id-1000) + '</span></td>' +
     '<td>' + (r.k === 'Q' ? '精编 Q' : '原题 P') + '</td>' +
-    '<td class="num">' + esc(r.s == null ? '—' : r.s) + '</td>' +
-    '<td class="cellbase">' + (r.base == null ? '<span class="tag ban">none</span>' : esc(r.base)) + '</td>' +
-    '<td class="cellnow">' + (cur == null ? '—' : esc(cur)) +
-      (r.a != null ? ' <span class="zh" style="color:var(--gold);margin:0">覆盖</span>' : '') + '</td>' +
+    '<td class=”num”>' + esc(r.s == null ? '—' : r.s) + '</td>' +
+    '<td class=”cellbase”>' + (r.base == null ? '<span class=”tag ban”>none</span>' : esc(r.base)) + '</td>' +
+    '<td class=”cellnow”>' + (cur == null ? '—' : esc(cur)) +
+      (r.a != null ? ' <span class=”zh” style=”color:var(--gold);margin:0”>覆盖</span>' : '') + '</td>' +
     '<td>' + bankStatus(r) + '</td>' +
     '<td>' + (r.note
-      ? '<span class="banknote" title="' + esc(r.note) + '">' + esc(r.note) + '</span>'
-      : '<span class="zh" style="color:var(--ink4);margin:0">—</span>') + '</td>' +
-    '<td><div class="bankacts">' +
-      '<select class="anssel" data-act="bank-ans" data-id="' + r.id + '" title="改答案 · Set answer">' +
-        '<option value="">改答案…</option>' + letters +
-        '<option value="__clear__">清除覆盖 · 恢复原始</option></select>' +
-      '<button class="btn sm" data-act="bank-note" data-id="' + r.id + '" ' +
-        'data-note="' + esc(r.note == null ? '' : r.note) + '">Note <span class="zh">备注</span></button>' +
+      ? '<span class=”banknote” title=”' + esc(r.note) + '”>' + esc(r.note) + '</span>'
+      : '<span class=”zh” style=”color:var(--ink4);margin:0”>—</span>') + '</td>' +
+    '<td><div class=”bankacts”>' +
+      '<select class=”anssel” data-act=”bank-ans” data-id=”' + r.id + '” title=”改答案 · Set answer”>' +
+        '<option value=””>改答案…</option>' + letters +
+        '<option value=”__clear__”>清除覆盖 · 恢复原始</option></select>' +
+      '<button class=”btn sm” data-act=”bank-note” data-id=”' + r.id + '” ' +
+        'data-note=”' + esc(r.note == null ? '' : r.note) + '”>Note <span class=”zh”>备注</span></button>' +
     '</div></td></tr>';
 }
+
 function paintBank() {
   const tbody = $('#bankRows');
-  if (!B.rows.length) {
-    tbody.innerHTML = '<tr><td colspan="8" class="empty">没有匹配的题目 · Nothing matches</td></tr>';
+  if (B.course === '28') {
+    if (!B.rows.length) {
+      tbody.innerHTML = '<tr><td colspan=”8” class=”empty”>没有匹配的题目 · Nothing matches</td></tr>';
+    } else {
+      tbody.innerHTML = B.rows.map(bankRowHtml28).join('');
+    }
   } else {
-    tbody.innerHTML = B.rows.map(bankRowHtml).join('');
+    if (!B.rows.length) {
+      tbody.innerHTML = '<tr><td colspan=”8” class=”empty”>没有匹配的题目 · Nothing matches</td></tr>';
+    } else {
+      tbody.innerHTML = B.rows.map(bankRowHtml).join('');
+    }
   }
   const from = B.total ? B.offset + 1 : 0;
   const to = Math.min(B.offset + B.limit, B.total);
@@ -542,23 +593,43 @@ function paintBank() {
   $('#bankNext').disabled = B.offset + B.limit >= B.total;
 }
 async function loadBank() {
-  const qs = '?q=' + encodeURIComponent(B.q) + '&k=' + B.k + '&filter=' + B.filter +
-             '&limit=' + B.limit + '&offset=' + B.offset;
-  const d = await api('/api/admin/bank' + qs);
-  B.rows = d.rows; B.total = d.total;
+  if (B.course === '28') {
+    const qs = '?q=' + encodeURIComponent(B.q) + '&type=' + B.k + '&filter=' + B.filter +
+               '&limit=' + B.limit + '&offset=' + B.offset;
+    const d = await api('/api/admin/bank28' + qs);
+    B.rows = d.rows; B.total = d.total;
+  } else {
+    const qs = '?q=' + encodeURIComponent(B.q) + '&k=' + B.k + '&filter=' + B.filter +
+               '&limit=' + B.limit + '&offset=' + B.offset;
+    const d = await api('/api/admin/bank' + qs);
+    B.rows = d.rows; B.total = d.total;
+  }
   paintBank();
 }
 async function loadBankStats() {
-  const [all, ch, mi] = await Promise.all([
-    api('/api/admin/bank?limit=1'),
-    api('/api/admin/bank?filter=changed&limit=1'),
-    api('/api/admin/bank?filter=missing&limit=1')
-  ]);
-  $('#bankStats').innerHTML =
-    '<span class="st">' + all.total + ' 题 · items</span>' +
-    '<span class="st warn jump" data-jump="changed" title="只看已修改">已修改 ' + ch.total + ' · changed</span>' +
-    '<span class="st miss jump" data-jump="missing" title="只看缺答案">缺答案 ' + mi.total + ' · missing</span>';
-  $('#bankPill').textContent = all.total + ' items';
+  if (B.course === '28') {
+    const [all, ch, mi] = await Promise.all([
+      api('/api/admin/bank28?limit=1'),
+      api('/api/admin/bank28?filter=changed&limit=1'),
+      api('/api/admin/bank28?filter=missing&limit=1')
+    ]);
+    $('#bankStats').innerHTML =
+      '<span class=”st”>' + all.total + ' 题 · items</span>' +
+      '<span class=”st warn jump” data-jump=”changed”>已修改 ' + ch.total + ' · changed</span>' +
+      '<span class=”st miss jump” data-jump=”missing”>缺答案 ' + mi.total + ' · missing</span>';
+    $('#bankPill').textContent = all.total + ' items';
+  } else {
+    const [all, ch, mi] = await Promise.all([
+      api('/api/admin/bank?limit=1'),
+      api('/api/admin/bank?filter=changed&limit=1'),
+      api('/api/admin/bank?filter=missing&limit=1')
+    ]);
+    $('#bankStats').innerHTML =
+      '<span class=”st”>' + all.total + ' 题 · items</span>' +
+      '<span class=”st warn jump” data-jump=”changed”>已修改 ' + ch.total + ' · changed</span>' +
+      '<span class=”st miss jump” data-jump=”missing”>缺答案 ' + mi.total + ' · missing</span>';
+    $('#bankPill').textContent = all.total + ' items';
+  }
 }
 async function refreshBank() {
   try {
@@ -655,6 +726,54 @@ document.addEventListener('click', async e => {
     run: v => post('/api/admin/bank/note', { id: id, note: v }),
     done: 'Note saved · 备注已保存'
   });
+
+  /* ---- MTH028 bank actions ---- */
+  if (act === 'bank28-ans') {
+    const v = b.value; b.value = '';
+    if (!v) return;
+    try {
+      await post('/api/admin/bank28/ans', { id: id, a: v === '__clear__' ? null : v });
+      toast(v === '__clear__' ? 'Override cleared · 已恢复原始答案' : 'Answer saved · 答案已保存');
+      await refreshBank();
+    } catch (e) { if (e.message !== 'signed out') toast(e.message, true); }
+    return;
+  }
+
+  if (act === 'bank28-ans-edit') return modal({
+    title: 'Edit answer <span class="zh">编辑答案</span>',
+    sub: 'ID <b>' + id + '</b> · type: ' + b.dataset.type +
+      ' · blanks: ' + b.dataset.blanks +
+      '<br>Multiple values separated by commas (e.g. <code>3, -1, 2</code>).',
+    field: { label: 'Answer(s) · 答案', value: b.dataset.current || '',
+      ph: b.dataset.blanks > 1 ? 'comma-separated values' : 'numeric answer' },
+    ok: 'Save',
+    run: v => post('/api/admin/bank28/ans', { id: id, a: v || null }),
+    done: 'Answer saved · 答案已保存'
+  });
+
+  if (act === 'bank28-note') return modal({
+    title: 'Note <span class="zh">备注</span>',
+    sub: 'ID <b>' + id + '</b> 的备注，仅供内部记录。',
+    field: { label: 'Note · 备注', value: b.dataset.note || '', ph: 'leave blank to clear' },
+    ok: 'Save',
+    run: v => post('/api/admin/bank28/note', { id: id, note: v }),
+    done: 'Note saved · 备注已保存'
+  });
+
+  if (act === 'bank28-view') {
+    const img = b.dataset.img, aimg = b.dataset.aimg;
+    const sc = document.createElement('div');
+    sc.className = 'scrim';
+    sc.innerHTML = '<div class="card" style="max-width:680px;max-height:90vh;overflow:auto">' +
+      '<h3>Question preview <span class="zh">题目截图</span></h3>' +
+      (img ? '<img src="' + esc(img) + '" style="width:100%;border:1px solid var(--line);border-radius:8px;margin:8px 0">' : '') +
+      (aimg ? '<h3 style="margin-top:16px">Answer <span class="zh">答案截图</span></h3>' +
+        '<img src="' + esc(aimg) + '" style="width:100%;border:1px solid var(--line);border-radius:8px;margin:8px 0">' : '') +
+      '<div class="row"><button class="btn" data-x="0">Close</button></div></div>';
+    document.body.appendChild(sc);
+    sc.addEventListener('click', e => { if (e.target === sc || e.target.closest('[data-x]')) sc.remove(); });
+    return;
+  }
 
   if (act === 'more') {
     const row = S.rows.filter(x => x.id === id)[0] || {};
@@ -762,6 +881,25 @@ $('#q').addEventListener('input', e => {
 $('#tabs').addEventListener('click', e => {
   const t = e.target.closest('[data-tab]');
   if (t) setTab(t.dataset.tab);
+});
+$('#courseTabs').addEventListener('click', e => {
+  const t = e.target.closest('[data-course]');
+  if (!t || B.course === t.dataset.course) return;
+  B.course = t.dataset.course;
+  document.querySelectorAll('#courseTabs .tab').forEach(b => b.classList.toggle('active', b.dataset.course === B.course));
+  // Reset filter options per course
+  if (B.course === '28') {
+    $('#bankK').innerHTML = '<option value="all">全部类型 · All</option>' +
+      '<option value="choice">Choice 选择题</option>' +
+      '<option value="fill">Fill 填空题</option>' +
+      '<option value="cloze">Cloze 多空题</option>';
+  } else {
+    $('#bankK').innerHTML = '<option value="all">全部类型 · All</option>' +
+      '<option value="Q">精编 Q</option>' +
+      '<option value="P">原题 P</option>';
+  }
+  B.k = 'all'; B.offset = 0;
+  refreshBank();
 });
 $('#bankStats').addEventListener('click', e => {
   const j = e.target.closest('[data-jump]');

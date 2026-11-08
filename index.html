@@ -1292,8 +1292,33 @@ function onKey(e){
     if(p&&p.click) p.click();
   }
 }
+/* ---------- runtime answer overrides (admin panel) ---------- */
+function applyOverrides28(ov){
+  if(!ov) return;
+  Object.keys(ov).forEach(function(id){
+    var it=BYID[+id]; if(!it) return;
+    var d=ov[id]; if(!d) return;
+    if(d.key!=null && it.type==='choice'){
+      it.key=String(d.key).toUpperCase();
+      it.keyConfidence='admin';
+    }
+    if(Array.isArray(d.answers)){
+      it.answers=d.answers.map(String);
+      it.answerText=d.answers.join(', ');
+    }
+  });
+}
+function fetchOverrides28(){
+  if(!CAN_API) return;
+  fetch('api/overrides28',{credentials:'same-origin'})
+    .then(function(r){return r.ok? r.json():null;})
+    .then(function(d){ if(d&&d.overrides) applyOverrides28(d.overrides); })
+    .catch(function(){});
+}
+
 function boot(){
   paintTop(); routeFromHash(); renderMath();
+  fetchOverrides28();
   if(CAN_API) bootAcct();
 }
 if(typeof document!=='undefined'&&document.addEventListener) document.addEventListener('keydown',onKey);
