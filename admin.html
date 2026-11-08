@@ -510,6 +510,11 @@ function bankStatus28(r) {
   if (r.changed) return '<span class="tag new">已修改 · changed</span>';
   return '<span class="tag idle">正常 · ok</span>';
 }
+function bankStatus(r) {
+  if (r.base == null) return '<span class="tag ban">缺答案 · missing</span>';
+  if (r.changed) return '<span class="tag new">已修改 · changed</span>';
+  return '<span class="tag idle">正常 · ok</span>';
+}
 function typeLabel(t) {
   return {choice:'Choice', fill:'Fill', cloze:'Cloze'}[t] || t;
 }
