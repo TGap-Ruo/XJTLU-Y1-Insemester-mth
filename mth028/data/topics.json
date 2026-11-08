@@ -1,0 +1,282 @@
+{
+  "chapters": [
+    {"n": "1", "en": "Linear Equations in Linear Algebra", "zh": "线性代数中的线性方程组"},
+    {"n": "2", "en": "Matrix Algebra", "zh": "矩阵代数"}
+  ],
+  "topics": [
+    {
+      "id": "1.1", "ch": 0, "en": "Systems of Linear Equations", "zh": "线性方程组",
+      "focus": "Identify linear systems, translate between a system and its augmented/coefficient matrix, and decide consistency (no solution / one / infinitely many).",
+      "focus_zh": "判断线性方程组、方程组与增广矩阵/系数矩阵互译、判断相容性（无解 / 唯一解 / 无穷多解）。",
+      "steps": [
+        "Write each equation as a1x1 + ... + anxn = b; reject any term such as x^2, xy, sin x or 1/x.",
+        "Build the coefficient matrix A and the augmented matrix [A | b], with rows = equations and columns = variables.",
+        "Apply the three elementary row operations (replacement, scaling, interchange) to reach a triangular form; they are reversible and preserve the solution set.",
+        "Back-substitute to obtain the solution; a row [0 ... 0 | c] with c != 0 means the system is inconsistent."
+      ],
+      "note": "增广矩阵最后一列是常数项 $b$，系数矩阵只含 $a_{ij}$。二维几何解释：两直线相交得唯一解、平行无解、重合无穷多解。两个基本问题：是否相容（consistent）？解是否唯一？初等行变换得到等价方程组，解集不变。",
+      "trap": "Dropping the constant column; applying a row operation to the coefficient side but not the right-hand side; reading 0 = 0 as an inconsistency.",
+      "trap_zh": "列增广矩阵时漏掉常数项列；行变换只对左端系数做、忘记对右端 $b$ 做同样操作；把 $0=0$ 误判为无解。",
+      "slides": "MTH028 1.1.pdf", "has_slides": true,
+      "question_hint": "Translate a system to/from an augmented matrix; identify whether an equation is linear; decide consistent / inconsistent / infinitely many solutions; perform a given elementary row operation."
+    },
+    {
+      "id": "1.2", "ch": 0, "en": "Row Reduction and Echelon Forms", "zh": "行化简与阶梯形",
+      "focus": "Row reduce a matrix to echelon form (REF) and reduced echelon form (RREF), locate pivots, and write the general solution in parametric form.",
+      "focus_zh": "行化简到阶梯形 REF 与最简阶梯形 RREF、定位主元与主元列、区分基本变量与自由变量并写出参数形式通解。",
+      "steps": [
+        "Start with the leftmost nonzero column, choose a nonzero pivot and use interchange to move it up into the pivot position.",
+        "Use replacement to create zeros below each pivot, then repeat on the remaining submatrix (forward phase) to get REF.",
+        "For RREF, scale each pivot row so the pivot becomes 1, then create zeros above each pivot (backward phase).",
+        "Mark pivot columns (basic variables) and the other columns (free variables); solve each basic variable in terms of the free ones and write x = p + t*u + s*v.",
+        "Apply the Existence and Uniqueness Theorem (Theorem 2): the system is consistent iff the augmented column is NOT a pivot column; infinitely many solutions iff at least one free variable exists."
+      ],
+      "note": "REF 三条件：非零行在零行之上、每行主元在上一行主元右侧、主元下方全为 0；RREF 额外要求主元全为 1 且所在列其余元素为 0。RREF 唯一（Uniqueness of the Reduced Echelon Form）。主元个数等于矩阵秩，自由变量个数为 $n$ 减秩。存在唯一性定理：$A$ 与 $[A|b]$ 秩相等才相容。",
+      "trap": "Confusing REF with RREF; labelling a free variable as basic; deciding consistency before checking whether the rightmost column is a pivot column.",
+      "trap_zh": "混淆 REF 与 RREF；把自由变量当成基本变量；未检查增广列是否为主元列就断言相容（出现 $[0|5]$ 即 $0=5$，无解）。",
+      "slides": "MTH028 1.2.pdf", "has_slides": true,
+      "question_hint": "Identify whether a matrix is in echelon / reduced echelon form; row reduce to REF or RREF; find pivots, basic and free variables; write the general solution; find k (or a) so the system is consistent or has a given number of solutions."
+    },
+    {
+      "id": "1.3", "ch": 0, "en": "Vector Equations", "zh": "向量方程",
+      "focus": "Work with vectors in R^n, compute linear combinations and spans, and translate a vector equation into a linear system.",
+      "focus_zh": "$R^n$ 中向量的运算、线性组合与张成空间 Span，以及向量方程与线性方程组互译。",
+      "steps": [
+        "Add vectors and multiply by scalars componentwise; interpret u + v by the parallelogram rule.",
+        "To test whether b lies in Span{a1,...,ap}, set up x1*a1 + ... + xp*ap = b.",
+        "Row reduce [a1 ... ap | b]; b is a linear combination iff this system is consistent.",
+        "Read the weights from the RREF; describe Span{u} (a line through 0) and Span{u,v} (a plane through 0) geometrically."
+      ],
+      "note": "向量方程 $x_1a_1+...+x_na_n=b$ 与增广矩阵 $[a_1...a_n|b]$ 同解；张成空间是所有线性组合的集合。几何：单个向量的张成是过原点直线，两个不共线向量张成过原点平面，三个不共面向量张成 $R^3$。",
+      "trap": "Putting the vectors as rows instead of columns when forming the augmented matrix; claiming b is in a span without checking consistency; treating a span as a finite list of vectors.",
+      "trap_zh": "写增广矩阵时把向量放成行而非列（应作为列 $a_i$）；未验证相容性就断言 $b$ 属于张成空间；把张成空间当成有限个向量而不是无限集合。",
+      "slides": "MTH028 1.3, 1.4.pdf", "has_slides": true,
+      "question_hint": "Compute vector sums / scalar multiples; convert a vector equation to a system and back; decide whether b is a linear combination of a1, a2, a3; find h so that b lies in a spanned plane."
+    },
+    {
+      "id": "1.4", "ch": 0, "en": "The Matrix Equation Ax = b", "zh": "矩阵方程 Ax=b",
+      "focus": "Compute the matrix-vector product Ax, read it as a linear combination of the columns of A, and apply the equivalent conditions of Theorem 4.",
+      "focus_zh": "计算矩阵-向量积 $Ax$、理解为 $A$ 的列以 $x$ 为权重的线性组合，并应用 Theorem 4 的等价命题判断存在性。",
+      "steps": [
+        "Check dimensions first: A is m x n and x is in R^n, so Ax is defined and lies in R^m.",
+        "Compute Ax as x1*a1 + ... + xn*an (linear combination of the columns), or by taking dot products of each row of A with x.",
+        "Rewrite Ax = b as [A | b] and row reduce to test consistency.",
+        "Use Theorem 4: Ax = b has a solution for every b iff A has a pivot in EVERY ROW iff the columns of A span R^m."
+      ],
+      "note": "$Ax$ 的线性性质：$A(u+v)=Au+Av$、$A(cu)=c(Au)$。Theorem 4 等价命题：(a) 对每个 $b$ 方程有解；(b) 每个 $b$ 都是 $A$ 的列的线性组合；(c) 列张成 $R^m$；(d) $A$ 每行都有主元位置。存在性要求每行有主元，不是每列（每列是唯一性）。",
+      "trap": "Multiplying when the inner dimensions disagree; or concluding Ax = b is always solvable because A has a pivot in every column (that controls uniqueness, not existence).",
+      "trap_zh": "内维不匹配仍强行相乘；误把「每列有主元」当成 $Ax=b$ 对任意 $b$ 有解的条件（那是唯一性；存在性要求每行有主元）。",
+      "slides": "MTH028 1.3, 1.4.pdf", "has_slides": true,
+      "question_hint": "Compute Ax; decide whether a product is defined; write a linear combination as A times a vector; judge True/False statements of Theorem 4 (columns spanning R^m, consistency for every b)."
+    },
+    {
+      "id": "1.5", "ch": 0, "en": "Solution Sets of Linear Systems", "zh": "线性方程组解集",
+      "focus": "Describe homogeneous systems Ax = 0 (trivial vs nontrivial solutions) and the parametric vector form of solution sets of Ax = b.",
+      "focus_zh": "齐次方程组 $Ax=0$ 的平凡解与非平凡解、齐次/非齐次解集的参数向量形式（通解 = 特解 + 齐次解）。",
+      "steps": [
+        "For Ax = 0, row reduce [A | 0]; nontrivial solutions exist iff there is at least one free variable.",
+        "Write the solution in parametric vector form x = t*u + s*v, with the free variables as parameters.",
+        "For a consistent Ax = b, find one particular solution p (set all free variables to 0).",
+        "The general solution is w = p + v_h, where v_h is any solution of Ax = 0; geometrically it is a translate of the homogeneous solution set."
+      ],
+      "note": "齐次方程 $Ax=0$ 必有平凡解 $x=0$；有非平凡解等价于有自由变量，也等价于 $A$ 的列线性相关。非齐次解集是 $p$ 加上齐次解空间，即沿 $p$ 平移（translation），一般不过原点。由线性性质可验证 $A(p+v_h)=b$。",
+      "trap": "Writing only the homogeneous solution and omitting the particular solution p; or claiming Ax = 0 has only the trivial solution while a free variable exists.",
+      "trap_zh": "通解只写齐次解、漏掉特解 $p$；存在自由变量时仍断言 $Ax=0$ 只有平凡解；把非齐次解集误认为过原点的子空间。",
+      "slides": "MTH028 1.5, 1.7.pdf", "has_slides": true,
+      "question_hint": "Decide whether a homogeneous system has nontrivial solutions; write the parametric vector form; find a parameter g or h from a homogeneous solution; describe the solution set geometrically (a line / plane not through the origin)."
+    },
+    {
+      "id": "1.6", "ch": 0, "en": "Applications of Linear Systems", "zh": "线性方程组的应用",
+      "focus": "Model applied problems (network flow, balancing chemical equations, static equilibrium) as linear systems and solve them.",
+      "focus_zh": "把网络流、化学方程式配平、投入产出等应用问题建模为线性方程组并求解。",
+      "steps": [
+        "Assign a variable to each unknown quantity (flow on each branch, coefficient of each molecule).",
+        "Write one conservation / balance equation at each node (flow in = flow out) or for each element.",
+        "Form the augmented matrix, row reduce to RREF and express the general solution with free variables.",
+        "Impose nonnegativity / feasibility constraints on the parameters and interpret the result."
+      ],
+      "note": "课件暂缺，考点名称依据教材目录；题目待补充。本节点 focus/steps/trap 为依据教材 1.6 (Applications of Linear Systems) 标准内容的推定，非课件确认；实际教学范围请与 team-lead 核对。",
+      "trap": "Ignoring conservation at one node, or dropping the nonnegativity constraints on the flows.",
+      "trap_zh": "课件暂缺。常见错误：遗漏某个节点的守恒方程；忽略流量或系数非负的约束。",
+      "slides": null, "has_slides": false,
+      "question_hint": "Expected (no questions yet): build a linear system from a network-flow or chemical-balance word problem, solve it, and interpret the free parameters."
+    },
+    {
+      "id": "1.7", "ch": 0, "en": "Linear Independence", "zh": "线性无关",
+      "focus": "Determine whether a set of vectors is linearly independent or dependent, find dependence relations, and apply the special-case theorems.",
+      "focus_zh": "判断向量组线性无关/相关、求线性相关关系，并应用特殊情形判定定理。",
+      "steps": [
+        "Set up x1*v1 + ... + xp*vp = 0 and form [v1 ... vp | 0].",
+        "Row reduce; the set is linearly independent iff the ONLY solution is the trivial one (no free variables, a pivot in every column).",
+        "If dependent, solve for the nontrivial weights to write an explicit dependence relation such as 10v1 - 5v2 + 5v3 = 0.",
+        "Use shortcuts: two vectors are dependent iff one is a multiple of the other; any set containing the zero vector is dependent (Theorem 9); in R^n any set with p > n vectors is dependent."
+      ],
+      "note": "矩阵列向量线性无关等价于 $Ax=0$ 只有平凡解，也等价于 $A$ 每列都有主元。定理：$R^n$ 中向量个数 $p>n$ 必线性相关；含零向量必相关；两向量相关等价于成比例。线性相关只保证「至少一个」向量是其余向量的线性组合，不一定是最后一个。",
+      "trap": "Applying determinant reasoning to non-square matrices; forgetting that a set with more vectors than entries is automatically dependent; assuming the last vector must be a combination of the others.",
+      "trap_zh": "对非方阵谈行列式；忽略 $p>n$ 必相关、含零向量必相关这两个快速判定；误以为最后一个向量一定是其余向量的线性组合。",
+      "slides": "MTH028 1.5, 1.7.pdf", "has_slides": true,
+      "question_hint": "Judge linear independence by inspection; find a parameter h making a set dependent; find a linear dependence relation; prove a subset of an independent set is independent (True/False)."
+    },
+    {
+      "id": "1.8", "ch": 0, "en": "Introduction to Linear Transformations", "zh": "线性变换导论",
+      "focus": "Understand a transformation T: R^n -> R^m, compute images under a matrix transformation T(x) = Ax, and verify linearity.",
+      "focus_zh": "变换/映射的定义域、陪域、像与值域；矩阵变换 $T(x)=Ax$ 求像与原像；线性性质与叠加原理。",
+      "steps": [
+        "From the size of A (m x n), identify domain R^n and codomain R^m.",
+        "Compute the image of u as T(u) = Au.",
+        "To find x with T(x) = b, row reduce [A | b]; inconsistency means b is outside the range.",
+        "Verify linearity via T(u+v) = T(u) + T(v) and T(cu) = c*T(u), equivalently the superposition rule T(cu + dv) = c*T(u) + d*T(v)."
+      ],
+      "note": "像 image 是 $T(x)$，值域 range 是所有像的集合，等于 $A$ 的列的全部线性组合（即列空间）。线性变换必满足 $T(0)=0$ 且保持加法与数乘（叠加原理 superposition）。几何：剪切 shear 把单位正方形映成平行四边形。",
+      "trap": "Confusing the image of a single vector with the whole range; treating T(x) = Ax + b with b != 0 as linear; mixing up domain (R^n) and codomain (R^m).",
+      "trap_zh": "把单个向量的像当成整个值域；误认为 $T(x)=Ax+b$（$b$ 非零）是线性变换（此时 $T(0)$ 非零）；把定义域与陪域的维数搞反。",
+      "slides": "MTH028 1.8, 1.9.pdf", "has_slides": true,
+      "question_hint": "Find T(u) for a given u; find x whose image is b; decide whether a rule is a linear transformation; identify m and n from the standard matrix (fill-in); describe a shear."
+    },
+    {
+      "id": "1.9", "ch": 0, "en": "The Matrix of a Linear Transformation", "zh": "线性变换的矩阵",
+      "focus": "Find the standard matrix A of a linear transformation, write matrices of geometric transformations, and decide onto / one-to-one.",
+      "focus_zh": "求线性变换的标准矩阵、写出常见几何变换矩阵，并判断满射 onto 与单射 one-to-one。",
+      "steps": [
+        "Compute the images of the standard basis vectors and set A = [T(e1) T(e2) ... T(en)] (Theorem 10); the standard matrix is unique.",
+        "For a geometric map (reflection, projection, rotation, contraction/dilation, shear), read T(e1) and T(e2) off the geometry and assemble A.",
+        "T is onto iff A has a pivot in EVERY ROW (columns span R^m); when n < m it cannot be onto.",
+        "T is one-to-one iff A has a pivot in EVERY COLUMN (columns independent, Ax = 0 has only the trivial solution); when n > m it cannot be one-to-one."
+      ],
+      "note": "Theorem 10：线性 $T$ 存在唯一 $A$ 使 $T(x)=Ax$，且 $A$ 的各列就是 $T(e_1),...,T(e_n)$。旋转矩阵为 $[[cos(t),-sin(t)],[sin(t),cos(t)]]$。对 $n$ 阶方阵由 IMT：onto 与 one-to-one 等价。",
+      "trap": "Placing T(e_i) as rows instead of columns of A; confusing onto (pivot in every ROW) with one-to-one (pivot in every COLUMN); using the wrong rotation direction.",
+      "trap_zh": "求标准矩阵时把 $T(e_i)$ 放成行而非列；混淆 onto（每行有主元）与 one-to-one（每列有主元）；旋转矩阵的正负号写反。",
+      "slides": "MTH028 1.8, 1.9.pdf", "has_slides": true,
+      "question_hint": "Find the standard matrix of a dilation / reflection / rotation / projection; decide whether T is onto, one-to-one, both or neither; fill in m and n for T: R^m -> R^n."
+    },
+    {
+      "id": "2.1", "ch": 1, "en": "Matrix Operations", "zh": "矩阵运算",
+      "focus": "Perform matrix addition, scalar multiplication, multiplication AB, powers and transposes, and know where matrix algebra differs from scalar algebra.",
+      "focus_zh": "矩阵加法、数乘、乘法 $AB$、幂、转置与对称矩阵，以及矩阵运算与标量运算的差异。",
+      "steps": [
+        "Add / scalar-multiply only matrices of equal size, entry by entry.",
+        "For AB check #cols(A) = #rows(B); entry (i,j) is the dot product of row i of A with column j of B, and column j of AB equals A*(column j of B).",
+        "Take powers A^k only for square A; transpose with (A^T)_ij = a_ji.",
+        "Remember (AB)^T = B^T A^T and (AB)^-1 = B^-1 A^-1; in general AB != BA and cancellation AB = AC => B = C fails."
+      ],
+      "note": "对角矩阵（非对角元为 0）、零矩阵、单位矩阵 $I_n$、上/下三角矩阵。Theorem 1 加法运算律、Theorem 2 乘法结合律与分配律。$A$ 对称等价于 $A^T=A$。Warnings：$AB$ 一般不等于 $BA$；消去律不成立；$AB=0$ 不蕴含 $A=0$ 或 $B=0$。",
+      "trap": "Assuming AB = BA; cancelling a common left factor; computing AB with mismatched inner dimensions; writing (AB)^T = A^T B^T.",
+      "trap_zh": "默认 $AB=BA$、随意消去公共因子；内维不匹配仍计算 $AB$；转置乘积忘记反序 $(AB)^T=B^TA^T$；误以为 $AB=0$ 能推出某个因子为零矩阵。",
+      "slides": "MTH028 2.1，2.2.pdf", "has_slides": true,
+      "question_hint": "Compute AB, A + B, kA; decide whether a product is defined and give its size; compute A^T and powers; judge True/False about AB = BA, cancellation and (AB)^T."
+    },
+    {
+      "id": "2.2", "ch": 1, "en": "The Inverse of a Matrix", "zh": "逆矩阵",
+      "focus": "Decide whether a square matrix is invertible, compute A^-1 (2x2 formula or row reduction), and use it to solve Ax = b.",
+      "focus_zh": "判断方阵可逆（可逆/奇异/非奇异）、用 2x2 公式或行化简求逆矩阵，并用逆矩阵解 $Ax=b$。",
+      "steps": [
+        "For A = [[a,b],[c,d]], if ad - bc != 0 then A^-1 = (1/(ad-bc)) * [[d,-b],[-c,a]]; otherwise A is singular (Theorem 4).",
+        "For larger A, row reduce [A | I]; if it becomes [I | A^-1] then A is invertible, otherwise no inverse exists (Theorem 7).",
+        "Verify A*A^-1 = A^-1*A = I.",
+        "If A is invertible, Ax = b has the UNIQUE solution x = A^-1 b (Theorem 5); elementary matrices encode each row operation used."
+      ],
+      "note": "可逆 invertible / 非奇异 nonsingular；不可逆 = 奇异 singular。初等矩阵是对单位阵做一次初等行变换所得，左乘 $E$ 等价于对 $A$ 做同样行变换。Theorem 6：逆的逆是自身、$(AB)^{-1}=B^{-1}A^{-1}$、$(A^T)^{-1}=(A^{-1})^T$。求逆算法：$[A|I]$ 化为 $[I|A^{-1}]$。",
+      "trap": "Forgetting the 1/(ad-bc) factor; writing (AB)^-1 = A^-1 B^-1 instead of B^-1 A^-1; applying the 2x2 formula to a non-square matrix.",
+      "trap_zh": "2x2 求逆漏掉 $1/(ad-bc)$ 因子或把 $a,d$ 位置写错；把 $(AB)^{-1}$ 写成 $A^{-1}B^{-1}$（正确是 $B^{-1}A^{-1}$）。",
+      "slides": "MTH028 2.1，2.2.pdf", "has_slides": true,
+      "question_hint": "Compute a 2x2 inverse; decide invertibility from ad - bc or pivot count; find A^-1 by reducing [A | I]; solve Ax = b using A^-1; prove the three properties of Theorem 6."
+    },
+    {
+      "id": "2.3", "ch": 1, "en": "Characterizations of Invertible Matrices", "zh": "可逆矩阵的特征（IMT）",
+      "focus": "Apply the Invertible Matrix Theorem (IMT) to decide invertibility of a square matrix from any one of its equivalent statements.",
+      "focus_zh": "应用可逆矩阵定理 IMT 的等价陈述，从任意一条判断方阵可逆性。",
+      "steps": [
+        "For a square n x n matrix A, recall the equivalent statements: A invertible; A row equivalent to I_n; A has n pivots; Ax = 0 has only the trivial solution; columns independent / spanning R^n; Ax = b solvable (uniquely) for each b; A^T invertible; det A != 0; T(x) = Ax one-to-one and onto.",
+        "Pick the cheapest condition to test, usually the pivot count or whether Ax = 0 has a nontrivial solution.",
+        "Conclude by equivalence: if one statement holds, all hold; if one fails, all fail.",
+        "Use the corollary: for square A, B, if AB = I then both are invertible and B = A^-1; for rectangular matrices CA = I_n or AD = I_m only force m = n when both hold."
+      ],
+      "note": "课件首页标题为 CHARACTERIZATIONS OF INVERSE MATRICES，教材标准名是 Characterizations of Invertible Matrices（Theorem 8 / IMT）。$AB=I$（方阵）可推出 $A,B$ 均可逆且互为逆。IMT 只对方阵成立；长方阵的 $CA=I_n$、$AD=I_m$ 分别只说明列无关、行满秩。",
+      "trap": "Applying IMT to a non-square matrix; assuming AB = I forces invertibility for rectangular A, B; treating one-to-one and onto as equivalent for rectangular matrices.",
+      "trap_zh": "把 IMT 用到非方阵；把长方阵的 $CA=I_n$ 或 $AD=I_m$ 误当成可逆（需 $m=n$ 且两者同时成立）；对长方阵把 one-to-one 与 onto 混为一谈。",
+      "slides": "MTH028 2.3, 2.4.pdf", "has_slides": true,
+      "question_hint": "Judge which IMT statements are equivalent (True/False); prove invertibility from A^2 - 2A + 5I = 0; decide one-to-one / onto; handle proofs with CA = I_n, AD = I_m and m = n."
+    },
+    {
+      "id": "2.4", "ch": 1, "en": "Partitioned Matrices", "zh": "分块矩阵",
+      "focus": "Add, scalar-multiply and multiply partitioned (block) matrices, and use the column-row expansion of AB.",
+      "focus_zh": "分块矩阵的加法、数乘与乘法，以及 $AB$ 的列-行展开（Theorem 10）。",
+      "steps": [
+        "Partition A and B so that the COLUMN partition of A matches the ROW partition of B.",
+        "Add / scalar-multiply blockwise when both matrices are partitioned identically.",
+        "Multiply blockwise as (AB)_ij = sum_k A_ik * B_kj, keeping the order of the blocks (blocks are matrices, so order matters).",
+        "Use the column-row expansion AB = col1(A)*row1(B) + ... + coln(A)*rown(B) (Theorem 10)."
+      ],
+      "note": "分块矩阵 partitioned / block matrix；子矩阵 submatrix。关键：把 $A$ 看作列向量组、$B$ 看作行向量组；分块乘法要求 $A$ 的列分块与 $B$ 的行分块一致。本节点在课件 MTH028 2.3, 2.4.pdf 的 p32-p42：首页只列了 2.3，但 2.4 内容完整存在，不属于课件缺失。",
+      "trap": "Reversing the order of block products (matrix multiplication is not commutative); using incompatible partitions; treating blocks as scalars when adding matrices of different shapes.",
+      "trap_zh": "分块乘法时颠倒块乘积顺序（矩阵乘法不交换）；分块方式不匹配仍强行相乘。",
+      "slides": "MTH028 2.3, 2.4.pdf", "has_slides": true,
+      "question_hint": "Compute a product of partitioned matrices; add / scalar-multiply blocks; apply the column-row expansion of AB (Theorem 10)."
+    },
+    {
+      "id": "2.5", "ch": 1, "en": "Matrix Factorizations", "zh": "矩阵分解",
+      "focus": "Factor a matrix as A = LU and use the factorization to solve Ax = b efficiently.",
+      "focus_zh": "矩阵的 $LU$ 分解，并利用分解高效求解 $Ax=b$。",
+      "steps": [
+        "Row reduce A to an echelon form U using only row replacements (no row interchanges).",
+        "Record the row-replacement multipliers in a unit lower-triangular L so that A = L U.",
+        "To solve Ax = b, first solve L y = b by forward substitution, then U x = y by back substitution.",
+        "If a row interchange is required, include a permutation matrix P and factor P A = L U."
+      ],
+      "note": "课件暂缺，考点名称依据教材目录；题目待补充。本节点 focus/steps/trap 依据教材 2.5 (Matrix Factorizations) 标准内容推定，非课件确认。",
+      "trap": "Omitting the permutation matrix P when a row interchange is needed; writing A = U L instead of L U.",
+      "trap_zh": "课件暂缺。常见错误：需要行交换时未引入置换矩阵 $P$；把 $A=LU$ 写成 $A=UL$。",
+      "slides": null, "has_slides": false,
+      "question_hint": "Expected (no questions yet): find an LU factorization; solve Ax = b via forward and back substitution; explain why an echelon form without row scaling produces L."
+    },
+    {
+      "id": "2.6", "ch": 1, "en": "The Leontief Input-Output Model", "zh": "列昂惕夫投入产出模型",
+      "focus": "Set up and solve the Leontief input-output model (I - C)x = d for the production levels of an economy.",
+      "focus_zh": "建立并求解列昂惕夫投入产出模型 $(I-C)x=d$，求各部门产出水平。",
+      "steps": [
+        "Build the consumption matrix C, where c_ij is the input from sector i needed per unit of output of sector j.",
+        "Write the balance equation x = C x + d, i.e. (I - C) x = d, with d the final demand vector.",
+        "Solve (I - C) x = d by row reduction (or via (I - C)^-1 when it exists).",
+        "Interpret the nonnegative production vector x and check that all its entries are >= 0."
+      ],
+      "note": "课件暂缺，考点名称依据教材目录；题目待补充。本节点 focus/steps/trap 依据教材 2.6 (The Leontief Input-Output Model) 标准内容推定，非课件确认。",
+      "trap": "Writing x = C x - d instead of x = C x + d; ignoring the conditions for (I - C) to be invertible and for x to be nonnegative.",
+      "trap_zh": "课件暂缺。常见错误：把 $x=Cx+d$ 写成 $x=Cx-d$；忽略 $(I-C)$ 可逆与产出非负的条件。",
+      "slides": null, "has_slides": false,
+      "question_hint": "Expected (no questions yet): build (I - C)x = d from a consumption matrix and final demand; compute the production vector x; interpret the result."
+    },
+    {
+      "id": "2.7", "ch": 1, "en": "Applications to Computer Graphics", "zh": "计算机图形学中的应用",
+      "focus": "Represent geometric transformations in computer graphics with homogeneous coordinates and composite transformation matrices.",
+      "focus_zh": "用齐次坐标与复合变换矩阵表示计算机图形学中的平移、旋转、缩放等几何变换。",
+      "steps": [
+        "Represent a point (x, y) in homogeneous coordinates as (x, y, 1).",
+        "Write translations, rotations, scalings and shears as 3x3 homogeneous-coordinate matrices.",
+        "Compose transformations by multiplying the matrices in the correct (right-to-left) order.",
+        "Apply the composite matrix to every vertex of the figure to obtain the transformed image."
+      ],
+      "note": "课件暂缺，考点名称依据教材目录；题目待补充。本节点 focus/steps/trap 依据教材 2.7 (Applications to Computer Graphics) 标准内容推定，非课件确认。注意：平移不是 $R^2$ 上的线性变换（$T(0)$ 非零），必须借助齐次坐标提升到 $R^3$ 用 3x3 矩阵表示。",
+      "trap": "Treating translation as a linear map on R^2; multiplying composite transformation matrices in the wrong order.",
+      "trap_zh": "课件暂缺。常见错误：把平移当作 $R^2$ 的线性变换；复合变换矩阵相乘顺序颠倒。",
+      "slides": null, "has_slides": false,
+      "question_hint": "Expected (no questions yet): write a homogeneous-coordinate matrix for a translation or rotation; compose two transformations; map all vertices of a polygon."
+    },
+    {
+      "id": "2.8", "ch": 1, "en": "Subspaces of R^n", "zh": "R^n 的子空间",
+      "focus": "Verify subspaces of R^n, find spanning sets and bases for Col A and Nul A, and relate kernel/range to linear transformations.",
+      "focus_zh": "判断 $R^n$ 的子空间、求列空间与零空间的生成集与基，并把核/值域与线性变换联系起来。",
+      "steps": [
+        "Check the three subspace conditions: 0 is in H, H is closed under u + v, and H is closed under c*u.",
+        "For Nul A, solve Ax = 0 and write the general solution as a linear combination of vectors weighted by the free variables; those vectors form a basis for Nul A.",
+        "For Col A, row reduce A and take the PIVOT COLUMNS OF THE ORIGINAL A as a basis (Theorem 13).",
+        "From the size m x n of A, Nul A is a subspace of R^n and Col A is a subspace of R^m; identify Nul A = ker T and Col A = range T.",
+        "Apply the Spanning Set Theorem: remove from S any vector that is a linear combination of the others to get a basis for H = Span(S)."
+      ],
+      "note": "子空间三条件：含零向量、加法封闭、数乘封闭；张成空间必为子空间。标准基 $e_1,...,e_n$。基等于线性无关且张成 $H$。Theorem 13：$A$ 的主元列构成列空间的基（取原矩阵 $A$ 的列，不是 RREF 的列）。零空间是 $R^n$ 的子空间、列空间是 $R^m$ 的子空间。",
+      "trap": "Taking pivot columns from the RREF instead of the original A; claiming a set is a basis after checking only independence or only spanning; mixing up the dimensions of Nul A and Col A.",
+      "trap_zh": "从 RREF 而非原矩阵 $A$ 取主元列作列空间的基；只验证线性无关或只验证张成就断言是基；混淆零空间与列空间所在的 $R^n$ / $R^m$ 维数。",
+      "slides": "MTH028 2.8.pdf", "has_slides": true,
+      "question_hint": "Decide whether a set is a subspace; find a spanning set / basis for Nul A and Col A; fill in k such that Nul A is a subspace of R^k; apply the Spanning Set Theorem; True/False on bases."
+    }
+  ]
+}

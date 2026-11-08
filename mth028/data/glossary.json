@@ -1,0 +1,1295 @@
+{
+  "groups": [
+    {
+      "id": "1.1",
+      "en": "Systems of Linear Equations",
+      "items": [
+        [
+          "augmented matrix",
+          "增广矩阵",
+          "把系数矩阵与常数列并排合成的矩阵，便于统一做初等行化简。"
+        ],
+        [
+          "coefficient matrix",
+          "系数矩阵",
+          "由线性方程组各未知量的系数按行列排成的矩阵。"
+        ],
+        [
+          "consistent",
+          "有解的/相容的",
+          "指方程组至少存在一组解，行化简后不会推出矛盾等式。"
+        ],
+        [
+          "elementary row operation",
+          "初等行变换",
+          "交换两行、某行倍乘、某行加另一行倍数这三类矩阵操作。"
+        ],
+        [
+          "existence",
+          "存在性",
+          "讨论方程组是否有解，即是否存在至少一组解。"
+        ],
+        [
+          "floating point arithmetic",
+          "浮点运算",
+          "用有限位小数近似实数并进行计算，可能产生舍入误差。"
+        ],
+        [
+          "inconsistent",
+          "无解的/不相容的",
+          "指行化简后出现矛盾行，方程组不存在任何解。"
+        ],
+        [
+          "interchange",
+          "交换",
+          "初等行变换之一，把矩阵的两行互换位置。"
+        ],
+        [
+          "invertible",
+          "可逆的",
+          "存在另一矩阵与之相乘得到单位矩阵的性质。"
+        ],
+        [
+          "linear equation",
+          "线性方程",
+          "未知量只以一次幂出现且不含乘积项的方程。"
+        ],
+        [
+          "matrix",
+          "矩阵",
+          "把数按行与列排成的矩形数表，是线性代数的基本对象。"
+        ],
+        [
+          "replacement",
+          "替换",
+          "初等行变换之一，把某行加上另一行的若干倍。"
+        ],
+        [
+          "row equivalent",
+          "行等价的",
+          "两个矩阵能经有限次初等行变换互相转化。"
+        ],
+        [
+          "scaling",
+          "倍乘",
+          "初等行变换之一，把某一行同乘一个非零常数。"
+        ],
+        [
+          "solution set",
+          "解集",
+          "方程组全部解组成的集合，可为空、唯一或含无穷多解。"
+        ],
+        [
+          "system of linear equations / linear system",
+          "线性方程组",
+          "由若干个关于同一组未知量的线性方程联立构成的系统。"
+        ],
+        [
+          "uniqueness",
+          "唯一性",
+          "讨论方程组的解是否至多一个，即解的个数是否唯一。"
+        ]
+      ],
+      "zh": "线性方程组"
+    },
+    {
+      "id": "1.2",
+      "en": "Row Reduction and Echelon Forms",
+      "items": [
+        [
+          "backward phase",
+          "向后步骤",
+          "行化简中自下而上把主元上方元素化为零的阶段。"
+        ],
+        [
+          "basic substitution",
+          "回代",
+          "由阶梯型自底向上依次求出各基本变量取值的过程。"
+        ],
+        [
+          "basic variable",
+          "基本变量",
+          "对应主元列的未知量，其值由自由变量决定。"
+        ],
+        [
+          "(row) echelon form",
+          "阶梯型（缩写为REF）",
+          "非零行在上、主元逐行右移且主元下方全为零的矩阵形式。"
+        ],
+        [
+          "forward phase",
+          "向前步骤",
+          "行化简中自上而下消元、把矩阵化作阶梯型的阶段。"
+        ],
+        [
+          "free variable",
+          "自由变量",
+          "对应非主元列的未知量，可任意取任意值。"
+        ],
+        [
+          "leading entry",
+          "先导元素",
+          "一行中从左起第一个非零元素，阶梯型中即为主元。"
+        ],
+        [
+          "pivot",
+          "主元",
+          "阶梯型中用于消元的非零先导元素，其所在列为主元列。"
+        ],
+        [
+          "pivot column",
+          "主元列",
+          "含有主元位置的矩阵列，对应一个基本变量。"
+        ],
+        [
+          "pivot position",
+          "主元位置",
+          "阶梯型矩阵中主元所在的行与列位置。"
+        ],
+        [
+          "reduced (row) echelon form",
+          "简化阶梯型（缩写为RREF）",
+          "主元均为1且主元所在列其余元素全为零的唯一阶梯型。"
+        ],
+        [
+          "row reduction",
+          "行简化",
+          "用初等行变换把矩阵化为阶梯型或简化阶梯型的过程。"
+        ]
+      ],
+      "zh": "行化简与阶梯型"
+    },
+    {
+      "id": "1.3",
+      "en": "Vector Equations",
+      "items": [
+        [
+          "a subset spanned by ...",
+          "由…张成的子集",
+          "某组向量所有线性组合构成的集合，是包含它们的最小子空间。"
+        ],
+        [
+          "algebraic property",
+          "代数性质",
+          "向量运算满足的加法与数乘规律，如结合律、分配律等。"
+        ],
+        [
+          "column vector",
+          "列向量",
+          "只有一列的矩阵，常用来表示向量或方程组的一组系数。"
+        ],
+        [
+          "linear combination",
+          "线性组合",
+          "若干向量各乘一个标量后再相加所得到的向量。"
+        ],
+        [
+          "scalar",
+          "标量",
+          "用于数乘向量的单个实数或复数，与向量相区别。"
+        ],
+        [
+          "span / generate",
+          "生成",
+          "一组向量所有线性组合的全体，即它们张成的集合。"
+        ],
+        [
+          "vector equation",
+          "向量方程",
+          "以向量为未知量、用向量加法与数乘表示的方程。"
+        ],
+        [
+          "weight",
+          "权重",
+          "线性组合中乘在各向量前面的标量系数。"
+        ]
+      ],
+      "zh": "向量方程"
+    },
+    {
+      "id": "1.4",
+      "en": "The Matrix Equation 𝑨𝐱= 𝐛",
+      "items": [
+        [
+          "identity matrix",
+          "单位矩阵",
+          "主对角线全为1、其余元素为0的方阵，乘法中起单位元作用。"
+        ],
+        [
+          "matrix-vector product",
+          "矩阵向量乘积",
+          "矩阵乘列向量所得的新向量，等于矩阵各列的线性组合。"
+        ]
+      ],
+      "zh": "矩阵方程"
+    },
+    {
+      "id": "1.5",
+      "en": "Solution Sets of Linear Systems",
+      "items": [
+        [
+          "homogeneous system",
+          "齐次线性方程组",
+          "常数列全为零的线性方程组，至少有零解。"
+        ],
+        [
+          "indexed set",
+          "指标集",
+          "给一组向量按顺序编号所用的下标集合，便于区分次序。"
+        ],
+        [
+          "nonhomogeneous system",
+          "非齐次线性方程组",
+          "常数列不全为零的方程组，其解集是齐次解集的平移。"
+        ],
+        [
+          "nontrivial solution",
+          "非平凡解",
+          "齐次方程组中除零解以外的解，说明列向量线性相关。"
+        ],
+        [
+          "parametric vector form",
+          "参数向量形式",
+          "用自由变量作参数、把解集写成向量线性组合的表示法。"
+        ],
+        [
+          "trivial solution",
+          "零解/平凡解",
+          "齐次方程组中所有未知量均取零的那个解。"
+        ]
+      ],
+      "zh": "线性方程组的解集"
+    },
+    {
+      "id": "1.7",
+      "en": "Linearly Independent",
+      "items": [
+        [
+          "characterization of linearly dependent sets",
+          "线性相关集的特征",
+          "判断一组向量线性相关的等价条件，如存在非平凡的零组合。"
+        ],
+        [
+          "linearly dependence relation",
+          "线性相关关系",
+          "系数不全为零却使线性组合等于零向量的等式。"
+        ],
+        [
+          "linearly dependent",
+          "线性相关",
+          "向量组中至少有一个向量可由其余向量线性表出。"
+        ],
+        [
+          "linearly independent",
+          "线性无关",
+          "只有系数全为零时线性组合才等于零的一组向量。"
+        ]
+      ],
+      "zh": "线性无关"
+    },
+    {
+      "id": "1.8",
+      "en": "Introduction to Linear Transformations",
+      "items": [
+        [
+          "codomain",
+          "陪域",
+          "映射定义中指定的目标集合，值域是它的子集。"
+        ],
+        [
+          "domain",
+          "定义域",
+          "映射允许输入的自变量全体所组成的集合。"
+        ],
+        [
+          "image",
+          "像",
+          "某个输入向量经映射作用后得到的输出向量。"
+        ],
+        [
+          "linear transformation",
+          "线性变换",
+          "保持向量加法与数乘运算的向量空间之间的映射。"
+        ],
+        [
+          "matrix transformation",
+          "矩阵变换",
+          "形如 𝐱↦𝐴𝐱、由矩阵乘法给出的线性变换。"
+        ],
+        [
+          "projection",
+          "投影",
+          "把向量映射到某子空间或某方向上的线性变换。"
+        ],
+        [
+          "range",
+          "值域",
+          "映射所有实际输出值组成的集合，是陪域的子集。"
+        ],
+        [
+          "superposition principle",
+          "叠加原理",
+          "线性变换对向量和的像等于各向量像的和。"
+        ],
+        [
+          "transformation / function / mapping",
+          "变换/函数/映射",
+          "把一个集合的元素对应到另一集合元素的规则。"
+        ]
+      ],
+      "zh": "线性变换导论"
+    },
+    {
+      "id": "1.9",
+      "en": "The Matrix of a Linear Transformation",
+      "items": [
+        [
+          "contraction",
+          "收缩",
+          "把向量长度按小于1的比例缩短的线性变换。"
+        ],
+        [
+          "expansion",
+          "拉伸",
+          "把向量长度按大于1的比例放大的线性变换。"
+        ],
+        [
+          "one-to-one / injective",
+          "一对一的/单射",
+          "不同输入必得不同输出的映射，其核只含零向量。"
+        ],
+        [
+          "onto / surjective",
+          "到…上的/满射",
+          "值域等于陪域、每个目标元素都有原像的映射。"
+        ],
+        [
+          "reflection",
+          "反射",
+          "把向量关于某直线或平面作镜像对称的线性变换。"
+        ],
+        [
+          "rotation",
+          "旋转",
+          "把向量绕原点转过给定角度且保持长度的线性变换。"
+        ],
+        [
+          "shear",
+          "剪切",
+          "沿某一方向按另一坐标比例平移的错切线性变换。"
+        ],
+        [
+          "standard matrix for the linear transformation 𝑇",
+          "线性变换𝑇的标准矩阵",
+          "以标准基的像为列构成的矩阵，使 𝑇(𝐱)=𝐴𝐱 成立。"
+        ]
+      ],
+      "zh": "线性变换的矩阵"
+    },
+    {
+      "id": "2.1",
+      "en": "Matrix Operations",
+      "items": [
+        [
+          "composition",
+          "复合",
+          "把两个映射接连作用，先做内层再做外层的运算。"
+        ],
+        [
+          "diagonal entries",
+          "对角元素",
+          "方阵中行号与列号相同的那些元素。"
+        ],
+        [
+          "diagonal matrix",
+          "对角矩阵",
+          "非对角元素全为零的方阵，仅主对角线上可非零。"
+        ],
+        [
+          "lower triangular matrix",
+          "下三角矩阵",
+          "主对角线以上元素全为零的方阵。"
+        ],
+        [
+          "matrix multiplication",
+          "矩阵乘法",
+          "行乘列求和得到新矩阵元素的运算，一般不可交换。"
+        ],
+        [
+          "power of a matrix",
+          "矩阵的幂",
+          "方阵与自身连乘若干次所得的结果。"
+        ],
+        [
+          "row-column rule",
+          "行列法则",
+          "用左矩阵的行与右矩阵的列对应相乘求和求乘积元素。"
+        ],
+        [
+          "scalar multiple",
+          "数乘",
+          "用同一个标量遍乘矩阵每一个元素所得的矩阵。"
+        ],
+        [
+          "sum",
+          "和",
+          "两个同型矩阵对应元素相加所得的新矩阵。"
+        ],
+        [
+          "transpose",
+          "转置",
+          "把矩阵的行与列互换所得到的新矩阵。"
+        ],
+        [
+          "upper triangular matrix",
+          "上三角矩阵",
+          "主对角线以下元素全为零的方阵。"
+        ],
+        [
+          "zero matrix",
+          "零矩阵",
+          "所有元素都为零的矩阵，是矩阵加法的单位元。"
+        ]
+      ],
+      "zh": "矩阵运算"
+    },
+    {
+      "id": "2.2",
+      "en": "The Inverse of a Matrix",
+      "items": [
+        [
+          "algorithm",
+          "算法",
+          "求解某类问题的有限步、确定性的计算步骤。"
+        ],
+        [
+          "determinant",
+          "行列式",
+          "由方阵元素算出的标量，可判定可逆性并给出体积缩放。"
+        ],
+        [
+          "elementary matrix",
+          "初等矩阵",
+          "对单位矩阵做一次初等行变换所得到的矩阵。"
+        ],
+        [
+          "inverse",
+          "逆",
+          "与原矩阵相乘得到单位矩阵的矩阵，仅可逆方阵才有。"
+        ],
+        [
+          "invertible matrix / nonsingular matrix",
+          "可逆矩阵/非奇异矩阵",
+          "行列式非零、存在逆矩阵的方阵。"
+        ],
+        [
+          "noninvertible matrix / singular matrix",
+          "不可逆矩阵/奇异矩阵",
+          "行列式为零、不存在逆矩阵的方阵。"
+        ]
+      ],
+      "zh": "矩阵的逆"
+    },
+    {
+      "id": "2.3",
+      "en": "Characterizations of Invertible Matrices",
+      "items": [
+        [
+          "square matrix",
+          "方阵",
+          "行数与列数相等的矩阵，才可讨论行列式与逆矩阵。"
+        ],
+        [
+          "the Invertible Matrix Theorem",
+          "可逆矩阵定理",
+          "把方阵可逆与秩、主元、列线性无关等条件等价联系的定理。"
+        ]
+      ],
+      "zh": "可逆矩阵的特征刻画"
+    },
+    {
+      "id": "2.4",
+      "en": "Partitioned Matrices",
+      "items": [
+        [
+          "addition",
+          "加法",
+          "分块矩阵按对应子块逐一相加的运算。"
+        ],
+        [
+          "block diagonal matrix",
+          "分块对角矩阵",
+          "只有主对角线上子块非零、其余子块为零的分块方阵。"
+        ],
+        [
+          "block upper triangular matrix",
+          "分块上三角矩阵",
+          "主对角线下方各子块全为零的分块方阵。"
+        ],
+        [
+          "column-row expansion",
+          "列-行展开",
+          "把矩阵乘积写成各列与对应行外积之和的分解。"
+        ],
+        [
+          "partitioned matrix",
+          "分块矩阵",
+          "用横竖线把矩阵划成若干子块来处理的矩阵。"
+        ],
+        [
+          "scalar multiplication",
+          "数乘",
+          "用标量遍乘分块矩阵中每一个子块的运算。"
+        ]
+      ],
+      "zh": "分块矩阵"
+    },
+    {
+      "id": "3.1",
+      "en": "Introduction to Determinants",
+      "items": [
+        [
+          "cofactor",
+          "代数余子式",
+          "带符号的余子式，用于行列式按某一行或列展开。"
+        ],
+        [
+          "cofactor expansion",
+          "代数余子式展开式",
+          "按某一行或列把行列式写成元素与代数余子式乘积之和。"
+        ],
+        [
+          "cofactor expansion across the first row",
+          "第一行的代数余子式展开式",
+          "沿第一行元素与其代数余子式乘积求和来计算行列式。"
+        ],
+        [
+          "entry",
+          "元素",
+          "矩阵或行列式中位于某行某列的单个数值。"
+        ],
+        [
+          "main diagonal",
+          "主对角线",
+          "方阵中从左上到右下、行列号相同的元素连线。"
+        ],
+        [
+          "recursive definition",
+          "递归定义",
+          "用较低阶行列式来定义较高阶行列式的方式。"
+        ],
+        [
+          "submatrix",
+          "子矩阵",
+          "删去原矩阵若干行与若干列后剩下的矩阵。"
+        ],
+        [
+          "triangular matrix",
+          "三角阵",
+          "主对角线某一侧元素全为零的上或下三角矩阵。"
+        ],
+        [
+          "vertical line",
+          "竖线",
+          "行列式两侧用来标记行列式而非矩阵的竖直线。"
+        ]
+      ],
+      "zh": "行列式导论"
+    },
+    {
+      "id": "3.2",
+      "en": "Properties of Determinants",
+      "items": [
+        [
+          "column operation",
+          "列变换",
+          "对行列式的列做交换、倍乘或加倍数等运算。"
+        ],
+        [
+          "common multiple of one row",
+          "某一行的公因子",
+          "某一行所有元素共有的因子，可提到行列式之外。"
+        ],
+        [
+          "factor out",
+          "提出",
+          "把某行或某列的公因子提到行列式符号外面。"
+        ],
+        [
+          "linearity property of the determinant function",
+          "行列式函数的线性性质",
+          "行列式对固定的某一行或某一列是线性的函数。"
+        ]
+      ],
+      "zh": "行列式的性质"
+    },
+    {
+      "id": "3.3",
+      "en": "Cramer’s Rule, Volume, and Linear Transformation",
+      "items": [
+        [
+          "adjugate / classical adjoint",
+          "伴随矩阵",
+          "由各元素代数余子式转置排成的矩阵，用于求逆。"
+        ],
+        [
+          "area",
+          "面积",
+          "二维中由两个向量张成的平行四边形的大小。"
+        ],
+        [
+          "Cramer’s Rule",
+          "克拉默法则",
+          "用行列式之比直接给出方程组各未知量解的公式。"
+        ],
+        [
+          "Laplace transform",
+          "拉普拉斯变换",
+          "把时域函数经积分变换为复频域函数的积分变换。"
+        ],
+        [
+          "linear differential equation",
+          "线性微分方程",
+          "未知函数及其导数只以一次幂出现的微分方程。"
+        ],
+        [
+          "parallelepiped",
+          "平行六面体",
+          "三维中由三个向量张成的六面体。"
+        ],
+        [
+          "parallelogram",
+          "平行四边形",
+          "二维中由两个向量张成的四边形。"
+        ],
+        [
+          "parameter",
+          "参数",
+          "在参数方程或解集中自由取值并决定其它量的变量。"
+        ],
+        [
+          "volume",
+          "体积",
+          "三维中由向量张成的平行六面体所占空间大小。"
+        ]
+      ],
+      "zh": "克拉默法则、体积与线性变换"
+    },
+    {
+      "id": "4.1",
+      "en": "Vector Spaces and Subspaces",
+      "items": [
+        [
+          "associative property",
+          "结合律",
+          "加法满足 (𝑢+𝑣)+𝑤=𝑢+(𝑣+𝑤)，括号位置可任意改变。"
+        ],
+        [
+          "axiom",
+          "公理",
+          "定义向量空间时默认成立、无需证明的基本规则。"
+        ],
+        [
+          "commutative property",
+          "交换律",
+          "加法运算满足 𝑢+𝑣=𝑣+𝑢、次序可交换的规律。"
+        ],
+        [
+          "distributive property",
+          "分配律",
+          "数乘对加法可展开的分配规律，如 𝑐(𝑢+𝑣)=𝑐𝑢+𝑐𝑣。"
+        ],
+        [
+          "intersection of subspaces",
+          "交空间（子空间的交）",
+          "同时属于两个子空间的向量全体，仍是子空间。"
+        ],
+        [
+          "matrix space",
+          "矩阵空间",
+          "所有同型矩阵在加法与数乘下构成的向量空间。"
+        ],
+        [
+          "proper subspace",
+          "真子空间",
+          "包含于某空间但不等于该空间本身的子空间。"
+        ],
+        [
+          "spanning set / generating set",
+          "生成集",
+          "其线性组合能表出空间中所有向量的一组向量。"
+        ],
+        [
+          "subspace",
+          "子空间",
+          "含零向量且对加法与数乘封闭的向量空间子集。"
+        ],
+        [
+          "sum of subspaces",
+          "和空间（子空间的和）",
+          "两子空间向量之和的全体所构成的子空间。"
+        ],
+        [
+          "trivial subspace",
+          "平凡子空间",
+          "仅含零向量的子空间，是任意空间的最小子空间。"
+        ],
+        [
+          "union of subspaces",
+          "子空间的并",
+          "两子空间向量的并集，一般不再是子空间。"
+        ],
+        [
+          "vector spaces / linear space",
+          "向量空间/线性空间",
+          "定义了加法与数乘并满足八条公理的向量集合。"
+        ],
+        [
+          "zero subspace",
+          "零子空间",
+          "只由零向量构成的子空间，也记作 {0}。"
+        ]
+      ],
+      "zh": "向量空间与子空间"
+    },
+    {
+      "id": "4.2",
+      "en": "Null Spaces, Column Spaces, and Linear Transformations",
+      "items": [
+        [
+          "column space",
+          "列空间",
+          "矩阵各列向量所有线性组合构成的子空间。"
+        ],
+        [
+          "kernel",
+          "核",
+          "线性变换中所有被映到零向量的输入构成的子空间。"
+        ],
+        [
+          "null space",
+          "零空间",
+          "齐次方程 𝐴𝐱=0 的全部解构成的子空间。"
+        ]
+      ],
+      "zh": "零空间、列空间与线性变换"
+    },
+    {
+      "id": "4.3",
+      "en": "Linearly Independent Sets; Bases",
+      "items": [
+        [
+          "bases",
+          "基（复数）",
+          "多个基（basis 的复数），每组都是张成空间的线性无关组。"
+        ],
+        [
+          "basis",
+          "基（单数）",
+          "既能张成空间又线性无关的一组向量。"
+        ],
+        [
+          "𝑛-tuple",
+          "𝑛元有序组",
+          "由 𝑛 个数按确定顺序排列而成的序列。"
+        ],
+        [
+          "nonpivot column",
+          "非主元列",
+          "阶梯型中不含主元的列，对应自由变量。"
+        ],
+        [
+          "the Spanning Set Theorem",
+          "生成集定理",
+          "生成集中可删去多余向量得基，基向量数不超过生成集。"
+        ],
+        [
+          "standard basis",
+          "标准基",
+          "由仅一个分量为1、其余为0的向量组成的常用基。"
+        ]
+      ],
+      "zh": "线性无关集与基"
+    },
+    {
+      "id": "4.4",
+      "en": "Coordinate Systems",
+      "items": [
+        [
+          "coordinate",
+          "坐标",
+          "向量在某组基下线性组合中的各个系数。"
+        ],
+        [
+          "coordinate system",
+          "坐标系",
+          "用一组基把向量唯一表示成坐标的参照框架。"
+        ],
+        [
+          "isomorphic",
+          "同构的",
+          "两个向量空间之间存在保持运算的一一对应。"
+        ],
+        [
+          "isomorphism",
+          "同构",
+          "保持加法与数乘运算的双射线性映射。"
+        ],
+        [
+          "polynomial",
+          "多项式",
+          "由变量幂次与系数相加构成的表达式，可看成向量。"
+        ],
+        [
+          "the ℬ-coordinate of 𝐱",
+          "𝐱的ℬ-坐标",
+          "向量 𝐱 在给定基 ℬ 下对应的坐标列向量。"
+        ],
+        [
+          "the coordinate mapping",
+          "坐标映射",
+          "把向量映到它在给定基下坐标向量的同构映射。"
+        ],
+        [
+          "the coordinates of x relative to the basis ℬ",
+          "𝐱相对于基ℬ的坐标",
+          "使 𝐱 表示为基 ℬ 向量线性组合的唯一系数向量。"
+        ],
+        [
+          "the Unique Representation Theorem",
+          "唯一表示定理",
+          "给定基之后每个向量只有唯一一组坐标表示。"
+        ]
+      ],
+      "zh": "坐标系"
+    },
+    {
+      "id": "4.5",
+      "en": "The Dimension of a Vector Space",
+      "items": [
+        [
+          "dimension",
+          "维数",
+          "向量空间任一基所含向量的个数。"
+        ],
+        [
+          "finite-dimensional",
+          "有限维的",
+          "可由有限个向量张成的向量空间。"
+        ],
+        [
+          "infinite-dimensional",
+          "无限维的",
+          "不能由有限个向量张成的向量空间。"
+        ],
+        [
+          "the Basis Theorem",
+          "基定理",
+          "有限维空间中线性无关组可扩充成基，生成集可精简成基。"
+        ]
+      ],
+      "zh": "向量空间的维数"
+    },
+    {
+      "id": "4.6",
+      "en": "Rank",
+      "items": [
+        [
+          "nullity",
+          "零维/零化度",
+          "矩阵零空间的维数，即自由变量的个数。"
+        ],
+        [
+          "perpendicular",
+          "垂直",
+          "两向量内积为零时的几何位置关系。"
+        ],
+        [
+          "rank",
+          "秩",
+          "矩阵列空间或行空间的维数，等于主元列个数。"
+        ],
+        [
+          "row space",
+          "行空间",
+          "矩阵各行向量所有线性组合构成的子空间。"
+        ],
+        [
+          "the Rank Theorem",
+          "秩定理",
+          "𝑚×𝑛 矩阵满足秩与零化度之和等于列数 𝑛。"
+        ]
+      ],
+      "zh": "秩"
+    },
+    {
+      "id": "4.7",
+      "en": "Change of Basis",
+      "items": [
+        [
+          "the change-of-coordinates matrix from ℬ to 𝒞",
+          "由ℬ到𝒞的坐标变换矩阵",
+          "把向量在基 ℬ 下的坐标换算成基 𝒞 下坐标的矩阵。"
+        ]
+      ],
+      "zh": "基的变换"
+    },
+    {
+      "id": "5.1",
+      "en": "Eigenvectors and Eigenvalues",
+      "items": [
+        [
+          "eigenspace",
+          "特征空间",
+          "某特征值对应全部特征向量加上零向量构成的子空间。"
+        ],
+        [
+          "eigenvalue",
+          "特征值",
+          "使方程 𝐴𝐱=𝜆𝐱 有非零解的标量 𝜆，反映伸缩倍数。"
+        ],
+        [
+          "eigenvector",
+          "特征向量",
+          "被矩阵作用后只伸缩、方向不变的非零向量。"
+        ]
+      ],
+      "zh": "特征向量与特征值"
+    },
+    {
+      "id": "5.2",
+      "en": "The Characteristic Equations",
+      "items": [
+        [
+          "characteristic equation",
+          "特征方程",
+          "由 det(𝐴−𝜆𝐼)=0 得到、用来求特征值的方程。"
+        ],
+        [
+          "characteristic polynomial",
+          "特征多项式",
+          "行列式 det(𝐴−𝜆𝐼) 展开成的多项式，其根即特征值。"
+        ],
+        [
+          "similar",
+          "相似的",
+          "两方阵若由同一线性变换在不同基下表示则相似。"
+        ],
+        [
+          "similarity",
+          "相似性",
+          "方阵之间经可逆矩阵 𝑃 作 𝑃⁻¹𝐴𝑃 相联系的关系。"
+        ]
+      ],
+      "zh": "特征方程"
+    },
+    {
+      "id": "5.3",
+      "en": "Diagonalization",
+      "items": [
+        [
+          "(algebraic) multiplicity",
+          "（代数）重数",
+          "特征值作为特征多项式根出现的次数。"
+        ],
+        [
+          "diagonalizable",
+          "可对角化的",
+          "方阵相似于对角矩阵，即存在由特征向量组成的基。"
+        ],
+        [
+          "diagonalization",
+          "对角化",
+          "把方阵写成 𝑃𝐷𝑃⁻¹ 的分解，其中 𝐷 为对角矩阵。"
+        ],
+        [
+          "dynamical system",
+          "动力系统",
+          "状态按离散或连续规则随时间演化的系统。"
+        ],
+        [
+          "eigenvector basis",
+          "特征向量基",
+          "由矩阵的特征向量构成的一组基。"
+        ],
+        [
+          "factorization",
+          "因式分解",
+          "把矩阵或多项式写成若干因子乘积的表示。"
+        ]
+      ],
+      "zh": "对角化"
+    },
+    {
+      "id": "5.4",
+      "en": "Eigenvectors and Linear Transformations",
+      "items": [
+        [
+          "the ℬ-matrix for 𝑇 / the matrix for 𝑇 relative to ℬ",
+          "𝑇的ℬ-矩阵/𝑇相对于ℬ的矩阵",
+          "线性变换在基 ℬ 下的矩阵表示，列为基像的 ℬ-坐标。"
+        ],
+        [
+          "the matrix for 𝑇 relative to bases ℬ and 𝒞",
+          "𝑇相对于基ℬ和𝒞的矩阵",
+          "输入用基 ℬ、输出用基 𝒞 时线性变换的矩阵表示。"
+        ]
+      ],
+      "zh": "特征向量与线性变换"
+    },
+    {
+      "id": "6.1",
+      "en": "Inner Product, Length, and Orthogonality",
+      "items": [
+        [
+          "distance",
+          "距离",
+          "两向量之差的长度即它们之间的距离，记作 ‖𝑢−𝑣‖。"
+        ],
+        [
+          "dot product",
+          "点积",
+          "两向量对应分量乘积之和，结果是一个标量。"
+        ],
+        [
+          "inner product",
+          "内积",
+          "满足正定、对称与线性等性质的向量乘积运算。"
+        ],
+        [
+          "length / norm",
+          "长度/范数",
+          "向量的大小，等于其与自身内积的平方根。"
+        ],
+        [
+          "normalize",
+          "单位化",
+          "把非零向量除以其长度得到同向单位向量。"
+        ],
+        [
+          "orthogonal",
+          "正交的",
+          "内积为零的两个向量，几何上互相垂直。"
+        ],
+        [
+          "orthogonal complement",
+          "正交补",
+          "与某子空间中所有向量都正交的向量全体。"
+        ],
+        [
+          "orthogonality",
+          "正交性",
+          "向量之间内积为零、彼此垂直的性质。"
+        ],
+        [
+          "the Pythagorean Theorem",
+          "勾股定理",
+          "两正交向量满足长度平方和等于和向量长度平方。"
+        ],
+        [
+          "unit vector",
+          "单位向量",
+          "长度等于1的向量，常用来表示方向。"
+        ]
+      ],
+      "zh": "内积、长度与正交性"
+    },
+    {
+      "id": "6.2",
+      "en": "Orthogonal Sets",
+      "items": [
+        [
+          "orthogonal basis",
+          "正交基",
+          "两两正交的一组基，便于直接求坐标。"
+        ],
+        [
+          "orthogonal matrix",
+          "正交矩阵",
+          "列向量为单位正交集的方阵，其逆等于转置。"
+        ],
+        [
+          "orthogonal projection",
+          "正交投影",
+          "把向量沿正交方向投影到某子空间上的变换。"
+        ],
+        [
+          "orthogonal set",
+          "正交集",
+          "任意两个不同向量内积都为零的向量集合。"
+        ],
+        [
+          "orthonormal basis",
+          "单位正交基",
+          "每个向量都是单位长度且两两正交的基。"
+        ],
+        [
+          "orthonormal set",
+          "单位正交集",
+          "两两正交且每个向量长度均为1的集合。"
+        ]
+      ],
+      "zh": "正交集"
+    },
+    {
+      "id": "6.3",
+      "en": "Orthogonal Projections",
+      "items": [
+        [
+          "the Best Approximation Theorem",
+          "最佳逼近定理",
+          "子空间中距给定向量最近的点是它的正交投影。"
+        ],
+        [
+          "the Orthogonal Decomposition Theorem",
+          "正交分解定理",
+          "任一向量可唯一写成子空间分量与正交补分量之和。"
+        ]
+      ],
+      "zh": "正交投影"
+    },
+    {
+      "id": "6.4",
+      "en": "the Gram-Schmidt Process",
+      "items": [
+        [
+          "QR factorization",
+          "QR 分解",
+          "把列满秩矩阵分解为列正交矩阵 𝑄 与上三角矩阵 𝑅。"
+        ],
+        [
+          "the Gram-Schmidt Process",
+          "格拉姆-施密特过程",
+          "把线性无关向量组逐步正交化并单位化得到正交基。"
+        ]
+      ],
+      "zh": "格拉姆-施密特过程"
+    },
+    {
+      "id": "6.5",
+      "en": "Least-Squares Problems",
+      "items": [
+        [
+          "least squares problem",
+          "最小二乘问题",
+          "当 𝐴𝐱=𝐛 无解时，求使残差长度最小的近似解。"
+        ],
+        [
+          "least-squares solution",
+          "最小二乘解",
+          "指使残差 ‖𝐴𝐱−𝐛‖ 长度达到最小的近似解。"
+        ],
+        [
+          "normal equation",
+          "正规方程/法方程",
+          "由 𝐴ᵀ𝐴𝐱=𝐴ᵀ𝐛 给出、最小二乘解必满足的方程。"
+        ]
+      ],
+      "zh": "最小二乘问题"
+    },
+    {
+      "id": "7.1",
+      "en": "Diagonalization of Symmetric Matrices",
+      "items": [
+        [
+          "orthogonally diagonalizable",
+          "可正交对角化",
+          "可用正交矩阵 𝑄 作 𝑄ᵀ𝐴𝑄 化成对角阵的对称矩阵。"
+        ],
+        [
+          "projection matrix",
+          "投影矩阵",
+          "满足 𝑃²=𝑃 且把向量映到其子空间的矩阵。"
+        ],
+        [
+          "spectral decomposition",
+          "谱分解",
+          "把对称矩阵写成特征值乘投影矩阵之和。"
+        ],
+        [
+          "spectrum",
+          "谱",
+          "方阵全部特征值所组成的集合，又称谱。"
+        ],
+        [
+          "symmetric matrix",
+          "对称矩阵",
+          "满足 𝐴=𝐴ᵀ、元素关于主对角线对称的方阵。"
+        ],
+        [
+          "the Spectral Theorem for Symmetric Matrices",
+          "对称矩阵的谱定理",
+          "实对称矩阵必可正交对角化且特征值全为实数。"
+        ]
+      ],
+      "zh": "对称矩阵的对角化"
+    },
+    {
+      "id": "7.2",
+      "en": "Quadratic Forms",
+      "items": [
+        [
+          "change of variable",
+          "变量代换",
+          "用正交变换把二次型化为只含平方项的标准形。"
+        ],
+        [
+          "cross-product term",
+          "交叉乘积项",
+          "二次型中形如 𝑥ᵢ𝑥ⱼ（𝑖≠𝑗）的不同变量乘积项。"
+        ],
+        [
+          "ellipse",
+          "椭圆",
+          "正定二次型取常数时在平面上形成的闭合曲线。"
+        ],
+        [
+          "hyperbola",
+          "双曲线",
+          "不定二次型取常数时形成的有两支的曲线。"
+        ],
+        [
+          "indefinite",
+          "不定的",
+          "二次型的取值既可为正也可为负。"
+        ],
+        [
+          "negative definite",
+          "负定的",
+          "对任意非零向量取值恒为负的二次型。"
+        ],
+        [
+          "negative semidefinite",
+          "半负定的",
+          "对任意向量取值恒小于或等于零的二次型。"
+        ],
+        [
+          "positive definite",
+          "正定的",
+          "对任意非零向量取值恒为正的二次型。"
+        ],
+        [
+          "positive definite matrix",
+          "正定矩阵",
+          "对应二次型正定、特征值全为正的对称矩阵。"
+        ],
+        [
+          "positive semidefinite",
+          "半正定的",
+          "对任意向量取值恒大于或等于零的二次型。"
+        ],
+        [
+          "principal axis",
+          "主轴",
+          "对称矩阵特征向量的方向，二次型沿此轴化为标准形。"
+        ],
+        [
+          "quadratic form",
+          "二次型",
+          "只含变量二次齐次项的标量函数，可写成 𝐱ᵀ𝐴𝐱。"
+        ]
+      ],
+      "zh": "二次型"
+    }
+  ]
+}

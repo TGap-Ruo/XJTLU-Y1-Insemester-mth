@@ -1,11 +1,64 @@
-# MTH026 Calculus I — Complete Question Bank & Smart Quiz
+# XJTLU Year 1 question banks — MTH028 + MTH026
 
-XJTLU Year 1, semester 1 · MTH026 Calculus I. One offline page that holds the whole
-revision set: **674 items across 54 topics**, the method card for every topic, a
-formula sheet and an 80-term bilingual glossary — plus a spaced-repetition quiz
-engine on top of it.
+Two courses share one site. The **default page is MTH028 (Linear Algebra I)**;
+the top bar of each course links to the other one, so you can switch at any
+time without losing your place.
 
 **Live:** <http://183.66.27.19:58621/> (server listens on port 8088)
+
+| Course | Entry | Bank | Topics | Glossary |
+|---|---|---|---|---|
+| **MTH028 · Linear Algebra I** | `/` → `index.html` | 150 items | 17 (1.1–2.8) | 33 groups / 212 terms |
+| **MTH026 · Calculus I** | `/mth026.html` | 674 items (351 + 323) | 54 | 9 groups / 80 terms |
+
+Progress is **isolated per course**: MTH028 uses the `progress28` table and the
+`api/progress28` endpoint with localStorage key `mth028.en.v1`, while MTH026
+keeps its original `progress` table, `api/progress` and `mth026.en.v1`. Both
+share the same user accounts and admin console; neither course's answers,
+favourites or mistake book can leak into the other.
+
+### MTH028 question bank
+
+- **One unified `items` array.** Every question lives in `bank.js` with a
+  `type` of `choice`, `fill` or `cloze`; there is no Q/P split and no
+  old-vs-new bank distinction. All inputs are plain JSON in `mth028/data/` and
+  the builder is `mth028/build/assemble_bank.py`. To add questions or topics
+  later: add the crop under `mth028/out/img/q/` (copy it into the site's `img/q/`),
+  add a row to the relevant JSON, then rebuild — **no page code changes**:
+
+  ```bash
+  python3 mth028/build/assemble_bank.py --out bank.js
+  ```
+
+  Counts, chapter ids, topic ids and blank counts are all read from data;
+  nothing is hardcoded. `mth028/build/make_app.py` is a compatibility wrapper
+  for the same builder. `mth028/data/topic_map_overrides.json` holds 22
+  hand-audited topic corrections that win over the keyword classifier.
+- **Sources.** The 150 items are cropped from the ten Moodle *attempt review*
+  PDFs of Practice Quiz 1 and 2. Question crops live in `img/q/`, printed
+  answer crops in `img/a/`. The status line, selected radio and green tick are
+  wiped from every crop so the answer is never leaked.
+- **Answers.** 56 of the 100 choice items have a reliable letter (19 from the
+  Moodle tick, 37 from an exact text match against the printed answer); the
+  other 44 show the printed-answer crop and ask you to self-mark. 45 fill/cloze
+  items grade automatically; 5 matrix/vector answers self-mark. **30 items had
+  no printed answer at all** — their answers were computed independently and are
+  flagged `答案由 AI 生成 / AI-generated answer` in the UI. The full list with
+  question numbers, working and confidence is `MTH028_AI_Answers.md`.
+- **Topic coverage.** The slides cover 1.1–1.5, 1.7–1.9, 2.1–2.4 and 2.8.
+  Sections 1.6, 2.5, 2.6 and 2.7 have no slides; they are still listed with a
+  textbook title and marked 「课件暂缺」. The question bank currently only covers
+  chapter 1, so all eight chapter-2 sections plus 1.6 show 「暂无题目 · 待补充」
+  rather than a fake 0/0 bar.
+- **Glossary.** 212 English/Chinese terms with short definitions, taken from
+  the department's *Vocabulary Booklet for Linear Algebra*.
+
+The two WeChat reference PDFs (题库分类汇总 / 线代考点梳理) were used only to
+check topic categorisation; **none of their questions entered this bank**.
+
+---
+
+## MTH026 — what is in here / 里面有什么
 
 ---
 

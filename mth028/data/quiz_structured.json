@@ -1,0 +1,5454 @@
+{
+ "items": [
+  {
+   "qid": "q1-01",
+   "quiz": 1,
+   "qno": 1,
+   "id": 1001,
+   "label": "Q1-01",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let Replace row 2 by row 2 plus 2 times row 1. What is the new entry in row 2, column 4?",
+   "options": [],
+   "student_answer": "6",
+   "verdict": "correct",
+   "printed_answer_text": "6",
+   "printed_answer_structured": [
+    "6"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q1-02",
+   "quiz": 1,
+   "qno": 2,
+   "id": 1002,
+   "label": "Q1-02",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Given the augmented matrix (x1, x2, x3) what is the solution of the system?",
+   "options": [
+    {
+     "L": "A",
+     "text": "(−1, −1, 1)",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "(−3, −3, 3)",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "(−2, −5, 2)",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "(−1, −5, 4)",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "(−3, −3, 3)",
+   "printed_answer_structured": [
+    "-3-33"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": ""
+  },
+  {
+   "qid": "q1-03",
+   "quiz": 1,
+   "qno": 3,
+   "id": 1003,
+   "label": "Q1-03",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which system corresponds to the following augmented matrix?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −8x −2x −8x + 6x = −6 | 1234 | −4x −6x + 4x + x = −3 | 1234 | 3x −8x + x −6x = −2 | 1234",
+     "y": 229.3
+    },
+    {
+     "L": "B",
+     "text": "| −8x −2x −8x + 6x = −3 | 1234 | 4x −6x + 4x + x = −2 | 1234 | 3x −8x + x −6x = −6 | 1234",
+     "y": 314.8
+    },
+    {
+     "L": "C",
+     "text": "| −8x −2x −8x + 6x = −6 | 1234 | 4x −6x + 4x + x = −3 | 1234 | 3x −8x + x −6x = −2 | 1234",
+     "y": 400.3
+    },
+    {
+     "L": "D",
+     "text": "| −8x −2x −8x + 6x = −6 | 1234 | 4x −6x + 4x + x = −3 | 1234 | x −8x + 3x −6x = −2 | 1234",
+     "y": 486.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "−8x −2x −8x + 6x = −6 | 1234 | 4x −6x + 4x + x = −3 | 1234 | 3x −8x + x −6x = −2 | 1234",
+   "printed_answer_structured": [
+    "-8x-2x-8x+6x=-6",
+    "1234",
+    "4x-6x+4x+x=-3",
+    "1234",
+    "3x-8x+x-6x=-2",
+    "1234"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q1-04",
+   "quiz": 1,
+   "qno": 4,
+   "id": 1004,
+   "label": "Q1-04",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Write a vector equation that is equivalent to the given system of equations. 3x1 + 8x2 −8x3 = −8 4x1 + 7x2 −4x3 = 5 −3x1 −9x2 −3x3 = −8",
+   "options": [
+    {
+     "L": "A",
+     "text": "| x4+ x5+ x−4=7 | 123 | −3−8−3−9 | −88−83",
+     "y": 226.3
+    },
+    {
+     "L": "B",
+     "text": "| x5+ x7+ x−4=4 | 123 | −8−9−3−3",
+     "y": 290.8
+    },
+    {
+     "L": "C",
+     "text": "38−8−8 | x4+ x7+ x−4=5 | 123 | −3−9−3−8 | −883−8",
+     "y": 355.3
+    },
+    {
+     "L": "D",
+     "text": "| x−4+ x7+ x4=5 | 123 | −3−9−3−8",
+     "y": 420.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "14+27+3−4=5 | −3−9−3−8",
+   "printed_answer_structured": [
+    "14+27+3-4=5",
+    "-3-9-3-8"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q1-05",
+   "quiz": 1,
+   "qno": 5,
+   "id": 1005,
+   "label": "Q1-05",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "A 2 × 2 b R2 Let be a nonzero matrix, and be a nonzero vector in . Suppose that A [ ] = b and A [ ] = b, 3 0 −4 x = [ ] 14 h Ax = 0 h = If is a nonzero solution of the homogeneous equation , then -18",
+   "options": [],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q1-06",
+   "quiz": 1,
+   "qno": 6,
+   "id": 1006,
+   "label": "Q1-06",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "a1 = , a2 = , b = ⎡ x1a1 + x2a2 = b Let . The vector equation is equivalent to a linear system whose augmented matrix is",
+   "options": [
+    {
+     "L": "A",
+     "text": "−2−6−9 | −46−3 | −858 | −2−6−9",
+     "y": 215.8
+    },
+    {
+     "L": "B",
+     "text": "| −858 | −46−3 | −2−4−8",
+     "y": 281.1
+    },
+    {
+     "L": "C",
+     "text": "| −665 | −9−38 | −2−8−4",
+     "y": 345.6
+    },
+    {
+     "L": "D",
+     "text": "| −656 | −98−3",
+     "y": 410.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "−656 | −98−3",
+   "printed_answer_structured": [
+    "-656",
+    "-98-3"
+   ],
+   "suggested_key": "D",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q1-07",
+   "quiz": 1,
+   "qno": 7,
+   "id": 1007,
+   "label": "Q1-07",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Compute the product .",
+   "options": [
+    {
+     "L": "A",
+     "text": "[−60] | 0 | −35",
+     "y": 197.8
+    },
+    {
+     "L": "B",
+     "text": "[] | −40 | [7]",
+     "y": 242.8
+    },
+    {
+     "L": "C",
+     "text": "| 2 | []",
+     "y": 287.8
+    },
+    {
+     "L": "D",
+     "text": "60 | 0 | [60]",
+     "y": 332.1
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "0",
+   "printed_answer_structured": [
+    "0"
+   ],
+   "suggested_key": "D",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": ""
+  },
+  {
+   "qid": "q1-08",
+   "quiz": 1,
+   "qno": 8,
+   "id": 1008,
+   "label": "Q1-08",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "cu + dv u = [ ], v = [ ], c = 4, d = −6 −2 Compute the vector , where .",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −9 | []",
+     "y": 178.3
+    },
+    {
+     "L": "B",
+     "text": "44 | −11 | [38]",
+     "y": 222.6
+    },
+    {
+     "L": "C",
+     "text": "| −15 | [40]",
+     "y": 267.6
+    },
+    {
+     "L": "D",
+     "text": "| −14",
+     "y": 312.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "−14",
+   "printed_answer_structured": [
+    "-14"
+   ],
+   "suggested_key": "D",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": ""
+  },
+  {
+   "qid": "q1-09",
+   "quiz": 1,
+   "qno": 9,
+   "id": 1009,
+   "label": "Q1-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which matrix is in Echelon Form but not in Reduced Echelon Form?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 0020 | 32−11 | 0000",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| 32−11 | 0000 | 0020",
+     "y": 246.6
+    },
+    {
+     "L": "C",
+     "text": "| 32−11 | 0020 | 0010",
+     "y": 332.1
+    },
+    {
+     "L": "D",
+     "text": "| 32−11 | 0020 | 0000",
+     "y": 417.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "32−11 | 0020 | 0000",
+   "printed_answer_structured": [
+    "32-11",
+    "0020",
+    "0000"
+   ],
+   "suggested_key": "D",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "quiz_index 误把反馈行判为第5选项，已按实测保留 A–D; complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q1-10",
+   "quiz": 1,
+   "qno": 10,
+   "id": 1010,
+   "label": "Q1-10",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Let A B B A Which pair of operations transforms into and then transforms back into ?",
+   "options": [
+    {
+     "L": "A",
+     "text": "Multiplying the first row by 2, followed by Multiplying the first row by 1/2",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "Multiplying the second row by 2, followed by Multiplying the second row by 1/2",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "Adding 3 times the first row to the second row, followed by Subtracting 3 times the | first row from the second row",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "Multiplying the first row by 3, followed by Multiplying the first row by 1/3",
+     "y": 360.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "Multiplying the first row by 2, followed by Multiplying the first row by 1/2",
+   "printed_answer_structured": [
+    "Multiplyingthefirstrowby2followedbyMultiplyingthefirstrowby"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": ""
+  },
+  {
+   "qid": "q1-11",
+   "quiz": 1,
+   "qno": 11,
+   "id": 1011,
+   "label": "Q1-11",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Find the general solution. {−5x1 + 4x2 + 2x3 = −16",
+   "options": [
+    {
+     "L": "A",
+     "text": "| x =−2+ t1, t ∈R | 27 | 44",
+     "y": 209.1
+    },
+    {
+     "L": "B",
+     "text": "| x =1+ t1, t ∈R | 26 | 44",
+     "y": 273.6
+    },
+    {
+     "L": "C",
+     "text": "| x =0+ t1, t ∈R | 28 | 44",
+     "y": 338.8
+    },
+    {
+     "L": "D",
+     "text": "| x =0+ t1, t ∈R | 47 | 44 | x ttR",
+     "y": 403.3
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "=0+1, ∈ | 28",
+   "printed_answer_structured": [
+    "=0+1∈",
+    "28"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q1-12",
+   "quiz": 1,
+   "qno": 12,
+   "id": 1012,
+   "label": "Q1-12",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Find the Reduced Echelon Form of",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 20−11 | 01−32 | 0000",
+     "y": 229.3
+    },
+    {
+     "L": "B",
+     "text": "| 101−1 | 01−32 | 0000",
+     "y": 314.8
+    },
+    {
+     "L": "C",
+     "text": "| 10−11 | 012−3 | 0000",
+     "y": 400.3
+    },
+    {
+     "L": "D",
+     "text": "| 10−11 | 01−32 | 0000",
+     "y": 486.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "10−11 | 01−32 | 0000",
+   "printed_answer_structured": [
+    "10-11",
+    "01-32",
+    "0000"
+   ],
+   "suggested_key": "D",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q1-13",
+   "quiz": 1,
+   "qno": 13,
+   "id": 1013,
+   "label": "Q1-13",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let , . k Ax = b",
+   "options": [],
+   "student_answer": "Findthevalueofforwhichtheequation =isconsistent. Answer:k=10",
+   "verdict": "correct",
+   "printed_answer_text": "10 | 14",
+   "printed_answer_structured": [
+    "10",
+    "14"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q1-14",
+   "quiz": 1,
+   "qno": 14,
+   "id": 1014,
+   "label": "Q1-14",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "{v1, v2, v3, v4} ⊂R3 Consider : v1 = , v2 = , v3 = , v4 = . ⎡ R3 a b The set does NOT span . Find the values of and .",
+   "options": [
+    {
+     "L": "A",
+     "text": "= 4, = 1 | ab",
+     "y": 569.8
+    },
+    {
+     "L": "B",
+     "text": "= 5, = 2 | ab",
+     "y": 596.8
+    },
+    {
+     "L": "C",
+     "text": "= 4, = 2 | ab",
+     "y": 623.8
+    },
+    {
+     "L": "D",
+     "text": "= 1, = 3 | ab",
+     "y": 650.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "= 4, = 2",
+   "printed_answer_structured": [
+    "=4=2"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": ""
+  },
+  {
+   "qid": "q1-15",
+   "quiz": 1,
+   "qno": 15,
+   "id": 1015,
+   "label": "Q1-15",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Find the value of for which the system is consistent:",
+   "options": [],
+   "student_answer": "-13",
+   "verdict": "correct",
+   "printed_answer_text": "-13",
+   "printed_answer_structured": [
+    "-13"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q2-01",
+   "quiz": 2,
+   "qno": 1,
+   "id": 2001,
+   "label": "Q2-01",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "a1 = , a2 = , b = ⎡ x1a1 + x2a2 = b Let . The vector equation is equivalent to a linear system whose augmented matrix is",
+   "options": [
+    {
+     "L": "A",
+     "text": "77−4 | 2−93 | −415 | 72−4",
+     "y": 215.8
+    },
+    {
+     "L": "B",
+     "text": "| 7−91 | −435 | 77−4",
+     "y": 281.1
+    },
+    {
+     "L": "C",
+     "text": "| −415 | 2−93 | 7−42",
+     "y": 345.6
+    },
+    {
+     "L": "D",
+     "text": "| 71−9 | −453",
+     "y": 410.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "7−91 | −435",
+   "printed_answer_structured": [
+    "7-91",
+    "-435"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q2-02",
+   "quiz": 2,
+   "qno": 2,
+   "id": 2002,
+   "label": "Q2-02",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "{v1, v2, v3, v4} ⊂R3 Consider : v1 = , v2 = , v3 = , v4 = . ⎡ R3 a b The set does NOT span . Find the values of and .",
+   "options": [
+    {
+     "L": "A",
+     "text": "a = −20,b = −14",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "a = −17,b = −14",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "a = −19,b = −14",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "a = −18,b = −14",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "a = −18,b = −14",
+   "printed_answer_structured": [
+    "a=-18b=-14"
+   ],
+   "suggested_key": "D",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q2-03",
+   "quiz": 2,
+   "qno": 3,
+   "id": 2003,
+   "label": "Q2-03",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Let Which pair of operations transforms into and then transforms back into ? A B B A",
+   "options": [
+    {
+     "L": "A",
+     "text": "Adding 2 times the third row to the second row, followed by Subtracting 2 times the | third row from the second row",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "Multiplying the second row by 3, followed by Multiplying the second row by 1/3",
+     "y": 306.6
+    },
+    {
+     "L": "C",
+     "text": "Adding 2 times the second row to the third row, followed by Subtracting 2 times the | second row from the third row",
+     "y": 333.6
+    },
+    {
+     "L": "D",
+     "text": "Multiplying the third row by 2, followed by Multiplying the third row by 1/2",
+     "y": 378.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "Adding 2 times the second row to the third row, followed by Subtracting 2 times the second row from the third row",
+   "printed_answer_structured": [
+    "Adding2timesthesecondrowtothethirdrowfollowedby",
+    "Subtracting2timesthesecondrowfromthethirdrow"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q2-04",
+   "quiz": 2,
+   "qno": 4,
+   "id": 2004,
+   "label": "Q2-04",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Given the augmented matrix what is the solution of the system? (x1, x2, x3)",
+   "options": [
+    {
+     "L": "A",
+     "text": "(1, 3, −2)",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "(2, 4, 0)",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "(1, 2, −2)",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "(3, 6, 2)",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "(2, 4, 0)",
+   "printed_answer_structured": [
+    "240"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q2-05",
+   "quiz": 2,
+   "qno": 5,
+   "id": 2005,
+   "label": "Q2-05",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Find the Reduced Echelon Form of",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 20−22 | 01−10 | 0000",
+     "y": 229.3
+    },
+    {
+     "L": "B",
+     "text": "| 10−22 | 01−10 | 0000",
+     "y": 314.8
+    },
+    {
+     "L": "C",
+     "text": "| 102−2 | 01−10 | 0000",
+     "y": 400.3
+    },
+    {
+     "L": "D",
+     "text": "| 10−22 | 010−1 | 0000",
+     "y": 486.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "10−22 | 01−10 | 0000",
+   "printed_answer_structured": [
+    "10-22",
+    "01-10",
+    "0000"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q2-06",
+   "quiz": 2,
+   "qno": 6,
+   "id": 2006,
+   "label": "Q2-06",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Find the general solution. {−12x1 −5x2 −6x3 = 39",
+   "options": [
+    {
+     "L": "A",
+     "text": "| x =−3+ t−6, t ∈R | −11 | −24",
+     "y": 209.1
+    },
+    {
+     "L": "B",
+     "text": "| x =−1+ t−6, t ∈R | 01 | −22",
+     "y": 273.6
+    },
+    {
+     "L": "C",
+     "text": "| x =−1+ t−6, t ∈R | 02 | −22",
+     "y": 338.8
+    },
+    {
+     "L": "D",
+     "text": "| x =−3+ t−6, t ∈R | 01 | −22 | xR",
+     "y": 403.3
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "=−3+ t−6, t ∈ | 01",
+   "printed_answer_structured": [
+    "=-3+t-6t∈",
+    "01"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q2-07",
+   "quiz": 2,
+   "qno": 7,
+   "id": 2007,
+   "label": "Q2-07",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "A 2 × 2 b R2 Let be a nonzero matrix, and be a nonzero vector in . Suppose that A [ ] = b and A [ ] = b, −2 −7 x = [ ] g 10 Ax = 0 g = If is a nonzero solution of the homogeneous equation , then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q2-08",
+   "quiz": 2,
+   "qno": 8,
+   "id": 2008,
+   "label": "Q2-08",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Write a vector equation that is equivalent to the given system of equations. 8x1 + 6x2 −4x3 = 6 9x2 + x3 = −5 −7x1 −x2 −6x3 = 5",
+   "options": [
+    {
+     "L": "A",
+     "text": "| x10+ x2−5+ x31=9 | −75−6−1 | 66−48",
+     "y": 226.3
+    },
+    {
+     "L": "B",
+     "text": "| x1−5+ x29+ x31=0 | 5−1−6−7",
+     "y": 290.8
+    },
+    {
+     "L": "C",
+     "text": "−4686 | x11+ x29+ x30=−5 | −6−1−75 | 86−46",
+     "y": 355.3
+    },
+    {
+     "L": "D",
+     "text": "| x10+ x29+ x31=−5 | −7−1−65",
+     "y": 420.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "x10+ x29+ x31=−5 | −7−1−65",
+   "printed_answer_structured": [
+    "x10+x29+x31=-5",
+    "-7-1-65"
+   ],
+   "suggested_key": "D",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q2-09",
+   "quiz": 2,
+   "qno": 9,
+   "id": 2009,
+   "label": "Q2-09",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let Replace row 2 by row 2 minus 2 times row 1. What is the new entry in row 2, column 4?",
+   "options": [],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "-1",
+   "printed_answer_structured": [
+    "-1"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q2-10",
+   "quiz": 2,
+   "qno": 10,
+   "id": 2010,
+   "label": "Q2-10",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which system corresponds to the following augmented matrix?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −4x −7x −2x + 8x = 6 | 1234 | −8x −2x −10x = 0 | 124 | 7x1 −x2 + 10x3 + 9x4 = −9",
+     "y": 229.3
+    },
+    {
+     "L": "B",
+     "text": "| −4x −7x −2x + 8x = −9 | 1234 | −8x −2x −10x = 0 | 124 | 7x1 −x2 + 10x3 + 9x4 = 6",
+     "y": 314.8
+    },
+    {
+     "L": "C",
+     "text": "| −4x −7x −2x + 8x = 6 | 1234 | −8x −2x −10x = 0 | 124 | 7x1 + x2 + 10x3 + 9x4 = −9",
+     "y": 400.3
+    },
+    {
+     "L": "D",
+     "text": "| 8x −7x −2x −4x = 6 | 1234 | −10x −2x −8x = 0 | 124 | 9x1 −x2 + 10x3 + 7x4 = −9",
+     "y": 486.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−4x −7x −2x + 8x = 6 | 1234 | −8x −2x −10x = 0 | 124 | 7x1 −x2 + 10x3 + 9x4 = −9",
+   "printed_answer_structured": [
+    "-4x-7x-2x+8x=6",
+    "1234",
+    "-8x-2x-10x=0",
+    "124",
+    "7x1-x2+10x3+9x4=-9"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q2-11",
+   "quiz": 2,
+   "qno": 11,
+   "id": 2011,
+   "label": "Q2-11",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which matrix is in Echelon Form but not in Reduced Echelon Form?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −2200 | 00−10 | 0000",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| −2200 | 00−10 | 0010",
+     "y": 246.6
+    },
+    {
+     "L": "C",
+     "text": "| −2200 | 0000 | 00−10",
+     "y": 332.1
+    },
+    {
+     "L": "D",
+     "text": "| 00−10 | −2200 | 0000",
+     "y": 417.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−2200 | 00−10 | 0000",
+   "printed_answer_structured": [
+    "-2200",
+    "00-10",
+    "0000"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "quiz_index 误把反馈行判为第5选项，已按实测保留 A–D; complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q2-12",
+   "quiz": 2,
+   "qno": 12,
+   "id": 2012,
+   "label": "Q2-12",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Find the value of for which the system is consistent:",
+   "options": [],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "-8 | 13",
+   "printed_answer_structured": [
+    "-8",
+    "13"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q2-13",
+   "quiz": 2,
+   "qno": 13,
+   "id": 2013,
+   "label": "Q2-13",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "cu + dv u = [ ], v = [ ], c = 7, d = 5 9 8 −2 −9 Compute the vector , where .",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 11",
+     "y": 497.1
+    },
+    {
+     "L": "B",
+     "text": "[48] | 7 | 52",
+     "y": 541.3
+    },
+    {
+     "L": "C",
+     "text": "[] | 11 | [53]",
+     "y": 586.3
+    },
+    {
+     "L": "D",
+     "text": "| 11",
+     "y": 631.3
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "11",
+   "printed_answer_structured": [
+    "11"
+   ],
+   "suggested_key": null,
+   "key_confidence": "low",
+   "key_method": "none",
+   "notes": "多个选项规范化后完全相等（A,D），无法唯一确定，留 null 走裁图自评"
+  },
+  {
+   "qid": "q2-14",
+   "quiz": 2,
+   "qno": 14,
+   "id": 2014,
+   "label": "Q2-14",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let , .",
+   "options": [],
+   "student_answer": "FindthevalueofkforwhichtheequationAx = bisconsistent. Answer:k=",
+   "verdict": null,
+   "printed_answer_text": "0 | 15",
+   "printed_answer_structured": [
+    "0",
+    "15"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q2-15",
+   "quiz": 2,
+   "qno": 15,
+   "id": 2015,
+   "label": "Q2-15",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Compute the product .",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −16 | []",
+     "y": 506.8
+    },
+    {
+     "L": "B",
+     "text": "−37 | 16 | [−10]",
+     "y": 551.1
+    },
+    {
+     "L": "C",
+     "text": "| 13 | [22]",
+     "y": 596.1
+    },
+    {
+     "L": "D",
+     "text": "| −1 | [37]",
+     "y": 641.1
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−16",
+   "printed_answer_structured": [
+    "-16"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q3-01",
+   "quiz": 3,
+   "qno": 1,
+   "id": 3001,
+   "label": "Q3-01",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "cu + dv u = [ ], v = [ ], c = −5, d = −9 −8 −2 Compute the vector , where .",
+   "options": [
+    {
+     "L": "A",
+     "text": "[] | −39 | [66]",
+     "y": 377.8
+    },
+    {
+     "L": "B",
+     "text": "| −31 | []",
+     "y": 422.8
+    },
+    {
+     "L": "C",
+     "text": "67 | −35 | [64]",
+     "y": 467.1
+    },
+    {
+     "L": "D",
+     "text": "| −33",
+     "y": 512.1
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−35",
+   "printed_answer_structured": [
+    "-35"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q3-02",
+   "quiz": 3,
+   "qno": 2,
+   "id": 3002,
+   "label": "Q3-02",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Find the value of for which the system is consistent:",
+   "options": [],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "2 | 3",
+   "printed_answer_structured": [
+    "2",
+    "3"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q3-03",
+   "quiz": 3,
+   "qno": 3,
+   "id": 3003,
+   "label": "Q3-03",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Compute the product .",
+   "options": [
+    {
+     "L": "A",
+     "text": "23 | 0 | [11]",
+     "y": 516.6
+    },
+    {
+     "L": "B",
+     "text": "| 78 | [19]",
+     "y": 561.6
+    },
+    {
+     "L": "C",
+     "text": "| 9",
+     "y": 606.6
+    },
+    {
+     "L": "D",
+     "text": "[−11] | −78 | [−11]",
+     "y": 650.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−78",
+   "printed_answer_structured": [
+    "-78"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q3-04",
+   "quiz": 3,
+   "qno": 4,
+   "id": 3004,
+   "label": "Q3-04",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "a1 = , a2 = , b = ⎡ x1a1 + x2a2 = b Let . The vector equation is equivalent to a linear system whose augmented matrix is",
+   "options": [
+    {
+     "L": "A",
+     "text": "430 | 8−6−7 | −8−31 | 48−8",
+     "y": 215.8
+    },
+    {
+     "L": "B",
+     "text": "| 3−6−3 | 0−71 | 48−8",
+     "y": 281.1
+    },
+    {
+     "L": "C",
+     "text": "| 0−71 | 3−6−3 | 403",
+     "y": 345.6
+    },
+    {
+     "L": "D",
+     "text": "| 8−7−6 | −81−3",
+     "y": 410.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "8−6−7 | −8−31",
+   "printed_answer_structured": [
+    "8-6-7",
+    "-8-31"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q3-05",
+   "quiz": 3,
+   "qno": 5,
+   "id": 3005,
+   "label": "Q3-05",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let Replace row 2 by row 2 plus 2 times row 1. What is the new entry in row 2, column 4?",
+   "options": [],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "8",
+   "printed_answer_structured": [
+    "8"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q3-06",
+   "quiz": 3,
+   "qno": 6,
+   "id": 3006,
+   "label": "Q3-06",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which matrix is in Echelon Form but not in Reduced Echelon Form?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −2−1−2−2 | 00−1−1 | 0000",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| −2−1−2−2 | 00−1−1 | 0010",
+     "y": 246.6
+    },
+    {
+     "L": "C",
+     "text": "| −2−1−2−2 | 0000 | 00−1−1",
+     "y": 332.1
+    },
+    {
+     "L": "D",
+     "text": "| 00−1−1 | −2−1−2−2 | 0000",
+     "y": 417.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−2−1−2−2 | 00−1−1 | 0000",
+   "printed_answer_structured": [
+    "-2-1-2-2",
+    "00-1-1",
+    "0000"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "quiz_index 误把反馈行判为第5选项，已按实测保留 A–D; complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q3-07",
+   "quiz": 3,
+   "qno": 7,
+   "id": 3007,
+   "label": "Q3-07",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which system corresponds to the following augmented matrix?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −5x −x + 8x −2x = −3 | 1234 | −5x + x + 5x −5x = −4 | 1234 | 6x + 2x −5x −3x = −8 | 1234",
+     "y": 229.3
+    },
+    {
+     "L": "B",
+     "text": "| −2x −x + 8x −5x = −8 | 1234 | −5x + x + 5x −5x = −3 | 1234 | −3x + 2x −5x + 6x = −4 | 1234",
+     "y": 314.8
+    },
+    {
+     "L": "C",
+     "text": "| −2x −x + 8x −5x = −3 | 1234 | −5x + x + 5x −5x = −4 | 1234 | −3x + 2x −5x + 6x = −8 | 1234",
+     "y": 400.3
+    },
+    {
+     "L": "D",
+     "text": "| −2x −x + 8x −5x = −3 | 1234 | −5x + x + 5x −5x = −4 | 1234 | −3x + 2x + 5x + 6x = −8 | 1234",
+     "y": 486.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−2x −x + 8x −5x = −3 | 1234 | −5x + x + 5x −5x = −4 | 1234 | −3x + 2x −5x + 6x = −8 | 1234",
+   "printed_answer_structured": [
+    "-2x-x+8x-5x=-3",
+    "1234",
+    "-5x+x+5x-5x=-4",
+    "1234",
+    "-3x+2x-5x+6x=-8",
+    "1234"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q3-08",
+   "quiz": 3,
+   "qno": 8,
+   "id": 3008,
+   "label": "Q3-08",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Write a vector equation that is equivalent to the given system of equations. −6x1 −2x3 = −8 6x1 + 3x2 −7x3 = −7 6x1 + 2x2 −7x3 = 1",
+   "options": [
+    {
+     "L": "A",
+     "text": "| x−7+ x3+ x−7=6 | 123 | 12−76 | −6−8−20",
+     "y": 226.3
+    },
+    {
+     "L": "B",
+     "text": "| x6+ x−7+ x−7=3 | 123 | 61−72",
+     "y": 290.8
+    },
+    {
+     "L": "C",
+     "text": "−20−6−8 | x−7+ x3+ x6=−7 | 123 | −7261 | −60−2−8",
+     "y": 355.3
+    },
+    {
+     "L": "D",
+     "text": "| x6+ x3+ x−7=−7 | 123 | 62−71",
+     "y": 420.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "16+23+3−7=−7 | 62−71",
+   "printed_answer_structured": [
+    "16+23+3-7=-7",
+    "62-71"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q3-09",
+   "quiz": 3,
+   "qno": 9,
+   "id": 3009,
+   "label": "Q3-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Find the Reduced Echelon Form of",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 1013 | 01−33 | 0000",
+     "y": 229.3
+    },
+    {
+     "L": "B",
+     "text": "| 2013 | 01−33 | 0000",
+     "y": 314.8
+    },
+    {
+     "L": "C",
+     "text": "| 1031 | 01−33 | 0000",
+     "y": 400.3
+    },
+    {
+     "L": "D",
+     "text": "| 1013 | 013−3 | 0000",
+     "y": 486.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "1013 | 01−33 | 0000",
+   "printed_answer_structured": [
+    "1013",
+    "01-33",
+    "0000"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q3-10",
+   "quiz": 3,
+   "qno": 10,
+   "id": 3010,
+   "label": "Q3-10",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Let A B B A Which pair of operations transforms into and then transforms back into ?",
+   "options": [
+    {
+     "L": "A",
+     "text": "Multiplying the third row by 2, followed by Multiplying the third row by 1/2",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "Subtracting 3 times the second row from the third row, followed by Adding 3 times the second row to the third row",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "Adding 3 times the first row to the second row, followed by Subtracting 3 times the | first row from the second row",
+     "y": 333.6
+    },
+    {
+     "L": "D",
+     "text": "Interchanging the first row and the second row, followed by Interchanging the first | row and the second row",
+     "y": 378.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "Multiplying the third row by 2, followed by Multiplying the third row by 1/2",
+   "printed_answer_structured": [
+    "Multiplyingthethirdrowby2followedbyMultiplyingthethirdrow",
+    "by1/2"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q3-11",
+   "quiz": 3,
+   "qno": 11,
+   "id": 3011,
+   "label": "Q3-11",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Given the augmented matrix (x1, x2, x3) what is the solution of the system?",
+   "options": [
+    {
+     "L": "A",
+     "text": "(−6, −3, −5)",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "(−2, −6, −6)",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "(−5, −4, −5)",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "(−4, −5, −4)",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "(−4, −5, −4)",
+   "printed_answer_structured": [
+    "-4-5-4"
+   ],
+   "suggested_key": "D",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q3-12",
+   "quiz": 3,
+   "qno": 12,
+   "id": 3012,
+   "label": "Q3-12",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "{v1, v2, v3, v4} ⊂R3 Consider : v1 = , v2 = , v3 = , v4 = . ⎡ R3 a b The set does NOT span . Find the values of and .",
+   "options": [
+    {
+     "L": "A",
+     "text": "= −12, = −7 | ab",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "= 12, = 6 | ab",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "= −12, = −5 | ab",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "= −12, = −6 | ab",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "= −12, = −6 | 13",
+   "printed_answer_structured": [
+    "=-12=-6",
+    "13"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q3-13",
+   "quiz": 3,
+   "qno": 13,
+   "id": 3013,
+   "label": "Q3-13",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let , . k Ax = b",
+   "options": [],
+   "student_answer": "Findthevalueofforwhichtheequation =isconsistent. Answer:k=",
+   "verdict": null,
+   "printed_answer_text": "4",
+   "printed_answer_structured": [
+    "4"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q3-14",
+   "quiz": 3,
+   "qno": 14,
+   "id": 3014,
+   "label": "Q3-14",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Find the general solution. {−4x1 −28x2 + 4x3 = 8",
+   "options": [
+    {
+     "L": "A",
+     "text": "| x =−1+ t1, t ∈R | 56 | 3−1",
+     "y": 209.1
+    },
+    {
+     "L": "B",
+     "text": "| x =0+ t1, t ∈R | 56 | 30",
+     "y": 273.6
+    },
+    {
+     "L": "C",
+     "text": "| x =0+ t1, t ∈R | 46 | 3−1",
+     "y": 338.8
+    },
+    {
+     "L": "D",
+     "text": "| x =1+ t1, t ∈R | 57 | 3−1 | x ttR",
+     "y": 403.3
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "=0+1, ∈ | 56",
+   "printed_answer_structured": [
+    "=0+1∈",
+    "56"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q3-15",
+   "quiz": 3,
+   "qno": 15,
+   "id": 3015,
+   "label": "Q3-15",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "A 2 × 2 b R2 Let be a nonzero matrix, and be a nonzero vector in . Suppose that A [ ] = b and A [ ] = b, 1 −3 x = [ ] 16 h Ax = 0 h = If is a nonzero solution of the homogeneous equation , then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q4-01",
+   "quiz": 4,
+   "qno": 1,
+   "id": 4001,
+   "label": "Q4-01",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Given the augmented matrix what is the solution of the system? (x1, x2, x3)",
+   "options": [
+    {
+     "L": "A",
+     "text": "(3, 6, 4)",
+     "y": 461.1
+    },
+    {
+     "L": "B",
+     "text": "(1, 5, 3)",
+     "y": 488.1
+    },
+    {
+     "L": "C",
+     "text": "(0, 6, 1)",
+     "y": 515.1
+    },
+    {
+     "L": "D",
+     "text": "(2, 6, 1)",
+     "y": 542.1
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "(1, 5, 3)",
+   "printed_answer_structured": [
+    "153"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q4-02",
+   "quiz": 4,
+   "qno": 2,
+   "id": 4002,
+   "label": "Q4-02",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "{v1, v2, v3, v4} ⊂R3 Consider : v1 = , v2 = , v3 = , v4 = . ⎡ R3 a b The set does NOT span . Find the values of and .",
+   "options": [
+    {
+     "L": "A",
+     "text": "a = −7,b = −8",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "a = −8,b = −9",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "a = −6,b = −11",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "a = −6,b = −9",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "a = −6,b = −9 | 3",
+   "printed_answer_structured": [
+    "a=-6b=-9",
+    "3"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q4-03",
+   "quiz": 4,
+   "qno": 3,
+   "id": 4003,
+   "label": "Q4-03",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "A 2 × 2 b R2 Let be a nonzero matrix, and be a nonzero vector in . Suppose that A [ ] = b and A [ ] = b, 2 7 7 2 x = [ ] g −10 Ax = 0 g = If is a nonzero solution of the homogeneous equation , then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q4-04",
+   "quiz": 4,
+   "qno": 4,
+   "id": 4004,
+   "label": "Q4-04",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which matrix is in Echelon Form but not in Reduced Echelon Form?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 31−2−1 | 0000 | 00−3−1",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| 31−2−1 | 00−3−1 | 0000",
+     "y": 246.6
+    },
+    {
+     "L": "C",
+     "text": "| 31−2−1 | 00−3−1 | 0010",
+     "y": 332.1
+    },
+    {
+     "L": "D",
+     "text": "| 00−3−1 | 31−2−1 | 0000",
+     "y": 417.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "31−2−1 | 00−3−1 | 0000",
+   "printed_answer_structured": [
+    "31-2-1",
+    "00-3-1",
+    "0000"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "quiz_index 误把反馈行判为第5选项，已按实测保留 A–D; complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q4-05",
+   "quiz": 4,
+   "qno": 5,
+   "id": 4005,
+   "label": "Q4-05",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "a1 = , a2 = , b = ⎡ x1a1 + x2a2 = b Let . The vector equation is equivalent to a linear system whose augmented matrix is",
+   "options": [
+    {
+     "L": "A",
+     "text": "626 | −225 | 7−6−4 | 6−27",
+     "y": 215.8
+    },
+    {
+     "L": "B",
+     "text": "| 22−6 | 65−4 | 626",
+     "y": 281.1
+    },
+    {
+     "L": "C",
+     "text": "| 7−6−4 | −225 | 67−2",
+     "y": 345.6
+    },
+    {
+     "L": "D",
+     "text": "| 2−62 | 6−45",
+     "y": 410.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "22−6 | 65−4",
+   "printed_answer_structured": [
+    "22-6",
+    "65-4"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q4-06",
+   "quiz": 4,
+   "qno": 6,
+   "id": 4006,
+   "label": "Q4-06",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Find the Reduced Echelon Form of",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 20−2−3 | 01−2−1 | 0000",
+     "y": 229.3
+    },
+    {
+     "L": "B",
+     "text": "| 10−2−3 | 01−2−1 | 0000",
+     "y": 314.8
+    },
+    {
+     "L": "C",
+     "text": "| 10−3−2 | 01−2−1 | 0000",
+     "y": 400.3
+    },
+    {
+     "L": "D",
+     "text": "| 10−2−3 | 01−1−2 | 0000",
+     "y": 486.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "10−2−3 | 01−2−1 | 0000",
+   "printed_answer_structured": [
+    "10-2-3",
+    "01-2-1",
+    "0000"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q4-07",
+   "quiz": 4,
+   "qno": 7,
+   "id": 4007,
+   "label": "Q4-07",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let Replace row 2 by row 2 plus 2 times row 1. What is the new entry in row 2, column 4?",
+   "options": [],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "-9",
+   "printed_answer_structured": [
+    "-9"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q4-08",
+   "quiz": 4,
+   "qno": 8,
+   "id": 4008,
+   "label": "Q4-08",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Write a vector equation that is equivalent to the given system of equations. 7x1 −7x2 + 7x3 = −2 −2x2 + 3x3 = 7 3x1 −6x2 + 9x3 = −8",
+   "options": [
+    {
+     "L": "A",
+     "text": "| x17+ x2−2+ x33=0 | −8−693 | 7−77−2",
+     "y": 226.3
+    },
+    {
+     "L": "B",
+     "text": "| x13+ x2−2+ x30=7 | 9−63−8",
+     "y": 290.8
+    },
+    {
+     "L": "C",
+     "text": "7−77−2 | x10+ x2−2+ x33=7 | 3−69−8 | 7−27−7",
+     "y": 355.3
+    },
+    {
+     "L": "D",
+     "text": "| x10+ x27+ x33=−2 | 3−89−6",
+     "y": 420.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "x10+ x2−2+ x33=7 | 3−69−8",
+   "printed_answer_structured": [
+    "x10+x2-2+x33=7",
+    "3-69-8"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q4-09",
+   "quiz": 4,
+   "qno": 9,
+   "id": 4009,
+   "label": "Q4-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Find the general solution. {4x1 −x2 −3x3 = −14",
+   "options": [
+    {
+     "L": "A",
+     "text": "| x =0+ t3, t ∈R | −31 | −52",
+     "y": 209.1
+    },
+    {
+     "L": "B",
+     "text": "| x =0+ t1, t ∈R | −31 | −51",
+     "y": 273.6
+    },
+    {
+     "L": "C",
+     "text": "| x =0+ t1, t ∈R | −21 | −51",
+     "y": 338.8
+    },
+    {
+     "L": "D",
+     "text": "| x =−2+ t−1, t ∈R | −21 | −51 | xR",
+     "y": 403.3
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "=0+ t1, t ∈ | −21",
+   "printed_answer_structured": [
+    "=0+t1t∈",
+    "-21"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q4-10",
+   "quiz": 4,
+   "qno": 10,
+   "id": 4010,
+   "label": "Q4-10",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which system corresponds to the following augmented matrix?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 6x −4x + 5x + 7x = −5 | 1234 | −7x + 10x −6x + 9x = 9 | 1234 | 10x1 + 7x2 + 4x3 + 4x4 = 10",
+     "y": 229.3
+    },
+    {
+     "L": "B",
+     "text": "| 6x + 7x + 5x −4x = −5 | 1234 | −7x + 9x −6x + 10x = 9 | 1234 | 10x1 + 4x2 −4x3 + 7x4 = 10",
+     "y": 314.8
+    },
+    {
+     "L": "C",
+     "text": "| 6x −4x + 5x + 7x = −5 | 1234 | −7x + 10x −6x + 9x = 9 | 1234 | 10x1 + 7x2 −4x3 + 4x4 = 10",
+     "y": 400.3
+    },
+    {
+     "L": "D",
+     "text": "| 6x −4x + 5x + 7x = 9 | 1234 | −7x + 10x −6x + 9x = −5 | 1234 | 10x1 + 7x2 −4x3 + 4x4 = 10",
+     "y": 486.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "6x −4x + 5x + 7x = −5 | 1234 | −7x + 10x −6x + 9x = 9 | 1234 | 10x1 + 7x2 −4x3 + 4x4 = 10",
+   "printed_answer_structured": [
+    "6x-4x+5x+7x=-5",
+    "1234",
+    "-7x+10x-6x+9x=9",
+    "1234",
+    "10x1+7x2-4x3+4x4=10"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q4-11",
+   "quiz": 4,
+   "qno": 11,
+   "id": 4011,
+   "label": "Q4-11",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Find the value of for which the system is consistent:",
+   "options": [],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "9 | 12",
+   "printed_answer_structured": [
+    "9",
+    "12"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q4-12",
+   "quiz": 4,
+   "qno": 12,
+   "id": 4012,
+   "label": "Q4-12",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let , .",
+   "options": [],
+   "student_answer": "FindthevalueofkforwhichtheequationAx = bisconsistent. Answer:k=",
+   "verdict": null,
+   "printed_answer_text": "-5",
+   "printed_answer_structured": [
+    "-5"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q4-13",
+   "quiz": 4,
+   "qno": 13,
+   "id": 4013,
+   "label": "Q4-13",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "cu + dv u = [ ], v = [ ], c = −2, d = −9 1 −2 Compute the vector , where .",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −9 | []",
+     "y": 178.3
+    },
+    {
+     "L": "B",
+     "text": "−56 | −14 | [−55]",
+     "y": 222.6
+    },
+    {
+     "L": "C",
+     "text": "| −11 | [−59]",
+     "y": 267.6
+    },
+    {
+     "L": "D",
+     "text": "| −12",
+     "y": 312.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−14",
+   "printed_answer_structured": [
+    "-14"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q4-14",
+   "quiz": 4,
+   "qno": 14,
+   "id": 4014,
+   "label": "Q4-14",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Compute the product .",
+   "options": [
+    {
+     "L": "A",
+     "text": "[19] | −25 | −6",
+     "y": 197.8
+    },
+    {
+     "L": "B",
+     "text": "[] | 24 | [4]",
+     "y": 242.8
+    },
+    {
+     "L": "C",
+     "text": "| 14 | []",
+     "y": 287.8
+    },
+    {
+     "L": "D",
+     "text": "−19 | 25 | [−19]",
+     "y": 332.1
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "25",
+   "printed_answer_structured": [
+    "25"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q4-15",
+   "quiz": 4,
+   "qno": 15,
+   "id": 4015,
+   "label": "Q4-15",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Let Which pair of operations transforms into and then transforms back into ? A B B A",
+   "options": [
+    {
+     "L": "A",
+     "text": "Subtracting 3 times the second row from the first row, followed by Adding 3 times | the second row to the first row",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "Multiplying the third row by 3, followed by Multiplying the third row by 1/3",
+     "y": 306.6
+    },
+    {
+     "L": "C",
+     "text": "Multiplying the second row by 3, followed by Multiplying the second row by 1/3",
+     "y": 333.6
+    },
+    {
+     "L": "D",
+     "text": "Subtracting 2 times the second row from the third row, followed by Adding 2 times | the second row to the third row",
+     "y": 360.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "Multiplying the second row by 3, followed by Multiplying the second row by 1/3",
+   "printed_answer_structured": [
+    "Multiplyingthesecondrowby3followedbyMultiplyingthesecond",
+    "rowby1/3"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q5-01",
+   "quiz": 5,
+   "qno": 1,
+   "id": 5001,
+   "label": "Q5-01",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which system corresponds to the following augmented matrix?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 4x + 10x + 6x −5x = −2 | 1234 | 5x + 4x −10x + 5x = 1 | 1234 | −3x1 −9x2 + 6x4 = 9",
+     "y": 229.3
+    },
+    {
+     "L": "B",
+     "text": "| 4x + 10x + 6x −5x = −2 | 1234 | 5x + 4x −10x + 5x = 9 | 1234 | −3x1 −9x2 + 6x4 = 1",
+     "y": 314.8
+    },
+    {
+     "L": "C",
+     "text": "| 4x −10x + 6x −5x = −2 | 1234 | 5x + 4x −10x + 5x = 1 | 1234 | −3x1 −9x2 + 6x4 = 9",
+     "y": 400.3
+    },
+    {
+     "L": "D",
+     "text": "| 4x + 6x + 10x −5x = −2 | 1234 | 5x −10x + 4x + 5x = 1 | 1234 | −3x1 −9x3 + 6x4 = 9",
+     "y": 486.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "4x + 10x + 6x −5x = −2 | 1234 | 5x + 4x −10x + 5x = 1 | 1234 | −3x1 −9x2 + 6x4 = 9",
+   "printed_answer_structured": [
+    "4x+10x+6x-5x=-2",
+    "1234",
+    "5x+4x-10x+5x=1",
+    "1234",
+    "-3x1-9x2+6x4=9"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q5-02",
+   "quiz": 5,
+   "qno": 2,
+   "id": 5002,
+   "label": "Q5-02",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Write a vector equation that is equivalent to the given system of equations. −9x1 + 7x2 −9x3 = −2 −4x1 −2x2 + 9x3 = 9 4x1 −x2 −7x3 = 9",
+   "options": [
+    {
+     "L": "A",
+     "text": "| x1−4+ x29+ x39=−2 | 49−7−1 | −97−9−2",
+     "y": 226.3
+    },
+    {
+     "L": "B",
+     "text": "| x1−4+ x2−2+ x39=9 | 4−1−79",
+     "y": 290.8
+    },
+    {
+     "L": "C",
+     "text": "−27−9−9 | x19+ x2−2+ x39=−4 | 9−1−74 | −97−9−2",
+     "y": 355.3
+    },
+    {
+     "L": "D",
+     "text": "| x19+ x2−2+ x3−4=9 | −7−149",
+     "y": 420.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "x1−4+ x2−2+ x39=9 | 4−1−79",
+   "printed_answer_structured": [
+    "x1-4+x2-2+x39=9",
+    "4-1-79"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q5-03",
+   "quiz": 5,
+   "qno": 3,
+   "id": 5003,
+   "label": "Q5-03",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Let Which pair of operations transforms into and then transforms back into ? A B B A",
+   "options": [
+    {
+     "L": "A",
+     "text": "Adding 3 times the second row to the third row, followed by Subtracting 3 times | the second row from the third row",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "Subtracting 2 times the second row from the third row, followed by Adding 2 times the second row to the third row",
+     "y": 306.6
+    },
+    {
+     "L": "C",
+     "text": "Multiplying the first row by 2, followed by Multiplying the first row by 1/2",
+     "y": 351.6
+    },
+    {
+     "L": "D",
+     "text": "Multiplying the second row by 2, followed by Multiplying the second row by 1/2",
+     "y": 378.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "Multiplying the second row by 2, followed by Multiplying the second row by 1/2",
+   "printed_answer_structured": [
+    "Multiplyingthesecondrowby2followedbyMultiplyingthesecond",
+    "rowby1/2"
+   ],
+   "suggested_key": "D",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q5-04",
+   "quiz": 5,
+   "qno": 4,
+   "id": 5004,
+   "label": "Q5-04",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "cu + dv u = [ ], v = [ ], c = −8, d = 2 8 −1 Compute the vector , where .",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 10 | []",
+     "y": 178.3
+    },
+    {
+     "L": "B",
+     "text": "−56 | 8 | [−54]",
+     "y": 222.6
+    },
+    {
+     "L": "C",
+     "text": "| 8 | [−52]",
+     "y": 267.6
+    },
+    {
+     "L": "D",
+     "text": "| 10",
+     "y": 312.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "10 | 5",
+   "printed_answer_structured": [
+    "10",
+    "5"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q5-05",
+   "quiz": 5,
+   "qno": 5,
+   "id": 5005,
+   "label": "Q5-05",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let , .",
+   "options": [],
+   "student_answer": "FindthevalueofkforwhichtheequationAx = bisconsistent. Answer:k=",
+   "verdict": null,
+   "printed_answer_text": "-3",
+   "printed_answer_structured": [
+    "-3"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q5-06",
+   "quiz": 5,
+   "qno": 6,
+   "id": 5006,
+   "label": "Q5-06",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "A 2 × 2 b R2 Let be a nonzero matrix, and be a nonzero vector in . Suppose that A [ ] = b and A [ ] = b, −5 −3 x = [ ] g −12 Ax = 0 g = If is a nonzero solution of the homogeneous equation , then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q5-07",
+   "quiz": 5,
+   "qno": 7,
+   "id": 5007,
+   "label": "Q5-07",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "{v1, v2, v3, v4} ⊂R3 Consider : v1 = , v2 = , v3 = , v4 = . ⎡ R3 a b The set does NOT span . Find the values of and .",
+   "options": [
+    {
+     "L": "A",
+     "text": "a = 1,b = 1",
+     "y": 596.1
+    },
+    {
+     "L": "B",
+     "text": "a = 0,b = 2",
+     "y": 623.1
+    },
+    {
+     "L": "C",
+     "text": "a = 3,b = 1",
+     "y": 650.1
+    },
+    {
+     "L": "D",
+     "text": "a = −1,b = −1",
+     "y": 677.1
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "a = 1,b = 1",
+   "printed_answer_structured": [
+    "a=1b=1"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q5-08",
+   "quiz": 5,
+   "qno": 8,
+   "id": 5008,
+   "label": "Q5-08",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Compute the product .",
+   "options": [
+    {
+     "L": "A",
+     "text": "[−3] | −34 | −20",
+     "y": 197.8
+    },
+    {
+     "L": "B",
+     "text": "[] | 71 | [−38]",
+     "y": 242.8
+    },
+    {
+     "L": "C",
+     "text": "| 75 | []",
+     "y": 287.8
+    },
+    {
+     "L": "D",
+     "text": "38 | −75 | [−38]",
+     "y": 332.1
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "75",
+   "printed_answer_structured": [
+    "75"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q5-09",
+   "quiz": 5,
+   "qno": 9,
+   "id": 5009,
+   "label": "Q5-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Find the general solution. {−4x1 + x2 + 2x3 = 4",
+   "options": [
+    {
+     "L": "A",
+     "text": "| x =2+ t−2, t ∈R | 24 | 01",
+     "y": 209.1
+    },
+    {
+     "L": "B",
+     "text": "| x =0+ t−4, t ∈R | 24 | 0−1",
+     "y": 273.6
+    },
+    {
+     "L": "C",
+     "text": "| x =−1+ t−4, t ∈R | 24 | 21",
+     "y": 338.8
+    },
+    {
+     "L": "D",
+     "text": "| x =0+ t−4, t ∈R | 26 | 01 | xR",
+     "y": 403.3
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "=0+ t−4, t ∈ | 24",
+   "printed_answer_structured": [
+    "=0+t-4t∈",
+    "24"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q5-10",
+   "quiz": 5,
+   "qno": 10,
+   "id": 5010,
+   "label": "Q5-10",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "a1 = , a2 = , b = ⎡ x1a1 + x2a2 = b Let . The vector equation is equivalent to a linear system whose augmented matrix is",
+   "options": [
+    {
+     "L": "A",
+     "text": "−733 | 0−78 | −8−97 | −70−8",
+     "y": 215.8
+    },
+    {
+     "L": "B",
+     "text": "| 387 | 3−7−9 | −70−8",
+     "y": 281.1
+    },
+    {
+     "L": "C",
+     "text": "| 3−7−9 | 387 | −733",
+     "y": 345.6
+    },
+    {
+     "L": "D",
+     "text": "| 08−7 | −87−9",
+     "y": 410.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "08−7 | −87−9",
+   "printed_answer_structured": [
+    "08-7",
+    "-87-9"
+   ],
+   "suggested_key": "D",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q5-11",
+   "quiz": 5,
+   "qno": 11,
+   "id": 5011,
+   "label": "Q5-11",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Find the value of for which the system is consistent:",
+   "options": [],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "5",
+   "printed_answer_structured": [
+    "5"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q5-12",
+   "quiz": 5,
+   "qno": 12,
+   "id": 5012,
+   "label": "Q5-12",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which matrix is in Echelon Form but not in Reduced Echelon Form?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −1−222 | 00−21 | 0010",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| −1−222 | 00−21 | 0000",
+     "y": 246.6
+    },
+    {
+     "L": "C",
+     "text": "| 00−21 | −1−222 | 0000",
+     "y": 332.1
+    },
+    {
+     "L": "D",
+     "text": "| −1−222 | 0000 | 00−21",
+     "y": 417.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−1−222 | 00−21 | 0000",
+   "printed_answer_structured": [
+    "-1-222",
+    "00-21",
+    "0000"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "quiz_index 误把反馈行判为第5选项，已按实测保留 A–D; complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q5-13",
+   "quiz": 5,
+   "qno": 13,
+   "id": 5013,
+   "label": "Q5-13",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Given the augmented matrix what is the solution of the system? (x1, x2, x3)",
+   "options": [
+    {
+     "L": "A",
+     "text": "(0, −2, −3)",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "(0, −4, −2)",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "(−2, −3, −1)",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "(−3, −4, 1)",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "(−2, −3, −1)",
+   "printed_answer_structured": [
+    "-2-3-1"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q5-14",
+   "quiz": 5,
+   "qno": 14,
+   "id": 5014,
+   "label": "Q5-14",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Find the Reduced Echelon Form of",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 100−1 | 01−21 | 0000",
+     "y": 229.3
+    },
+    {
+     "L": "B",
+     "text": "| 10−10 | 011−2 | 0000",
+     "y": 314.8
+    },
+    {
+     "L": "C",
+     "text": "| 10−10 | 01−21 | 0000",
+     "y": 400.3
+    },
+    {
+     "L": "D",
+     "text": "| 20−10 | 01−21 | 0000",
+     "y": 486.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "10−10 | 01−21 | 0000",
+   "printed_answer_structured": [
+    "10-10",
+    "01-21",
+    "0000"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q5-15",
+   "quiz": 5,
+   "qno": 15,
+   "id": 5015,
+   "label": "Q5-15",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let Replace row 2 by row 2 minus 4 times row 1. What is the new entry in row 2, column 4?",
+   "options": [],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "-9",
+   "printed_answer_structured": [
+    "-9"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q6-01",
+   "quiz": 6,
+   "qno": 1,
+   "id": 6001,
+   "label": "Q6-01",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following gives all solutions to the equation in parametric vector form, where",
+   "options": [
+    {
+     "L": "A",
+     "text": "6 0 1 | x = t (t in R) | 4 −4 | −5",
+     "y": 247.3
+    },
+    {
+     "L": "B",
+     "text": "6 0 1 | x = s + t (s, t in R) | 1 0 | −4 | 5 −6",
+     "y": 332.1
+    },
+    {
+     "L": "C",
+     "text": "4 1 0 | x = s + t (s, t in R) | 0 1 | −4",
+     "y": 416.8
+    },
+    {
+     "L": "D",
+     "text": "4 1 0 | x = s (s in R)",
+     "y": 501.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "= s+ t(s, tin) | 10 | 01",
+   "printed_answer_structured": [
+    "=s+tstin",
+    "10",
+    "01"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q6-02",
+   "quiz": 6,
+   "qno": 2,
+   "id": 6002,
+   "label": "Q6-02",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Consider the three vectors v1 = , v2 = , v3 = . ⎡ {v1, v2, v3} x = If is linearly dependent, then 12  .",
+   "options": [],
+   "student_answer": "1 2 3 12",
+   "verdict": "correct",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对; cloze 学生填值仅供 AI 参考，可能混入题面数字，不直接作为答案"
+  },
+  {
+   "qid": "q6-03",
+   "quiz": 6,
+   "qno": 3,
+   "id": 6003,
+   "label": "Q6-03",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following matrices is the standard matrix of a rotation about the origin in ?",
+   "options": [
+    {
+     "L": "A",
+     "text": "− | 77 | 34 | 77",
+     "y": 178.3
+    },
+    {
+     "L": "B",
+     "text": "√2−√23 | 55 | √23√2 | 55 | 53",
+     "y": 231.6
+    },
+    {
+     "L": "C",
+     "text": "[−] | 88 | 3−5 | 88",
+     "y": 291.6
+    },
+    {
+     "L": "D",
+     "text": "√22−√42 | 88 | −√42−√22 | 88",
+     "y": 344.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "√23√2 | 55",
+   "printed_answer_structured": [
+    "√23√2",
+    "55"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q6-04",
+   "quiz": 6,
+   "qno": 4,
+   "id": 6004,
+   "label": "Q6-04",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following matrices is the standard matrix for the linear transformation ? T(x1, x2, x3) = (−x1 + 3x2, −3x1 −9x3, −7x2 + 7x3, 7x1 + 6x2 + 7x3)",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −30−9 | 0−77 | 767 | −131",
+     "y": 188.8
+    },
+    {
+     "L": "B",
+     "text": "| −31−9 | 1−77 | 767 | −1−317",
+     "y": 273.6
+    },
+    {
+     "L": "C",
+     "text": "| 31−76 | 1−977 | −1−307",
+     "y": 358.3
+    },
+    {
+     "L": "D",
+     "text": "| 30−76 | 0−977",
+     "y": 423.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "0−77 | 767",
+   "printed_answer_structured": [
+    "0-77",
+    "767"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q6-05",
+   "quiz": 6,
+   "qno": 5,
+   "id": 6005,
+   "label": "Q6-05",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": null,
+   "stem": "T : Rm →Rn T(x) = Ax Let be the linear transformation defined by , where Then 4  , 2  .",
+   "options": [],
+   "student_answer": "4 2",
+   "verdict": "correct",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对; cloze 学生填值仅供 AI 参考，可能混入题面数字，不直接作为答案"
+  },
+  {
+   "qid": "q6-06",
+   "quiz": 6,
+   "qno": 6,
+   "id": 6006,
+   "label": "Q6-06",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Let , be linearly independent vectors in . Which of the following v3 {v1, v2} {v1, v2, v3} vectors , when added to the set , will make the set linearly dependent?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| v =−1 | 3 | −1 | 0",
+     "y": 233.8
+    },
+    {
+     "L": "B",
+     "text": "| v =0 | 3 | 1 | 8",
+     "y": 299.1
+    },
+    {
+     "L": "C",
+     "text": "| v =−6 | 3 | −4 | 6",
+     "y": 363.6
+    },
+    {
+     "L": "D",
+     "text": "| v =−7 | 3 | −6",
+     "y": 428.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "3 =−6 | −4",
+   "printed_answer_structured": [
+    "3=-6",
+    "-4"
+   ],
+   "suggested_key": "C",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q6-07",
+   "quiz": 6,
+   "qno": 7,
+   "id": 6007,
+   "label": "Q6-07",
+   "type": "cloze",
+   "blanks": 4,
+   "topic": null,
+   "stem": "T : R2 →R2 Let be a linear transformation satisfying T ([ ]) = [ ] and T ([ ]) = [ ]. 1 −2 A = [ ] a b c d T(x) = Ax x R2 a = Let be the matrix satisfying for all in , then -5  , b = c = d =",
+   "options": [],
+   "student_answer": "2 -5 3",
+   "verdict": "correct",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对; cloze 学生填值仅供 AI 参考，可能混入题面数字，不直接作为答案"
+  },
+  {
+   "qid": "q6-08",
+   "quiz": 6,
+   "qno": 8,
+   "id": 6008,
+   "label": "Q6-08",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which one of the following sets of vectors in is linearly independent?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −2−112 | ,,, | 4114 | −8−118 | 0−971−6",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| 99595 | ,,,, | −49−710 | −377−24 | 6−15−3",
+     "y": 245.1
+    },
+    {
+     "L": "C",
+     "text": "| 3−128 | ,,, | −286−4 | −3−2−56 | −3−663",
+     "y": 329.8
+    },
+    {
+     "L": "D",
+     "text": "| 36−23 | ,,, | 2482 | −4−8−1−3",
+     "y": 414.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": ",,, | 4114 | −8−118",
+   "printed_answer_structured": [
+    "4114",
+    "-8-118"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q6-09",
+   "quiz": 6,
+   "qno": 9,
+   "id": 6009,
+   "label": "Q6-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which matrix is in Echelon Form but not in Reduced Echelon Form?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −30−2−1 | 00−2−2 | 0000",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| −30−2−1 | 0000 | 00−2−2",
+     "y": 246.6
+    },
+    {
+     "L": "C",
+     "text": "| 00−2−2 | −30−2−1 | 0000",
+     "y": 332.1
+    },
+    {
+     "L": "D",
+     "text": "| −30−2−1 | 00−2−2 | 0010",
+     "y": 417.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "−30−2−1 | 00−2−2 | 0000",
+   "printed_answer_structured": [
+    "-30-2-1",
+    "00-2-2",
+    "0000"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": "quiz_index 误把反馈行判为第5选项，已按实测保留 A–D; complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q6-10",
+   "quiz": 6,
+   "qno": 10,
+   "id": 6010,
+   "label": "Q6-10",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "A 2 × 2 b R2 Let be a nonzero matrix, and be a nonzero vector in . Suppose that A [ ] = b and A [ ] = b, 3 6 −4 x = [ ] g 10 Ax = 0 g = If is a nonzero solution of the homogeneous equation , then 14",
+   "options": [],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q6-11",
+   "quiz": 6,
+   "qno": 11,
+   "id": 6011,
+   "label": "Q6-11",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let , .",
+   "options": [],
+   "student_answer": "FindthevalueofkforwhichtheequationAx = bisconsistent. Answer:k=8",
+   "verdict": "correct",
+   "printed_answer_text": "8",
+   "printed_answer_structured": [
+    "8"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q6-12",
+   "quiz": 6,
+   "qno": 12,
+   "id": 6012,
+   "label": "Q6-12",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Consider the following system of linear equations: x1 + 3x2 + 6x3 = −3 2x1 −x2 −x3 = 5 −7x2 −13x3 = 11 Which of the following correctly describes the solution set of the system?",
+   "options": [
+    {
+     "L": "A",
+     "text": "The solution set is a plane through the origin.",
+     "y": 273.6
+    },
+    {
+     "L": "B",
+     "text": "The solution set is a line not through the origin.",
+     "y": 300.6
+    },
+    {
+     "L": "C",
+     "text": "The solution set is a plane not through the origin.",
+     "y": 327.6
+    },
+    {
+     "L": "D",
+     "text": "The solution set is a line through the origin.",
+     "y": 354.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "The solution set is a line not through the origin.",
+   "printed_answer_structured": [
+    "Thesolutionsetisalinenotthroughtheorigin."
+   ],
+   "suggested_key": "B",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": ""
+  },
+  {
+   "qid": "q6-13",
+   "quiz": 6,
+   "qno": 13,
+   "id": 6013,
+   "label": "Q6-13",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": null,
+   "stem": "Consider the homogeneous linear system { . x1 −5x2 −6x3 = 0 −2x1 + 6x2 + 8x3 = 0 The system has nontrivial solutions. Write the general solution in parametric vector form:",
+   "options": [],
+   "student_answer": "1 -1",
+   "verdict": "correct",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对; cloze 学生填值仅供 AI 参考，可能混入题面数字，不直接作为答案"
+  },
+  {
+   "qid": "q6-14",
+   "quiz": 6,
+   "qno": 14,
+   "id": 6014,
+   "label": "Q6-14",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "T(x) = Ax Let be a matrix transformation, where Which one of the following statements describes correctly?",
+   "options": [
+    {
+     "L": "A",
+     "text": "is one-to-one but not onto. | T",
+     "y": 279.6
+    },
+    {
+     "L": "B",
+     "text": "is neither one-to-one nor onto. | T",
+     "y": 306.6
+    },
+    {
+     "L": "C",
+     "text": "is onto but not one-to-one. | T",
+     "y": 333.6
+    },
+    {
+     "L": "D",
+     "text": "is both one-to-one and onto. | T",
+     "y": 360.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "is neither one-to-one nor onto. T",
+   "printed_answer_structured": [
+    "Tisneitherone-to-onenoronto."
+   ],
+   "suggested_key": "B",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": ""
+  },
+  {
+   "qid": "q6-15",
+   "quiz": 6,
+   "qno": 15,
+   "id": 6015,
+   "label": "Q6-15",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "{v1, v2, v3, v4} ⊂R3 Consider : v1 = , v2 = , v3 = , v4 = . ⎡ R3 a b The set does NOT span . Find the values of and .",
+   "options": [
+    {
+     "L": "A",
+     "text": "a = 10,b = −2",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "a = 11,b = −3",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "a = −11,b = −3",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "a = 11,b = −2",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": "correct",
+   "printed_answer_text": "a = 11,b = −3",
+   "printed_answer_structured": [
+    "a=11b=-3"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "high",
+   "key_method": "tick",
+   "notes": ""
+  },
+  {
+   "qid": "q7-01",
+   "quiz": 7,
+   "qno": 1,
+   "id": 7001,
+   "label": "Q7-01",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "{v1, v2, v3, v4} ⊂R3 Consider : v1 = , v2 = , v3 = , v4 = . ⎡ R3 a b The set does NOT span . Find the values of and .",
+   "options": [
+    {
+     "L": "A",
+     "text": "= 4, = 8 | ab",
+     "y": 461.1
+    },
+    {
+     "L": "B",
+     "text": "= −4, = −6 | ab",
+     "y": 488.1
+    },
+    {
+     "L": "C",
+     "text": "= 5, = 5 | ab",
+     "y": 515.1
+    },
+    {
+     "L": "D",
+     "text": "= 4, = 6 | ab",
+     "y": 542.1
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "= 4, = 6",
+   "printed_answer_structured": [
+    "=4=6"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q7-02",
+   "quiz": 7,
+   "qno": 2,
+   "id": 7002,
+   "label": "Q7-02",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Consider the three vectors v1 = , v2 = , v3 = . ⎡ {v1, v2, v3} x = If is linearly dependent, then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q7-03",
+   "quiz": 7,
+   "qno": 3,
+   "id": 7003,
+   "label": "Q7-03",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following matrices is the standard matrix for the linear transformation ? T(x1, x2, x3) = (−3x1 + 5x3, 4x2 + 8x3, 5x1 + 3x2, 2x1 −9x2 −7x3)",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 043−9 | 580−7 | −305",
+     "y": 188.8
+    },
+    {
+     "L": "B",
+     "text": "| 048 | 530 | 2−9−7 | −315",
+     "y": 254.1
+    },
+    {
+     "L": "C",
+     "text": "| 148 | 531 | 2−9−7 | −3152",
+     "y": 338.8
+    },
+    {
+     "L": "D",
+     "text": "| 143−9 | 581−7",
+     "y": 423.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "530 | 2−9−7",
+   "printed_answer_structured": [
+    "530",
+    "2-9-7"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q7-04",
+   "quiz": 7,
+   "qno": 4,
+   "id": 7004,
+   "label": "Q7-04",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which matrix is in Echelon Form but not in Reduced Echelon Form?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 20−1−1 | 00−3−1 | 0000",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| 20−1−1 | 00−3−1 | 0010",
+     "y": 246.6
+    },
+    {
+     "L": "C",
+     "text": "| 20−1−1 | 0000 | 00−3−1",
+     "y": 332.1
+    },
+    {
+     "L": "D",
+     "text": "| 00−3−1 | 20−1−1 | 0000",
+     "y": 417.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "20−1−1 | 00−3−1 | 0000",
+   "printed_answer_structured": [
+    "20-1-1",
+    "00-3-1",
+    "0000"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "quiz_index 误把反馈行判为第5选项，已按实测保留 A–D; complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q7-05",
+   "quiz": 7,
+   "qno": 5,
+   "id": 7005,
+   "label": "Q7-05",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let , . k Ax = b",
+   "options": [],
+   "student_answer": "Findthevalueofforwhichtheequation =isconsistent. Answer:k=",
+   "verdict": null,
+   "printed_answer_text": "-9",
+   "printed_answer_structured": [
+    "-9"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q7-06",
+   "quiz": 7,
+   "qno": 6,
+   "id": 7006,
+   "label": "Q7-06",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following matrices is the standard matrix of a rotation about the origin in ?",
+   "options": [
+    {
+     "L": "A",
+     "text": "− | 88 | 53 | 88",
+     "y": 178.3
+    },
+    {
+     "L": "B",
+     "text": "−√35√46 | 99 | −√46−√35 | 99",
+     "y": 231.6
+    },
+    {
+     "L": "C",
+     "text": "−√62√2 | 88 | √2√62 | 88 | 54",
+     "y": 291.6
+    },
+    {
+     "L": "D",
+     "text": "[−] | 99 | 4−5 | 99",
+     "y": 351.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−√46−√35 | 99",
+   "printed_answer_structured": [
+    "-√46-√35",
+    "99"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q7-07",
+   "quiz": 7,
+   "qno": 7,
+   "id": 7007,
+   "label": "Q7-07",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Consider the following system of linear equations: x1 + 3x2 + 6x3 = −1 2x1 + 5x2 −x3 = 2 x2 + 13x3 = −4 Which of the following correctly describes the solution set of the system?",
+   "options": [
+    {
+     "L": "A",
+     "text": "The solution set is a line through the origin.",
+     "y": 273.6
+    },
+    {
+     "L": "B",
+     "text": "The solution set is a plane through the origin.",
+     "y": 300.6
+    },
+    {
+     "L": "C",
+     "text": "The solution set is a plane not through the origin.",
+     "y": 327.6
+    },
+    {
+     "L": "D",
+     "text": "The solution set is a line not through the origin.",
+     "y": 354.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "The solution set is a line not through the origin.",
+   "printed_answer_structured": [
+    "Thesolutionsetisalinenotthroughtheorigin."
+   ],
+   "suggested_key": "D",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q7-08",
+   "quiz": 7,
+   "qno": 8,
+   "id": 7008,
+   "label": "Q7-08",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Let , be linearly independent vectors in . Which of the v3 {v1, v2} {v1, v2, v3} following vectors , when added to the set , will make the set linearly dependent?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| v =6 | 3 | 1 | 7",
+     "y": 233.8
+    },
+    {
+     "L": "B",
+     "text": "| v =1 | 3 | 3 | −4",
+     "y": 299.1
+    },
+    {
+     "L": "C",
+     "text": "| v =7 | 3 | −1 | 1",
+     "y": 363.6
+    },
+    {
+     "L": "D",
+     "text": "| v =0 | 3 | 0",
+     "y": 428.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "3 =6 | 1",
+   "printed_answer_structured": [
+    "3=6",
+    "1"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q7-09",
+   "quiz": 7,
+   "qno": 9,
+   "id": 7009,
+   "label": "Q7-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "T(x) = Ax Let be a matrix transformation, where Which one of the following statements describes correctly?",
+   "options": [
+    {
+     "L": "A",
+     "text": "is both one-to-one and onto. | T",
+     "y": 299.1
+    },
+    {
+     "L": "B",
+     "text": "is onto but not one-to-one. | T",
+     "y": 326.1
+    },
+    {
+     "L": "C",
+     "text": "is one-to-one but not onto. | T",
+     "y": 353.1
+    },
+    {
+     "L": "D",
+     "text": "is neither one-to-one nor onto.",
+     "y": 380.1
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "isone-to-onebutnotonto.",
+   "printed_answer_structured": [
+    "isone-to-onebutnotonto."
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q7-10",
+   "quiz": 7,
+   "qno": 10,
+   "id": 7010,
+   "label": "Q7-10",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "A 2 × 2 b R2 Let be a nonzero matrix, and be a nonzero vector in . Suppose that A [ ] = b and A [ ] = b, −1 −7 x = [ ] 2 h Ax = 0 h = If is a nonzero solution of the homogeneous equation , then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q7-11",
+   "quiz": 7,
+   "qno": 11,
+   "id": 7011,
+   "label": "Q7-11",
+   "type": "cloze",
+   "blanks": 4,
+   "topic": null,
+   "stem": "T : R2 →R2 Let be a linear transformation satisfying T ([ ]) = [ ] and T ([ ]) = [ ]. 1 0 1 8 2 1 −3 A = [ ] a b c d T(x) = Ax x R2 a = b = Let be the matrix satisfying for all in , then ,",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q7-12",
+   "quiz": 7,
+   "qno": 12,
+   "id": 7012,
+   "label": "Q7-12",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following gives all solutions to the equation in parametric vector form, where",
+   "options": [
+    {
+     "L": "A",
+     "text": "x = s (s in R) | 1 0 | −6 | −5 −3",
+     "y": 247.3
+    },
+    {
+     "L": "B",
+     "text": "4 1 0 | x = s + t (s, t in R) | 0 1 | −5 −3",
+     "y": 332.1
+    },
+    {
+     "L": "C",
+     "text": "x = t (t in R) | 0 1 | 6 −4 | 5 3 0 1",
+     "y": 416.8
+    },
+    {
+     "L": "D",
+     "text": "x = s + t (s, t in R) | 1 0",
+     "y": 501.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "=+(,in) | 10 | 01",
+   "printed_answer_structured": [
+    "=+in",
+    "10",
+    "01"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q7-13",
+   "quiz": 7,
+   "qno": 13,
+   "id": 7013,
+   "label": "Q7-13",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which one of the following sets of vectors in is linearly independent?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −1−201 | ,,, | 1401 | −1−801 | 122−8",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| 486−9 | ,,, | 2495 | 00−26 | −296−6−2",
+     "y": 245.1
+    },
+    {
+     "L": "C",
+     "text": "| 2−1252 | ,,,, | 968−78 | 7−1−7−38 | −550−5",
+     "y": 329.8
+    },
+    {
+     "L": "D",
+     "text": "| 426−6 | ,,, | −91−89 | 5−9−44",
+     "y": 414.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": ",,, | 1401 | −1−801",
+   "printed_answer_structured": [
+    "1401",
+    "-1-801"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q7-14",
+   "quiz": 7,
+   "qno": 14,
+   "id": 7014,
+   "label": "Q7-14",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": null,
+   "stem": "T : Rm →Rn T(x) = Ax Let be the linear transformation defined by , where Then , .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q7-15",
+   "quiz": 7,
+   "qno": 15,
+   "id": 7015,
+   "label": "Q7-15",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": null,
+   "stem": "Consider the homogeneous linear system { . x1 + 4x2 −9x3 = 0 8x1 + 5x2 + 9x3 = 0 The system has nontrivial solutions. Write the general solution in parametric vector form:",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q8-01",
+   "quiz": 8,
+   "qno": 1,
+   "id": 8001,
+   "label": "Q8-01",
+   "type": "cloze",
+   "blanks": 4,
+   "topic": null,
+   "stem": "T : R2 →R2 Let be a linear transformation satisfying T ([ ]) = [ ] and T ([ ]) = [ ]. 1 −2 A = [ ] a b c d T(x) = Ax x R2 a = Let be the matrix satisfying for all in , then #9# , b = c = d =",
+   "options": [],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q8-02",
+   "quiz": 8,
+   "qno": 2,
+   "id": 8002,
+   "label": "Q8-02",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": null,
+   "stem": "T : Rm →Rn T(x) = Ax Let be the linear transformation defined by , where Then , .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q8-03",
+   "quiz": 8,
+   "qno": 3,
+   "id": 8003,
+   "label": "Q8-03",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Consider the following system of linear equations: x1 + 3x2 −3x3 = −2 3x1 + 6x2 −4x3 = 4 −6x2 + 10x3 = 20 Which of the following correctly describes the solution set of the system?",
+   "options": [
+    {
+     "L": "A",
+     "text": "The solution set is a plane through the origin.",
+     "y": 273.6
+    },
+    {
+     "L": "B",
+     "text": "The solution set is a line through the origin.",
+     "y": 300.6
+    },
+    {
+     "L": "C",
+     "text": "The solution set is a line not through the origin.",
+     "y": 327.6
+    },
+    {
+     "L": "D",
+     "text": "The solution set is a plane not through the origin.",
+     "y": 354.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "The solution set is a line not through the origin.",
+   "printed_answer_structured": [
+    "Thesolutionsetisalinenotthroughtheorigin."
+   ],
+   "suggested_key": "C",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q8-04",
+   "quiz": 8,
+   "qno": 4,
+   "id": 8004,
+   "label": "Q8-04",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Let , be linearly independent vectors in . Which of the v3 {v1, v2} {v1, v2, v3} following vectors , when added to the set , will make the set linearly dependent?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| v =2 | 3 | −5 | 3",
+     "y": 233.8
+    },
+    {
+     "L": "B",
+     "text": "| v =−5 | 3 | 4 | 0",
+     "y": 299.1
+    },
+    {
+     "L": "C",
+     "text": "| v =0 | 3 | 1 | −4",
+     "y": 363.6
+    },
+    {
+     "L": "D",
+     "text": "| v =−3 | 3 | −7",
+     "y": 428.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "3 =−5 | 4",
+   "printed_answer_structured": [
+    "3=-5",
+    "4"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q8-05",
+   "quiz": 8,
+   "qno": 5,
+   "id": 8005,
+   "label": "Q8-05",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Consider the three vectors v1 = , v2 = , v3 = . ⎡ {v1, v2, v3} x = If is linearly dependent, then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q8-06",
+   "quiz": 8,
+   "qno": 6,
+   "id": 8006,
+   "label": "Q8-06",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let , . k Ax = b",
+   "options": [],
+   "student_answer": "Findthevalueofforwhichtheequation =isconsistent. Answer:k=",
+   "verdict": null,
+   "printed_answer_text": "9",
+   "printed_answer_structured": [
+    "9"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q8-07",
+   "quiz": 8,
+   "qno": 7,
+   "id": 8007,
+   "label": "Q8-07",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which matrix is in Echelon Form but not in Reduced Echelon Form?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −2022 | 0000 | 00−30",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| −2022 | 00−30 | 0000",
+     "y": 246.6
+    },
+    {
+     "L": "C",
+     "text": "| −2022 | 00−30 | 0010",
+     "y": 332.1
+    },
+    {
+     "L": "D",
+     "text": "| 00−30 | −2022 | 0000",
+     "y": 417.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−2022 | 00−30 | 0000",
+   "printed_answer_structured": [
+    "-2022",
+    "00-30",
+    "0000"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "quiz_index 误把反馈行判为第5选项，已按实测保留 A–D; complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q8-08",
+   "quiz": 8,
+   "qno": 8,
+   "id": 8008,
+   "label": "Q8-08",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following matrices is the standard matrix of a rotation about the origin in ?",
+   "options": [
+    {
+     "L": "A",
+     "text": "√30−√19 | 77 | √19√30 | 77",
+     "y": 178.3
+    },
+    {
+     "L": "B",
+     "text": "√33√31 | 88 | √31−√33 | 88 | 53",
+     "y": 238.3
+    },
+    {
+     "L": "C",
+     "text": "[−] | 88 | 3−5 | 88 | 34",
+     "y": 298.3
+    },
+    {
+     "L": "D",
+     "text": "[−] | 77 | 43 | 77",
+     "y": 351.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "√19√30 | 77",
+   "printed_answer_structured": [
+    "√19√30",
+    "77"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q8-09",
+   "quiz": 8,
+   "qno": 9,
+   "id": 8009,
+   "label": "Q8-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which one of the following sets of vectors in is linearly independent?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 12−5−3 | ,,, | −2−461 | −3−6−94 | −122−19",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| 1−509−7 | ,,,, | −65−8−54 | 6−4744 | 1111",
+     "y": 245.1
+    },
+    {
+     "L": "C",
+     "text": "| 0−212 | ,,, | 0414 | 0−818 | −97−29",
+     "y": 329.8
+    },
+    {
+     "L": "D",
+     "text": "| 6−8−21 | ,,, | −74−33 | 448−4",
+     "y": 414.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": ",,, | 0414 | 0−818",
+   "printed_answer_structured": [
+    "0414",
+    "0-818"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q8-10",
+   "quiz": 8,
+   "qno": 10,
+   "id": 8010,
+   "label": "Q8-10",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": null,
+   "stem": "Consider the homogeneous linear system { . x1 −6x2 −9x3 = 0 −2x1 + 2x2 −2x3 = 0 The system has nontrivial solutions. Write the general solution in parametric vector form:",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q8-11",
+   "quiz": 8,
+   "qno": 11,
+   "id": 8011,
+   "label": "Q8-11",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following matrices is the standard matrix for the linear transformation ? T(x1, x2, x3) = (−x1 + 5x2, −x2 −8x3, −3x1 −x3, −4x1 −9x2 + 8x3)",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 5−10−9 | 0−8−18 | −151",
+     "y": 188.8
+    },
+    {
+     "L": "B",
+     "text": "| 1−1−8 | −31−1 | −4−98 | −150",
+     "y": 254.1
+    },
+    {
+     "L": "C",
+     "text": "| 0−1−8 | −30−1 | −4−98 | −11−3−4",
+     "y": 338.8
+    },
+    {
+     "L": "D",
+     "text": "| 5−11−9 | 1−8−18",
+     "y": 423.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−30−1 | −4−98",
+   "printed_answer_structured": [
+    "-30-1",
+    "-4-98"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q8-12",
+   "quiz": 8,
+   "qno": 12,
+   "id": 8012,
+   "label": "Q8-12",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "{v1, v2, v3, v4} ⊂R3 Consider : v1 = , v2 = , v3 = , v4 = . ⎡ R3 a b The set does NOT span . Find the values of and .",
+   "options": [
+    {
+     "L": "A",
+     "text": "= 0, = 0 | ab",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "= 4, = 2 | ab",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "= 6, = −2 | ab",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "= 4, = −2 | ab",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "= 4, = −2",
+   "printed_answer_structured": [
+    "=4=-2"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q8-13",
+   "quiz": 8,
+   "qno": 13,
+   "id": 8013,
+   "label": "Q8-13",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "T(x) = Ax Let be a matrix transformation, where Which one of the following statements describes correctly?",
+   "options": [
+    {
+     "L": "A",
+     "text": "is neither one-to-one nor onto. | T",
+     "y": 279.6
+    },
+    {
+     "L": "B",
+     "text": "is both one-to-one and onto. | T",
+     "y": 306.6
+    },
+    {
+     "L": "C",
+     "text": "is one-to-one but not onto. | T",
+     "y": 333.6
+    },
+    {
+     "L": "D",
+     "text": "is onto but not one-to-one.",
+     "y": 360.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "isontobutnotone-to-one.",
+   "printed_answer_structured": [
+    "isontobutnotone-to-one."
+   ],
+   "suggested_key": "D",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q8-14",
+   "quiz": 8,
+   "qno": 14,
+   "id": 8014,
+   "label": "Q8-14",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "A 2 × 2 b R2 Let be a nonzero matrix, and be a nonzero vector in . Suppose that A [ ] = b and A [ ] = b, 7 1 3 9 x = [ ] 8 h Ax = 0 h = If is a nonzero solution of the homogeneous equation , then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q8-15",
+   "quiz": 8,
+   "qno": 15,
+   "id": 8015,
+   "label": "Q8-15",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following gives all solutions to the equation in parametric vector form, where",
+   "options": [
+    {
+     "L": "A",
+     "text": "2 0 1 | x = s + t (s, t in R) | 1 0 | 2 5 1 0",
+     "y": 247.3
+    },
+    {
+     "L": "B",
+     "text": "x = s (s in R) | 2 5 1 0 | 3 −2",
+     "y": 332.1
+    },
+    {
+     "L": "C",
+     "text": "x = s + t (s, t in R) | 0 1 | −3",
+     "y": 416.8
+    },
+    {
+     "L": "D",
+     "text": "2 0 1 | x = t (t in R)",
+     "y": 501.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "=+(,in) | 10 | 01",
+   "printed_answer_structured": [
+    "=+in",
+    "10",
+    "01"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q9-01",
+   "quiz": 9,
+   "qno": 1,
+   "id": 9001,
+   "label": "Q9-01",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which matrix is in Echelon Form but not in Reduced Echelon Form?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −12−2−2 | 0000 | 0030",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| −12−2−2 | 0030 | 0000",
+     "y": 246.6
+    },
+    {
+     "L": "C",
+     "text": "| −12−2−2 | 0030 | 0010",
+     "y": 332.1
+    },
+    {
+     "L": "D",
+     "text": "| 0030 | −12−2−2 | 0000",
+     "y": 417.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "−12−2−2 | 0030 | 0000",
+   "printed_answer_structured": [
+    "-12-2-2",
+    "0030",
+    "0000"
+   ],
+   "suggested_key": "B",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "quiz_index 误把反馈行判为第5选项，已按实测保留 A–D; complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q9-02",
+   "quiz": 9,
+   "qno": 2,
+   "id": 9002,
+   "label": "Q9-02",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following matrices is the standard matrix of a rotation about the origin in ?",
+   "options": [
+    {
+     "L": "A",
+     "text": "√61−√3 | 88 | √3√61 | 88 | 54",
+     "y": 178.3
+    },
+    {
+     "L": "B",
+     "text": "[−] | 99 | 45 | 99 | 53",
+     "y": 238.3
+    },
+    {
+     "L": "C",
+     "text": "[−] | 88 | 3−5 | 88",
+     "y": 291.6
+    },
+    {
+     "L": "D",
+     "text": "−√14√67 | 99 | √67√14 | 99",
+     "y": 344.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "√3√61 | 88",
+   "printed_answer_structured": [
+    "√3√61",
+    "88"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q9-03",
+   "quiz": 9,
+   "qno": 3,
+   "id": 9003,
+   "label": "Q9-03",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Let , be linearly independent vectors in . Which of the following v3 {v1, v2} {v1, v2, v3} vectors , when added to the set , will make the set linearly dependent?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| v =−1 | 3 | 7 | −6",
+     "y": 233.8
+    },
+    {
+     "L": "B",
+     "text": "| v =4 | 3 | 2 | −1",
+     "y": 299.1
+    },
+    {
+     "L": "C",
+     "text": "| v =−5 | 3 | 1 | 0",
+     "y": 363.6
+    },
+    {
+     "L": "D",
+     "text": "| v =1 | 3 | 0",
+     "y": 428.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "3 =−1 | 7",
+   "printed_answer_structured": [
+    "3=-1",
+    "7"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q9-04",
+   "quiz": 9,
+   "qno": 4,
+   "id": 9004,
+   "label": "Q9-04",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "T(x) = Ax Let be a matrix transformation, where Which one of the following statements describes correctly?",
+   "options": [
+    {
+     "L": "A",
+     "text": "is onto but not one-to-one. | T",
+     "y": 279.6
+    },
+    {
+     "L": "B",
+     "text": "is both one-to-one and onto. | T",
+     "y": 306.6
+    },
+    {
+     "L": "C",
+     "text": "is neither one-to-one nor onto. | T",
+     "y": 333.6
+    },
+    {
+     "L": "D",
+     "text": "is one-to-one but not onto. | T",
+     "y": 360.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "is neither one-to-one nor onto. T | Question 5 | Not answered | 6 2 −5 4 −7 2 −10 5 3 | 19 −26 | Let , . | A = | b = | k | Find the value of for which the equation is consistent. Answer: k = | k Ax = b | 7",
+   "printed_answer_structured": [
+    "Tisneitherone-to-onenoronto.",
+    "5"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q9-05",
+   "quiz": 9,
+   "qno": 5,
+   "id": 9005,
+   "label": "Q9-05",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let , .",
+   "options": [],
+   "student_answer": "FindthevalueofkforwhichtheequationAx = bisconsistent. Answer:k=",
+   "verdict": null,
+   "printed_answer_text": "7",
+   "printed_answer_structured": [
+    "7"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q9-06",
+   "quiz": 9,
+   "qno": 6,
+   "id": 9006,
+   "label": "Q9-06",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Consider the three vectors v1 = , v2 = , v3 = . ⎡ {v1, v2, v3} x = If is linearly dependent, then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q9-07",
+   "quiz": 9,
+   "qno": 7,
+   "id": 9007,
+   "label": "Q9-07",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "A 2 × 2 b R2 Let be a nonzero matrix, and be a nonzero vector in . Suppose that A [ ] = b and A [ ] = b, −2 −5 x = [ ] g −10 Ax = 0 g = If is a nonzero solution of the homogeneous equation , then",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q9-08",
+   "quiz": 9,
+   "qno": 8,
+   "id": 9008,
+   "label": "Q9-08",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": null,
+   "stem": "Consider the homogeneous linear system { . x1 −x2 −2x3 = 0 −6x1 + 3x2 + 9x3 = 0 The system has nontrivial solutions. Write the general solution in parametric vector form:",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q9-09",
+   "quiz": 9,
+   "qno": 9,
+   "id": 9009,
+   "label": "Q9-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Consider the following system of linear equations: x1 + 3x2 −6x3 = 3 3x1 −x2 −4x3 = 2 10x2 −14x3 = 7 Which of the following correctly describes the solution set of the system?",
+   "options": [
+    {
+     "L": "A",
+     "text": "The solution set is a plane not through the origin.",
+     "y": 273.6
+    },
+    {
+     "L": "B",
+     "text": "The solution set is a line through the origin.",
+     "y": 300.6
+    },
+    {
+     "L": "C",
+     "text": "The solution set is a plane through the origin.",
+     "y": 327.6
+    },
+    {
+     "L": "D",
+     "text": "The solution set is a line not through the origin.",
+     "y": 354.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "The solution set is a line not through the origin.",
+   "printed_answer_structured": [
+    "Thesolutionsetisalinenotthroughtheorigin."
+   ],
+   "suggested_key": "D",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q9-10",
+   "quiz": 9,
+   "qno": 10,
+   "id": 9010,
+   "label": "Q9-10",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "{v1, v2, v3, v4} ⊂R3 Consider : v1 = , v2 = , v3 = , v4 = . ⎡ R3 a b The set does NOT span . Find the values of and .",
+   "options": [
+    {
+     "L": "A",
+     "text": "a = 5,b = −1",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "a = 7,b = −1",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "a = −5,b = −1",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "a = 6,b = 0",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "a = 5,b = −1",
+   "printed_answer_structured": [
+    "a=5b=-1"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q9-11",
+   "quiz": 9,
+   "qno": 11,
+   "id": 9011,
+   "label": "Q9-11",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which one of the following sets of vectors in is linearly independent?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −4−8−9−7 | ,,, | 36−23 | 36−50 | −19−53−6",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| −20−5−3−3 | ,,,, | −973−4−8 | −2−15−17 | 7−9−2−4",
+     "y": 245.1
+    },
+    {
+     "L": "C",
+     "text": "| 5−324 | ,,, | −3−2−54 | 5−14−3 | 1111",
+     "y": 329.8
+    },
+    {
+     "L": "D",
+     "text": "| 1−202 | ,,, | 1404 | 1−808",
+     "y": 414.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": ",,, | 1404 | 1−808",
+   "printed_answer_structured": [
+    "1404",
+    "1-808"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q9-12",
+   "quiz": 9,
+   "qno": 12,
+   "id": 9012,
+   "label": "Q9-12",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following matrices is the standard matrix for the linear transformation ? T(x1, x2, x3) = (−3x1 −2x3, 6x2 + 8x3, 4x1 −3x2, −2x1 −2x2 −x3)",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 068 | 4−30 | −2−2−1 | −314−2",
+     "y": 188.8
+    },
+    {
+     "L": "B",
+     "text": "| 16−3−2 | −281−1 | −31−2",
+     "y": 273.6
+    },
+    {
+     "L": "C",
+     "text": "| 168 | 4−31 | −2−2−1 | −304−2",
+     "y": 338.8
+    },
+    {
+     "L": "D",
+     "text": "| 06−3−2 | −280−1",
+     "y": 423.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "4−30 | −2−2−1",
+   "printed_answer_structured": [
+    "4-30",
+    "-2-2-1"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q9-13",
+   "quiz": 9,
+   "qno": 13,
+   "id": 9013,
+   "label": "Q9-13",
+   "type": "cloze",
+   "blanks": 4,
+   "topic": null,
+   "stem": "T : R2 →R2 Let be a linear transformation satisfying T ([ ]) = [ ] and T ([ ]) = [ ]. 1 0 3 −3 A = [ ] a b c d T(x) = Ax x R2 a = b = Let be the matrix satisfying for all in , then ,",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q9-14",
+   "quiz": 9,
+   "qno": 14,
+   "id": 9014,
+   "label": "Q9-14",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": null,
+   "stem": "T : Rm →Rn T(x) = Ax Let be the linear transformation defined by , where Then , .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q9-15",
+   "quiz": 9,
+   "qno": 15,
+   "id": 9015,
+   "label": "Q9-15",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following gives all solutions to the equation in parametric vector form, where",
+   "options": [
+    {
+     "L": "A",
+     "text": "x = s (s in R) | −4 −2 | 2 5 0 1",
+     "y": 247.3
+    },
+    {
+     "L": "B",
+     "text": "x = s + t (s, t in R) | 1 0 | 2 5 0 1",
+     "y": 332.1
+    },
+    {
+     "L": "C",
+     "text": "x = t (t in R) | 4 2 1 0 | −2 −5",
+     "y": 416.8
+    },
+    {
+     "L": "D",
+     "text": "x = s + t (s, t in R) | 0 1",
+     "y": 501.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "= s+ t(s, tin) | 10 | 01",
+   "printed_answer_structured": [
+    "=s+tstin",
+    "10",
+    "01"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q10-01",
+   "quiz": 10,
+   "qno": 1,
+   "id": 10001,
+   "label": "Q10-01",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which matrix is in Echelon Form but not in Reduced Echelon Form?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 3−1−21 | 00−3−1 | 0000",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| 3−1−21 | 00−3−1 | 0010",
+     "y": 246.6
+    },
+    {
+     "L": "C",
+     "text": "| 00−3−1 | 3−1−21 | 0000",
+     "y": 332.1
+    },
+    {
+     "L": "D",
+     "text": "| 3−1−21 | 0000 | 00−3−1",
+     "y": 417.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "3−1−21 | 00−3−1 | 0000",
+   "printed_answer_structured": [
+    "3-1-21",
+    "00-3-1",
+    "0000"
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": "quiz_index 误把反馈行判为第5选项，已按实测保留 A–D; complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q10-02",
+   "quiz": 10,
+   "qno": 2,
+   "id": 10002,
+   "label": "Q10-02",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": null,
+   "stem": "Consider the homogeneous linear system { . x1 −x2 −5x3 = 0 2x1 −4x2 −2x3 = 0 The system has nontrivial solutions. Write the general solution in parametric vector form:",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q10-03",
+   "quiz": 10,
+   "qno": 3,
+   "id": 10003,
+   "label": "Q10-03",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following matrices is the standard matrix of a rotation about the origin in ?",
+   "options": [
+    {
+     "L": "A",
+     "text": "− | 99 | 54 | 99",
+     "y": 178.3
+    },
+    {
+     "L": "B",
+     "text": "√71√10 | 99 | √10−√71 | 99",
+     "y": 231.6
+    },
+    {
+     "L": "C",
+     "text": "√33−√3 | 66 | √3√33 | 66 | 35",
+     "y": 291.6
+    },
+    {
+     "L": "D",
+     "text": "[−] | 88 | 5−3 | 88",
+     "y": 351.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "√3√33 | 66",
+   "printed_answer_structured": [
+    "√3√33",
+    "66"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q10-04",
+   "quiz": 10,
+   "qno": 4,
+   "id": 10004,
+   "label": "Q10-04",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Consider the three vectors v1 = , v2 = , v3 = . ⎡ {v1, v2, v3} x = If is linearly dependent, then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q10-05",
+   "quiz": 10,
+   "qno": 5,
+   "id": 10005,
+   "label": "Q10-05",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Consider the following system of linear equations: x1 + 4x2 −4x3 = −3 5x1 + 4x2 −3x3 = 3 −16x2 + 17x3 = 18 Which of the following correctly describes the solution set of the system?",
+   "options": [
+    {
+     "L": "A",
+     "text": "The solution set is a line not through the origin.",
+     "y": 273.6
+    },
+    {
+     "L": "B",
+     "text": "The solution set is a plane through the origin.",
+     "y": 300.6
+    },
+    {
+     "L": "C",
+     "text": "The solution set is a plane not through the origin.",
+     "y": 327.6
+    },
+    {
+     "L": "D",
+     "text": "The solution set is a line through the origin.",
+     "y": 354.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "The solution set is a line not through the origin.",
+   "printed_answer_structured": [
+    "Thesolutionsetisalinenotthroughtheorigin."
+   ],
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "text-match",
+   "notes": ""
+  },
+  {
+   "qid": "q10-06",
+   "quiz": 10,
+   "qno": 6,
+   "id": 10006,
+   "label": "Q10-06",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "{v1, v2, v3, v4} ⊂R3 Consider : v1 = , v2 = , v3 = , v4 = . ⎡ R3 a b The set does NOT span . Find the values of and .",
+   "options": [
+    {
+     "L": "A",
+     "text": "= −1, = 3 | ab",
+     "y": 261.6
+    },
+    {
+     "L": "B",
+     "text": "= 0, = −1 | ab",
+     "y": 288.6
+    },
+    {
+     "L": "C",
+     "text": "= −1, = −3 | ab",
+     "y": 315.6
+    },
+    {
+     "L": "D",
+     "text": "= 1, = 3 | ab",
+     "y": 342.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "= −1, = 3",
+   "printed_answer_structured": [
+    "=-1=3"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q10-07",
+   "quiz": 10,
+   "qno": 7,
+   "id": 10007,
+   "label": "Q10-07",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which one of the following sets of vectors in is linearly independent?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| 0−11−43 | ,,,, | 71−704 | 38−454 | −2−45−8",
+     "y": 160.3
+    },
+    {
+     "L": "B",
+     "text": "| 246−2 | ,,, | 486−4 | 12−41 | −4515",
+     "y": 245.1
+    },
+    {
+     "L": "C",
+     "text": "| −91−86 | ,,, | 6−33−8 | −3411 | 1111",
+     "y": 329.8
+    },
+    {
+     "L": "D",
+     "text": "| 21−1−2 | ,,, | 4114 | 81−1−8",
+     "y": 414.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": ",,, | 4114 | 81−1−8",
+   "printed_answer_structured": [
+    "4114",
+    "81-1-8"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q10-08",
+   "quiz": 10,
+   "qno": 8,
+   "id": 10008,
+   "label": "Q10-08",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": null,
+   "stem": "T : Rm →Rn T(x) = Ax Let be the linear transformation defined by , where Then , .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q10-09",
+   "quiz": 10,
+   "qno": 9,
+   "id": 10009,
+   "label": "Q10-09",
+   "type": "cloze",
+   "blanks": 1,
+   "topic": null,
+   "stem": "A 2 × 2 b R2 Let be a nonzero matrix, and be a nonzero vector in . Suppose that A [ ] = b and A [ ] = b, −7 h Ax = 0 h = If is a nonzero solution of the homogeneous equation , then .",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q10-10",
+   "quiz": 10,
+   "qno": 10,
+   "id": 10010,
+   "label": "Q10-10",
+   "type": "fill",
+   "blanks": 1,
+   "topic": null,
+   "stem": "Let , . k Ax = b",
+   "options": [],
+   "student_answer": "Findthevalueofforwhichtheequation =isconsistent. Answer:k=",
+   "verdict": null,
+   "printed_answer_text": "0",
+   "printed_answer_structured": [
+    "0"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q10-11",
+   "quiz": 10,
+   "qno": 11,
+   "id": 10011,
+   "label": "Q10-11",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "T(x) = Ax Let be a matrix transformation, where Which one of the following statements describes correctly?",
+   "options": [
+    {
+     "L": "A",
+     "text": "is neither one-to-one nor onto. | T",
+     "y": 299.1
+    },
+    {
+     "L": "B",
+     "text": "is one-to-one but not onto. | T",
+     "y": 326.1
+    },
+    {
+     "L": "C",
+     "text": "is both one-to-one and onto. | T",
+     "y": 353.1
+    },
+    {
+     "L": "D",
+     "text": "is onto but not one-to-one.",
+     "y": 380.1
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "isneitherone-to-onenoronto.",
+   "printed_answer_structured": [
+    "isneitherone-to-onenoronto."
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": ""
+  },
+  {
+   "qid": "q10-12",
+   "quiz": 10,
+   "qno": 12,
+   "id": 10012,
+   "label": "Q10-12",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following matrices is the standard matrix for the linear transformation ? T(x1, x2, x3) = (4x2 + x3, −8x1 −4x2, 9x1 −3x3, 4x1 −6x2 + 7x3)",
+   "options": [
+    {
+     "L": "A",
+     "text": "| −8−40 | 90−3 | 4−67 | 0−894",
+     "y": 188.8
+    },
+    {
+     "L": "B",
+     "text": "| 4−40−6 | 10−37 | 1−894",
+     "y": 273.6
+    },
+    {
+     "L": "C",
+     "text": "| 4−41−6 | 11−37 | 141",
+     "y": 338.8
+    },
+    {
+     "L": "D",
+     "text": "| −8−41 | 91−3 | 4−67",
+     "y": 403.3
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "90−3 | 4−67",
+   "printed_answer_structured": [
+    "90-3",
+    "4-67"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q10-13",
+   "quiz": 10,
+   "qno": 13,
+   "id": 10013,
+   "label": "Q10-13",
+   "type": "cloze",
+   "blanks": 4,
+   "topic": null,
+   "stem": "T : R2 →R2 Let be a linear transformation satisfying T ([ ]) = [ ] and T ([ ]) = [ ]. 1 0 −4 −1 A = [ ] a b c d T(x) = Ax x R2 a = b = Let be the matrix satisfying for all in , then ,",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "printed_answer_structured": [],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "无印刷答案；答案需 AI 生成或人工核对"
+  },
+  {
+   "qid": "q10-14",
+   "quiz": 10,
+   "qno": 14,
+   "id": 10014,
+   "label": "Q10-14",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Let , be linearly independent vectors in . Which of the v3 {v1, v2} {v1, v2, v3} following vectors , when added to the set , will make the set linearly dependent?",
+   "options": [
+    {
+     "L": "A",
+     "text": "| v =5 | 3 | 3 | −7",
+     "y": 233.8
+    },
+    {
+     "L": "B",
+     "text": "| v =4 | 3 | 8 | 0",
+     "y": 299.1
+    },
+    {
+     "L": "C",
+     "text": "| v =0 | 3 | 1 | 8",
+     "y": 363.6
+    },
+    {
+     "L": "D",
+     "text": "| v =2 | 3 | 6",
+     "y": 428.8
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "3 =5 | 3",
+   "printed_answer_structured": [
+    "3=5",
+    "3"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  },
+  {
+   "qid": "q10-15",
+   "quiz": 10,
+   "qno": 15,
+   "id": 10015,
+   "label": "Q10-15",
+   "type": "choice",
+   "blanks": 0,
+   "topic": null,
+   "stem": "Which of the following gives all solutions to the equation in parametric vector form, where",
+   "options": [
+    {
+     "L": "A",
+     "text": "3 1 0 | x = s + t (s, t in R) | 0 1 | 2 −3 | 5 1 0 1",
+     "y": 247.3
+    },
+    {
+     "L": "B",
+     "text": "x = s + t (s, t in R) | 1 0 | −2",
+     "y": 332.1
+    },
+    {
+     "L": "C",
+     "text": "3 1 0 | x = s (s in R) | 5 1 0 1",
+     "y": 416.8
+    },
+    {
+     "L": "D",
+     "text": "x = t (t in R)",
+     "y": 501.6
+    }
+   ],
+   "student_answer": "",
+   "verdict": null,
+   "printed_answer_text": "=+(,in) | 10 | 01",
+   "printed_answer_structured": [
+    "=+in",
+    "10",
+    "01"
+   ],
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "notes": "complex-answer（矩阵/方程组答案，保留分行可读形式，未压成单串）"
+  }
+ ]
+}

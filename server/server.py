@@ -47,6 +47,9 @@ PBKDF2_ROUNDS = 200_000
 MIN_PW, MAX_PW = 6, 72
 NAME_RE = re.compile(r"^[A-Za-z0-9_.\-]{3,24}$")
 MAX_ITEMS = 900
+# Progress blob tables. Both are referenced only as in-code constants (never
+# from user input), so interpolating them into SQL carries no injection risk.
+PROGRESS_TABLES = ("progress", "progress28")
 
 BANK_INDEX_PATH = os.environ.get("MTH026_BANK_INDEX", "/opt/mth026/bank_index.json")
 _BANK_CACHE = None            # lazy {id: row} of the build-time answer index
@@ -108,6 +111,11 @@ def init_db():
             ip      TEXT
         );
         CREATE TABLE IF NOT EXISTS progress(
+            uid     INTEGER PRIMARY KEY,
+            blob    TEXT NOT NULL,
+            updated REAL NOT NULL
+        );
+        CREATE TABLE IF NOT EXISTS progress28(
             uid     INTEGER PRIMARY KEY,
             blob    TEXT NOT NULL,
             updated REAL NOT NULL
@@ -271,6 +279,100 @@ def clean_progress(payload):
             out[field] = max(0, int(payload.get(field) or 0))
         except (TypeError, ValueError):
             out[field] = 0
+    return out
+
+
+def _clean_resp(v):
+    """028 fill-in / cloze answers are free text or a short list of blanks."""
+    if isinstance(v, str):
+        return v[:200]
+    if isinstance(v, list):
+        return [str(x)[:200] for x in v[:8]]
+    return None
+
+
+def clean_progress28(payload):
+    """MTH028 progress, kept independent of 026's clean_progress()/merge().
+
+    026's whitelist forces h[].a to a single letter and drops unknown keys,
+    which would silently erase a fill-in answer such as "-13" or a cloze list
+    ["4","2"].  fav/miss/streak/best share 026's *helper* functions (_fav_int,
+    _clean_miss, _h_ts) so their rules stay identical, but no 026 function is
+    called: 026 stays byte-for-byte unchanged and cannot leak into 028 later.
+    """
+    if not isinstance(payload, dict):
+        payload = {}
+    out = {"h": {}, "streak": 0, "best": 0, "fav": {}, "miss": {}}
+    raw = payload.get("h")
+    if isinstance(raw, dict):
+        for k, v in list(raw.items())[:MAX_ITEMS]:
+            try:
+                key = str(int(k))
+            except (TypeError, ValueError):
+                continue
+            if not isinstance(v, dict):
+                continue
+            rec = {"a": None, "ok": bool(v.get("ok")), "t": _h_ts(v)}
+            a = v.get("a")
+            if isinstance(a, str) and a:
+                rec["a"] = a[:8]          # a letter, or a short typed answer
+            if v.get("self"):
+                rec["self"] = 1
+            resp = _clean_resp(v.get("resp"))
+            if resp is not None:
+                rec["resp"] = resp
+            out["h"][key] = rec
+    raw_fav = payload.get("fav")
+    if isinstance(raw_fav, dict):
+        for k, v in list(raw_fav.items())[:MAX_ITEMS]:
+            try:
+                key = str(int(k))
+            except (TypeError, ValueError):
+                continue
+            val = _fav_int(v)
+            if val is None:
+                continue
+            out["fav"][key] = val
+    out["miss"] = _clean_miss(payload.get("miss"))
+    for field in ("streak", "best"):
+        try:
+            out[field] = max(0, int(payload.get(field) or 0))
+        except (TypeError, ValueError):
+            out[field] = 0
+    return out
+
+
+def merge28(old, new):
+    """028 merge, independent of 026's merge().  History records are replaced
+    whole (never rebuilt field by field), so a stale `resp` cannot survive a
+    newer answer; fav keeps the larger magnitude, miss only grows, and
+    streak/best take the max.  Only the _h_ts/_fav_int/_merge_miss helpers are
+    shared with 026, never merge() itself."""
+    out = {"h": {}, "streak": 0, "best": 0, "fav": {}, "miss": {}}
+    for src in (old or {}, new or {}):
+        for k, v in (src.get("h") or {}).items():
+            prev = out["h"].get(k)
+            if prev is None or _h_ts(v) >= _h_ts(prev):
+                out["h"][k] = v
+        for field in ("streak", "best"):
+            try:
+                out[field] = max(out[field], int(src.get(field) or 0))
+            except (TypeError, ValueError):
+                pass
+        fav = src.get("fav") or {}
+        if isinstance(fav, dict):
+            for k, v in list(fav.items())[:MAX_ITEMS]:
+                try:
+                    key = str(int(k))
+                except (TypeError, ValueError):
+                    continue
+                val = _fav_int(v)
+                if val is None:
+                    continue
+                cur = out["fav"].get(key)
+                if cur is None or abs(val) >= abs(cur):
+                    out["fav"][key] = val
+        _merge_miss(out["miss"], src.get("miss"))
     return out
 
 
@@ -565,6 +667,24 @@ class App(BaseHTTPRequestHandler):
                     con.close()
                 return self._json(200, {"h": {}, "streak": 0, "best": 0, "fav": {}, "miss": {}, "updated": 0})
 
+        if api == "progress28":
+            row = self._user()
+            if not row:
+                return self._err(401, "not signed in")
+            if method == "GET":
+                return self._get_progress(row["id"], "progress28")
+            if method == "PUT":
+                return self._put_progress(row["id"], "progress28",
+                                          clean_progress28, merge28)
+            if method == "DELETE":
+                con = connect()
+                try:
+                    con.execute("DELETE FROM progress28 WHERE uid = ?", (row["id"],))
+                    con.commit()
+                finally:
+                    con.close()
+                return self._json(200, {"h": {}, "streak": 0, "best": 0, "fav": {}, "miss": {}, "updated": 0})
+
         return self._err(404, "no such endpoint")
 
     def _register(self):
@@ -640,10 +760,11 @@ class App(BaseHTTPRequestHandler):
     def _cookie_header(self, token):
         return "%s=%s; Path=/; HttpOnly; SameSite=Lax; Max-Age=%d" % (COOKIE, token, SESSION_SECS)
 
-    def _get_progress(self, uid):
+    def _get_progress(self, uid, table="progress"):
+        table = table if table in PROGRESS_TABLES else "progress"
         con = connect()
         try:
-            row = con.execute("SELECT blob, updated FROM progress WHERE uid = ?", (uid,)).fetchone()
+            row = con.execute("SELECT blob, updated FROM %s WHERE uid = ?" % table, (uid,)).fetchone()
         finally:
             con.close()
         if not row:
@@ -662,22 +783,26 @@ class App(BaseHTTPRequestHandler):
         data["updated"] = int(row["updated"])
         return self._json(200, data)
 
-    def _put_progress(self, uid):
-        incoming = clean_progress(self._body())
+    def _put_progress(self, uid, table="progress", cleaner=None, merger=None):
+        table = table if table in PROGRESS_TABLES else "progress"
+        cleaner = cleaner or clean_progress
+        merger = merger or merge
+        incoming = cleaner(self._body())
         con = connect()
         try:
-            row = con.execute("SELECT blob FROM progress WHERE uid = ?", (uid,)).fetchone()
+            row = con.execute("SELECT blob FROM %s WHERE uid = ?" % table, (uid,)).fetchone()
             old = None
             if row:
                 try:
                     old = json.loads(row["blob"])
                 except json.JSONDecodeError:
                     old = None
-            merged = merge(old, incoming)
+            merged = merger(old, incoming)
             now = time.time()
             con.execute(
-                "INSERT INTO progress(uid, blob, updated) VALUES(?,?,?) "
-                "ON CONFLICT(uid) DO UPDATE SET blob = excluded.blob, updated = excluded.updated",
+                ("INSERT INTO %s(uid, blob, updated) VALUES(?,?,?) "
+                 "ON CONFLICT(uid) DO UPDATE SET blob = excluded.blob, updated = excluded.updated")
+                % table,
                 (uid, json.dumps(merged, separators=(",", ":")), now),
             )
             con.commit()
@@ -1236,7 +1361,9 @@ class App(BaseHTTPRequestHandler):
 
         if path.startswith(("/q/", "/pq/", "/katex/")):
             cache = "public, max-age=2592000, immutable"
-        elif ext in (".html",):
+        elif ext in (".html",) or path in ("/bank.js", "/app.css"):
+            # The question bank is generated data and may be edited without a
+            # page rebuild; never let a stale copy survive a day in a browser.
             cache = "no-cache"
         else:
             cache = "public, max-age=86400"

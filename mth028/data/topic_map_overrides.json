@@ -1,0 +1,27 @@
+{
+  "note": "manual overrides for low-confidence keyword classifications; only confidence:0 fallback items are corrected, all target topics are within 1.1-1.9",
+  "overrides": [
+    {"qid": "q1-11", "topic": "1.5", "reason": "裁图题干为 Find the general solution，选项全是 x = p + t·v 参数向量形式；对应汇总版考点 5.3 通解与参数向量形式（1.5），非 1.1 初等行变换"},
+    {"qid": "q1-13", "topic": "1.2", "reason": "填空题（blanks=1）：给出 A 与含参数 k 的 b，求 k 使 Ax=b 相容；对应汇总版考点 2.3 相容性判定与参数求解（1.2）"},
+    {"qid": "q2-06", "topic": "1.5", "reason": "Find the general solution，选项为 x = p + t·v 参数向量形式（quiz_structured 答案含 t∈R），属通解与参数向量形式（1.5）"},
+    {"qid": "q2-14", "topic": "1.2", "reason": "裁图显示 A 与 b=[22,32,k]，填空题求 k；同款题型为求 k 使 Ax=b 相容，属相容性判定与参数求解（1.2）"},
+    {"qid": "q3-13", "topic": "1.2", "reason": "fill 题（答案 4），stem 含 k Ax=b 与含 k 的 b；求 k 使 Ax=b 相容，属 1.2 相容性判定与参数求解"},
+    {"qid": "q3-14", "topic": "1.5", "reason": "Find the general solution，四个选项均为 x = p + t·v 参数向量形式，属通解与参数向量形式（1.5）"},
+    {"qid": "q4-09", "topic": "1.5", "reason": "Find the general solution，选项为 x = p + t·v 参数向量形式，属通解与参数向量形式（1.5）"},
+    {"qid": "q4-12", "topic": "1.2", "reason": "fill 题（答案 -5），A 与含 k 的 b，求 k 使 Ax=b 相容，属 1.2 相容性判定与参数求解"},
+    {"qid": "q5-05", "topic": "1.2", "reason": "fill 题（答案 -3），A 与含 k 的 b，求 k 使 Ax=b 相容，属 1.2 相容性判定与参数求解"},
+    {"qid": "q5-09", "topic": "1.5", "reason": "Find the general solution，选项为 x = p + t·v 参数向量形式，属通解与参数向量形式（1.5）"},
+    {"qid": "q6-06", "topic": "1.7", "reason": "裁图题干：给线性无关的 v1,v2，选 v3 使 {v1,v2,v3} 线性相关；属线性无关（1.7）"},
+    {"qid": "q6-08", "topic": "1.7", "reason": "裁图题干：Which one of the following sets of vectors in R^4 is linearly independent；判断向量组线性无关，属 1.7"},
+    {"qid": "q6-11", "topic": "1.2", "reason": "fill 题（答案 8），A 与含 k 的 b，求 k 使 Ax=b 相容，属 1.2 相容性判定与参数求解"},
+    {"qid": "q7-05", "topic": "1.2", "reason": "裁图显示 A 与 b=[8,-3,k]，fill 题（答案 -9），求 k 使 Ax=b 相容，属 1.2 相容性判定与参数求解"},
+    {"qid": "q7-13", "topic": "1.7", "reason": "Which one of the following sets of vectors in R^4 is linearly independent；判断向量组线性无关，属 1.7"},
+    {"qid": "q8-06", "topic": "1.2", "reason": "fill 题（答案 9），stem 含 k Ax=b，求 k 使 Ax=b 相容，属 1.2 相容性判定与参数求解"},
+    {"qid": "q8-09", "topic": "1.7", "reason": "Which one of the following sets of vectors in R^4 is linearly independent；判断向量组线性无关，属 1.7"},
+    {"qid": "q9-03", "topic": "1.7", "reason": "给线性无关的 v1,v2，选 v3 使集合线性相关；属线性无关（1.7）"},
+    {"qid": "q9-05", "topic": "1.2", "reason": "fill 题（答案 7），A 与含 k 的 b，求 k 使 Ax=b 相容，属 1.2 相容性判定与参数求解"},
+    {"qid": "q9-11", "topic": "1.7", "reason": "Which one of the following sets of vectors in R^4 is linearly independent；判断向量组线性无关，属 1.7"},
+    {"qid": "q10-07", "topic": "1.7", "reason": "Which one of the following sets of vectors in R^4 is linearly independent；判断向量组线性无关，属 1.7"},
+    {"qid": "q10-10", "topic": "1.2", "reason": "fill 题（答案 0），stem 含 k Ax=b，求 k 使 Ax=b 相容，属 1.2 相容性判定与参数求解"}
+  ]
+}

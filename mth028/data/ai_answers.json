@@ -1,0 +1,830 @@
+{
+  "generated_by": "AI",
+  "note": "These answers are AI-computed because the Moodle review PDF did not print a correct answer for these items (they were answered incorrectly). Please verify before relying on them. Clarification added by the computing agent: a subset of these items were in fact answered correctly by the student (the page shows 'Your answer is correct.'); Moodle simply did not print a separate 'The correct answer is:' line for them. Every answer below was independently recomputed from the question image, and the student's correct entries were used only as a cross-check, not as the source.",
+  "items": [
+    {
+      "qid": "q1-05",
+      "quiz": 1,
+      "qno": 5,
+      "label": "Q1-05",
+      "type": "fill",
+      "answer": [
+        "-18"
+      ],
+      "answer_display": "-18",
+      "method": "由 A[3,0]^T=A[-4,9]^T=b 得 A([3,0]^T-[-4,9]^T)=A[7,-9]^T=0，零空间由 [7,-9]^T 张成；A 非零且 Ax=0 有非零解 ⇒ rank(A)=1，零空间一维。令 [14,h]^T=t[7,-9]^T，由 14=7t 得 t=2，故 h=-18。 交叉验证：学生原答案 -18，该题页面判为 Correct，与独立计算一致。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Let A be a 2 x 2 nonzero matrix, and b be a nonzero vector in R^2. Suppose that A[3,0]^T = b and A[-4,9]^T = b. If x = [14,h]^T is a nonzero solution of the homogeneous equation Ax = 0, then h = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "-18"
+      ],
+      "answerText": "-18",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": {
+        "status": "student_correct",
+        "student_answer": "-18",
+        "note": "该页标记 Your answer is correct.，学生填值与独立计算一致；仅用于交叉验证，原卷仍无印刷标准答案，答案来源仍为 ai。"
+      }
+    },
+    {
+      "qid": "q2-07",
+      "quiz": 2,
+      "qno": 7,
+      "label": "Q2-07",
+      "type": "fill",
+      "answer": [
+        "-10"
+      ],
+      "answer_display": "-10",
+      "method": "差向量 [-2,-7]^T-[-7,-2]^T=[5,-5]^T 在零空间中，且零空间一维由其张成。令 [g,10]^T=t[5,-5]^T，由 10=-5t 得 t=-2，故 g=-10。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Let A be a 2 x 2 nonzero matrix, and b be a nonzero vector in R^2. Suppose that A[-2,-7]^T = b and A[-7,-2]^T = b. If x = [g,10]^T is a nonzero solution of the homogeneous equation Ax = 0, then g = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "-10"
+      ],
+      "answerText": "-10",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q3-15",
+      "quiz": 3,
+      "qno": 15,
+      "label": "Q3-15",
+      "type": "fill",
+      "answer": [
+        "16"
+      ],
+      "answer_display": "16",
+      "method": "差向量 [1,-3]^T-[9,5]^T=[-8,-8]^T 张成一维零空间。令 [16,h]^T=t[-8,-8]^T，由 16=-8t 得 t=-2，故 h=16。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Let A be a 2 x 2 nonzero matrix, and b be a nonzero vector in R^2. Suppose that A[1,-3]^T = b and A[9,5]^T = b. If x = [16,h]^T is a nonzero solution of the homogeneous equation Ax = 0, then h = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "16"
+      ],
+      "answerText": "16",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q4-03",
+      "quiz": 4,
+      "qno": 3,
+      "label": "Q4-03",
+      "type": "fill",
+      "answer": [
+        "10"
+      ],
+      "answer_display": "10",
+      "method": "差向量 [2,7]^T-[7,2]^T=[-5,5]^T 张成一维零空间。令 [g,-10]^T=t[-5,5]^T，由 -10=5t 得 t=-2，故 g=10。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Let A be a 2 x 2 nonzero matrix, and b be a nonzero vector in R^2. Suppose that A[2,7]^T = b and A[7,2]^T = b. If x = [g,-10]^T is a nonzero solution of the homogeneous equation Ax = 0, then g = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "10"
+      ],
+      "answerText": "10",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q5-06",
+      "quiz": 5,
+      "qno": 6,
+      "label": "Q5-06",
+      "type": "fill",
+      "answer": [
+        "2"
+      ],
+      "answer_display": "2",
+      "method": "差向量 [-5,-3]^T-[-4,-9]^T=[-1,6]^T 张成一维零空间。令 [g,-12]^T=t[-1,6]^T，由 -12=6t 得 t=-2，故 g=2。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Let A be a 2 x 2 nonzero matrix, and b be a nonzero vector in R^2. Suppose that A[-5,-3]^T = b and A[-4,-9]^T = b. If x = [g,-12]^T is a nonzero solution of the homogeneous equation Ax = 0, then g = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "2"
+      ],
+      "answerText": "2",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q6-10",
+      "quiz": 6,
+      "qno": 10,
+      "label": "Q6-10",
+      "type": "fill",
+      "answer": [
+        "14"
+      ],
+      "answer_display": "14",
+      "method": "差向量 [3,6]^T-[-4,1]^T=[7,5]^T 张成一维零空间。令 [g,10]^T=t[7,5]^T，由 10=5t 得 t=2，故 g=14。 交叉验证：学生原答案 14，该题页面判为 Correct，与独立计算一致。同页相邻选择题的 'The correct answer is: 8' 与本题无关。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Let A be a 2 x 2 nonzero matrix, and b be a nonzero vector in R^2. Suppose that A[3,6]^T = b and A[-4,1]^T = b. If x = [g,10]^T is a nonzero solution of the homogeneous equation Ax = 0, then g = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "14"
+      ],
+      "answerText": "14",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": {
+        "status": "student_correct",
+        "student_answer": "14",
+        "note": "该页标记 Your answer is correct.，学生填值与独立计算一致；仅用于交叉验证，原卷仍无印刷标准答案，答案来源仍为 ai。"
+      }
+    },
+    {
+      "qid": "q7-10",
+      "quiz": 7,
+      "qno": 10,
+      "label": "Q7-10",
+      "type": "fill",
+      "answer": [
+        "16"
+      ],
+      "answer_display": "16",
+      "method": "差向量 [-1,-7]^T-[0,1]^T=[-1,-8]^T 张成一维零空间。令 [2,h]^T=t[-1,-8]^T，由 2=-t 得 t=-2，故 h=16。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Let A be a 2 x 2 nonzero matrix, and b be a nonzero vector in R^2. Suppose that A[-1,-7]^T = b and A[0,1]^T = b. If x = [2,h]^T is a nonzero solution of the homogeneous equation Ax = 0, then h = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "16"
+      ],
+      "answerText": "16",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q8-14",
+      "quiz": 8,
+      "qno": 14,
+      "label": "Q8-14",
+      "type": "fill",
+      "answer": [
+        "-16"
+      ],
+      "answer_display": "-16",
+      "method": "差向量 [7,1]^T-[3,9]^T=[4,-8]^T 张成一维零空间。令 [8,h]^T=t[4,-8]^T，由 8=4t 得 t=2，故 h=-16。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Let A be a 2 x 2 nonzero matrix, and b be a nonzero vector in R^2. Suppose that A[7,1]^T = b and A[3,9]^T = b. If x = [8,h]^T is a nonzero solution of the homogeneous equation Ax = 0, then h = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "-16"
+      ],
+      "answerText": "-16",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q9-07",
+      "quiz": 9,
+      "qno": 7,
+      "label": "Q9-07",
+      "type": "fill",
+      "answer": [
+        "-12"
+      ],
+      "answer_display": "-12",
+      "method": "差向量 [-2,-5]^T-[4,0]^T=[-6,-5]^T 张成一维零空间。令 [g,-10]^T=t[-6,-5]^T，由 -10=-5t 得 t=2，故 g=-12。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Let A be a 2 x 2 nonzero matrix, and b be a nonzero vector in R^2. Suppose that A[-2,-5]^T = b and A[4,0]^T = b. If x = [g,-10]^T is a nonzero solution of the homogeneous equation Ax = 0, then g = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "-12"
+      ],
+      "answerText": "-12",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q10-09",
+      "quiz": 10,
+      "qno": 9,
+      "label": "Q10-09",
+      "type": "fill",
+      "answer": [
+        "-6"
+      ],
+      "answer_display": "-6",
+      "method": "差向量 [-7,3]^T-[0,6]^T=[-7,-3]^T 张成一维零空间。令 [-14,h]^T=t[-7,-3]^T，由 -14=-7t 得 t=2，故 h=-6。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Let A be a 2 x 2 nonzero matrix, and b be a nonzero vector in R^2. Suppose that A[-7,3]^T = b and A[0,6]^T = b. If x = [-14,h]^T is a nonzero solution of the homogeneous equation Ax = 0, then h = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "-6"
+      ],
+      "answerText": "-6",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q6-02",
+      "quiz": 6,
+      "qno": 2,
+      "label": "Q6-02",
+      "type": "fill",
+      "answer": [
+        "12"
+      ],
+      "answer_display": "12",
+      "method": "三向量线性相关 ⇔ det[v1 v2 v3]=0。按含 x 的行/列展开得 det = 8x-96=0，解得 x=12。 交叉验证：学生原答案 12，该题页面判为 Correct，与独立计算一致。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Consider the three vectors v1=[2,6,-2]^T, v2=[0,-6,-4]^T, v3=[-2,x,14]^T. If {v1,v2,v3} is linearly dependent, then x = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "12"
+      ],
+      "answerText": "12",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": {
+        "status": "student_correct",
+        "student_answer": "12",
+        "note": "该页标记 Your answer is correct.，学生填值与独立计算一致；仅用于交叉验证，原卷仍无印刷标准答案，答案来源仍为 ai。"
+      }
+    },
+    {
+      "qid": "q7-02",
+      "quiz": 7,
+      "qno": 2,
+      "label": "Q7-02",
+      "type": "fill",
+      "answer": [
+        "13"
+      ],
+      "answer_display": "13",
+      "method": "det[v1 v2 v3]=0 ⇒ 42x-546=0，解得 x=13。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Consider the three vectors v1=[0,-8,6]^T, v2=[7,-3,8]^T, v3=[7,x,-4]^T. If {v1,v2,v3} is linearly dependent, then x = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "13"
+      ],
+      "answerText": "13",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q8-05",
+      "quiz": 8,
+      "qno": 5,
+      "label": "Q8-05",
+      "type": "fill",
+      "answer": [
+        "3"
+      ],
+      "answer_display": "3",
+      "method": "det[v1 v2 v3]=0 ⇒ 14x-42=0，解得 x=3。该页另有相邻题 'The correct answer is: 9'（求 k 使 Ax=b 相容的另一题），与本题无关，已核对排除。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Consider the three vectors v1=[6,8,7]^T, v2=[3,-2,0]^T, v3=[x,10,7]^T. If {v1,v2,v3} is linearly dependent, then x = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "3"
+      ],
+      "answerText": "3",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q9-06",
+      "quiz": 9,
+      "qno": 6,
+      "label": "Q9-06",
+      "type": "fill",
+      "answer": [
+        "9"
+      ],
+      "answer_display": "9",
+      "method": "det[v1 v2 v3]=0 ⇒ 14x-126=0，解得 x=9（已用 PDF 文本层核对 v1,v2,v3 各分量，并用有理数精确复算）。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Consider the three vectors v1=[2,0,-7]^T, v2=[-5,2,5]^T, v3=[x,-6,6]^T. If {v1,v2,v3} is linearly dependent, then x = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "9"
+      ],
+      "answerText": "9",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q10-04",
+      "quiz": 10,
+      "qno": 4,
+      "label": "Q10-04",
+      "type": "fill",
+      "answer": [
+        "-14"
+      ],
+      "answer_display": "-14",
+      "method": "det[v1 v2 v3]=0 ⇒ -15x-210=0，解得 x=-14。",
+      "confidence": "high",
+      "blanks": 1,
+      "raw_question": "Consider the three vectors v1=[5,7,7]^T, v2=[0,-3,7]^T, v3=[-5,-4,x]^T. If {v1,v2,v3} is linearly dependent, then x = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "-14"
+      ],
+      "answerText": "-14",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q6-05",
+      "quiz": 6,
+      "qno": 5,
+      "label": "Q6-05",
+      "type": "fill",
+      "answer": [
+        "4",
+        "2"
+      ],
+      "answer_display": "m = 4, n = 2",
+      "method": "T(x)=Ax 要求 x 的维数等于 A 的列数、Ax 的维数等于 A 的行数。A 为 2x4 矩阵，故 m=列数=4，n=行数=2。 交叉验证：学生原答案 4、2，该题页面判为 Correct，与独立计算一致。",
+      "confidence": "high",
+      "blanks": 2,
+      "raw_question": "Let T: R^m -> R^n be the linear transformation defined by T(x)=Ax, where A = [4 -3 -3 -5; -4 -4 -2 3]. Then m = ___, n = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "4",
+        "2"
+      ],
+      "answerText": "m = 4, n = 2",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": {
+        "status": "student_correct",
+        "student_answer": "4, 2",
+        "note": "该页标记 Your answer is correct.，学生填值与独立计算一致；仅用于交叉验证，原卷仍无印刷标准答案，答案来源仍为 ai。"
+      }
+    },
+    {
+      "qid": "q7-14",
+      "quiz": 7,
+      "qno": 14,
+      "label": "Q7-14",
+      "type": "fill",
+      "answer": [
+        "4",
+        "3"
+      ],
+      "answer_display": "m = 4, n = 3",
+      "method": "A 为 3x4 矩阵，故 m=列数=4，n=行数=3。",
+      "confidence": "high",
+      "blanks": 2,
+      "raw_question": "Let T: R^m -> R^n be the linear transformation defined by T(x)=Ax, where A = [3 -2 -2 -5; 3 1 -5 2; -4 3 -5 -1]. Then m = ___, n = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "4",
+        "3"
+      ],
+      "answerText": "m = 4, n = 3",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q8-02",
+      "quiz": 8,
+      "qno": 2,
+      "label": "Q8-02",
+      "type": "fill",
+      "answer": [
+        "2",
+        "5"
+      ],
+      "answer_display": "m = 2, n = 5",
+      "method": "A 为 5x2 矩阵，故 m=列数=2，n=行数=5。",
+      "confidence": "high",
+      "blanks": 2,
+      "raw_question": "Let T: R^m -> R^n be the linear transformation defined by T(x)=Ax, where A = [-2 -1; -5 -4; 3 4; -2 4; 5 -2]. Then m = ___, n = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "2",
+        "5"
+      ],
+      "answerText": "m = 2, n = 5",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q9-14",
+      "quiz": 9,
+      "qno": 14,
+      "label": "Q9-14",
+      "type": "fill",
+      "answer": [
+        "2",
+        "3"
+      ],
+      "answer_display": "m = 2, n = 3",
+      "method": "A 为 3x2 矩阵，故 m=列数=2，n=行数=3。",
+      "confidence": "high",
+      "blanks": 2,
+      "raw_question": "Let T: R^m -> R^n be the linear transformation defined by T(x)=Ax, where A = [-4 5; 1 2; -2 -4]. Then m = ___, n = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "2",
+        "3"
+      ],
+      "answerText": "m = 2, n = 3",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q10-08",
+      "quiz": 10,
+      "qno": 8,
+      "label": "Q10-08",
+      "type": "fill",
+      "answer": [
+        "5",
+        "4"
+      ],
+      "answer_display": "m = 5, n = 4",
+      "method": "A 为 4x5 矩阵，故 m=列数=5，n=行数=4。",
+      "confidence": "high",
+      "blanks": 2,
+      "raw_question": "Let T: R^m -> R^n be the linear transformation defined by T(x)=Ax, where A = [1 1 -4 -4 2; -3 3 2 -3 -1; -3 -4 1 -2 -3; 1 -4 -3 -4 3]. Then m = ___, n = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "5",
+        "4"
+      ],
+      "answerText": "m = 5, n = 4",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q6-13",
+      "quiz": 6,
+      "qno": 13,
+      "label": "Q6-13",
+      "type": "fill",
+      "answer": [
+        "1",
+        "-1"
+      ],
+      "answer_display": "a = 1, b = -1",
+      "method": "令自由变量 x3=1。由第一式 x1=5x2+6x3，代入第二式得 -4x2-4x3=0 ⇒ x2=-x3=-1，回代 x1=x3=1。故通解 x=x3[1,-1,1]^T，即 a=1, b=-1。 交叉验证：学生原答案 1、-1，该题页面判为 Correct，与独立计算一致。",
+      "confidence": "high",
+      "blanks": 2,
+      "raw_question": "Consider the homogeneous linear system { x1 - 5x2 - 6x3 = 0 ; -2x1 + 6x2 + 8x3 = 0 }. The system has nontrivial solutions. Write the general solution in parametric vector form: x = x3 [a,b,1]^T. a = ___, b = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "1",
+        "-1"
+      ],
+      "answerText": "a = 1, b = -1",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": {
+        "status": "student_correct",
+        "student_answer": "1, -1",
+        "note": "该页标记 Your answer is correct.，学生填值与独立计算一致；仅用于交叉验证，原卷仍无印刷标准答案，答案来源仍为 ai。"
+      }
+    },
+    {
+      "qid": "q7-15",
+      "quiz": 7,
+      "qno": 15,
+      "label": "Q7-15",
+      "type": "fill",
+      "answer": [
+        "-3",
+        "3"
+      ],
+      "answer_display": "a = -3, b = 3",
+      "method": "令 x3=1。由第一式 x1=-4x2+9x3，代入第二式得 -27x2+81x3=0 ⇒ x2=3x3=3，回代 x1=-3x3=-3。故 a=-3, b=3。",
+      "confidence": "high",
+      "blanks": 2,
+      "raw_question": "Consider the homogeneous linear system { x1 + 4x2 - 9x3 = 0 ; 8x1 + 5x2 + 9x3 = 0 }. The system has nontrivial solutions. Write the general solution in parametric vector form: x = x3 [a,b,1]^T. a = ___, b = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "-3",
+        "3"
+      ],
+      "answerText": "a = -3, b = 3",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q8-10",
+      "quiz": 8,
+      "qno": 10,
+      "label": "Q8-10",
+      "type": "fill",
+      "answer": [
+        "-3",
+        "-2"
+      ],
+      "answer_display": "a = -3, b = -2",
+      "method": "令 x3=1。由第一式 x1=6x2+9x3，代入第二式得 -10x2-20x3=0 ⇒ x2=-2x3=-2，回代 x1=-3x3=-3。故 a=-3, b=-2。",
+      "confidence": "high",
+      "blanks": 2,
+      "raw_question": "Consider the homogeneous linear system { x1 - 6x2 - 9x3 = 0 ; -2x1 + 2x2 - 2x3 = 0 }. The system has nontrivial solutions. Write the general solution in parametric vector form: x = x3 [a,b,1]^T. a = ___, b = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "-3",
+        "-2"
+      ],
+      "answerText": "a = -3, b = -2",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q9-08",
+      "quiz": 9,
+      "qno": 8,
+      "label": "Q9-08",
+      "type": "fill",
+      "answer": [
+        "1",
+        "-1"
+      ],
+      "answer_display": "a = 1, b = -1",
+      "method": "令 x3=1。由第一式 x1=x2+2x3，代入第二式得 -3x2-3x3=0 ⇒ x2=-x3=-1，回代 x1=x3=1。故 a=1, b=-1。",
+      "confidence": "high",
+      "blanks": 2,
+      "raw_question": "Consider the homogeneous linear system { x1 - x2 - 2x3 = 0 ; -6x1 + 3x2 + 9x3 = 0 }. The system has nontrivial solutions. Write the general solution in parametric vector form: x = x3 [a,b,1]^T. a = ___, b = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "1",
+        "-1"
+      ],
+      "answerText": "a = 1, b = -1",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q10-02",
+      "quiz": 10,
+      "qno": 2,
+      "label": "Q10-02",
+      "type": "fill",
+      "answer": [
+        "9",
+        "4"
+      ],
+      "answer_display": "a = 9, b = 4",
+      "method": "令 x3=1。由第一式 x1=x2+5x3，代入第二式得 -2x2+8x3=0 ⇒ x2=4x3=4，回代 x1=9x3=9。故 a=9, b=4。",
+      "confidence": "high",
+      "blanks": 2,
+      "raw_question": "Consider the homogeneous linear system { x1 - x2 - 5x3 = 0 ; 2x1 - 4x2 - 2x3 = 0 }. The system has nontrivial solutions. Write the general solution in parametric vector form: x = x3 [a,b,1]^T. a = ___, b = ___.",
+      "answer_source": "ai",
+      "answers": [
+        "9",
+        "4"
+      ],
+      "answerText": "a = 9, b = 4",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q6-07",
+      "quiz": 6,
+      "qno": 7,
+      "label": "Q6-07",
+      "type": "fill",
+      "answer": [
+        "-5",
+        "2",
+        "3",
+        "2"
+      ],
+      "answer_display": "a = -5, b = 2, c = 3, d = 2",
+      "method": "A 的第二列 = T(e2)=[2,2]^T，故 b=2, d=2；又 A[1,-2]^T = 第一列 - 2·第二列 = [-9,-1]^T，得 a-2b=-9 ⇒ a=-5，c-2d=-1 ⇒ c=3。 交叉验证：学生原答案 -5、2、3、2，该题页面判为 Correct，与独立计算一致。",
+      "confidence": "high",
+      "blanks": 4,
+      "raw_question": "Let T: R^2 -> R^2 be a linear transformation satisfying T([1,-2]^T)=[-9,-1]^T and T([0,1]^T)=[2,2]^T. Let A=[a b; c d] be the matrix satisfying T(x)=Ax for all x in R^2, then a=___, b=___, c=___, d=___.",
+      "answer_source": "ai",
+      "answers": [
+        "-5",
+        "2",
+        "3",
+        "2"
+      ],
+      "answerText": "a = -5, b = 2, c = 3, d = 2",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": {
+        "status": "student_correct",
+        "student_answer": "-5, 2, 3, 2",
+        "note": "该页标记 Your answer is correct.，学生填值与独立计算一致；仅用于交叉验证，原卷仍无印刷标准答案，答案来源仍为 ai。"
+      }
+    },
+    {
+      "qid": "q7-11",
+      "quiz": 7,
+      "qno": 11,
+      "label": "Q7-11",
+      "type": "fill",
+      "answer": [
+        "1",
+        "-5",
+        "8",
+        "-9"
+      ],
+      "answer_display": "a = 1, b = -5, c = 8, d = -9",
+      "method": "A 的第一列 = T(e1)=[1,8]^T，故 a=1, c=8；又 A[2,1]^T = 2·第一列 + 第二列 = [-3,7]^T，得 2a+b=-3 ⇒ b=-5，2c+d=7 ⇒ d=-9。",
+      "confidence": "high",
+      "blanks": 4,
+      "raw_question": "Let T: R^2 -> R^2 be a linear transformation satisfying T([1,0]^T)=[1,8]^T and T([2,1]^T)=[-3,7]^T. Let A=[a b; c d] be the matrix satisfying T(x)=Ax for all x in R^2, then a=___, b=___, c=___, d=___.",
+      "answer_source": "ai",
+      "answers": [
+        "1",
+        "-5",
+        "8",
+        "-9"
+      ],
+      "answerText": "a = 1, b = -5, c = 8, d = -9",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q8-01",
+      "quiz": 8,
+      "qno": 1,
+      "label": "Q8-01",
+      "type": "fill",
+      "answer": [
+        "9",
+        "7",
+        "6",
+        "7"
+      ],
+      "answer_display": "a = 9, b = 7, c = 6, d = 7",
+      "method": "A 的第二列 = T(e2)=[7,7]^T，故 b=7, d=7；又 A[1,-2]^T = 第一列 - 2·第二列 = [-5,-8]^T，得 a-14=-5 ⇒ a=9，c-14=-8 ⇒ c=6。",
+      "confidence": "high",
+      "blanks": 4,
+      "raw_question": "Let T: R^2 -> R^2 be a linear transformation satisfying T([1,-2]^T)=[-5,-8]^T and T([0,1]^T)=[7,7]^T. Let A=[a b; c d] be the matrix satisfying T(x)=Ax for all x in R^2, then a=___, b=___, c=___, d=___.",
+      "answer_source": "ai",
+      "answers": [
+        "9",
+        "7",
+        "6",
+        "7"
+      ],
+      "answerText": "a = 9, b = 7, c = 6, d = 7",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q9-13",
+      "quiz": 9,
+      "qno": 13,
+      "label": "Q9-13",
+      "type": "fill",
+      "answer": [
+        "3",
+        "-10",
+        "-3",
+        "5"
+      ],
+      "answer_display": "a = 3, b = -10, c = -3, d = 5",
+      "method": "A 的第一列 = T(e1)=[3,-3]^T，故 a=3, c=-3；又 A[3,1]^T = 3·第一列 + 第二列 = [-1,-4]^T，得 3a+b=-1 ⇒ b=-10，3c+d=-4 ⇒ d=5。",
+      "confidence": "high",
+      "blanks": 4,
+      "raw_question": "Let T: R^2 -> R^2 be a linear transformation satisfying T([1,0]^T)=[3,-3]^T and T([3,1]^T)=[-1,-4]^T. Let A=[a b; c d] be the matrix satisfying T(x)=Ax for all x in R^2, then a=___, b=___, c=___, d=___.",
+      "answer_source": "ai",
+      "answers": [
+        "3",
+        "-10",
+        "-3",
+        "5"
+      ],
+      "answerText": "a = 3, b = -10, c = -3, d = 5",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    },
+    {
+      "qid": "q10-13",
+      "quiz": 10,
+      "qno": 13,
+      "label": "Q10-13",
+      "type": "fill",
+      "answer": [
+        "-4",
+        "7",
+        "-1",
+        "-6"
+      ],
+      "answer_display": "a = -4, b = 7, c = -1, d = -6",
+      "method": "A 的第一列 = T(e1)=[-4,-1]^T，故 a=-4, c=-1；又 A[3,1]^T = 3·第一列 + 第二列 = [-5,-9]^T，得 3a+b=-5 ⇒ b=7，3c+d=-9 ⇒ d=-6。",
+      "confidence": "high",
+      "blanks": 4,
+      "raw_question": "Let T: R^2 -> R^2 be a linear transformation satisfying T([1,0]^T)=[-4,-1]^T and T([3,1]^T)=[-5,-9]^T. Let A=[a b; c d] be the matrix satisfying T(x)=Ax for all x in R^2, then a=___, b=___, c=___, d=___.",
+      "answer_source": "ai",
+      "answers": [
+        "-4",
+        "7",
+        "-1",
+        "-6"
+      ],
+      "answerText": "a = -4, b = 7, c = -1, d = -6",
+      "key": null,
+      "keyConfidence": "high",
+      "answerSource": "ai",
+      "aiGenerated": true,
+      "cross_check": null
+    }
+  ]
+}

@@ -1,0 +1,3452 @@
+[
+ {
+  "qid": "q1-01",
+  "quiz": 1,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:6",
+  "img": "img/q/q1-01.png",
+  "answer_img": "img/a/q1-01.png",
+  "head": {
+   "p": 0,
+   "y": 237.6
+  },
+  "next": {
+   "p": 1,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 0,
+   "y0": 231.6,
+   "y1": 432.1
+  }
+ },
+ {
+  "qid": "q1-02",
+  "quiz": 1,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:(−3, −3, 3)",
+  "img": "img/q/q1-02.png",
+  "answer_img": "img/a/q1-02.png",
+  "head": {
+   "p": 1,
+   "y": 38.1
+  },
+  "next": {
+   "p": 2,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 1,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q1-03",
+  "quiz": 1,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎧xxxx | −8 −2 −8 + 6 = −6 | 1234 | ⎨ | xxx x | 4 −6 + 4 + = −3 | ⎩1234 | xx xx | 3 −8 + −6 = −2 | 1234",
+  "img": "img/q/q1-03.png",
+  "answer_img": "img/a/q1-03.png",
+  "head": {
+   "p": 2,
+   "y": 38.1
+  },
+  "next": {
+   "p": 3,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 2,
+   "y0": 32.1,
+   "y1": 599.3
+  }
+ },
+ {
+  "qid": "q1-04",
+  "quiz": 1,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "x x x | Thecorrectansweris:4+7+−4=5 | 123 | ⎣⎦⎣⎦⎣⎦⎣⎦ | −3−9−3−8",
+  "img": "img/q/q1-04.png",
+  "answer_img": "img/a/q1-04.png",
+  "head": {
+   "p": 3,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 3,
+   "y0": 32.1,
+   "y1": 512.3
+  }
+ },
+ {
+  "qid": "q1-05",
+  "quiz": 1,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q1-05.png",
+  "answer_img": null,
+  "head": {
+   "p": 4,
+   "y": 38.1
+  },
+  "next": {
+   "p": 5,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 4,
+   "y0": 32.1,
+   "y1": 297.8
+  }
+ },
+ {
+  "qid": "q1-06",
+  "quiz": 1,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:−656 | ⎣⎦ | −98−3",
+  "img": "img/q/q1-06.png",
+  "answer_img": "img/a/q1-06.png",
+  "head": {
+   "p": 5,
+   "y": 38.1
+  },
+  "next": {
+   "p": 6,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 5,
+   "y0": 32.1,
+   "y1": 502.6
+  }
+ },
+ {
+  "qid": "q1-07",
+  "quiz": 1,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | 0",
+  "img": "img/q/q1-07.png",
+  "answer_img": "img/a/q1-07.png",
+  "head": {
+   "p": 6,
+   "y": 38.1
+  },
+  "next": {
+   "p": 7,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 6,
+   "y0": 32.1,
+   "y1": 412.3
+  }
+ },
+ {
+  "qid": "q1-08",
+  "quiz": 1,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | −14",
+  "img": "img/q/q1-08.png",
+  "answer_img": "img/a/q1-08.png",
+  "head": {
+   "p": 7,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 7,
+   "y0": 32.1,
+   "y1": 384.1
+  }
+ },
+ {
+  "qid": "q1-09",
+  "quiz": 1,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡32−11⎤ | 0020 | ⎣⎦ | 0000",
+  "img": "img/q/q1-09.png",
+  "answer_img": "img/a/q1-09.png",
+  "head": {
+   "p": 8,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 8,
+   "y0": 32.1,
+   "y1": 531.1
+  }
+ },
+ {
+  "qid": "q1-10",
+  "quiz": 1,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: Multiplyingthefirstrowby2,followedby Multiplyingthefirstrowby | 1/2",
+  "img": "img/q/q1-10.png",
+  "answer_img": "img/a/q1-10.png",
+  "head": {
+   "p": 9,
+   "y": 38.1
+  },
+  "next": {
+   "p": 10,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 9,
+   "y0": 32.1,
+   "y1": 414.1
+  }
+ },
+ {
+  "qid": "q1-11",
+  "quiz": 1,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "x ttR | Thecorrectansweris: =0+1,   ∈ | ⎣⎦⎣⎦ | 28",
+  "img": "img/q/q1-11.png",
+  "answer_img": "img/a/q1-11.png",
+  "head": {
+   "p": 10,
+   "y": 38.1
+  },
+  "next": {
+   "p": 11,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 10,
+   "y0": 32.1,
+   "y1": 513.0
+  }
+ },
+ {
+  "qid": "q1-12",
+  "quiz": 1,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡10−11⎤ | 01−32 | ⎣⎦ | 0000",
+  "img": "img/q/q1-12.png",
+  "answer_img": "img/a/q1-12.png",
+  "head": {
+   "p": 11,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 32.1,
+   "y1": 599.3
+  }
+ },
+ {
+  "qid": "q1-13",
+  "quiz": 1,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:10 | 14 | Question",
+  "img": "img/q/q1-13.png",
+  "answer_img": "img/a/q1-13.png",
+  "head": {
+   "p": 12,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 346.4
+  },
+  "crop": {
+   "p": 12,
+   "y0": 32.1,
+   "y1": 156.8
+  }
+ },
+ {
+  "qid": "q1-14",
+  "quiz": 1,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "ab | Thecorrectansweris: = 4, = 2",
+  "img": "img/q/q1-14.png",
+  "answer_img": "img/a/q1-14.png",
+  "head": {
+   "p": 12,
+   "y": 346.4
+  },
+  "next": {
+   "p": 13,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 12,
+   "y0": 340.4,
+   "y1": 704.3
+  }
+ },
+ {
+  "qid": "q1-15",
+  "quiz": 1,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:-13",
+  "img": "img/q/q1-15.png",
+  "answer_img": "img/a/q1-15.png",
+  "head": {
+   "p": 13,
+   "y": 38.1
+  },
+  "next": {
+   "p": 13,
+   "y": 805.0
+  },
+  "crop": {
+   "p": 13,
+   "y0": 32.1,
+   "y1": 199.6
+  }
+ },
+ {
+  "qid": "q2-01",
+  "quiz": 2,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:7−91 | ⎣⎦ | −435",
+  "img": "img/q/q2-01.png",
+  "answer_img": "img/a/q2-01.png",
+  "head": {
+   "p": 1,
+   "y": 38.1
+  },
+  "next": {
+   "p": 2,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 1,
+   "y0": 32.1,
+   "y1": 502.6
+  }
+ },
+ {
+  "qid": "q2-02",
+  "quiz": 2,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:a = −18,b = −14",
+  "img": "img/q/q2-02.png",
+  "answer_img": "img/a/q2-02.png",
+  "head": {
+   "p": 2,
+   "y": 38.1
+  },
+  "next": {
+   "p": 3,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 2,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q2-03",
+  "quiz": 2,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: Adding2timesthesecondrowtothethirdrow,followedby | Subtracting2timesthesecondrowfromthethirdrow",
+  "img": "img/q/q2-03.png",
+  "answer_img": "img/a/q2-03.png",
+  "head": {
+   "p": 3,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 3,
+   "y0": 32.1,
+   "y1": 432.1
+  }
+ },
+ {
+  "qid": "q2-04",
+  "quiz": 2,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:(2, 4, 0)",
+  "img": "img/q/q2-04.png",
+  "answer_img": "img/a/q2-04.png",
+  "head": {
+   "p": 4,
+   "y": 38.1
+  },
+  "next": {
+   "p": 5,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 4,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q2-05",
+  "quiz": 2,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡10−22⎤ | 01−10 | ⎣⎦ | 0000",
+  "img": "img/q/q2-05.png",
+  "answer_img": "img/a/q2-05.png",
+  "head": {
+   "p": 5,
+   "y": 38.1
+  },
+  "next": {
+   "p": 6,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 5,
+   "y0": 32.1,
+   "y1": 599.3
+  }
+ },
+ {
+  "qid": "q2-06",
+  "quiz": 2,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "xR | Thecorrectansweris: =−3+ t−6,  t ∈ | ⎣⎦⎣⎦ | 01",
+  "img": "img/q/q2-06.png",
+  "answer_img": "img/a/q2-06.png",
+  "head": {
+   "p": 6,
+   "y": 38.1
+  },
+  "next": {
+   "p": 7,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 6,
+   "y0": 32.1,
+   "y1": 513.0
+  }
+ },
+ {
+  "qid": "q2-07",
+  "quiz": 2,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q2-07.png",
+  "answer_img": null,
+  "head": {
+   "p": 7,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 7,
+   "y0": 32.1,
+   "y1": 279.8
+  }
+ },
+ {
+  "qid": "q2-08",
+  "quiz": 2,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:x0+ x9+ x1=−5 | 123 | ⎣⎦⎣⎦⎣⎦⎣⎦ | −7−1−65",
+  "img": "img/q/q2-08.png",
+  "answer_img": "img/a/q2-08.png",
+  "head": {
+   "p": 8,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 8,
+   "y0": 32.1,
+   "y1": 512.3
+  }
+ },
+ {
+  "qid": "q2-09",
+  "quiz": 2,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:-1",
+  "img": "img/q/q2-09.png",
+  "answer_img": "img/a/q2-09.png",
+  "head": {
+   "p": 9,
+   "y": 38.1
+  },
+  "next": {
+   "p": 10,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 9,
+   "y0": 32.1,
+   "y1": 231.8
+  }
+ },
+ {
+  "qid": "q2-10",
+  "quiz": 2,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎧ | −4x −7x −2x + 8x = 6 | 1234 | ⎨ | −8x −2x −10x = 0 | ⎩124 | 7x −x + 10x + 9x = −9 | 1234",
+  "img": "img/q/q2-10.png",
+  "answer_img": "img/a/q2-10.png",
+  "head": {
+   "p": 10,
+   "y": 38.1
+  },
+  "next": {
+   "p": 11,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 10,
+   "y0": 32.1,
+   "y1": 599.3
+  }
+ },
+ {
+  "qid": "q2-11",
+  "quiz": 2,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡−2200⎤ | 00−10 | ⎣⎦ | 0000",
+  "img": "img/q/q2-11.png",
+  "answer_img": "img/a/q2-11.png",
+  "head": {
+   "p": 11,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 32.1,
+   "y1": 531.1
+  }
+ },
+ {
+  "qid": "q2-12",
+  "quiz": 2,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:-8 | 13 | Question",
+  "img": "img/q/q2-12.png",
+  "answer_img": "img/a/q2-12.png",
+  "head": {
+   "p": 12,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 356.9
+  },
+  "crop": {
+   "p": 12,
+   "y0": 32.1,
+   "y1": 199.6
+  }
+ },
+ {
+  "qid": "q2-13",
+  "quiz": 2,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | 11 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=197368&cmid=3704713/14",
+  "img": "img/q/q2-13.png",
+  "answer_img": "img/a/q2-13.png",
+  "head": {
+   "p": 12,
+   "y": 356.9
+  },
+  "next": {
+   "p": 13,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 12,
+   "y0": 350.9,
+   "y1": 702.8
+  }
+ },
+ {
+  "qid": "q2-14",
+  "quiz": 2,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:0 | 15 | Question",
+  "img": "img/q/q2-14.png",
+  "answer_img": "img/a/q2-14.png",
+  "head": {
+   "p": 13,
+   "y": 38.1
+  },
+  "next": {
+   "p": 13,
+   "y": 346.4
+  },
+  "crop": {
+   "p": 13,
+   "y0": 32.1,
+   "y1": 156.8
+  }
+ },
+ {
+  "qid": "q2-15",
+  "quiz": 2,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | −16 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=197368&cmid=3704714/14",
+  "img": "img/q/q2-15.png",
+  "answer_img": "img/a/q2-15.png",
+  "head": {
+   "p": 13,
+   "y": 346.4
+  },
+  "next": {
+   "p": 13,
+   "y": 805.0
+  },
+  "crop": {
+   "p": 13,
+   "y0": 340.4,
+   "y1": 720.5
+  }
+ },
+ {
+  "qid": "q3-01",
+  "quiz": 3,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | −35",
+  "img": "img/q/q3-01.png",
+  "answer_img": "img/a/q3-01.png",
+  "head": {
+   "p": 0,
+   "y": 237.6
+  },
+  "next": {
+   "p": 1,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 0,
+   "y0": 231.6,
+   "y1": 583.6
+  }
+ },
+ {
+  "qid": "q3-02",
+  "quiz": 3,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:2 | 3 | Question",
+  "img": "img/q/q3-02.png",
+  "answer_img": "img/a/q3-02.png",
+  "head": {
+   "p": 1,
+   "y": 38.1
+  },
+  "next": {
+   "p": 1,
+   "y": 356.9
+  },
+  "crop": {
+   "p": 1,
+   "y0": 32.1,
+   "y1": 199.6
+  }
+ },
+ {
+  "qid": "q3-03",
+  "quiz": 3,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | −78 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=197370&cmid=370472/13",
+  "img": "img/q/q3-03.png",
+  "answer_img": "img/a/q3-03.png",
+  "head": {
+   "p": 1,
+   "y": 356.9
+  },
+  "next": {
+   "p": 2,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 1,
+   "y0": 350.9,
+   "y1": 731.0
+  }
+ },
+ {
+  "qid": "q3-04",
+  "quiz": 3,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:8−6−7 | ⎣⎦ | −8−31",
+  "img": "img/q/q3-04.png",
+  "answer_img": "img/a/q3-04.png",
+  "head": {
+   "p": 2,
+   "y": 38.1
+  },
+  "next": {
+   "p": 3,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 2,
+   "y0": 32.1,
+   "y1": 502.6
+  }
+ },
+ {
+  "qid": "q3-05",
+  "quiz": 3,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:8",
+  "img": "img/q/q3-05.png",
+  "answer_img": "img/a/q3-05.png",
+  "head": {
+   "p": 3,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 3,
+   "y0": 32.1,
+   "y1": 231.8
+  }
+ },
+ {
+  "qid": "q3-06",
+  "quiz": 3,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡−2−1−2−2⎤ | 00−1−1 | ⎣⎦ | 0000",
+  "img": "img/q/q3-06.png",
+  "answer_img": "img/a/q3-06.png",
+  "head": {
+   "p": 4,
+   "y": 38.1
+  },
+  "next": {
+   "p": 5,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 4,
+   "y0": 32.1,
+   "y1": 531.1
+  }
+ },
+ {
+  "qid": "q3-07",
+  "quiz": 3,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎧xxxx | −2 − + 8 −5 = −3 | 1234 | ⎨ | x xxx | −5 + + 5 −5 = −4 | ⎩1234 | xxxx | −3 + 2 −5 + 6 = −8 | 1234",
+  "img": "img/q/q3-07.png",
+  "answer_img": "img/a/q3-07.png",
+  "head": {
+   "p": 5,
+   "y": 38.1
+  },
+  "next": {
+   "p": 6,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 5,
+   "y0": 32.1,
+   "y1": 599.3
+  }
+ },
+ {
+  "qid": "q3-08",
+  "quiz": 3,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "x x x | Thecorrectansweris:6+3+−7=−7 | 123 | ⎣⎦⎣⎦⎣⎦⎣⎦ | 62−71",
+  "img": "img/q/q3-08.png",
+  "answer_img": "img/a/q3-08.png",
+  "head": {
+   "p": 6,
+   "y": 38.1
+  },
+  "next": {
+   "p": 7,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 6,
+   "y0": 32.1,
+   "y1": 512.3
+  }
+ },
+ {
+  "qid": "q3-09",
+  "quiz": 3,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡1013⎤ | 01−33 | ⎣⎦ | 0000",
+  "img": "img/q/q3-09.png",
+  "answer_img": "img/a/q3-09.png",
+  "head": {
+   "p": 7,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 7,
+   "y0": 32.1,
+   "y1": 599.3
+  }
+ },
+ {
+  "qid": "q3-10",
+  "quiz": 3,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: Multiplyingthethirdrowby2,followedby Multiplyingthethirdrow | by1/2",
+  "img": "img/q/q3-10.png",
+  "answer_img": "img/a/q3-10.png",
+  "head": {
+   "p": 8,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 8,
+   "y0": 32.1,
+   "y1": 450.1
+  }
+ },
+ {
+  "qid": "q3-11",
+  "quiz": 3,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:(−4, −5, −4)",
+  "img": "img/q/q3-11.png",
+  "answer_img": "img/a/q3-11.png",
+  "head": {
+   "p": 9,
+   "y": 38.1
+  },
+  "next": {
+   "p": 10,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 9,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q3-12",
+  "quiz": 3,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "ab | Thecorrectansweris: = −12, = −6 | 13 | Question",
+  "img": "img/q/q3-12.png",
+  "answer_img": "img/a/q3-12.png",
+  "head": {
+   "p": 10,
+   "y": 38.1
+  },
+  "next": {
+   "p": 10,
+   "y": 488.9
+  },
+  "crop": {
+   "p": 10,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q3-13",
+  "quiz": 3,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:4",
+  "img": "img/q/q3-13.png",
+  "answer_img": "img/a/q3-13.png",
+  "head": {
+   "p": 10,
+   "y": 488.9
+  },
+  "next": {
+   "p": 11,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 10,
+   "y0": 482.9,
+   "y1": 607.6
+  }
+ },
+ {
+  "qid": "q3-14",
+  "quiz": 3,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "x ttR | Thecorrectansweris: =0+1,   ∈ | ⎣⎦⎣⎦ | 56",
+  "img": "img/q/q3-14.png",
+  "answer_img": "img/a/q3-14.png",
+  "head": {
+   "p": 11,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 32.1,
+   "y1": 513.0
+  }
+ },
+ {
+  "qid": "q3-15",
+  "quiz": 3,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q3-15.png",
+  "answer_img": null,
+  "head": {
+   "p": 12,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 805.0
+  },
+  "crop": {
+   "p": 12,
+   "y0": 32.1,
+   "y1": 279.8
+  }
+ },
+ {
+  "qid": "q4-01",
+  "quiz": 4,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:(1, 5, 3)",
+  "img": "img/q/q4-01.png",
+  "answer_img": "img/a/q4-01.png",
+  "head": {
+   "p": 0,
+   "y": 237.6
+  },
+  "next": {
+   "p": 1,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 0,
+   "y0": 231.6,
+   "y1": 596.3
+  }
+ },
+ {
+  "qid": "q4-02",
+  "quiz": 4,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:a = −6,b = −9 | 3 | Question",
+  "img": "img/q/q4-02.png",
+  "answer_img": "img/a/q4-02.png",
+  "head": {
+   "p": 1,
+   "y": 38.1
+  },
+  "next": {
+   "p": 1,
+   "y": 488.9
+  },
+  "crop": {
+   "p": 1,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q4-03",
+  "quiz": 4,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q4-03.png",
+  "answer_img": null,
+  "head": {
+   "p": 1,
+   "y": 488.9
+  },
+  "next": {
+   "p": 2,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 1,
+   "y0": 482.9,
+   "y1": 730.6
+  }
+ },
+ {
+  "qid": "q4-04",
+  "quiz": 4,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡31−2−1⎤ | 00−3−1 | ⎣⎦ | 0000",
+  "img": "img/q/q4-04.png",
+  "answer_img": "img/a/q4-04.png",
+  "head": {
+   "p": 2,
+   "y": 38.1
+  },
+  "next": {
+   "p": 3,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 2,
+   "y0": 32.1,
+   "y1": 531.1
+  }
+ },
+ {
+  "qid": "q4-05",
+  "quiz": 4,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:22−6 | ⎣⎦ | 65−4",
+  "img": "img/q/q4-05.png",
+  "answer_img": "img/a/q4-05.png",
+  "head": {
+   "p": 3,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 3,
+   "y0": 32.1,
+   "y1": 502.6
+  }
+ },
+ {
+  "qid": "q4-06",
+  "quiz": 4,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡10−2−3⎤ | 01−2−1 | ⎣⎦ | 0000",
+  "img": "img/q/q4-06.png",
+  "answer_img": "img/a/q4-06.png",
+  "head": {
+   "p": 4,
+   "y": 38.1
+  },
+  "next": {
+   "p": 5,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 4,
+   "y0": 32.1,
+   "y1": 599.3
+  }
+ },
+ {
+  "qid": "q4-07",
+  "quiz": 4,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:-9",
+  "img": "img/q/q4-07.png",
+  "answer_img": "img/a/q4-07.png",
+  "head": {
+   "p": 5,
+   "y": 38.1
+  },
+  "next": {
+   "p": 6,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 5,
+   "y0": 32.1,
+   "y1": 231.8
+  }
+ },
+ {
+  "qid": "q4-08",
+  "quiz": 4,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:x0+ x−2+ x3=7 | 123 | ⎣⎦⎣⎦⎣⎦⎣⎦ | 3−69−8",
+  "img": "img/q/q4-08.png",
+  "answer_img": "img/a/q4-08.png",
+  "head": {
+   "p": 6,
+   "y": 38.1
+  },
+  "next": {
+   "p": 7,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 6,
+   "y0": 32.1,
+   "y1": 512.3
+  }
+ },
+ {
+  "qid": "q4-09",
+  "quiz": 4,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "xR | Thecorrectansweris: =0+ t1,  t ∈ | ⎣⎦⎣⎦ | −21",
+  "img": "img/q/q4-09.png",
+  "answer_img": "img/a/q4-09.png",
+  "head": {
+   "p": 7,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 7,
+   "y0": 32.1,
+   "y1": 513.0
+  }
+ },
+ {
+  "qid": "q4-10",
+  "quiz": 4,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎧ | 6x −4x + 5x + 7x = −5 | 1234 | ⎨ | −7x + 10x −6x + 9x = 9 | ⎩1234 | 10x + 7x −4x + 4x = 10 | 1234",
+  "img": "img/q/q4-10.png",
+  "answer_img": "img/a/q4-10.png",
+  "head": {
+   "p": 8,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 8,
+   "y0": 32.1,
+   "y1": 599.3
+  }
+ },
+ {
+  "qid": "q4-11",
+  "quiz": 4,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:9 | 12 | Question",
+  "img": "img/q/q4-11.png",
+  "answer_img": "img/a/q4-11.png",
+  "head": {
+   "p": 9,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 356.9
+  },
+  "crop": {
+   "p": 9,
+   "y0": 32.1,
+   "y1": 199.6
+  }
+ },
+ {
+  "qid": "q4-12",
+  "quiz": 4,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:-5",
+  "img": "img/q/q4-12.png",
+  "answer_img": "img/a/q4-12.png",
+  "head": {
+   "p": 9,
+   "y": 356.9
+  },
+  "next": {
+   "p": 10,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 9,
+   "y0": 350.9,
+   "y1": 475.6
+  }
+ },
+ {
+  "qid": "q4-13",
+  "quiz": 4,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | −14",
+  "img": "img/q/q4-13.png",
+  "answer_img": "img/a/q4-13.png",
+  "head": {
+   "p": 10,
+   "y": 38.1
+  },
+  "next": {
+   "p": 11,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 10,
+   "y0": 32.1,
+   "y1": 384.1
+  }
+ },
+ {
+  "qid": "q4-14",
+  "quiz": 4,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | 25",
+  "img": "img/q/q4-14.png",
+  "answer_img": "img/a/q4-14.png",
+  "head": {
+   "p": 11,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 32.1,
+   "y1": 412.3
+  }
+ },
+ {
+  "qid": "q4-15",
+  "quiz": 4,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: Multiplyingthesecondrowby3,followedby Multiplyingthesecond | rowby1/3",
+  "img": "img/q/q4-15.png",
+  "answer_img": "img/a/q4-15.png",
+  "head": {
+   "p": 12,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 805.0
+  },
+  "crop": {
+   "p": 12,
+   "y0": 32.1,
+   "y1": 432.1
+  }
+ },
+ {
+  "qid": "q5-01",
+  "quiz": 5,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎧ | 4x + 10x + 6x −5x = −2 | 1234 | ⎨ | 5x + 4x −10x + 5x = 1 | ⎩1234 | −3x −9x + 6x = 9 | 124",
+  "img": "img/q/q5-01.png",
+  "answer_img": "img/a/q5-01.png",
+  "head": {
+   "p": 1,
+   "y": 38.1
+  },
+  "next": {
+   "p": 2,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 1,
+   "y0": 32.1,
+   "y1": 599.3
+  }
+ },
+ {
+  "qid": "q5-02",
+  "quiz": 5,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:x−4+ x−2+ x9=9 | 123 | ⎣⎦⎣⎦⎣⎦⎣⎦ | 4−1−79",
+  "img": "img/q/q5-02.png",
+  "answer_img": "img/a/q5-02.png",
+  "head": {
+   "p": 2,
+   "y": 38.1
+  },
+  "next": {
+   "p": 3,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 2,
+   "y0": 32.1,
+   "y1": 512.3
+  }
+ },
+ {
+  "qid": "q5-03",
+  "quiz": 5,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: Multiplyingthesecondrowby2,followedby Multiplyingthesecond | rowby1/2",
+  "img": "img/q/q5-03.png",
+  "answer_img": "img/a/q5-03.png",
+  "head": {
+   "p": 3,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 3,
+   "y0": 32.1,
+   "y1": 432.1
+  }
+ },
+ {
+  "qid": "q5-04",
+  "quiz": 5,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | 10 | 5 | Question",
+  "img": "img/q/q5-04.png",
+  "answer_img": "img/a/q5-04.png",
+  "head": {
+   "p": 4,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 518.9
+  },
+  "crop": {
+   "p": 4,
+   "y0": 32.1,
+   "y1": 384.1
+  }
+ },
+ {
+  "qid": "q5-05",
+  "quiz": 5,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:-3 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=197374&cmid=370475/14",
+  "img": "img/q/q5-05.png",
+  "answer_img": "img/a/q5-05.png",
+  "head": {
+   "p": 4,
+   "y": 518.9
+  },
+  "next": {
+   "p": 5,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 4,
+   "y0": 512.9,
+   "y1": 637.6
+  }
+ },
+ {
+  "qid": "q5-06",
+  "quiz": 5,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q5-06.png",
+  "answer_img": null,
+  "head": {
+   "p": 5,
+   "y": 38.1
+  },
+  "next": {
+   "p": 5,
+   "y": 372.6
+  },
+  "crop": {
+   "p": 5,
+   "y0": 32.1,
+   "y1": 279.8
+  }
+ },
+ {
+  "qid": "q5-07",
+  "quiz": 5,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:a = 1,b = 1 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=197374&cmid=370476/14",
+  "img": "img/q/q5-07.png",
+  "answer_img": "img/a/q5-07.png",
+  "head": {
+   "p": 5,
+   "y": 372.6
+  },
+  "next": {
+   "p": 6,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 5,
+   "y0": 366.6,
+   "y1": 730.6
+  }
+ },
+ {
+  "qid": "q5-08",
+  "quiz": 5,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | 75",
+  "img": "img/q/q5-08.png",
+  "answer_img": "img/a/q5-08.png",
+  "head": {
+   "p": 6,
+   "y": 38.1
+  },
+  "next": {
+   "p": 7,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 6,
+   "y0": 32.1,
+   "y1": 412.3
+  }
+ },
+ {
+  "qid": "q5-09",
+  "quiz": 5,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "xR | Thecorrectansweris: =0+ t−4,  t ∈ | ⎣⎦⎣⎦ | 24",
+  "img": "img/q/q5-09.png",
+  "answer_img": "img/a/q5-09.png",
+  "head": {
+   "p": 7,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 7,
+   "y0": 32.1,
+   "y1": 513.0
+  }
+ },
+ {
+  "qid": "q5-10",
+  "quiz": 5,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:08−7 | ⎣⎦ | −87−9",
+  "img": "img/q/q5-10.png",
+  "answer_img": "img/a/q5-10.png",
+  "head": {
+   "p": 8,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 8,
+   "y0": 32.1,
+   "y1": 502.6
+  }
+ },
+ {
+  "qid": "q5-11",
+  "quiz": 5,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:5",
+  "img": "img/q/q5-11.png",
+  "answer_img": "img/a/q5-11.png",
+  "head": {
+   "p": 9,
+   "y": 38.1
+  },
+  "next": {
+   "p": 10,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 9,
+   "y0": 32.1,
+   "y1": 199.6
+  }
+ },
+ {
+  "qid": "q5-12",
+  "quiz": 5,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡−1−222⎤ | 00−21 | ⎣⎦ | 0000",
+  "img": "img/q/q5-12.png",
+  "answer_img": "img/a/q5-12.png",
+  "head": {
+   "p": 10,
+   "y": 38.1
+  },
+  "next": {
+   "p": 11,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 10,
+   "y0": 32.1,
+   "y1": 531.1
+  }
+ },
+ {
+  "qid": "q5-13",
+  "quiz": 5,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:(−2, −3, −1)",
+  "img": "img/q/q5-13.png",
+  "answer_img": "img/a/q5-13.png",
+  "head": {
+   "p": 11,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q5-14",
+  "quiz": 5,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡10−10⎤ | 01−21 | ⎣⎦ | 0000",
+  "img": "img/q/q5-14.png",
+  "answer_img": "img/a/q5-14.png",
+  "head": {
+   "p": 12,
+   "y": 38.1
+  },
+  "next": {
+   "p": 13,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 12,
+   "y0": 32.1,
+   "y1": 599.3
+  }
+ },
+ {
+  "qid": "q5-15",
+  "quiz": 5,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:-9",
+  "img": "img/q/q5-15.png",
+  "answer_img": "img/a/q5-15.png",
+  "head": {
+   "p": 13,
+   "y": 38.1
+  },
+  "next": {
+   "p": 13,
+   "y": 805.0
+  },
+  "crop": {
+   "p": 13,
+   "y0": 32.1,
+   "y1": 231.8
+  }
+ },
+ {
+  "qid": "q6-01",
+  "quiz": 6,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "xR | Thecorrectansweris: = s+ t(s, t in ) | ⎣1⎦⎣0⎦ | 01",
+  "img": "img/q/q6-01.png",
+  "answer_img": "img/a/q6-01.png",
+  "head": {
+   "p": 1,
+   "y": 38.1
+  },
+  "next": {
+   "p": 2,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 1,
+   "y0": 32.1,
+   "y1": 612.8
+  }
+ },
+ {
+  "qid": "q6-02",
+  "quiz": 6,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q6-02.png",
+  "answer_img": null,
+  "head": {
+   "p": 2,
+   "y": 38.1
+  },
+  "next": {
+   "p": 3,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 2,
+   "y0": 32.1,
+   "y1": 286.6
+  }
+ },
+ {
+  "qid": "q6-03",
+  "quiz": 6,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "⎣55⎦ | Thecorrectansweris: | √23√2 | 55",
+  "img": "img/q/q6-03.png",
+  "answer_img": "img/a/q6-03.png",
+  "head": {
+   "p": 3,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 3,
+   "y0": 32.1,
+   "y1": 432.1
+  }
+ },
+ {
+  "qid": "q6-04",
+  "quiz": 6,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎣0−77⎦ | 767",
+  "img": "img/q/q6-04.png",
+  "answer_img": "img/a/q6-04.png",
+  "head": {
+   "p": 4,
+   "y": 38.1
+  },
+  "next": {
+   "p": 5,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 4,
+   "y0": 32.1,
+   "y1": 515.3
+  }
+ },
+ {
+  "qid": "q6-05",
+  "quiz": 6,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q6-05.png",
+  "answer_img": null,
+  "head": {
+   "p": 5,
+   "y": 38.1
+  },
+  "next": {
+   "p": 6,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 5,
+   "y0": 32.1,
+   "y1": 267.1
+  }
+ },
+ {
+  "qid": "q6-06",
+  "quiz": 6,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "v | Thecorrectansweris: =⎣−6⎦ | 3 | −4",
+  "img": "img/q/q6-06.png",
+  "answer_img": "img/a/q6-06.png",
+  "head": {
+   "p": 6,
+   "y": 38.1
+  },
+  "next": {
+   "p": 7,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 6,
+   "y0": 32.1,
+   "y1": 520.6
+  }
+ },
+ {
+  "qid": "q6-07",
+  "quiz": 6,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q6-07.png",
+  "answer_img": null,
+  "head": {
+   "p": 7,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 7,
+   "y0": 32.1,
+   "y1": 302.3
+  }
+ },
+ {
+  "qid": "q6-08",
+  "quiz": 6,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:,,, | ⎩⎭ | ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ | −8−118",
+  "img": "img/q/q6-08.png",
+  "answer_img": "img/a/q6-08.png",
+  "head": {
+   "p": 8,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 8,
+   "y0": 32.1,
+   "y1": 526.6
+  }
+ },
+ {
+  "qid": "q6-09",
+  "quiz": 6,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡⎤ | −30−2−1 | ⎣00−2−2⎦ | 0000",
+  "img": "img/q/q6-09.png",
+  "answer_img": "img/a/q6-09.png",
+  "head": {
+   "p": 9,
+   "y": 38.1
+  },
+  "next": {
+   "p": 10,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 9,
+   "y0": 32.1,
+   "y1": 531.1
+  }
+ },
+ {
+  "qid": "q6-10",
+  "quiz": 6,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q6-10.png",
+  "answer_img": null,
+  "head": {
+   "p": 10,
+   "y": 38.1
+  },
+  "next": {
+   "p": 10,
+   "y": 390.6
+  },
+  "crop": {
+   "p": 10,
+   "y0": 32.1,
+   "y1": 297.8
+  }
+ },
+ {
+  "qid": "q6-11",
+  "quiz": 6,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:8",
+  "img": "img/q/q6-11.png",
+  "answer_img": "img/a/q6-11.png",
+  "head": {
+   "p": 10,
+   "y": 390.6
+  },
+  "next": {
+   "p": 11,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 10,
+   "y0": 384.6,
+   "y1": 509.3
+  }
+ },
+ {
+  "qid": "q6-12",
+  "quiz": 6,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
+  "img": "img/q/q6-12.png",
+  "answer_img": "img/a/q6-12.png",
+  "head": {
+   "p": 11,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 32.1,
+   "y1": 408.8
+  }
+ },
+ {
+  "qid": "q6-13",
+  "quiz": 6,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q6-13.png",
+  "answer_img": null,
+  "head": {
+   "p": 12,
+   "y": 38.1
+  },
+  "next": {
+   "p": 13,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 12,
+   "y0": 32.1,
+   "y1": 367.6
+  }
+ },
+ {
+  "qid": "q6-14",
+  "quiz": 6,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:Tisneitherone-to-onenoronto.",
+  "img": "img/q/q6-14.png",
+  "answer_img": "img/a/q6-14.png",
+  "head": {
+   "p": 13,
+   "y": 38.1
+  },
+  "next": {
+   "p": 14,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 13,
+   "y0": 32.1,
+   "y1": 414.1
+  }
+ },
+ {
+  "qid": "q6-15",
+  "quiz": 6,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:a = 11,b = −3",
+  "img": "img/q/q6-15.png",
+  "answer_img": "img/a/q6-15.png",
+  "head": {
+   "p": 14,
+   "y": 38.1
+  },
+  "next": {
+   "p": 14,
+   "y": 805.0
+  },
+  "crop": {
+   "p": 14,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q7-01",
+  "quiz": 7,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "ab | Thecorrectansweris: = 4, = 6",
+  "img": "img/q/q7-01.png",
+  "answer_img": "img/a/q7-01.png",
+  "head": {
+   "p": 0,
+   "y": 237.6
+  },
+  "next": {
+   "p": 1,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 0,
+   "y0": 231.6,
+   "y1": 596.3
+  }
+ },
+ {
+  "qid": "q7-02",
+  "quiz": 7,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q7-02.png",
+  "answer_img": null,
+  "head": {
+   "p": 1,
+   "y": 38.1
+  },
+  "next": {
+   "p": 2,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 1,
+   "y0": 32.1,
+   "y1": 286.6
+  }
+ },
+ {
+  "qid": "q7-03",
+  "quiz": 7,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎣530⎦ | 2−9−7",
+  "img": "img/q/q7-03.png",
+  "answer_img": "img/a/q7-03.png",
+  "head": {
+   "p": 2,
+   "y": 38.1
+  },
+  "next": {
+   "p": 3,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 2,
+   "y0": 32.1,
+   "y1": 515.3
+  }
+ },
+ {
+  "qid": "q7-04",
+  "quiz": 7,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡⎤ | 20−1−1 | ⎣00−3−1⎦ | 0000",
+  "img": "img/q/q7-04.png",
+  "answer_img": "img/a/q7-04.png",
+  "head": {
+   "p": 3,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 3,
+   "y0": 32.1,
+   "y1": 531.1
+  }
+ },
+ {
+  "qid": "q7-05",
+  "quiz": 7,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:-9",
+  "img": "img/q/q7-05.png",
+  "answer_img": "img/a/q7-05.png",
+  "head": {
+   "p": 4,
+   "y": 38.1
+  },
+  "next": {
+   "p": 5,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 4,
+   "y0": 32.1,
+   "y1": 156.8
+  }
+ },
+ {
+  "qid": "q7-06",
+  "quiz": 7,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "⎣99⎦ | Thecorrectansweris: | √46√35 | −− | 99",
+  "img": "img/q/q7-06.png",
+  "answer_img": "img/a/q7-06.png",
+  "head": {
+   "p": 5,
+   "y": 38.1
+  },
+  "next": {
+   "p": 6,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 5,
+   "y0": 32.1,
+   "y1": 432.1
+  }
+ },
+ {
+  "qid": "q7-07",
+  "quiz": 7,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
+  "img": "img/q/q7-07.png",
+  "answer_img": "img/a/q7-07.png",
+  "head": {
+   "p": 6,
+   "y": 38.1
+  },
+  "next": {
+   "p": 7,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 6,
+   "y0": 32.1,
+   "y1": 408.8
+  }
+ },
+ {
+  "qid": "q7-08",
+  "quiz": 7,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "v | Thecorrectansweris: =⎣6⎦ | 3 | 1",
+  "img": "img/q/q7-08.png",
+  "answer_img": "img/a/q7-08.png",
+  "head": {
+   "p": 7,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 7,
+   "y0": 32.1,
+   "y1": 520.6
+  }
+ },
+ {
+  "qid": "q7-09",
+  "quiz": 7,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "T | Thecorrectansweris:isone-to-onebutnotonto.",
+  "img": "img/q/q7-09.png",
+  "answer_img": "img/a/q7-09.png",
+  "head": {
+   "p": 8,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 8,
+   "y0": 32.1,
+   "y1": 434.3
+  }
+ },
+ {
+  "qid": "q7-10",
+  "quiz": 7,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q7-10.png",
+  "answer_img": null,
+  "head": {
+   "p": 9,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 372.6
+  },
+  "crop": {
+   "p": 9,
+   "y0": 32.1,
+   "y1": 279.8
+  }
+ },
+ {
+  "qid": "q7-11",
+  "quiz": 7,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q7-11.png",
+  "answer_img": null,
+  "head": {
+   "p": 9,
+   "y": 372.6
+  },
+  "next": {
+   "p": 10,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 9,
+   "y0": 366.6,
+   "y1": 636.8
+  }
+ },
+ {
+  "qid": "q7-12",
+  "quiz": 7,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "x s ts tR | Thecorrectansweris: =+(, in ) | ⎣1⎦⎣0⎦ | 01",
+  "img": "img/q/q7-12.png",
+  "answer_img": "img/a/q7-12.png",
+  "head": {
+   "p": 10,
+   "y": 38.1
+  },
+  "next": {
+   "p": 11,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 10,
+   "y0": 32.1,
+   "y1": 612.8
+  }
+ },
+ {
+  "qid": "q7-13",
+  "quiz": 7,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:,,, | ⎩⎭ | ⎣1⎦⎣4⎦⎣0⎦⎣1⎦ | −1−801",
+  "img": "img/q/q7-13.png",
+  "answer_img": "img/a/q7-13.png",
+  "head": {
+   "p": 11,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 32.1,
+   "y1": 526.6
+  }
+ },
+ {
+  "qid": "q7-14",
+  "quiz": 7,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q7-14.png",
+  "answer_img": null,
+  "head": {
+   "p": 12,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 379.4
+  },
+  "crop": {
+   "p": 12,
+   "y0": 32.1,
+   "y1": 286.6
+  }
+ },
+ {
+  "qid": "q7-15",
+  "quiz": 7,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q7-15.png",
+  "answer_img": null,
+  "head": {
+   "p": 12,
+   "y": 379.4
+  },
+  "next": {
+   "p": 12,
+   "y": 805.0
+  },
+  "crop": {
+   "p": 12,
+   "y0": 373.4,
+   "y1": 708.8
+  }
+ },
+ {
+  "qid": "q8-01",
+  "quiz": 8,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q8-01.png",
+  "answer_img": null,
+  "head": {
+   "p": 0,
+   "y": 237.6
+  },
+  "next": {
+   "p": 1,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 0,
+   "y0": 231.6,
+   "y1": 502.6
+  }
+ },
+ {
+  "qid": "q8-02",
+  "quiz": 8,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q8-02.png",
+  "answer_img": null,
+  "head": {
+   "p": 1,
+   "y": 38.1
+  },
+  "next": {
+   "p": 2,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 1,
+   "y0": 32.1,
+   "y1": 327.1
+  }
+ },
+ {
+  "qid": "q8-03",
+  "quiz": 8,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
+  "img": "img/q/q8-03.png",
+  "answer_img": "img/a/q8-03.png",
+  "head": {
+   "p": 2,
+   "y": 38.1
+  },
+  "next": {
+   "p": 3,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 2,
+   "y0": 32.1,
+   "y1": 408.8
+  }
+ },
+ {
+  "qid": "q8-04",
+  "quiz": 8,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "v | Thecorrectansweris: =⎣−5⎦ | 3 | 4",
+  "img": "img/q/q8-04.png",
+  "answer_img": "img/a/q8-04.png",
+  "head": {
+   "p": 3,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 3,
+   "y0": 32.1,
+   "y1": 520.6
+  }
+ },
+ {
+  "qid": "q8-05",
+  "quiz": 8,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q8-05.png",
+  "answer_img": null,
+  "head": {
+   "p": 4,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 379.4
+  },
+  "crop": {
+   "p": 4,
+   "y0": 32.1,
+   "y1": 286.6
+  }
+ },
+ {
+  "qid": "q8-06",
+  "quiz": 8,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:9",
+  "img": "img/q/q8-06.png",
+  "answer_img": "img/a/q8-06.png",
+  "head": {
+   "p": 4,
+   "y": 379.4
+  },
+  "next": {
+   "p": 5,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 4,
+   "y0": 373.4,
+   "y1": 498.1
+  }
+ },
+ {
+  "qid": "q8-07",
+  "quiz": 8,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡⎤ | −2022 | ⎣00−30⎦ | 0000",
+  "img": "img/q/q8-07.png",
+  "answer_img": "img/a/q8-07.png",
+  "head": {
+   "p": 5,
+   "y": 38.1
+  },
+  "next": {
+   "p": 6,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 5,
+   "y0": 32.1,
+   "y1": 531.1
+  }
+ },
+ {
+  "qid": "q8-08",
+  "quiz": 8,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "⎣77⎦ | Thecorrectansweris: | √19√30 | 77",
+  "img": "img/q/q8-08.png",
+  "answer_img": "img/a/q8-08.png",
+  "head": {
+   "p": 6,
+   "y": 38.1
+  },
+  "next": {
+   "p": 7,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 6,
+   "y0": 32.1,
+   "y1": 432.1
+  }
+ },
+ {
+  "qid": "q8-09",
+  "quiz": 8,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:,,, | ⎩⎭ | ⎣0⎦⎣4⎦⎣1⎦⎣4⎦ | 0−818",
+  "img": "img/q/q8-09.png",
+  "answer_img": "img/a/q8-09.png",
+  "head": {
+   "p": 7,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 7,
+   "y0": 32.1,
+   "y1": 526.6
+  }
+ },
+ {
+  "qid": "q8-10",
+  "quiz": 8,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q8-10.png",
+  "answer_img": null,
+  "head": {
+   "p": 8,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 8,
+   "y0": 32.1,
+   "y1": 367.6
+  }
+ },
+ {
+  "qid": "q8-11",
+  "quiz": 8,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎣−30−1⎦ | −4−98",
+  "img": "img/q/q8-11.png",
+  "answer_img": "img/a/q8-11.png",
+  "head": {
+   "p": 9,
+   "y": 38.1
+  },
+  "next": {
+   "p": 10,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 9,
+   "y0": 32.1,
+   "y1": 515.3
+  }
+ },
+ {
+  "qid": "q8-12",
+  "quiz": 8,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "ab | Thecorrectansweris: = 4, = −2",
+  "img": "img/q/q8-12.png",
+  "answer_img": "img/a/q8-12.png",
+  "head": {
+   "p": 10,
+   "y": 38.1
+  },
+  "next": {
+   "p": 11,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 10,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q8-13",
+  "quiz": 8,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "T | Thecorrectansweris:isontobutnotone-to-one.",
+  "img": "img/q/q8-13.png",
+  "answer_img": "img/a/q8-13.png",
+  "head": {
+   "p": 11,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 32.1,
+   "y1": 414.1
+  }
+ },
+ {
+  "qid": "q8-14",
+  "quiz": 8,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q8-14.png",
+  "answer_img": null,
+  "head": {
+   "p": 12,
+   "y": 38.1
+  },
+  "next": {
+   "p": 13,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 12,
+   "y0": 32.1,
+   "y1": 279.8
+  }
+ },
+ {
+  "qid": "q8-15",
+  "quiz": 8,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "x s ts tR | Thecorrectansweris: =+(, in ) | ⎣1⎦⎣0⎦ | 01",
+  "img": "img/q/q8-15.png",
+  "answer_img": "img/a/q8-15.png",
+  "head": {
+   "p": 13,
+   "y": 38.1
+  },
+  "next": {
+   "p": 13,
+   "y": 805.0
+  },
+  "crop": {
+   "p": 13,
+   "y0": 32.1,
+   "y1": 612.8
+  }
+ },
+ {
+  "qid": "q9-01",
+  "quiz": 9,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡⎤ | −12−2−2 | ⎣0030⎦ | 0000",
+  "img": "img/q/q9-01.png",
+  "answer_img": "img/a/q9-01.png",
+  "head": {
+   "p": 1,
+   "y": 38.1
+  },
+  "next": {
+   "p": 2,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 1,
+   "y0": 32.1,
+   "y1": 531.1
+  }
+ },
+ {
+  "qid": "q9-02",
+  "quiz": 9,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "⎣88⎦ | Thecorrectansweris: | √3√61 | 88",
+  "img": "img/q/q9-02.png",
+  "answer_img": "img/a/q9-02.png",
+  "head": {
+   "p": 2,
+   "y": 38.1
+  },
+  "next": {
+   "p": 3,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 2,
+   "y0": 32.1,
+   "y1": 432.1
+  }
+ },
+ {
+  "qid": "q9-03",
+  "quiz": 9,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "v | Thecorrectansweris: =⎣−1⎦ | 3 | 7",
+  "img": "img/q/q9-03.png",
+  "answer_img": "img/a/q9-03.png",
+  "head": {
+   "p": 3,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 3,
+   "y0": 32.1,
+   "y1": 520.6
+  }
+ },
+ {
+  "qid": "q9-04",
+  "quiz": 9,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:Tisneitherone-to-onenoronto. | 5 | Question",
+  "img": "img/q/q9-04.png",
+  "answer_img": "img/a/q9-04.png",
+  "head": {
+   "p": 4,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 530.9
+  },
+  "crop": {
+   "p": 4,
+   "y0": 32.1,
+   "y1": 414.1
+  }
+ },
+ {
+  "qid": "q9-05",
+  "quiz": 9,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:7 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=293462&cmid=453155/13",
+  "img": "img/q/q9-05.png",
+  "answer_img": "img/a/q9-05.png",
+  "head": {
+   "p": 4,
+   "y": 530.9
+  },
+  "next": {
+   "p": 5,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 4,
+   "y0": 524.9,
+   "y1": 649.6
+  }
+ },
+ {
+  "qid": "q9-06",
+  "quiz": 9,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q9-06.png",
+  "answer_img": null,
+  "head": {
+   "p": 5,
+   "y": 38.1
+  },
+  "next": {
+   "p": 5,
+   "y": 379.4
+  },
+  "crop": {
+   "p": 5,
+   "y0": 32.1,
+   "y1": 286.6
+  }
+ },
+ {
+  "qid": "q9-07",
+  "quiz": 9,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q9-07.png",
+  "answer_img": null,
+  "head": {
+   "p": 5,
+   "y": 379.4
+  },
+  "next": {
+   "p": 6,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 5,
+   "y0": 373.4,
+   "y1": 639.1
+  }
+ },
+ {
+  "qid": "q9-08",
+  "quiz": 9,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q9-08.png",
+  "answer_img": null,
+  "head": {
+   "p": 6,
+   "y": 38.1
+  },
+  "next": {
+   "p": 7,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 6,
+   "y0": 32.1,
+   "y1": 367.6
+  }
+ },
+ {
+  "qid": "q9-09",
+  "quiz": 9,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
+  "img": "img/q/q9-09.png",
+  "answer_img": "img/a/q9-09.png",
+  "head": {
+   "p": 7,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 7,
+   "y0": 32.1,
+   "y1": 408.8
+  }
+ },
+ {
+  "qid": "q9-10",
+  "quiz": 9,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:a = 5,b = −1",
+  "img": "img/q/q9-10.png",
+  "answer_img": "img/a/q9-10.png",
+  "head": {
+   "p": 8,
+   "y": 38.1
+  },
+  "next": {
+   "p": 9,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 8,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q9-11",
+  "quiz": 9,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:,,, | ⎩⎭ | ⎣1⎦⎣4⎦⎣0⎦⎣4⎦ | 1−808",
+  "img": "img/q/q9-11.png",
+  "answer_img": "img/a/q9-11.png",
+  "head": {
+   "p": 9,
+   "y": 38.1
+  },
+  "next": {
+   "p": 10,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 9,
+   "y0": 32.1,
+   "y1": 526.6
+  }
+ },
+ {
+  "qid": "q9-12",
+  "quiz": 9,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎣4−30⎦ | −2−2−1",
+  "img": "img/q/q9-12.png",
+  "answer_img": "img/a/q9-12.png",
+  "head": {
+   "p": 10,
+   "y": 38.1
+  },
+  "next": {
+   "p": 11,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 10,
+   "y0": 32.1,
+   "y1": 515.3
+  }
+ },
+ {
+  "qid": "q9-13",
+  "quiz": 9,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q9-13.png",
+  "answer_img": null,
+  "head": {
+   "p": 11,
+   "y": 38.1
+  },
+  "next": {
+   "p": 11,
+   "y": 395.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 32.1,
+   "y1": 302.3
+  }
+ },
+ {
+  "qid": "q9-14",
+  "quiz": 9,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q9-14.png",
+  "answer_img": null,
+  "head": {
+   "p": 11,
+   "y": 395.1
+  },
+  "next": {
+   "p": 12,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 389.1,
+   "y1": 643.6
+  }
+ },
+ {
+  "qid": "q9-15",
+  "quiz": 9,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "xR | Thecorrectansweris: = s+ t(s, t in ) | ⎣1⎦⎣0⎦ | 01",
+  "img": "img/q/q9-15.png",
+  "answer_img": "img/a/q9-15.png",
+  "head": {
+   "p": 12,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 805.0
+  },
+  "crop": {
+   "p": 12,
+   "y0": 32.1,
+   "y1": 612.8
+  }
+ },
+ {
+  "qid": "q10-01",
+  "quiz": 10,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎡⎤ | 3−1−21 | ⎣00−3−1⎦ | 0000",
+  "img": "img/q/q10-01.png",
+  "answer_img": "img/a/q10-01.png",
+  "head": {
+   "p": 1,
+   "y": 38.1
+  },
+  "next": {
+   "p": 2,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 1,
+   "y0": 32.1,
+   "y1": 531.1
+  }
+ },
+ {
+  "qid": "q10-02",
+  "quiz": 10,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q10-02.png",
+  "answer_img": null,
+  "head": {
+   "p": 2,
+   "y": 38.1
+  },
+  "next": {
+   "p": 3,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 2,
+   "y0": 32.1,
+   "y1": 367.6
+  }
+ },
+ {
+  "qid": "q10-03",
+  "quiz": 10,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "⎣66⎦ | Thecorrectansweris: | √3√33 | 66",
+  "img": "img/q/q10-03.png",
+  "answer_img": "img/a/q10-03.png",
+  "head": {
+   "p": 3,
+   "y": 38.1
+  },
+  "next": {
+   "p": 4,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 3,
+   "y0": 32.1,
+   "y1": 432.1
+  }
+ },
+ {
+  "qid": "q10-04",
+  "quiz": 10,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q10-04.png",
+  "answer_img": null,
+  "head": {
+   "p": 4,
+   "y": 38.1
+  },
+  "next": {
+   "p": 5,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 4,
+   "y0": 32.1,
+   "y1": 286.6
+  }
+ },
+ {
+  "qid": "q10-05",
+  "quiz": 10,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
+  "img": "img/q/q10-05.png",
+  "answer_img": "img/a/q10-05.png",
+  "head": {
+   "p": 5,
+   "y": 38.1
+  },
+  "next": {
+   "p": 6,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 5,
+   "y0": 32.1,
+   "y1": 408.8
+  }
+ },
+ {
+  "qid": "q10-06",
+  "quiz": 10,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "ab | Thecorrectansweris: = −1, = 3",
+  "img": "img/q/q10-06.png",
+  "answer_img": "img/a/q10-06.png",
+  "head": {
+   "p": 6,
+   "y": 38.1
+  },
+  "next": {
+   "p": 7,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 6,
+   "y0": 32.1,
+   "y1": 396.1
+  }
+ },
+ {
+  "qid": "q10-07",
+  "quiz": 10,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:,,, | ⎩⎭ | ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ | 81−1−8",
+  "img": "img/q/q10-07.png",
+  "answer_img": "img/a/q10-07.png",
+  "head": {
+   "p": 7,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 7,
+   "y0": 32.1,
+   "y1": 526.6
+  }
+ },
+ {
+  "qid": "q10-08",
+  "quiz": 10,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q10-08.png",
+  "answer_img": null,
+  "head": {
+   "p": 8,
+   "y": 38.1
+  },
+  "next": {
+   "p": 8,
+   "y": 399.6
+  },
+  "crop": {
+   "p": 8,
+   "y0": 32.1,
+   "y1": 306.8
+  }
+ },
+ {
+  "qid": "q10-09",
+  "quiz": 10,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q10-09.png",
+  "answer_img": null,
+  "head": {
+   "p": 8,
+   "y": 399.6
+  },
+  "next": {
+   "p": 9,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 8,
+   "y0": 393.6,
+   "y1": 641.3
+  }
+ },
+ {
+  "qid": "q10-10",
+  "quiz": 10,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris:0",
+  "img": "img/q/q10-10.png",
+  "answer_img": "img/a/q10-10.png",
+  "head": {
+   "p": 9,
+   "y": 38.1
+  },
+  "next": {
+   "p": 10,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 9,
+   "y0": 32.1,
+   "y1": 156.8
+  }
+ },
+ {
+  "qid": "q10-11",
+  "quiz": 10,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "T | Thecorrectansweris:isneitherone-to-onenoronto.",
+  "img": "img/q/q10-11.png",
+  "answer_img": "img/a/q10-11.png",
+  "head": {
+   "p": 10,
+   "y": 38.1
+  },
+  "next": {
+   "p": 11,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 10,
+   "y0": 32.1,
+   "y1": 434.3
+  }
+ },
+ {
+  "qid": "q10-12",
+  "quiz": 10,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "Thecorrectansweris: | ⎣90−3⎦ | 4−67",
+  "img": "img/q/q10-12.png",
+  "answer_img": "img/a/q10-12.png",
+  "head": {
+   "p": 11,
+   "y": 38.1
+  },
+  "next": {
+   "p": 12,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 11,
+   "y0": 32.1,
+   "y1": 515.3
+  }
+ },
+ {
+  "qid": "q10-13",
+  "quiz": 10,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": false,
+  "printed_answer_text": null,
+  "img": "img/q/q10-13.png",
+  "answer_img": null,
+  "head": {
+   "p": 12,
+   "y": 38.1
+  },
+  "next": {
+   "p": 13,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 12,
+   "y0": 32.1,
+   "y1": 302.3
+  }
+ },
+ {
+  "qid": "q10-14",
+  "quiz": 10,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "v | Thecorrectansweris: =⎣5⎦ | 3 | 3",
+  "img": "img/q/q10-14.png",
+  "answer_img": "img/a/q10-14.png",
+  "head": {
+   "p": 13,
+   "y": 38.1
+  },
+  "next": {
+   "p": 14,
+   "y": 38.1
+  },
+  "crop": {
+   "p": 13,
+   "y0": 32.1,
+   "y1": 520.6
+  }
+ },
+ {
+  "qid": "q10-15",
+  "quiz": 10,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true,
+  "printed_answer_text": "x s ts tR | Thecorrectansweris: =+(, in ) | ⎣1⎦⎣0⎦ | 01",
+  "img": "img/q/q10-15.png",
+  "answer_img": "img/a/q10-15.png",
+  "head": {
+   "p": 14,
+   "y": 38.1
+  },
+  "next": {
+   "p": 14,
+   "y": 805.0
+  },
+  "crop": {
+   "p": 14,
+   "y0": 32.1,
+   "y1": 612.8
+  }
+ }
+]
