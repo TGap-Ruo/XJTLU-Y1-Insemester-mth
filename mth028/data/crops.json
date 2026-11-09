@@ -1,3452 +1,1598 @@
 [
  {
-  "qid": "q1-01",
-  "quiz": 1,
-  "qno": 1,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:6",
-  "img": "img/q/q1-01.png",
-  "answer_img": "img/a/q1-01.png",
-  "head": {
-   "p": 0,
-   "y": 237.6
-  },
-  "next": {
-   "p": 1,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 0,
-   "y0": 231.6,
-   "y1": 432.1
-  }
- },
- {
-  "qid": "q1-02",
-  "quiz": 1,
-  "qno": 2,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:(−3, −3, 3)",
-  "img": "img/q/q1-02.png",
-  "answer_img": "img/a/q1-02.png",
-  "head": {
-   "p": 1,
-   "y": 38.1
-  },
-  "next": {
-   "p": 2,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 1,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q1-03",
-  "quiz": 1,
-  "qno": 3,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎧xxxx | −8 −2 −8 + 6 = −6 | 1234 | ⎨ | xxx x | 4 −6 + 4 + = −3 | ⎩1234 | xx xx | 3 −8 + −6 = −2 | 1234",
-  "img": "img/q/q1-03.png",
-  "answer_img": "img/a/q1-03.png",
-  "head": {
-   "p": 2,
-   "y": 38.1
-  },
-  "next": {
-   "p": 3,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 2,
-   "y0": 32.1,
-   "y1": 599.3
-  }
- },
- {
-  "qid": "q1-04",
-  "quiz": 1,
-  "qno": 4,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "x x x | Thecorrectansweris:4+7+−4=5 | 123 | ⎣⎦⎣⎦⎣⎦⎣⎦ | −3−9−3−8",
-  "img": "img/q/q1-04.png",
-  "answer_img": "img/a/q1-04.png",
-  "head": {
-   "p": 3,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 3,
-   "y0": 32.1,
-   "y1": 512.3
-  }
- },
- {
-  "qid": "q1-05",
-  "quiz": 1,
-  "qno": 5,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q1-05.png",
-  "answer_img": null,
-  "head": {
-   "p": 4,
-   "y": 38.1
-  },
-  "next": {
-   "p": 5,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 4,
-   "y0": 32.1,
-   "y1": 297.8
-  }
- },
- {
-  "qid": "q1-06",
-  "quiz": 1,
-  "qno": 6,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:−656 | ⎣⎦ | −98−3",
-  "img": "img/q/q1-06.png",
-  "answer_img": "img/a/q1-06.png",
-  "head": {
-   "p": 5,
-   "y": 38.1
-  },
-  "next": {
-   "p": 6,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 5,
-   "y0": 32.1,
-   "y1": 502.6
-  }
- },
- {
-  "qid": "q1-07",
-  "quiz": 1,
-  "qno": 7,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | 0",
-  "img": "img/q/q1-07.png",
-  "answer_img": "img/a/q1-07.png",
-  "head": {
-   "p": 6,
-   "y": 38.1
-  },
-  "next": {
-   "p": 7,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 6,
-   "y0": 32.1,
-   "y1": 412.3
-  }
- },
- {
-  "qid": "q1-08",
-  "quiz": 1,
-  "qno": 8,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | −14",
-  "img": "img/q/q1-08.png",
-  "answer_img": "img/a/q1-08.png",
-  "head": {
-   "p": 7,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 7,
-   "y0": 32.1,
-   "y1": 384.1
-  }
- },
- {
-  "qid": "q1-09",
-  "quiz": 1,
-  "qno": 9,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡32−11⎤ | 0020 | ⎣⎦ | 0000",
-  "img": "img/q/q1-09.png",
-  "answer_img": "img/a/q1-09.png",
-  "head": {
-   "p": 8,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 8,
-   "y0": 32.1,
-   "y1": 531.1
-  }
- },
- {
-  "qid": "q1-10",
-  "quiz": 1,
-  "qno": 10,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: Multiplyingthefirstrowby2,followedby Multiplyingthefirstrowby | 1/2",
-  "img": "img/q/q1-10.png",
-  "answer_img": "img/a/q1-10.png",
-  "head": {
-   "p": 9,
-   "y": 38.1
-  },
-  "next": {
-   "p": 10,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 9,
-   "y0": 32.1,
-   "y1": 414.1
-  }
- },
- {
-  "qid": "q1-11",
-  "quiz": 1,
-  "qno": 11,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "x ttR | Thecorrectansweris: =0+1,   ∈ | ⎣⎦⎣⎦ | 28",
-  "img": "img/q/q1-11.png",
-  "answer_img": "img/a/q1-11.png",
-  "head": {
-   "p": 10,
-   "y": 38.1
-  },
-  "next": {
-   "p": 11,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 10,
-   "y0": 32.1,
-   "y1": 513.0
-  }
- },
- {
-  "qid": "q1-12",
-  "quiz": 1,
-  "qno": 12,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡10−11⎤ | 01−32 | ⎣⎦ | 0000",
-  "img": "img/q/q1-12.png",
-  "answer_img": "img/a/q1-12.png",
-  "head": {
-   "p": 11,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 32.1,
-   "y1": 599.3
-  }
- },
- {
-  "qid": "q1-13",
-  "quiz": 1,
-  "qno": 13,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:10 | 14 | Question",
-  "img": "img/q/q1-13.png",
-  "answer_img": "img/a/q1-13.png",
-  "head": {
-   "p": 12,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 346.4
-  },
-  "crop": {
-   "p": 12,
-   "y0": 32.1,
-   "y1": 156.8
-  }
- },
- {
-  "qid": "q1-14",
-  "quiz": 1,
-  "qno": 14,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "ab | Thecorrectansweris: = 4, = 2",
-  "img": "img/q/q1-14.png",
-  "answer_img": "img/a/q1-14.png",
-  "head": {
-   "p": 12,
-   "y": 346.4
-  },
-  "next": {
-   "p": 13,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 12,
-   "y0": 340.4,
-   "y1": 704.3
-  }
- },
- {
-  "qid": "q1-15",
-  "quiz": 1,
-  "qno": 15,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:-13",
-  "img": "img/q/q1-15.png",
-  "answer_img": "img/a/q1-15.png",
-  "head": {
-   "p": 13,
-   "y": 38.1
-  },
-  "next": {
-   "p": 13,
-   "y": 805.0
-  },
-  "crop": {
-   "p": 13,
-   "y0": 32.1,
-   "y1": 199.6
-  }
- },
- {
-  "qid": "q2-01",
-  "quiz": 2,
-  "qno": 1,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:7−91 | ⎣⎦ | −435",
-  "img": "img/q/q2-01.png",
-  "answer_img": "img/a/q2-01.png",
-  "head": {
-   "p": 1,
-   "y": 38.1
-  },
-  "next": {
-   "p": 2,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 1,
-   "y0": 32.1,
-   "y1": 502.6
-  }
- },
- {
-  "qid": "q2-02",
-  "quiz": 2,
-  "qno": 2,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:a = −18,b = −14",
-  "img": "img/q/q2-02.png",
-  "answer_img": "img/a/q2-02.png",
-  "head": {
-   "p": 2,
-   "y": 38.1
-  },
-  "next": {
-   "p": 3,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 2,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q2-03",
-  "quiz": 2,
-  "qno": 3,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: Adding2timesthesecondrowtothethirdrow,followedby | Subtracting2timesthesecondrowfromthethirdrow",
-  "img": "img/q/q2-03.png",
-  "answer_img": "img/a/q2-03.png",
-  "head": {
-   "p": 3,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 3,
-   "y0": 32.1,
-   "y1": 432.1
-  }
- },
- {
-  "qid": "q2-04",
-  "quiz": 2,
-  "qno": 4,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:(2, 4, 0)",
-  "img": "img/q/q2-04.png",
-  "answer_img": "img/a/q2-04.png",
-  "head": {
-   "p": 4,
-   "y": 38.1
-  },
-  "next": {
-   "p": 5,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 4,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q2-05",
-  "quiz": 2,
-  "qno": 5,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡10−22⎤ | 01−10 | ⎣⎦ | 0000",
-  "img": "img/q/q2-05.png",
-  "answer_img": "img/a/q2-05.png",
-  "head": {
-   "p": 5,
-   "y": 38.1
-  },
-  "next": {
-   "p": 6,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 5,
-   "y0": 32.1,
-   "y1": 599.3
-  }
- },
- {
-  "qid": "q2-06",
-  "quiz": 2,
-  "qno": 6,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "xR | Thecorrectansweris: =−3+ t−6,  t ∈ | ⎣⎦⎣⎦ | 01",
-  "img": "img/q/q2-06.png",
-  "answer_img": "img/a/q2-06.png",
-  "head": {
-   "p": 6,
-   "y": 38.1
-  },
-  "next": {
-   "p": 7,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 6,
-   "y0": 32.1,
-   "y1": 513.0
-  }
- },
- {
-  "qid": "q2-07",
-  "quiz": 2,
-  "qno": 7,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q2-07.png",
-  "answer_img": null,
-  "head": {
-   "p": 7,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 7,
-   "y0": 32.1,
-   "y1": 279.8
-  }
- },
- {
-  "qid": "q2-08",
-  "quiz": 2,
-  "qno": 8,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:x0+ x9+ x1=−5 | 123 | ⎣⎦⎣⎦⎣⎦⎣⎦ | −7−1−65",
-  "img": "img/q/q2-08.png",
-  "answer_img": "img/a/q2-08.png",
-  "head": {
-   "p": 8,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 8,
-   "y0": 32.1,
-   "y1": 512.3
-  }
- },
- {
-  "qid": "q2-09",
-  "quiz": 2,
-  "qno": 9,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:-1",
-  "img": "img/q/q2-09.png",
-  "answer_img": "img/a/q2-09.png",
-  "head": {
-   "p": 9,
-   "y": 38.1
-  },
-  "next": {
-   "p": 10,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 9,
-   "y0": 32.1,
-   "y1": 231.8
-  }
- },
- {
-  "qid": "q2-10",
-  "quiz": 2,
-  "qno": 10,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎧ | −4x −7x −2x + 8x = 6 | 1234 | ⎨ | −8x −2x −10x = 0 | ⎩124 | 7x −x + 10x + 9x = −9 | 1234",
-  "img": "img/q/q2-10.png",
-  "answer_img": "img/a/q2-10.png",
-  "head": {
-   "p": 10,
-   "y": 38.1
-  },
-  "next": {
-   "p": 11,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 10,
-   "y0": 32.1,
-   "y1": 599.3
-  }
- },
- {
-  "qid": "q2-11",
-  "quiz": 2,
-  "qno": 11,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡−2200⎤ | 00−10 | ⎣⎦ | 0000",
-  "img": "img/q/q2-11.png",
-  "answer_img": "img/a/q2-11.png",
-  "head": {
-   "p": 11,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 32.1,
-   "y1": 531.1
-  }
- },
- {
-  "qid": "q2-12",
-  "quiz": 2,
-  "qno": 12,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:-8 | 13 | Question",
-  "img": "img/q/q2-12.png",
-  "answer_img": "img/a/q2-12.png",
-  "head": {
-   "p": 12,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 356.9
-  },
-  "crop": {
-   "p": 12,
-   "y0": 32.1,
-   "y1": 199.6
-  }
- },
- {
-  "qid": "q2-13",
-  "quiz": 2,
-  "qno": 13,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | 11 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=197368&cmid=3704713/14",
-  "img": "img/q/q2-13.png",
-  "answer_img": "img/a/q2-13.png",
-  "head": {
-   "p": 12,
-   "y": 356.9
-  },
-  "next": {
-   "p": 13,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 12,
-   "y0": 350.9,
-   "y1": 702.8
-  }
- },
- {
-  "qid": "q2-14",
-  "quiz": 2,
-  "qno": 14,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:0 | 15 | Question",
-  "img": "img/q/q2-14.png",
-  "answer_img": "img/a/q2-14.png",
-  "head": {
-   "p": 13,
-   "y": 38.1
-  },
-  "next": {
-   "p": 13,
-   "y": 346.4
-  },
-  "crop": {
-   "p": 13,
-   "y0": 32.1,
-   "y1": 156.8
-  }
- },
- {
-  "qid": "q2-15",
-  "quiz": 2,
-  "qno": 15,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | −16 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=197368&cmid=3704714/14",
-  "img": "img/q/q2-15.png",
-  "answer_img": "img/a/q2-15.png",
-  "head": {
-   "p": 13,
-   "y": 346.4
-  },
-  "next": {
-   "p": 13,
-   "y": 805.0
-  },
-  "crop": {
-   "p": 13,
-   "y0": 340.4,
-   "y1": 720.5
-  }
- },
- {
-  "qid": "q3-01",
-  "quiz": 3,
-  "qno": 1,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | −35",
-  "img": "img/q/q3-01.png",
-  "answer_img": "img/a/q3-01.png",
-  "head": {
-   "p": 0,
-   "y": 237.6
-  },
-  "next": {
-   "p": 1,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 0,
-   "y0": 231.6,
-   "y1": 583.6
-  }
- },
- {
-  "qid": "q3-02",
-  "quiz": 3,
-  "qno": 2,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:2 | 3 | Question",
-  "img": "img/q/q3-02.png",
-  "answer_img": "img/a/q3-02.png",
-  "head": {
-   "p": 1,
-   "y": 38.1
-  },
-  "next": {
-   "p": 1,
-   "y": 356.9
-  },
-  "crop": {
-   "p": 1,
-   "y0": 32.1,
-   "y1": 199.6
-  }
- },
- {
-  "qid": "q3-03",
-  "quiz": 3,
-  "qno": 3,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | −78 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=197370&cmid=370472/13",
-  "img": "img/q/q3-03.png",
-  "answer_img": "img/a/q3-03.png",
-  "head": {
-   "p": 1,
-   "y": 356.9
-  },
-  "next": {
-   "p": 2,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 1,
-   "y0": 350.9,
-   "y1": 731.0
-  }
- },
- {
-  "qid": "q3-04",
-  "quiz": 3,
-  "qno": 4,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:8−6−7 | ⎣⎦ | −8−31",
-  "img": "img/q/q3-04.png",
-  "answer_img": "img/a/q3-04.png",
-  "head": {
-   "p": 2,
-   "y": 38.1
-  },
-  "next": {
-   "p": 3,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 2,
-   "y0": 32.1,
-   "y1": 502.6
-  }
- },
- {
-  "qid": "q3-05",
-  "quiz": 3,
-  "qno": 5,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:8",
-  "img": "img/q/q3-05.png",
-  "answer_img": "img/a/q3-05.png",
-  "head": {
-   "p": 3,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 3,
-   "y0": 32.1,
-   "y1": 231.8
-  }
- },
- {
-  "qid": "q3-06",
-  "quiz": 3,
-  "qno": 6,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡−2−1−2−2⎤ | 00−1−1 | ⎣⎦ | 0000",
-  "img": "img/q/q3-06.png",
-  "answer_img": "img/a/q3-06.png",
-  "head": {
-   "p": 4,
-   "y": 38.1
-  },
-  "next": {
-   "p": 5,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 4,
-   "y0": 32.1,
-   "y1": 531.1
-  }
- },
- {
-  "qid": "q3-07",
-  "quiz": 3,
-  "qno": 7,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎧xxxx | −2 − + 8 −5 = −3 | 1234 | ⎨ | x xxx | −5 + + 5 −5 = −4 | ⎩1234 | xxxx | −3 + 2 −5 + 6 = −8 | 1234",
-  "img": "img/q/q3-07.png",
-  "answer_img": "img/a/q3-07.png",
-  "head": {
-   "p": 5,
-   "y": 38.1
-  },
-  "next": {
-   "p": 6,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 5,
-   "y0": 32.1,
-   "y1": 599.3
-  }
- },
- {
-  "qid": "q3-08",
-  "quiz": 3,
-  "qno": 8,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "x x x | Thecorrectansweris:6+3+−7=−7 | 123 | ⎣⎦⎣⎦⎣⎦⎣⎦ | 62−71",
-  "img": "img/q/q3-08.png",
-  "answer_img": "img/a/q3-08.png",
-  "head": {
-   "p": 6,
-   "y": 38.1
-  },
-  "next": {
-   "p": 7,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 6,
-   "y0": 32.1,
-   "y1": 512.3
-  }
- },
- {
-  "qid": "q3-09",
-  "quiz": 3,
-  "qno": 9,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡1013⎤ | 01−33 | ⎣⎦ | 0000",
-  "img": "img/q/q3-09.png",
-  "answer_img": "img/a/q3-09.png",
-  "head": {
-   "p": 7,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 7,
-   "y0": 32.1,
-   "y1": 599.3
-  }
- },
- {
-  "qid": "q3-10",
-  "quiz": 3,
-  "qno": 10,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: Multiplyingthethirdrowby2,followedby Multiplyingthethirdrow | by1/2",
-  "img": "img/q/q3-10.png",
-  "answer_img": "img/a/q3-10.png",
-  "head": {
-   "p": 8,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 8,
-   "y0": 32.1,
-   "y1": 450.1
-  }
- },
- {
-  "qid": "q3-11",
-  "quiz": 3,
-  "qno": 11,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:(−4, −5, −4)",
-  "img": "img/q/q3-11.png",
-  "answer_img": "img/a/q3-11.png",
-  "head": {
-   "p": 9,
-   "y": 38.1
-  },
-  "next": {
-   "p": 10,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 9,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q3-12",
-  "quiz": 3,
-  "qno": 12,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "ab | Thecorrectansweris: = −12, = −6 | 13 | Question",
-  "img": "img/q/q3-12.png",
-  "answer_img": "img/a/q3-12.png",
-  "head": {
-   "p": 10,
-   "y": 38.1
-  },
-  "next": {
-   "p": 10,
-   "y": 488.9
-  },
-  "crop": {
-   "p": 10,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q3-13",
-  "quiz": 3,
-  "qno": 13,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:4",
-  "img": "img/q/q3-13.png",
-  "answer_img": "img/a/q3-13.png",
-  "head": {
-   "p": 10,
-   "y": 488.9
-  },
-  "next": {
-   "p": 11,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 10,
-   "y0": 482.9,
-   "y1": 607.6
-  }
- },
- {
-  "qid": "q3-14",
-  "quiz": 3,
-  "qno": 14,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "x ttR | Thecorrectansweris: =0+1,   ∈ | ⎣⎦⎣⎦ | 56",
-  "img": "img/q/q3-14.png",
-  "answer_img": "img/a/q3-14.png",
-  "head": {
-   "p": 11,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 32.1,
-   "y1": 513.0
-  }
- },
- {
-  "qid": "q3-15",
-  "quiz": 3,
-  "qno": 15,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q3-15.png",
-  "answer_img": null,
-  "head": {
-   "p": 12,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 805.0
-  },
-  "crop": {
-   "p": 12,
-   "y0": 32.1,
-   "y1": 279.8
-  }
- },
- {
-  "qid": "q4-01",
-  "quiz": 4,
-  "qno": 1,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:(1, 5, 3)",
-  "img": "img/q/q4-01.png",
-  "answer_img": "img/a/q4-01.png",
-  "head": {
-   "p": 0,
-   "y": 237.6
-  },
-  "next": {
-   "p": 1,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 0,
-   "y0": 231.6,
-   "y1": 596.3
-  }
- },
- {
-  "qid": "q4-02",
-  "quiz": 4,
-  "qno": 2,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:a = −6,b = −9 | 3 | Question",
-  "img": "img/q/q4-02.png",
-  "answer_img": "img/a/q4-02.png",
-  "head": {
-   "p": 1,
-   "y": 38.1
-  },
-  "next": {
-   "p": 1,
-   "y": 488.9
-  },
-  "crop": {
-   "p": 1,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q4-03",
-  "quiz": 4,
-  "qno": 3,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q4-03.png",
-  "answer_img": null,
-  "head": {
-   "p": 1,
-   "y": 488.9
-  },
-  "next": {
-   "p": 2,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 1,
-   "y0": 482.9,
-   "y1": 730.6
-  }
- },
- {
-  "qid": "q4-04",
-  "quiz": 4,
-  "qno": 4,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡31−2−1⎤ | 00−3−1 | ⎣⎦ | 0000",
-  "img": "img/q/q4-04.png",
-  "answer_img": "img/a/q4-04.png",
-  "head": {
-   "p": 2,
-   "y": 38.1
-  },
-  "next": {
-   "p": 3,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 2,
-   "y0": 32.1,
-   "y1": 531.1
-  }
- },
- {
-  "qid": "q4-05",
-  "quiz": 4,
-  "qno": 5,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:22−6 | ⎣⎦ | 65−4",
-  "img": "img/q/q4-05.png",
-  "answer_img": "img/a/q4-05.png",
-  "head": {
-   "p": 3,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 3,
-   "y0": 32.1,
-   "y1": 502.6
-  }
- },
- {
-  "qid": "q4-06",
-  "quiz": 4,
-  "qno": 6,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡10−2−3⎤ | 01−2−1 | ⎣⎦ | 0000",
-  "img": "img/q/q4-06.png",
-  "answer_img": "img/a/q4-06.png",
-  "head": {
-   "p": 4,
-   "y": 38.1
-  },
-  "next": {
-   "p": 5,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 4,
-   "y0": 32.1,
-   "y1": 599.3
-  }
- },
- {
-  "qid": "q4-07",
-  "quiz": 4,
-  "qno": 7,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:-9",
-  "img": "img/q/q4-07.png",
-  "answer_img": "img/a/q4-07.png",
-  "head": {
-   "p": 5,
-   "y": 38.1
-  },
-  "next": {
-   "p": 6,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 5,
-   "y0": 32.1,
-   "y1": 231.8
-  }
- },
- {
-  "qid": "q4-08",
-  "quiz": 4,
-  "qno": 8,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:x0+ x−2+ x3=7 | 123 | ⎣⎦⎣⎦⎣⎦⎣⎦ | 3−69−8",
-  "img": "img/q/q4-08.png",
-  "answer_img": "img/a/q4-08.png",
-  "head": {
-   "p": 6,
-   "y": 38.1
-  },
-  "next": {
-   "p": 7,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 6,
-   "y0": 32.1,
-   "y1": 512.3
-  }
- },
- {
-  "qid": "q4-09",
-  "quiz": 4,
-  "qno": 9,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "xR | Thecorrectansweris: =0+ t1,  t ∈ | ⎣⎦⎣⎦ | −21",
-  "img": "img/q/q4-09.png",
-  "answer_img": "img/a/q4-09.png",
-  "head": {
-   "p": 7,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 7,
-   "y0": 32.1,
-   "y1": 513.0
-  }
- },
- {
-  "qid": "q4-10",
-  "quiz": 4,
-  "qno": 10,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎧ | 6x −4x + 5x + 7x = −5 | 1234 | ⎨ | −7x + 10x −6x + 9x = 9 | ⎩1234 | 10x + 7x −4x + 4x = 10 | 1234",
-  "img": "img/q/q4-10.png",
-  "answer_img": "img/a/q4-10.png",
-  "head": {
-   "p": 8,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 8,
-   "y0": 32.1,
-   "y1": 599.3
-  }
- },
- {
-  "qid": "q4-11",
-  "quiz": 4,
-  "qno": 11,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:9 | 12 | Question",
-  "img": "img/q/q4-11.png",
-  "answer_img": "img/a/q4-11.png",
-  "head": {
-   "p": 9,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 356.9
-  },
-  "crop": {
-   "p": 9,
-   "y0": 32.1,
-   "y1": 199.6
-  }
- },
- {
-  "qid": "q4-12",
-  "quiz": 4,
-  "qno": 12,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:-5",
-  "img": "img/q/q4-12.png",
-  "answer_img": "img/a/q4-12.png",
-  "head": {
-   "p": 9,
-   "y": 356.9
-  },
-  "next": {
-   "p": 10,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 9,
-   "y0": 350.9,
-   "y1": 475.6
-  }
- },
- {
-  "qid": "q4-13",
-  "quiz": 4,
-  "qno": 13,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | −14",
-  "img": "img/q/q4-13.png",
-  "answer_img": "img/a/q4-13.png",
-  "head": {
-   "p": 10,
-   "y": 38.1
-  },
-  "next": {
-   "p": 11,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 10,
-   "y0": 32.1,
-   "y1": 384.1
-  }
- },
- {
-  "qid": "q4-14",
-  "quiz": 4,
-  "qno": 14,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | 25",
-  "img": "img/q/q4-14.png",
-  "answer_img": "img/a/q4-14.png",
-  "head": {
-   "p": 11,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 32.1,
-   "y1": 412.3
-  }
- },
- {
-  "qid": "q4-15",
-  "quiz": 4,
-  "qno": 15,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: Multiplyingthesecondrowby3,followedby Multiplyingthesecond | rowby1/3",
-  "img": "img/q/q4-15.png",
-  "answer_img": "img/a/q4-15.png",
-  "head": {
-   "p": 12,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 805.0
-  },
-  "crop": {
-   "p": 12,
-   "y0": 32.1,
-   "y1": 432.1
-  }
- },
- {
-  "qid": "q5-01",
-  "quiz": 5,
-  "qno": 1,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎧ | 4x + 10x + 6x −5x = −2 | 1234 | ⎨ | 5x + 4x −10x + 5x = 1 | ⎩1234 | −3x −9x + 6x = 9 | 124",
-  "img": "img/q/q5-01.png",
-  "answer_img": "img/a/q5-01.png",
-  "head": {
-   "p": 1,
-   "y": 38.1
-  },
-  "next": {
-   "p": 2,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 1,
-   "y0": 32.1,
-   "y1": 599.3
-  }
- },
- {
-  "qid": "q5-02",
-  "quiz": 5,
-  "qno": 2,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:x−4+ x−2+ x9=9 | 123 | ⎣⎦⎣⎦⎣⎦⎣⎦ | 4−1−79",
-  "img": "img/q/q5-02.png",
-  "answer_img": "img/a/q5-02.png",
-  "head": {
-   "p": 2,
-   "y": 38.1
-  },
-  "next": {
-   "p": 3,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 2,
-   "y0": 32.1,
-   "y1": 512.3
-  }
- },
- {
-  "qid": "q5-03",
-  "quiz": 5,
-  "qno": 3,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: Multiplyingthesecondrowby2,followedby Multiplyingthesecond | rowby1/2",
-  "img": "img/q/q5-03.png",
-  "answer_img": "img/a/q5-03.png",
-  "head": {
-   "p": 3,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 3,
-   "y0": 32.1,
-   "y1": 432.1
-  }
- },
- {
-  "qid": "q5-04",
-  "quiz": 5,
-  "qno": 4,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | 10 | 5 | Question",
-  "img": "img/q/q5-04.png",
-  "answer_img": "img/a/q5-04.png",
-  "head": {
-   "p": 4,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 518.9
-  },
-  "crop": {
-   "p": 4,
-   "y0": 32.1,
-   "y1": 384.1
-  }
- },
- {
-  "qid": "q5-05",
-  "quiz": 5,
-  "qno": 5,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:-3 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=197374&cmid=370475/14",
-  "img": "img/q/q5-05.png",
-  "answer_img": "img/a/q5-05.png",
-  "head": {
-   "p": 4,
-   "y": 518.9
-  },
-  "next": {
-   "p": 5,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 4,
-   "y0": 512.9,
-   "y1": 637.6
-  }
- },
- {
-  "qid": "q5-06",
-  "quiz": 5,
-  "qno": 6,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q5-06.png",
-  "answer_img": null,
-  "head": {
-   "p": 5,
-   "y": 38.1
-  },
-  "next": {
-   "p": 5,
-   "y": 372.6
-  },
-  "crop": {
-   "p": 5,
-   "y0": 32.1,
-   "y1": 279.8
-  }
- },
- {
-  "qid": "q5-07",
-  "quiz": 5,
-  "qno": 7,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:a = 1,b = 1 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=197374&cmid=370476/14",
-  "img": "img/q/q5-07.png",
-  "answer_img": "img/a/q5-07.png",
-  "head": {
-   "p": 5,
-   "y": 372.6
-  },
-  "next": {
-   "p": 6,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 5,
-   "y0": 366.6,
-   "y1": 730.6
-  }
- },
- {
-  "qid": "q5-08",
-  "quiz": 5,
-  "qno": 8,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | 75",
-  "img": "img/q/q5-08.png",
-  "answer_img": "img/a/q5-08.png",
-  "head": {
-   "p": 6,
-   "y": 38.1
-  },
-  "next": {
-   "p": 7,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 6,
-   "y0": 32.1,
-   "y1": 412.3
-  }
- },
- {
-  "qid": "q5-09",
-  "quiz": 5,
-  "qno": 9,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "xR | Thecorrectansweris: =0+ t−4,  t ∈ | ⎣⎦⎣⎦ | 24",
-  "img": "img/q/q5-09.png",
-  "answer_img": "img/a/q5-09.png",
-  "head": {
-   "p": 7,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 7,
-   "y0": 32.1,
-   "y1": 513.0
-  }
- },
- {
-  "qid": "q5-10",
-  "quiz": 5,
-  "qno": 10,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:08−7 | ⎣⎦ | −87−9",
-  "img": "img/q/q5-10.png",
-  "answer_img": "img/a/q5-10.png",
-  "head": {
-   "p": 8,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 8,
-   "y0": 32.1,
-   "y1": 502.6
-  }
- },
- {
-  "qid": "q5-11",
-  "quiz": 5,
-  "qno": 11,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:5",
-  "img": "img/q/q5-11.png",
-  "answer_img": "img/a/q5-11.png",
-  "head": {
-   "p": 9,
-   "y": 38.1
-  },
-  "next": {
-   "p": 10,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 9,
-   "y0": 32.1,
-   "y1": 199.6
-  }
- },
- {
-  "qid": "q5-12",
-  "quiz": 5,
-  "qno": 12,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡−1−222⎤ | 00−21 | ⎣⎦ | 0000",
-  "img": "img/q/q5-12.png",
-  "answer_img": "img/a/q5-12.png",
-  "head": {
-   "p": 10,
-   "y": 38.1
-  },
-  "next": {
-   "p": 11,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 10,
-   "y0": 32.1,
-   "y1": 531.1
-  }
- },
- {
-  "qid": "q5-13",
-  "quiz": 5,
-  "qno": 13,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:(−2, −3, −1)",
-  "img": "img/q/q5-13.png",
-  "answer_img": "img/a/q5-13.png",
-  "head": {
-   "p": 11,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q5-14",
-  "quiz": 5,
-  "qno": 14,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡10−10⎤ | 01−21 | ⎣⎦ | 0000",
-  "img": "img/q/q5-14.png",
-  "answer_img": "img/a/q5-14.png",
-  "head": {
-   "p": 12,
-   "y": 38.1
-  },
-  "next": {
-   "p": 13,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 12,
-   "y0": 32.1,
-   "y1": 599.3
-  }
- },
- {
-  "qid": "q5-15",
-  "quiz": 5,
-  "qno": 15,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:-9",
-  "img": "img/q/q5-15.png",
-  "answer_img": "img/a/q5-15.png",
-  "head": {
-   "p": 13,
-   "y": 38.1
-  },
-  "next": {
-   "p": 13,
-   "y": 805.0
-  },
-  "crop": {
-   "p": 13,
-   "y0": 32.1,
-   "y1": 231.8
-  }
- },
- {
-  "qid": "q6-01",
-  "quiz": 6,
-  "qno": 1,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "xR | Thecorrectansweris: = s+ t(s, t in ) | ⎣1⎦⎣0⎦ | 01",
-  "img": "img/q/q6-01.png",
-  "answer_img": "img/a/q6-01.png",
-  "head": {
-   "p": 1,
-   "y": 38.1
-  },
-  "next": {
-   "p": 2,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 1,
-   "y0": 32.1,
-   "y1": 612.8
-  }
- },
- {
-  "qid": "q6-02",
-  "quiz": 6,
-  "qno": 2,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q6-02.png",
-  "answer_img": null,
-  "head": {
-   "p": 2,
-   "y": 38.1
-  },
-  "next": {
-   "p": 3,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 2,
-   "y0": 32.1,
-   "y1": 286.6
-  }
- },
- {
-  "qid": "q6-03",
-  "quiz": 6,
-  "qno": 3,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "⎣55⎦ | Thecorrectansweris: | √23√2 | 55",
-  "img": "img/q/q6-03.png",
-  "answer_img": "img/a/q6-03.png",
-  "head": {
-   "p": 3,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 3,
-   "y0": 32.1,
-   "y1": 432.1
-  }
- },
- {
-  "qid": "q6-04",
-  "quiz": 6,
-  "qno": 4,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎣0−77⎦ | 767",
-  "img": "img/q/q6-04.png",
-  "answer_img": "img/a/q6-04.png",
-  "head": {
-   "p": 4,
-   "y": 38.1
-  },
-  "next": {
-   "p": 5,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 4,
-   "y0": 32.1,
-   "y1": 515.3
-  }
- },
- {
-  "qid": "q6-05",
-  "quiz": 6,
-  "qno": 5,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q6-05.png",
-  "answer_img": null,
-  "head": {
-   "p": 5,
-   "y": 38.1
-  },
-  "next": {
-   "p": 6,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 5,
-   "y0": 32.1,
-   "y1": 267.1
-  }
- },
- {
-  "qid": "q6-06",
-  "quiz": 6,
-  "qno": 6,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "v | Thecorrectansweris: =⎣−6⎦ | 3 | −4",
-  "img": "img/q/q6-06.png",
-  "answer_img": "img/a/q6-06.png",
-  "head": {
-   "p": 6,
-   "y": 38.1
-  },
-  "next": {
-   "p": 7,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 6,
-   "y0": 32.1,
-   "y1": 520.6
-  }
- },
- {
-  "qid": "q6-07",
-  "quiz": 6,
-  "qno": 7,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q6-07.png",
-  "answer_img": null,
-  "head": {
-   "p": 7,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 7,
-   "y0": 32.1,
-   "y1": 302.3
-  }
- },
- {
-  "qid": "q6-08",
-  "quiz": 6,
-  "qno": 8,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:,,, | ⎩⎭ | ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ | −8−118",
-  "img": "img/q/q6-08.png",
-  "answer_img": "img/a/q6-08.png",
-  "head": {
-   "p": 8,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 8,
-   "y0": 32.1,
-   "y1": 526.6
-  }
- },
- {
-  "qid": "q6-09",
-  "quiz": 6,
-  "qno": 9,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡⎤ | −30−2−1 | ⎣00−2−2⎦ | 0000",
-  "img": "img/q/q6-09.png",
-  "answer_img": "img/a/q6-09.png",
-  "head": {
-   "p": 9,
-   "y": 38.1
-  },
-  "next": {
-   "p": 10,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 9,
-   "y0": 32.1,
-   "y1": 531.1
-  }
- },
- {
-  "qid": "q6-10",
-  "quiz": 6,
-  "qno": 10,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q6-10.png",
-  "answer_img": null,
-  "head": {
-   "p": 10,
-   "y": 38.1
-  },
-  "next": {
-   "p": 10,
-   "y": 390.6
-  },
-  "crop": {
-   "p": 10,
-   "y0": 32.1,
-   "y1": 297.8
-  }
- },
- {
-  "qid": "q6-11",
-  "quiz": 6,
-  "qno": 11,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:8",
-  "img": "img/q/q6-11.png",
-  "answer_img": "img/a/q6-11.png",
-  "head": {
-   "p": 10,
-   "y": 390.6
-  },
-  "next": {
-   "p": 11,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 10,
-   "y0": 384.6,
-   "y1": 509.3
-  }
- },
- {
-  "qid": "q6-12",
-  "quiz": 6,
-  "qno": 12,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
-  "img": "img/q/q6-12.png",
-  "answer_img": "img/a/q6-12.png",
-  "head": {
-   "p": 11,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 32.1,
-   "y1": 408.8
-  }
- },
- {
-  "qid": "q6-13",
-  "quiz": 6,
-  "qno": 13,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q6-13.png",
-  "answer_img": null,
-  "head": {
-   "p": 12,
-   "y": 38.1
-  },
-  "next": {
-   "p": 13,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 12,
-   "y0": 32.1,
-   "y1": 367.6
-  }
- },
- {
-  "qid": "q6-14",
-  "quiz": 6,
-  "qno": 14,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:Tisneitherone-to-onenoronto.",
-  "img": "img/q/q6-14.png",
-  "answer_img": "img/a/q6-14.png",
-  "head": {
-   "p": 13,
-   "y": 38.1
-  },
-  "next": {
-   "p": 14,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 13,
-   "y0": 32.1,
-   "y1": 414.1
-  }
- },
- {
-  "qid": "q6-15",
-  "quiz": 6,
-  "qno": 15,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:a = 11,b = −3",
-  "img": "img/q/q6-15.png",
-  "answer_img": "img/a/q6-15.png",
-  "head": {
-   "p": 14,
-   "y": 38.1
-  },
-  "next": {
-   "p": 14,
-   "y": 805.0
-  },
-  "crop": {
-   "p": 14,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q7-01",
-  "quiz": 7,
-  "qno": 1,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "ab | Thecorrectansweris: = 4, = 6",
-  "img": "img/q/q7-01.png",
-  "answer_img": "img/a/q7-01.png",
-  "head": {
-   "p": 0,
-   "y": 237.6
-  },
-  "next": {
-   "p": 1,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 0,
-   "y0": 231.6,
-   "y1": 596.3
-  }
- },
- {
-  "qid": "q7-02",
-  "quiz": 7,
-  "qno": 2,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q7-02.png",
-  "answer_img": null,
-  "head": {
-   "p": 1,
-   "y": 38.1
-  },
-  "next": {
-   "p": 2,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 1,
-   "y0": 32.1,
-   "y1": 286.6
-  }
- },
- {
-  "qid": "q7-03",
-  "quiz": 7,
-  "qno": 3,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎣530⎦ | 2−9−7",
-  "img": "img/q/q7-03.png",
-  "answer_img": "img/a/q7-03.png",
-  "head": {
-   "p": 2,
-   "y": 38.1
-  },
-  "next": {
-   "p": 3,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 2,
-   "y0": 32.1,
-   "y1": 515.3
-  }
- },
- {
-  "qid": "q7-04",
-  "quiz": 7,
-  "qno": 4,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡⎤ | 20−1−1 | ⎣00−3−1⎦ | 0000",
-  "img": "img/q/q7-04.png",
-  "answer_img": "img/a/q7-04.png",
-  "head": {
-   "p": 3,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 3,
-   "y0": 32.1,
-   "y1": 531.1
-  }
- },
- {
-  "qid": "q7-05",
-  "quiz": 7,
-  "qno": 5,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:-9",
-  "img": "img/q/q7-05.png",
-  "answer_img": "img/a/q7-05.png",
-  "head": {
-   "p": 4,
-   "y": 38.1
-  },
-  "next": {
-   "p": 5,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 4,
-   "y0": 32.1,
-   "y1": 156.8
-  }
- },
- {
-  "qid": "q7-06",
-  "quiz": 7,
-  "qno": 6,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "⎣99⎦ | Thecorrectansweris: | √46√35 | −− | 99",
-  "img": "img/q/q7-06.png",
-  "answer_img": "img/a/q7-06.png",
-  "head": {
-   "p": 5,
-   "y": 38.1
-  },
-  "next": {
-   "p": 6,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 5,
-   "y0": 32.1,
-   "y1": 432.1
-  }
- },
- {
-  "qid": "q7-07",
-  "quiz": 7,
-  "qno": 7,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
-  "img": "img/q/q7-07.png",
-  "answer_img": "img/a/q7-07.png",
-  "head": {
-   "p": 6,
-   "y": 38.1
-  },
-  "next": {
-   "p": 7,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 6,
-   "y0": 32.1,
-   "y1": 408.8
-  }
- },
- {
-  "qid": "q7-08",
-  "quiz": 7,
-  "qno": 8,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "v | Thecorrectansweris: =⎣6⎦ | 3 | 1",
-  "img": "img/q/q7-08.png",
-  "answer_img": "img/a/q7-08.png",
-  "head": {
-   "p": 7,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 7,
-   "y0": 32.1,
-   "y1": 520.6
-  }
- },
- {
-  "qid": "q7-09",
-  "quiz": 7,
-  "qno": 9,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "T | Thecorrectansweris:isone-to-onebutnotonto.",
-  "img": "img/q/q7-09.png",
-  "answer_img": "img/a/q7-09.png",
-  "head": {
-   "p": 8,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 8,
-   "y0": 32.1,
-   "y1": 434.3
-  }
- },
- {
-  "qid": "q7-10",
-  "quiz": 7,
-  "qno": 10,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q7-10.png",
-  "answer_img": null,
-  "head": {
-   "p": 9,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 372.6
-  },
-  "crop": {
-   "p": 9,
-   "y0": 32.1,
-   "y1": 279.8
-  }
- },
- {
-  "qid": "q7-11",
-  "quiz": 7,
-  "qno": 11,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q7-11.png",
-  "answer_img": null,
-  "head": {
-   "p": 9,
-   "y": 372.6
-  },
-  "next": {
-   "p": 10,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 9,
-   "y0": 366.6,
-   "y1": 636.8
-  }
- },
- {
-  "qid": "q7-12",
-  "quiz": 7,
-  "qno": 12,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "x s ts tR | Thecorrectansweris: =+(, in ) | ⎣1⎦⎣0⎦ | 01",
-  "img": "img/q/q7-12.png",
-  "answer_img": "img/a/q7-12.png",
-  "head": {
-   "p": 10,
-   "y": 38.1
-  },
-  "next": {
-   "p": 11,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 10,
-   "y0": 32.1,
-   "y1": 612.8
-  }
- },
- {
-  "qid": "q7-13",
-  "quiz": 7,
-  "qno": 13,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:,,, | ⎩⎭ | ⎣1⎦⎣4⎦⎣0⎦⎣1⎦ | −1−801",
-  "img": "img/q/q7-13.png",
-  "answer_img": "img/a/q7-13.png",
-  "head": {
-   "p": 11,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 32.1,
-   "y1": 526.6
-  }
- },
- {
-  "qid": "q7-14",
-  "quiz": 7,
-  "qno": 14,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q7-14.png",
-  "answer_img": null,
-  "head": {
-   "p": 12,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 379.4
-  },
-  "crop": {
-   "p": 12,
-   "y0": 32.1,
-   "y1": 286.6
-  }
- },
- {
-  "qid": "q7-15",
-  "quiz": 7,
-  "qno": 15,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q7-15.png",
-  "answer_img": null,
-  "head": {
-   "p": 12,
-   "y": 379.4
-  },
-  "next": {
-   "p": 12,
-   "y": 805.0
-  },
-  "crop": {
-   "p": 12,
-   "y0": 373.4,
-   "y1": 708.8
-  }
- },
- {
-  "qid": "q8-01",
-  "quiz": 8,
-  "qno": 1,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q8-01.png",
-  "answer_img": null,
-  "head": {
-   "p": 0,
-   "y": 237.6
-  },
-  "next": {
-   "p": 1,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 0,
-   "y0": 231.6,
-   "y1": 502.6
-  }
- },
- {
-  "qid": "q8-02",
-  "quiz": 8,
-  "qno": 2,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q8-02.png",
-  "answer_img": null,
-  "head": {
-   "p": 1,
-   "y": 38.1
-  },
-  "next": {
-   "p": 2,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 1,
-   "y0": 32.1,
-   "y1": 327.1
-  }
- },
- {
-  "qid": "q8-03",
-  "quiz": 8,
-  "qno": 3,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
-  "img": "img/q/q8-03.png",
-  "answer_img": "img/a/q8-03.png",
-  "head": {
-   "p": 2,
-   "y": 38.1
-  },
-  "next": {
-   "p": 3,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 2,
-   "y0": 32.1,
-   "y1": 408.8
-  }
- },
- {
-  "qid": "q8-04",
-  "quiz": 8,
-  "qno": 4,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "v | Thecorrectansweris: =⎣−5⎦ | 3 | 4",
-  "img": "img/q/q8-04.png",
-  "answer_img": "img/a/q8-04.png",
-  "head": {
-   "p": 3,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 3,
-   "y0": 32.1,
-   "y1": 520.6
-  }
- },
- {
-  "qid": "q8-05",
-  "quiz": 8,
-  "qno": 5,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q8-05.png",
-  "answer_img": null,
-  "head": {
-   "p": 4,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 379.4
-  },
-  "crop": {
-   "p": 4,
-   "y0": 32.1,
-   "y1": 286.6
-  }
- },
- {
-  "qid": "q8-06",
-  "quiz": 8,
-  "qno": 6,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:9",
-  "img": "img/q/q8-06.png",
-  "answer_img": "img/a/q8-06.png",
-  "head": {
-   "p": 4,
-   "y": 379.4
-  },
-  "next": {
-   "p": 5,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 4,
-   "y0": 373.4,
-   "y1": 498.1
-  }
- },
- {
-  "qid": "q8-07",
-  "quiz": 8,
-  "qno": 7,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡⎤ | −2022 | ⎣00−30⎦ | 0000",
-  "img": "img/q/q8-07.png",
-  "answer_img": "img/a/q8-07.png",
-  "head": {
-   "p": 5,
-   "y": 38.1
-  },
-  "next": {
-   "p": 6,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 5,
-   "y0": 32.1,
-   "y1": 531.1
-  }
- },
- {
-  "qid": "q8-08",
-  "quiz": 8,
-  "qno": 8,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "⎣77⎦ | Thecorrectansweris: | √19√30 | 77",
-  "img": "img/q/q8-08.png",
-  "answer_img": "img/a/q8-08.png",
-  "head": {
-   "p": 6,
-   "y": 38.1
-  },
-  "next": {
-   "p": 7,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 6,
-   "y0": 32.1,
-   "y1": 432.1
-  }
- },
- {
-  "qid": "q8-09",
-  "quiz": 8,
-  "qno": 9,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:,,, | ⎩⎭ | ⎣0⎦⎣4⎦⎣1⎦⎣4⎦ | 0−818",
-  "img": "img/q/q8-09.png",
-  "answer_img": "img/a/q8-09.png",
-  "head": {
-   "p": 7,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 7,
-   "y0": 32.1,
-   "y1": 526.6
-  }
- },
- {
-  "qid": "q8-10",
-  "quiz": 8,
-  "qno": 10,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q8-10.png",
-  "answer_img": null,
-  "head": {
-   "p": 8,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 8,
-   "y0": 32.1,
-   "y1": 367.6
-  }
- },
- {
-  "qid": "q8-11",
-  "quiz": 8,
-  "qno": 11,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎣−30−1⎦ | −4−98",
-  "img": "img/q/q8-11.png",
-  "answer_img": "img/a/q8-11.png",
-  "head": {
-   "p": 9,
-   "y": 38.1
-  },
-  "next": {
-   "p": 10,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 9,
-   "y0": 32.1,
-   "y1": 515.3
-  }
- },
- {
-  "qid": "q8-12",
-  "quiz": 8,
-  "qno": 12,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "ab | Thecorrectansweris: = 4, = −2",
-  "img": "img/q/q8-12.png",
-  "answer_img": "img/a/q8-12.png",
-  "head": {
-   "p": 10,
-   "y": 38.1
-  },
-  "next": {
-   "p": 11,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 10,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q8-13",
-  "quiz": 8,
-  "qno": 13,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "T | Thecorrectansweris:isontobutnotone-to-one.",
-  "img": "img/q/q8-13.png",
-  "answer_img": "img/a/q8-13.png",
-  "head": {
-   "p": 11,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 32.1,
-   "y1": 414.1
-  }
- },
- {
-  "qid": "q8-14",
-  "quiz": 8,
-  "qno": 14,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q8-14.png",
-  "answer_img": null,
-  "head": {
-   "p": 12,
-   "y": 38.1
-  },
-  "next": {
-   "p": 13,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 12,
-   "y0": 32.1,
-   "y1": 279.8
-  }
- },
- {
-  "qid": "q8-15",
-  "quiz": 8,
-  "qno": 15,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "x s ts tR | Thecorrectansweris: =+(, in ) | ⎣1⎦⎣0⎦ | 01",
-  "img": "img/q/q8-15.png",
-  "answer_img": "img/a/q8-15.png",
-  "head": {
-   "p": 13,
-   "y": 38.1
-  },
-  "next": {
-   "p": 13,
-   "y": 805.0
-  },
-  "crop": {
-   "p": 13,
-   "y0": 32.1,
-   "y1": 612.8
-  }
- },
- {
-  "qid": "q9-01",
-  "quiz": 9,
-  "qno": 1,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡⎤ | −12−2−2 | ⎣0030⎦ | 0000",
-  "img": "img/q/q9-01.png",
-  "answer_img": "img/a/q9-01.png",
-  "head": {
-   "p": 1,
-   "y": 38.1
-  },
-  "next": {
-   "p": 2,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 1,
-   "y0": 32.1,
-   "y1": 531.1
-  }
- },
- {
-  "qid": "q9-02",
-  "quiz": 9,
-  "qno": 2,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "⎣88⎦ | Thecorrectansweris: | √3√61 | 88",
-  "img": "img/q/q9-02.png",
-  "answer_img": "img/a/q9-02.png",
-  "head": {
-   "p": 2,
-   "y": 38.1
-  },
-  "next": {
-   "p": 3,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 2,
-   "y0": 32.1,
-   "y1": 432.1
-  }
- },
- {
-  "qid": "q9-03",
-  "quiz": 9,
-  "qno": 3,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "v | Thecorrectansweris: =⎣−1⎦ | 3 | 7",
-  "img": "img/q/q9-03.png",
-  "answer_img": "img/a/q9-03.png",
-  "head": {
-   "p": 3,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 3,
-   "y0": 32.1,
-   "y1": 520.6
-  }
- },
- {
-  "qid": "q9-04",
-  "quiz": 9,
-  "qno": 4,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:Tisneitherone-to-onenoronto. | 5 | Question",
-  "img": "img/q/q9-04.png",
-  "answer_img": "img/a/q9-04.png",
-  "head": {
-   "p": 4,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 530.9
-  },
-  "crop": {
-   "p": 4,
-   "y0": 32.1,
-   "y1": 414.1
-  }
- },
- {
-  "qid": "q9-05",
-  "quiz": 9,
-  "qno": 5,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:7 | https://core.xjtlu.edu.cn/mod/quiz/review.php?attempt=293462&cmid=453155/13",
-  "img": "img/q/q9-05.png",
-  "answer_img": "img/a/q9-05.png",
-  "head": {
-   "p": 4,
-   "y": 530.9
-  },
-  "next": {
-   "p": 5,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 4,
-   "y0": 524.9,
-   "y1": 649.6
-  }
- },
- {
-  "qid": "q9-06",
-  "quiz": 9,
-  "qno": 6,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q9-06.png",
-  "answer_img": null,
-  "head": {
-   "p": 5,
-   "y": 38.1
-  },
-  "next": {
-   "p": 5,
-   "y": 379.4
-  },
-  "crop": {
-   "p": 5,
-   "y0": 32.1,
-   "y1": 286.6
-  }
- },
- {
-  "qid": "q9-07",
-  "quiz": 9,
-  "qno": 7,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q9-07.png",
-  "answer_img": null,
-  "head": {
-   "p": 5,
-   "y": 379.4
-  },
-  "next": {
-   "p": 6,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 5,
-   "y0": 373.4,
-   "y1": 639.1
-  }
- },
- {
-  "qid": "q9-08",
-  "quiz": 9,
-  "qno": 8,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q9-08.png",
-  "answer_img": null,
-  "head": {
-   "p": 6,
-   "y": 38.1
-  },
-  "next": {
-   "p": 7,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 6,
-   "y0": 32.1,
-   "y1": 367.6
-  }
- },
- {
-  "qid": "q9-09",
-  "quiz": 9,
-  "qno": 9,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
-  "img": "img/q/q9-09.png",
-  "answer_img": "img/a/q9-09.png",
-  "head": {
-   "p": 7,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 7,
-   "y0": 32.1,
-   "y1": 408.8
-  }
- },
- {
-  "qid": "q9-10",
-  "quiz": 9,
-  "qno": 10,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:a = 5,b = −1",
-  "img": "img/q/q9-10.png",
-  "answer_img": "img/a/q9-10.png",
-  "head": {
-   "p": 8,
-   "y": 38.1
-  },
-  "next": {
-   "p": 9,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 8,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q9-11",
-  "quiz": 9,
-  "qno": 11,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:,,, | ⎩⎭ | ⎣1⎦⎣4⎦⎣0⎦⎣4⎦ | 1−808",
-  "img": "img/q/q9-11.png",
-  "answer_img": "img/a/q9-11.png",
-  "head": {
-   "p": 9,
-   "y": 38.1
-  },
-  "next": {
-   "p": 10,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 9,
-   "y0": 32.1,
-   "y1": 526.6
-  }
- },
- {
-  "qid": "q9-12",
-  "quiz": 9,
-  "qno": 12,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎣4−30⎦ | −2−2−1",
-  "img": "img/q/q9-12.png",
-  "answer_img": "img/a/q9-12.png",
-  "head": {
-   "p": 10,
-   "y": 38.1
-  },
-  "next": {
-   "p": 11,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 10,
-   "y0": 32.1,
-   "y1": 515.3
-  }
- },
- {
-  "qid": "q9-13",
-  "quiz": 9,
-  "qno": 13,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q9-13.png",
-  "answer_img": null,
-  "head": {
-   "p": 11,
-   "y": 38.1
-  },
-  "next": {
-   "p": 11,
-   "y": 395.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 32.1,
-   "y1": 302.3
-  }
- },
- {
-  "qid": "q9-14",
-  "quiz": 9,
-  "qno": 14,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q9-14.png",
-  "answer_img": null,
-  "head": {
-   "p": 11,
-   "y": 395.1
-  },
-  "next": {
-   "p": 12,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 389.1,
-   "y1": 643.6
-  }
- },
- {
-  "qid": "q9-15",
-  "quiz": 9,
-  "qno": 15,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "xR | Thecorrectansweris: = s+ t(s, t in ) | ⎣1⎦⎣0⎦ | 01",
-  "img": "img/q/q9-15.png",
-  "answer_img": "img/a/q9-15.png",
-  "head": {
-   "p": 12,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 805.0
-  },
-  "crop": {
-   "p": 12,
-   "y0": 32.1,
-   "y1": 612.8
-  }
- },
- {
-  "qid": "q10-01",
-  "quiz": 10,
-  "qno": 1,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎡⎤ | 3−1−21 | ⎣00−3−1⎦ | 0000",
-  "img": "img/q/q10-01.png",
-  "answer_img": "img/a/q10-01.png",
-  "head": {
-   "p": 1,
-   "y": 38.1
-  },
-  "next": {
-   "p": 2,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 1,
-   "y0": 32.1,
-   "y1": 531.1
-  }
- },
- {
-  "qid": "q10-02",
-  "quiz": 10,
-  "qno": 2,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q10-02.png",
-  "answer_img": null,
-  "head": {
-   "p": 2,
-   "y": 38.1
-  },
-  "next": {
-   "p": 3,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 2,
-   "y0": 32.1,
-   "y1": 367.6
-  }
- },
- {
-  "qid": "q10-03",
-  "quiz": 10,
-  "qno": 3,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "⎣66⎦ | Thecorrectansweris: | √3√33 | 66",
-  "img": "img/q/q10-03.png",
-  "answer_img": "img/a/q10-03.png",
-  "head": {
-   "p": 3,
-   "y": 38.1
-  },
-  "next": {
-   "p": 4,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 3,
-   "y0": 32.1,
-   "y1": 432.1
-  }
- },
- {
-  "qid": "q10-04",
-  "quiz": 10,
-  "qno": 4,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q10-04.png",
-  "answer_img": null,
-  "head": {
-   "p": 4,
-   "y": 38.1
-  },
-  "next": {
-   "p": 5,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 4,
-   "y0": 32.1,
-   "y1": 286.6
-  }
- },
- {
-  "qid": "q10-05",
-  "quiz": 10,
-  "qno": 5,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
-  "img": "img/q/q10-05.png",
-  "answer_img": "img/a/q10-05.png",
-  "head": {
-   "p": 5,
-   "y": 38.1
-  },
-  "next": {
-   "p": 6,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 5,
-   "y0": 32.1,
-   "y1": 408.8
-  }
- },
- {
-  "qid": "q10-06",
-  "quiz": 10,
-  "qno": 6,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "ab | Thecorrectansweris: = −1, = 3",
-  "img": "img/q/q10-06.png",
-  "answer_img": "img/a/q10-06.png",
-  "head": {
-   "p": 6,
-   "y": 38.1
-  },
-  "next": {
-   "p": 7,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 6,
-   "y0": 32.1,
-   "y1": 396.1
-  }
- },
- {
-  "qid": "q10-07",
-  "quiz": 10,
-  "qno": 7,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:,,, | ⎩⎭ | ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ | 81−1−8",
-  "img": "img/q/q10-07.png",
-  "answer_img": "img/a/q10-07.png",
-  "head": {
-   "p": 7,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 7,
-   "y0": 32.1,
-   "y1": 526.6
-  }
- },
- {
-  "qid": "q10-08",
-  "quiz": 10,
-  "qno": 8,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q10-08.png",
-  "answer_img": null,
-  "head": {
-   "p": 8,
-   "y": 38.1
-  },
-  "next": {
-   "p": 8,
-   "y": 399.6
-  },
-  "crop": {
-   "p": 8,
-   "y0": 32.1,
-   "y1": 306.8
-  }
- },
- {
-  "qid": "q10-09",
-  "quiz": 10,
-  "qno": 9,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q10-09.png",
-  "answer_img": null,
-  "head": {
-   "p": 8,
-   "y": 399.6
-  },
-  "next": {
-   "p": 9,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 8,
-   "y0": 393.6,
-   "y1": 641.3
-  }
- },
- {
-  "qid": "q10-10",
-  "quiz": 10,
-  "qno": 10,
-  "type": "fill",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris:0",
-  "img": "img/q/q10-10.png",
-  "answer_img": "img/a/q10-10.png",
-  "head": {
-   "p": 9,
-   "y": 38.1
-  },
-  "next": {
-   "p": 10,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 9,
-   "y0": 32.1,
-   "y1": 156.8
-  }
- },
- {
-  "qid": "q10-11",
-  "quiz": 10,
-  "qno": 11,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "T | Thecorrectansweris:isneitherone-to-onenoronto.",
-  "img": "img/q/q10-11.png",
-  "answer_img": "img/a/q10-11.png",
-  "head": {
-   "p": 10,
-   "y": 38.1
-  },
-  "next": {
-   "p": 11,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 10,
-   "y0": 32.1,
-   "y1": 434.3
-  }
- },
- {
-  "qid": "q10-12",
-  "quiz": 10,
-  "qno": 12,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "Thecorrectansweris: | ⎣90−3⎦ | 4−67",
-  "img": "img/q/q10-12.png",
-  "answer_img": "img/a/q10-12.png",
-  "head": {
-   "p": 11,
-   "y": 38.1
-  },
-  "next": {
-   "p": 12,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 11,
-   "y0": 32.1,
-   "y1": 515.3
-  }
- },
- {
-  "qid": "q10-13",
-  "quiz": 10,
-  "qno": 13,
-  "type": "fill",
-  "has_printed_answer": false,
-  "printed_answer_text": null,
-  "img": "img/q/q10-13.png",
-  "answer_img": null,
-  "head": {
-   "p": 12,
-   "y": 38.1
-  },
-  "next": {
-   "p": 13,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 12,
-   "y0": 32.1,
-   "y1": 302.3
-  }
- },
- {
-  "qid": "q10-14",
-  "quiz": 10,
-  "qno": 14,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "v | Thecorrectansweris: =⎣5⎦ | 3 | 3",
-  "img": "img/q/q10-14.png",
-  "answer_img": "img/a/q10-14.png",
-  "head": {
-   "p": 13,
-   "y": 38.1
-  },
-  "next": {
-   "p": 14,
-   "y": 38.1
-  },
-  "crop": {
-   "p": 13,
-   "y0": 32.1,
-   "y1": 520.6
-  }
- },
- {
-  "qid": "q10-15",
-  "quiz": 10,
-  "qno": 15,
-  "type": "choice",
-  "has_printed_answer": true,
-  "printed_answer_text": "x s ts tR | Thecorrectansweris: =+(, in ) | ⎣1⎦⎣0⎦ | 01",
-  "img": "img/q/q10-15.png",
-  "answer_img": "img/a/q10-15.png",
-  "head": {
-   "p": 14,
-   "y": 38.1
-  },
-  "next": {
-   "p": 14,
-   "y": 805.0
-  },
-  "crop": {
-   "p": 14,
-   "y0": 32.1,
-   "y1": 612.8
-  }
+  "qid": "p1-01",
+  "img": "img/q/p1-01.png",
+  "answer_img": "img/a/p1-01.png",
+  "w": 1034,
+  "h": 380
+ },
+ {
+  "qid": "p1-02",
+  "img": "img/q/p1-02.png",
+  "answer_img": "img/a/p1-02.png",
+  "w": 1034,
+  "h": 579
+ },
+ {
+  "qid": "p1-03",
+  "img": "img/q/p1-03.png",
+  "answer_img": "img/a/p1-03.png",
+  "w": 1034,
+  "h": 986
+ },
+ {
+  "qid": "p1-04",
+  "img": "img/q/p1-04.png",
+  "answer_img": "img/a/p1-04.png",
+  "w": 1034,
+  "h": 812
+ },
+ {
+  "qid": "p1-06",
+  "img": "img/q/p1-06.png",
+  "answer_img": "img/a/p1-06.png",
+  "w": 1034,
+  "h": 792
+ },
+ {
+  "qid": "p1-07",
+  "img": "img/q/p1-07.png",
+  "answer_img": "img/a/p1-07.png",
+  "w": 1034,
+  "h": 596
+ },
+ {
+  "qid": "p1-08",
+  "img": "img/q/p1-08.png",
+  "answer_img": "img/a/p1-08.png",
+  "w": 1034,
+  "h": 555
+ },
+ {
+  "qid": "p1-09",
+  "img": "img/q/p1-09.png",
+  "answer_img": "img/a/p1-09.png",
+  "w": 1034,
+  "h": 849
+ },
+ {
+  "qid": "p1-10",
+  "img": "img/q/p1-10.png",
+  "answer_img": "img/a/p1-10.png",
+  "w": 1034,
+  "h": 615
+ },
+ {
+  "qid": "p1-11",
+  "img": "img/q/p1-11.png",
+  "answer_img": "img/a/p1-11.png",
+  "w": 1034,
+  "h": 777
+ },
+ {
+  "qid": "p1-12",
+  "img": "img/q/p1-12.png",
+  "answer_img": "img/a/p1-12.png",
+  "w": 1034,
+  "h": 986
+ },
+ {
+  "qid": "p1-13",
+  "img": "img/q/p1-13.png",
+  "answer_img": "img/a/p1-13.png",
+  "w": 1034,
+  "h": 294
+ },
+ {
+  "qid": "p1-14",
+  "img": "img/q/p1-14.png",
+  "answer_img": "img/a/p1-14.png",
+  "w": 1034,
+  "h": 580
+ },
+ {
+  "qid": "p1-15",
+  "img": "img/q/p1-15.png",
+  "answer_img": "img/a/p1-15.png",
+  "w": 1034,
+  "h": 315
+ },
+ {
+  "qid": "p2-03",
+  "img": "img/q/p2-03.png",
+  "answer_img": "img/a/p2-03.png",
+  "w": 1034,
+  "h": 651
+ },
+ {
+  "qid": "p2-08",
+  "img": "img/q/p2-08.png",
+  "answer_img": "img/a/p2-08.png",
+  "w": 1034,
+  "h": 812
+ },
+ {
+  "qid": "p2-10",
+  "img": "img/q/p2-10.png",
+  "answer_img": "img/a/p2-10.png",
+  "w": 1034,
+  "h": 986
+ },
+ {
+  "qid": "p2-13",
+  "img": "img/q/p2-13.png",
+  "answer_img": "img/a/p2-13.png",
+  "w": 1034,
+  "h": 556
+ },
+ {
+  "qid": "p2-15",
+  "img": "img/q/p2-15.png",
+  "answer_img": "img/a/p2-15.png",
+  "w": 1034,
+  "h": 596
+ },
+ {
+  "qid": "p3-06",
+  "img": "img/q/p3-06.png",
+  "answer_img": "img/a/p3-06.png",
+  "w": 1034,
+  "h": 849
+ },
+ {
+  "qid": "p3-07",
+  "img": "img/q/p3-07.png",
+  "answer_img": "img/a/p3-07.png",
+  "w": 1034,
+  "h": 986
+ },
+ {
+  "qid": "p3-08",
+  "img": "img/q/p3-08.png",
+  "answer_img": "img/a/p3-08.png",
+  "w": 1034,
+  "h": 812
+ },
+ {
+  "qid": "p3-10",
+  "img": "img/q/p3-10.png",
+  "answer_img": "img/a/p3-10.png",
+  "w": 1034,
+  "h": 687
+ },
+ {
+  "qid": "p3-13",
+  "img": "img/q/p3-13.png",
+  "answer_img": "img/a/p3-13.png",
+  "w": 1034,
+  "h": 295
+ },
+ {
+  "qid": "p4-08",
+  "img": "img/q/p4-08.png",
+  "answer_img": "img/a/p4-08.png",
+  "w": 1034,
+  "h": 812
+ },
+ {
+  "qid": "p4-10",
+  "img": "img/q/p4-10.png",
+  "answer_img": "img/a/p4-10.png",
+  "w": 1034,
+  "h": 986
+ },
+ {
+  "qid": "p4-15",
+  "img": "img/q/p4-15.png",
+  "answer_img": "img/a/p4-15.png",
+  "w": 1034,
+  "h": 651
+ },
+ {
+  "qid": "p5-01",
+  "img": "img/q/p5-01.png",
+  "answer_img": "img/a/p5-01.png",
+  "w": 1034,
+  "h": 986
+ },
+ {
+  "qid": "p5-02",
+  "img": "img/q/p5-02.png",
+  "answer_img": "img/a/p5-02.png",
+  "w": 1034,
+  "h": 812
+ },
+ {
+  "qid": "p5-03",
+  "img": "img/q/p5-03.png",
+  "answer_img": "img/a/p5-03.png",
+  "w": 1034,
+  "h": 651
+ },
+ {
+  "qid": "p5-05",
+  "img": "img/q/p5-05.png",
+  "answer_img": "img/a/p5-05.png",
+  "w": 1034,
+  "h": 295
+ },
+ {
+  "qid": "p5-08",
+  "img": "img/q/p5-08.png",
+  "answer_img": "img/a/p5-08.png",
+  "w": 1034,
+  "h": 596
+ },
+ {
+  "qid": "p5-10",
+  "img": "img/q/p5-10.png",
+  "answer_img": "img/a/p5-10.png",
+  "w": 1034,
+  "h": 792
+ },
+ {
+  "qid": "p6-01",
+  "img": "img/q/p6-01.png",
+  "answer_img": "img/a/p6-01.png",
+  "w": 1034,
+  "h": 1013
+ },
+ {
+  "qid": "p6-02",
+  "img": "img/q/p6-02.png",
+  "answer_img": "img/a/p6-02.png",
+  "w": 1034,
+  "h": 360
+ },
+ {
+  "qid": "p6-03",
+  "img": "img/q/p6-03.png",
+  "answer_img": "img/a/p6-03.png",
+  "w": 1034,
+  "h": 651
+ },
+ {
+  "qid": "p6-04",
+  "img": "img/q/p6-04.png",
+  "answer_img": "img/a/p6-04.png",
+  "w": 1034,
+  "h": 818
+ },
+ {
+  "qid": "p6-05",
+  "img": "img/q/p6-05.png",
+  "answer_img": "img/a/p6-05.png",
+  "w": 1034,
+  "h": 321
+ },
+ {
+  "qid": "p6-06",
+  "img": "img/q/p6-06.png",
+  "answer_img": "img/a/p6-06.png",
+  "w": 1034,
+  "h": 828
+ },
+ {
+  "qid": "p6-07",
+  "img": "img/q/p6-07.png",
+  "answer_img": "img/a/p6-07.png",
+  "w": 1034,
+  "h": 392
+ },
+ {
+  "qid": "p6-09",
+  "img": "img/q/p6-09.png",
+  "answer_img": "img/a/p6-09.png",
+  "w": 1034,
+  "h": 849
+ },
+ {
+  "qid": "p6-10",
+  "img": "img/q/p6-10.png",
+  "answer_img": "img/a/p6-10.png",
+  "w": 1034,
+  "h": 383
+ },
+ {
+  "qid": "p6-11",
+  "img": "img/q/p6-11.png",
+  "answer_img": "img/a/p6-11.png",
+  "w": 1034,
+  "h": 294
+ },
+ {
+  "qid": "p6-12",
+  "img": "img/q/p6-12.png",
+  "answer_img": "img/a/p6-12.png",
+  "w": 1034,
+  "h": 605
+ },
+ {
+  "qid": "p6-13",
+  "img": "img/q/p6-13.png",
+  "answer_img": "img/a/p6-13.png",
+  "w": 1034,
+  "h": 522
+ },
+ {
+  "qid": "p6-14",
+  "img": "img/q/p6-14.png",
+  "answer_img": "img/a/p6-14.png",
+  "w": 1034,
+  "h": 615
+ },
+ {
+  "qid": "p6-15",
+  "img": "img/q/p6-15.png",
+  "answer_img": "img/a/p6-15.png",
+  "w": 1034,
+  "h": 579
+ },
+ {
+  "qid": "p7-03",
+  "img": "img/q/p7-03.png",
+  "answer_img": "img/a/p7-03.png",
+  "w": 1034,
+  "h": 818
+ },
+ {
+  "qid": "p7-06",
+  "img": "img/q/p7-06.png",
+  "answer_img": "img/a/p7-06.png",
+  "w": 1034,
+  "h": 651
+ },
+ {
+  "qid": "p7-07",
+  "img": "img/q/p7-07.png",
+  "answer_img": "img/a/p7-07.png",
+  "w": 1034,
+  "h": 605
+ },
+ {
+  "qid": "p7-09",
+  "img": "img/q/p7-09.png",
+  "answer_img": "img/a/p7-09.png",
+  "w": 1034,
+  "h": 656
+ },
+ {
+  "qid": "p7-12",
+  "img": "img/q/p7-12.png",
+  "answer_img": "img/a/p7-12.png",
+  "w": 1034,
+  "h": 1013
+ },
+ {
+  "qid": "p7-13",
+  "img": "img/q/p7-13.png",
+  "answer_img": "img/a/p7-13.png",
+  "w": 1034,
+  "h": 840
+ },
+ {
+  "qid": "p8-03",
+  "img": "img/q/p8-03.png",
+  "answer_img": "img/a/p8-03.png",
+  "w": 1034,
+  "h": 605
+ },
+ {
+  "qid": "p8-06",
+  "img": "img/q/p8-06.png",
+  "answer_img": "img/a/p8-06.png",
+  "w": 1034,
+  "h": 295
+ },
+ {
+  "qid": "p8-11",
+  "img": "img/q/p8-11.png",
+  "answer_img": "img/a/p8-11.png",
+  "w": 1034,
+  "h": 818
+ },
+ {
+  "qid": "p8-13",
+  "img": "img/q/p8-13.png",
+  "answer_img": "img/a/p8-13.png",
+  "w": 1034,
+  "h": 615
+ },
+ {
+  "qid": "p9-02",
+  "img": "img/q/p9-02.png",
+  "answer_img": "img/a/p9-02.png",
+  "w": 1034,
+  "h": 651
+ },
+ {
+  "qid": "p9-04",
+  "img": "img/q/p9-04.png",
+  "answer_img": "img/a/p9-04.png",
+  "w": 1034,
+  "h": 615
+ },
+ {
+  "qid": "p9-11",
+  "img": "img/q/p9-11.png",
+  "answer_img": "img/a/p9-11.png",
+  "w": 1034,
+  "h": 840
+ },
+ {
+  "qid": "p9-12",
+  "img": "img/q/p9-12.png",
+  "answer_img": "img/a/p9-12.png",
+  "w": 1034,
+  "h": 818
+ },
+ {
+  "qid": "p9-15",
+  "img": "img/q/p9-15.png",
+  "answer_img": "img/a/p9-15.png",
+  "w": 1034,
+  "h": 1013
+ },
+ {
+  "qid": "p10-03",
+  "img": "img/q/p10-03.png",
+  "answer_img": "img/a/p10-03.png",
+  "w": 1034,
+  "h": 651
+ },
+ {
+  "qid": "p10-05",
+  "img": "img/q/p10-05.png",
+  "answer_img": "img/a/p10-05.png",
+  "w": 1034,
+  "h": 605
+ },
+ {
+  "qid": "p10-08",
+  "img": "img/q/p10-08.png",
+  "answer_img": "img/a/p10-08.png",
+  "w": 1034,
+  "h": 401
+ },
+ {
+  "qid": "p10-10",
+  "img": "img/q/p10-10.png",
+  "answer_img": "img/a/p10-10.png",
+  "w": 1034,
+  "h": 294
+ },
+ {
+  "qid": "p10-11",
+  "img": "img/q/p10-11.png",
+  "answer_img": "img/a/p10-11.png",
+  "w": 1034,
+  "h": 656
+ },
+ {
+  "qid": "p10-13",
+  "img": "img/q/p10-13.png",
+  "answer_img": "img/a/p10-13.png",
+  "w": 1034,
+  "h": 392
+ },
+ {
+  "qid": "p10-15",
+  "img": "img/q/p10-15.png",
+  "answer_img": "img/a/p10-15.png",
+  "w": 1034,
+  "h": 1013
+ },
+ {
+  "qid": "p11-01",
+  "img": "img/q/p11-01.png",
+  "answer_img": "img/a/p11-01.png",
+  "w": 1034,
+  "h": 302
+ },
+ {
+  "qid": "p11-02",
+  "img": "img/q/p11-02.png",
+  "answer_img": "img/a/p11-02.png",
+  "w": 1034,
+  "h": 569
+ },
+ {
+  "qid": "p11-03",
+  "img": "img/q/p11-03.png",
+  "answer_img": "img/a/p11-03.png",
+  "w": 1034,
+  "h": 954
+ },
+ {
+  "qid": "p11-10",
+  "img": "img/q/p11-10.png",
+  "answer_img": "img/a/p11-10.png",
+  "w": 1034,
+  "h": 286
+ },
+ {
+  "qid": "p11-11",
+  "img": "img/q/p11-11.png",
+  "answer_img": "img/a/p11-11.png",
+  "w": 1034,
+  "h": 558
+ },
+ {
+  "qid": "p11-14",
+  "img": "img/q/p11-14.png",
+  "answer_img": "img/a/p11-14.png",
+  "w": 1034,
+  "h": 414
+ },
+ {
+  "qid": "p12-04",
+  "img": "img/q/p12-04.png",
+  "answer_img": "img/a/p12-04.png",
+  "w": 1034,
+  "h": 1034
+ },
+ {
+  "qid": "p12-06",
+  "img": "img/q/p12-06.png",
+  "answer_img": "img/a/p12-06.png",
+  "w": 1034,
+  "h": 956
+ },
+ {
+  "qid": "p12-07",
+  "img": "img/q/p12-07.png",
+  "answer_img": "img/a/p12-07.png",
+  "w": 1034,
+  "h": 558
+ },
+ {
+  "qid": "p12-09",
+  "img": "img/q/p12-09.png",
+  "answer_img": "img/a/p12-09.png",
+  "w": 1034,
+  "h": 415
+ },
+ {
+  "qid": "p12-10",
+  "img": "img/q/p12-10.png",
+  "answer_img": "img/a/p12-10.png",
+  "w": 1034,
+  "h": 557
+ },
+ {
+  "qid": "p12-11",
+  "img": "img/q/p12-11.png",
+  "answer_img": "img/a/p12-11.png",
+  "w": 1034,
+  "h": 954
+ },
+ {
+  "qid": "p12-15",
+  "img": "img/q/p12-15.png",
+  "answer_img": "img/a/p12-15.png",
+  "w": 1034,
+  "h": 750
+ },
+ {
+  "qid": "p13-02",
+  "img": "img/q/p13-02.png",
+  "answer_img": "img/a/p13-02.png",
+  "w": 1034,
+  "h": 956
+ },
+ {
+  "qid": "p13-04",
+  "img": "img/q/p13-04.png",
+  "answer_img": "img/a/p13-04.png",
+  "w": 1034,
+  "h": 1034
+ },
+ {
+  "qid": "p13-05",
+  "img": "img/q/p13-05.png",
+  "answer_img": "img/a/p13-05.png",
+  "w": 1034,
+  "h": 558
+ },
+ {
+  "qid": "p13-07",
+  "img": "img/q/p13-07.png",
+  "answer_img": "img/a/p13-07.png",
+  "w": 1034,
+  "h": 557
+ },
+ {
+  "qid": "p13-08",
+  "img": "img/q/p13-08.png",
+  "answer_img": "img/a/p13-08.png",
+  "w": 1034,
+  "h": 254
+ },
+ {
+  "qid": "p13-09",
+  "img": "img/q/p13-09.png",
+  "answer_img": "img/a/p13-09.png",
+  "w": 1034,
+  "h": 750
+ },
+ {
+  "qid": "p13-11",
+  "img": "img/q/p13-11.png",
+  "answer_img": "img/a/p13-11.png",
+  "w": 1034,
+  "h": 954
+ },
+ {
+  "qid": "p13-12",
+  "img": "img/q/p13-12.png",
+  "answer_img": "img/a/p13-12.png",
+  "w": 1034,
+  "h": 356
+ },
+ {
+  "qid": "p13-13",
+  "img": "img/q/p13-13.png",
+  "answer_img": "img/a/p13-13.png",
+  "w": 1034,
+  "h": 342
+ },
+ {
+  "qid": "p13-14",
+  "img": "img/q/p13-14.png",
+  "answer_img": "img/a/p13-14.png",
+  "w": 1034,
+  "h": 414
+ },
+ {
+  "qid": "p14-01",
+  "img": "img/q/p14-01.png",
+  "answer_img": "img/a/p14-01.png",
+  "w": 1034,
+  "h": 254
+ },
+ {
+  "qid": "p14-02",
+  "img": "img/q/p14-02.png",
+  "answer_img": "img/a/p14-02.png",
+  "w": 1034,
+  "h": 956
+ },
+ {
+  "qid": "p14-03",
+  "img": "img/q/p14-03.png",
+  "answer_img": "img/a/p14-03.png",
+  "w": 1034,
+  "h": 750
+ },
+ {
+  "qid": "p14-04",
+  "img": "img/q/p14-04.png",
+  "answer_img": "img/a/p14-04.png",
+  "w": 1034,
+  "h": 342
+ },
+ {
+  "qid": "p14-05",
+  "img": "img/q/p14-05.png",
+  "answer_img": "img/a/p14-05.png",
+  "w": 1034,
+  "h": 415
+ },
+ {
+  "qid": "p14-06",
+  "img": "img/q/p14-06.png",
+  "answer_img": "img/a/p14-06.png",
+  "w": 1034,
+  "h": 954
+ },
+ {
+  "qid": "p14-07",
+  "img": "img/q/p14-07.png",
+  "answer_img": "img/a/p14-07.png",
+  "w": 1034,
+  "h": 557
+ },
+ {
+  "qid": "p14-11",
+  "img": "img/q/p14-11.png",
+  "answer_img": "img/a/p14-11.png",
+  "w": 1034,
+  "h": 558
+ },
+ {
+  "qid": "p14-13",
+  "img": "img/q/p14-13.png",
+  "answer_img": "img/a/p14-13.png",
+  "w": 1034,
+  "h": 368
+ },
+ {
+  "qid": "p14-14",
+  "img": "img/q/p14-14.png",
+  "answer_img": "img/a/p14-14.png",
+  "w": 1034,
+  "h": 321
+ },
+ {
+  "qid": "p14-15",
+  "img": "img/q/p14-15.png",
+  "answer_img": "img/a/p14-15.png",
+  "w": 1034,
+  "h": 926
+ },
+ {
+  "qid": "p15-01",
+  "img": "img/q/p15-01.png",
+  "answer_img": "img/a/p15-01.png",
+  "w": 1034,
+  "h": 557
+ },
+ {
+  "qid": "p15-03",
+  "img": "img/q/p15-03.png",
+  "answer_img": "img/a/p15-03.png",
+  "w": 1034,
+  "h": 254
+ },
+ {
+  "qid": "p15-04",
+  "img": "img/q/p15-04.png",
+  "answer_img": "img/a/p15-04.png",
+  "w": 1034,
+  "h": 302
+ },
+ {
+  "qid": "p15-05",
+  "img": "img/q/p15-05.png",
+  "answer_img": "img/a/p15-05.png",
+  "w": 1034,
+  "h": 750
+ },
+ {
+  "qid": "p15-06",
+  "img": "img/q/p15-06.png",
+  "answer_img": "img/a/p15-06.png",
+  "w": 1034,
+  "h": 285
+ },
+ {
+  "qid": "p15-08",
+  "img": "img/q/p15-08.png",
+  "answer_img": "img/a/p15-08.png",
+  "w": 1034,
+  "h": 908
+ },
+ {
+  "qid": "p15-09",
+  "img": "img/q/p15-09.png",
+  "answer_img": "img/a/p15-09.png",
+  "w": 1034,
+  "h": 414
+ },
+ {
+  "qid": "p15-10",
+  "img": "img/q/p15-10.png",
+  "answer_img": "img/a/p15-10.png",
+  "w": 1034,
+  "h": 558
+ },
+ {
+  "qid": "p15-11",
+  "img": "img/q/p15-11.png",
+  "answer_img": "img/a/p15-11.png",
+  "w": 1034,
+  "h": 954
+ },
+ {
+  "qid": "p15-12",
+  "img": "img/q/p15-12.png",
+  "answer_img": "img/a/p15-12.png",
+  "w": 1034,
+  "h": 956
+ },
+ {
+  "qid": "p15-13",
+  "img": "img/q/p15-13.png",
+  "answer_img": "img/a/p15-13.png",
+  "w": 1034,
+  "h": 290
+ },
+ {
+  "qid": "p15-15",
+  "img": "img/q/p15-15.png",
+  "answer_img": "img/a/p15-15.png",
+  "w": 1034,
+  "h": 1034
+ },
+ {
+  "qid": "b1-07",
+  "img": "img/q/b1-07.png",
+  "answer_img": "img/a/b1-07.png",
+  "w": 1067,
+  "h": 578
+ },
+ {
+  "qid": "b1-10",
+  "img": "img/q/b1-10.png",
+  "answer_img": "img/a/b1-10.png",
+  "w": 1067,
+  "h": 947
+ },
+ {
+  "qid": "b1-11",
+  "img": "img/q/b1-11.png",
+  "answer_img": "img/a/b1-11.png",
+  "w": 1067,
+  "h": 254
+ },
+ {
+  "qid": "b1-12",
+  "img": "img/q/b1-12.png",
+  "answer_img": "img/a/b1-12.png",
+  "w": 1067,
+  "h": 680
+ },
+ {
+  "qid": "b1-15",
+  "img": "img/q/b1-15.png",
+  "answer_img": "img/a/b1-15.png",
+  "w": 1067,
+  "h": 785
+ },
+ {
+  "qid": "b2-02",
+  "img": "img/q/b2-02.png",
+  "answer_img": "img/a/b2-02.png",
+  "w": 1067,
+  "h": 752
+ },
+ {
+  "qid": "b2-05",
+  "img": "img/q/b2-05.png",
+  "answer_img": "img/a/b2-05.png",
+  "w": 1067,
+  "h": 785
+ },
+ {
+  "qid": "b2-06",
+  "img": "img/q/b2-06.png",
+  "answer_img": "img/a/b2-06.png",
+  "w": 1067,
+  "h": 539
+ },
+ {
+  "qid": "b2-08",
+  "img": "img/q/b2-08.png",
+  "answer_img": "img/a/b2-08.png",
+  "w": 1067,
+  "h": 947
+ },
+ {
+  "qid": "b2-11",
+  "img": "img/q/b2-11.png",
+  "answer_img": "img/a/b2-11.png",
+  "w": 1067,
+  "h": 947
+ },
+ {
+  "qid": "b2-12",
+  "img": "img/q/b2-12.png",
+  "answer_img": "img/a/b2-12.png",
+  "w": 1067,
+  "h": 608
+ },
+ {
+  "qid": "b3-01",
+  "img": "img/q/b3-01.png",
+  "answer_img": "img/a/b3-01.png",
+  "w": 1067,
+  "h": 752
+ },
+ {
+  "qid": "b3-04",
+  "img": "img/q/b3-04.png",
+  "answer_img": "img/a/b3-04.png",
+  "w": 1067,
+  "h": 644
+ },
+ {
+  "qid": "b3-05",
+  "img": "img/q/b3-05.png",
+  "answer_img": "img/a/b3-05.png",
+  "w": 1067,
+  "h": 947
+ },
+ {
+  "qid": "b3-06",
+  "img": "img/q/b3-06.png",
+  "answer_img": "img/a/b3-06.png",
+  "w": 1067,
+  "h": 254
+ },
+ {
+  "qid": "b3-08",
+  "img": "img/q/b3-08.png",
+  "answer_img": "img/a/b3-08.png",
+  "w": 1067,
+  "h": 765
+ },
+ {
+  "qid": "b3-12",
+  "img": "img/q/b3-12.png",
+  "answer_img": "img/a/b3-12.png",
+  "w": 1067,
+  "h": 309
+ },
+ {
+  "qid": "b3-14",
+  "img": "img/q/b3-14.png",
+  "answer_img": "img/a/b3-14.png",
+  "w": 1067,
+  "h": 785
+ },
+ {
+  "qid": "b4-03",
+  "img": "img/q/b4-03.png",
+  "answer_img": "img/a/b4-03.png",
+  "w": 1067,
+  "h": 947
+ },
+ {
+  "qid": "b4-07",
+  "img": "img/q/b4-07.png",
+  "answer_img": "img/a/b4-07.png",
+  "w": 1067,
+  "h": 254
+ },
+ {
+  "qid": "b4-09",
+  "img": "img/q/b4-09.png",
+  "answer_img": "img/a/b4-09.png",
+  "w": 1067,
+  "h": 680
+ },
+ {
+  "qid": "b4-11",
+  "img": "img/q/b4-11.png",
+  "answer_img": "img/a/b4-11.png",
+  "w": 1067,
+  "h": 785
+ },
+ {
+  "qid": "b5-02",
+  "img": "img/q/b5-02.png",
+  "answer_img": "img/a/b5-02.png",
+  "w": 1067,
+  "h": 765
+ },
+ {
+  "qid": "b5-03",
+  "img": "img/q/b5-03.png",
+  "answer_img": "img/a/b5-03.png",
+  "w": 1067,
+  "h": 816
+ },
+ {
+  "qid": "b5-07",
+  "img": "img/q/b5-07.png",
+  "answer_img": "img/a/b5-07.png",
+  "w": 1067,
+  "h": 947
+ },
+ {
+  "qid": "b5-08",
+  "img": "img/q/b5-08.png",
+  "answer_img": "img/a/b5-08.png",
+  "w": 1067,
+  "h": 254
+ },
+ {
+  "qid": "b5-10",
+  "img": "img/q/b5-10.png",
+  "answer_img": "img/a/b5-10.png",
+  "w": 1067,
+  "h": 785
+ },
+ {
+  "qid": "b5-11",
+  "img": "img/q/b5-11.png",
+  "answer_img": "img/a/b5-11.png",
+  "w": 1067,
+  "h": 752
+ },
+ {
+  "qid": "b5-12",
+  "img": "img/q/b5-12.png",
+  "answer_img": "img/a/b5-12.png",
+  "w": 1067,
+  "h": 572
+ },
+ {
+  "qid": "b5-13",
+  "img": "img/q/b5-13.png",
+  "answer_img": "img/a/b5-13.png",
+  "w": 1067,
+  "h": 680
+ },
+ {
+  "qid": "b5-15",
+  "img": "img/q/b5-15.png",
+  "answer_img": "img/a/b5-15.png",
+  "w": 1067,
+  "h": 947
+ },
+ {
+  "qid": "b6-01",
+  "img": "img/q/b6-01.png",
+  "answer_img": "img/a/b6-01.png",
+  "w": 1067,
+  "h": 374
+ },
+ {
+  "qid": "b6-02",
+  "img": "img/q/b6-02.png",
+  "answer_img": "img/a/b6-02.png",
+  "w": 1067,
+  "h": 638
+ },
+ {
+  "qid": "b6-03",
+  "img": "img/q/b6-03.png",
+  "answer_img": "img/a/b6-03.png",
+  "w": 1067,
+  "h": 254
+ },
+ {
+  "qid": "b6-04",
+  "img": "img/q/b6-04.png",
+  "answer_img": "img/a/b6-04.png",
+  "w": 1067,
+  "h": 597
+ },
+ {
+  "qid": "b6-05",
+  "img": "img/q/b6-05.png",
+  "answer_img": "img/a/b6-05.png",
+  "w": 1067,
+  "h": 812
+ },
+ {
+  "qid": "b6-06",
+  "img": "img/q/b6-06.png",
+  "answer_img": "img/a/b6-06.png",
+  "w": 1067,
+  "h": 765
+ },
+ {
+  "qid": "b6-07",
+  "img": "img/q/b6-07.png",
+  "answer_img": "img/a/b6-07.png",
+  "w": 1067,
+  "h": 608
+ },
+ {
+  "qid": "b6-09",
+  "img": "img/q/b6-09.png",
+  "answer_img": "img/a/b6-09.png",
+  "w": 1067,
+  "h": 816
+ },
+ {
+  "qid": "b6-11",
+  "img": "img/q/b6-11.png",
+  "answer_img": "img/a/b6-11.png",
+  "w": 1067,
+  "h": 978
+ },
+ {
+  "qid": "b7-04",
+  "img": "img/q/b7-04.png",
+  "answer_img": "img/a/b7-04.png",
+  "w": 1067,
+  "h": 638
+ },
+ {
+  "qid": "b7-07",
+  "img": "img/q/b7-07.png",
+  "answer_img": "img/a/b7-07.png",
+  "w": 1067,
+  "h": 812
+ },
+ {
+  "qid": "b7-10",
+  "img": "img/q/b7-10.png",
+  "answer_img": "img/a/b7-10.png",
+  "w": 1067,
+  "h": 597
+ },
+ {
+  "qid": "b7-13",
+  "img": "img/q/b7-13.png",
+  "answer_img": "img/a/b7-13.png",
+  "w": 1067,
+  "h": 789
+ },
+ {
+  "qid": "b7-15",
+  "img": "img/q/b7-15.png",
+  "answer_img": "img/a/b7-15.png",
+  "w": 1067,
+  "h": 608
+ },
+ {
+  "qid": "b8-01",
+  "img": "img/q/b8-01.png",
+  "answer_img": "img/a/b8-01.png",
+  "w": 1067,
+  "h": 608
+ },
+ {
+  "qid": "b8-02",
+  "img": "img/q/b8-02.png",
+  "answer_img": "img/a/b8-02.png",
+  "w": 1067,
+  "h": 978
+ },
+ {
+  "qid": "b8-05",
+  "img": "img/q/b8-05.png",
+  "answer_img": "img/a/b8-05.png",
+  "w": 1067,
+  "h": 816
+ },
+ {
+  "qid": "b8-07",
+  "img": "img/q/b8-07.png",
+  "answer_img": "img/a/b8-07.png",
+  "w": 1067,
+  "h": 383
+ },
+ {
+  "qid": "b8-08",
+  "img": "img/q/b8-08.png",
+  "answer_img": "img/a/b8-08.png",
+  "w": 1067,
+  "h": 252
+ },
+ {
+  "qid": "b8-09",
+  "img": "img/q/b8-09.png",
+  "answer_img": "img/a/b8-09.png",
+  "w": 1067,
+  "h": 597
+ },
+ {
+  "qid": "b8-11",
+  "img": "img/q/b8-11.png",
+  "answer_img": "img/a/b8-11.png",
+  "w": 1067,
+  "h": 315
+ },
+ {
+  "qid": "b8-12",
+  "img": "img/q/b8-12.png",
+  "answer_img": "img/a/b8-12.png",
+  "w": 1067,
+  "h": 638
+ },
+ {
+  "qid": "b8-13",
+  "img": "img/q/b8-13.png",
+  "answer_img": "img/a/b8-13.png",
+  "w": 1067,
+  "h": 572
+ },
+ {
+  "qid": "b9-01",
+  "img": "img/q/b9-01.png",
+  "answer_img": "img/a/b9-01.png",
+  "w": 1067,
+  "h": 353
+ },
+ {
+  "qid": "b9-02",
+  "img": "img/q/b9-02.png",
+  "answer_img": "img/a/b9-02.png",
+  "w": 1067,
+  "h": 812
+ },
+ {
+  "qid": "b9-03",
+  "img": "img/q/b9-03.png",
+  "answer_img": "img/a/b9-03.png",
+  "w": 1067,
+  "h": 978
+ },
+ {
+  "qid": "b9-05",
+  "img": "img/q/b9-05.png",
+  "answer_img": "img/a/b9-05.png",
+  "w": 1067,
+  "h": 315
+ },
+ {
+  "qid": "b9-07",
+  "img": "img/q/b9-07.png",
+  "answer_img": "img/a/b9-07.png",
+  "w": 1067,
+  "h": 647
+ },
+ {
+  "qid": "b9-08",
+  "img": "img/q/b9-08.png",
+  "answer_img": "img/a/b9-08.png",
+  "w": 1067,
+  "h": 597
+ },
+ {
+  "qid": "b9-09",
+  "img": "img/q/b9-09.png",
+  "answer_img": "img/a/b9-09.png",
+  "w": 1067,
+  "h": 638
+ },
+ {
+  "qid": "b9-14",
+  "img": "img/q/b9-14.png",
+  "answer_img": "img/a/b9-14.png",
+  "w": 1067,
+  "h": 765
+ },
+ {
+  "qid": "b10-01",
+  "img": "img/q/b10-01.png",
+  "answer_img": "img/a/b10-01.png",
+  "w": 1067,
+  "h": 978
+ },
+ {
+  "qid": "b10-03",
+  "img": "img/q/b10-03.png",
+  "answer_img": "img/a/b10-03.png",
+  "w": 1067,
+  "h": 608
+ },
+ {
+  "qid": "b10-04",
+  "img": "img/q/b10-04.png",
+  "answer_img": "img/a/b10-04.png",
+  "w": 1067,
+  "h": 812
+ },
+ {
+  "qid": "b10-06",
+  "img": "img/q/b10-06.png",
+  "answer_img": "img/a/b10-06.png",
+  "w": 1067,
+  "h": 383
+ },
+ {
+  "qid": "b10-07",
+  "img": "img/q/b10-07.png",
+  "answer_img": "img/a/b10-07.png",
+  "w": 1067,
+  "h": 638
+ },
+ {
+  "qid": "b10-08",
+  "img": "img/q/b10-08.png",
+  "answer_img": "img/a/b10-08.png",
+  "w": 1067,
+  "h": 509
+ },
+ {
+  "qid": "b10-10",
+  "img": "img/q/b10-10.png",
+  "answer_img": "img/a/b10-10.png",
+  "w": 1067,
+  "h": 597
+ },
+ {
+  "qid": "b10-11",
+  "img": "img/q/b10-11.png",
+  "answer_img": "img/a/b10-11.png",
+  "w": 1067,
+  "h": 429
+ },
+ {
+  "qid": "b10-14",
+  "img": "img/q/b10-14.png",
+  "answer_img": "img/a/b10-14.png",
+  "w": 1067,
+  "h": 572
+ },
+ {
+  "qid": "b10-15",
+  "img": "img/q/b10-15.png",
+  "answer_img": "img/a/b10-15.png",
+  "w": 1067,
+  "h": 765
+ },
+ {
+  "qid": "b11-01",
+  "img": "img/q/b11-01.png",
+  "answer_img": "img/a/b11-01.png",
+  "w": 1067,
+  "h": 723
+ },
+ {
+  "qid": "b11-04",
+  "img": "img/q/b11-04.png",
+  "answer_img": "img/a/b11-04.png",
+  "w": 1067,
+  "h": 378
+ },
+ {
+  "qid": "b11-06",
+  "img": "img/q/b11-06.png",
+  "answer_img": "img/a/b11-06.png",
+  "w": 1067,
+  "h": 872
+ },
+ {
+  "qid": "b11-09",
+  "img": "img/q/b11-09.png",
+  "answer_img": "img/a/b11-09.png",
+  "w": 1067,
+  "h": 558
+ },
+ {
+  "qid": "b11-13",
+  "img": "img/q/b11-13.png",
+  "answer_img": "img/a/b11-13.png",
+  "w": 1067,
+  "h": 542
+ },
+ {
+  "qid": "b11-15",
+  "img": "img/q/b11-15.png",
+  "answer_img": "img/a/b11-15.png",
+  "w": 1067,
+  "h": 995
+ },
+ {
+  "qid": "b12-02",
+  "img": "img/q/b12-02.png",
+  "answer_img": "img/a/b12-02.png",
+  "w": 1067,
+  "h": 542
+ },
+ {
+  "qid": "b12-04",
+  "img": "img/q/b12-04.png",
+  "answer_img": "img/a/b12-04.png",
+  "w": 1067,
+  "h": 918
+ },
+ {
+  "qid": "b12-08",
+  "img": "img/q/b12-08.png",
+  "answer_img": "img/a/b12-08.png",
+  "w": 1067,
+  "h": 995
+ },
+ {
+  "qid": "b12-09",
+  "img": "img/q/b12-09.png",
+  "answer_img": "img/a/b12-09.png",
+  "w": 1067,
+  "h": 920
+ },
+ {
+  "qid": "b12-10",
+  "img": "img/q/b12-10.png",
+  "answer_img": "img/a/b12-10.png",
+  "w": 1067,
+  "h": 558
+ },
+ {
+  "qid": "b12-12",
+  "img": "img/q/b12-12.png",
+  "answer_img": "img/a/b12-12.png",
+  "w": 1067,
+  "h": 249
+ },
+ {
+  "qid": "b12-14",
+  "img": "img/q/b12-14.png",
+  "answer_img": "img/a/b12-14.png",
+  "w": 1067,
+  "h": 872
+ },
+ {
+  "qid": "b12-15",
+  "img": "img/q/b12-15.png",
+  "answer_img": "img/a/b12-15.png",
+  "w": 1067,
+  "h": 378
+ },
+ {
+  "qid": "b13-01",
+  "img": "img/q/b13-01.png",
+  "answer_img": "img/a/b13-01.png",
+  "w": 1067,
+  "h": 920
+ },
+ {
+  "qid": "b13-02",
+  "img": "img/q/b13-02.png",
+  "answer_img": "img/a/b13-02.png",
+  "w": 1067,
+  "h": 723
+ },
+ {
+  "qid": "b13-06",
+  "img": "img/q/b13-06.png",
+  "answer_img": "img/a/b13-06.png",
+  "w": 1067,
+  "h": 335
+ },
+ {
+  "qid": "b13-08",
+  "img": "img/q/b13-08.png",
+  "answer_img": "img/a/b13-08.png",
+  "w": 1067,
+  "h": 995
+ },
+ {
+  "qid": "b13-11",
+  "img": "img/q/b13-11.png",
+  "answer_img": "img/a/b13-11.png",
+  "w": 1067,
+  "h": 558
+ },
+ {
+  "qid": "b13-15",
+  "img": "img/q/b13-15.png",
+  "answer_img": "img/a/b13-15.png",
+  "w": 1067,
+  "h": 379
+ },
+ {
+  "qid": "b14-01",
+  "img": "img/q/b14-01.png",
+  "answer_img": "img/a/b14-01.png",
+  "w": 1067,
+  "h": 248
+ },
+ {
+  "qid": "b14-03",
+  "img": "img/q/b14-03.png",
+  "answer_img": "img/a/b14-03.png",
+  "w": 1067,
+  "h": 995
+ },
+ {
+  "qid": "b14-06",
+  "img": "img/q/b14-06.png",
+  "answer_img": "img/a/b14-06.png",
+  "w": 1067,
+  "h": 378
+ },
+ {
+  "qid": "b14-07",
+  "img": "img/q/b14-07.png",
+  "answer_img": "img/a/b14-07.png",
+  "w": 1067,
+  "h": 920
+ },
+ {
+  "qid": "b14-10",
+  "img": "img/q/b14-10.png",
+  "answer_img": "img/a/b14-10.png",
+  "w": 1067,
+  "h": 918
+ },
+ {
+  "qid": "b14-11",
+  "img": "img/q/b14-11.png",
+  "answer_img": "img/a/b14-11.png",
+  "w": 1067,
+  "h": 542
+ },
+ {
+  "qid": "b14-12",
+  "img": "img/q/b14-12.png",
+  "answer_img": "img/a/b14-12.png",
+  "w": 1067,
+  "h": 888
+ },
+ {
+  "qid": "b14-14",
+  "img": "img/q/b14-14.png",
+  "answer_img": "img/a/b14-14.png",
+  "w": 1067,
+  "h": 558
+ },
+ {
+  "qid": "b14-15",
+  "img": "img/q/b14-15.png",
+  "answer_img": "img/a/b14-15.png",
+  "w": 1067,
+  "h": 249
+ },
+ {
+  "qid": "b15-01",
+  "img": "img/q/b15-01.png",
+  "answer_img": "img/a/b15-01.png",
+  "w": 1067,
+  "h": 541
+ },
+ {
+  "qid": "b15-02",
+  "img": "img/q/b15-02.png",
+  "answer_img": "img/a/b15-02.png",
+  "w": 1067,
+  "h": 920
+ },
+ {
+  "qid": "b15-03",
+  "img": "img/q/b15-03.png",
+  "answer_img": "img/a/b15-03.png",
+  "w": 1067,
+  "h": 558
+ },
+ {
+  "qid": "b15-04",
+  "img": "img/q/b15-04.png",
+  "answer_img": "img/a/b15-04.png",
+  "w": 1067,
+  "h": 335
+ },
+ {
+  "qid": "b15-06",
+  "img": "img/q/b15-06.png",
+  "answer_img": "img/a/b15-06.png",
+  "w": 1067,
+  "h": 378
+ },
+ {
+  "qid": "b15-08",
+  "img": "img/q/b15-08.png",
+  "answer_img": "img/a/b15-08.png",
+  "w": 1067,
+  "h": 723
+ },
+ {
+  "qid": "b15-09",
+  "img": "img/q/b15-09.png",
+  "answer_img": "img/a/b15-09.png",
+  "w": 1067,
+  "h": 279
+ },
+ {
+  "qid": "b15-10",
+  "img": "img/q/b15-10.png",
+  "answer_img": "img/a/b15-10.png",
+  "w": 1067,
+  "h": 357
+ },
+ {
+  "qid": "b15-11",
+  "img": "img/q/b15-11.png",
+  "answer_img": "img/a/b15-11.png",
+  "w": 1067,
+  "h": 285
+ },
+ {
+  "qid": "b15-13",
+  "img": "img/q/b15-13.png",
+  "answer_img": "img/a/b15-13.png",
+  "w": 1067,
+  "h": 995
+ },
+ {
+  "qid": "b15-14",
+  "img": "img/q/b15-14.png",
+  "answer_img": "img/a/b15-14.png",
+  "w": 1067,
+  "h": 872
+ },
+ {
+  "qid": "b15-15",
+  "img": "img/q/b15-15.png",
+  "answer_img": "img/a/b15-15.png",
+  "w": 1067,
+  "h": 918
  }
 ]

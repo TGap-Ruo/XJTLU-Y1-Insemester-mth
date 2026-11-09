@@ -100,11 +100,11 @@ def main():
         p0, y0 = r["head"]["p"], r["head"]["y"]
         p1, y1 = r["next"]["p"], r["next"]["y"]
         stops = [FOOTER_Y]
-        for key in ("verdict", "correct", "answer_input"):
+        for key in ("verdict", "correct"):
             stops += [y for p, y in r[key] if p == p0 and y > y0 + 20]
         if p1 == p0 and y1 > y0 + 20:
             stops.append(y1)
-        bottom = min(stops) - 14          # keep clear of the orange answer box
+        bottom = min(stops) - 15          # keep clear of the orange answer box
         top = y0 - 6
         qpath = "%s/q%d-%02d.png" % (QDIR, qi, qno)
         got = render(doc, p0, top, bottom, qpath, wipe=True)
@@ -112,9 +112,8 @@ def main():
         if r["correct"]:
             ap, ay = r["correct"][0]
             af = "%s/q%d-%02d.png" % (ADIR, qi, qno)
-            # The anchor y is the text baseline of "The correct answer is:".
-            # Tall matrices extend ~25pt above and ~40pt below it, so widen the
-            # window upward (the old ay-6 cut off the top row of 3-row vectors).
+            # Anchor y is the "The correct answer is:" baseline; tall matrices
+            # extend ~25pt above it, so widen upward (old ay-6 cut the top row).
             if render(doc, ap, max(0, ay - 30), min(ay + 55, FOOTER_Y), af):
                 ans_img = "img/a/q%d-%02d.png" % (qi, qno)
         manifest.append({

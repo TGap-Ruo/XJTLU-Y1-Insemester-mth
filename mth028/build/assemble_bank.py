@@ -139,11 +139,35 @@ def main(out_override=None):
         complex_answer = ("complex-answer" in (s.get("notes") or "")
                           or "|" in (printed or ""))
         answers, answer_text, source, ai_generated = None, None, "none", False
-        answer_text = esc_text(printed)
-        if qtype == "choice":
+        # Items delivered by the v2 extractor already carry the grading payload
+        # (it had the exact card rectangles, so it knows what the printed answer
+        # really says).  Honour it verbatim instead of re-parsing OCR text.
+        if s.get("answer_source") and s.get("answer_source") != "none":
+            answers = s.get("answers")
+            answer_text = s.get("answer_text") or None
+            source = s["answer_source"]
+            ai_generated = bool(s.get("ai_generated"))
+        elif qtype == "choice":
             source = "pdf" if r["has_printed_answer"] else "none"
+            # Choice questions: the key letter + printed-answer image are the
+            # reference.  The OCR'd text of a matrix/system answer is garbled
+            # (e.g. "−656 | −98−3") and would confuse students, so suppress it.
         elif complex_answer:
             source = "pdf" if r["has_printed_answer"] else "none"
+            # OCR of a matrix/system answer is garbled, but the numeric answer
+            # (e.g. "10" from "Thecorrectansweris:10 | 14 | Question") is usually
+            # embedded at the front.  Extract the first numeric token; if it's a
+            # simple number, auto-grade it too.
+            cleaned = clean_answer_text(printed)
+            if cleaned:
+                parts = cleaned.split()
+                answer_text = parts[0] if parts else None
+                # Auto-grade if the first token is a simple number (integer/decimal)
+                # and the question has exactly one blank.
+                if answer_text and blanks == 1 and re.match(r"^-?\d+(\.\d+)?$", answer_text):
+                    answers = [answer_text]
+            else:
+                answer_text = None
         else:
             txt = clean_answer_text(printed)
             if txt:

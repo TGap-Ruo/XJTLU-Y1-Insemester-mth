@@ -1,0 +1,173 @@
+{
+ "_note": "Manual/vision corrections applied on top of the automatic extraction. fill = answers when the review PDF printed none (computed here and verified with sympy); choice = option letter confirmed by looking at the rendered 'The correct answer is' box against the options. choice keys were re-read from the rendered answer box by an independent pass (see duplicates of low-confidence ones); b15-15 was corrected from C to B.",
+ "fill": {
+  "p3-13": {
+   "answers": [
+    "4"
+   ],
+   "blanks": 1,
+   "why": "row 3 reduces to 0 = 4k-16, so consistent iff k=4"
+  },
+  "p5-05": {
+   "answers": [
+    "3"
+   ],
+   "blanks": 1,
+   "why": "row 3 reduces to 0 = 3-k, so consistent iff k=3"
+  },
+  "p6-13": {
+   "answers": [
+    "1",
+    "-1"
+   ],
+   "blanks": 2,
+   "why": "Nul A = span{(1,-1,1)}, so a=1 b=-1"
+  },
+  "p10-08": {
+   "answers": [
+    "5",
+    "4"
+   ],
+   "blanks": 2,
+   "why": "A is 4x5 and T(x)=Ax maps R^5 -> R^4"
+  },
+  "p10-13": {
+   "answers": [
+    "-4",
+    "7",
+    "-1",
+    "-6"
+   ],
+   "blanks": 4,
+   "why": "columns of A: Ae1=(-4,-1), Ae2=(-5,-9)-3Ae1=(7,-6)"
+  },
+  "p13-12": {
+   "answers": [
+    "-6",
+    "-1"
+   ],
+   "blanks": 2,
+   "why": "T^-1(e1) is the first column of A^-1 = [[-6,2],[-1,0]]"
+  },
+  "p14-13": {
+   "answers": [
+    "8",
+    "-8"
+   ],
+   "blanks": 2,
+   "why": "T^-1(e2) is the second column of A^-1 = [[0,8],[-8,-8]]"
+  },
+  "b4-07": {
+   "answers": [
+    "7"
+   ],
+   "blanks": 1,
+   "why": "row 3 reduces to 0 = 6k-42, so consistent iff k=7"
+  },
+  "b8-07": {
+   "answers": [
+    "-6",
+    "-5",
+    "-4",
+    "3"
+   ],
+   "blanks": 4,
+   "why": "Ae2=(-5,3); Ae1=T(1,-2)+2Ae2=(-6,-4)"
+  },
+  "b8-11": {
+   "answers": [
+    "5",
+    "2"
+   ],
+   "blanks": 2,
+   "why": "A is 2x5 and T(x)=Ax maps R^5 -> R^2"
+  },
+  "b9-01": {
+   "answers": [
+    "4"
+   ],
+   "blanks": 1,
+   "why": "det = 56x-224 = 0 for dependence, so x=4"
+  },
+  "b9-05": {
+   "answers": [
+    "3",
+    "2"
+   ],
+   "blanks": 2,
+   "why": "A is 2x3 and T(x)=Ax maps R^3 -> R^2"
+  },
+  "b10-06": {
+   "answers": [
+    "-9",
+    "6",
+    "-2",
+    "3"
+   ],
+   "blanks": 4,
+   "why": "Ae2=(6,3); Ae1=T(1,3)-3Ae2=(-9,-2)"
+  },
+  "b10-08": {
+   "answers": [
+    "-6",
+    "2"
+   ],
+   "blanks": 2,
+   "why": "Nul A = span{(-6,2,1)}, so a=-6 b=2"
+  },
+  "b10-11": {
+   "answers": [
+    "3",
+    "5"
+   ],
+   "blanks": 2,
+   "why": "A is 5x3 and T(x)=Ax maps R^3 -> R^5"
+  },
+  "b12-12": {
+   "answers": [
+    "11"
+   ],
+   "blanks": 1,
+   "why": "det = 36x-396 = 0, so x=11"
+  },
+  "b15-10": {
+   "answers": [
+    "2",
+    "3"
+   ],
+   "blanks": 2,
+   "why": "T^-1(e1) is the first column of A^-1 = [[2,0],[3,7]]"
+  }
+ },
+ "choice": {
+  "p2-13": "D",
+  "p15-08": "D",
+  "p9-12": "A",
+  "p11-03": "C",
+  "b15-15": "B",
+  "p7-06": "B",
+  "p8-11": "C",
+  "p9-02": "A",
+  "p9-11": "D",
+  "p10-03": "C",
+  "p12-04": "D",
+  "p12-06": "C",
+  "p13-02": "A",
+  "p14-02": "D",
+  "b7-04": "B",
+  "b8-12": "D",
+  "b9-09": "B",
+  "b10-07": "B",
+  "b11-15": "D",
+  "b12-04": "D",
+  "b12-08": "C",
+  "b12-09": "B",
+  "b13-01": "A",
+  "b14-03": "C",
+  "b14-07": "B",
+  "b14-10": "D",
+  "b15-02": "C",
+  "p7-03": "B",
+  "p15-11": "C"
+ }
+}

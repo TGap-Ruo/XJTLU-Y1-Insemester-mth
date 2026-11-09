@@ -1,0 +1,1205 @@
+{
+ "mapping": [
+  {
+   "qid": "q1-01",
+   "quiz": 1,
+   "qno": 1,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Let ⎡1−235⎤ A =−25−1−4. ⎣⎦ 026−5 Replacerow2byrow2plus2timesrow1.Whatisthenewentryinrow2,column4?"
+  },
+  {
+   "qid": "q1-02",
+   "quiz": 1,
+   "qno": 2,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Giventheaugmentedmatrix ⎡2−213⎤ 6−7415 ⎣⎦ 666−18 x x x whatisthesolution(,,)ofthesystem? 123 Selectone: A.(−1, −1, 1) B.(−3, −3, 3) C.(−2, −5, 2) D.(−1, −5, 4)"
+  },
+  {
+   "qid": "q1-03",
+   "quiz": 1,
+   "qno": 3,
+   "topic": "1.1",
+   "confidence": 2,
+   "stem": "Whichsystemcorrespondstothefollowingaugmentedmatrix? ⎡−8−2−86−6⎤ 4−641−3 ⎣⎦ 3−81−6−2 Selectone: A. ⎧xxxx −8 −2 −8 + 6 = −6 1234 ⎨ xxx x −4 −6 + 4 + = −3 ⎩1234 xx xx 3 −8 + −6 = −2 1234 B. ⎧xxxx −8 −2 −8 + 6 = −3 1234 ⎨ xxx x 4 −6 + 4 + = −2 ⎩1234 xx xx 3 −8 + −6 = −6 1234 C. ⎧xxxx −8 −2 −8 + 6 = −6 1234 ⎨ xxx x 4 −6 + 4 + = −3 ⎩1234 xx xx 3 −8 + −6 = −2 1234 D. ⎧xxxx −8 −2 −8 + 6 = −6 1234 ⎨ xxx x 4 −6 + 4 + = −3 ⎩1234 xxxx −8 + 3 −6 = −2 1234"
+  },
+  {
+   "qid": "q1-04",
+   "quiz": 1,
+   "qno": 4,
+   "topic": "1.3",
+   "confidence": 2,
+   "stem": "Writeavectorequationthatisequivalenttothegivensystemofequations. ⎧xxx 3 + 8 −8 = −8 123 ⎨ xxx 4 + 7 −4 = 5 ⎩ 123 xxx −3 −9 −3 = −8 123 Selectone: A.⎡3⎤⎡−8⎤⎡−8⎤⎡8⎤ x x x 4+5+−4=7 123 ⎣⎦⎣⎦⎣⎦⎣⎦ −3−8−3−9 B.⎡−8⎤⎡8⎤⎡−8⎤⎡3⎤ x x x 5+7+−4=4 123 ⎣⎦⎣⎦⎣⎦⎣⎦ −8−9−3−3 C.⎡3⎤⎡8⎤⎡−8⎤⎡−8⎤ x x x 4+7+−4=5 123 ⎣⎦⎣⎦⎣⎦⎣⎦ −3−9−3−8 D.⎡−8⎤⎡8⎤⎡3⎤⎡−8⎤ x x x −4+7+4=5 123 ⎣⎦⎣⎦⎣⎦⎣⎦ −3−9−3−8"
+  },
+  {
+   "qid": "q1-05",
+   "quiz": 1,
+   "qno": 5,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "AbR2 Letbea2 × 2nonzeromatrix,andbeanonzerovectorin. Supposethat [3] [−4] A bA b =and =, 09 [14] xAx 0h If =isanonzerosolutionofthehomogeneousequation =,then =-18 h ."
+  },
+  {
+   "qid": "q1-06",
+   "quiz": 1,
+   "qno": 6,
+   "topic": "1.3",
+   "confidence": 1,
+   "stem": "⎡−2⎤⎡−8⎤⎡−4⎤ aabxa xa b Let =−6, =5, =6.Thevectorequation + =is 121122 ⎣⎦⎣⎦⎣⎦ −98−3 equivalenttoalinearsystemwhoseaugmentedmatrixis Selectone: A.⎡−2−6−9⎤ −46−3 ⎣⎦ −858 B.⎡−2−6−9⎤ −858 ⎣⎦ −46−3 C.⎡−2−4−8⎤ −665 ⎣⎦ −9−38 D.⎡−2−8−4⎤ −656 ⎣⎦ −98−3"
+  },
+  {
+   "qid": "q1-07",
+   "quiz": 1,
+   "qno": 7,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "⎡0⎤ [3−48] Computetheproduct−5. 6−2−2⎣⎦ 5 Selectone: A.[−60] 0 B.[−35] −40 C.[7] 2 D.[60] 0 [60]"
+  },
+  {
+   "qid": "q1-08",
+   "quiz": 1,
+   "qno": 8,
+   "topic": "1.3",
+   "confidence": 1,
+   "stem": "[−2] [−8] cu dvuvcd Computethevector +,where =, =, = 4, = −6. 77 Selectone: A.[43] −9 B.[44] −11 C.[38] −15 D.[40] −14"
+  },
+  {
+   "qid": "q1-09",
+   "quiz": 1,
+   "qno": 9,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Whichmatrixisin Echelon Formbutnotin Reduced Echelon Form? Selectone: A. ⎡0020⎤ 32−11 ⎣⎦ 0000 B. ⎡32−11⎤ 0000 ⎣⎦ 0020 C. ⎡32−11⎤ 0020 ⎣⎦ 0010 D. ⎡32−11⎤ 0020 ⎣⎦ 0000"
+  },
+  {
+   "qid": "q1-10",
+   "quiz": 1,
+   "qno": 10,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "Let ⎡0−10⎤⎡0−20⎤ AB =201, =201. ⎣⎦⎣⎦ 21−221−2 ABBA Whichpairofoperationstransformsintoandthentransformsbackinto? Selectone: A.Multiplyingthefirstrowby2,followedby Multiplyingthefirstrowby1/2 B.Multiplyingthesecondrowby2,followedby Multiplyingthesecondrowby1/2 C.Adding3timesthefirstrowtothesecondrow,followedby Subtracting3timesthe firstrowfromthesecondrow D.Multiplyingthefirstrowby3,followedby Multiplyingthefirstrowby1/3"
+  },
+  {
+   "qid": "q1-11",
+   "quiz": 1,
+   "qno": 11,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "Findthegeneralsolution. xxx {−5 + 4 + 2 = −16 123 xx −4 + 2 = −12 13 Selectone: A.⎡4⎤⎡4⎤ x ttR =−2+1, ∈ ⎣⎦⎣⎦ 27 B.⎡4⎤⎡4⎤ x ttR =1+1, ∈ ⎣⎦⎣⎦ 26 C.⎡4⎤⎡4⎤ x ttR =0+1, ∈ ⎣⎦⎣⎦ 28 D.⎡4⎤⎡4⎤ x ttR =0+1, ∈ ⎣⎦⎣⎦ 47 ⎡4⎤⎡4⎤"
+  },
+  {
+   "qid": "q1-12",
+   "quiz": 1,
+   "qno": 12,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Findthe Reduced Echelon Formof ⎡10−11⎤ A =01−32 ⎣⎦ 10−11 Selectone: A. ⎡20−11⎤ 01−32 ⎣⎦ 0000 B. ⎡101−1⎤ 01−32 ⎣⎦ 0000 C. ⎡10−11⎤ 012−3 ⎣⎦ 0000 D. ⎡10−11⎤ 01−32 ⎣⎦ 0000"
+  },
+  {
+   "qid": "q1-13",
+   "quiz": 1,
+   "qno": 13,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "⎡4−86⎤⎡−14⎤ Ab Let =−2−80, =4. ⎣⎦⎣⎦ k −216−6"
+  },
+  {
+   "qid": "q1-14",
+   "quiz": 1,
+   "qno": 14,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "v v v vR3 Consider{,,,} ⊂: 1234 ⎡1⎤⎡0⎤⎡−1⎤⎡−3⎤ vvvv =−2, =3, =−3, =1. 1234 ⎣⎦⎣⎦⎣⎦⎣⎦ ab 1−3 Rab ThesetdoesNOTspan3. Findthevaluesofand. Selectone: ab A. = 4, = 1 ab B. = 5, = 2 ab C. = 4, = 2 ab D. = 1, = 3"
+  },
+  {
+   "qid": "q1-15",
+   "quiz": 1,
+   "qno": 15,
+   "topic": "1.1",
+   "confidence": 2,
+   "stem": "h Findthevalueofforwhichthesystemisconsistent: ⎡−180−47⎤ −60423. ⎣⎦ h 13−8−80"
+  },
+  {
+   "qid": "q2-01",
+   "quiz": 2,
+   "qno": 1,
+   "topic": "1.3",
+   "confidence": 1,
+   "stem": "⎡7⎤⎡2⎤⎡−4⎤ aabaa b Let =7, =−9, =1.Thevectorequationx + x =is 121122 ⎣⎦⎣⎦⎣⎦ −435 equivalenttoalinearsystemwhoseaugmentedmatrixis Selectone: A.⎡77−4⎤ 2−93 ⎣⎦ −415 B.⎡72−4⎤ 7−91 ⎣⎦ −435 C.⎡77−4⎤ −415 ⎣⎦ 2−93 D.⎡7−42⎤ 71−9 ⎣⎦ −453"
+  },
+  {
+   "qid": "q2-02",
+   "quiz": 2,
+   "qno": 2,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "v v v vR3 Consider{,,,} ⊂: 1234 ⎡−1⎤⎡−3⎤⎡3⎤⎡2⎤ vvvv =−1, =−2, =−1, =−1. 1234 ⎣⎦⎣⎦⎣⎦⎣⎦ −20ab R3 ThesetdoesNOTspan. Findthevaluesofaandb. Selectone: A.a = −20,b = −14 B.a = −17,b = −14 C.a = −19,b = −14 D.a = −18,b = −14"
+  },
+  {
+   "qid": "q2-03",
+   "quiz": 2,
+   "qno": 3,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "Let ⎡200⎤⎡200⎤ A =02−1,B =02−1. ⎣⎦⎣⎦ 1−1113−1 WhichpairofoperationstransformsAintoBandthentransformsBbackintoA? Selectone: A.Adding2timesthethirdrowtothesecondrow,followedby Subtracting2timesthe thirdrowfromthesecondrow B.Multiplyingthesecondrowby3,followedby Multiplyingthesecondrowby1/3 C.Adding2timesthesecondrowtothethirdrow,followedby Subtracting2timesthe secondrowfromthethirdrow D.Multiplyingthethirdrowby2,followedby Multiplyingthethirdrowby1/2"
+  },
+  {
+   "qid": "q2-04",
+   "quiz": 2,
+   "qno": 4,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Giventheaugmentedmatrix ⎡7−7−7−14⎤ −3−3−5−18 ⎣⎦ 7−5−5−6 whatisthesolution(x, x, x)ofthesystem? 123 Selectone: A.(1, 3, −2) B.(2, 4, 0) C.(1, 2, −2) D.(3, 6, 2)"
+  },
+  {
+   "qid": "q2-05",
+   "quiz": 2,
+   "qno": 5,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Findthe Reduced Echelon Formof ⎡10−22⎤ A =01−10 ⎣⎦ 10−22 Selectone: A. ⎡20−22⎤ 01−10 ⎣⎦ 0000 B. ⎡10−22⎤ 01−10 ⎣⎦ 0000 C. ⎡102−2⎤ 01−10 ⎣⎦ 0000 D. ⎡10−22⎤ 010−1 ⎣⎦ 0000"
+  },
+  {
+   "qid": "q2-06",
+   "quiz": 2,
+   "qno": 6,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "Findthegeneralsolution. {−12x −5x −6x = 39 123 −6x −2x = 18 12 Selectone: A.⎡−2⎤⎡3⎤ xR =−3+ t−6, t ∈ ⎣⎦⎣⎦ −11 B.⎡−2⎤⎡4⎤ xR =−1+ t−6, t ∈ ⎣⎦⎣⎦ 01 C.⎡−2⎤⎡2⎤ xR =−1+ t−6, t ∈ ⎣⎦⎣⎦ 02 D.⎡−2⎤⎡2⎤ xR =−3+ t−6, t ∈ ⎣⎦⎣⎦ 01 ⎡−2⎤⎡2⎤"
+  },
+  {
+   "qid": "q2-07",
+   "quiz": 2,
+   "qno": 7,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "bR2 LetAbea2 × 2nonzeromatrix,andbeanonzerovectorin. Supposethat [−2] [−7] b b A =andA =, −7−2 [g] xx 0 If =isanonzerosolutionofthehomogeneousequationA =,theng =. 10"
+  },
+  {
+   "qid": "q2-08",
+   "quiz": 2,
+   "qno": 8,
+   "topic": "1.3",
+   "confidence": 2,
+   "stem": "Writeavectorequationthatisequivalenttothegivensystemofequations. ⎧ 8x + 6x −4x = 6 123 ⎨ 9x + x = −5 ⎩ 23 −7x −x −6x = 5 123 Selectone: A.⎡8⎤⎡6⎤⎡−4⎤⎡6⎤ x0+ x−5+ x1=9 123 ⎣⎦⎣⎦⎣⎦⎣⎦ −75−6−1 B.⎡6⎤⎡6⎤⎡−4⎤⎡8⎤ x−5+ x9+ x1=0 123 ⎣⎦⎣⎦⎣⎦⎣⎦ 5−1−6−7 C.⎡−4⎤⎡6⎤⎡8⎤⎡6⎤ x1+ x9+ x0=−5 123 ⎣⎦⎣⎦⎣⎦⎣⎦ −6−1−75 D.⎡8⎤⎡6⎤⎡−4⎤⎡6⎤ x0+ x9+ x1=−5 123 ⎣⎦⎣⎦⎣⎦⎣⎦ −7−1−65"
+  },
+  {
+   "qid": "q2-09",
+   "quiz": 2,
+   "qno": 9,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Let ⎡1−23−1⎤ A =25−1−3. ⎣⎦ 026−5 Replacerow2byrow2minus2timesrow1.Whatisthenewentryinrow2,column4?"
+  },
+  {
+   "qid": "q2-10",
+   "quiz": 2,
+   "qno": 10,
+   "topic": "1.1",
+   "confidence": 2,
+   "stem": "Whichsystemcorrespondstothefollowingaugmentedmatrix? ⎡−4−7−286⎤ −8−20−100 ⎣⎦ 7−1109−9 Selectone: A. ⎧ −4x −7x −2x + 8x = 6 1234 ⎨ −8x −2x −10x = 0 ⎩124 7x −x + 10x + 9x = −9 1234 B. ⎧ −4x −7x −2x + 8x = −9 1234 ⎨ −8x −2x −10x = 0 ⎩124 7x −x + 10x + 9x = 6 1234 C. ⎧ −4x −7x −2x + 8x = 6 1234 ⎨ −8x −2x −10x = 0 ⎩124 7x + x + 10x + 9x = −9 1234 D. ⎧ 8x −7x −2x −4x = 6 1234 ⎨ −10x −2x −8x = 0 ⎩124 9x −x + 10x + 7x = −9 1234"
+  },
+  {
+   "qid": "q2-11",
+   "quiz": 2,
+   "qno": 11,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Whichmatrixisin Echelon Formbutnotin Reduced Echelon Form? Selectone: A. ⎡−2200⎤ 00−10 ⎣⎦ 0000 B. ⎡−2200⎤ 00−10 ⎣⎦ 0010 C. ⎡−2200⎤ 0000 ⎣⎦ 00−10 D. ⎡00−10⎤ −2200 ⎣⎦ 0000"
+  },
+  {
+   "qid": "q2-12",
+   "quiz": 2,
+   "qno": 12,
+   "topic": "1.1",
+   "confidence": 2,
+   "stem": "Findthevalueofhforwhichthesystemisconsistent: ⎡−90−2−68⎤ −7−20−38. ⎣⎦ 54−20h"
+  },
+  {
+   "qid": "q2-13",
+   "quiz": 2,
+   "qno": 13,
+   "topic": "1.3",
+   "confidence": 1,
+   "stem": "[9] [−2] uvuv Computethevectorc + d,where =, =, c = 7, d = 5. 8−9 Selectone: A.[58] 11 B.[48] 7 C.[52] 11 D.[53] 11"
+  },
+  {
+   "qid": "q2-14",
+   "quiz": 2,
+   "qno": 14,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "⎡−7−4−3⎤⎡22⎤ LetA =−642,b =32. ⎣⎦⎣⎦ 000k"
+  },
+  {
+   "qid": "q2-15",
+   "quiz": 2,
+   "qno": 15,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "⎡−1⎤ [−9−46] Computetheproduct−4. 277⎣⎦ 2 Selectone: A.[37] −16 B.[−37] 16 C.[−10] 13 D.[22] −1 [37]"
+  },
+  {
+   "qid": "q3-01",
+   "quiz": 3,
+   "qno": 1,
+   "topic": "1.3",
+   "confidence": 1,
+   "stem": "[−8] [−3] cu dvuvcd Computethevector +,where =, =, = −5, = −9. −25 Selectone: A.[63] −39 B.[66] −31 C.[67] −35 D.[64] −33"
+  },
+  {
+   "qid": "q3-02",
+   "quiz": 3,
+   "qno": 2,
+   "topic": "1.1",
+   "confidence": 2,
+   "stem": "h Findthevalueofforwhichthesystemisconsistent: ⎡−1013−5⎤ −6−6−103. ⎣⎦ h 760−3"
+  },
+  {
+   "qid": "q3-03",
+   "quiz": 3,
+   "qno": 3,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "⎡9⎤ [−443] Computetheproduct4. −9−35⎣⎦ 3 Selectone: A.[23] 0 B.[11] 78 C.[19] 9 D.[−11] −78 [−11]"
+  },
+  {
+   "qid": "q3-04",
+   "quiz": 3,
+   "qno": 4,
+   "topic": "1.3",
+   "confidence": 1,
+   "stem": "⎡4⎤⎡3⎤⎡0⎤ aabxa xa b Let =8, =−6, =−7.Thevectorequation + =is 121122 ⎣⎦⎣⎦⎣⎦ −8−31 equivalenttoalinearsystemwhoseaugmentedmatrixis Selectone: A.⎡430⎤ 8−6−7 ⎣⎦ −8−31 B.⎡48−8⎤ 3−6−3 ⎣⎦ 0−71 C.⎡48−8⎤ 0−71 ⎣⎦ 3−6−3 D.⎡403⎤ 8−7−6 ⎣⎦ −81−3"
+  },
+  {
+   "qid": "q3-05",
+   "quiz": 3,
+   "qno": 5,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Let ⎡1−235⎤ A =−25−1−2. ⎣⎦ 026−5 Replacerow2byrow2plus2timesrow1.Whatisthenewentryinrow2,column4?"
+  },
+  {
+   "qid": "q3-06",
+   "quiz": 3,
+   "qno": 6,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Whichmatrixisin Echelon Formbutnotin Reduced Echelon Form? Selectone: A. ⎡−2−1−2−2⎤ 00−1−1 ⎣⎦ 0000 B. ⎡−2−1−2−2⎤ 00−1−1 ⎣⎦ 0010 C. ⎡−2−1−2−2⎤ 0000 ⎣⎦ 00−1−1 D. ⎡00−1−1⎤ −2−1−2−2 ⎣⎦ 0000"
+  },
+  {
+   "qid": "q3-07",
+   "quiz": 3,
+   "qno": 7,
+   "topic": "1.1",
+   "confidence": 2,
+   "stem": "Whichsystemcorrespondstothefollowingaugmentedmatrix? ⎡−2−18−5−3⎤ −515−5−4 ⎣⎦ −32−56−8 Selectone: A. ⎧xxxx −5 − + 8 −2 = −3 1234 ⎨ x xxx −5 + + 5 −5 = −4 ⎩1234 xxxx 6 + 2 −5 −3 = −8 1234 B. ⎧xxxx −2 − + 8 −5 = −8 1234 ⎨ x xxx −5 + + 5 −5 = −3 ⎩1234 xxxx −3 + 2 −5 + 6 = −4 1234 C. ⎧xxxx −2 − + 8 −5 = −3 1234 ⎨ x xxx −5 + + 5 −5 = −4 ⎩1234 xxxx −3 + 2 −5 + 6 = −8 1234 D. ⎧xxxx −2 − + 8 −5 = −3 1234 ⎨ x xxx −5 + + 5 −5 = −4 ⎩1234 xxxx −3 + 2 + 5 + 6 = −8 1234"
+  },
+  {
+   "qid": "q3-08",
+   "quiz": 3,
+   "qno": 8,
+   "topic": "1.3",
+   "confidence": 2,
+   "stem": "Writeavectorequationthatisequivalenttothegivensystemofequations. ⎧xx −6 −2 = −8 13 ⎨ xxx 6 + 3 −7 = −7 ⎩ 123 xxx 6 + 2 −7 = 1 123 Selectone: A.⎡−8⎤⎡0⎤⎡−2⎤⎡−6⎤ x x x −7+3+−7=6 123 ⎣⎦⎣⎦⎣⎦⎣⎦ 12−76 B.⎡−6⎤⎡−8⎤⎡−2⎤⎡0⎤ x x x 6+−7+−7=3 123 ⎣⎦⎣⎦⎣⎦⎣⎦ 61−72 C.⎡−2⎤⎡0⎤⎡−6⎤⎡−8⎤ x x x −7+3+6=−7 123 ⎣⎦⎣⎦⎣⎦⎣⎦ −7261 D.⎡−6⎤⎡0⎤⎡−2⎤⎡−8⎤ x x x 6+3+−7=−7 123 ⎣⎦⎣⎦⎣⎦⎣⎦ 62−71"
+  },
+  {
+   "qid": "q3-09",
+   "quiz": 3,
+   "qno": 9,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Findthe Reduced Echelon Formof ⎡1013⎤ A =01−33 ⎣⎦ 1013 Selectone: A. ⎡1013⎤ 01−33 ⎣⎦ 0000 B. ⎡2013⎤ 01−33 ⎣⎦ 0000 C. ⎡1031⎤ 01−33 ⎣⎦ 0000 D. ⎡1013⎤ 013−3 ⎣⎦ 0000"
+  },
+  {
+   "qid": "q3-10",
+   "quiz": 3,
+   "qno": 10,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "Let ⎡02−2⎤⎡02−2⎤ AB =−211, =−211. ⎣⎦⎣⎦ 100200 ABBA Whichpairofoperationstransformsintoandthentransformsbackinto? Selectone: A.Multiplyingthethirdrowby2,followedby Multiplyingthethirdrowby1/2 B.Subtracting3timesthesecondrowfromthethirdrow,followedby Adding3times thesecondrowtothethirdrow C.Adding3timesthefirstrowtothesecondrow,followedby Subtracting3timesthe firstrowfromthesecondrow D.Interchangingthefirstrowandthesecondrow,followedby Interchangingthefirst rowandthesecondrow"
+  },
+  {
+   "qid": "q3-11",
+   "quiz": 3,
+   "qno": 11,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Giventheaugmentedmatrix ⎡−306−12⎤ −407−12 ⎣⎦ 6−74−5 x x x whatisthesolution(,,)ofthesystem? 123 Selectone: A.(−6, −3, −5) B.(−2, −6, −6) C.(−5, −4, −5) D.(−4, −5, −4)"
+  },
+  {
+   "qid": "q3-12",
+   "quiz": 3,
+   "qno": 12,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "v v v vR3 Consider{,,,} ⊂: 1234 ⎡−1⎤⎡−2⎤⎡−3⎤⎡−2⎤ vvvv =1, =−3, =3, =−3. 1234 ⎣⎦⎣⎦⎣⎦⎣⎦ ab −4−6 R3ab ThesetdoesNOTspan. Findthevaluesofand. Selectone: ab A. = −12, = −7 ab B. = 12, = 6 ab C. = −12, = −5 ab D. = −12, = −6"
+  },
+  {
+   "qid": "q3-13",
+   "quiz": 3,
+   "qno": 13,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "⎡457⎤⎡−2⎤ Ab Let =−861, =−30. ⎣⎦⎣⎦ k −8−10−14"
+  },
+  {
+   "qid": "q3-14",
+   "quiz": 3,
+   "qno": 14,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "Findthegeneralsolution. xxx {−4 −28 + 4 = 8 123 x x 6 + = 23 13 Selectone: A.⎡3⎤⎡−2⎤ x ttR =−1+1, ∈ ⎣⎦⎣⎦ 56 B.⎡3⎤⎡−1⎤ x ttR =0+1, ∈ ⎣⎦⎣⎦ 56 C.⎡3⎤⎡0⎤ x ttR =0+1, ∈ ⎣⎦⎣⎦ 46 D.⎡3⎤⎡−1⎤ x ttR =1+1, ∈ ⎣⎦⎣⎦ 57 ⎡3⎤⎡−1⎤"
+  },
+  {
+   "qid": "q3-15",
+   "quiz": 3,
+   "qno": 15,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "AbR2 Letbea2 × 2nonzeromatrix,andbeanonzerovectorin. Supposethat [1] [9] A bA b =and =, −35 [16] xAx 0h If =isanonzerosolutionofthehomogeneousequation =,then =. h"
+  },
+  {
+   "qid": "q4-01",
+   "quiz": 4,
+   "qno": 1,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Giventheaugmentedmatrix ⎡8−1−2−3⎤ 52−50 ⎣⎦ −1−133 whatisthesolution(x, x, x)ofthesystem? 123 Selectone: A.(3, 6, 4) B.(1, 5, 3) C.(0, 6, 1) D.(2, 6, 1)"
+  },
+  {
+   "qid": "q4-02",
+   "quiz": 4,
+   "qno": 2,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "v v v vR3 Consider{,,,} ⊂: 1234 ⎡0⎤⎡−1⎤⎡2⎤⎡3⎤ vvvv =−1, =−3, =3, =−1. 1234 ⎣⎦⎣⎦⎣⎦⎣⎦ 03ab R3 ThesetdoesNOTspan. Findthevaluesofaandb. Selectone: A.a = −7,b = −8 B.a = −8,b = −9 C.a = −6,b = −11 D.a = −6,b = −9"
+  },
+  {
+   "qid": "q4-03",
+   "quiz": 4,
+   "qno": 3,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "bR2 LetAbea2 × 2nonzeromatrix,andbeanonzerovectorin. Supposethat [2] [7] b b A =andA =, 72 [g] xx 0 If =isanonzerosolutionofthehomogeneousequationA =,theng =. −10"
+  },
+  {
+   "qid": "q4-04",
+   "quiz": 4,
+   "qno": 4,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Whichmatrixisin Echelon Formbutnotin Reduced Echelon Form? Selectone: A. ⎡31−2−1⎤ 0000 ⎣⎦ 00−3−1 B. ⎡31−2−1⎤ 00−3−1 ⎣⎦ 0000 C. ⎡31−2−1⎤ 00−3−1 ⎣⎦ 0010 D. ⎡00−3−1⎤ 31−2−1 ⎣⎦ 0000"
+  },
+  {
+   "qid": "q4-05",
+   "quiz": 4,
+   "qno": 5,
+   "topic": "1.3",
+   "confidence": 1,
+   "stem": "⎡6⎤⎡−2⎤⎡7⎤ aabaa b Let =2, =2, =−6.Thevectorequationx + x =is 121122 ⎣⎦⎣⎦⎣⎦ 65−4 equivalenttoalinearsystemwhoseaugmentedmatrixis Selectone: A.⎡626⎤ −225 ⎣⎦ 7−6−4 B.⎡6−27⎤ 22−6 ⎣⎦ 65−4 C.⎡626⎤ 7−6−4 ⎣⎦ −225 D.⎡67−2⎤ 2−62 ⎣⎦ 6−45"
+  },
+  {
+   "qid": "q4-06",
+   "quiz": 4,
+   "qno": 6,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Findthe Reduced Echelon Formof ⎡10−2−3⎤ A =01−2−1 ⎣⎦ 10−2−3 Selectone: A. ⎡20−2−3⎤ 01−2−1 ⎣⎦ 0000 B. ⎡10−2−3⎤ 01−2−1 ⎣⎦ 0000 C. ⎡10−3−2⎤ 01−2−1 ⎣⎦ 0000 D. ⎡10−2−3⎤ 01−1−2 ⎣⎦ 0000"
+  },
+  {
+   "qid": "q4-07",
+   "quiz": 4,
+   "qno": 7,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Let ⎡1−23−1⎤ A =−25−1−7. ⎣⎦ 026−5 Replacerow2byrow2plus2timesrow1.Whatisthenewentryinrow2,column4?"
+  },
+  {
+   "qid": "q4-08",
+   "quiz": 4,
+   "qno": 8,
+   "topic": "1.3",
+   "confidence": 2,
+   "stem": "Writeavectorequationthatisequivalenttothegivensystemofequations. ⎧ 7x −7x + 7x = −2 123 ⎨ −2x + 3x = 7 ⎩ 23 3x −6x + 9x = −8 123 Selectone: A.⎡−2⎤⎡−7⎤⎡7⎤⎡7⎤ x7+ x−2+ x3=0 123 ⎣⎦⎣⎦⎣⎦⎣⎦ −8−693 B.⎡7⎤⎡−7⎤⎡7⎤⎡−2⎤ x3+ x−2+ x0=7 123 ⎣⎦⎣⎦⎣⎦⎣⎦ 9−63−8 C.⎡7⎤⎡−7⎤⎡7⎤⎡−2⎤ x0+ x−2+ x3=7 123 ⎣⎦⎣⎦⎣⎦⎣⎦ 3−69−8 D.⎡7⎤⎡−2⎤⎡7⎤⎡−7⎤ x0+ x7+ x3=−2 123 ⎣⎦⎣⎦⎣⎦⎣⎦ 3−89−6"
+  },
+  {
+   "qid": "q4-09",
+   "quiz": 4,
+   "qno": 9,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "Findthegeneralsolution. {4x −x −3x = −14 123 −x + x = 3 13 Selectone: A.⎡−5⎤⎡1⎤ xR =0+ t3, t ∈ ⎣⎦⎣⎦ −31 B.⎡−5⎤⎡2⎤ xR =0+ t1, t ∈ ⎣⎦⎣⎦ −31 C.⎡−5⎤⎡1⎤ xR =0+ t1, t ∈ ⎣⎦⎣⎦ −21 D.⎡−5⎤⎡1⎤ xR =−2+ t−1, t ∈ ⎣⎦⎣⎦ −21 ⎡−5⎤⎡1⎤"
+  },
+  {
+   "qid": "q4-10",
+   "quiz": 4,
+   "qno": 10,
+   "topic": "1.1",
+   "confidence": 2,
+   "stem": "Whichsystemcorrespondstothefollowingaugmentedmatrix? ⎡6−457−5⎤ −710−699 ⎣⎦ 107−4410 Selectone: A. ⎧ 6x −4x + 5x + 7x = −5 1234 ⎨ −7x + 10x −6x + 9x = 9 ⎩1234 10x + 7x + 4x + 4x = 10 1234 B. ⎧ 6x + 7x + 5x −4x = −5 1234 ⎨ −7x + 9x −6x + 10x = 9 ⎩1234 10x + 4x −4x + 7x = 10 1234 C. ⎧ 6x −4x + 5x + 7x = −5 1234 ⎨ −7x + 10x −6x + 9x = 9 ⎩1234 10x + 7x −4x + 4x = 10 1234 D. ⎧ 6x −4x + 5x + 7x = 9 1234 ⎨ −7x + 10x −6x + 9x = −5 ⎩1234 10x + 7x −4x + 4x = 10 1234"
+  },
+  {
+   "qid": "q4-11",
+   "quiz": 4,
+   "qno": 11,
+   "topic": "1.1",
+   "confidence": 2,
+   "stem": "Findthevalueofhforwhichthesystemisconsistent: ⎡−1602−5⎤ −50912. ⎣⎦ −9−6180h"
+  },
+  {
+   "qid": "q4-12",
+   "quiz": 4,
+   "qno": 12,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "⎡−2−11⎤⎡1⎤ LetA =33−1,b =−6. ⎣⎦⎣⎦ 120k"
+  },
+  {
+   "qid": "q4-13",
+   "quiz": 4,
+   "qno": 13,
+   "topic": "1.3",
+   "confidence": 1,
+   "stem": "[1] [6] uvuv Computethevectorc + d,where =, =, c = −2, d = −9. −22 Selectone: A.[−60] −9 B.[−56] −14 C.[−55] −11 D.[−59] −12"
+  },
+  {
+   "qid": "q4-14",
+   "quiz": 4,
+   "qno": 14,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "⎡−2⎤ [5−1−2] Computetheproduct−1. −176⎣⎦ 5 Selectone: A.[19] −25 B.[−6] 24 C.[4] 14 D.[−19] 25 [−19]"
+  },
+  {
+   "qid": "q4-15",
+   "quiz": 4,
+   "qno": 15,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "Let ⎡201⎤⎡201⎤ A =−10−2,B =−30−6. ⎣⎦⎣⎦ 120120 WhichpairofoperationstransformsAintoBandthentransformsBbackintoA? Selectone: A.Subtracting3timesthesecondrowfromthefirstrow,followedby Adding3times thesecondrowtothefirstrow B.Multiplyingthethirdrowby3,followedby Multiplyingthethirdrowby1/3 C.Multiplyingthesecondrowby3,followedby Multiplyingthesecondrowby1/3 D.Subtracting2timesthesecondrowfromthethirdrow,followedby Adding2times thesecondrowtothethirdrow"
+  },
+  {
+   "qid": "q5-01",
+   "quiz": 5,
+   "qno": 1,
+   "topic": "1.1",
+   "confidence": 2,
+   "stem": "Whichsystemcorrespondstothefollowingaugmentedmatrix? ⎡4106−5−2⎤ 54−1051 ⎣⎦ −3−9069 Selectone: A. ⎧ 4x + 10x + 6x −5x = −2 1234 ⎨ 5x + 4x −10x + 5x = 1 ⎩1234 −3x −9x + 6x = 9 124 B. ⎧ 4x + 10x + 6x −5x = −2 1234 ⎨ 5x + 4x −10x + 5x = 9 ⎩1234 −3x −9x + 6x = 1 124 C. ⎧ 4x −10x + 6x −5x = −2 1234 ⎨ 5x + 4x −10x + 5x = 1 ⎩1234 −3x −9x + 6x = 9 124 D. ⎧ 4x + 6x + 10x −5x = −2 1234 ⎨ 5x −10x + 4x + 5x = 1 ⎩1234 −3x −9x + 6x = 9 134"
+  },
+  {
+   "qid": "q5-02",
+   "quiz": 5,
+   "qno": 2,
+   "topic": "1.3",
+   "confidence": 2,
+   "stem": "Writeavectorequationthatisequivalenttothegivensystemofequations. ⎧ −9x + 7x −9x = −2 123 ⎨ −4x −2x + 9x = 9 ⎩ 123 4x −x −7x = 9 123 Selectone: A.⎡−9⎤⎡−2⎤⎡−9⎤⎡7⎤ x−4+ x9+ x9=−2 123 ⎣⎦⎣⎦⎣⎦⎣⎦ 49−7−1 B.⎡−9⎤⎡7⎤⎡−9⎤⎡−2⎤ x−4+ x−2+ x9=9 123 ⎣⎦⎣⎦⎣⎦⎣⎦ 4−1−79 C.⎡−2⎤⎡7⎤⎡−9⎤⎡−9⎤ x9+ x−2+ x9=−4 123 ⎣⎦⎣⎦⎣⎦⎣⎦ 9−1−74 D.⎡−9⎤⎡7⎤⎡−9⎤⎡−2⎤ x9+ x−2+ x−4=9 123 ⎣⎦⎣⎦⎣⎦⎣⎦ −7−149"
+  },
+  {
+   "qid": "q5-03",
+   "quiz": 5,
+   "qno": 3,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "Let ⎡−111⎤⎡−111⎤ A =100,B =200. ⎣⎦⎣⎦ 0−120−12 WhichpairofoperationstransformsAintoBandthentransformsBbackintoA? Selectone: A.Adding3timesthesecondrowtothethirdrow,followedby Subtracting3times thesecondrowfromthethirdrow B.Subtracting2timesthesecondrowfromthethirdrow,followedby Adding2times thesecondrowtothethirdrow C.Multiplyingthefirstrowby2,followedby Multiplyingthefirstrowby1/2 D.Multiplyingthesecondrowby2,followedby Multiplyingthesecondrowby1/2"
+  },
+  {
+   "qid": "q5-04",
+   "quiz": 5,
+   "qno": 4,
+   "topic": "1.3",
+   "confidence": 1,
+   "stem": "[8] [6] uvuv Computethevectorc + d,where =, =, c = −8, d = 2. −11 Selectone: A.[−53] 10 B.[−56] 8 C.[−54] 8 D.[−52] 10"
+  },
+  {
+   "qid": "q5-05",
+   "quiz": 5,
+   "qno": 5,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "⎡18−8⎤⎡3⎤ LetA =−287,b =−6. ⎣⎦⎣⎦ −1−88k"
+  },
+  {
+   "qid": "q5-06",
+   "quiz": 5,
+   "qno": 6,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "bR2 LetAbea2 × 2nonzeromatrix,andbeanonzerovectorin. Supposethat [−5] [−4] b b A =andA =, −3−9 [g] xx 0 If =isanonzerosolutionofthehomogeneousequationA =,theng =. −12"
+  },
+  {
+   "qid": "q5-07",
+   "quiz": 5,
+   "qno": 7,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "v v v vR3 Consider{,,,} ⊂: 1234 ⎡0⎤⎡1⎤⎡−2⎤⎡−1⎤ vvvv =2, =−1, =1, =0. 1234 ⎣⎦⎣⎦⎣⎦⎣⎦ −20ab R ThesetdoesNOTspan3. Findthevaluesofaandb. Selectone: A.a = 1,b = 1 B.a = 0,b = 2 C.a = 3,b = 1 D.a = −1,b = −1"
+  },
+  {
+   "qid": "q5-08",
+   "quiz": 5,
+   "qno": 8,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "⎡−1⎤ [−565] Computetheproduct−3. −9−7−9⎣⎦ −5 Selectone: A.[−3] −34 B.[−20] 71 C.[−38] 75 D.[38] −75 [−38]"
+  },
+  {
+   "qid": "q5-09",
+   "quiz": 5,
+   "qno": 9,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "Findthegeneralsolution. {−4x + x + 2x = 4 123 −4x −4x = −8 23 Selectone: A.⎡0⎤⎡1⎤ xR =2+ t−2, t ∈ ⎣⎦⎣⎦ 24 B.⎡0⎤⎡1⎤ xR =0+ t−4, t ∈ ⎣⎦⎣⎦ 24 C.⎡0⎤⎡−1⎤ xR =−1+ t−4, t ∈ ⎣⎦⎣⎦ 24 D.⎡2⎤⎡1⎤ xR =0+ t−4, t ∈ ⎣⎦⎣⎦ 26 ⎡0⎤⎡1⎤"
+  },
+  {
+   "qid": "q5-10",
+   "quiz": 5,
+   "qno": 10,
+   "topic": "1.3",
+   "confidence": 1,
+   "stem": "⎡−7⎤⎡3⎤⎡3⎤ aabaa b Let =0, =8, =−7.Thevectorequationx + x =is 121122 ⎣⎦⎣⎦⎣⎦ −87−9 equivalenttoalinearsystemwhoseaugmentedmatrixis Selectone: A.⎡−733⎤ 0−78 ⎣⎦ −8−97 B.⎡−70−8⎤ 387 ⎣⎦ 3−7−9 C.⎡−70−8⎤ 3−7−9 ⎣⎦ 387 D.⎡−733⎤ 08−7 ⎣⎦ −87−9"
+  },
+  {
+   "qid": "q5-11",
+   "quiz": 5,
+   "qno": 11,
+   "topic": "1.1",
+   "confidence": 2,
+   "stem": "Findthevalueofhforwhichthesystemisconsistent: ⎡606−4−7⎤ −19021. ⎣⎦ −4−18−60h"
+  },
+  {
+   "qid": "q5-12",
+   "quiz": 5,
+   "qno": 12,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Whichmatrixisin Echelon Formbutnotin Reduced Echelon Form? Selectone: A. ⎡−1−222⎤ 00−21 ⎣⎦ 0010 B. ⎡−1−222⎤ 00−21 ⎣⎦ 0000 C. ⎡00−21⎤ −1−222 ⎣⎦ 0000 D. ⎡−1−222⎤ 0000 ⎣⎦ 00−21"
+  },
+  {
+   "qid": "q5-13",
+   "quiz": 5,
+   "qno": 13,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Giventheaugmentedmatrix ⎡−5107⎤ 6−530 ⎣⎦ −55−50 whatisthesolution(x, x, x)ofthesystem? 123 Selectone: A.(0, −2, −3) B.(0, −4, −2) C.(−2, −3, −1) D.(−3, −4, 1)"
+  },
+  {
+   "qid": "q5-14",
+   "quiz": 5,
+   "qno": 14,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Findthe Reduced Echelon Formof ⎡10−10⎤ A =01−21 ⎣⎦ 10−10 Selectone: A. ⎡100−1⎤ 01−21 ⎣⎦ 0000 B. ⎡10−10⎤ 011−2 ⎣⎦ 0000 C. ⎡10−10⎤ 01−21 ⎣⎦ 0000 D. ⎡20−10⎤ 01−21 ⎣⎦ 0000"
+  },
+  {
+   "qid": "q5-15",
+   "quiz": 5,
+   "qno": 15,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Let ⎡1−234⎤ A =45−17. ⎣⎦ 026−5 Replacerow2byrow2minus4timesrow1.Whatisthenewentryinrow2,column4?"
+  },
+  {
+   "qid": "q6-01",
+   "quiz": 6,
+   "qno": 1,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "x 0 WhichofthefollowinggivesallsolutionstotheequationA =inparametricvector form,where ⎡⎤ 01−46 A =⎣12−47⎦? −2−1−44 Selectone: ⎡⎤ −5 A. 6 xR = t(t in ) ⎣0⎦ 1 ⎡⎤⎡⎤ 4−5 B. −46 xR = s+ t(s, t in ) ⎣1⎦⎣0⎦ 01 ⎡⎤⎡⎤ −45 C. 4−6 xR = s+ t(s, t in ) ⎣1⎦⎣0⎦ 01 ⎡⎤ −4 D. 4 xR = s(s in ) ⎣1⎦ 0"
+  },
+  {
+   "qid": "q6-02",
+   "quiz": 6,
+   "qno": 2,
+   "topic": "1.7",
+   "confidence": 1,
+   "stem": "Considerthethreevectors ⎡⎤⎡⎤⎡⎤ 20−2 vvv =⎣6⎦, =⎣−6⎦, =⎣x⎦. 123 −2−414 v v v If{,,}islinearlydependent,thenx =12. 123"
+  },
+  {
+   "qid": "q6-03",
+   "quiz": 6,
+   "qno": 3,
+   "topic": "1.9",
+   "confidence": 2,
+   "stem": "Whichofthefollowing2 × 2matricesisthestandardmatrixofarotationabouttheorigin R2 in? Selectone: A.[43] − 77 34 77 ⎡⎤ B.√2√23 − ⎣55⎦ √23√2 55 C.[5−3] 88 3−5 88 ⎡⎤ D.√22√42 − ⎣88⎦ √42√22 −− 88"
+  },
+  {
+   "qid": "q6-04",
+   "quiz": 6,
+   "qno": 4,
+   "topic": "1.9",
+   "confidence": 1,
+   "stem": "WhichofthefollowingmatricesisthestandardmatrixforthelineartransformationT? T(x, x, x) = (−x + 3x, −3x −9x, −7x + 7x, 7x + 6x + 7x) 123121323123 Selectone: ⎡⎤ A.−130 −30−9 ⎣0−77⎦ 767 ⎡⎤ B.−131 −31−9 ⎣1−77⎦ 767 ⎡⎤ −1−317 C. ⎣31−76⎦ 1−977 ⎡⎤ −1−307 D. ⎣30−76⎦ 0−977"
+  },
+  {
+   "qid": "q6-05",
+   "quiz": 6,
+   "qno": 5,
+   "topic": "1.8",
+   "confidence": 1,
+   "stem": "RmRnxx LetT:→bethelineartransformationdefinedbyT() = A,where [4−3−3−5] A =. −4−4−23 Thenm =4,n =2."
+  },
+  {
+   "qid": "q6-06",
+   "quiz": 6,
+   "qno": 6,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "1−5 vvR3 Let =⎣3⎦, =⎣0⎦belinearlyindependentvectorsin.Whichofthefollowing 12 11 vv vv v v vectors,whenaddedtotheset{,},willmaketheset{,,}linearly 312123 dependent? Selectone: ⎡⎤ A.−6 v =⎣−1⎦ 3 −1 ⎡⎤ 0 B. v =⎣0⎦ 3 1 ⎡⎤ 8 C. v =⎣−6⎦ 3 −4 ⎡⎤ 6 D. v =⎣−7⎦ 3 −6"
+  },
+  {
+   "qid": "q6-07",
+   "quiz": 6,
+   "qno": 7,
+   "topic": "1.8",
+   "confidence": 1,
+   "stem": "R2R2 LetT:→bealineartransformationsatisfying ([1]) [−9] ([0]) [2] T =andT =. −2−112 [ab] xxxR2 LetA =bethematrixsatisfyingT() = Aforallin,thena =-5, cd b =2,c =3,d =2."
+  },
+  {
+   "qid": "q6-08",
+   "quiz": 6,
+   "qno": 8,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "R4 Whichoneofthefollowingsetsofvectorsinislinearlyindependent? Selectone: ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ 1111 A. ⎨⎬ −2−112 ,,, ⎩⎭ ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ −8−118 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤⎡⎤ B.0−971−6 ⎨⎬ 99595 ,,,, ⎩⎭ ⎣−4⎦⎣9⎦⎣−7⎦⎣1⎦⎣0⎦ −377−24 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ C.6−15−3 ⎨⎬ 3−128 ,,, ⎩⎭ ⎣−2⎦⎣8⎦⎣6⎦⎣−4⎦ −3−2−56 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ D.−3−663 ⎨⎬ 36−23 ,,, ⎩⎭ ⎣2⎦⎣4⎦⎣8⎦⎣2⎦ −4−8−1−3"
+  },
+  {
+   "qid": "q6-09",
+   "quiz": 6,
+   "qno": 9,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Whichmatrixisin Echelon Formbutnotin Reduced Echelon Form? Selectone: A. ⎡⎤ −30−2−1 ⎣00−2−2⎦ 0000 B. ⎡⎤ −30−2−1 ⎣0000⎦ 00−2−2 C. ⎡⎤ 00−2−2 ⎣−30−2−1⎦ 0000 D. ⎡⎤ −30−2−1 ⎣00−2−2⎦ 0010"
+  },
+  {
+   "qid": "q6-10",
+   "quiz": 6,
+   "qno": 10,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "bR2 LetAbea2 × 2nonzeromatrix,andbeanonzerovectorin. Supposethat [3] [−4] b b A =andA =, 61 [g] xx 0 If =isanonzerosolutionofthehomogeneousequationA =,theng =14 10 ."
+  },
+  {
+   "qid": "q6-11",
+   "quiz": 6,
+   "qno": 11,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "02−24 LetA =⎣−2−57⎦,b =⎣−12⎦. 04−4k"
+  },
+  {
+   "qid": "q6-12",
+   "quiz": 6,
+   "qno": 12,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Considerthefollowingsystemoflinearequations: ⎧ x + 3x + 6x = −3 ⎨123 ⎩ 2x −x −x = 5. 123 −7x −13x = 11 23 Whichofthefollowing lydescribesthesolutionsetofthesystem? Selectone: A.Thesolutionsetisaplanethroughtheorigin. B.Thesolutionsetisalinenotthroughtheorigin. C.Thesolutionsetisaplanenotthroughtheorigin. D.Thesolutionsetisalinethroughtheorigin."
+  },
+  {
+   "qid": "q6-13",
+   "quiz": 6,
+   "qno": 13,
+   "topic": "1.5",
+   "confidence": 6,
+   "stem": "Considerthehomogeneouslinearsystem {x −5x −6x = 0 123 . −2x + 6x + 8x = 0 123 Thesystemhasnontrivialsolutions.Writethegeneralsolutioninparametricvectorform: ⎡⎤ a x = x⎣b⎦. 3 1 a=1,b=-1"
+  },
+  {
+   "qid": "q6-14",
+   "quiz": 6,
+   "qno": 14,
+   "topic": "1.8",
+   "confidence": 2,
+   "stem": "xx LetT() = Abeamatrixtransformation,where ⎡⎤ 16−21 A =⎣06−23⎦. −2−621 WhichoneofthefollowingstatementsdescribesT ly? Selectone: A.Tisone-to-onebutnotonto. B.Tisneitherone-to-onenoronto. C.Tisontobutnotone-to-one. D.Tisbothone-to-oneandonto."
+  },
+  {
+   "qid": "q6-15",
+   "quiz": 6,
+   "qno": 15,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "v v v vR3 Consider{,,,} ⊂: 1234 ⎡⎤⎡⎤⎡⎤⎡⎤ −10−32 vvvv =⎣−1⎦, =⎣−3⎦, =⎣−2⎦, =⎣−3⎦. 1234 43ab R3 ThesetdoesNOTspan. Findthevaluesofaandb. Selectone: A.a = 10,b = −2 B.a = 11,b = −3 C.a = −11,b = −3 D.a = 11,b = −2"
+  },
+  {
+   "qid": "q7-01",
+   "quiz": 7,
+   "qno": 1,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "v v v vR3 Consider{,,,} ⊂: 1234 ⎡⎤⎡⎤⎡⎤⎡⎤ −33−2−3 vvvv =⎣1⎦, =⎣−2⎦, =⎣0⎦, =⎣3⎦. 1234 ab 6−6 R3ab ThesetdoesNOTspan. Findthevaluesofand. Selectone: ab A. = 4, = 8 ab B. = −4, = −6 ab C. = 5, = 5 ab D. = 4, = 6"
+  },
+  {
+   "qid": "q7-02",
+   "quiz": 7,
+   "qno": 2,
+   "topic": "1.7",
+   "confidence": 1,
+   "stem": "Considerthethreevectors ⎡⎤⎡⎤⎡⎤ 077 vvvx =⎣−8⎦, =⎣−3⎦, =⎣⎦. 123 68−4 v v vx If{,,}islinearlydependent,then =. 123"
+  },
+  {
+   "qid": "q7-03",
+   "quiz": 7,
+   "qno": 3,
+   "topic": "1.9",
+   "confidence": 1,
+   "stem": "T Whichofthefollowingmatricesisthestandardmatrixforthelineartransformation? Tx x xxxxxxxxxx (,,) = (−3 + 5, 4 + 8, 5 + 3, 2 −9 −7) 123132312123 Selectone: ⎡⎤ −3052 A. ⎣043−9⎦ 580−7 ⎡⎤ −305 B. 048 ⎣530⎦ 2−9−7 ⎡⎤ −315 C. 148 ⎣531⎦ 2−9−7 ⎡⎤ −3152 D. ⎣143−9⎦ 581−7"
+  },
+  {
+   "qid": "q7-04",
+   "quiz": 7,
+   "qno": 4,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Whichmatrixisin Echelon Formbutnotin Reduced Echelon Form? Selectone: A. ⎡⎤ 20−1−1 ⎣00−3−1⎦ 0000 B. ⎡⎤ 20−1−1 ⎣00−3−1⎦ 0010 C. ⎡⎤ 20−1−1 ⎣0000⎦ 00−3−1 D. ⎡⎤ 00−3−1 ⎣20−1−1⎦ 0000"
+  },
+  {
+   "qid": "q7-05",
+   "quiz": 7,
+   "qno": 5,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "−1−2−58 Ab Let =⎣6−12⎦, =⎣−3⎦. k 18−36"
+  },
+  {
+   "qid": "q7-06",
+   "quiz": 7,
+   "qno": 6,
+   "topic": "1.9",
+   "confidence": 2,
+   "stem": "Whichofthefollowing2 × 2matricesisthestandardmatrixofarotationabouttheorigin R2 in? Selectone: A.[35] − 88 53 88 ⎡⎤ B.√35√46 − ⎣99⎦ √46√35 −− 99 ⎡⎤ C.√62√2 − ⎣88⎦ √2√62 88 D.[54] − 99 45 − 99"
+  },
+  {
+   "qid": "q7-07",
+   "quiz": 7,
+   "qno": 7,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Considerthefollowingsystemoflinearequations: ⎧ xxx + 3 + 6 = −1 ⎨123 ⎩ xxx 2 + 5 − = 2. 123 xx + 13 = −4 23 Whichofthefollowing lydescribesthesolutionsetofthesystem? Selectone: A.Thesolutionsetisalinethroughtheorigin. B.Thesolutionsetisaplanethroughtheorigin. C.Thesolutionsetisaplanenotthroughtheorigin. D.Thesolutionsetisalinenotthroughtheorigin."
+  },
+  {
+   "qid": "q7-08",
+   "quiz": 7,
+   "qno": 8,
+   "topic": "1.7",
+   "confidence": 1,
+   "stem": "1−1 vvR3 Let =⎣0⎦, =⎣3⎦belinearlyindependentvectorsin.Whichofthe 12 −53 vv vv v v followingvectors,whenaddedtotheset{,},willmaketheset{,,} 312123 linearlydependent? Selectone: ⎡⎤ A.−1 v =⎣6⎦ 3 1 ⎡⎤ 7 B. v =⎣1⎦ 3 3 ⎡⎤ −4 C. v =⎣7⎦ 3 −1 ⎡⎤ 1 D. v =⎣0⎦ 3 0"
+  },
+  {
+   "qid": "q7-09",
+   "quiz": 7,
+   "qno": 9,
+   "topic": "1.8",
+   "confidence": 2,
+   "stem": "Tx Ax Let() =beamatrixtransformation,where ⎡⎤ 16−4 03−3 A =. ⎣1−32⎦ 0−1−2 T Whichoneofthefollowingstatementsdescribes ly? Selectone: T A.isbothone-to-oneandonto. T B.isontobutnotone-to-one. T C.isone-to-onebutnotonto. T D.isneitherone-to-onenoronto."
+  },
+  {
+   "qid": "q7-10",
+   "quiz": 7,
+   "qno": 10,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "AbR2 Letbea2 × 2nonzeromatrix,andbeanonzerovectorin. Supposethat [−1] [0] A bA b =and =, −71 [2] xAx 0h If =isanonzerosolutionofthehomogeneousequation =,then =. h"
+  },
+  {
+   "qid": "q7-11",
+   "quiz": 7,
+   "qno": 11,
+   "topic": "1.8",
+   "confidence": 1,
+   "stem": "T R2R2 Let:→bealineartransformationsatisfying ([1]) [1] ([2]) [−3] TT =and =. 0817 ab [] ATx AxxR2ab Let =bethematrixsatisfying() =forallin,then =, = cd cd , =, =."
+  },
+  {
+   "qid": "q7-12",
+   "quiz": 7,
+   "qno": 12,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "Ax 0 Whichofthefollowinggivesallsolutionstotheequation =inparametricvector form,where ⎡⎤ 014−3 A =⎣122−11⎦? −2−1813 Selectone: ⎡⎤ 6 A. −4 x ssR =( in ) ⎣1⎦ 0 ⎡⎤⎡⎤ −6−5 B. 4−3 x s ts tR =+(, in ) ⎣1⎦⎣0⎦ 01 ⎡⎤ −5 C. −3 x ttR =( in ) ⎣0⎦ 1 ⎡⎤⎡⎤ 65 D. −43 x s ts tR =+(, in ) ⎣1⎦⎣0⎦ 01"
+  },
+  {
+   "qid": "q7-13",
+   "quiz": 7,
+   "qno": 13,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "R4 Whichoneofthefollowingsetsofvectorsinislinearlyindependent? Selectone: ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ 1111 A. ⎨⎬ −1−201 ,,, ⎩⎭ ⎣1⎦⎣4⎦⎣0⎦⎣1⎦ −1−801 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ B.122−8 ⎨⎬ 486−9 ,,, ⎩⎭ ⎣2⎦⎣4⎦⎣9⎦⎣5⎦ 00−26 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤⎡⎤ C.−296−6−2 ⎨⎬ 2−1252 ,,,, ⎩⎭ ⎣9⎦⎣6⎦⎣8⎦⎣−7⎦⎣8⎦ 7−1−7−38 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ D.−550−5 ⎨⎬ 426−6 ,,, ⎩⎭ ⎣−9⎦⎣1⎦⎣−8⎦⎣9⎦ 5−9−44"
+  },
+  {
+   "qid": "q7-14",
+   "quiz": 7,
+   "qno": 14,
+   "topic": "1.8",
+   "confidence": 1,
+   "stem": "T RmRnTx Ax Let:→bethelineartransformationdefinedby() =,where ⎡⎤ 3−2−2−5 A =⎣31−52⎦. −43−5−1 mn Then =, =."
+  },
+  {
+   "qid": "q7-15",
+   "quiz": 7,
+   "qno": 15,
+   "topic": "1.5",
+   "confidence": 6,
+   "stem": "Considerthehomogeneouslinearsystem xxx { + 4 −9 = 0 123 . xxx 8 + 5 + 9 = 0 123 Thesystemhasnontrivialsolutions.Writethegeneralsolutioninparametricvectorform: ⎡⎤ a x xb =⎣⎦. 3 1 ab =,="
+  },
+  {
+   "qid": "q8-01",
+   "quiz": 8,
+   "qno": 1,
+   "topic": "1.8",
+   "confidence": 1,
+   "stem": "T R2R2 Let:→bealineartransformationsatisfying ([1]) [−5] ([0]) [7] TT =and =. −2−817 ab [] ATx AxxR2a Let =bethematrixsatisfying() =forallin,then =#9# , cd bcd =#7# , =#6# , =#7# ."
+  },
+  {
+   "qid": "q8-02",
+   "quiz": 8,
+   "qno": 2,
+   "topic": "1.8",
+   "confidence": 1,
+   "stem": "T RmRnTx Ax Let:→bethelineartransformationdefinedby() =,where ⎡⎤ −2−1 −5−4 A =34. ⎣−24⎦ 5−2 mn Then =, =."
+  },
+  {
+   "qid": "q8-03",
+   "quiz": 8,
+   "qno": 3,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Considerthefollowingsystemoflinearequations: ⎧ xxx + 3 −3 = −2 ⎨123 ⎩ xxx 3 + 6 −4 = 4. 123 xx −6 + 10 = 20 23 Whichofthefollowing lydescribesthesolutionsetofthesystem? Selectone: A.Thesolutionsetisaplanethroughtheorigin. B.Thesolutionsetisalinethroughtheorigin. C.Thesolutionsetisalinenotthroughtheorigin. D.Thesolutionsetisaplanenotthroughtheorigin."
+  },
+  {
+   "qid": "q8-04",
+   "quiz": 8,
+   "qno": 4,
+   "topic": "1.7",
+   "confidence": 1,
+   "stem": "12 vvR3 Let =⎣−1⎦, =⎣−3⎦belinearlyindependentvectorsin.Whichofthe 12 −40 vv vv v v followingvectors,whenaddedtotheset{,},willmaketheset{,,} 312123 linearlydependent? Selectone: ⎡⎤ A.3 v =⎣2⎦ 3 −5 ⎡⎤ 3 B. v =⎣−5⎦ 3 4 ⎡⎤ 0 C. v =⎣0⎦ 3 1 ⎡⎤ −4 D. v =⎣−3⎦ 3 −7"
+  },
+  {
+   "qid": "q8-05",
+   "quiz": 8,
+   "qno": 5,
+   "topic": "1.7",
+   "confidence": 1,
+   "stem": "Considerthethreevectors ⎡⎤⎡⎤⎡⎤ x 63 vvv =⎣8⎦, =⎣−2⎦, =⎣10⎦. 123 707 v v vx If{,,}islinearlydependent,then =. 123"
+  },
+  {
+   "qid": "q8-06",
+   "quiz": 8,
+   "qno": 6,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "5670 Ab Let =⎣285⎦, =⎣9⎦. k 71412"
+  },
+  {
+   "qid": "q8-07",
+   "quiz": 8,
+   "qno": 7,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Whichmatrixisin Echelon Formbutnotin Reduced Echelon Form? Selectone: A. ⎡⎤ −2022 ⎣0000⎦ 00−30 B. ⎡⎤ −2022 ⎣00−30⎦ 0000 C. ⎡⎤ −2022 ⎣00−30⎦ 0010 D. ⎡⎤ 00−30 ⎣−2022⎦ 0000"
+  },
+  {
+   "qid": "q8-08",
+   "quiz": 8,
+   "qno": 8,
+   "topic": "1.9",
+   "confidence": 2,
+   "stem": "Whichofthefollowing2 × 2matricesisthestandardmatrixofarotationabouttheorigin R2 in? Selectone: ⎡⎤ A.√30√19 − ⎣77⎦ √19√30 77 ⎡⎤ B.√33√31 ⎣88⎦ √31√33 − 88 C.[5−3] 88 3−5 88 D.[34] − 77 43 77"
+  },
+  {
+   "qid": "q8-09",
+   "quiz": 8,
+   "qno": 9,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "R4 Whichoneofthefollowingsetsofvectorsinislinearlyindependent? Selectone: ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ −1−211 A. ⎨⎬ 12−5−3 ,,, ⎩⎭ ⎣−2⎦⎣−4⎦⎣6⎦⎣1⎦ −3−6−94 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤⎡⎤ B.−122−19 ⎨⎬ 1−509−7 ,,,, ⎩⎭ ⎣−6⎦⎣5⎦⎣−8⎦⎣−5⎦⎣4⎦ 6−4744 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ C.1111 ⎨⎬ 0−212 ,,, ⎩⎭ ⎣0⎦⎣4⎦⎣1⎦⎣4⎦ 0−818 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ D.−97−29 ⎨⎬ 6−8−21 ,,, ⎩⎭ ⎣−7⎦⎣4⎦⎣−3⎦⎣3⎦ 448−4"
+  },
+  {
+   "qid": "q8-10",
+   "quiz": 8,
+   "qno": 10,
+   "topic": "1.5",
+   "confidence": 6,
+   "stem": "Considerthehomogeneouslinearsystem xxx { −6 −9 = 0 123 . xxx −2 + 2 −2 = 0 123 Thesystemhasnontrivialsolutions.Writethegeneralsolutioninparametricvectorform: ⎡⎤ a x xb =⎣⎦. 3 1 ab =,="
+  },
+  {
+   "qid": "q8-11",
+   "quiz": 8,
+   "qno": 11,
+   "topic": "1.9",
+   "confidence": 1,
+   "stem": "T Whichofthefollowingmatricesisthestandardmatrixforthelineartransformation? Tx x xxxxxxxxxx (,,) = (− + 5, − −8, −3 −, −4 −9 + 8) 123122313123 Selectone: ⎡⎤ −10−3−4 A. ⎣5−10−9⎦ 0−8−18 ⎡⎤ −151 B. 1−1−8 ⎣−31−1⎦ −4−98 ⎡⎤ −150 C. 0−1−8 ⎣−30−1⎦ −4−98 ⎡⎤ −11−3−4 D. ⎣5−11−9⎦ 1−8−18"
+  },
+  {
+   "qid": "q8-12",
+   "quiz": 8,
+   "qno": 12,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "v v v vR3 Consider{,,,} ⊂: 1234 ⎡⎤⎡⎤⎡⎤⎡⎤ −23−21 vvvv =⎣−1⎦, =⎣−1⎦, =⎣−2⎦, =⎣1⎦. 1234 ab 22 R3ab ThesetdoesNOTspan. Findthevaluesofand. Selectone: ab A. = 0, = 0 ab B. = 4, = 2 ab C. = 6, = −2 ab D. = 4, = −2"
+  },
+  {
+   "qid": "q8-13",
+   "quiz": 8,
+   "qno": 13,
+   "topic": "1.8",
+   "confidence": 2,
+   "stem": "Tx Ax Let() =beamatrixtransformation,where ⎡⎤ 1−88−9 A =⎣0−2−72⎦. 1695 T Whichoneofthefollowingstatementsdescribes ly? Selectone: T A.isneitherone-to-onenoronto. T B.isbothone-to-oneandonto. T C.isone-to-onebutnotonto. T D.isontobutnotone-to-one."
+  },
+  {
+   "qid": "q8-14",
+   "quiz": 8,
+   "qno": 14,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "AbR2 Letbea2 × 2nonzeromatrix,andbeanonzerovectorin. Supposethat [7] [3] A bA b =and =, 19 [8] xAx 0h If =isanonzerosolutionofthehomogeneousequation =,then =. h"
+  },
+  {
+   "qid": "q8-15",
+   "quiz": 8,
+   "qno": 15,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "Ax 0 Whichofthefollowinggivesallsolutionstotheequation =inparametricvector form,where ⎡⎤ 01−52 A =⎣12−121⎦? −2−194 Selectone: ⎡⎤⎡⎤ −2−3 A. −52 x s ts tR =+(, in ) ⎣1⎦⎣0⎦ 01 ⎡⎤ 2 B. 5 x ssR =( in ) ⎣1⎦ 0 ⎡⎤⎡⎤ 23 C. 5−2 x s ts tR =+(, in ) ⎣1⎦⎣0⎦ 01 ⎡⎤ −3 D. 2 x ttR =( in ) ⎣0⎦ 1"
+  },
+  {
+   "qid": "q9-01",
+   "quiz": 9,
+   "qno": 1,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Whichmatrixisin Echelon Formbutnotin Reduced Echelon Form? Selectone: A. ⎡⎤ −12−2−2 ⎣0000⎦ 0030 B. ⎡⎤ −12−2−2 ⎣0030⎦ 0000 C. ⎡⎤ −12−2−2 ⎣0030⎦ 0010 D. ⎡⎤ 0030 ⎣−12−2−2⎦ 0000"
+  },
+  {
+   "qid": "q9-02",
+   "quiz": 9,
+   "qno": 2,
+   "topic": "1.9",
+   "confidence": 2,
+   "stem": "Whichofthefollowing2 × 2matricesisthestandardmatrixofarotationabouttheorigin R2 in? Selectone: ⎡⎤ A.√61√3 − ⎣88⎦ √3√61 88 B.[5−4] 99 45 99 C.[5−3] 88 3−5 88 ⎡⎤ D.√14√67 − ⎣99⎦ √67√14 99"
+  },
+  {
+   "qid": "q9-03",
+   "quiz": 9,
+   "qno": 3,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "10 vvR3 Let =⎣2⎦, =⎣−5⎦belinearlyindependentvectorsin.Whichofthefollowing 12 5−3 vv vv v v vectors,whenaddedtotheset{,},willmaketheset{,,}linearly 312123 dependent? Selectone: ⎡⎤ A.2 v =⎣−1⎦ 3 7 ⎡⎤ −6 B. v =⎣4⎦ 3 2 ⎡⎤ −1 C. v =⎣−5⎦ 3 1 ⎡⎤ 0 D. v =⎣1⎦ 3 0"
+  },
+  {
+   "qid": "q9-04",
+   "quiz": 9,
+   "qno": 4,
+   "topic": "1.8",
+   "confidence": 2,
+   "stem": "xx LetT() = Abeamatrixtransformation,where ⎡⎤ 1−7−93 A =⎣0−8−72⎦. −4−48−4 WhichoneofthefollowingstatementsdescribesT ly? Selectone: A.Tisontobutnotone-to-one. B.Tisbothone-to-oneandonto. C.Tisneitherone-to-onenoronto. D.Tisone-to-onebutnotonto."
+  },
+  {
+   "qid": "q9-05",
+   "quiz": 9,
+   "qno": 5,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "62−519 LetA =⎣4−72⎦,b =⎣−26⎦. −1053k"
+  },
+  {
+   "qid": "q9-06",
+   "quiz": 9,
+   "qno": 6,
+   "topic": "1.7",
+   "confidence": 1,
+   "stem": "Considerthethreevectors ⎡⎤⎡⎤⎡⎤ 2−5x vvv =⎣0⎦, =⎣2⎦, =⎣−6⎦. 123 −756 v v v If{,,}islinearlydependent,thenx =. 123"
+  },
+  {
+   "qid": "q9-07",
+   "quiz": 9,
+   "qno": 7,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "bR2 LetAbea2 × 2nonzeromatrix,andbeanonzerovectorin. Supposethat [−2] [4] b b A =andA =, −50 [g] xx 0 If =isanonzerosolutionofthehomogeneousequationA =,theng = −10 ."
+  },
+  {
+   "qid": "q9-08",
+   "quiz": 9,
+   "qno": 8,
+   "topic": "1.5",
+   "confidence": 6,
+   "stem": "Considerthehomogeneouslinearsystem {x −x −2x = 0 123 . −6x + 3x + 9x = 0 123 Thesystemhasnontrivialsolutions.Writethegeneralsolutioninparametricvectorform: ⎡⎤ a x = x⎣b⎦. 3 1 a=,b="
+  },
+  {
+   "qid": "q9-09",
+   "quiz": 9,
+   "qno": 9,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Considerthefollowingsystemoflinearequations: ⎧ x + 3x −6x = 3 ⎨123 ⎩ 3x −x −4x = 2. 123 10x −14x = 7 23 Whichofthefollowing lydescribesthesolutionsetofthesystem? Selectone: A.Thesolutionsetisaplanenotthroughtheorigin. B.Thesolutionsetisalinethroughtheorigin. C.Thesolutionsetisaplanethroughtheorigin. D.Thesolutionsetisalinenotthroughtheorigin."
+  },
+  {
+   "qid": "q9-10",
+   "quiz": 9,
+   "qno": 10,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "v v v vR3 Consider{,,,} ⊂: 1234 ⎡⎤⎡⎤⎡⎤⎡⎤ 22−22 vvvv =⎣2⎦, =⎣1⎦, =⎣3⎦, =⎣1⎦. 1234 0−1ab R3 ThesetdoesNOTspan. Findthevaluesofaandb. Selectone: A.a = 5,b = −1 B.a = 7,b = −1 C.a = −5,b = −1 D.a = 6,b = 0"
+  },
+  {
+   "qid": "q9-11",
+   "quiz": 9,
+   "qno": 11,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "R4 Whichoneofthefollowingsetsofvectorsinislinearlyindependent? Selectone: ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ 2408 A. ⎨⎬ −4−8−9−7 ,,, ⎩⎭ ⎣3⎦⎣6⎦⎣−2⎦⎣3⎦ 36−50 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤⎡⎤ B.−19−53−6 ⎨⎬ −20−5−3−3 ,,,, ⎩⎭ ⎣−9⎦⎣7⎦⎣3⎦⎣−4⎦⎣−8⎦ −2−15−17 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ C.7−9−2−4 ⎨⎬ 5−324 ,,, ⎩⎭ ⎣−3⎦⎣−2⎦⎣−5⎦⎣4⎦ 5−14−3 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ D.1111 ⎨⎬ 1−202 ,,, ⎩⎭ ⎣1⎦⎣4⎦⎣0⎦⎣4⎦ 1−808"
+  },
+  {
+   "qid": "q9-12",
+   "quiz": 9,
+   "qno": 12,
+   "topic": "1.9",
+   "confidence": 1,
+   "stem": "WhichofthefollowingmatricesisthestandardmatrixforthelineartransformationT? T(x, x, x) = (−3x −2x, 6x + 8x, 4x −3x, −2x −2x −x) 123132312123 Selectone: ⎡⎤ A.−30−2 068 ⎣4−30⎦ −2−2−1 ⎡⎤ −314−2 B. ⎣16−3−2⎦ −281−1 ⎡⎤ −31−2 C. 168 ⎣4−31⎦ −2−2−1 ⎡⎤ −304−2 D. ⎣06−3−2⎦ −280−1"
+  },
+  {
+   "qid": "q9-13",
+   "quiz": 9,
+   "qno": 13,
+   "topic": "1.8",
+   "confidence": 1,
+   "stem": "R2R2 LetT:→bealineartransformationsatisfying ([1]) [3] ([3]) [−1] T =andT =. 0−31−4 [ab] xxxR2 LetA =bethematrixsatisfyingT() = Aforallin,thena =,b = cd ,c =,d =."
+  },
+  {
+   "qid": "q9-14",
+   "quiz": 9,
+   "qno": 14,
+   "topic": "1.8",
+   "confidence": 1,
+   "stem": "RmRnxx LetT:→bethelineartransformationdefinedbyT() = A,where ⎡⎤ −45 A =⎣12⎦. −2−4 Thenm =,n =."
+  },
+  {
+   "qid": "q9-15",
+   "quiz": 9,
+   "qno": 15,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "x 0 WhichofthefollowinggivesallsolutionstotheequationA =inparametricvector form,where ⎡⎤ 01−25 A =⎣12−812⎦? −2−110−9 Selectone: ⎡⎤ 4 A. 2 xR = s(s in ) ⎣1⎦ 0 ⎡⎤⎡⎤ −42 B. −25 xR = s+ t(s, t in ) ⎣1⎦⎣0⎦ 01 ⎡⎤ 2 C. 5 xR = t(t in ) ⎣0⎦ 1 ⎡⎤⎡⎤ 4−2 D. 2−5 xR = s+ t(s, t in ) ⎣1⎦⎣0⎦ 01"
+  },
+  {
+   "qid": "q10-01",
+   "quiz": 10,
+   "qno": 1,
+   "topic": "1.2",
+   "confidence": 1,
+   "stem": "Whichmatrixisin Echelon Formbutnotin Reduced Echelon Form? Selectone: A. ⎡⎤ 3−1−21 ⎣00−3−1⎦ 0000 B. ⎡⎤ 3−1−21 ⎣00−3−1⎦ 0010 C. ⎡⎤ 00−3−1 ⎣3−1−21⎦ 0000 D. ⎡⎤ 3−1−21 ⎣0000⎦ 00−3−1"
+  },
+  {
+   "qid": "q10-02",
+   "quiz": 10,
+   "qno": 2,
+   "topic": "1.5",
+   "confidence": 6,
+   "stem": "Considerthehomogeneouslinearsystem xxx { − −5 = 0 123 . xxx 2 −4 −2 = 0 123 Thesystemhasnontrivialsolutions.Writethegeneralsolutioninparametricvectorform: ⎡⎤ a x xb =⎣⎦. 3 1 ab =,="
+  },
+  {
+   "qid": "q10-03",
+   "quiz": 10,
+   "qno": 3,
+   "topic": "1.9",
+   "confidence": 2,
+   "stem": "Whichofthefollowing2 × 2matricesisthestandardmatrixofarotationabouttheorigin R2 in? Selectone: A.[45] − 99 54 99 ⎡⎤ B.√71√10 ⎣99⎦ √10√71 − 99 ⎡⎤ C.√33√3 − ⎣66⎦ √3√33 66 D.[35] − 88 5−3 88"
+  },
+  {
+   "qid": "q10-04",
+   "quiz": 10,
+   "qno": 4,
+   "topic": "1.7",
+   "confidence": 1,
+   "stem": "Considerthethreevectors ⎡⎤⎡⎤⎡⎤ 50−5 vvv =⎣7⎦, =⎣−3⎦, =⎣−4⎦. 123 x 77 v v vx If{,,}islinearlydependent,then =. 123"
+  },
+  {
+   "qid": "q10-05",
+   "quiz": 10,
+   "qno": 5,
+   "topic": "1.1",
+   "confidence": 1,
+   "stem": "Considerthefollowingsystemoflinearequations: ⎧ xxx + 4 −4 = −3 ⎨123 ⎩ xxx 5 + 4 −3 = 3. 123 xx −16 + 17 = 18 23 Whichofthefollowing lydescribesthesolutionsetofthesystem? Selectone: A.Thesolutionsetisalinenotthroughtheorigin. B.Thesolutionsetisaplanethroughtheorigin. C.Thesolutionsetisaplanenotthroughtheorigin. D.Thesolutionsetisalinethroughtheorigin."
+  },
+  {
+   "qid": "q10-06",
+   "quiz": 10,
+   "qno": 6,
+   "topic": "1.4",
+   "confidence": 1,
+   "stem": "v v v vR3 Consider{,,,} ⊂: 1234 ⎡⎤⎡⎤⎡⎤⎡⎤ 3−101 vvvv =⎣1⎦, =⎣−2⎦, =⎣1⎦, =⎣−3⎦. 1234 ab −12 R3ab ThesetdoesNOTspan. Findthevaluesofand. Selectone: ab A. = −1, = 3 ab B. = 0, = −1 ab C. = −1, = −3 ab D. = 1, = 3"
+  },
+  {
+   "qid": "q10-07",
+   "quiz": 10,
+   "qno": 7,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "R4 Whichoneofthefollowingsetsofvectorsinislinearlyindependent? Selectone: ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤⎡⎤ 8−106−3 A. ⎨⎬ 0−11−43 ,,,, ⎩⎭ ⎣7⎦⎣1⎦⎣−7⎦⎣0⎦⎣4⎦ 38−454 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ B.−2−45−8 ⎨⎬ 246−2 ,,, ⎩⎭ ⎣4⎦⎣8⎦⎣6⎦⎣−4⎦ 12−41 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ C.−4515 ⎨⎬ −91−86 ,,, ⎩⎭ ⎣6⎦⎣−3⎦⎣3⎦⎣−8⎦ −3411 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ D.1111 ⎨⎬ 21−1−2 ,,, ⎩⎭ ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ 81−1−8"
+  },
+  {
+   "qid": "q10-08",
+   "quiz": 10,
+   "qno": 8,
+   "topic": "1.8",
+   "confidence": 1,
+   "stem": "T RmRnTx Ax Let:→bethelineartransformationdefinedby() =,where ⎡⎤ 11−4−42 −332−3−1 A =. ⎣−3−41−2−3⎦ 1−4−3−43 mn Then =, =."
+  },
+  {
+   "qid": "q10-09",
+   "quiz": 10,
+   "qno": 9,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "AbR2 Letbea2 × 2nonzeromatrix,andbeanonzerovectorin. Supposethat [−7] [0] A bA b =and =, 36 [−14] xAx 0h If =isanonzerosolutionofthehomogeneousequation =,then =. h"
+  },
+  {
+   "qid": "q10-10",
+   "quiz": 10,
+   "qno": 10,
+   "topic": "1.1",
+   "confidence": 0,
+   "stem": "082−4 Ab Let =⎣−5−4−5⎦, =⎣−6⎦. k 103216"
+  },
+  {
+   "qid": "q10-11",
+   "quiz": 10,
+   "qno": 11,
+   "topic": "1.8",
+   "confidence": 2,
+   "stem": "Tx Ax Let() =beamatrixtransformation,where ⎡⎤ 1−89 0−55 A =. ⎣3−58⎦ 651 T Whichoneofthefollowingstatementsdescribes ly? Selectone: T A.isneitherone-to-onenoronto. T B.isone-to-onebutnotonto. T C.isbothone-to-oneandonto. T D.isontobutnotone-to-one."
+  },
+  {
+   "qid": "q10-12",
+   "quiz": 10,
+   "qno": 12,
+   "topic": "1.9",
+   "confidence": 1,
+   "stem": "T Whichofthefollowingmatricesisthestandardmatrixforthelineartransformation? Tx x xx xxxxxxxx (,,) = (4 +, −8 −4, 9 −3, 4 −6 + 7) 123231213123 Selectone: ⎡⎤ A.041 −8−40 ⎣90−3⎦ 4−67 ⎡⎤ 0−894 B. ⎣4−40−6⎦ 10−37 ⎡⎤ 1−894 C. ⎣4−41−6⎦ 11−37 ⎡⎤ 141 D. −8−41 ⎣91−3⎦ 4−67"
+  },
+  {
+   "qid": "q10-13",
+   "quiz": 10,
+   "qno": 13,
+   "topic": "1.8",
+   "confidence": 1,
+   "stem": "T R2R2 Let:→bealineartransformationsatisfying ([1]) [−4] ([3]) [−5] TT =and =. 0−11−9 ab [] ATx AxxR2ab Let =bethematrixsatisfying() =forallin,then =, = cd cd , =, =."
+  },
+  {
+   "qid": "q10-14",
+   "quiz": 10,
+   "qno": 14,
+   "topic": "1.7",
+   "confidence": 1,
+   "stem": "1−3 vvR3 Let =⎣0⎦, =⎣−5⎦belinearlyindependentvectorsin.Whichofthe 12 −41 vv vv v v followingvectors,whenaddedtotheset{,},willmaketheset{,,} 312123 linearlydependent? Selectone: ⎡⎤ A.2 v =⎣5⎦ 3 3 ⎡⎤ −7 B. v =⎣4⎦ 3 8 ⎡⎤ 0 C. v =⎣0⎦ 3 1 ⎡⎤ 8 D. v =⎣2⎦ 3 6"
+  },
+  {
+   "qid": "q10-15",
+   "quiz": 10,
+   "qno": 15,
+   "topic": "1.5",
+   "confidence": 1,
+   "stem": "Ax 0 Whichofthefollowinggivesallsolutionstotheequation =inparametricvector form,where ⎡⎤ 01−31 A =⎣12−47⎦? −2−1−1−11 Selectone: ⎡⎤⎡⎤ −2−5 A. 3−1 x s ts tR =+(, in ) ⎣1⎦⎣0⎦ 01 ⎡⎤⎡⎤ 25 B. −31 x s ts tR =+(, in ) ⎣1⎦⎣0⎦ 01 ⎡⎤ −2 C. 3 x ssR =( in ) ⎣1⎦ 0 ⎡⎤ 5 D. 1 x ttR =( in ) ⎣0⎦ 1"
+  }
+ ],
+ "note": "best-effort classification from printed stems; edit this file to override any item"
+}

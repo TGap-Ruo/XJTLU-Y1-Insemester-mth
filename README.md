@@ -8,7 +8,7 @@ time without losing your place.
 
 | Course | Entry | Bank | Topics | Glossary |
 |---|---|---|---|---|
-| **MTH028 · Linear Algebra I** | `/` → `index.html` | 150 items | 17 (1.1–2.8) | 33 groups / 212 terms |
+| **MTH028 · Linear Algebra I** | `/` → `index.html` | 228 items (177 choice · 37 fill · 14 cloze) | 17 (1.1–2.8) | 33 groups / 212 terms |
 | **MTH026 · Calculus I** | `/mth026.html` | 674 items (351 + 323) | 54 | 9 groups / 80 terms |
 
 Progress is **isolated per course**: MTH028 uses the `progress28` table and the
@@ -34,10 +34,38 @@ favourites or mistake book can leak into the other.
   nothing is hardcoded. `mth028/build/make_app.py` is a compatibility wrapper
   for the same builder. `mth028/data/topic_map_overrides.json` holds 22
   hand-audited topic corrections that win over the keyword classifier.
-- **Sources.** The 150 items are cropped from the ten Moodle *attempt review*
-  PDFs of Practice Quiz 1 and 2. Question crops live in `img/q/`, printed
-  answer crops in `img/a/`. The status line, selected radio and green tick are
-  wiped from every crop so the answer is never leaked.
+- **Pipeline (v2, 30 PDFs).** `build/extract_v2.py` reads the 30 review exports
+  → `data/extract_v2.json`; `build/select_items.py` decides answer keys, merges
+  duplicate templates and writes `data/selection.json` + `data/duplicates.json`;
+  `build/render_crops.py` renders the two images per item; `build/map_topics_v2.py`
+  assigns a section; `build/merge_bank.py` writes the four files the assembler
+  consumes. Re-run them in that order, then
+  `assemble_bank.py --out ../mth026/repo/bank.js`.
+- **Sources.** The 228 items come from **30** Moodle *attempt review* exports:
+  `MTH028-Quizzes/1.pdf … 15.pdf` and `题库2/2-1.pdf … 2-15.pdf`, 15 questions
+  each — 450 raw questions. Moodle re-draws the numbers for every attempt, so
+  the same template appears in many exports; items are grouped by
+  stem+options with digits masked and one representative survives
+  (**450 → 228**, the merged list is `mth028/data/duplicates.json`). Question
+  crops live in `img/q/<qid>.png`, printed answer crops in `img/a/<qid>.png`.
+- **Cropping (why it cannot leak).** Every card in those exports is a drawn
+  rounded rectangle with a fixed border colour, so the crop is the **exact stem
+  card** and the answer crop is the **exact feedback card** — no heuristic "stop
+  before the verdict" line any more. Inside the stem card the renderer only
+  whitewashes what a student must not see before answering: the radio buttons
+  (redrawn as empty ones), the tick/cross glyphs, and any value typed into an
+  answer box (redrawn as an empty box). The feedback card is never part of the
+  question image, which is what used to slice the worked solution into the
+  screenshot.
+- **Answer keys.** 177 choice items all carry a letter: 24 from the Moodle tick,
+  the rest by matching the printed answer box against the options (exact /
+  containment / digit-multiset); the 29 that stayed ambiguous were re-read from
+  the rendered answer box and, where that disagreed, corrected —
+  `mth028/data/answer_fixes.json` records every such key. 37 fill items grade
+  from the printed answer line, 14 multi-blank items (`cloze`, 2 or 4 blanks)
+  grade blank by blank. **17 items printed no answer at all** — those were
+  computed and verified with sympy, flagged `答案由 AI 生成 / AI-generated
+  answer`, and listed in `MTH028_AI_Answers.md`.
 - **Answers.** 56 of the 100 choice items have a reliable letter (19 from the
   Moodle tick, 37 from an exact text match against the printed answer); the
   other 44 show the printed-answer crop and ask you to self-mark. 45 fill/cloze
@@ -47,9 +75,10 @@ favourites or mistake book can leak into the other.
   question numbers, working and confidence is `MTH028_AI_Answers.md`.
 - **Topic coverage.** The slides cover 1.1–1.5, 1.7–1.9, 2.1–2.4 and 2.8.
   Sections 1.6, 2.5, 2.6 and 2.7 have no slides; they are still listed with a
-  textbook title and marked 「课件暂缺」. The question bank currently only covers
-  chapter 1, so all eight chapter-2 sections plus 1.6 show 「暂无题目 · 待补充」
-  rather than a fake 0/0 bar.
+  textbook title and marked 「课件暂缺」. Quiz 3 (exports 11–15 and 题库2 2-11…2-15)
+  brought chapter-2 material, so the bank now fills 2.1 (matrix operations),
+  2.2 (inverses), 2.3 (invertibility) and 2.8 (null space / col A); 1.6, 2.4–2.7
+  still show 「暂无题目 · 待补充」 rather than a fake 0/0 bar.
 - **Glossary.** 212 English/Chinese terms with short definitions, taken from
   the department's *Vocabulary Booklet for Linear Algebra*.
 
