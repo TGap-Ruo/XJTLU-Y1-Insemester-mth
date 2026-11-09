@@ -504,7 +504,7 @@
    ],
    "student_answer": "",
    "verdict": "correct",
-   "printed_answer_text": "",
+   "printed_answer_text": "ab =4,=2",
    "suggested_key": "C",
    "key_confidence": "high",
    "key_method": "tick",
@@ -699,7 +699,7 @@
    ],
    "student_answer": "",
    "verdict": "",
-   "printed_answer_text": "",
+   "printed_answer_text": "[]",
    "suggested_key": "D",
    "key_confidence": "high",
    "key_method": "vision",
@@ -709,6 +709,33 @@
    "ai_generated": false,
    "img": "img/q/p2-13.png",
    "answer_img": "img/a/p2-13.png",
+   "notes": ""
+  },
+  {
+   "qid": "p2-14",
+   "quiz": 2,
+   "qno": 14,
+   "id": 2014,
+   "label": "Q2-14",
+   "type": "fill",
+   "blanks": 1,
+   "topic": "1.1",
+   "stem": "⎡−7−4−3⎤⎡22⎤ LetA=−642,b=32. ⎣⎦⎣⎦ 000k",
+   "options": [],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "0",
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "answers": [
+    "0"
+   ],
+   "answer_text": "0",
+   "answer_source": "pdf",
+   "ai_generated": false,
+   "img": "img/q/p2-14.png",
+   "answer_img": "img/a/p2-14.png",
    "notes": ""
   },
   {
@@ -741,10 +768,10 @@
    ],
    "student_answer": "",
    "verdict": "",
-   "printed_answer_text": "",
+   "printed_answer_text": "[]",
    "suggested_key": "A",
    "key_confidence": "high",
-   "key_method": "contain",
+   "key_method": "vision",
    "answers": null,
    "answer_text": "",
    "answer_source": "none",
@@ -880,6 +907,48 @@
    "notes": ""
   },
   {
+   "qid": "p3-09",
+   "quiz": 3,
+   "qno": 9,
+   "id": 3009,
+   "label": "Q3-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.2",
+   "stem": "FindtheReducedEchelonFormof ⎡1013⎤ A =01−33 ⎣⎦ 1013 Selectone: A. ⎡1013⎤ 01−33 ⎣⎦ 0000 B. ⎡2013⎤ 01−33 ⎣⎦ 0000 C. ⎡1031⎤ 01−33 ⎣⎦ 0000 D. ⎡1013⎤ 013−3 ⎣⎦ 0000",
+   "options": [
+    {
+     "L": "A",
+     "text": "⎡1013⎤ 01−33 ⎣⎦ 0000"
+    },
+    {
+     "L": "B",
+     "text": "⎡2013⎤ 01−33 ⎣⎦ 0000"
+    },
+    {
+     "L": "C",
+     "text": "⎡1031⎤ 01−33 ⎣⎦ 0000"
+    },
+    {
+     "L": "D",
+     "text": "⎡1013⎤ 013−3 ⎣⎦ 0000"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "",
+   "suggested_key": "A",
+   "key_confidence": "high",
+   "key_method": "exact",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p3-09.png",
+   "answer_img": "img/a/p3-09.png",
+   "notes": ""
+  },
+  {
    "qid": "p3-10",
    "quiz": 3,
    "qno": 10,
@@ -934,7 +1003,7 @@
    "options": [],
    "student_answer": "",
    "verdict": "",
-   "printed_answer_text": "",
+   "printed_answer_text": "4",
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
@@ -942,10 +1011,94 @@
     "4"
    ],
    "answer_text": "4",
-   "answer_source": "ai",
-   "ai_generated": true,
+   "answer_source": "pdf",
+   "ai_generated": false,
    "img": "img/q/p3-13.png",
    "answer_img": "img/a/p3-13.png",
+   "notes": ""
+  },
+  {
+   "qid": "p3-14",
+   "quiz": 3,
+   "qno": 14,
+   "id": 3014,
+   "label": "Q3-14",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.5",
+   "stem": "Findthegeneralsolution. {−4x1−28x24x3 +=8 6x1x3 +=23 Selectone: A.⎡3⎤⎡−2⎤ xtt∈R =−1+1, ⎣⎦⎣⎦ 56 B.⎡3⎤⎡−1⎤ xtt∈R =0+1, ⎣⎦⎣⎦ 56 C.⎡3⎤⎡0⎤ xtt∈R =0+1, ⎣⎦⎣⎦ 46 D.⎡3⎤⎡−1⎤ xtt∈R =1+1, ⎣⎦⎣⎦ 57",
+   "options": [
+    {
+     "L": "A",
+     "text": "⎡3⎤⎡−2⎤ xtt∈R =−1+1, ⎣⎦⎣⎦ 56"
+    },
+    {
+     "L": "B",
+     "text": "⎡3⎤⎡−1⎤ xtt∈R =0+1, ⎣⎦⎣⎦ 56"
+    },
+    {
+     "L": "C",
+     "text": "⎡3⎤⎡0⎤ xtt∈R =0+1, ⎣⎦⎣⎦ 46"
+    },
+    {
+     "L": "D",
+     "text": "⎡3⎤⎡−1⎤ xtt∈R =1+1, ⎣⎦⎣⎦ 57"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "xtt∈R =0+1, ⎣⎦⎣⎦",
+   "suggested_key": "B",
+   "key_confidence": "high",
+   "key_method": "exact",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p3-14.png",
+   "answer_img": "img/a/p3-14.png",
+   "notes": ""
+  },
+  {
+   "qid": "p4-06",
+   "quiz": 4,
+   "qno": 6,
+   "id": 4006,
+   "label": "Q4-06",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.2",
+   "stem": "FindtheReducedEchelonFormof ⎡10−2−3⎤ A=01−2−1 ⎣⎦ 10−2−3 Selectone: A. ⎡20−2−3⎤ 01−2−1 ⎣⎦ 0000 B. ⎡10−2−3⎤ 01−2−1 ⎣⎦ 0000 C. ⎡10−3−2⎤ 01−2−1 ⎣⎦ 0000 D. ⎡10−2−3⎤ 01−1−2 ⎣⎦ 0000",
+   "options": [
+    {
+     "L": "A",
+     "text": "⎡20−2−3⎤ 01−2−1 ⎣⎦ 0000"
+    },
+    {
+     "L": "B",
+     "text": "⎡10−2−3⎤ 01−2−1 ⎣⎦ 0000"
+    },
+    {
+     "L": "C",
+     "text": "⎡10−3−2⎤ 01−2−1 ⎣⎦ 0000"
+    },
+    {
+     "L": "D",
+     "text": "⎡10−2−3⎤ 01−1−2 ⎣⎦ 0000"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "",
+   "suggested_key": "B",
+   "key_confidence": "high",
+   "key_method": "exact",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p4-06.png",
+   "answer_img": "img/a/p4-06.png",
    "notes": ""
   },
   {
@@ -1201,6 +1354,48 @@
    "notes": ""
   },
   {
+   "qid": "p5-04",
+   "quiz": 5,
+   "qno": 4,
+   "id": 5004,
+   "label": "Q5-04",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.1",
+   "stem": "[8],[6], Computethevectorcudv,whereuv. +==c=−8,d=2 −11 Selectone: A.[−53] 10 B.[−56] 8 C.[−54] 8 D.[−52] 10",
+   "options": [
+    {
+     "L": "A",
+     "text": "[−53] 10"
+    },
+    {
+     "L": "B",
+     "text": "[−56] 8"
+    },
+    {
+     "L": "C",
+     "text": "[−54] 8"
+    },
+    {
+     "L": "D",
+     "text": "[−52] 10"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "[−52]",
+   "suggested_key": "D",
+   "key_confidence": "high",
+   "key_method": "contain",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p5-04.png",
+   "answer_img": "img/a/p5-04.png",
+   "notes": ""
+  },
+  {
    "qid": "p5-05",
    "quiz": 5,
    "qno": 5,
@@ -1213,16 +1408,16 @@
    "options": [],
    "student_answer": "",
    "verdict": "",
-   "printed_answer_text": "",
+   "printed_answer_text": "-3",
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
    "answers": [
-    "3"
+    "-3"
    ],
-   "answer_text": "3",
-   "answer_source": "ai",
-   "ai_generated": true,
+   "answer_text": "-3",
+   "answer_source": "pdf",
+   "ai_generated": false,
    "img": "img/q/p5-05.png",
    "answer_img": "img/a/p5-05.png",
    "notes": ""
@@ -1270,6 +1465,48 @@
    "notes": ""
   },
   {
+   "qid": "p5-09",
+   "quiz": 5,
+   "qno": 9,
+   "id": 5009,
+   "label": "Q5-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.5",
+   "stem": "Findthegeneralsolution. {−4x1+x2+2x3=4 −4x2−4x3=−8 Selectone: A.⎡0⎤⎡1⎤ x∈R =2+t−2,t ⎣⎦⎣⎦ 24 B.⎡0⎤⎡1⎤ x∈R =0+t−4,t ⎣⎦⎣⎦ 24 C.⎡0⎤⎡−1⎤ x∈R =−1+t−4,t ⎣⎦⎣⎦ 24 D.⎡2⎤⎡1⎤ x∈R =0+t−4,t ⎣⎦⎣⎦ 26",
+   "options": [
+    {
+     "L": "A",
+     "text": "⎡0⎤⎡1⎤ x∈R =2+t−2,t ⎣⎦⎣⎦ 24"
+    },
+    {
+     "L": "B",
+     "text": "⎡0⎤⎡1⎤ x∈R =0+t−4,t ⎣⎦⎣⎦ 24"
+    },
+    {
+     "L": "C",
+     "text": "⎡0⎤⎡−1⎤ x∈R =−1+t−4,t ⎣⎦⎣⎦ 24"
+    },
+    {
+     "L": "D",
+     "text": "⎡2⎤⎡1⎤ x∈R =0+t−4,t ⎣⎦⎣⎦ 26"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "x∈R =0+t−4,t ⎣⎦⎣⎦",
+   "suggested_key": "B",
+   "key_confidence": "high",
+   "key_method": "exact",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p5-09.png",
+   "answer_img": "img/a/p5-09.png",
+   "notes": ""
+  },
+  {
    "qid": "p5-10",
    "quiz": 5,
    "qno": 10,
@@ -1309,6 +1546,90 @@
    "ai_generated": false,
    "img": "img/q/p5-10.png",
    "answer_img": "img/a/p5-10.png",
+   "notes": ""
+  },
+  {
+   "qid": "p5-12",
+   "quiz": 5,
+   "qno": 12,
+   "id": 5012,
+   "label": "Q5-12",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.2",
+   "stem": "WhichmatrixisinEchelonFormbutnotinReducedEchelonForm? Selectone: A. ⎡−1−222⎤ 00−21 ⎣⎦ 0010 B. ⎡−1−222⎤ 00−21 ⎣⎦ 0000 C. ⎡00−21⎤ −1−222 ⎣⎦ 0000 D. ⎡−1−222⎤ 0000 ⎣⎦ 00−21",
+   "options": [
+    {
+     "L": "A",
+     "text": "⎡−1−222⎤ 00−21 ⎣⎦ 0010"
+    },
+    {
+     "L": "B",
+     "text": "⎡−1−222⎤ 00−21 ⎣⎦ 0000"
+    },
+    {
+     "L": "C",
+     "text": "⎡00−21⎤ −1−222 ⎣⎦ 0000"
+    },
+    {
+     "L": "D",
+     "text": "⎡−1−222⎤ 0000 ⎣⎦ 00−21"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "",
+   "suggested_key": "B",
+   "key_confidence": "high",
+   "key_method": "contain",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p5-12.png",
+   "answer_img": "img/a/p5-12.png",
+   "notes": ""
+  },
+  {
+   "qid": "p5-13",
+   "quiz": 5,
+   "qno": 13,
+   "id": 5013,
+   "label": "Q5-13",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.1",
+   "stem": "Giventheaugmentedmatrix ⎡−5107⎤ 6−530 ⎣⎦ −55−50 whatisthesolution(x1,x2,x3)ofthesystem? Selectone: A.(0,−2,−3) B.(0,−4,−2) C.(−2,−3,−1) D.(−3,−4,1)",
+   "options": [
+    {
+     "L": "A",
+     "text": "(0,−2,−3)"
+    },
+    {
+     "L": "B",
+     "text": "(0,−4,−2)"
+    },
+    {
+     "L": "C",
+     "text": "(−2,−3,−1)"
+    },
+    {
+     "L": "D",
+     "text": "(−3,−4,1)"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "(−2,−3,−1)",
+   "suggested_key": "C",
+   "key_confidence": "high",
+   "key_method": "exact",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p5-13.png",
+   "answer_img": "img/a/p5-13.png",
    "notes": ""
   },
   {
@@ -2136,6 +2457,48 @@
    "notes": ""
   },
   {
+   "qid": "p8-08",
+   "quiz": 8,
+   "qno": 8,
+   "id": 8008,
+   "label": "Q8-08",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.9",
+   "stem": "Whichofthefollowing2×2matricesisthestandardmatrixofarotationabouttheorigin R2 in? Selectone: ⎡⎤ A.√30−√19 ⎣77⎦ √19√30 77 ⎡⎤ B.√33√31 ⎣88⎦ √31−√33 88 C.[5−3] 88 3−5 88 D.[3−4] 77 43 77",
+   "options": [
+    {
+     "L": "A",
+     "text": "√30−√19 ⎣77⎦ √19√30 77 ⎡⎤"
+    },
+    {
+     "L": "B",
+     "text": "√33√31 ⎣88⎦ √31−√33 88"
+    },
+    {
+     "L": "C",
+     "text": "[5−3] 88 3−5 88"
+    },
+    {
+     "L": "D",
+     "text": "[3−4] 77 43 77"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "⎣77⎦",
+   "suggested_key": "A",
+   "key_confidence": "medium",
+   "key_method": "fuzzy",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p8-08.png",
+   "answer_img": "img/a/p8-08.png",
+   "notes": ""
+  },
+  {
    "qid": "p8-11",
    "quiz": 8,
    "qno": 11,
@@ -2220,6 +2583,90 @@
    "notes": ""
   },
   {
+   "qid": "p8-15",
+   "quiz": 8,
+   "qno": 15,
+   "id": 8015,
+   "label": "Q8-15",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.5",
+   "stem": "Ax0 Whichofthefollowinggivesallsolutionstotheequation=inparametricvector form,where ⎡⎤ 01−52 A =⎣12−121⎦? −2−194 Selectone: ⎡⎤⎡⎤ A.−2−3 −52 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤ B.2 5 xs(sR) =in ⎣1⎦ 0 ⎡⎤⎡⎤ C.23 5−2 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤ D.−3 2 xt(tR) =in ⎣0⎦ 1",
+   "options": [
+    {
+     "L": "A",
+     "text": "−2−3 −52 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤"
+    },
+    {
+     "L": "B",
+     "text": "2 5 xs(sR) =in ⎣1⎦ 0 ⎡⎤⎡⎤"
+    },
+    {
+     "L": "C",
+     "text": "23 5−2 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤"
+    },
+    {
+     "L": "D",
+     "text": "−3 2 xt(tR) =in ⎣0⎦ 1"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "xst(s,tR) =+in",
+   "suggested_key": "C",
+   "key_confidence": "high",
+   "key_method": "contain",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p8-15.png",
+   "answer_img": "img/a/p8-15.png",
+   "notes": ""
+  },
+  {
+   "qid": "p9-01",
+   "quiz": 9,
+   "qno": 1,
+   "id": 9001,
+   "label": "Q9-01",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.2",
+   "stem": "WhichmatrixisinEchelonFormbutnotinReducedEchelonForm? Selectone: A. ⎡⎤ −12−2−2 ⎣0000⎦ 0030 B. ⎡⎤ −12−2−2 ⎣0030⎦ 0000 C. ⎡⎤ −12−2−2 ⎣0030⎦ 0010 D. ⎡⎤ 0030 ⎣−12−2−2⎦ 0000",
+   "options": [
+    {
+     "L": "A",
+     "text": "⎡⎤ −12−2−2 ⎣0000⎦ 0030"
+    },
+    {
+     "L": "B",
+     "text": "⎡⎤ −12−2−2 ⎣0030⎦ 0000"
+    },
+    {
+     "L": "C",
+     "text": "⎡⎤ −12−2−2 ⎣0030⎦ 0010"
+    },
+    {
+     "L": "D",
+     "text": "⎡⎤ 0030 ⎣−12−2−2⎦ 0000"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "",
+   "suggested_key": "B",
+   "key_confidence": "high",
+   "key_method": "contain",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p9-01.png",
+   "answer_img": "img/a/p9-01.png",
+   "notes": ""
+  },
+  {
    "qid": "p9-02",
    "quiz": 9,
    "qno": 2,
@@ -2301,6 +2748,48 @@
    "ai_generated": false,
    "img": "img/q/p9-04.png",
    "answer_img": "img/a/p9-04.png",
+   "notes": ""
+  },
+  {
+   "qid": "p9-09",
+   "quiz": 9,
+   "qno": 9,
+   "id": 9009,
+   "label": "Q9-09",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.5",
+   "stem": "Considerthefollowingsystemoflinearequations: ⎧ x1+3x2−6x3=3 ⎨ ⎩ 3x1−x2−4x3=2. 10x2−14x3=7 Whichofthefollowingcorrectlydescribesthesolutionsetofthesystem? Selectone: A.Thesolutionsetisaplanenotthroughtheorigin. B.Thesolutionsetisalinethroughtheorigin. C.Thesolutionsetisaplanethroughtheorigin. D.Thesolutionsetisalinenotthroughtheorigin.",
+   "options": [
+    {
+     "L": "A",
+     "text": "Thesolutionsetisaplanenotthroughtheorigin."
+    },
+    {
+     "L": "B",
+     "text": "Thesolutionsetisalinethroughtheorigin."
+    },
+    {
+     "L": "C",
+     "text": "Thesolutionsetisaplanethroughtheorigin."
+    },
+    {
+     "L": "D",
+     "text": "Thesolutionsetisalinenotthroughtheorigin."
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "Thesolutionsetisalinenotthroughtheorigin.",
+   "suggested_key": "D",
+   "key_confidence": "high",
+   "key_method": "exact",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p9-09.png",
+   "answer_img": "img/a/p9-09.png",
    "notes": ""
   },
   {
@@ -2430,6 +2919,34 @@
    "notes": ""
   },
   {
+   "qid": "p10-02",
+   "quiz": 10,
+   "qno": 2,
+   "id": 10002,
+   "label": "Q10-02",
+   "type": "cloze",
+   "blanks": 2,
+   "topic": "1.5",
+   "stem": "Considerthehomogeneouslinearsystem {x1−x2−5x3 =0 . 2x1−4x2−2x3 =0 Thesystemhasnontrivialsolutions.Writethegeneralsolutioninparametricvectorform: ⎡⎤ a xx3b =⎣⎦. 1 ab =,=",
+   "options": [],
+   "student_answer": "",
+   "verdict": "incorrect",
+   "printed_answer_text": "",
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "answers": [
+    "9",
+    "4"
+   ],
+   "answer_text": "9, 4",
+   "answer_source": "ai",
+   "ai_generated": true,
+   "img": "img/q/p10-02.png",
+   "answer_img": "img/a/p10-02.png",
+   "notes": ""
+  },
+  {
    "qid": "p10-03",
    "quiz": 10,
    "qno": 3,
@@ -2511,6 +3028,48 @@
    "ai_generated": false,
    "img": "img/q/p10-05.png",
    "answer_img": "img/a/p10-05.png",
+   "notes": ""
+  },
+  {
+   "qid": "p10-07",
+   "quiz": 10,
+   "qno": 7,
+   "id": 10007,
+   "label": "Q10-07",
+   "type": "choice",
+   "blanks": 0,
+   "topic": "1.7",
+   "stem": "R4 Whichoneofthefollowingsetsofvectorsinislinearlyindependent? Selectone: ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤⎡⎤ A.8−106−3 ⎨⎬ 0−11−43 ,,,, ⎩⎭ ⎣7⎦⎣1⎦⎣−7⎦⎣0⎦⎣4⎦ 38−454 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ B.−2−45−8 ⎨⎬ 246−2 ,,, ⎩⎭ ⎣4⎦⎣8⎦⎣6⎦⎣−4⎦ 12−41 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ C.−4515 ⎨⎬ −91−86 ,,, ⎩⎭ ⎣6⎦⎣−3⎦⎣3⎦⎣−8⎦ −3411 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ D.1111 ⎨⎬ 21−1−2 ,,, ⎩⎭ ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ 81−1−8",
+   "options": [
+    {
+     "L": "A",
+     "text": "8−106−3 ⎨⎬ 0−11−43 ,,,, ⎩⎭ ⎣7⎦⎣1⎦⎣−7⎦⎣0⎦⎣4⎦ 38−454 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤"
+    },
+    {
+     "L": "B",
+     "text": "−2−45−8 ⎨⎬ 246−2 ,,, ⎩⎭ ⎣4⎦⎣8⎦⎣6⎦⎣−4⎦ 12−41 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤"
+    },
+    {
+     "L": "C",
+     "text": "−4515 ⎨⎬ −91−86 ,,, ⎩⎭ ⎣6⎦⎣−3⎦⎣3⎦⎣−8⎦ −3411 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤"
+    },
+    {
+     "L": "D",
+     "text": "1111 ⎨⎬ 21−1−2 ,,, ⎩⎭ ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ 81−1−8"
+    }
+   ],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": ",,, ⎩⎭",
+   "suggested_key": "D",
+   "key_confidence": "high",
+   "key_method": "contain",
+   "answers": null,
+   "answer_text": "",
+   "answer_source": "none",
+   "ai_generated": false,
+   "img": "img/q/p10-07.png",
+   "answer_img": "img/a/p10-07.png",
    "notes": ""
   },
   {
@@ -3060,7 +3619,7 @@
    ],
    "student_answer": "",
    "verdict": "",
-   "printed_answer_text": "",
+   "printed_answer_text": "Thereisann×mmatrixBsuchthatBA=In.",
    "suggested_key": "B",
    "key_confidence": "high",
    "key_method": "exact",
@@ -3367,33 +3926,6 @@
    "notes": ""
   },
   {
-   "qid": "p13-08",
-   "quiz": 13,
-   "qno": 8,
-   "id": 13008,
-   "label": "Q13-08",
-   "type": "fill",
-   "blanks": 1,
-   "topic": "2.1",
-   "stem": "⎡−9−5−8⎤ LetA=5−7−6.Findthe(1,3)-entryofthematrixAT. ⎣⎦ −34−4",
-   "options": [],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "-3",
-   "suggested_key": null,
-   "key_confidence": "none",
-   "key_method": "none",
-   "answers": [
-    "-3"
-   ],
-   "answer_text": "-3",
-   "answer_source": "pdf",
-   "ai_generated": false,
-   "img": "img/q/p13-08.png",
-   "answer_img": "img/a/p13-08.png",
-   "notes": ""
-  },
-  {
    "qid": "p13-09",
    "quiz": 13,
    "qno": 9,
@@ -3503,33 +4035,6 @@
    "ai_generated": true,
    "img": "img/q/p13-12.png",
    "answer_img": "img/a/p13-12.png",
-   "notes": ""
-  },
-  {
-   "qid": "p13-13",
-   "quiz": 13,
-   "qno": 13,
-   "id": 13013,
-   "label": "Q13-13",
-   "type": "fill",
-   "blanks": 1,
-   "topic": "2.1",
-   "stem": "⎡426⎤⎡−7−44⎤ 7−6−921−5 LetA=,B=. −89−133−7 ⎣⎦⎣⎦ 03−6−4−71 Findthe(3,2)-entryofthematrixATB.",
-   "options": [],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "6",
-   "suggested_key": null,
-   "key_confidence": "none",
-   "key_method": "none",
-   "answers": [
-    "6"
-   ],
-   "answer_text": "6",
-   "answer_source": "pdf",
-   "ai_generated": false,
-   "img": "img/q/p13-13.png",
-   "answer_img": "img/a/p13-13.png",
    "notes": ""
   },
   {
@@ -3742,7 +4247,7 @@
    ],
    "student_answer": "",
    "verdict": "",
-   "printed_answer_text": "",
+   "printed_answer_text": "ThereisannmmatrixBsuchthatABIm. ×=",
    "suggested_key": "B",
    "key_confidence": "high",
    "key_method": "exact",
@@ -4143,6 +4648,33 @@
    "notes": ""
   },
   {
+   "qid": "p15-07",
+   "quiz": 15,
+   "qno": 7,
+   "id": 15007,
+   "label": "Q15-07",
+   "type": "fill",
+   "blanks": 1,
+   "topic": "2.1",
+   "stem": "⎡⎤⎡⎤ 6−99−37−3 −655−665 LetA=,B=. ⎣−2−62⎦⎣29−5⎦ 5−9−662−2 Findthe(1,2)-entryofthematrixATB.",
+   "options": [],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "-2",
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "answers": [
+    "-2"
+   ],
+   "answer_text": "-2",
+   "answer_source": "pdf",
+   "ai_generated": false,
+   "img": "img/q/p15-07.png",
+   "answer_img": "img/a/p15-07.png",
+   "notes": ""
+  },
+  {
    "qid": "p15-08",
    "quiz": 15,
    "qno": 8,
@@ -4377,6 +4909,33 @@
    "ai_generated": false,
    "img": "img/q/p15-13.png",
    "answer_img": "img/a/p15-13.png",
+   "notes": ""
+  },
+  {
+   "qid": "p15-14",
+   "quiz": 15,
+   "qno": 14,
+   "id": 15014,
+   "label": "Q15-14",
+   "type": "fill",
+   "blanks": 1,
+   "topic": "2.1",
+   "stem": "⎡⎤ −5−78 LetA=⎣193⎦.Findthe(1,3)-entryofthematrixAT. −676",
+   "options": [],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "-6",
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "answers": [
+    "-6"
+   ],
+   "answer_text": "-6",
+   "answer_source": "pdf",
+   "ai_generated": false,
+   "img": "img/q/p15-14.png",
+   "answer_img": "img/a/p15-14.png",
    "notes": ""
   },
   {
@@ -4617,48 +5176,6 @@
    "notes": ""
   },
   {
-   "qid": "b2-02",
-   "quiz": 22,
-   "qno": 2,
-   "id": 22002,
-   "label": "B2-02",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.5",
-   "stem": "Findthegeneralsolution. {11x1+5x2−3x3=0 −6x2−3x3=0 Selectone: A.⎡0⎤⎡1⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ −14 B.⎡0⎤⎡3⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ 12 C.⎡0⎤⎡3⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ −22 D.⎡0⎤⎡1⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ 02",
-   "options": [
-    {
-     "L": "A",
-     "text": "⎡0⎤⎡1⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ −14"
-    },
-    {
-     "L": "B",
-     "text": "⎡0⎤⎡3⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ 12"
-    },
-    {
-     "L": "C",
-     "text": "⎡0⎤⎡3⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ −22"
-    },
-    {
-     "L": "D",
-     "text": "⎡0⎤⎡1⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ 02"
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "x∈R =0+t−1,t",
-   "suggested_key": "D",
-   "key_confidence": "high",
-   "key_method": "exact",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b2-02.png",
-   "answer_img": "img/a/b2-02.png",
-   "notes": ""
-  },
-  {
    "qid": "b2-05",
    "quiz": 22,
    "qno": 5,
@@ -4698,90 +5215,6 @@
    "ai_generated": false,
    "img": "img/q/b2-05.png",
    "answer_img": "img/a/b2-05.png",
-   "notes": ""
-  },
-  {
-   "qid": "b2-06",
-   "quiz": 22,
-   "qno": 6,
-   "id": 22006,
-   "label": "B2-06",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.1",
-   "stem": "[7],[4], Computethevectorcudv,whereuv. +==c=0,d=−7 8−7 Selectone: A.[−32] 44 B.[−28] 49 C.[−32] 50 D.[−23] 50",
-   "options": [
-    {
-     "L": "A",
-     "text": "[−32] 44"
-    },
-    {
-     "L": "B",
-     "text": "[−28] 49"
-    },
-    {
-     "L": "C",
-     "text": "[−32] 50"
-    },
-    {
-     "L": "D",
-     "text": "[−23] 50"
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "[−28]",
-   "suggested_key": "B",
-   "key_confidence": "high",
-   "key_method": "contain",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b2-06.png",
-   "answer_img": "img/a/b2-06.png",
-   "notes": ""
-  },
-  {
-   "qid": "b2-08",
-   "quiz": 22,
-   "qno": 8,
-   "id": 22008,
-   "label": "B2-08",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.2",
-   "stem": "FindtheReducedEchelonFormof ⎡10−31⎤ A=0101 ⎣⎦ 10−31 Selectone: A. ⎡20−31⎤ 0101 ⎣⎦ 0000 B. ⎡10−31⎤ 0101 ⎣⎦ 0000 C. ⎡10−31⎤ 0110 ⎣⎦ 0000 D. ⎡101−3⎤ 0101 ⎣⎦ 0000",
-   "options": [
-    {
-     "L": "A",
-     "text": "⎡20−31⎤ 0101 ⎣⎦ 0000"
-    },
-    {
-     "L": "B",
-     "text": "⎡10−31⎤ 0101 ⎣⎦ 0000"
-    },
-    {
-     "L": "C",
-     "text": "⎡10−31⎤ 0110 ⎣⎦ 0000"
-    },
-    {
-     "L": "D",
-     "text": "⎡101−3⎤ 0101 ⎣⎦ 0000"
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "",
-   "suggested_key": "B",
-   "key_confidence": "high",
-   "key_method": "exact",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b2-08.png",
-   "answer_img": "img/a/b2-08.png",
    "notes": ""
   },
   {
@@ -5187,7 +5620,7 @@
    "options": [],
    "student_answer": "",
    "verdict": "",
-   "printed_answer_text": "",
+   "printed_answer_text": "7",
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
@@ -5195,8 +5628,8 @@
     "7"
    ],
    "answer_text": "7",
-   "answer_source": "ai",
-   "ai_generated": true,
+   "answer_source": "pdf",
+   "ai_generated": false,
    "img": "img/q/b4-07.png",
    "answer_img": "img/a/b4-07.png",
    "notes": ""
@@ -5370,48 +5803,6 @@
    "notes": ""
   },
   {
-   "qid": "b5-07",
-   "quiz": 25,
-   "qno": 7,
-   "id": 25007,
-   "label": "B5-07",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.2",
-   "stem": "FindtheReducedEchelonFormof ⎡10−13⎤ A =01−2−3 ⎣⎦ 10−13 Selectone: A. ⎡10−13⎤ 01−3−2 ⎣⎦ 0000 B. ⎡103−1⎤ 01−2−3 ⎣⎦ 0000 C. ⎡20−13⎤ 01−2−3 ⎣⎦ 0000 D. ⎡10−13⎤ 01−2−3 ⎣⎦ 0000",
-   "options": [
-    {
-     "L": "A",
-     "text": "⎡10−13⎤ 01−3−2 ⎣⎦ 0000"
-    },
-    {
-     "L": "B",
-     "text": "⎡103−1⎤ 01−2−3 ⎣⎦ 0000"
-    },
-    {
-     "L": "C",
-     "text": "⎡20−13⎤ 01−2−3 ⎣⎦ 0000"
-    },
-    {
-     "L": "D",
-     "text": "⎡10−13⎤ 01−2−3 ⎣⎦ 0000"
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "",
-   "suggested_key": "D",
-   "key_confidence": "high",
-   "key_method": "exact",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b5-07.png",
-   "answer_img": "img/a/b5-07.png",
-   "notes": ""
-  },
-  {
    "qid": "b5-08",
    "quiz": 25,
    "qno": 8,
@@ -5478,90 +5869,6 @@
    "ai_generated": false,
    "img": "img/q/b5-10.png",
    "answer_img": "img/a/b5-10.png",
-   "notes": ""
-  },
-  {
-   "qid": "b5-11",
-   "quiz": 25,
-   "qno": 11,
-   "id": 25011,
-   "label": "B5-11",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.5",
-   "stem": "Findthegeneralsolution. {−5x15x2−40x3 +=15 −x1−x2 =−3 Selectone: A.⎡−1⎤⎡−4⎤ xtt∈R =3+6, ⎣⎦⎣⎦ 01 B.⎡−1⎤⎡−4⎤ xtt∈R =3+3, ⎣⎦⎣⎦ 01 C.⎡0⎤⎡−4⎤ xtt∈R =3+4, ⎣⎦⎣⎦ 01 D.⎡1⎤⎡−4⎤ xtt∈R =3+3, ⎣⎦⎣⎦ 01",
-   "options": [
-    {
-     "L": "A",
-     "text": "⎡−1⎤⎡−4⎤ xtt∈R =3+6, ⎣⎦⎣⎦ 01"
-    },
-    {
-     "L": "B",
-     "text": "⎡−1⎤⎡−4⎤ xtt∈R =3+3, ⎣⎦⎣⎦ 01"
-    },
-    {
-     "L": "C",
-     "text": "⎡0⎤⎡−4⎤ xtt∈R =3+4, ⎣⎦⎣⎦ 01"
-    },
-    {
-     "L": "D",
-     "text": "⎡1⎤⎡−4⎤ xtt∈R =3+3, ⎣⎦⎣⎦ 01"
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "xtt∈R =3+4,",
-   "suggested_key": "C",
-   "key_confidence": "high",
-   "key_method": "exact",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b5-11.png",
-   "answer_img": "img/a/b5-11.png",
-   "notes": ""
-  },
-  {
-   "qid": "b5-12",
-   "quiz": 25,
-   "qno": 12,
-   "id": 25012,
-   "label": "B5-12",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.1",
-   "stem": "Giventheaugmentedmatrix ⎡11−12⎤ 65611 ⎣⎦ 4448 whatisthesolution(x1,x2,x3)ofthesystem? Selectone: A. (1,1,0) B. (2,−1,2) C. (−1,−1,1) D. (2,2,−1)",
-   "options": [
-    {
-     "L": "A",
-     "text": "(1,1,0)"
-    },
-    {
-     "L": "B",
-     "text": "(2,−1,2)"
-    },
-    {
-     "L": "C",
-     "text": "(−1,−1,1)"
-    },
-    {
-     "L": "D",
-     "text": "(2,2,−1)"
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "(1,1,0)",
-   "suggested_key": "A",
-   "key_confidence": "high",
-   "key_method": "exact",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b5-12.png",
-   "answer_img": "img/a/b5-12.png",
    "notes": ""
   },
   {
@@ -6291,48 +6598,6 @@
    "notes": ""
   },
   {
-   "qid": "b8-05",
-   "quiz": 28,
-   "qno": 5,
-   "id": 28005,
-   "label": "B8-05",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.2",
-   "stem": "WhichmatrixisinEchelonFormbutnotinReducedEchelonForm? Selectone: A. ⎡⎤ 3−100 ⎣00−32⎦ 0010 B. ⎡⎤ 00−32 ⎣3−100⎦ 0000 C. ⎡⎤ 3−100 ⎣0000⎦ 00−32 D. ⎡⎤ 3−100 ⎣00−32⎦ 0000",
-   "options": [
-    {
-     "L": "A",
-     "text": "⎡⎤ 3−100 ⎣00−32⎦ 0010"
-    },
-    {
-     "L": "B",
-     "text": "⎡⎤ 00−32 ⎣3−100⎦ 0000"
-    },
-    {
-     "L": "C",
-     "text": "⎡⎤ 3−100 ⎣0000⎦ 00−32"
-    },
-    {
-     "L": "D",
-     "text": "⎡⎤ 3−100 ⎣00−32⎦ 0000"
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "",
-   "suggested_key": "D",
-   "key_confidence": "high",
-   "key_method": "contain",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b8-05.png",
-   "answer_img": "img/a/b8-05.png",
-   "notes": ""
-  },
-  {
    "qid": "b8-07",
    "quiz": 28,
    "qno": 7,
@@ -6360,75 +6625,6 @@
    "ai_generated": true,
    "img": "img/q/b8-07.png",
    "answer_img": "img/a/b8-07.png",
-   "notes": ""
-  },
-  {
-   "qid": "b8-08",
-   "quiz": 28,
-   "qno": 8,
-   "id": 28008,
-   "label": "B8-08",
-   "type": "fill",
-   "blanks": 1,
-   "topic": "1.1",
-   "stem": "⎡⎤⎡⎤ 21−3−5 LetA=−516,b=−1. ⎣⎦⎣⎦ 70−9k",
-   "options": [],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "-4",
-   "suggested_key": null,
-   "key_confidence": "none",
-   "key_method": "none",
-   "answers": [
-    "-4"
-   ],
-   "answer_text": "-4",
-   "answer_source": "pdf",
-   "ai_generated": false,
-   "img": "img/q/b8-08.png",
-   "answer_img": "img/a/b8-08.png",
-   "notes": ""
-  },
-  {
-   "qid": "b8-09",
-   "quiz": 28,
-   "qno": 9,
-   "id": 28009,
-   "label": "B8-09",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.5",
-   "stem": "Considerthefollowingsystemoflinearequations: ⎧ x1+2x2−6x3=−1 ⎨ ⎩ 3x1−6x2−3x3=2. −12x2+15x3=5 Whichofthefollowingcorrectlydescribesthesolutionsetofthesystem? Selectone: A.Thesolutionsetisaplanenotthroughtheorigin. B.Thesolutionsetisalinethroughtheorigin. C.Thesolutionsetisaplanethroughtheorigin. D.Thesolutionsetisalinenotthroughtheorigin.",
-   "options": [
-    {
-     "L": "A",
-     "text": "Thesolutionsetisaplanenotthroughtheorigin."
-    },
-    {
-     "L": "B",
-     "text": "Thesolutionsetisalinethroughtheorigin."
-    },
-    {
-     "L": "C",
-     "text": "Thesolutionsetisaplanethroughtheorigin."
-    },
-    {
-     "L": "D",
-     "text": "Thesolutionsetisalinenotthroughtheorigin."
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "Thesolutionsetisalinenotthroughtheorigin.",
-   "suggested_key": "D",
-   "key_confidence": "high",
-   "key_method": "exact",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b8-09.png",
-   "answer_img": "img/a/b8-09.png",
    "notes": ""
   },
   {
@@ -6568,48 +6764,6 @@
    "ai_generated": true,
    "img": "img/q/b9-01.png",
    "answer_img": "img/a/b9-01.png",
-   "notes": ""
-  },
-  {
-   "qid": "b9-02",
-   "quiz": 29,
-   "qno": 2,
-   "id": 29002,
-   "label": "B9-02",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.7",
-   "stem": "WhichoneofthefollowingsetsofvectorsinR4islinearlyindependent? Selectone: ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤⎡⎤ A.−4−2−15−1 ⎨⎬ −1−86−6−6 ,,,, ⎩⎭ ⎣9⎦⎣−6⎦⎣−9⎦⎣−8⎦⎣−7⎦ 93943 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ B.−1−235 ⎨⎬ −2−43−9 ,,, ⎩⎭ ⎣−3⎦⎣−6⎦⎣4⎦⎣2⎦ 008−1 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ C.1111 ⎨⎬ 1−22−1 ,,, ⎩⎭ ⎣1⎦⎣4⎦⎣4⎦⎣1⎦ 1−88−1 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ D.235−6 ⎨⎬ 4484 ,,, ⎩022−1⎭ ⎣⎦⎣⎦⎣⎦⎣⎦ −6600",
-   "options": [
-    {
-     "L": "A",
-     "text": "−4−2−15−1 ⎨⎬ −1−86−6−6 ,,,, ⎩⎭ ⎣9⎦⎣−6⎦⎣−9⎦⎣−8⎦⎣−7⎦ 93943 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤"
-    },
-    {
-     "L": "B",
-     "text": "−1−235 ⎨⎬ −2−43−9 ,,, ⎩⎭ ⎣−3⎦⎣−6⎦⎣4⎦⎣2⎦ 008−1 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤"
-    },
-    {
-     "L": "C",
-     "text": "1111 ⎨⎬ 1−22−1 ,,, ⎩⎭ ⎣1⎦⎣4⎦⎣4⎦⎣1⎦ 1−88−1 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤"
-    },
-    {
-     "L": "D",
-     "text": "235−6 ⎨⎬ 4484 ,,, ⎩022−1⎭ ⎣⎦⎣⎦⎣⎦⎣⎦ −6600"
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "1−22−1 ,,,",
-   "suggested_key": "C",
-   "key_confidence": "high",
-   "key_method": "contain",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b9-02.png",
-   "answer_img": "img/a/b9-02.png",
    "notes": ""
   },
   {
@@ -6851,48 +7005,6 @@
    "notes": ""
   },
   {
-   "qid": "b10-01",
-   "quiz": 30,
-   "qno": 1,
-   "id": 30001,
-   "label": "B10-01",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.5",
-   "stem": "WhichofthefollowinggivesallsolutionstotheequationAx0inparametricvectorform, = where ⎡⎤ 01−3−2 A =⎣12−22⎦? −2−1−5−10 Selectone: ⎡⎤⎡⎤ A.46 −3−2 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤ B.−4 3 xs(sR) =in ⎣1⎦ 0 ⎡⎤⎡⎤ C.−4−6 32 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤ D.6 −2 xt(tR) =in ⎣0⎦ 1",
-   "options": [
-    {
-     "L": "A",
-     "text": "46 −3−2 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤"
-    },
-    {
-     "L": "B",
-     "text": "−4 3 xs(sR) =in ⎣1⎦ 0 ⎡⎤⎡⎤"
-    },
-    {
-     "L": "C",
-     "text": "−4−6 32 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤"
-    },
-    {
-     "L": "D",
-     "text": "6 −2 xt(tR) =in ⎣0⎦ 1"
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "32 xst(s,tR) =+in",
-   "suggested_key": "C",
-   "key_confidence": "high",
-   "key_method": "contain",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b10-01.png",
-   "answer_img": "img/a/b10-01.png",
-   "notes": ""
-  },
-  {
    "qid": "b10-03",
    "quiz": 30,
    "qno": 3,
@@ -7004,76 +7116,6 @@
    "ai_generated": true,
    "img": "img/q/b10-06.png",
    "answer_img": "img/a/b10-06.png",
-   "notes": ""
-  },
-  {
-   "qid": "b10-07",
-   "quiz": 30,
-   "qno": 7,
-   "id": 30007,
-   "label": "B10-07",
-   "type": "choice",
-   "blanks": 0,
-   "topic": "1.9",
-   "stem": "WhichofthefollowingmatricesisthestandardmatrixofarotationabouttheorigininR2 2×2 ? Selectone: ⎡⎤ A. √14−√22 ⎣66⎦ −√22−√14 66 ⎡⎤ B. −√43−√6 ⎣77⎦ √6−√43 77 C.[3−4] 77 4−3 77 D.[4−5] 99 54 99",
-   "options": [
-    {
-     "L": "A",
-     "text": "√14−√22 ⎣66⎦ −√22−√14 66 ⎡⎤"
-    },
-    {
-     "L": "B",
-     "text": "−√43−√6 ⎣77⎦ √6−√43 77"
-    },
-    {
-     "L": "C",
-     "text": "[3−4] 77 4−3 77"
-    },
-    {
-     "L": "D",
-     "text": "[4−5] 99 54 99"
-    }
-   ],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "⎣77⎦",
-   "suggested_key": "B",
-   "key_confidence": "high",
-   "key_method": "vision",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
-   "img": "img/q/b10-07.png",
-   "answer_img": "img/a/b10-07.png",
-   "notes": ""
-  },
-  {
-   "qid": "b10-08",
-   "quiz": 30,
-   "qno": 8,
-   "id": 30008,
-   "label": "B10-08",
-   "type": "cloze",
-   "blanks": 2,
-   "topic": "1.5",
-   "stem": "Considerthehomogeneouslinearsystem {x1−x28x3 +=0 . −x1−4x22x3 +=0 Thesystemhasnontrivialsolutions.Writethegeneralsolutioninparametricvectorform: ⎡⎤ a xx3b =⎣⎦. 1 a=b=",
-   "options": [],
-   "student_answer": ",",
-   "verdict": "incorrect",
-   "printed_answer_text": "",
-   "suggested_key": null,
-   "key_confidence": "none",
-   "key_method": "none",
-   "answers": [
-    "-6",
-    "2"
-   ],
-   "answer_text": "-6, 2",
-   "answer_source": "ai",
-   "ai_generated": true,
-   "img": "img/q/b10-08.png",
-   "answer_img": "img/a/b10-08.png",
    "notes": ""
   },
   {
@@ -7693,33 +7735,6 @@
    "notes": ""
   },
   {
-   "qid": "b12-12",
-   "quiz": 32,
-   "qno": 12,
-   "id": 32012,
-   "label": "B12-12",
-   "type": "fill",
-   "blanks": 1,
-   "topic": "2.3",
-   "stem": "⎡⎤ x 78 LetA.FindthevalueofxifmatrixAisnotinvertible. =⎣3−90⎦ −6−2−4",
-   "options": [],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "",
-   "suggested_key": null,
-   "key_confidence": "none",
-   "key_method": "none",
-   "answers": [
-    "11"
-   ],
-   "answer_text": "11",
-   "answer_source": "ai",
-   "ai_generated": true,
-   "img": "img/q/b12-12.png",
-   "answer_img": "img/a/b12-12.png",
-   "notes": ""
-  },
-  {
    "qid": "b12-14",
    "quiz": 32,
    "qno": 14,
@@ -8028,7 +8043,7 @@
    ],
    "student_answer": "",
    "verdict": "",
-   "printed_answer_text": "",
+   "printed_answer_text": "Thelineartransformationx↦AxmapsRnontoRm.",
    "suggested_key": "D",
    "key_confidence": "high",
    "key_method": "exact",
@@ -8038,33 +8053,6 @@
    "ai_generated": false,
    "img": "img/q/b13-15.png",
    "answer_img": "img/a/b13-15.png",
-   "notes": ""
-  },
-  {
-   "qid": "b14-01",
-   "quiz": 34,
-   "qno": 1,
-   "id": 34001,
-   "label": "B14-01",
-   "type": "fill",
-   "blanks": 1,
-   "topic": "2.3",
-   "stem": "⎡⎤ 4−3−2 LetA.FindthevalueofxifmatrixAisnotinvertible. =⎣705⎦ x −86",
-   "options": [],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "4",
-   "suggested_key": null,
-   "key_confidence": "none",
-   "key_method": "none",
-   "answers": [
-    "4"
-   ],
-   "answer_text": "4",
-   "answer_source": "pdf",
-   "ai_generated": false,
-   "img": "img/q/b14-01.png",
-   "answer_img": "img/a/b14-01.png",
    "notes": ""
   },
   {
@@ -8362,33 +8350,6 @@
    "notes": ""
   },
   {
-   "qid": "b14-15",
-   "quiz": 34,
-   "qno": 15,
-   "id": 34015,
-   "label": "B14-15",
-   "type": "fill",
-   "blanks": 1,
-   "topic": "2.1",
-   "stem": "⎡⎤ 3−36 LetA.Findthe-entryofthematrixAT. =⎣7−75⎦(1,2) 8−91",
-   "options": [],
-   "student_answer": "",
-   "verdict": "",
-   "printed_answer_text": "7",
-   "suggested_key": null,
-   "key_confidence": "none",
-   "key_method": "none",
-   "answers": [
-    "7"
-   ],
-   "answer_text": "7",
-   "answer_source": "pdf",
-   "ai_generated": false,
-   "img": "img/q/b14-15.png",
-   "answer_img": "img/a/b14-15.png",
-   "notes": ""
-  },
-  {
    "qid": "b15-01",
    "quiz": 35,
    "qno": 1,
@@ -8539,6 +8500,33 @@
    "ai_generated": false,
    "img": "img/q/b15-04.png",
    "answer_img": "img/a/b15-04.png",
+   "notes": ""
+  },
+  {
+   "qid": "b15-05",
+   "quiz": 35,
+   "qno": 5,
+   "id": 35005,
+   "label": "B15-05",
+   "type": "fill",
+   "blanks": 1,
+   "topic": "2.1",
+   "stem": "⎡⎤ 8−3−5 LetA.Findthe-entryofthematrixAT. =⎣−1−92⎦(1,2) 56−6",
+   "options": [],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "-1",
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "answers": [
+    "-1"
+   ],
+   "answer_text": "-1",
+   "answer_source": "pdf",
+   "ai_generated": false,
+   "img": "img/q/b15-05.png",
+   "answer_img": "img/a/b15-05.png",
    "notes": ""
   },
   {
@@ -8705,6 +8693,33 @@
    "ai_generated": false,
    "img": "img/q/b15-11.png",
    "answer_img": "img/a/b15-11.png",
+   "notes": ""
+  },
+  {
+   "qid": "b15-12",
+   "quiz": 35,
+   "qno": 12,
+   "id": 35012,
+   "label": "B15-12",
+   "type": "fill",
+   "blanks": 1,
+   "topic": "2.3",
+   "stem": "⎡⎤ x02 LetA.FindthevalueofxifmatrixAisnotinvertible. =⎣465⎦ −9−7−8",
+   "options": [],
+   "student_answer": "",
+   "verdict": "",
+   "printed_answer_text": "4",
+   "suggested_key": null,
+   "key_confidence": "none",
+   "key_method": "none",
+   "answers": [
+    "4"
+   ],
+   "answer_text": "4",
+   "answer_source": "pdf",
+   "ai_generated": false,
+   "img": "img/q/b15-12.png",
+   "answer_img": "img/a/b15-12.png",
    "notes": ""
   },
   {

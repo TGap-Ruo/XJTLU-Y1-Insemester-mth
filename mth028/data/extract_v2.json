@@ -1153,8 +1153,8 @@
   ],
   "tick": "C",
   "cross": null,
-  "printed": null,
-  "printedFull": "=4,=2",
+  "printed": "ab =4,=2",
+  "printedFull": "ab =4,=2",
   "solution": "ab Thecorrectansweris:=4,=2",
   "rects": {
    "stem": [
@@ -2257,8 +2257,8 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "11",
+  "printed": "[]",
+  "printedFull": "[53] []",
   "solution": "Youranswerisincorrect. [53] Thecorrectansweris: 11",
   "rects": {
    "stem": [
@@ -2401,8 +2401,8 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "−16",
+  "printed": "[]",
+  "printedFull": "[37] []",
   "solution": "[37] Thecorrectansweris: −16",
   "rects": {
    "stem": [
@@ -2634,7 +2634,7 @@
   "tick": null,
   "cross": null,
   "printed": null,
-  "printedFull": "−78",
+  "printedFull": "[−11]",
   "solution": "[−11] Thecorrectansweris: −78",
   "rects": {
    "stem": [
@@ -3460,7 +3460,7 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "4",
   "printedFull": "4",
   "solution": "Thecorrectansweris:4",
   "rects": {
@@ -4518,7 +4518,7 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "-5",
   "printedFull": "-5",
   "solution": "Thecorrectansweris:-5",
   "rects": {
@@ -5190,7 +5190,7 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "-3",
   "printedFull": "-3",
   "solution": "Thecorrectansweris:-3",
   "rects": {
@@ -9897,7 +9897,7 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "7",
   "printedFull": "7",
   "solution": "Thecorrectansweris:7",
   "rects": {
@@ -12850,8 +12850,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "-18",
+  "printed": "-18",
+  "printedFull": "7−8⎦ −9 -18",
   "solution": "Theproblemisabouttransposeandmultiplicationamongmatrices. ⎡⎤ 2248 AT =⎣−9−27−8⎦ 39−7−9 Thecorrectansweris:-18",
   "rects": {
    "stem": [
@@ -13515,7 +13515,7 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "Thereisann×mmatrixBsuchthatBA=In.",
   "printedFull": "Thereisann×mmatrixBsuchthatBA=In.",
   "solution": "Thecorrectansweris:Thereisann×mmatrixBsuchthatBA=In.",
   "rects": {
@@ -13814,8 +13814,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "11",
+  "printed": "11",
+  "printedFull": "allthecolumnsformalinearlyindependentset. 11",
   "solution": "Amatrixisinvertibleifallthecolumnsformalinearlyindependentset. Thecorrectansweris:11",
   "rects": {
    "stem": [
@@ -15431,7 +15431,7 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "ThereisannmmatrixBsuchthatABIm. ×=",
   "printedFull": "ThereisannmmatrixBsuchthatABIm. ×=",
   "solution": "Thecorrectansweris:ThereisannmmatrixBsuchthatABIm. ×=",
   "rects": {
@@ -15674,8 +15674,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "-20",
+  "printed": "-20",
+  "printedFull": "allthecolumnsformalinearlyindependentset. -20",
   "solution": "Amatrixisinvertibleifallthecolumnsformalinearlyindependentset. Thecorrectansweris:-20",
   "rects": {
    "stem": [
@@ -16642,8 +16642,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "-2",
+  "printed": "-2",
+  "printedFull": "−9⎦ 2−6 -2",
   "solution": "Theproblemisabouttransposeandmultiplicationamongmatrices. ⎡⎤ 6−6−25 AT=⎣−95−6−9⎦ 952−6 Thecorrectansweris:-2",
   "rects": {
    "stem": [
@@ -17194,8 +17194,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "-6",
+  "printed": "-6",
+  "printedFull": "ofmatrix.AT=⎣−797⎦ 836 -6",
   "solution": "⎡⎤ −51−6 Theproblemisthetransposeofmatrix.AT=⎣−797⎦ 836 Thecorrectansweris:-6",
   "rects": {
    "stem": [
@@ -17658,7 +17658,7 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "-8",
   "printedFull": "-8",
   "solution": "Thecorrectansweris:-8",
   "rects": {
@@ -20193,8 +20193,8 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "ab =−8,=14",
+  "printed": "a=−8,b=14",
+  "printedFull": "a=−8,b=14",
   "solution": "Thecorrectansweris:ab =−8,=14",
   "rects": {
    "stem": [
@@ -21421,7 +21421,7 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "7",
   "printedFull": "7",
   "solution": "Thecorrectansweris:7",
   "rects": {
@@ -22707,8 +22707,8 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "6",
+  "printed": "[70]",
+  "printedFull": "[70] [70]",
   "solution": "Youranswerisincorrect. [70] Thecorrectansweris: 6",
   "rects": {
    "stem": [
@@ -27564,7 +27564,7 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "4",
   "printedFull": "4",
   "solution": "Thecorrectansweris:4",
   "rects": {
@@ -29131,8 +29131,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "4",
+  "printed": "4",
+  "printedFull": "ofmatrix.AT =97−3 ⎣⎦ −54−8 4",
   "solution": "⎡386⎤ Theproblemisthetransposeofmatrix.AT =97−3 ⎣⎦ −54−8 Thecorrectansweris:4",
   "rects": {
    "stem": [
@@ -29275,8 +29275,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "14",
+  "printed": "14",
+  "printedFull": "⎦ 14",
   "solution": "Theproblemisaboutscalarmultiplicationandadditionamongmatrices. ⎡3121⎤ 3A−4B=3622 ⎣⎦ 14−60 Thecorrectansweris:14",
   "rects": {
    "stem": [
@@ -29775,8 +29775,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "2",
+  "printed": "2",
+  "printedFull": "1. ⎦ −1 2",
   "solution": "⎡021⎤ Here,A2=−111. ⎣⎦ 2−1−1 Thecorrectansweris:2",
   "rects": {
    "stem": [
@@ -30439,8 +30439,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "1",
+  "printed": "1",
+  "printedFull": "ofmatrix.AT =⎣142⎦ 95−8 1",
   "solution": "⎡⎤ −1−9−5 Theproblemisthetransposeofmatrix.AT =⎣142⎦ 95−8 Thecorrectansweris:1",
   "rects": {
    "stem": [
@@ -30903,8 +30903,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "11",
+  "printed": "11",
+  "printedFull": "ifallthecolumnsformalinearlyindependentset. 11",
   "solution": "Amatrixisinvertibleifallthecolumnsformalinearlyindependentset. Thecorrectansweris:11",
   "rects": {
    "stem": [
@@ -31435,8 +31435,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "9",
+  "printed": "9",
+  "printedFull": "ifallthecolumnsformalinearlyindependentset. 9",
   "solution": "Amatrixisinvertibleifallthecolumnsformalinearlyindependentset. Thecorrectansweris:9",
   "rects": {
    "stem": [
@@ -32111,8 +32111,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "-7",
+  "printed": "-7",
+  "printedFull": "I2,AXCB. =+= -7",
   "solution": "SinceC−1(AX)B−1I2,AXCB. +=+= Thecorrectansweris:-7",
   "rects": {
    "stem": [
@@ -32244,7 +32244,7 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "Thelineartransformationx↦AxmapsRnontoRm.",
   "printedFull": "Thelineartransformationx↦AxmapsRnontoRm.",
   "solution": "Thecorrectansweris:Thelineartransformationx↦AxmapsRnontoRm.",
   "rects": {
@@ -33739,8 +33739,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "-1",
+  "printed": "-1",
+  "printedFull": "ofmatrix.AT =⎣−3−96⎦ −52−6 -1",
   "solution": "⎡⎤ 8−15 Theproblemisthetransposeofmatrix.AT =⎣−3−96⎦ −52−6 Thecorrectansweris:-1",
   "rects": {
    "stem": [
@@ -33883,8 +33883,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "19",
+  "printed": "19",
+  "printedFull": "−29⎦ 21 19",
   "solution": "Theproblemisaboutscalarmultiplicationandadditionamongmatrices. ⎡⎤ −219 4A−5B=⎣−77−29⎦ −721 Thecorrectansweris:19",
   "rects": {
    "stem": [
@@ -34207,8 +34207,8 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "4",
+  "printed": "4",
+  "printedFull": "ifallthecolumnsformalinearlyindependentset. 4",
   "solution": "Amatrixisinvertibleifallthecolumnsformalinearlyindependentset. Thecorrectansweris:4",
   "rects": {
    "stem": [

@@ -260,8 +260,10 @@ def main():
                     phrase = None
                     for pat in ("The correct answer is:", "The correct answer is",
                                 "The answer is:", "The answer is"):
+                        # a page can hold two questions, so the phrase of the
+                        # card above must not be mistaken for this one
                         hits = [h for h in page.search_for(pat)
-                                if feed["rect"].x0 - 2 <= h.x0 and h.y1 <= feed["rect"].y1 + 2]
+                                if feed["rect"].contains(h)]
                         if hits:
                             phrase = min(hits, key=lambda h: h.y0)
                             break

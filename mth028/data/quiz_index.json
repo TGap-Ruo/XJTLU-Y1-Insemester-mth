@@ -126,6 +126,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p2-14",
+  "quiz": 2,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p2-15",
   "quiz": 2,
   "qno": 15,
@@ -154,6 +161,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p3-09",
+  "quiz": 3,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p3-10",
   "quiz": 3,
   "qno": 10,
@@ -165,6 +179,20 @@
   "quiz": 3,
   "qno": 13,
   "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p3-14",
+  "quiz": 3,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p4-06",
+  "quiz": 4,
+  "qno": 6,
+  "type": "choice",
   "has_printed_answer": true
  },
  {
@@ -210,6 +238,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p5-04",
+  "quiz": 5,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p5-05",
   "quiz": 5,
   "qno": 5,
@@ -224,9 +259,30 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p5-09",
+  "quiz": 5,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p5-10",
   "quiz": 5,
   "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p5-12",
+  "quiz": 5,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p5-13",
+  "quiz": 5,
+  "qno": 13,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -385,6 +441,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p8-08",
+  "quiz": 8,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p8-11",
   "quiz": 8,
   "qno": 11,
@@ -399,6 +462,20 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p8-15",
+  "quiz": 8,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p9-01",
+  "quiz": 9,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p9-02",
   "quiz": 9,
   "qno": 2,
@@ -409,6 +486,13 @@
   "qid": "p9-04",
   "quiz": 9,
   "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p9-09",
+  "quiz": 9,
+  "qno": 9,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -434,6 +518,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p10-02",
+  "quiz": 10,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p10-03",
   "quiz": 10,
   "qno": 3,
@@ -444,6 +535,13 @@
   "qid": "p10-05",
   "quiz": 10,
   "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p10-07",
+  "quiz": 10,
+  "qno": 7,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -602,13 +700,6 @@
   "has_printed_answer": true
  },
  {
-  "qid": "p13-08",
-  "quiz": 13,
-  "qno": 8,
-  "type": "fill",
-  "has_printed_answer": true
- },
- {
   "qid": "p13-09",
   "quiz": 13,
   "qno": 9,
@@ -626,13 +717,6 @@
   "qid": "p13-12",
   "quiz": 13,
   "qno": 12,
-  "type": "fill",
-  "has_printed_answer": true
- },
- {
-  "qid": "p13-13",
-  "quiz": 13,
-  "qno": 13,
   "type": "fill",
   "has_printed_answer": true
  },
@@ -756,6 +840,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p15-07",
+  "quiz": 15,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p15-08",
   "quiz": 15,
   "qno": 8,
@@ -794,6 +885,13 @@
   "qid": "p15-13",
   "quiz": 15,
   "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p15-14",
+  "quiz": 15,
+  "qno": 14,
   "type": "fill",
   "has_printed_answer": true
  },
@@ -840,30 +938,9 @@
   "has_printed_answer": true
  },
  {
-  "qid": "b2-02",
-  "quiz": 22,
-  "qno": 2,
-  "type": "choice",
-  "has_printed_answer": true
- },
- {
   "qid": "b2-05",
   "quiz": 22,
   "qno": 5,
-  "type": "choice",
-  "has_printed_answer": true
- },
- {
-  "qid": "b2-06",
-  "quiz": 22,
-  "qno": 6,
-  "type": "choice",
-  "has_printed_answer": true
- },
- {
-  "qid": "b2-08",
-  "quiz": 22,
-  "qno": 8,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -973,13 +1050,6 @@
   "has_printed_answer": true
  },
  {
-  "qid": "b5-07",
-  "quiz": 25,
-  "qno": 7,
-  "type": "choice",
-  "has_printed_answer": true
- },
- {
   "qid": "b5-08",
   "quiz": 25,
   "qno": 8,
@@ -990,20 +1060,6 @@
   "qid": "b5-10",
   "quiz": 25,
   "qno": 10,
-  "type": "choice",
-  "has_printed_answer": true
- },
- {
-  "qid": "b5-11",
-  "quiz": 25,
-  "qno": 11,
-  "type": "choice",
-  "has_printed_answer": true
- },
- {
-  "qid": "b5-12",
-  "quiz": 25,
-  "qno": 12,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1134,31 +1190,10 @@
   "has_printed_answer": true
  },
  {
-  "qid": "b8-05",
-  "quiz": 28,
-  "qno": 5,
-  "type": "choice",
-  "has_printed_answer": true
- },
- {
   "qid": "b8-07",
   "quiz": 28,
   "qno": 7,
   "type": "fill",
-  "has_printed_answer": true
- },
- {
-  "qid": "b8-08",
-  "quiz": 28,
-  "qno": 8,
-  "type": "fill",
-  "has_printed_answer": true
- },
- {
-  "qid": "b8-09",
-  "quiz": 28,
-  "qno": 9,
-  "type": "choice",
   "has_printed_answer": true
  },
  {
@@ -1187,13 +1222,6 @@
   "quiz": 29,
   "qno": 1,
   "type": "fill",
-  "has_printed_answer": true
- },
- {
-  "qid": "b9-02",
-  "quiz": 29,
-  "qno": 2,
-  "type": "choice",
   "has_printed_answer": true
  },
  {
@@ -1239,13 +1267,6 @@
   "has_printed_answer": true
  },
  {
-  "qid": "b10-01",
-  "quiz": 30,
-  "qno": 1,
-  "type": "choice",
-  "has_printed_answer": true
- },
- {
   "qid": "b10-03",
   "quiz": 30,
   "qno": 3,
@@ -1263,20 +1284,6 @@
   "qid": "b10-06",
   "quiz": 30,
   "qno": 6,
-  "type": "fill",
-  "has_printed_answer": true
- },
- {
-  "qid": "b10-07",
-  "quiz": 30,
-  "qno": 7,
-  "type": "choice",
-  "has_printed_answer": true
- },
- {
-  "qid": "b10-08",
-  "quiz": 30,
-  "qno": 8,
   "type": "fill",
   "has_printed_answer": true
  },
@@ -1386,13 +1393,6 @@
   "has_printed_answer": true
  },
  {
-  "qid": "b12-12",
-  "quiz": 32,
-  "qno": 12,
-  "type": "fill",
-  "has_printed_answer": true
- },
- {
   "qid": "b12-14",
   "quiz": 32,
   "qno": 14,
@@ -1449,13 +1449,6 @@
   "has_printed_answer": true
  },
  {
-  "qid": "b14-01",
-  "quiz": 34,
-  "qno": 1,
-  "type": "fill",
-  "has_printed_answer": true
- },
- {
   "qid": "b14-03",
   "quiz": 34,
   "qno": 3,
@@ -1505,13 +1498,6 @@
   "has_printed_answer": true
  },
  {
-  "qid": "b14-15",
-  "quiz": 34,
-  "qno": 15,
-  "type": "fill",
-  "has_printed_answer": true
- },
- {
   "qid": "b15-01",
   "quiz": 35,
   "qno": 1,
@@ -1536,6 +1522,13 @@
   "qid": "b15-04",
   "quiz": 35,
   "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b15-05",
+  "quiz": 35,
+  "qno": 5,
   "type": "fill",
   "has_printed_answer": true
  },
@@ -1571,6 +1564,13 @@
   "qid": "b15-11",
   "quiz": 35,
   "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b15-12",
+  "quiz": 35,
+  "qno": 12,
   "type": "fill",
   "has_printed_answer": true
  },

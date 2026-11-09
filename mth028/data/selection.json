@@ -1197,8 +1197,8 @@
   ],
   "tick": "C",
   "cross": null,
-  "printed": null,
-  "printedFull": "=4,=2",
+  "printed": "ab =4,=2",
+  "printedFull": "ab =4,=2",
   "solution": "ab Thecorrectansweris:=4,=2",
   "rects": {
    "stem": [
@@ -1654,8 +1654,8 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "11",
+  "printed": "[]",
+  "printedFull": "[53] []",
   "solution": "Youranswerisincorrect. [53] Thecorrectansweris: 11",
   "rects": {
    "stem": [
@@ -1715,6 +1715,72 @@
   "aiGenerated": false
  },
  {
+  "qid": "p2-14",
+  "tag": "2",
+  "file": "2.pdf",
+  "quiz": 2,
+  "quiz_label": 1,
+  "qno": 14,
+  "page": 13,
+  "type": "fill",
+  "verdict": null,
+  "student": null,
+  "stem": "⎡−7−4−3⎤⎡22⎤ LetA=−642,b=32. ⎣⎦⎣⎦ 000k",
+  "options": [],
+  "tick": null,
+  "cross": null,
+  "printed": "0",
+  "printedFull": "0",
+  "solution": "Thecorrectansweris:0",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    240.38
+   ],
+   "feed": [
+    37.12,
+    253.12,
+    557.62,
+    301.88
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [],
+   "inputs": [
+    [
+     466.12,
+     163.88,
+     534.38,
+     191.62
+    ]
+   ],
+   "pua": [
+    [
+     51.0,
+     194.81,
+     63.0,
+     207.19
+    ]
+   ]
+  },
+  "key": null,
+  "keySrc": "none",
+  "keyConf": "none",
+  "blanks": 1,
+  "answers": [
+   "0"
+  ],
+  "answerText": "0",
+  "answerSrc": "pdf",
+  "aiGenerated": false
+ },
+ {
   "qid": "p2-15",
   "tag": "2",
   "file": "2.pdf",
@@ -1750,8 +1816,8 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
-  "printedFull": "−16",
+  "printed": "[]",
+  "printedFull": "[37] []",
   "solution": "[37] Thecorrectansweris: −16",
   "rects": {
    "stem": [
@@ -1802,7 +1868,7 @@
    "pua": []
   },
   "key": "A",
-  "keySrc": "contain",
+  "keySrc": "vision",
   "keyConf": "high",
   "blanks": 0,
   "answers": null,
@@ -2099,6 +2165,102 @@
   "aiGenerated": false
  },
  {
+  "qid": "p3-09",
+  "tag": "3",
+  "file": "3.pdf",
+  "quiz": 3,
+  "quiz_label": 1,
+  "qno": 9,
+  "page": 7,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "FindtheReducedEchelonFormof ⎡1013⎤ A =01−33 ⎣⎦ 1013 Selectone: A. ⎡1013⎤ 01−33 ⎣⎦ 0000 B. ⎡2013⎤ 01−33 ⎣⎦ 0000 C. ⎡1031⎤ 01−33 ⎣⎦ 0000 D. ⎡1013⎤ 013−3 ⎣⎦ 0000",
+  "options": [
+   {
+    "L": "A",
+    "text": "⎡1013⎤ 01−33 ⎣⎦ 0000",
+    "y": 229.3
+   },
+   {
+    "L": "B",
+    "text": "⎡2013⎤ 01−33 ⎣⎦ 0000",
+    "y": 314.8
+   },
+   {
+    "L": "C",
+    "text": "⎡1031⎤ 01−33 ⎣⎦ 0000",
+    "y": 400.3
+   },
+   {
+    "L": "D",
+    "text": "⎡1013⎤ 013−3 ⎣⎦ 0000",
+    "y": 486.6
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": null,
+  "printedFull": "⎡1013⎤ 01−33 ⎣⎦ 0000",
+  "solution": "Youranswerisincorrect. Thecorrectansweris: ⎡1013⎤ 01−33 ⎣⎦ 0000",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    586.12
+   ],
+   "feed": [
+    37.12,
+    598.88,
+    557.62,
+    748.12
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     230.4,
+     65.47,
+     239.85
+    ],
+    [
+     56.03,
+     316.65,
+     65.47,
+     326.1
+    ],
+    [
+     56.03,
+     402.15,
+     65.47,
+     411.6
+    ],
+    [
+     56.03,
+     488.4,
+     65.47,
+     497.85
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "A",
+  "keySrc": "exact",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
   "qid": "p3-10",
   "tag": "3",
   "file": "3.pdf",
@@ -2209,7 +2371,7 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "4",
   "printedFull": "4",
   "solution": "Thecorrectansweris:4",
   "rects": {
@@ -2257,8 +2419,200 @@
    "4"
   ],
   "answerText": "4",
-  "answerSrc": "ai",
-  "aiGenerated": true
+  "answerSrc": "pdf",
+  "aiGenerated": false
+ },
+ {
+  "qid": "p3-14",
+  "tag": "3",
+  "file": "3.pdf",
+  "quiz": 3,
+  "quiz_label": 1,
+  "qno": 14,
+  "page": 11,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "Findthegeneralsolution. {−4x1−28x24x3 +=8 6x1x3 +=23 Selectone: A.⎡3⎤⎡−2⎤ xtt∈R =−1+1, ⎣⎦⎣⎦ 56 B.⎡3⎤⎡−1⎤ xtt∈R =0+1, ⎣⎦⎣⎦ 56 C.⎡3⎤⎡0⎤ xtt∈R =0+1, ⎣⎦⎣⎦ 46 D.⎡3⎤⎡−1⎤ xtt∈R =1+1, ⎣⎦⎣⎦ 57",
+  "options": [
+   {
+    "L": "A",
+    "text": "⎡3⎤⎡−2⎤ xtt∈R =−1+1, ⎣⎦⎣⎦ 56",
+    "y": 209.1
+   },
+   {
+    "L": "B",
+    "text": "⎡3⎤⎡−1⎤ xtt∈R =0+1, ⎣⎦⎣⎦ 56",
+    "y": 273.6
+   },
+   {
+    "L": "C",
+    "text": "⎡3⎤⎡0⎤ xtt∈R =0+1, ⎣⎦⎣⎦ 46",
+    "y": 338.8
+   },
+   {
+    "L": "D",
+    "text": "⎡3⎤⎡−1⎤ xtt∈R =1+1, ⎣⎦⎣⎦ 57",
+    "y": 403.3
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": "xtt∈R =0+1, ⎣⎦⎣⎦",
+  "printedFull": "⎡3⎤⎡−1⎤ xtt∈R =0+1, ⎣⎦⎣⎦ 56",
+  "solution": "⎡3⎤⎡−1⎤ xtt∈R Thecorrectansweris:=0+1, ⎣⎦⎣⎦ 56",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    481.88
+   ],
+   "feed": [
+    37.12,
+    494.62,
+    557.62,
+    580.88
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     210.9,
+     65.47,
+     220.35
+    ],
+    [
+     56.03,
+     275.4,
+     65.47,
+     284.85
+    ],
+    [
+     56.03,
+     339.9,
+     65.47,
+     349.35
+    ],
+    [
+     56.03,
+     405.15,
+     65.47,
+     414.6
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "B",
+  "keySrc": "exact",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
+  "qid": "p4-06",
+  "tag": "4",
+  "file": "4.pdf",
+  "quiz": 4,
+  "quiz_label": 1,
+  "qno": 6,
+  "page": 4,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "FindtheReducedEchelonFormof ⎡10−2−3⎤ A=01−2−1 ⎣⎦ 10−2−3 Selectone: A. ⎡20−2−3⎤ 01−2−1 ⎣⎦ 0000 B. ⎡10−2−3⎤ 01−2−1 ⎣⎦ 0000 C. ⎡10−3−2⎤ 01−2−1 ⎣⎦ 0000 D. ⎡10−2−3⎤ 01−1−2 ⎣⎦ 0000",
+  "options": [
+   {
+    "L": "A",
+    "text": "⎡20−2−3⎤ 01−2−1 ⎣⎦ 0000",
+    "y": 229.3
+   },
+   {
+    "L": "B",
+    "text": "⎡10−2−3⎤ 01−2−1 ⎣⎦ 0000",
+    "y": 314.8
+   },
+   {
+    "L": "C",
+    "text": "⎡10−3−2⎤ 01−2−1 ⎣⎦ 0000",
+    "y": 400.3
+   },
+   {
+    "L": "D",
+    "text": "⎡10−2−3⎤ 01−1−2 ⎣⎦ 0000",
+    "y": 486.6
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": null,
+  "printedFull": "⎡10−2−3⎤ 01−2−1 ⎣⎦ 0000",
+  "solution": "Youranswerisincorrect. Thecorrectansweris: ⎡10−2−3⎤ 01−2−1 ⎣⎦ 0000",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    586.12
+   ],
+   "feed": [
+    37.12,
+    598.88,
+    557.62,
+    748.12
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     230.4,
+     65.47,
+     239.85
+    ],
+    [
+     56.03,
+     316.65,
+     65.47,
+     326.1
+    ],
+    [
+     56.03,
+     402.15,
+     65.47,
+     411.6
+    ],
+    [
+     56.03,
+     488.4,
+     65.47,
+     497.85
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "B",
+  "keySrc": "exact",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
  },
  {
   "qid": "p4-08",
@@ -2837,6 +3191,102 @@
   "aiGenerated": false
  },
  {
+  "qid": "p5-04",
+  "tag": "5",
+  "file": "5.pdf",
+  "quiz": 5,
+  "quiz_label": 1,
+  "qno": 4,
+  "page": 4,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "[8],[6], Computethevectorcudv,whereuv. +==c=−8,d=2 −11 Selectone: A.[−53] 10 B.[−56] 8 C.[−54] 8 D.[−52] 10",
+  "options": [
+   {
+    "L": "A",
+    "text": "[−53] 10",
+    "y": 178.3
+   },
+   {
+    "L": "B",
+    "text": "[−56] 8",
+    "y": 222.6
+   },
+   {
+    "L": "C",
+    "text": "[−54] 8",
+    "y": 267.6
+   },
+   {
+    "L": "D",
+    "text": "[−52] 10",
+    "y": 312.6
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": "[−52]",
+  "printedFull": "[−52] [−52]",
+  "solution": "Youranswerisincorrect. [−52] Thecorrectansweris: 10",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    370.88
+   ],
+   "feed": [
+    37.12,
+    383.62,
+    557.62,
+    474.38
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     180.15,
+     65.47,
+     189.6
+    ],
+    [
+     56.03,
+     224.4,
+     65.47,
+     233.85
+    ],
+    [
+     56.03,
+     269.4,
+     65.47,
+     278.85
+    ],
+    [
+     56.03,
+     314.4,
+     65.47,
+     323.85
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "D",
+  "keySrc": "contain",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
   "qid": "p5-05",
   "tag": "5",
   "file": "5.pdf",
@@ -2851,7 +3301,7 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "-3",
   "printedFull": "-3",
   "solution": "Thecorrectansweris:-3",
   "rects": {
@@ -2896,11 +3346,11 @@
   "keyConf": "none",
   "blanks": 1,
   "answers": [
-   "3"
+   "-3"
   ],
-  "answerText": "3",
-  "answerSrc": "ai",
-  "aiGenerated": true
+  "answerText": "-3",
+  "answerSrc": "pdf",
+  "aiGenerated": false
  },
  {
   "qid": "p5-08",
@@ -2999,6 +3449,102 @@
   "aiGenerated": false
  },
  {
+  "qid": "p5-09",
+  "tag": "5",
+  "file": "5.pdf",
+  "quiz": 5,
+  "quiz_label": 1,
+  "qno": 9,
+  "page": 7,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "Findthegeneralsolution. {−4x1+x2+2x3=4 −4x2−4x3=−8 Selectone: A.⎡0⎤⎡1⎤ x∈R =2+t−2,t ⎣⎦⎣⎦ 24 B.⎡0⎤⎡1⎤ x∈R =0+t−4,t ⎣⎦⎣⎦ 24 C.⎡0⎤⎡−1⎤ x∈R =−1+t−4,t ⎣⎦⎣⎦ 24 D.⎡2⎤⎡1⎤ x∈R =0+t−4,t ⎣⎦⎣⎦ 26",
+  "options": [
+   {
+    "L": "A",
+    "text": "⎡0⎤⎡1⎤ x∈R =2+t−2,t ⎣⎦⎣⎦ 24",
+    "y": 209.1
+   },
+   {
+    "L": "B",
+    "text": "⎡0⎤⎡1⎤ x∈R =0+t−4,t ⎣⎦⎣⎦ 24",
+    "y": 273.6
+   },
+   {
+    "L": "C",
+    "text": "⎡0⎤⎡−1⎤ x∈R =−1+t−4,t ⎣⎦⎣⎦ 24",
+    "y": 338.8
+   },
+   {
+    "L": "D",
+    "text": "⎡2⎤⎡1⎤ x∈R =0+t−4,t ⎣⎦⎣⎦ 26",
+    "y": 403.3
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": "x∈R =0+t−4,t ⎣⎦⎣⎦",
+  "printedFull": "⎡0⎤⎡1⎤ x∈R =0+t−4,t ⎣⎦⎣⎦ 24",
+  "solution": "⎡0⎤⎡1⎤ x∈R Thecorrectansweris:=0+t−4,t ⎣⎦⎣⎦ 24",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    481.88
+   ],
+   "feed": [
+    37.12,
+    494.62,
+    557.62,
+    580.88
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     210.9,
+     65.47,
+     220.35
+    ],
+    [
+     56.03,
+     275.4,
+     65.47,
+     284.85
+    ],
+    [
+     56.03,
+     339.9,
+     65.47,
+     349.35
+    ],
+    [
+     56.03,
+     405.15,
+     65.47,
+     414.6
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "B",
+  "keySrc": "exact",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
   "qid": "p5-10",
   "tag": "5",
   "file": "5.pdf",
@@ -3086,6 +3632,198 @@
    "pua": []
   },
   "key": "D",
+  "keySrc": "exact",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
+  "qid": "p5-12",
+  "tag": "5",
+  "file": "5.pdf",
+  "quiz": 5,
+  "quiz_label": 1,
+  "qno": 12,
+  "page": 10,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "WhichmatrixisinEchelonFormbutnotinReducedEchelonForm? Selectone: A. ⎡−1−222⎤ 00−21 ⎣⎦ 0010 B. ⎡−1−222⎤ 00−21 ⎣⎦ 0000 C. ⎡00−21⎤ −1−222 ⎣⎦ 0000 D. ⎡−1−222⎤ 0000 ⎣⎦ 00−21",
+  "options": [
+   {
+    "L": "A",
+    "text": "⎡−1−222⎤ 00−21 ⎣⎦ 0010",
+    "y": 160.3
+   },
+   {
+    "L": "B",
+    "text": "⎡−1−222⎤ 00−21 ⎣⎦ 0000",
+    "y": 246.6
+   },
+   {
+    "L": "C",
+    "text": "⎡00−21⎤ −1−222 ⎣⎦ 0000",
+    "y": 332.1
+   },
+   {
+    "L": "D",
+    "text": "⎡−1−222⎤ 0000 ⎣⎦ 00−21",
+    "y": 417.6
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": null,
+  "printedFull": "hastheleadingentryofthesecondnonzerorowtotheleftofthe OptionDhasazerorowaboveanonzerorow. ⎡−1−222⎤ 00−21 ⎣⎦ 0000",
+  "solution": "Youranswerisincorrect. B.Itsleadingentriesmovetotherightastherownumberincreases,allentriesbeloweach leadingentryarezero,andthezerorowisatthebottom.ItisnotinReducedEchelonForm becauseitsleadingentriesarenot1.OptionAhasanonzeroentrybelowtheleadingentry incolumn3.OptionChastheleadingentryofthesecondnonzerorowtotheleftofthe leadingentryaboveit.OptionDhasazerorowaboveanonzerorow. Thecorrectansweris: ⎡−1−222⎤ 00−21 ⎣⎦ 0000",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    517.88
+   ],
+   "feed": [
+    37.12,
+    530.62,
+    557.62,
+    775.88
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     162.15,
+     65.47,
+     171.6
+    ],
+    [
+     56.03,
+     247.65,
+     65.47,
+     257.1
+    ],
+    [
+     56.03,
+     333.9,
+     65.47,
+     343.35
+    ],
+    [
+     56.03,
+     419.4,
+     65.47,
+     428.85
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "B",
+  "keySrc": "contain",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
+  "qid": "p5-13",
+  "tag": "5",
+  "file": "5.pdf",
+  "quiz": 5,
+  "quiz_label": 1,
+  "qno": 13,
+  "page": 11,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "Giventheaugmentedmatrix ⎡−5107⎤ 6−530 ⎣⎦ −55−50 whatisthesolution(x1,x2,x3)ofthesystem? Selectone: A.(0,−2,−3) B.(0,−4,−2) C.(−2,−3,−1) D.(−3,−4,1)",
+  "options": [
+   {
+    "L": "A",
+    "text": "(0,−2,−3)",
+    "y": 261.6
+   },
+   {
+    "L": "B",
+    "text": "(0,−4,−2)",
+    "y": 288.6
+   },
+   {
+    "L": "C",
+    "text": "(−2,−3,−1)",
+    "y": 315.6
+   },
+   {
+    "L": "D",
+    "text": "(−3,−4,1)",
+    "y": 342.6
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": "(−2,−3,−1)",
+  "printedFull": "(−2,−3,−1)",
+  "solution": "Youranswerisincorrect. Thecorrectansweris:(−2,−3,−1)",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    382.88
+   ],
+   "feed": [
+    37.12,
+    395.62,
+    557.62,
+    468.38
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     262.65,
+     65.47,
+     272.1
+    ],
+    [
+     56.03,
+     289.65,
+     65.47,
+     299.1
+    ],
+    [
+     56.03,
+     316.65,
+     65.47,
+     326.1
+    ],
+    [
+     56.03,
+     343.65,
+     65.47,
+     353.1
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "C",
   "keySrc": "exact",
   "keyConf": "high",
   "blanks": 0,
@@ -5118,6 +5856,102 @@
   "aiGenerated": false
  },
  {
+  "qid": "p8-08",
+  "tag": "8",
+  "file": "8.pdf",
+  "quiz": 8,
+  "quiz_label": 2,
+  "qno": 8,
+  "page": 6,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "Whichofthefollowing2×2matricesisthestandardmatrixofarotationabouttheorigin R2 in? Selectone: ⎡⎤ A.√30−√19 ⎣77⎦ √19√30 77 ⎡⎤ B.√33√31 ⎣88⎦ √31−√33 88 C.[5−3] 88 3−5 88 D.[3−4] 77 43 77",
+  "options": [
+   {
+    "L": "A",
+    "text": "√30−√19 ⎣77⎦ √19√30 77 ⎡⎤",
+    "y": 178.3
+   },
+   {
+    "L": "B",
+    "text": "√33√31 ⎣88⎦ √31−√33 88",
+    "y": 238.3
+   },
+   {
+    "L": "C",
+    "text": "[5−3] 88 3−5 88",
+    "y": 298.3
+   },
+   {
+    "L": "D",
+    "text": "[3−4] 77 43 77",
+    "y": 351.6
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": "⎣77⎦",
+  "printedFull": "⎡⎤ √30−√19 ⎣77⎦ 77",
+  "solution": "Youranswerisincorrect. ⎡⎤ √30−√19 ⎣77⎦ Thecorrectansweris: √19√30 77",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    418.88
+   ],
+   "feed": [
+    37.12,
+    431.62,
+    557.62,
+    537.38
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     180.15,
+     65.47,
+     189.6
+    ],
+    [
+     56.03,
+     240.15,
+     65.47,
+     249.6
+    ],
+    [
+     56.03,
+     300.15,
+     65.47,
+     309.6
+    ],
+    [
+     56.03,
+     353.4,
+     65.47,
+     362.85
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "A",
+  "keySrc": "fuzzy",
+  "keyConf": "medium",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
   "qid": "p8-11",
   "tag": "8",
   "file": "8.pdf",
@@ -5310,6 +6144,198 @@
   "aiGenerated": false
  },
  {
+  "qid": "p8-15",
+  "tag": "8",
+  "file": "8.pdf",
+  "quiz": 8,
+  "quiz_label": 2,
+  "qno": 15,
+  "page": 13,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "Ax0 Whichofthefollowinggivesallsolutionstotheequation=inparametricvector form,where ⎡⎤ 01−52 A =⎣12−121⎦? −2−194 Selectone: ⎡⎤⎡⎤ A.−2−3 −52 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤ B.2 5 xs(sR) =in ⎣1⎦ 0 ⎡⎤⎡⎤ C.23 5−2 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤ D.−3 2 xt(tR) =in ⎣0⎦ 1",
+  "options": [
+   {
+    "L": "A",
+    "text": "−2−3 −52 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤",
+    "y": 247.3
+   },
+   {
+    "L": "B",
+    "text": "2 5 xs(sR) =in ⎣1⎦ 0 ⎡⎤⎡⎤",
+    "y": 332.1
+   },
+   {
+    "L": "C",
+    "text": "23 5−2 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤",
+    "y": 416.8
+   },
+   {
+    "L": "D",
+    "text": "−3 2 xt(tR) =in ⎣0⎦ 1",
+    "y": 501.6
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": "xst(s,tR) =+in",
+  "printedFull": "⎡⎤⎡⎤ 23 5−2 xst(s,tR) =+in 01",
+  "solution": "Youranswerisincorrect. ⎡⎤⎡⎤ 23 5−2 Thecorrectansweris:xst(s,tR) =+in ⎣1⎦⎣0⎦ 01",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    599.62
+   ],
+   "feed": [
+    37.12,
+    612.38,
+    557.62,
+    742.88
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     248.4,
+     65.47,
+     257.85
+    ],
+    [
+     56.03,
+     333.15,
+     65.47,
+     342.6
+    ],
+    [
+     56.03,
+     417.9,
+     65.47,
+     427.35
+    ],
+    [
+     56.03,
+     502.65,
+     65.47,
+     512.1
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "C",
+  "keySrc": "contain",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
+  "qid": "p9-01",
+  "tag": "9",
+  "file": "9.pdf",
+  "quiz": 9,
+  "quiz_label": 2,
+  "qno": 1,
+  "page": 1,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "WhichmatrixisinEchelonFormbutnotinReducedEchelonForm? Selectone: A. ⎡⎤ −12−2−2 ⎣0000⎦ 0030 B. ⎡⎤ −12−2−2 ⎣0030⎦ 0000 C. ⎡⎤ −12−2−2 ⎣0030⎦ 0010 D. ⎡⎤ 0030 ⎣−12−2−2⎦ 0000",
+  "options": [
+   {
+    "L": "A",
+    "text": "⎡⎤ −12−2−2 ⎣0000⎦ 0030",
+    "y": 160.3
+   },
+   {
+    "L": "B",
+    "text": "⎡⎤ −12−2−2 ⎣0030⎦ 0000",
+    "y": 246.6
+   },
+   {
+    "L": "C",
+    "text": "⎡⎤ −12−2−2 ⎣0030⎦ 0010",
+    "y": 332.1
+   },
+   {
+    "L": "D",
+    "text": "⎡⎤ 0030 ⎣−12−2−2⎦ 0000",
+    "y": 417.6
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": null,
+  "printedFull": "belowtheleadingentryincolumn3.OptionDhastheleadingentry rowtotheleftoftheleadingentryaboveit. ⎡⎤ −12−2−2 ⎣0030⎦ 0000",
+  "solution": "Youranswerisincorrect. B.Itsleadingentriesmovetotherightastherownumberincreases,allentriesbeloweach leadingentryarezero,andthezerorowisatthebottom.ItisnotinReducedEchelonForm becauseitsleadingentriesarenot1.OptionAhasazerorowaboveanonzerorow.Option Chasanonzeroentrybelowtheleadingentryincolumn3.OptionDhastheleadingentry ofthesecondnonzerorowtotheleftoftheleadingentryaboveit. Thecorrectansweris: ⎡⎤ −12−2−2 ⎣0030⎦ 0000",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    517.88
+   ],
+   "feed": [
+    37.12,
+    530.62,
+    557.62,
+    775.88
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     162.15,
+     65.47,
+     171.6
+    ],
+    [
+     56.03,
+     247.65,
+     65.47,
+     257.1
+    ],
+    [
+     56.03,
+     333.9,
+     65.47,
+     343.35
+    ],
+    [
+     56.03,
+     419.4,
+     65.47,
+     428.85
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "B",
+  "keySrc": "contain",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
   "qid": "p9-02",
   "tag": "9",
   "file": "9.pdf",
@@ -5493,6 +6519,102 @@
    "pua": []
   },
   "key": "C",
+  "keySrc": "exact",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
+  "qid": "p9-09",
+  "tag": "9",
+  "file": "9.pdf",
+  "quiz": 9,
+  "quiz_label": 2,
+  "qno": 9,
+  "page": 7,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "Considerthefollowingsystemoflinearequations: ⎧ x1+3x2−6x3=3 ⎨ ⎩ 3x1−x2−4x3=2. 10x2−14x3=7 Whichofthefollowingcorrectlydescribesthesolutionsetofthesystem? Selectone: A.Thesolutionsetisaplanenotthroughtheorigin. B.Thesolutionsetisalinethroughtheorigin. C.Thesolutionsetisaplanethroughtheorigin. D.Thesolutionsetisalinenotthroughtheorigin.",
+  "options": [
+   {
+    "L": "A",
+    "text": "Thesolutionsetisaplanenotthroughtheorigin.",
+    "y": 273.6
+   },
+   {
+    "L": "B",
+    "text": "Thesolutionsetisalinethroughtheorigin.",
+    "y": 300.6
+   },
+   {
+    "L": "C",
+    "text": "Thesolutionsetisaplanethroughtheorigin.",
+    "y": 327.6
+   },
+   {
+    "L": "D",
+    "text": "Thesolutionsetisalinenotthroughtheorigin.",
+    "y": 354.6
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": "Thesolutionsetisalinenotthroughtheorigin.",
+  "printedFull": "Thesolutionsetisalinenotthroughtheorigin.",
+  "solution": "Youranswerisincorrect. Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    395.62
+   ],
+   "feed": [
+    37.12,
+    408.38,
+    557.62,
+    481.12
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     275.4,
+     65.47,
+     284.85
+    ],
+    [
+     56.03,
+     302.4,
+     65.47,
+     311.85
+    ],
+    [
+     56.03,
+     329.4,
+     65.47,
+     338.85
+    ],
+    [
+     56.03,
+     356.4,
+     65.47,
+     365.85
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "D",
   "keySrc": "exact",
   "keyConf": "high",
   "blanks": 0,
@@ -5790,6 +6912,72 @@
   "aiGenerated": false
  },
  {
+  "qid": "p10-02",
+  "tag": "10",
+  "file": "10.pdf",
+  "quiz": 10,
+  "quiz_label": 2,
+  "qno": 2,
+  "page": 2,
+  "type": "fill",
+  "verdict": "Incorrect",
+  "student": null,
+  "stem": "Considerthehomogeneouslinearsystem {x1−x2−5x3 =0 . 2x1−4x2−2x3 =0 Thesystemhasnontrivialsolutions.Writethegeneralsolutioninparametricvectorform: ⎡⎤ a xx3b =⎣⎦. 1 ab =,=",
+  "options": [],
+  "tick": null,
+  "cross": null,
+  "printed": null,
+  "printedFull": "Youranswerisincorrect.",
+  "solution": "Youranswerisincorrect.",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    354.38
+   ],
+   "feed": [
+    37.12,
+    367.12,
+    557.62,
+    415.88
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [],
+   "inputs": [
+    [
+     64.88,
+     302.62,
+     78.38,
+     322.88
+    ],
+    [
+     98.62,
+     302.62,
+     112.12,
+     322.88
+    ]
+   ],
+   "pua": []
+  },
+  "key": null,
+  "keySrc": "none",
+  "keyConf": "none",
+  "blanks": 2,
+  "answers": [
+   "9",
+   "4"
+  ],
+  "answerText": "9, 4",
+  "answerSrc": "ai",
+  "aiGenerated": true
+ },
+ {
   "qid": "p10-03",
   "tag": "10",
   "file": "10.pdf",
@@ -5974,6 +7162,102 @@
   },
   "key": "A",
   "keySrc": "exact",
+  "keyConf": "high",
+  "blanks": 0,
+  "answers": null,
+  "answerText": "",
+  "answerSrc": "none",
+  "aiGenerated": false
+ },
+ {
+  "qid": "p10-07",
+  "tag": "10",
+  "file": "10.pdf",
+  "quiz": 10,
+  "quiz_label": 2,
+  "qno": 7,
+  "page": 7,
+  "type": "choice",
+  "verdict": null,
+  "student": null,
+  "stem": "R4 Whichoneofthefollowingsetsofvectorsinislinearlyindependent? Selectone: ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤⎡⎤ A.8−106−3 ⎨⎬ 0−11−43 ,,,, ⎩⎭ ⎣7⎦⎣1⎦⎣−7⎦⎣0⎦⎣4⎦ 38−454 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ B.−2−45−8 ⎨⎬ 246−2 ,,, ⎩⎭ ⎣4⎦⎣8⎦⎣6⎦⎣−4⎦ 12−41 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ C.−4515 ⎨⎬ −91−86 ,,, ⎩⎭ ⎣6⎦⎣−3⎦⎣3⎦⎣−8⎦ −3411 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ D.1111 ⎨⎬ 21−1−2 ,,, ⎩⎭ ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ 81−1−8",
+  "options": [
+   {
+    "L": "A",
+    "text": "8−106−3 ⎨⎬ 0−11−43 ,,,, ⎩⎭ ⎣7⎦⎣1⎦⎣−7⎦⎣0⎦⎣4⎦ 38−454 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤",
+    "y": 160.3
+   },
+   {
+    "L": "B",
+    "text": "−2−45−8 ⎨⎬ 246−2 ,,, ⎩⎭ ⎣4⎦⎣8⎦⎣6⎦⎣−4⎦ 12−41 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤",
+    "y": 245.1
+   },
+   {
+    "L": "C",
+    "text": "−4515 ⎨⎬ −91−86 ,,, ⎩⎭ ⎣6⎦⎣−3⎦⎣3⎦⎣−8⎦ −3411 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤",
+    "y": 329.8
+   },
+   {
+    "L": "D",
+    "text": "1111 ⎨⎬ 21−1−2 ,,, ⎩⎭ ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ 81−1−8",
+    "y": 414.6
+   }
+  ],
+  "tick": null,
+  "cross": null,
+  "printed": ",,, ⎩⎭",
+  "printedFull": "⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ 1111 ⎨⎬ 21−1−2 ,,, ⎩⎭ 81−1−8",
+  "solution": "Youranswerisincorrect. ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ 1111 ⎨⎬ 21−1−2 Thecorrectansweris:,,, ⎩⎭ ⎣4⎦⎣1⎦⎣1⎦⎣4⎦ 81−1−8",
+  "rects": {
+   "stem": [
+    37.12,
+    89.62,
+    557.62,
+    513.38
+   ],
+   "feed": [
+    37.12,
+    526.12,
+    557.62,
+    656.62
+   ],
+   "head": [
+    37.12,
+    28.12,
+    557.62,
+    76.88
+   ],
+   "radios": [
+    [
+     56.03,
+     162.15,
+     65.47,
+     171.6
+    ],
+    [
+     56.03,
+     246.9,
+     65.47,
+     256.35
+    ],
+    [
+     56.03,
+     331.65,
+     65.47,
+     341.1
+    ],
+    [
+     56.03,
+     416.4,
+     65.47,
+     425.85
+    ]
+   ],
+   "inputs": [],
+   "pua": []
+  },
+  "key": "D",
+  "keySrc": "contain",
   "keyConf": "high",
   "blanks": 0,
   "answers": null,
@@ -7232,7 +8516,7 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "Thereisann×mmatrixBsuchthatBA=In.",
   "printedFull": "Thereisann×mmatrixBsuchthatBA=In.",
   "solution": "Thecorrectansweris:Thereisann×mmatrixBsuchthatBA=In.",
   "rects": {
@@ -7965,72 +9249,6 @@
   "aiGenerated": false
  },
  {
-  "qid": "p13-08",
-  "tag": "13",
-  "file": "13.pdf",
-  "quiz": 13,
-  "quiz_label": 3,
-  "qno": 8,
-  "page": 7,
-  "type": "fill",
-  "verdict": null,
-  "student": null,
-  "stem": "⎡−9−5−8⎤ LetA=5−7−6.Findthe(1,3)-entryofthematrixAT. ⎣⎦ −34−4",
-  "options": [],
-  "tick": null,
-  "cross": null,
-  "printed": "-3",
-  "printedFull": "ofmatrix.AT=−5−74 ⎣⎦ −8−6−4 -3",
-  "solution": "⎡−95−3⎤ Theproblemisthetransposeofmatrix.AT=−5−74 ⎣⎦ −8−6−4 Thecorrectansweris:-3",
-  "rects": {
-   "stem": [
-    37.12,
-    89.62,
-    557.62,
-    220.12
-   ],
-   "feed": [
-    37.12,
-    232.88,
-    557.62,
-    343.12
-   ],
-   "head": [
-    37.12,
-    28.12,
-    557.62,
-    76.88
-   ],
-   "radios": [],
-   "inputs": [
-    [
-     96.38,
-     175.88,
-     492.38,
-     203.62
-    ]
-   ],
-   "pua": [
-    [
-     494.34,
-     183.56,
-     506.34,
-     195.94
-    ]
-   ]
-  },
-  "key": null,
-  "keySrc": "none",
-  "keyConf": "none",
-  "blanks": 1,
-  "answers": [
-   "-3"
-  ],
-  "answerText": "-3",
-  "answerSrc": "pdf",
-  "aiGenerated": false
- },
- {
   "qid": "p13-09",
   "tag": "13",
   "file": "13.pdf",
@@ -8300,72 +9518,6 @@
   "answerText": "-6, -1",
   "answerSrc": "ai",
   "aiGenerated": true
- },
- {
-  "qid": "p13-13",
-  "tag": "13",
-  "file": "13.pdf",
-  "quiz": 13,
-  "quiz_label": 3,
-  "qno": 13,
-  "page": 11,
-  "type": "fill",
-  "verdict": null,
-  "student": null,
-  "stem": "⎡426⎤⎡−7−44⎤ 7−6−921−5 LetA=,B=. −89−133−7 ⎣⎦⎣⎦ 03−6−4−71 Findthe(3,2)-entryofthematrixATB.",
-  "options": [],
-  "tick": null,
-  "cross": null,
-  "printed": "6",
-  "printedFull": "3 ⎦ −6 6",
-  "solution": "Theproblemisabouttransposeandmultiplicationamongmatrices. ⎡47−80⎤ AT=2−693 ⎣⎦ 6−9−1−6 Thecorrectansweris:6",
-  "rects": {
-   "stem": [
-    37.12,
-    446.62,
-    557.62,
-    621.38
-   ],
-   "feed": [
-    37.12,
-    634.12,
-    557.62,
-    762.38
-   ],
-   "head": [
-    37.12,
-    385.12,
-    557.62,
-    433.88
-   ],
-   "radios": [],
-   "inputs": [
-    [
-     96.38,
-     577.12,
-     492.38,
-     604.88
-    ]
-   ],
-   "pua": [
-    [
-     494.34,
-     584.81,
-     506.34,
-     597.19
-    ]
-   ]
-  },
-  "key": null,
-  "keySrc": "none",
-  "keyConf": "none",
-  "blanks": 1,
-  "answers": [
-   "6"
-  ],
-  "answerText": "6",
-  "answerSrc": "pdf",
-  "aiGenerated": false
  },
  {
   "qid": "p13-14",
@@ -8823,7 +9975,7 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "ThereisannmmatrixBsuchthatABIm. ×=",
   "printedFull": "ThereisannmmatrixBsuchthatABIm. ×=",
   "solution": "Thecorrectansweris:ThereisannmmatrixBsuchthatABIm. ×=",
   "rects": {
@@ -9803,6 +10955,72 @@
   "aiGenerated": false
  },
  {
+  "qid": "p15-07",
+  "tag": "15",
+  "file": "15.pdf",
+  "quiz": 15,
+  "quiz_label": 3,
+  "qno": 7,
+  "page": 4,
+  "type": "fill",
+  "verdict": null,
+  "student": null,
+  "stem": "⎡⎤⎡⎤ 6−99−37−3 −655−665 LetA=,B=. ⎣−2−62⎦⎣29−5⎦ 5−9−662−2 Findthe(1,2)-entryofthematrixATB.",
+  "options": [],
+  "tick": null,
+  "cross": null,
+  "printed": "-2",
+  "printedFull": "−9⎦ 2−6 -2",
+  "solution": "Theproblemisabouttransposeandmultiplicationamongmatrices. ⎡⎤ 6−6−25 AT=⎣−95−6−9⎦ 952−6 Thecorrectansweris:-2",
+  "rects": {
+   "stem": [
+    37.12,
+    417.38,
+    557.62,
+    592.12
+   ],
+   "feed": [
+    37.12,
+    604.88,
+    557.62,
+    733.12
+   ],
+   "head": [
+    37.12,
+    355.88,
+    557.62,
+    404.62
+   ],
+   "radios": [],
+   "inputs": [
+    [
+     96.38,
+     547.88,
+     492.38,
+     575.62
+    ]
+   ],
+   "pua": [
+    [
+     494.34,
+     555.56,
+     506.34,
+     567.94
+    ]
+   ]
+  },
+  "key": null,
+  "keySrc": "none",
+  "keyConf": "none",
+  "blanks": 1,
+  "answers": [
+   "-2"
+  ],
+  "answerText": "-2",
+  "answerSrc": "pdf",
+  "aiGenerated": false
+ },
+ {
   "qid": "p15-08",
   "tag": "15",
   "file": "15.pdf",
@@ -10345,6 +11563,72 @@
    "3"
   ],
   "answerText": "3",
+  "answerSrc": "pdf",
+  "aiGenerated": false
+ },
+ {
+  "qid": "p15-14",
+  "tag": "15",
+  "file": "15.pdf",
+  "quiz": 15,
+  "quiz_label": 3,
+  "qno": 14,
+  "page": 10,
+  "type": "fill",
+  "verdict": null,
+  "student": null,
+  "stem": "⎡⎤ −5−78 LetA=⎣193⎦.Findthe(1,3)-entryofthematrixAT. −676",
+  "options": [],
+  "tick": null,
+  "cross": null,
+  "printed": "-6",
+  "printedFull": "ofmatrix.AT=⎣−797⎦ 836 -6",
+  "solution": "⎡⎤ −51−6 Theproblemisthetransposeofmatrix.AT=⎣−797⎦ 836 Thecorrectansweris:-6",
+  "rects": {
+   "stem": [
+    37.12,
+    457.12,
+    557.62,
+    587.62
+   ],
+   "feed": [
+    37.12,
+    600.38,
+    557.62,
+    711.38
+   ],
+   "head": [
+    37.12,
+    395.62,
+    557.62,
+    444.38
+   ],
+   "radios": [],
+   "inputs": [
+    [
+     96.38,
+     544.12,
+     492.38,
+     571.88
+    ]
+   ],
+   "pua": [
+    [
+     494.34,
+     551.81,
+     506.34,
+     564.19
+    ]
+   ]
+  },
+  "key": null,
+  "keySrc": "none",
+  "keyConf": "none",
+  "blanks": 1,
+  "answers": [
+   "-6"
+  ],
+  "answerText": "-6",
   "answerSrc": "pdf",
   "aiGenerated": false
  },
@@ -10895,102 +12179,6 @@
   "aiGenerated": false
  },
  {
-  "qid": "b2-02",
-  "tag": "B2",
-  "file": "2-2.pdf",
-  "quiz": 22,
-  "quiz_label": 1,
-  "qno": 2,
-  "page": 1,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "Findthegeneralsolution. {11x1+5x2−3x3=0 −6x2−3x3=0 Selectone: A.⎡0⎤⎡1⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ −14 B.⎡0⎤⎡3⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ 12 C.⎡0⎤⎡3⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ −22 D.⎡0⎤⎡1⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ 02",
-  "options": [
-   {
-    "L": "A",
-    "text": "⎡0⎤⎡1⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ −14",
-    "y": 205.3
-   },
-   {
-    "L": "B",
-    "text": "⎡0⎤⎡3⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ 12",
-    "y": 267.6
-   },
-   {
-    "L": "C",
-    "text": "⎡0⎤⎡3⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ −22",
-    "y": 329.8
-   },
-   {
-    "L": "D",
-    "text": "⎡0⎤⎡1⎤ x∈R =0+t−1,t ⎣⎦⎣⎦ 02",
-    "y": 391.3
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": "x∈R =0+t−1,t",
-  "printedFull": "⎡0⎤⎡1⎤ x∈R =0+t−1,t 02",
-  "solution": "⎡0⎤⎡1⎤ Thecorrectansweris:x∈R =0+t−1,t ⎣⎦⎣⎦ 02",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    469.12
-   ],
-   "feed": [
-    37.88,
-    481.88,
-    574.88,
-    565.88
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     208.65,
-     66.22,
-     218.1
-    ],
-    [
-     56.78,
-     270.9,
-     66.22,
-     280.35
-    ],
-    [
-     56.78,
-     332.4,
-     66.22,
-     341.85
-    ],
-    [
-     56.78,
-     394.65,
-     66.22,
-     404.1
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "D",
-  "keySrc": "exact",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
- },
- {
   "qid": "b2-05",
   "tag": "B2",
   "file": "2-2.pdf",
@@ -11078,198 +12266,6 @@
    "pua": []
   },
   "key": "A",
-  "keySrc": "exact",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
- },
- {
-  "qid": "b2-06",
-  "tag": "B2",
-  "file": "2-2.pdf",
-  "quiz": 22,
-  "quiz_label": 1,
-  "qno": 6,
-  "page": 5,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "[7],[4], Computethevectorcudv,whereuv. +==c=0,d=−7 8−7 Selectone: A.[−32] 44 B.[−28] 49 C.[−32] 50 D.[−23] 50",
-  "options": [
-   {
-    "L": "A",
-    "text": "[−32] 44",
-    "y": 175.3
-   },
-   {
-    "L": "B",
-    "text": "[−28] 49",
-    "y": 218.1
-   },
-   {
-    "L": "C",
-    "text": "[−32] 50",
-    "y": 261.6
-   },
-   {
-    "L": "D",
-    "text": "[−23] 50",
-    "y": 304.3
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": "[−28]",
-  "printedFull": "[−28] [−28]",
-  "solution": "Youranswerisincorrect. [−28] Thecorrectansweris: 49",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    362.62
-   ],
-   "feed": [
-    37.88,
-    375.38,
-    574.88,
-    464.62
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     178.65,
-     66.22,
-     188.1
-    ],
-    [
-     56.78,
-     221.4,
-     66.22,
-     230.85
-    ],
-    [
-     56.78,
-     264.9,
-     66.22,
-     274.35
-    ],
-    [
-     56.78,
-     307.65,
-     66.22,
-     317.1
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "B",
-  "keySrc": "contain",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
- },
- {
-  "qid": "b2-08",
-  "tag": "B2",
-  "file": "2-2.pdf",
-  "quiz": 22,
-  "quiz_label": 1,
-  "qno": 8,
-  "page": 7,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "FindtheReducedEchelonFormof ⎡10−31⎤ A=0101 ⎣⎦ 10−31 Selectone: A. ⎡20−31⎤ 0101 ⎣⎦ 0000 B. ⎡10−31⎤ 0101 ⎣⎦ 0000 C. ⎡10−31⎤ 0110 ⎣⎦ 0000 D. ⎡101−3⎤ 0101 ⎣⎦ 0000",
-  "options": [
-   {
-    "L": "A",
-    "text": "⎡20−31⎤ 0101 ⎣⎦ 0000",
-    "y": 224.1
-   },
-   {
-    "L": "B",
-    "text": "⎡10−31⎤ 0101 ⎣⎦ 0000",
-    "y": 305.8
-   },
-   {
-    "L": "C",
-    "text": "⎡10−31⎤ 0110 ⎣⎦ 0000",
-    "y": 387.6
-   },
-   {
-    "L": "D",
-    "text": "⎡101−3⎤ 0101 ⎣⎦ 0000",
-    "y": 469.3
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": null,
-  "printedFull": "⎡10−31⎤ 0101 ⎣⎦ 0000",
-  "solution": "Youranswerisincorrect. Thecorrectansweris: ⎡10−31⎤ 0101 ⎣⎦ 0000",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    566.62
-   ],
-   "feed": [
-    37.88,
-    579.38,
-    574.88,
-    724.88
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     227.4,
-     66.22,
-     236.85
-    ],
-    [
-     56.78,
-     309.15,
-     66.22,
-     318.6
-    ],
-    [
-     56.78,
-     390.9,
-     66.22,
-     400.35
-    ],
-    [
-     56.78,
-     472.65,
-     66.22,
-     482.1
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "B",
   "keySrc": "exact",
   "keyConf": "high",
   "blanks": 0,
@@ -12193,7 +13189,7 @@
   "options": [],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "7",
   "printedFull": "7",
   "solution": "Thecorrectansweris:7",
   "rects": {
@@ -12241,8 +13237,8 @@
    "7"
   ],
   "answerText": "7",
-  "answerSrc": "ai",
-  "aiGenerated": true
+  "answerSrc": "pdf",
+  "aiGenerated": false
  },
  {
   "qid": "b4-09",
@@ -12629,102 +13625,6 @@
   "aiGenerated": false
  },
  {
-  "qid": "b5-07",
-  "tag": "B5",
-  "file": "2-5.pdf",
-  "quiz": 25,
-  "quiz_label": 1,
-  "qno": 7,
-  "page": 6,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "FindtheReducedEchelonFormof ⎡10−13⎤ A =01−2−3 ⎣⎦ 10−13 Selectone: A. ⎡10−13⎤ 01−3−2 ⎣⎦ 0000 B. ⎡103−1⎤ 01−2−3 ⎣⎦ 0000 C. ⎡20−13⎤ 01−2−3 ⎣⎦ 0000 D. ⎡10−13⎤ 01−2−3 ⎣⎦ 0000",
-  "options": [
-   {
-    "L": "A",
-    "text": "⎡10−13⎤ 01−3−2 ⎣⎦ 0000",
-    "y": 224.1
-   },
-   {
-    "L": "B",
-    "text": "⎡103−1⎤ 01−2−3 ⎣⎦ 0000",
-    "y": 305.8
-   },
-   {
-    "L": "C",
-    "text": "⎡20−13⎤ 01−2−3 ⎣⎦ 0000",
-    "y": 387.6
-   },
-   {
-    "L": "D",
-    "text": "⎡10−13⎤ 01−2−3 ⎣⎦ 0000",
-    "y": 469.3
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": null,
-  "printedFull": "⎡10−13⎤ 01−2−3 ⎣⎦ 0000",
-  "solution": "Youranswerisincorrect. Thecorrectansweris: ⎡10−13⎤ 01−2−3 ⎣⎦ 0000",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    566.62
-   ],
-   "feed": [
-    37.88,
-    579.38,
-    574.88,
-    724.88
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     227.4,
-     66.22,
-     236.85
-    ],
-    [
-     56.78,
-     309.15,
-     66.22,
-     318.6
-    ],
-    [
-     56.78,
-     390.9,
-     66.22,
-     400.35
-    ],
-    [
-     56.78,
-     472.65,
-     66.22,
-     482.1
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "D",
-  "keySrc": "exact",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
- },
- {
   "qid": "b5-08",
   "tag": "B5",
   "file": "2-5.pdf",
@@ -12878,198 +13778,6 @@
    "pua": []
   },
   "key": "B",
-  "keySrc": "exact",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
- },
- {
-  "qid": "b5-11",
-  "tag": "B5",
-  "file": "2-5.pdf",
-  "quiz": 25,
-  "quiz_label": 1,
-  "qno": 11,
-  "page": 9,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "Findthegeneralsolution. {−5x15x2−40x3 +=15 −x1−x2 =−3 Selectone: A.⎡−1⎤⎡−4⎤ xtt∈R =3+6, ⎣⎦⎣⎦ 01 B.⎡−1⎤⎡−4⎤ xtt∈R =3+3, ⎣⎦⎣⎦ 01 C.⎡0⎤⎡−4⎤ xtt∈R =3+4, ⎣⎦⎣⎦ 01 D.⎡1⎤⎡−4⎤ xtt∈R =3+3, ⎣⎦⎣⎦ 01",
-  "options": [
-   {
-    "L": "A",
-    "text": "⎡−1⎤⎡−4⎤ xtt∈R =3+6, ⎣⎦⎣⎦ 01",
-    "y": 205.3
-   },
-   {
-    "L": "B",
-    "text": "⎡−1⎤⎡−4⎤ xtt∈R =3+3, ⎣⎦⎣⎦ 01",
-    "y": 267.6
-   },
-   {
-    "L": "C",
-    "text": "⎡0⎤⎡−4⎤ xtt∈R =3+4, ⎣⎦⎣⎦ 01",
-    "y": 329.8
-   },
-   {
-    "L": "D",
-    "text": "⎡1⎤⎡−4⎤ xtt∈R =3+3, ⎣⎦⎣⎦ 01",
-    "y": 391.3
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": "xtt∈R =3+4,",
-  "printedFull": "⎡0⎤⎡−4⎤ xtt∈R =3+4, 01",
-  "solution": "⎡0⎤⎡−4⎤ Thecorrectansweris:xtt∈R =3+4, ⎣⎦⎣⎦ 01",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    469.12
-   ],
-   "feed": [
-    37.88,
-    481.88,
-    574.88,
-    565.88
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     208.65,
-     66.22,
-     218.1
-    ],
-    [
-     56.78,
-     270.9,
-     66.22,
-     280.35
-    ],
-    [
-     56.78,
-     332.4,
-     66.22,
-     341.85
-    ],
-    [
-     56.78,
-     394.65,
-     66.22,
-     404.1
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "C",
-  "keySrc": "exact",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
- },
- {
-  "qid": "b5-12",
-  "tag": "B5",
-  "file": "2-5.pdf",
-  "quiz": 25,
-  "quiz_label": 1,
-  "qno": 12,
-  "page": 10,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "Giventheaugmentedmatrix ⎡11−12⎤ 65611 ⎣⎦ 4448 whatisthesolution(x1,x2,x3)ofthesystem? Selectone: A. (1,1,0) B. (2,−1,2) C. (−1,−1,1) D. (2,2,−1)",
-  "options": [
-   {
-    "L": "A",
-    "text": "(1,1,0)",
-    "y": 255.6
-   },
-   {
-    "L": "B",
-    "text": "(2,−1,2)",
-    "y": 282.6
-   },
-   {
-    "L": "C",
-    "text": "(−1,−1,1)",
-    "y": 309.6
-   },
-   {
-    "L": "D",
-    "text": "(2,2,−1)",
-    "y": 336.6
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": "(1,1,0)",
-  "printedFull": "(1,1,0)",
-  "solution": "Youranswerisincorrect. Thecorrectansweris: (1,1,0)",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    379.12
-   ],
-   "feed": [
-    37.88,
-    391.88,
-    574.88,
-    464.62
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     258.9,
-     66.22,
-     268.35
-    ],
-    [
-     56.78,
-     285.9,
-     66.22,
-     295.35
-    ],
-    [
-     56.78,
-     312.9,
-     66.22,
-     322.35
-    ],
-    [
-     56.78,
-     339.9,
-     66.22,
-     349.35
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "A",
   "keySrc": "exact",
   "keyConf": "high",
   "blanks": 0,
@@ -14789,102 +15497,6 @@
   "aiGenerated": false
  },
  {
-  "qid": "b8-05",
-  "tag": "B8",
-  "file": "2-8.pdf",
-  "quiz": 28,
-  "quiz_label": 2,
-  "qno": 5,
-  "page": 3,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "WhichmatrixisinEchelonFormbutnotinReducedEchelonForm? Selectone: A. ⎡⎤ 3−100 ⎣00−32⎦ 0010 B. ⎡⎤ 00−32 ⎣3−100⎦ 0000 C. ⎡⎤ 3−100 ⎣0000⎦ 00−32 D. ⎡⎤ 3−100 ⎣00−32⎦ 0000",
-  "options": [
-   {
-    "L": "A",
-    "text": "⎡⎤ 3−100 ⎣00−32⎦ 0010",
-    "y": 159.6
-   },
-   {
-    "L": "B",
-    "text": "⎡⎤ 00−32 ⎣3−100⎦ 0000",
-    "y": 240.6
-   },
-   {
-    "L": "C",
-    "text": "⎡⎤ 3−100 ⎣0000⎦ 00−32",
-    "y": 322.3
-   },
-   {
-    "L": "D",
-    "text": "⎡⎤ 3−100 ⎣00−32⎦ 0000",
-    "y": 404.1
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": null,
-  "printedFull": "theleadingentryofthesecondnonzerorowtotheleftoftheleading Chasazerorowaboveanonzerorow. ⎡⎤ 3−100 ⎣00−32⎦ 0000",
-  "solution": "Youranswerisincorrect. D.Itsleadingentriesmovetotherightastherownumberincreases,allentriesbeloweach leadingentryarezero,andthezerorowisatthebottom.ItisnotinReducedEchelonForm becauseitsleadingentriesarenot1.OptionAhasanonzeroentrybelowtheleadingentryin column3.OptionBhastheleadingentryofthesecondnonzerorowtotheleftoftheleading entryaboveit.OptionChasazerorowaboveanonzerorow. Thecorrectansweris: ⎡⎤ 3−100 ⎣00−32⎦ 0000",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    501.38
-   ],
-   "feed": [
-    37.88,
-    514.12,
-    574.88,
-    755.62
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     162.15,
-     66.22,
-     171.6
-    ],
-    [
-     56.78,
-     243.9,
-     66.22,
-     253.35
-    ],
-    [
-     56.78,
-     325.65,
-     66.22,
-     335.1
-    ],
-    [
-     56.78,
-     407.4,
-     66.22,
-     416.85
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "D",
-  "keySrc": "contain",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
- },
- {
   "qid": "b8-07",
   "tag": "B8",
   "file": "2-8.pdf",
@@ -14963,168 +15575,6 @@
   "answerText": "-6, -5, -4, 3",
   "answerSrc": "ai",
   "aiGenerated": true
- },
- {
-  "qid": "b8-08",
-  "tag": "B8",
-  "file": "2-8.pdf",
-  "quiz": 28,
-  "quiz_label": 2,
-  "qno": 8,
-  "page": 5,
-  "type": "fill",
-  "verdict": null,
-  "student": null,
-  "stem": "⎡⎤⎡⎤ 21−3−5 LetA=−516,b=−1. ⎣⎦⎣⎦ 70−9k",
-  "options": [],
-  "tick": null,
-  "cross": null,
-  "printed": "-4",
-  "printedFull": "-4",
-  "solution": "Thecorrectansweris:-4",
-  "rects": {
-   "stem": [
-    37.88,
-    442.12,
-    574.88,
-    571.88
-   ],
-   "feed": [
-    37.88,
-    584.62,
-    574.88,
-    633.38
-   ],
-   "head": [
-    37.88,
-    380.62,
-    574.88,
-    429.38
-   ],
-   "radios": [],
-   "inputs": [
-    [
-     457.12,
-     513.38,
-     540.38,
-     541.12
-    ]
-   ],
-   "pua": [
-    [
-     541.93,
-     521.06,
-     553.93,
-     533.44
-    ]
-   ]
-  },
-  "key": null,
-  "keySrc": "none",
-  "keyConf": "none",
-  "blanks": 1,
-  "answers": [
-   "-4"
-  ],
-  "answerText": "-4",
-  "answerSrc": "pdf",
-  "aiGenerated": false
- },
- {
-  "qid": "b8-09",
-  "tag": "B8",
-  "file": "2-8.pdf",
-  "quiz": 28,
-  "quiz_label": 2,
-  "qno": 9,
-  "page": 6,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "Considerthefollowingsystemoflinearequations: ⎧ x1+2x2−6x3=−1 ⎨ ⎩ 3x1−6x2−3x3=2. −12x2+15x3=5 Whichofthefollowingcorrectlydescribesthesolutionsetofthesystem? Selectone: A.Thesolutionsetisaplanenotthroughtheorigin. B.Thesolutionsetisalinethroughtheorigin. C.Thesolutionsetisaplanethroughtheorigin. D.Thesolutionsetisalinenotthroughtheorigin.",
-  "options": [
-   {
-    "L": "A",
-    "text": "Thesolutionsetisaplanenotthroughtheorigin.",
-    "y": 268.3
-   },
-   {
-    "L": "B",
-    "text": "Thesolutionsetisalinethroughtheorigin.",
-    "y": 295.3
-   },
-   {
-    "L": "C",
-    "text": "Thesolutionsetisaplanethroughtheorigin.",
-    "y": 322.3
-   },
-   {
-    "L": "D",
-    "text": "Thesolutionsetisalinenotthroughtheorigin.",
-    "y": 349.3
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": "Thesolutionsetisalinenotthroughtheorigin.",
-  "printedFull": "Thesolutionsetisalinenotthroughtheorigin.",
-  "solution": "Youranswerisincorrect. Thecorrectansweris:Thesolutionsetisalinenotthroughtheorigin.",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    391.88
-   ],
-   "feed": [
-    37.88,
-    404.62,
-    574.88,
-    477.38
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     271.65,
-     66.22,
-     281.1
-    ],
-    [
-     56.78,
-     298.65,
-     66.22,
-     308.1
-    ],
-    [
-     56.78,
-     325.65,
-     66.22,
-     335.1
-    ],
-    [
-     56.78,
-     352.65,
-     66.22,
-     362.1
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "D",
-  "keySrc": "exact",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
  },
  {
   "qid": "b8-11",
@@ -15449,102 +15899,6 @@
   "answerText": "4",
   "answerSrc": "ai",
   "aiGenerated": true
- },
- {
-  "qid": "b9-02",
-  "tag": "B9",
-  "file": "2-9.pdf",
-  "quiz": 29,
-  "quiz_label": 2,
-  "qno": 2,
-  "page": 1,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "WhichoneofthefollowingsetsofvectorsinR4islinearlyindependent? Selectone: ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤⎡⎤ A.−4−2−15−1 ⎨⎬ −1−86−6−6 ,,,, ⎩⎭ ⎣9⎦⎣−6⎦⎣−9⎦⎣−8⎦⎣−7⎦ 93943 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ B.−1−235 ⎨⎬ −2−43−9 ,,, ⎩⎭ ⎣−3⎦⎣−6⎦⎣4⎦⎣2⎦ 008−1 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ C.1111 ⎨⎬ 1−22−1 ,,, ⎩⎭ ⎣1⎦⎣4⎦⎣4⎦⎣1⎦ 1−88−1 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ D.235−6 ⎨⎬ 4484 ,,, ⎩022−1⎭ ⎣⎦⎣⎦⎣⎦⎣⎦ −6600",
-  "options": [
-   {
-    "L": "A",
-    "text": "−4−2−15−1 ⎨⎬ −1−86−6−6 ,,,, ⎩⎭ ⎣9⎦⎣−6⎦⎣−9⎦⎣−8⎦⎣−7⎦ 93943 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤",
-    "y": 159.6
-   },
-   {
-    "L": "B",
-    "text": "−1−235 ⎨⎬ −2−43−9 ,,, ⎩⎭ ⎣−3⎦⎣−6⎦⎣4⎦⎣2⎦ 008−1 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤",
-    "y": 240.6
-   },
-   {
-    "L": "C",
-    "text": "1111 ⎨⎬ 1−22−1 ,,, ⎩⎭ ⎣1⎦⎣4⎦⎣4⎦⎣1⎦ 1−88−1 ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤",
-    "y": 321.6
-   },
-   {
-    "L": "D",
-    "text": "235−6 ⎨⎬ 4484 ,,, ⎩022−1⎭ ⎣⎦⎣⎦⎣⎦⎣⎦ −6600",
-    "y": 402.6
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": "1−22−1 ,,,",
-  "printedFull": "⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ 1111 ⎨⎬ 1−22−1 1−22−1 ,,, 1−88−1",
-  "solution": "Youranswerisincorrect. ⎧⎫ ⎡⎤⎡⎤⎡⎤⎡⎤ 1111 ⎨⎬ 1−22−1 Thecorrectansweris:,,, ⎩1441⎭ ⎣⎦⎣⎦⎣⎦⎣⎦ 1−88−1",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    499.12
-   ],
-   "feed": [
-    37.88,
-    511.88,
-    574.88,
-    638.62
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     162.15,
-     66.22,
-     171.6
-    ],
-    [
-     56.78,
-     243.15,
-     66.22,
-     252.6
-    ],
-    [
-     56.78,
-     324.9,
-     66.22,
-     334.35
-    ],
-    [
-     56.78,
-     405.9,
-     66.22,
-     415.35
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "C",
-  "keySrc": "contain",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
  },
  {
   "qid": "b9-03",
@@ -16093,102 +16447,6 @@
   "aiGenerated": false
  },
  {
-  "qid": "b10-01",
-  "tag": "B10",
-  "file": "2-10.pdf",
-  "quiz": 30,
-  "quiz_label": 2,
-  "qno": 1,
-  "page": 1,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "WhichofthefollowinggivesallsolutionstotheequationAx0inparametricvectorform, = where ⎡⎤ 01−3−2 A =⎣12−22⎦? −2−1−5−10 Selectone: ⎡⎤⎡⎤ A.46 −3−2 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤ B.−4 3 xs(sR) =in ⎣1⎦ 0 ⎡⎤⎡⎤ C.−4−6 32 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤ D.6 −2 xt(tR) =in ⎣0⎦ 1",
-  "options": [
-   {
-    "L": "A",
-    "text": "46 −3−2 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤",
-    "y": 242.1
-   },
-   {
-    "L": "B",
-    "text": "−4 3 xs(sR) =in ⎣1⎦ 0 ⎡⎤⎡⎤",
-    "y": 323.1
-   },
-   {
-    "L": "C",
-    "text": "−4−6 32 xst(s,tR) =+in ⎣1⎦⎣0⎦ 01 ⎡⎤",
-    "y": 404.8
-   },
-   {
-    "L": "D",
-    "text": "6 −2 xt(tR) =in ⎣0⎦ 1",
-    "y": 485.8
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": "32 xst(s,tR) =+in",
-  "printedFull": "⎡⎤⎡⎤ −4−6 32 32 xst(s,tR) =+in 01",
-  "solution": "Youranswerisincorrect. ⎡⎤⎡⎤ −4−6 32 Thecorrectansweris:xst(s,tR) =+in ⎣1⎦⎣0⎦ 01",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    582.38
-   ],
-   "feed": [
-    37.88,
-    595.12,
-    574.88,
-    721.88
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     245.4,
-     66.22,
-     254.85
-    ],
-    [
-     56.78,
-     326.4,
-     66.22,
-     335.85
-    ],
-    [
-     56.78,
-     407.4,
-     66.22,
-     416.85
-    ],
-    [
-     56.78,
-     488.4,
-     66.22,
-     497.85
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "C",
-  "keySrc": "contain",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
- },
- {
   "qid": "b10-03",
   "tag": "B10",
   "file": "2-10.pdf",
@@ -16457,168 +16715,6 @@
    "3"
   ],
   "answerText": "-9, 6, -2, 3",
-  "answerSrc": "ai",
-  "aiGenerated": true
- },
- {
-  "qid": "b10-07",
-  "tag": "B10",
-  "file": "2-10.pdf",
-  "quiz": 30,
-  "quiz_label": 2,
-  "qno": 7,
-  "page": 7,
-  "type": "choice",
-  "verdict": null,
-  "student": null,
-  "stem": "WhichofthefollowingmatricesisthestandardmatrixofarotationabouttheorigininR2 2×2 ? Selectone: ⎡⎤ A. √14−√22 ⎣66⎦ −√22−√14 66 ⎡⎤ B. −√43−√6 ⎣77⎦ √6−√43 77 C.[3−4] 77 4−3 77 D.[4−5] 99 54 99",
-  "options": [
-   {
-    "L": "A",
-    "text": "√14−√22 ⎣66⎦ −√22−√14 66 ⎡⎤",
-    "y": 177.6
-   },
-   {
-    "L": "B",
-    "text": "−√43−√6 ⎣77⎦ √6−√43 77",
-    "y": 236.1
-   },
-   {
-    "L": "C",
-    "text": "[3−4] 77 4−3 77",
-    "y": 294.6
-   },
-   {
-    "L": "D",
-    "text": "[4−5] 99 54 99",
-    "y": 345.6
-   }
-  ],
-  "tick": null,
-  "cross": null,
-  "printed": "⎣77⎦",
-  "printedFull": "⎡⎤ −√43−√6 ⎣77⎦ 77",
-  "solution": "Youranswerisincorrect. ⎡⎤ −√43−√6 Thecorrectansweris:⎣77⎦ √6−√43 77",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    412.12
-   ],
-   "feed": [
-    37.88,
-    424.88,
-    574.88,
-    529.12
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [
-    [
-     56.78,
-     180.15,
-     66.22,
-     189.6
-    ],
-    [
-     56.78,
-     238.65,
-     66.22,
-     248.1
-    ],
-    [
-     56.78,
-     297.15,
-     66.22,
-     306.6
-    ],
-    [
-     56.78,
-     348.9,
-     66.22,
-     358.35
-    ]
-   ],
-   "inputs": [],
-   "pua": []
-  },
-  "key": "B",
-  "keySrc": "vision",
-  "keyConf": "high",
-  "blanks": 0,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
- },
- {
-  "qid": "b10-08",
-  "tag": "B10",
-  "file": "2-10.pdf",
-  "quiz": 30,
-  "quiz_label": 2,
-  "qno": 8,
-  "page": 8,
-  "type": "fill",
-  "verdict": "Incorrect",
-  "student": ",",
-  "stem": "Considerthehomogeneouslinearsystem {x1−x28x3 +=0 . −x1−4x22x3 +=0 Thesystemhasnontrivialsolutions.Writethegeneralsolutioninparametricvectorform: ⎡⎤ a xx3b =⎣⎦. 1 a=b=",
-  "options": [],
-  "tick": null,
-  "cross": null,
-  "printed": null,
-  "printedFull": "Youranswerisincorrect.",
-  "solution": "Youranswerisincorrect.",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    347.62
-   ],
-   "feed": [
-    37.88,
-    360.38,
-    574.88,
-    409.12
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [],
-   "inputs": [
-    [
-     66.38,
-     295.88,
-     105.38,
-     316.12
-    ],
-    [
-     125.62,
-     295.88,
-     164.62,
-     316.12
-    ]
-   ],
-   "pua": []
-  },
-  "key": null,
-  "keySrc": "none",
-  "keyConf": "none",
-  "blanks": 2,
-  "answers": [
-   "-6",
-   "2"
-  ],
-  "answerText": "-6, 2",
   "answerSrc": "ai",
   "aiGenerated": true
  },
@@ -18033,72 +18129,6 @@
   "aiGenerated": false
  },
  {
-  "qid": "b12-12",
-  "tag": "B12",
-  "file": "2-12.pdf",
-  "quiz": 32,
-  "quiz_label": 3,
-  "qno": 12,
-  "page": 9,
-  "type": "fill",
-  "verdict": null,
-  "student": null,
-  "stem": "⎡⎤ x 78 LetA.FindthevalueofxifmatrixAisnotinvertible. =⎣3−90⎦ −6−2−4",
-  "options": [],
-  "tick": null,
-  "cross": null,
-  "printed": null,
-  "printedFull": "11",
-  "solution": "Amatrixisinvertibleifallthecolumnsformalinearlyindependentset. Thecorrectansweris:11",
-  "rects": {
-   "stem": [
-    37.88,
-    413.62,
-    574.88,
-    541.88
-   ],
-   "feed": [
-    37.88,
-    554.62,
-    574.88,
-    627.38
-   ],
-   "head": [
-    37.88,
-    352.88,
-    574.88,
-    400.88
-   ],
-   "radios": [],
-   "inputs": [
-    [
-     95.62,
-     497.62,
-     504.38,
-     525.38
-    ]
-   ],
-   "pua": [
-    [
-     506.18,
-     505.31,
-     518.18,
-     517.69
-    ]
-   ]
-  },
-  "key": null,
-  "keySrc": "none",
-  "keyConf": "none",
-  "blanks": 1,
-  "answers": [
-   "11"
-  ],
-  "answerText": "11",
-  "answerSrc": "ai",
-  "aiGenerated": true
- },
- {
   "qid": "b12-14",
   "tag": "B12",
   "file": "2-12.pdf",
@@ -18776,7 +18806,7 @@
   ],
   "tick": null,
   "cross": null,
-  "printed": null,
+  "printed": "Thelineartransformationx↦AxmapsRnontoRm.",
   "printedFull": "Thelineartransformationx↦AxmapsRnontoRm.",
   "solution": "Thecorrectansweris:Thelineartransformationx↦AxmapsRnontoRm.",
   "rects": {
@@ -18834,72 +18864,6 @@
   "answers": null,
   "answerText": "",
   "answerSrc": "none",
-  "aiGenerated": false
- },
- {
-  "qid": "b14-01",
-  "tag": "B14",
-  "file": "2-14.pdf",
-  "quiz": 34,
-  "quiz_label": 3,
-  "qno": 1,
-  "page": 0,
-  "type": "fill",
-  "verdict": null,
-  "student": null,
-  "stem": "⎡⎤ 4−3−2 LetA.FindthevalueofxifmatrixAisnotinvertible. =⎣705⎦ x −86",
-  "options": [],
-  "tick": null,
-  "cross": null,
-  "printed": "4",
-  "printedFull": "ifallthecolumnsformalinearlyindependentset. 4",
-  "solution": "Amatrixisinvertibleifallthecolumnsformalinearlyindependentset. Thecorrectansweris:4",
-  "rects": {
-   "stem": [
-    37.88,
-    289.88,
-    574.88,
-    417.38
-   ],
-   "feed": [
-    37.88,
-    430.12,
-    574.88,
-    502.88
-   ],
-   "head": [
-    37.88,
-    228.38,
-    574.88,
-    277.12
-   ],
-   "radios": [],
-   "inputs": [
-    [
-     95.62,
-     373.88,
-     504.38,
-     401.62
-    ]
-   ],
-   "pua": [
-    [
-     506.18,
-     381.56,
-     518.18,
-     393.94
-    ]
-   ]
-  },
-  "key": null,
-  "keySrc": "none",
-  "keyConf": "none",
-  "blanks": 1,
-  "answers": [
-   "4"
-  ],
-  "answerText": "4",
-  "answerSrc": "pdf",
   "aiGenerated": false
  },
  {
@@ -19575,72 +19539,6 @@
   "aiGenerated": false
  },
  {
-  "qid": "b14-15",
-  "tag": "B14",
-  "file": "2-14.pdf",
-  "quiz": 34,
-  "quiz_label": 3,
-  "qno": 15,
-  "page": 14,
-  "type": "fill",
-  "verdict": null,
-  "student": null,
-  "stem": "⎡⎤ 3−36 LetA.Findthe-entryofthematrixAT. =⎣7−75⎦(1,2) 8−91",
-  "options": [],
-  "tick": null,
-  "cross": null,
-  "printed": "7",
-  "printedFull": "ofmatrix.AT =⎣−3−7−9⎦ 651 7",
-  "solution": "⎡⎤ 378 Theproblemisthetransposeofmatrix.AT =⎣−3−7−9⎦ 651 Thecorrectansweris:7",
-  "rects": {
-   "stem": [
-    37.88,
-    89.62,
-    574.88,
-    217.88
-   ],
-   "feed": [
-    37.88,
-    230.62,
-    574.88,
-    338.62
-   ],
-   "head": [
-    37.88,
-    28.88,
-    574.88,
-    76.88
-   ],
-   "radios": [],
-   "inputs": [
-    [
-     95.62,
-     173.62,
-     504.38,
-     201.38
-    ]
-   ],
-   "pua": [
-    [
-     506.18,
-     181.31,
-     518.18,
-     193.69
-    ]
-   ]
-  },
-  "key": null,
-  "keySrc": "none",
-  "keyConf": "none",
-  "blanks": 1,
-  "answers": [
-   "7"
-  ],
-  "answerText": "7",
-  "answerSrc": "pdf",
-  "aiGenerated": false
- },
- {
   "qid": "b15-01",
   "tag": "B15",
   "file": "2-15.pdf",
@@ -19991,6 +19889,72 @@
    "7"
   ],
   "answerText": "7",
+  "answerSrc": "pdf",
+  "aiGenerated": false
+ },
+ {
+  "qid": "b15-05",
+  "tag": "B15",
+  "file": "2-15.pdf",
+  "quiz": 35,
+  "quiz_label": 3,
+  "qno": 5,
+  "page": 3,
+  "type": "fill",
+  "verdict": null,
+  "student": null,
+  "stem": "⎡⎤ 8−3−5 LetA.Findthe-entryofthematrixAT. =⎣−1−92⎦(1,2) 56−6",
+  "options": [],
+  "tick": null,
+  "cross": null,
+  "printed": "-1",
+  "printedFull": "ofmatrix.AT =⎣−3−96⎦ −52−6 -1",
+  "solution": "⎡⎤ 8−15 Theproblemisthetransposeofmatrix.AT =⎣−3−96⎦ −52−6 Thecorrectansweris:-1",
+  "rects": {
+   "stem": [
+    37.88,
+    476.62,
+    574.88,
+    604.88
+   ],
+   "feed": [
+    37.88,
+    617.62,
+    574.88,
+    724.88
+   ],
+   "head": [
+    37.88,
+    415.88,
+    574.88,
+    463.88
+   ],
+   "radios": [],
+   "inputs": [
+    [
+     95.62,
+     560.62,
+     504.38,
+     588.38
+    ]
+   ],
+   "pua": [
+    [
+     506.18,
+     568.31,
+     518.18,
+     580.69
+    ]
+   ]
+  },
+  "key": null,
+  "keySrc": "none",
+  "keyConf": "none",
+  "blanks": 1,
+  "answers": [
+   "-1"
+  ],
+  "answerText": "-1",
   "answerSrc": "pdf",
   "aiGenerated": false
  },
@@ -20394,6 +20358,72 @@
    "-1"
   ],
   "answerText": "-1",
+  "answerSrc": "pdf",
+  "aiGenerated": false
+ },
+ {
+  "qid": "b15-12",
+  "tag": "B15",
+  "file": "2-15.pdf",
+  "quiz": 35,
+  "quiz_label": 3,
+  "qno": 12,
+  "page": 7,
+  "type": "fill",
+  "verdict": null,
+  "student": null,
+  "stem": "⎡⎤ x02 LetA.FindthevalueofxifmatrixAisnotinvertible. =⎣465⎦ −9−7−8",
+  "options": [],
+  "tick": null,
+  "cross": null,
+  "printed": "4",
+  "printedFull": "ifallthecolumnsformalinearlyindependentset. 4",
+  "solution": "Amatrixisinvertibleifallthecolumnsformalinearlyindependentset. Thecorrectansweris:4",
+  "rects": {
+   "stem": [
+    37.88,
+    451.88,
+    574.88,
+    579.38
+   ],
+   "feed": [
+    37.88,
+    592.12,
+    574.88,
+    664.88
+   ],
+   "head": [
+    37.88,
+    390.38,
+    574.88,
+    439.12
+   ],
+   "radios": [],
+   "inputs": [
+    [
+     95.62,
+     535.88,
+     504.38,
+     563.62
+    ]
+   ],
+   "pua": [
+    [
+     506.18,
+     543.56,
+     518.18,
+     555.94
+    ]
+   ]
+  },
+  "key": null,
+  "keySrc": "none",
+  "keyConf": "none",
+  "blanks": 1,
+  "answers": [
+   "4"
+  ],
+  "answerText": "4",
   "answerSrc": "pdf",
   "aiGenerated": false
  },

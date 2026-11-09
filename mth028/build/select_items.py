@@ -173,10 +173,16 @@ def main():
         opts = "|".join(NUM.sub("#", norm(o["text"])) for o in r["options"])
         return s, opts
 
+    # Keep the representative of a template stable across rebuilds: an item
+    # that already shipped keeps its id, so a student's stored progress and
+    # favourites still point at the same question.
+    LEGACY = {"p%d-%02d" % (q, n) for q in range(1, 11) for n in range(1, 16)}
+
     def rank(r):
         return (1 if (r["key"] or r["printed"]) else 0,
                 1 if r["keyConf"] == "high" else 0,
                 1 if r["verdict"] == "Correct" else 0,
+                1 if r["qid"] in LEGACY else 0,
                 r["quiz"])
 
     pool = sorted(rows, key=rank, reverse=True)
@@ -245,17 +251,37 @@ def main():
     fx_path = os.path.join(D, "answer_fixes.json")
     if os.path.exists(fx_path):
         fx = json.load(open(fx_path))
+        # a fix is keyed by qid, but the qid that represents a template can
+        # change when a better copy is picked; follow the merge trail so a fix
+        # follows its question instead of silently dropping out
+        alias = {}
+        dup_path = os.path.join(D, "duplicates.json")
+        if os.path.exists(dup_path):
+            for d in json.load(open(dup_path)):
+                alias[d["qid"]] = d["mergedInto"]
+
+        def lookup(bucket, qid):
+            for _ in range(6):
+                if qid in bucket:
+                    return bucket[qid]
+                if qid not in alias:
+                    return None
+                qid = alias[qid]
+            return None
+
         nf = nc = 0
         for r in keep:
-            f = (fx.get("fill") or {}).get(r["qid"])
-            if f and f.get("answers"):
+            f = lookup(fx.get("fill") or {}, r["qid"])
+            # once the export itself prints an answer, the paper wins over the
+            # hand-computed one (it also caught one mis-read value)
+            if f and f.get("answers") and r["answerSrc"] != "pdf":
                 r["blanks"] = int(f.get("blanks") or len(f["answers"]))
                 r["answers"] = [str(a) for a in f["answers"]]
                 r["answerText"] = ", ".join(r["answers"])
                 r["answerSrc"] = "ai"
                 r["aiGenerated"] = True
                 nf += 1
-            c = (fx.get("choice") or {}).get(r["qid"])
+            c = lookup(fx.get("choice") or {}, r["qid"])
             if c:
                 r["key"] = c
                 r["keySrc"] = "vision"
