@@ -43,7 +43,7 @@ python3 build/export_bank_index.py   # 后台用索引    → out/bank_index28.j
 | `img/q/<qid>.png` `img/a/<qid>.png` | 028 题图 / 答案图 | 每个 item 两张 |
 | `q/` `pq/` | 026 的题图（351 + 323） | 命名与 028 无关 |
 | `admin.html` | 后台控制台 | 同时管 026 和 028（`bank28` 系列接口） |
-| `server/server.py` | **后端（真身，1611 行）** | 标准库 `http.server`，无第三方依赖 |
+| `server/server.py` | **后端（真身，约 1600 行）** | 标准库 `http.server`，无第三方依赖 |
 | `mth028/build/*.py` | 题库管线 | 不在运行路径上，只产出数据 |
 | `mth028/data/*.json` | 管线的中间与最终数据 | 见第 6 节字典 |
 | `mth028/out/` | 构建工作区（`bank.js`/`img`/`index.html` 的暂存） | 同步进仓库根后才上线 |
