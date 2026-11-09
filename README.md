@@ -6,6 +6,10 @@ time without losing your place.
 
 **Live:** <http://183.66.27.19:58621/> (server listens on port 8088)
 
+**Maintainer docs:** [`TECH.md`](TECH.md) — runtime flow, every API endpoint, the
+data model, the build pipeline, deployment steps and the list of traps. Read that
+first before changing anything.
+
 | Course | Entry | Bank | Topics | Glossary |
 |---|---|---|---|---|
 | **MTH028 · Linear Algebra I** | `/` → `index.html` | 228 items (178 choice · 36 fill · 14 cloze) | 17 (1.1–2.8) | 33 groups / 212 terms |
