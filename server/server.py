@@ -53,6 +53,8 @@ PROGRESS_TABLES = ("progress", "progress28")
 
 BANK_INDEX_PATH = os.environ.get("MTH026_BANK_INDEX", "/opt/mth026/bank_index.json")
 _BANK_CACHE = None            # lazy {id: row} of the build-time answer index
+BANK28_INDEX_PATH = os.environ.get("MTH028_BANK_INDEX", "/opt/mth026/bank_index28.json")
+_BANK28_CACHE = None          # lazy {id: row} of MTH028 build-time answer index
 
 LOCK = threading.Lock()
 
@@ -135,6 +137,12 @@ def init_db():
             detail  TEXT
         );
         CREATE TABLE IF NOT EXISTS bank_overrides(
+            item_id INTEGER PRIMARY KEY,
+            ans     TEXT,
+            note    TEXT,
+            updated REAL NOT NULL
+        );
+        CREATE TABLE IF NOT EXISTS bank_overrides28(
             item_id INTEGER PRIMARY KEY,
             ans     TEXT,
             note    TEXT,
@@ -430,6 +438,20 @@ def bank_base(iid):
     return row["a"] if row else None
 
 
+def bank28_map():
+    """MTH028 build-time items keyed by id."""
+    global _BANK28_CACHE
+    if _BANK28_CACHE is None:
+        try:
+            with open(BANK28_INDEX_PATH, "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+            _BANK28_CACHE = {r["id"]: r for r in data.get("items", [])
+                             if isinstance(r, dict) and isinstance(r.get("id"), int)}
+        except (OSError, ValueError, TypeError, KeyError):
+            _BANK28_CACHE = {}
+    return _BANK28_CACHE
+
+
 def bank_match(r, q):
     """Same search grammar as the front-end Bank view: 12 / Q12 / P7 / 2.5."""
     m = re.match(r"^([qp]?)\s*0*(\d{1,3})$", q)
@@ -449,6 +471,11 @@ def bank_now(con):
     """Timestamp strictly newer than every stored override, so two writes in
     the same millisecond still get distinct versions."""
     m = con.execute("SELECT COALESCE(MAX(updated), 0) m FROM bank_overrides").fetchone()["m"]
+    return max(time.time(), m + 0.001)
+
+
+def bank_now28(con):
+    m = con.execute("SELECT COALESCE(MAX(updated), 0) m FROM bank_overrides28").fetchone()["m"]
     return max(time.time(), m + 0.001)
 
 
@@ -630,6 +657,9 @@ class App(BaseHTTPRequestHandler):
 
         if api == "overrides" and method == "GET":
             return self._overrides()
+
+        if api == "overrides28" and method == "GET":
+            return self._overrides28()
 
         if api == "admin" or api.startswith("admin/"):
             return self._admin(method, path)
@@ -866,6 +896,12 @@ class App(BaseHTTPRequestHandler):
             return self._admin_bank_ans()
         if api == "bank/note" and method == "POST":
             return self._admin_bank_note()
+        if api == "bank28" and method == "GET":
+            return self._admin_bank28()
+        if api == "bank28/ans" and method == "POST":
+            return self._admin_bank28_ans()
+        if api == "bank28/note" and method == "POST":
+            return self._admin_bank28_note()
         if api == "export.csv":
             return self._admin_csv()
         if api == "user/pw" and method == "POST":
@@ -1301,6 +1337,183 @@ class App(BaseHTTPRequestHandler):
         audit(client_ip(self), "bank.ans", str(iid), "%s->%s" % (prev or "-", new))
         return self._json(200, {"ok": True})
 
+    # ---- MTH028 bank: runtime answer overrides ----
+    def _overrides28(self):
+        con = connect()
+        try:
+            row = con.execute(
+                "SELECT COALESCE(MAX(updated), 0) m, COUNT(*) c FROM bank_overrides28").fetchone()
+            rows = con.execute(
+                "SELECT item_id, ans FROM bank_overrides28").fetchall()
+        finally:
+            con.close()
+        ov = {}
+        for r in rows:
+            try:
+                ov[str(r["item_id"])] = json.loads(r["ans"]) if r["ans"] else None
+            except (ValueError, TypeError):
+                pass
+        return self._json(200, {"updated": row["m"], "count": row["c"], "overrides": ov})
+
+    def _admin_bank28(self):
+        q = parse_qs(urlsplit(self.path).query)
+        arg = lambda k, d: (q.get(k) or [d])[0]
+        needle = arg("q", "").strip().lower()
+        ftype = arg("type", "all")
+        filt = arg("filter", "all")
+        try:
+            limit = max(1, min(int(arg("limit", "50")), 200))
+        except ValueError:
+            limit = 50
+        try:
+            off = max(0, int(arg("offset", "0")))
+        except ValueError:
+            off = 0
+
+        base = bank28_map()
+        con = connect()
+        try:
+            ov = {r["item_id"]: r for r in con.execute(
+                "SELECT item_id, ans, note, updated FROM bank_overrides28")}
+        finally:
+            con.close()
+
+        rows = []
+        for iid in set(base) | set(ov):
+            b = base.get(iid)
+            o = ov.get(iid)
+            # Build base answer string
+            if b:
+                if b.get("type") == "choice":
+                    base_ans = b.get("key") or ""
+                else:
+                    base_ans = ",".join(b.get("answers") or []) or ""
+            else:
+                base_ans = ""
+            # Build override answer string
+            ov_ans = None
+            if o and o["ans"]:
+                try:
+                    od = json.loads(o["ans"])
+                    if "key" in od:
+                        ov_ans = od["key"]
+                    elif "answers" in od:
+                        ov_ans = ",".join(od["answers"])
+                except (ValueError, TypeError):
+                    pass
+            rows.append({
+                "id": iid,
+                "qid": b.get("qid") if b else "",
+                "label": b.get("label") if b else "",
+                "type": b.get("type") if b else "?",
+                "topic": b.get("topic") if b else "",
+                "base": base_ans,
+                "current": ov_ans if ov_ans is not None else base_ans,
+                "changed": ov_ans is not None and ov_ans != base_ans,
+                "note": o["note"] if o else None,
+                "img": b.get("img") if b else "",
+                "answerImg": b.get("answerImg") if b else "",
+                "blanks": b.get("blanks", 1) if b else 1,
+            })
+        if ftype in ("choice", "fill", "cloze"):
+            rows = [r for r in rows if r["type"] == ftype]
+        if filt == "changed":
+            rows = [r for r in rows if r["changed"]]
+        elif filt == "missing":
+            rows = [r for r in rows if not r["current"]]
+        if needle:
+            rows = [r for r in rows if needle in r["qid"].lower()
+                    or needle in r["label"].lower()
+                    or (r["topic"] and needle in r["topic"].lower())]
+        rows.sort(key=lambda r: r["id"])
+        total = len(rows)
+        page = rows[off:off + limit]
+        return self._json(200, {"total": total, "rows": page})
+
+    def _admin_bank28_ans(self):
+        data = self._body()
+        try:
+            iid = int(data.get("id"))
+        except (TypeError, ValueError):
+            return self._err(400, "missing id")
+        if iid not in bank28_map():
+            return self._err(404, "no such item")
+        b = bank28_map()[iid]
+        raw = data.get("a")
+        if raw is not None:
+            raw = str(raw).strip()
+            if not raw:
+                raw = None
+        # Build the JSON answer object based on question type
+        ans_json = None
+        if raw is not None:
+            if b.get("type") == "choice":
+                raw = raw.upper()
+                if raw not in ("A", "B", "C", "D"):
+                    return self._err(400, "choice answer must be A-D")
+                ans_json = json.dumps({"key": raw})
+            else:
+                parts = [p.strip() for p in raw.split(",") if p.strip()]
+                expected = b.get("blanks", 1)
+                if len(parts) != expected:
+                    return self._err(400, "expected " + str(expected) + " value(s), got " + str(len(parts)))
+                ans_json = json.dumps({"answers": parts})
+        with LOCK:
+            con = connect()
+            try:
+                old = con.execute(
+                    "SELECT ans FROM bank_overrides28 WHERE item_id = ?", (iid,)).fetchone()
+                now = bank_now28(con)
+                if ans_json is None:
+                    if old:
+                        con.execute("DELETE FROM bank_overrides28 WHERE item_id = ?", (iid,))
+                        con.commit()
+                        audit(client_ip(self), "bank28_clear", str(iid), "cleared override for " + b.get("qid", str(iid)))
+                    return self._json(200, {"ok": True})
+                if old:
+                    con.execute("UPDATE bank_overrides28 SET ans = ?, updated = ? WHERE item_id = ?",
+                                (ans_json, now, iid))
+                else:
+                    con.execute("INSERT INTO bank_overrides28(item_id, ans, note, updated) VALUES(?,?,NULL,?)",
+                                (iid, ans_json, now))
+                con.commit()
+                audit(client_ip(self), "bank28_ans", str(iid), "set " + b.get("qid", str(iid)) + " = " + raw)
+            finally:
+                con.close()
+        return self._json(200, {"ok": True})
+
+    def _admin_bank28_note(self):
+        data = self._body()
+        try:
+            iid = int(data.get("id"))
+        except (TypeError, ValueError):
+            return self._err(400, "missing id")
+        if iid not in bank28_map():
+            return self._err(404, "no such item")
+        note = data.get("note")
+        if note is not None:
+            note = str(note).strip()
+            if not note:
+                note = None
+        with LOCK:
+            con = connect()
+            try:
+                old = con.execute(
+                    "SELECT note FROM bank_overrides28 WHERE item_id = ?", (iid,)).fetchone()
+                now = bank_now28(con)
+                if note is None and not old:
+                    return self._json(200, {"ok": True})
+                if old:
+                    con.execute("UPDATE bank_overrides28 SET note = ?, updated = ? WHERE item_id = ?",
+                                (note, now, iid))
+                else:
+                    con.execute("INSERT INTO bank_overrides28(item_id, ans, note, updated) VALUES(?,NULL,?,?)",
+                                (iid, note, now))
+                con.commit()
+            finally:
+                con.close()
+        return self._json(200, {"ok": True})
+
     def _admin_bank_note(self):
         data = self._body()
         try:
@@ -1361,9 +1574,12 @@ class App(BaseHTTPRequestHandler):
 
         if path.startswith(("/q/", "/pq/", "/katex/")):
             cache = "public, max-age=2592000, immutable"
-        elif ext in (".html",) or path in ("/bank.js", "/app.css"):
+        elif ext in (".html",) or path in ("/bank.js", "/app.css") or path.startswith("/img/"):
             # The question bank is generated data and may be edited without a
             # page rebuild; never let a stale copy survive a day in a browser.
+            # /img/ is in the same boat: a rebuilt crop keeps its qid as file
+            # name, so a 1-day cache would keep serving the old (possibly
+            # answer-leaking) screenshot.
             cache = "no-cache"
         else:
             cache = "public, max-age=86400"
