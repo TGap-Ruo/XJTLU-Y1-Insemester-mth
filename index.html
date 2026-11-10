@@ -859,9 +859,14 @@ function variantsBlock(it){
   /* on a template card every sibling is an extra draw; on a variant card the
      chips are the template plus the other siblings */
   var nMore = sibs.length;
-  var head = it.variantOf
-    ? ('Another draw of <b>'+escHtml(rep.label)+'</b> <span class="tz">同模板的另一组数字</span>')
-    : ('<b>'+nMore+'</b> more draw'+(nMore>1?'s':'')+' of this question <span class="tz">同模板的另外 '+nMore+' 组数字</span>');
+  var title, sub;
+  if(it.variantOf){
+    title = '这一题还有 ' + nMore + ' 个版本';
+    sub   = 'Another draw of ' + rep.label + ' · 同模板的另一组数字';
+  } else {
+    title = '同模板还有 ' + nMore + ' 组数字';
+    sub   = nMore + ' more draw' + (nMore>1?'s':'') + ' of this question · 换个数字再练一遍';
+  }
   var body = chips.map(function(id){
     var v=BYID[id]; if(!v) return '';
     var g=autoGradeable(v), rec=store.h[id];
@@ -870,7 +875,12 @@ function variantsBlock(it){
       +escHtml(v.label)+(g?'':'<i>自评</i>')
       +(rec?(rec.ok?'<u>✓</u>':'<u>✕</u>'):'')+'</button>';
   }).join('');
-  return '<details class="vbox"><summary>'+head+'</summary><div class="vchips">'+body+'</div></details>';
+  return '<details class="vbox">'
+    +'<summary><span class="vicon">&#10697;</span>'
+    +'<span class="vtext"><b>'+escHtml(title)+'</b><span class="vsub">'+escHtml(sub)+'</span></span>'
+    +'<span class="vcount">'+chips.length+'</span>'
+    +'<span class="vhint">展开练习 <i>&#9662;</i></span></summary>'
+    +'<div class="vchips">'+body+'</div></details>';
 }
 function viewQuiz(){
   if(round.i>=round.list.length){ round.done=true; return viewRes(); }
