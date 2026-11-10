@@ -190,13 +190,13 @@ def main():
     for r in pool:
         rs, ro = shape(r)
         hit = None
-        for keep in reps:
-            if keep["type"] != r["type"] or len(keep["options"]) != len(r["options"]):
+        for keep_ in reps:
+            if keep_["type"] != r["type"] or len(keep_["options"]) != len(r["options"]):
                 continue
-            ks, ko = shape(keep)
+            ks, ko = shape(keep_)
             if difflib.SequenceMatcher(None, rs, ks).ratio() >= 0.94 \
                     and difflib.SequenceMatcher(None, ro, ko).ratio() >= 0.90:
-                hit = keep
+                hit = keep_
                 break
         if hit is None:
             reps.append(r)
@@ -204,9 +204,22 @@ def main():
             dropped.append({"qid": r["qid"], "file": r["file"], "qno": r["qno"],
                             "mergedInto": hit["qid"]})
             merged.setdefault(hit["qid"], []).append(r["qid"])
+    for r in reps:
+        r["isRep"] = True
+        r["variantOf"] = None
+    # The variants are kept as first-class records: they are the same template
+    # with a fresh draw of numbers, so they are valid practice (the page shows
+    # them folded under their template instead of in the main list).
+    byqid = {r["qid"]: r for r in rows}
+    for d in dropped:
+        v = byqid[d["qid"]]
+        v["isRep"] = False
+        v["variantOf"] = d["mergedInto"]
+        d["variantLabel"] = None            # filled in below, for the audit file
     keep = reps
     keep.sort(key=lambda r: (r["quiz"], r["qno"]))
-    print("raw %d -> unique %d (merged %d)" % (len(rows), len(keep), len(dropped)))
+    print("raw %d -> unique %d (merged %d variants kept as practice)"
+          % (len(rows), len(keep), len(dropped)))
     big = sorted(merged.items(), key=lambda kv: -len(kv[1]))[:4]
     for q, lst in big:
         print("   %s <- %s" % (q, ", ".join(lst)))
@@ -214,7 +227,10 @@ def main():
     # ---------- 3. per-item answer payload ----------
     # One input box per blank -- a fill item can ask for several values
     # ("m = __, n = __"), and grading compares them one by one.
-    for r in keep:
+    # This runs over EVERY record, not just the representatives: a variant is a
+    # different draw of the same template, so it has its own numbers and its own
+    # answer, and it must be gradable on its own.
+    for r in rows:
         r["blanks"] = max(1, len(r["rects"]["inputs"])) if r["type"] == "fill" else 0
         r["answers"] = None
         r["answerText"] = ""
@@ -254,27 +270,29 @@ def main():
         # a fix is keyed by qid, but the qid that represents a template can
         # change when a better copy is picked; follow the merge trail so a fix
         # follows its question instead of silently dropping out
-        # duplicates.json maps every merged-away qid straight to the qid that
-        # represents it, so a fix must be looked up through the *group*, not
-        # only by its own key -- otherwise a fix silently stops applying as
-        # soon as a different copy of the same question becomes the
-        # representative.
-        members = {}
+        # A fix applies to EXACTLY one record.  Do not look it up through the
+        # dedup group: members of a group share a template but not their
+        # numbers, so the answer of one instance is wrong for another (this
+        # actually shipped once: an inverse-of-A answer was copied onto a
+        # different matrix).  If the fixed qid is no longer the representative,
+        # the fix is simply unused and the item shows up as "needs an answer".
         dup_path = os.path.join(D, "duplicates.json")
+        dropped_to = {}
         if os.path.exists(dup_path):
             for d in json.load(open(dup_path)):
-                members.setdefault(d["mergedInto"], set()).add(d["qid"])
+                dropped_to[d["qid"]] = d["mergedInto"]
 
         def lookup(bucket, qid):
             if qid in bucket:
                 return bucket[qid]
-            for m in sorted(members.get(qid, ())):
-                if m in bucket:
-                    return bucket[m]
             return None
 
+        def why_dropped(qid):
+            tgt = dropped_to.get(qid)
+            return (" (that copy was merged into %s)" % tgt) if tgt else ""
+
         nf = nc = 0
-        for r in keep:
+        for r in rows:
             f = lookup(fx.get("fill") or {}, r["qid"])
             # once the export itself prints an answer, the paper wins over the
             # hand-computed one (it also caught one mis-read value)
@@ -282,8 +300,15 @@ def main():
                 r["blanks"] = int(f.get("blanks") or len(f["answers"]))
                 r["answers"] = [str(a) for a in f["answers"]]
                 r["answerText"] = ", ".join(r["answers"])
-                r["answerSrc"] = "ai"
-                r["aiGenerated"] = True
+                # "from": "paper" marks a value that was read out of the
+                # review page's own explanation, so it must NOT carry the
+                # AI-generated badge.
+                if f.get("from") == "paper":
+                    r["answerSrc"] = "pdf"
+                    r["aiGenerated"] = False
+                else:
+                    r["answerSrc"] = "ai"
+                    r["aiGenerated"] = True
                 nf += 1
             c = lookup(fx.get("choice") or {}, r["qid"])
             if c:
@@ -295,11 +320,21 @@ def main():
 
     json.dump(keep, open(os.path.join(D, "selection.json"), "w"),
               ensure_ascii=False, indent=1)
+    # Every record, representative and variant alike.  The page shows the reps
+    # in the main list and folds the variants under their template; the admin
+    # console and the crop renderer read this file.
+    allrows = sorted(rows, key=lambda r: (r["quiz"], r["qno"]))
+    json.dump(allrows, open(os.path.join(D, "selection_all.json"), "w"),
+              ensure_ascii=False, indent=1)
     json.dump(dropped, open(os.path.join(D, "duplicates.json"), "w"),
               ensure_ascii=False, indent=1)
     un = [r for r in keep if r["type"] == "fill" and not r["answers"]]
     print("selected", len(keep), "| choice", sum(1 for r in keep if r["type"] == "choice"),
           "| fill", sum(1 for r in keep if r["type"] == "fill"))
+    vb = [r for r in allrows if r["variantOf"]]
+    print("all records:", len(allrows), "| variants:", len(vb),
+          "| variants gradable:",
+          sum(1 for r in vb if (r["key"] if r["type"] == "choice" else r["answers"])))
     print("fill needing an answer:", len(un))
     print("choice without key:", sum(1 for r in keep if r["type"] == "choice" and not r["key"]))
 

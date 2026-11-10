@@ -122,7 +122,10 @@ def main(out_override=None):
         # answer array and break per-blank grading.
         blanks = int(s.get("blanks") or (1 if qtype in ("fill", "cloze") else 0))
 
-        topic = m.get("topic") or None
+        # merge_bank already resolved the section for every record (a variant
+        # inherits its template's section), so prefer its value and fall back to
+        # the classifier's map
+        topic = s.get("topic") or m.get("topic") or None
         # printed answer (from quiz_structured, else our crop manifest)
         printed = s.get("printed_answer_text") or c.get("printed_answer_text")
         key = s.get("suggested_key") or None
@@ -208,13 +211,21 @@ def main(out_override=None):
             "aiGenerated": ai_generated,
             "options": options,
             "stem": esc_text(s.get("stem") or m.get("stem")),
+            # null for a template's representative; otherwise the qid of the
+            # representative this record is folded under
+            "variantOf": s.get("variant_of") or None,
             "notes": esc_text(notes),
         })
 
     bank = {
         "meta": {"course": "MTH028", "en": "Linear Algebra I",
                  "zh": "线性代数（一）", "version": 1,
+                 # total counts every gradable record (variants included);
+                 # "main" counts the representatives, which is what the bank
+                 # list, the topic bars and the smart rounds use
                  "total": len(items),
+                 "main": sum(1 for i in items if not i.get("variantOf")),
+                 "variants": sum(1 for i in items if i.get("variantOf")),
                  "topics": len(topics)},
         "chapters": chapters,
         "topics": topics,
@@ -229,7 +240,9 @@ def main(out_override=None):
 
     from collections import Counter
     print("bank.js", os.path.getsize(OUT), "bytes")
-    print("  items", len(items), "types", dict(Counter(i["type"] for i in items)))
+    print("  items", len(items), "main", bank["meta"]["main"],
+          "variants", bank["meta"]["variants"],
+          "types", dict(Counter(i["type"] for i in items)))
     print("  topics", len(topics), "chapters", len(chapters),
           "glossary", sum(len(g.get("items", [])) for g in bank["glossary"]["groups"]))
     print("  key(auto-grade choice)", sum(1 for i in items if i["key"]))

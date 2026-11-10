@@ -98,7 +98,10 @@ function normItem(it,i){
     answerText:(it.answerText==null? null : String(it.answerText)),
     answerSource:it.answerSource||'none',
     aiGenerated:!!it.aiGenerated,
-    options:options, stem:it.stem||'', notes:it.notes||''
+    options:options, stem:it.stem||'', notes:it.notes||'',
+    /* the template this record is a re-drawn copy of, or null for the
+       template itself (see MAIN below) */
+    variantOf:(it.variantOf==null? null : String(it.variantOf))
   };
 }
 function normGlossGroup(g,i){
@@ -131,6 +134,21 @@ var ITEMS  = BANK.items, GLOSS = BANK.glossary.groups;
 var BYID={}, TOPICMAP={};
 ITEMS.forEach(function(it){ BYID[it.id]=it; });
 TOPICS.forEach(function(t){ TOPICMAP[t.id]=t; });
+/* MAIN = one record per question template.  Moodle re-draws the numbers for
+   every attempt, so the same question arrives many times with different
+   values; those copies ship with `variantOf` pointing at the template's
+   representative and are folded under it on the card.  Everything that counts,
+   lists or schedules questions walks MAIN, so the bank is "285 questions"
+   while 675 records stay practiceable. */
+var MAIN = ITEMS.filter(function(it){ return !it.variantOf; });
+var ISMAIN={}; MAIN.forEach(function(it){ ISMAIN[it.id]=1; });
+var BYQID={}; ITEMS.forEach(function(it){ BYQID[it.qid]=it; });
+var VARIANTS={}, REP_OF={};
+MAIN.forEach(function(it){ VARIANTS[it.qid]=[]; });
+ITEMS.forEach(function(it){
+  if(it.variantOf && VARIANTS[it.variantOf]) VARIANTS[it.variantOf].push(it.id);
+  if(it.variantOf && BYQID[it.variantOf]) REP_OF[it.id]=BYQID[it.variantOf];
+});
 function topicInfo(id){
   if(id!=null && TOPICMAP[id]) return TOPICMAP[id];
   return {id:null,en:'Unsorted',zh:'未归类',ch:null,focus:'',steps:[],note:'',trap:''};
@@ -155,7 +173,7 @@ function typeNameOf(it){
 var BYTOPIC={};
 TOPICS.forEach(function(t){ BYTOPIC[t.id]=[]; });
 BYTOPIC['__untagged__']=[];
-ITEMS.forEach(function(it){
+MAIN.forEach(function(it){
   var k=(it.topic!=null && BYTOPIC[it.topic])? it.topic : '__untagged__';
   BYTOPIC[k].push(it.id);
 });
@@ -316,6 +334,7 @@ function overall(){
   var done=0,ok=0,selfDone=0;
   Object.keys(store.h).forEach(function(k){
     var r=store.h[k];
+    if(!ISMAIN[k]) return;              /* variants are extras, not the track */
     if(r.self){ selfDone++; return; }
     done++; if(r.ok) ok++;
   });
@@ -792,6 +811,35 @@ function feedbackHtml(it){
     +'<div class="sol">'+detail+ansLine+'</div>'+aimg+aiNoteHtml(it)
     +(it.notes? '<div class="fb-note">'+escHtml(it.notes)+'</div>':'')+'</div>';
 }
+/* ---------- template variants ----------
+   The same question, re-drawn with different numbers.  They are not in the
+   main list (that would be 285 near-identical cards), but they are real
+   practice, so every card offers them folded underneath, one click away. */
+function variantsBlock(it){
+  if(!it) return '';
+  var rep = it.variantOf ? (BYQID[it.variantOf] || null) : it;
+  if(!rep) return '';
+  var sibs = (VARIANTS[rep.qid] || []).slice();
+  var chips = [];
+  if(it.variantOf) chips.push(rep.id);           /* a way back to the template */
+  sibs.forEach(function(id){ if(id!==it.id) chips.push(id); });
+  if(!chips.length) return '';
+  /* on a template card every sibling is an extra draw; on a variant card the
+     chips are the template plus the other siblings */
+  var nMore = sibs.length;
+  var head = it.variantOf
+    ? ('Another draw of <b>'+escHtml(rep.label)+'</b> <span class="tz">同模板的另一组数字</span>')
+    : ('<b>'+nMore+'</b> more draw'+(nMore>1?'s':'')+' of this question <span class="tz">同模板的另外 '+nMore+' 组数字</span>');
+  var body = chips.map(function(id){
+    var v=BYID[id]; if(!v) return '';
+    var g=autoGradeable(v), rec=store.h[id];
+    return '<button class="vchip'+(g?'':' self')+'" onclick="startSingle('+id+')" '
+      +'title="'+escAttr(v.label+(g?'':' · 原卷未给答案，需自评'))+'">'
+      +escHtml(v.label)+(g?'':'<i>自评</i>')
+      +(rec?(rec.ok?'<u>✓</u>':'<u>✕</u>'):'')+'</button>';
+  }).join('');
+  return '<details class="vbox"><summary>'+head+'</summary><div class="vchips">'+body+'</div></details>';
+}
 function viewQuiz(){
   if(round.i>=round.list.length){ round.done=true; return viewRes(); }
   var it=currentItem(); if(!it) return viewHome();
@@ -823,6 +871,7 @@ function viewQuiz(){
    +(it.aiGenerated? '<div class="ai-strip" style="margin:10px 18px 0">'+aiTagHtml(it)+'<span class="tz">此题答案由 AI 补全，请以原卷裁图核对</span></div>':'')
    +answerAreaHtml(it,shown)
    +feedbackHtml(it)
+   +variantsBlock(it)
    +'</div>'
    +'<div style="display:flex;gap:8px;margin-top:14px;align-items:center;flex-wrap:wrap">'
    +'<button class="btn ghost" onclick="route(\'home\')">Exit <span class="zhx">退出</span></button>'
@@ -889,15 +938,15 @@ function viewHome(){
    '<div class="wrap"><div class="hero">'
    +'<h1>'+(fresh?'Start where it matters':'Keep the streak alive')+'</h1>'
    +'<p>'+(fresh
-      ? 'The engine walks you through <b>one question from every topic first</b> — all <b>'+ITEMS.length+'</b> items in one bank — then scores every topic on open mistakes, weakness and forgetting, so what you got wrong comes back first.'
-      : 'You have answered <b>'+o.answered+'</b> of <b>'+ITEMS.length+'</b> items. Round '+cy.n+' has covered '+cy.seen+'/'+cy.all+' topics.')+'</p>'
+      ? 'The engine walks you through <b>one question from every topic first</b> — all <b>'+MAIN.length+'</b> templates in one bank — then scores every topic on open mistakes, weakness and forgetting, so what you got wrong comes back first.'
+      : 'You have answered <b>'+o.answered+'</b> of <b>'+MAIN.length+'</b> items. Round '+cy.n+' has covered '+cy.seen+'/'+cy.all+' topics.')+'</p>'
    +'<p class="zh">'+(fresh
-      ? '先每个考点过一遍（共 <b>'+ITEMS.length+'</b> 道，统一题库），之后按「<b>未订正错题</b> → 薄弱程度 → 多久没练」给考点打分，错得多的题型优先回来。'
+      ? '先每个考点过一遍（共 <b>'+MAIN.length+'</b> 道，统一题库），之后按「<b>未订正错题</b> → 薄弱程度 → 多久没练」给考点打分，错得多的题型优先回来。'
       : '本轮已过 <b>'+cy.seen+'/'+cy.all+'</b> 个考点，还有 <b>'+openMiss+'</b> 道错题没订正，它们会排在下一轮最前面。')+'</p>'
    +'<div class="row">'
    +'<button class="btn white" onclick="start(\'smart\')">'+(un<activeGroupCount()?'Continue smart round':'Start smart round')+' <span class="zhx">开始智能刷题</span></button>'
    +'<button class="btn light" onclick="route(\'preview\')">Preview <span class="zhx">题库速览</span></button>'
-   +'<button class="btn light" onclick="route(\'bank\')">Browse all '+ITEMS.length+' <span class="zhx">全部题目</span></button>'
+   +'<button class="btn light" onclick="route(\'bank\')">Browse all '+MAIN.length+' <span class="zhx">全部题目</span></button>'
    +'<button class="btn light" onclick="route(\'mistakes\')">Mistake book <span class="zhx">错题本</span></button>'
    +'</div></div>'
    +'<div class="eng"><span>Round <b>'+cy.n+'</b> <span class="zhx">第 '+cy.n+' 轮</span></span><span class="sep">|</span>'
@@ -905,7 +954,7 @@ function viewHome(){
    +'<span><b>'+openMiss+'</b> open mistakes <span class="zhx">待订正错题</span></span><span class="sep">|</span>'
    +'<span class="zhx">推荐依据：未订正错题 → 已订正复习 → 未做过 → 最久没碰</span></div>'
    +'<div class="grid g4" style="margin-bottom:18px">'
-   +'<div class="card"><div class="k">Answered <span class="zhx">答题数</span></div><div class="stat">'+o.answered+'<small>/ '+ITEMS.length+'</small></div><p>Auto-graded + self-marked attempts.</p></div>'
+   +'<div class="card"><div class="k">Answered <span class="zhx">答题数</span></div><div class="stat">'+o.answered+'<small>/ '+MAIN.length+'</small></div><p>Auto-graded + self-marked attempts.</p></div>'
    +'<div class="card"><div class="k">Accuracy <span class="zhx">正确率</span></div><div class="stat">'+(o.done? Math.round(o.acc*100)+'%':'—')+'</div><p>'+o.ok+' correct of '+o.done+' auto-graded answers.</p></div>'
    +'<div class="card click" onclick="route(\'fav\')"><div class="k">Favourites <span class="zhx">收藏数</span></div><div class="stat">'+favCount()+'</div><p>Starred items, answers shown instantly.</p></div>'
    +'<div class="card click" onclick="route(\'mistakes\')"><div class="k">Mistake book <span class="zhx">错题数</span></div><div class="stat">'+mistakeBook().length+'</div><p>Every question ever missed, kept after repair.</p></div>'
@@ -942,21 +991,25 @@ function labelMatch(it,q){
 var bankCh='all', bankType='all', bankQ='';
 function viewBank(ch){
   if(ch!==undefined) bankCh=ch;
-  var typeHtml=[['all','All <span class="zhx">全部</span> '+ITEMS.length],
-    ['choice','Choice <span class="zhx">选择题</span> '+ITEMS.filter(function(i){return i.type==='choice';}).length],
-    ['fill','Fill <span class="zhx">填空题</span> '+ITEMS.filter(function(i){return i.type==='fill';}).length],
-    ['cloze','Cloze <span class="zhx">多空题</span> '+ITEMS.filter(function(i){return i.type==='cloze';}).length]]
+  var typeHtml=[['all','All <span class="zhx">全部</span> '+MAIN.length],
+    ['choice','Choice <span class="zhx">选择题</span> '+MAIN.filter(function(i){return i.type==='choice';}).length],
+    ['fill','Fill <span class="zhx">填空题</span> '+MAIN.filter(function(i){return i.type==='fill';}).length],
+    ['cloze','Cloze <span class="zhx">多空题</span> '+MAIN.filter(function(i){return i.type==='cloze';}).length]]
     .map(function(p){ return '<button class="'+(bankType===p[0]?'on':'')+'" onclick="setBankType(\''+p[0]+'\')">'+p[1]+'</button>'; }).join('');
   var chHtml=['<button class="'+(bankCh==='all'?'on':'')+'" onclick="viewBank(\'all\')">All chapters <span class="zhx">全部章节</span></button>']
     .concat(CHAPTERS.map(function(c,i){ return '<button class="'+(bankCh===i?'on':'')+'" onclick="viewBank('+i+')">Ch '+escHtml(c.n)+'</button>'; })).join('');
   document.getElementById('view').innerHTML=
    '<div class="wrap"><div class="res"><div class="card">'
    +'<h3 style="margin-bottom:2px">The whole bank <span class="tz" style="font-size:12.5px">全部题库</span></h3>'
-   +'<p class="muted">All '+ITEMS.length+' items in one index, distinguished by <code>type</code>. '
+   +'<p class="muted">All '+MAIN.length+' templates in one index, distinguished by <code>type</code>. '
    +'Tap a number to open it on its own. <span class="zhx">统一 items 数组，点编号单独打开。</span><br>'
       +'<span style="font-size:12px">Q<span style="opacity:.6">xx</span> = MTH028-Quizzes &nbsp;·&nbsp; '
    +'B<span style="opacity:.6">xx</span> = 题库2 &nbsp;·&nbsp; H<span style="opacity:.6">xx</span> = HJT'
-   +'<span class="zhx">　前缀只表示来自哪一批导出（同一份练习的另一次尝试），题目同等有效。</span></span></p>' 
+   +'<span class="zhx">　前缀只表示来自哪一批导出（同一份练习的另一次尝试），题目同等有效。</span><br>'
+   +'<span style="font-size:12px">Moodle 每次抽题都会重抽数字，同一道题因此有多个版本：'
+   +'主列表每个模板只列一次（'+MAIN.length+'），其余 '+META.variants+' 个版本收在题卡底部的「同模板的另外 N 组数字」里，点开即可练。'
+   +'<span style="opacity:.7"> Every attempt re-draws the numbers, so a template has several versions; '
+   +'the list shows one per template and folds the rest under it.</span></span></p>' 
    +'<div class="filter" id="bankType">'+typeHtml+'</div>'
    +'<div class="filter" id="bankCh">'+chHtml+'</div>'
    +'<div class="idxsearch"><input id="bankQ" value="'+escAttr(bankQ)+'" placeholder="Find a number or topic — Q1-01 / 1-01 / 1.2 · 搜题号或考点" oninput="setBankQ(this.value)"></div>'
@@ -973,7 +1026,7 @@ function paintBank(){
   if(!g) return;
   if(tEl) tEl.innerHTML=[['all','All'],['choice','Choice'],['fill','Fill'],['cloze','Cloze']]
     .map(function(p){ return '<button class="'+(bankType===p[0]?'on':'')+'" onclick="setBankType(\''+p[0]+'\')">'+p[1]+'</button>'; }).join('');
-  var list=ITEMS.filter(function(it){
+  var list=MAIN.filter(function(it){
     if(bankCh!=='all' && itemChapter(it)!==bankCh) return false;
     if(bankType!=='all' && it.type!==bankType) return false;
     return labelMatch(it,bankQ);
@@ -1012,7 +1065,10 @@ function pvMatch(it,q){
 }
 function pvList(){
   var q=(pvQ||'').trim();
-  return ITEMS.filter(function(it){
+  /* favourites and the mistake book are per record, so they may hold a
+     variant; those two views therefore walk the full set */
+  var pool=(pvScope==='fav'||pvType==='fav')? ITEMS : MAIN;
+  return pool.filter(function(it){
     if(pvScope==='fav' && !isFav(it.id)) return false;
     if(pvType==='fav' && !isFav(it.id)) return false;
     if(pvType!=='all' && pvType!=='fav' && it.type!==pvType) return false;
@@ -1043,6 +1099,7 @@ function previewCard(id){
     +(it.aiGenerated? '<div class="ai-strip" style="margin:10px 14px 0">'+aiTagHtml(it)+'</div>':'')
     +'<div class="pv-img">'+(it.img? '<img src="'+escAttr(it.img)+'" alt="'+escAttr(it.label)+'" loading="lazy">':'')+'</div>'
     +ans+aimg
+    +variantsBlock(it)
     +'<div class="pv-ft"><button class="btn ghost" onclick="startSingle('+id+')">Practice this <span class="zhx">做这题</span></button>'
     +favBtn(id)+'</div></article>';
 }
@@ -1081,7 +1138,7 @@ function renderPv(mode){
   var favOnly=pvScope==='fav';
   var types=(favOnly
     ? [['all','All favourites <span class="zhx">全部收藏</span> '+favCount()],['choice','Choice'],['fill','Fill'],['cloze','Cloze']]
-    : [['all','All <span class="zhx">全部</span> '+ITEMS.length],['choice','Choice 选择题'],['fill','Fill 填空题'],['cloze','Cloze 多空题'],['fav','★ Favourites <span class="zhx">收藏</span> '+favCount()]])
+    : [['all','All <span class="zhx">全部</span> '+MAIN.length],['choice','Choice 选择题'],['fill','Fill 填空题'],['cloze','Cloze 多空题'],['fav','★ Favourites <span class="zhx">收藏</span> '+favCount()]])
     .map(function(p){ return '<button class="'+(pvType===p[0]?'on':'')+'" onclick="pvSetType(\''+p[0]+'\')">'+p[1]+'</button>'; }).join('');
   var chHtml=['<button class="'+(pvCh==='all'?'on':'')+'" onclick="pvSetCh(\'all\')">All chapters <span class="zhx">全部章节</span></button>']
     .concat(CHAPTERS.map(function(c,i){ return '<button class="'+(pvCh===i?'on':'')+'" onclick="pvSetCh('+i+')">Ch '+escHtml(c.n)+'</button>'; })).join('');
@@ -1093,7 +1150,7 @@ function renderPv(mode){
   document.getElementById('view').innerHTML=
    '<div class="wrap pv-wrap"><div class="pv-hd2">'
    +'<h2>'+(favOnly?'Favourites <span class="tz">收藏夹</span>':'Preview <span class="tz">题库速览</span>')+'</h2>'
-   +'<span class="muted">'+(favOnly?'Your starred items · 只看收藏题':'Browse the whole bank · 通览全部 '+ITEMS.length+' 题')+'</span></div>'
+   +'<span class="muted">'+(favOnly?'Your starred items · 只看收藏题':'Browse the whole bank · 通览全部 '+MAIN.length+' 题')+'</span></div>'
    +'<p class="pv-sub">Answers shown immediately — no answering, no scoring · 直接看题与答案，不记分</p>'
    +tools
    +'<div class="card" style="padding:14px 16px">'
@@ -1335,7 +1392,7 @@ if(typeof window!=='undefined'&&window.addEventListener)
 /* ---------- expose for Node mock-DOM smoke tests ---------- */
 var API={
   BANK:BANK, META:META, CHAPTERS:CHAPTERS, TOPICS:TOPICS, ITEMS:ITEMS, GLOSS:GLOSS,
-  BYID:BYID, BYTOPIC:BYTOPIC, GROUPS:GROUPS, GROUP_BY_ID:GROUP_BY_ID,
+  BYID:BYID, BYTOPIC:BYTOPIC, MAIN:MAIN, VARIANTS:VARIANTS, BYQID:BYQID, GROUPS:GROUPS, GROUP_BY_ID:GROUP_BY_ID,
   normAns:normAns, ansEqual:ansEqual, autoGradeable:autoGradeable,
   gradeChoice:gradeChoice, gradeFill:gradeFill, gradeCloze:gradeCloze,
   normFav:normFav, normMiss:normMiss, emptyStore:emptyStore, logMiss:logMiss, repaired:repaired,

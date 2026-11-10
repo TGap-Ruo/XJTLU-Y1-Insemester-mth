@@ -12,7 +12,7 @@ first before changing anything.
 
 | Course | Entry | Bank | Topics | Glossary |
 |---|---|---|---|---|
-| **MTH028 · Linear Algebra I** | `/` → `index.html` | 285 items (228 choice · 43 fill · 14 cloze) | 17 (1.1–2.8) | 33 groups / 212 terms |
+| **MTH028 · Linear Algebra I** | `/` → `index.html` | 285 templates / 675 records (420 choice · 195 fill · 60 cloze) | 17 (1.1–2.8) | 33 groups / 212 terms |
 | **MTH026 · Calculus I** | `/mth026.html` | 674 items (351 + 323) | 54 | 9 groups / 80 terms |
 
 Progress is **isolated per course**: MTH028 uses the `progress28` table and the
@@ -45,13 +45,26 @@ favourites or mistake book can leak into the other.
   assigns a section; `build/merge_bank.py` writes the four files the assembler
   consumes. Re-run them in that order, then
   `assemble_bank.py --out ../mth026/repo/bank.js`.
-- **Sources.** The 285 items come from **60** Moodle *attempt review* exports in
+- **Sources.** The 285 items come from **45** Moodle *attempt review* exports in
   three folders — `MTH028-Quizzes/1.pdf … 15.pdf` (prefix `Q`), `题库2/2-1.pdf …
   2-15.pdf` (prefix `B`) and `HJT/3-1.pdf … 3-15.pdf` (prefix `H`) — 15
-  questions each, 900 raw questions. Moodle re-draws the numbers for every attempt, so
-  the same template appears in many exports; items are grouped by
-  stem+options with digits masked and one representative survives
-  (**900 → 285**, the merged list is `mth028/data/duplicates.json`). Question
+  questions each, **675 raw records**.
+- **Templates vs records.** Moodle re-draws the numbers for every attempt, so
+  the same *template* comes back with different matrices. **Not one pair of the
+  675 records is byte-identical** — so this is not de-duplication in the usual
+  sense: 116 templates account for 506 records (the biggest, Q6-10, appears 19
+  times), and the 390 remaining records are the same template re-drawn.
+- **Both layers ship.** `bank.js` carries all **675 records**; the 285 that
+  carry a printed answer are the *representatives* (`variantOf: null`) and the
+  other 390 point at their template via `variantOf` (list:
+  `mth028/data/duplicates.json`). The page lists, counts, schedules and grades
+  by template (`MAIN` = the 285), and folds the other draws under the card as
+  「同模板的另外 N 组数字」 — one click opens that draw and grades it on its own
+  numbers. 89 of the 390 have no printed answer at all and open in self-check
+  mode (chips are dashed and say 自评).
+- **Data files.** `selection.json` = the 285 representatives;
+  `selection_all.json` = all 675 (this is what renders the images, what
+  `merge_bank.py` reads and what the admin console indexes). Question
   crops live in `img/q/<qid>.png`, printed answer crops in `img/a/<qid>.png`.
 - **Cropping (why it cannot leak).** Every card in those exports is a drawn
   rounded rectangle with a fixed border colour, so the crop is the **exact stem

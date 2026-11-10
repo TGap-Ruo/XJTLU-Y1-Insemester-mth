@@ -430,3 +430,20 @@ a{color:inherit;text-decoration:none}
   .hero h1{font-size:21px}
   .wrap{padding:0 14px}
 }
+
+/* ---------- template variants ----------
+   The same question re-drawn with different numbers.  Folded under the card
+   (and off the main list) so 285 templates do not turn into 675 near-copies. */
+.vbox{margin:12px 18px 16px;border-top:1px dashed #d7dee6;padding-top:10px}
+.vbox>summary{cursor:pointer;font-size:12.5px;color:#41505f;list-style:none;
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.vbox>summary::-webkit-details-marker{display:none}
+.vbox>summary::before{content:"\25B8";font-size:10px;opacity:.6;transition:transform .15s}
+.vbox[open]>summary::before{content:"\25BE"}
+.vchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.vchip{position:relative;font:inherit;font-size:12px;padding:5px 9px;border:1px solid #cfd8e2;
+  background:#fff;border-radius:7px;cursor:pointer;line-height:1.2}
+.vchip:hover{border-color:#8aa6bf;background:#f6f9fc}
+.vchip u{text-decoration:none;margin-left:5px;font-size:11px}
+.vchip.self{border-style:dashed;color:#6d7c8b}
+.vchip i{font-style:normal;margin-left:4px;font-size:10px;opacity:.7}

@@ -21,9 +21,9 @@ MTH026_ROOT=$PWD MTH026_DB=/tmp/dev.db MTH026_PORT=8088 python3 server/server.py
 
 ```bash
 cd mth028
-python3 build/extract_v2.py          # 60 份 PDF（Q/B/H 三批）→ data/extract_v2.json（900 条原始记录）
-python3 build/select_items.py        # 定答案、去重  → data/selection.json / duplicates.json（900 → 285）
-python3 build/render_crops.py        # 出图          → out/img/{q,a}/<qid>.png + data/crops.json
+python3 build/extract_v2.py          # 45 份 PDF（Q/B/H 三批，各 15 份）→ data/extract_v2.json（675 条原始记录）
+python3 build/select_items.py        # 定答案、标模板/变体 → selection.json(285)/selection_all.json(675)/duplicates.json
+python3 build/render_crops.py --in data/selection_all.json        # 出图          → out/img/{q,a}/<qid>.png + data/crops.json
 python3 build/map_topics_v2.py       # 归考点        → data/topic_map.json
 python3 build/merge_bank.py          # 落成 4 个文件  → data/quiz_{index,structured}.json
 python3 build/assemble_bank.py       # 合 bank.js    → out/bank.js
@@ -38,7 +38,7 @@ python3 build/export_bank_index.py   # 后台用索引    → out/bank_index28.j
 |---|---|---|
 | `index.html` | **MTH028 前端（真身）** | 单文件 SPA，含全部逻辑；线上就是这份 |
 | `mth026.html` | MTH026 前端（真身） | 旧的单文件站，不与 028 共享 JS |
-| `bank.js` | **MTH028 题库（真身）** | `window.MTH028_BANK = {...}`，285 题，来自 Q/B/H 三批导出 |
+| `bank.js` | **MTH028 题库（真身）** | `window.MTH028_BANK = {...}`，675 条记录（285 个模板 + 390 个变体），来自 Q/B/H 三批导出 |
 | `app.css` / `katex/` | 样式与公式 | 028 与 026 共用 |
 | `img/q/<qid>.png` `img/a/<qid>.png` | 028 题图 / 答案图 | 每个 item 两张 |
 | `q/` `pq/` | 026 的题图（351 + 323） | 命名与 028 无关 |
@@ -126,6 +126,27 @@ A.ITEMS.length; A.BYTOPIC['2.1']; A.gradeChoice(A.ITEMS[0], 'B');
 | `stem` | str | OCR 文本，**无空格、顺序会乱**，只用于搜索 |
 | `options` | str[] | `["A","B","C","D"]`，只给按钮用 |
 | `notes` | str | 备注（复杂答案/自评等） |
+| `variantOf` | str\|null | **模板归并键**。null = 该模板的代表；否则是它所属模板的 `qid`。见 3.3.1 |
+
+**`normItem` 是白名单**：`bank.js` 里新增一个字段，必须同时在 `normItem` 的返回对象里
+加一行，否则该字段在页面里恒为 undefined（`variantOf` 第一次上线时就踩了这个，
+表现是 675 条全被当成模板、`MAIN` 长度等于 675）。
+
+#### 3.3.1 模板与变体（285 / 675）
+
+Moodle 每次 attempt 重抽数字，同一道题因此有多个版本。数据层两者都留：
+
+* `MAIN = ITEMS.filter(function(it){ return !it.variantOf; })` — 285 个模板。
+* `VARIANTS[模板 qid] = [变体 id…]`，`REP_OF[变体 id] = 模板 item`。
+
+**计数/列表/调度一律走 `MAIN`**：`BYTOPIC`、首页统计（`overall()` 只数 `ISMAIN`）、
+题库页网格、预览列表（收藏页例外，见下）、`pickSmart`。**直接按 id 打开的路径走
+`ITEMS/BYID`**：`startSingle(id)`、错题本、收藏页（收藏可以落在变体上，所以
+`pvList()` 在 fav 范围下用 `ITEMS` 而不是 `MAIN`）。
+
+变体在题卡底部以 `<details class="vbox">` 呈现（`variantsBlock(it)`）：模板卡列出全部
+变体，变体卡列出「模板 + 其余兄弟」。没有印刷答案的变体（390 中的 89 条）chip 为虚线
+并标「自评」，点开后走 `revealSelf()`（看图自评），不会假装自动判分。
 
 ### 3.4 两层存储
 
@@ -291,7 +312,9 @@ merge28(old, new)           # h 按 t 取新（整条替换，避免旧 resp 残
 
 | 文件 | 谁写 | 内容 |
 |---|---|---|
-| `extract_v2.json` | `extract_v2.py` | 900 条原始记录：每题一页卡片的精确矩形、选项、印刷答案、学生填值、是否作答 |
+| `extract_v2.json` | `extract_v2.py` | 675 条原始记录：每题一页卡片的精确矩形、选项、印刷答案、学生填值、是否作答 |
+| `selection_all.json` | `select_items.py` | **全部 675 条**（`isRep` / `variantOf`），渲染图片与后台索引用 |
+| `selection.json` | `select_items.py` | 285 个模板（`variantOf=null`），只用于考点分类 |
 | `selection.json` | `select_items.py` | **最终 285 条**：定好的 key/answers/blanks、去重后的代表、`aiGenerated` |
 | `duplicates.json` | `select_items.py` | 被合并掉的题号 → 保留题号（追溯用；修正项靠它跟随） |
 | `answer_fixes.json` | **人工** | 唯一的人工修正入口：`{"fill":{qid:{answers,blanks}}, "choice":{qid:"B"}}` |
@@ -394,13 +417,15 @@ node -e "
 global.window={};require('./bank.js');const b=window.MTH028_BANK,it=b.items,bad=[],ids=new Set();
 it.forEach(x=>{ if(ids.has(x.id))bad.push('dup '+x.id); ids.add(x.id);
   if(!x.img)bad.push('noimg '+x.qid);
-  if(x.type==='choice'&&!x.key)bad.push('nokey '+x.qid);
-  if(x.type!=='choice'&&(!x.answers||x.answers.length!==x.blanks))bad.push('ans '+x.qid);
-  if(!x.topic)bad.push('notopic '+x.qid); });
-console.log(it.length,'bad',bad.length,bad.slice(0,5));"
+  if(!x.topic)bad.push('notopic '+x.qid);
+  // 模板必须可判分；变体允许没有印刷答案（页面走自评）
+  if(!x.variantOf && x.type==='choice' && !x.key)bad.push('nokey '+x.qid);
+  if(!x.variantOf && x.type!=='choice' && !(x.answers||[]).length)bad.push('ans '+x.qid); });
+console.log(it.length,'main',b.meta.main,'variants',b.meta.variants,'bad',bad.length,bad.slice(0,5));"
 ```
 
-期望输出：`285 bad 0`。
+期望输出：`675 main 285 variants 390 bad 0`。
+（变体里 10 个 choice / 79 个 fill|cloze 在原卷没有答案，属预期，页面标「自评」。）
 
 ### 10.2 前端行为断言（无头 Edge 注入）
 
@@ -414,7 +439,14 @@ add='''<div id="__t" style="white-space:pre;font:12px monospace"></div>
  var R=[],A=window.MTH028_APP;
  function ck(n,c,x){R.push((c?'PASS ':'FAIL ')+n+(x!==undefined?' ['+x+']':''));}
  var z=A.ITEMS.filter(function(i){return i.type==='cloze'})[0];
- ck('items',A.ITEMS.length===228,A.ITEMS.length);
+ ck('items',A.ITEMS.length===675,A.ITEMS.length);
+ ck('main',A.MAIN.length===285,A.MAIN.length);
+ ck('topics walk main',Object.keys(A.BYTOPIC).reduce(function(a,k){return a+A.BYTOPIC[k].length},0)===285);
+ var rep=A.BYQID['p1-01'];
+ ck('variants folded',(A.VARIANTS['p1-01']||[]).length===14);
+ startSingle(rep.id);
+ ck('card shows draws',/more draw/.test(document.getElementById('view').innerHTML));
+ ck('chips rendered',document.querySelectorAll('.vchip').length===14);
  ck('all gradable',A.ITEMS.every(A.autoGradeable));
  ck('cloze right',A.gradeCloze(z,z.answers).ok===true,z.qid);
  startSingle(z.id);

@@ -30,7 +30,10 @@ def label_for(r):
 
 
 def main():
-    sel = json.load(open(os.path.join(D, "selection.json")))
+    # Every record, reps and variants: the page lists the reps and folds each
+    # template's other draws underneath it, so all of them need an image, an
+    # answer and a label.
+    sel = json.load(open(os.path.join(D, "selection_all.json")))
     crops = {c["qid"]: c for c in json.load(open(os.path.join(D, "crops.json")))}
     tmap = {m["qid"]: m["topic"] for m in
             json.load(open(os.path.join(D, "topic_map.json")))["mapping"]}
@@ -55,7 +58,10 @@ def main():
             # and grades them one by one
             "type": ("cloze" if r["type"] == "fill" and blanks > 1 else r["type"]),
             "blanks": blanks,
-            "topic": tmap.get(qid),
+            # a variant inherits its template's section (only the reps are
+            # classified; the variants are the same question with new numbers)
+            "topic": tmap.get(qid) or tmap.get(r.get("variantOf") or ""),
+            "variant_of": r.get("variantOf"),
             "stem": r["stem"],
             "options": [{"L": o["L"], "text": o["text"]} for o in r["options"]],
             "student_answer": r.get("student") or "",
@@ -78,6 +84,8 @@ def main():
     json.dump({"items": structured}, open(os.path.join(D, "quiz_structured.json"), "w"),
               ensure_ascii=False, indent=1)
     print("wrote %d index rows and %d structured items" % (len(idx), len(structured)))
+    print("reps", sum(1 for s_ in structured if not s_["variant_of"]),
+          "| variants", sum(1 for s_ in structured if s_["variant_of"]))
     print("ids", min(s["id"] for s in structured), "..", max(s["id"] for s in structured))
     dup = len(structured) - len({s["id"] for s in structured})
     print("duplicate ids:", dup)

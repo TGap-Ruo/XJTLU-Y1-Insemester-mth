@@ -28,6 +28,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p1-05",
+  "quiz": 1,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p1-06",
   "quiz": 1,
   "qno": 6,
@@ -98,10 +105,52 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p2-01",
+  "quiz": 2,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p2-02",
+  "quiz": 2,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p2-03",
   "quiz": 2,
   "qno": 3,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p2-04",
+  "quiz": 2,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p2-05",
+  "quiz": 2,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p2-06",
+  "quiz": 2,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p2-07",
+  "quiz": 2,
+  "qno": 7,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -112,10 +161,31 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p2-09",
+  "quiz": 2,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p2-10",
   "quiz": 2,
   "qno": 10,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p2-11",
+  "quiz": 2,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p2-12",
+  "quiz": 2,
+  "qno": 12,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -129,6 +199,48 @@
   "qid": "p2-14",
   "quiz": 2,
   "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p2-15",
+  "quiz": 2,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p3-01",
+  "quiz": 3,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p3-02",
+  "quiz": 3,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p3-03",
+  "quiz": 3,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p3-04",
+  "quiz": 3,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p3-05",
+  "quiz": 3,
+  "qno": 5,
   "type": "fill",
   "has_printed_answer": true
  },
@@ -168,10 +280,73 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p3-11",
+  "quiz": 3,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p3-12",
+  "quiz": 3,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p3-13",
   "quiz": 3,
   "qno": 13,
   "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p3-14",
+  "quiz": 3,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p3-15",
+  "quiz": 3,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p4-01",
+  "quiz": 4,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p4-02",
+  "quiz": 4,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p4-03",
+  "quiz": 4,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p4-04",
+  "quiz": 4,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p4-05",
+  "quiz": 4,
+  "qno": 5,
+  "type": "choice",
   "has_printed_answer": true
  },
  {
@@ -182,6 +357,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p4-07",
+  "quiz": 4,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p4-08",
   "quiz": 4,
   "qno": 8,
@@ -189,9 +371,44 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p4-09",
+  "quiz": 4,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p4-10",
   "quiz": 4,
   "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p4-11",
+  "quiz": 4,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p4-12",
+  "quiz": 4,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p4-13",
+  "quiz": 4,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p4-14",
+  "quiz": 4,
+  "qno": 14,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -224,6 +441,34 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p5-04",
+  "quiz": 5,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p5-05",
+  "quiz": 5,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p5-06",
+  "quiz": 5,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p5-07",
+  "quiz": 5,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p5-08",
   "quiz": 5,
   "qno": 8,
@@ -238,10 +483,45 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p5-10",
+  "quiz": 5,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p5-11",
+  "quiz": 5,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p5-12",
+  "quiz": 5,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p5-13",
   "quiz": 5,
   "qno": 13,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p5-14",
+  "quiz": 5,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p5-15",
+  "quiz": 5,
+  "qno": 15,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -294,6 +574,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p6-08",
+  "quiz": 6,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p6-09",
   "quiz": 6,
   "qno": 9,
@@ -343,10 +630,38 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p7-01",
+  "quiz": 7,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p7-02",
+  "quiz": 7,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p7-03",
   "quiz": 7,
   "qno": 3,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p7-04",
+  "quiz": 7,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p7-05",
+  "quiz": 7,
+  "qno": 5,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -364,10 +679,31 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p7-08",
+  "quiz": 7,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p7-09",
   "quiz": 7,
   "qno": 9,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p7-10",
+  "quiz": 7,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p7-11",
+  "quiz": 7,
+  "qno": 11,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -385,9 +721,65 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p7-14",
+  "quiz": 7,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p7-15",
+  "quiz": 7,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p8-01",
+  "quiz": 8,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p8-02",
+  "quiz": 8,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p8-03",
   "quiz": 8,
   "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p8-04",
+  "quiz": 8,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p8-05",
+  "quiz": 8,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p8-06",
+  "quiz": 8,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p8-07",
+  "quiz": 8,
+  "qno": 7,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -399,9 +791,30 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p8-09",
+  "quiz": 8,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p8-10",
+  "quiz": 8,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p8-11",
   "quiz": 8,
   "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p8-12",
+  "quiz": 8,
+  "qno": 12,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -413,9 +826,23 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p8-14",
+  "quiz": 8,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p8-15",
   "quiz": 8,
   "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p9-01",
+  "quiz": 9,
+  "qno": 1,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -427,6 +854,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p9-03",
+  "quiz": 9,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p9-04",
   "quiz": 9,
   "qno": 4,
@@ -434,9 +868,44 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p9-05",
+  "quiz": 9,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p9-06",
+  "quiz": 9,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p9-07",
+  "quiz": 9,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p9-08",
+  "quiz": 9,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p9-09",
   "quiz": 9,
   "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p9-10",
+  "quiz": 9,
+  "qno": 10,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -455,9 +924,30 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p9-13",
+  "quiz": 9,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p9-14",
+  "quiz": 9,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p9-15",
   "quiz": 9,
   "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p10-01",
+  "quiz": 10,
+  "qno": 1,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -476,9 +966,23 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p10-04",
+  "quiz": 10,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p10-05",
   "quiz": 10,
   "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p10-06",
+  "quiz": 10,
+  "qno": 6,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -497,6 +1001,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p10-09",
+  "quiz": 10,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p10-10",
   "quiz": 10,
   "qno": 10,
@@ -511,10 +1022,24 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p10-12",
+  "quiz": 10,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p10-13",
   "quiz": 10,
   "qno": 13,
   "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p10-14",
+  "quiz": 10,
+  "qno": 14,
+  "type": "choice",
   "has_printed_answer": true
  },
  {
@@ -546,6 +1071,48 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p11-04",
+  "quiz": 11,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p11-05",
+  "quiz": 11,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p11-06",
+  "quiz": 11,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p11-07",
+  "quiz": 11,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p11-08",
+  "quiz": 11,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p11-09",
+  "quiz": 11,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p11-10",
   "quiz": 11,
   "qno": 10,
@@ -567,10 +1134,31 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p11-13",
+  "quiz": 11,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p11-14",
   "quiz": 11,
   "qno": 14,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p11-15",
+  "quiz": 11,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p12-01",
+  "quiz": 12,
+  "qno": 1,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -581,9 +1169,30 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p12-03",
+  "quiz": 12,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p12-04",
   "quiz": 12,
   "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p12-05",
+  "quiz": 12,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p12-06",
+  "quiz": 12,
+  "qno": 6,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -592,6 +1201,13 @@
   "quiz": 12,
   "qno": 7,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p12-08",
+  "quiz": 12,
+  "qno": 8,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -616,10 +1232,52 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p12-12",
+  "quiz": 12,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p12-13",
+  "quiz": 12,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p12-14",
+  "quiz": 12,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p12-15",
+  "quiz": 12,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p13-01",
+  "quiz": 13,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p13-02",
   "quiz": 13,
   "qno": 2,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p13-03",
+  "quiz": 13,
+  "qno": 3,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -637,6 +1295,27 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p13-06",
+  "quiz": 13,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p13-07",
+  "quiz": 13,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p13-08",
+  "quiz": 13,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p13-09",
   "quiz": 13,
   "qno": 9,
@@ -644,10 +1323,31 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p13-10",
+  "quiz": 13,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p13-11",
   "quiz": 13,
   "qno": 11,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p13-12",
+  "quiz": 13,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p13-13",
+  "quiz": 13,
+  "qno": 13,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -662,6 +1362,34 @@
   "quiz": 13,
   "qno": 15,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p14-01",
+  "quiz": 14,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p14-02",
+  "quiz": 14,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p14-03",
+  "quiz": 14,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p14-04",
+  "quiz": 14,
+  "qno": 4,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -686,10 +1414,45 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p14-08",
+  "quiz": 14,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p14-09",
+  "quiz": 14,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p14-10",
+  "quiz": 14,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p14-11",
   "quiz": 14,
   "qno": 11,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p14-12",
+  "quiz": 14,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p14-13",
+  "quiz": 14,
+  "qno": 13,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -700,10 +1463,59 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p14-15",
+  "quiz": 14,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p15-01",
+  "quiz": 15,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p15-02",
+  "quiz": 15,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p15-03",
+  "quiz": 15,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p15-04",
+  "quiz": 15,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p15-05",
   "quiz": 15,
   "qno": 5,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p15-06",
+  "quiz": 15,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p15-07",
+  "quiz": 15,
+  "qno": 7,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -742,9 +1554,65 @@
   "has_printed_answer": true
  },
  {
+  "qid": "p15-13",
+  "quiz": 15,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "p15-14",
+  "quiz": 15,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "p15-15",
   "quiz": 15,
   "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b1-01",
+  "quiz": 21,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b1-02",
+  "quiz": 21,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b1-03",
+  "quiz": 21,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b1-04",
+  "quiz": 21,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b1-05",
+  "quiz": 21,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b1-06",
+  "quiz": 21,
+  "qno": 6,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -753,6 +1621,20 @@
   "quiz": 21,
   "qno": 7,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b1-08",
+  "quiz": 21,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b1-09",
+  "quiz": 21,
+  "qno": 9,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -777,9 +1659,93 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b1-13",
+  "quiz": 21,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b1-14",
+  "quiz": 21,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b1-15",
+  "quiz": 21,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-01",
+  "quiz": 22,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-02",
+  "quiz": 22,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-03",
+  "quiz": 22,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-04",
+  "quiz": 22,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b2-05",
   "quiz": 22,
   "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-06",
+  "quiz": 22,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-07",
+  "quiz": 22,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-08",
+  "quiz": 22,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-09",
+  "quiz": 22,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-10",
+  "quiz": 22,
+  "qno": 10,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -798,10 +1764,45 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b2-13",
+  "quiz": 22,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-14",
+  "quiz": 22,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b2-15",
+  "quiz": 22,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b3-01",
   "quiz": 23,
   "qno": 1,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b3-02",
+  "quiz": 23,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b3-03",
+  "quiz": 23,
+  "qno": 3,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -826,9 +1827,37 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b3-07",
+  "quiz": 23,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b3-08",
   "quiz": 23,
   "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b3-09",
+  "quiz": 23,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b3-10",
+  "quiz": 23,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b3-11",
+  "quiz": 23,
+  "qno": 11,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -840,9 +1869,65 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b3-13",
+  "quiz": 23,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b3-14",
+  "quiz": 23,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b3-15",
+  "quiz": 23,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b4-01",
+  "quiz": 24,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b4-02",
+  "quiz": 24,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b4-03",
   "quiz": 24,
   "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b4-04",
+  "quiz": 24,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b4-05",
+  "quiz": 24,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b4-06",
+  "quiz": 24,
+  "qno": 6,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -854,10 +1939,24 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b4-08",
+  "quiz": 24,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b4-09",
   "quiz": 24,
   "qno": 9,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b4-10",
+  "quiz": 24,
+  "qno": 10,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -868,9 +1967,79 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b4-12",
+  "quiz": 24,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b4-13",
+  "quiz": 24,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b4-14",
+  "quiz": 24,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b4-15",
+  "quiz": 24,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b5-01",
+  "quiz": 25,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b5-02",
   "quiz": 25,
   "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b5-03",
+  "quiz": 25,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b5-04",
+  "quiz": 25,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b5-05",
+  "quiz": 25,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b5-06",
+  "quiz": 25,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b5-07",
+  "quiz": 25,
+  "qno": 7,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -882,9 +2051,30 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b5-09",
+  "quiz": 25,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b5-10",
   "quiz": 25,
   "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b5-11",
+  "quiz": 25,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b5-12",
+  "quiz": 25,
+  "qno": 12,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -893,6 +2083,13 @@
   "quiz": 25,
   "qno": 13,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b5-14",
+  "quiz": 25,
+  "qno": 14,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -945,10 +2142,31 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b6-07",
+  "quiz": 26,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b6-08",
+  "quiz": 26,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b6-09",
   "quiz": 26,
   "qno": 9,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b6-10",
+  "quiz": 26,
+  "qno": 10,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -959,9 +2177,72 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b6-12",
+  "quiz": 26,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b6-13",
+  "quiz": 26,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b6-14",
+  "quiz": 26,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b6-15",
+  "quiz": 26,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b7-01",
+  "quiz": 27,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b7-02",
+  "quiz": 27,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b7-03",
+  "quiz": 27,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b7-04",
   "quiz": 27,
   "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b7-05",
+  "quiz": 27,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b7-06",
+  "quiz": 27,
+  "qno": 6,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -973,6 +2254,20 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b7-08",
+  "quiz": 27,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b7-09",
+  "quiz": 27,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b7-10",
   "quiz": 27,
   "qno": 10,
@@ -980,9 +2275,30 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b7-11",
+  "quiz": 27,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b7-12",
+  "quiz": 27,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b7-13",
   "quiz": 27,
   "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b7-14",
+  "quiz": 27,
+  "qno": 14,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1001,10 +2317,66 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b8-02",
+  "quiz": 28,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b8-03",
+  "quiz": 28,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b8-04",
+  "quiz": 28,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b8-05",
+  "quiz": 28,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b8-06",
+  "quiz": 28,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b8-07",
   "quiz": 28,
   "qno": 7,
   "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b8-08",
+  "quiz": 28,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b8-09",
+  "quiz": 28,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b8-10",
+  "quiz": 28,
+  "qno": 10,
+  "type": "choice",
   "has_printed_answer": true
  },
  {
@@ -1029,6 +2401,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b8-14",
+  "quiz": 28,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b8-15",
   "quiz": 28,
   "qno": 15,
@@ -1043,6 +2422,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b9-02",
+  "quiz": 29,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b9-03",
   "quiz": 29,
   "qno": 3,
@@ -1050,9 +2436,23 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b9-04",
+  "quiz": 29,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b9-05",
   "quiz": 29,
   "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b9-06",
+  "quiz": 29,
+  "qno": 6,
   "type": "fill",
   "has_printed_answer": true
  },
@@ -1078,9 +2478,79 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b9-10",
+  "quiz": 29,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b9-11",
+  "quiz": 29,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b9-12",
+  "quiz": 29,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b9-13",
+  "quiz": 29,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b9-14",
   "quiz": 29,
   "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b9-15",
+  "quiz": 29,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b10-01",
+  "quiz": 30,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b10-02",
+  "quiz": 30,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b10-03",
+  "quiz": 30,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b10-04",
+  "quiz": 30,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b10-05",
+  "quiz": 30,
+  "qno": 5,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1089,6 +2559,27 @@
   "quiz": 30,
   "qno": 6,
   "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b10-07",
+  "quiz": 30,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b10-08",
+  "quiz": 30,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b10-09",
+  "quiz": 30,
+  "qno": 9,
+  "type": "choice",
   "has_printed_answer": true
  },
  {
@@ -1102,6 +2593,20 @@
   "qid": "b10-11",
   "quiz": 30,
   "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b10-12",
+  "quiz": 30,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b10-13",
+  "quiz": 30,
+  "qno": 13,
   "type": "fill",
   "has_printed_answer": true
  },
@@ -1127,10 +2632,52 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b11-02",
+  "quiz": 31,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b11-03",
+  "quiz": 31,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b11-04",
   "quiz": 31,
   "qno": 4,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b11-05",
+  "quiz": 31,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b11-06",
+  "quiz": 31,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b11-07",
+  "quiz": 31,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b11-08",
+  "quiz": 31,
+  "qno": 8,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1141,6 +2688,27 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b11-10",
+  "quiz": 31,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b11-11",
+  "quiz": 31,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b11-12",
+  "quiz": 31,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b11-13",
   "quiz": 31,
   "qno": 13,
@@ -1148,9 +2716,65 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b11-14",
+  "quiz": 31,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b11-15",
+  "quiz": 31,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b12-01",
+  "quiz": 32,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b12-02",
   "quiz": 32,
   "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b12-03",
+  "quiz": 32,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b12-04",
+  "quiz": 32,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b12-05",
+  "quiz": 32,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b12-06",
+  "quiz": 32,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b12-07",
+  "quiz": 32,
+  "qno": 7,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1176,9 +2800,23 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b12-11",
+  "quiz": 32,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b12-12",
   "quiz": 32,
   "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b12-13",
+  "quiz": 32,
+  "qno": 13,
   "type": "fill",
   "has_printed_answer": true
  },
@@ -1211,6 +2849,27 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b13-03",
+  "quiz": 33,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b13-04",
+  "quiz": 33,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b13-05",
+  "quiz": 33,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b13-06",
   "quiz": 33,
   "qno": 6,
@@ -1218,9 +2877,30 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b13-07",
+  "quiz": 33,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b13-08",
   "quiz": 33,
   "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b13-09",
+  "quiz": 33,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b13-10",
+  "quiz": 33,
+  "qno": 10,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1232,6 +2912,27 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b13-12",
+  "quiz": 33,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b13-13",
+  "quiz": 33,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b13-14",
+  "quiz": 33,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b13-15",
   "quiz": 33,
   "qno": 15,
@@ -1239,9 +2940,37 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b14-01",
+  "quiz": 34,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b14-02",
+  "quiz": 34,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b14-03",
   "quiz": 34,
   "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b14-04",
+  "quiz": 34,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b14-05",
+  "quiz": 34,
+  "qno": 5,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1267,6 +2996,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b14-09",
+  "quiz": 34,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b14-10",
   "quiz": 34,
   "qno": 10,
@@ -1281,10 +3017,31 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b14-12",
+  "quiz": 34,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b14-13",
+  "quiz": 34,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b14-14",
   "quiz": 34,
   "qno": 14,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b14-15",
+  "quiz": 34,
+  "qno": 15,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1330,6 +3087,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b15-07",
+  "quiz": 35,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b15-08",
   "quiz": 35,
   "qno": 8,
@@ -1344,9 +3108,23 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b15-10",
+  "quiz": 35,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "b15-11",
   "quiz": 35,
   "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "b15-12",
+  "quiz": 35,
+  "qno": 12,
   "type": "fill",
   "has_printed_answer": true
  },
@@ -1365,9 +3143,23 @@
   "has_printed_answer": true
  },
  {
+  "qid": "b15-15",
+  "quiz": 35,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h1-01",
   "quiz": 61,
   "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h1-02",
+  "quiz": 61,
+  "qno": 2,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1379,9 +3171,23 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h1-04",
+  "quiz": 61,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h1-05",
   "quiz": 61,
   "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h1-06",
+  "quiz": 61,
+  "qno": 6,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1407,6 +3213,20 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h1-10",
+  "quiz": 61,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h1-11",
+  "quiz": 61,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h1-12",
   "quiz": 61,
   "qno": 12,
@@ -1421,10 +3241,52 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h1-14",
+  "quiz": 61,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h1-15",
+  "quiz": 61,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h2-01",
+  "quiz": 62,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h2-02",
   "quiz": 62,
   "qno": 2,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h2-03",
+  "quiz": 62,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h2-04",
+  "quiz": 62,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h2-05",
+  "quiz": 62,
+  "qno": 5,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1435,10 +3297,24 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h2-07",
+  "quiz": 62,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h2-08",
   "quiz": 62,
   "qno": 8,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h2-09",
+  "quiz": 62,
+  "qno": 9,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1463,9 +3339,37 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h2-13",
+  "quiz": 62,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h2-14",
   "quiz": 62,
   "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h2-15",
+  "quiz": 62,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h3-01",
+  "quiz": 63,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h3-02",
+  "quiz": 63,
+  "qno": 2,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1477,6 +3381,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h3-04",
+  "quiz": 63,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h3-05",
   "quiz": 63,
   "qno": 5,
@@ -1484,9 +3395,51 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h3-06",
+  "quiz": 63,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h3-07",
+  "quiz": 63,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h3-08",
+  "quiz": 63,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h3-09",
+  "quiz": 63,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h3-10",
   "quiz": 63,
   "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h3-11",
+  "quiz": 63,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h3-12",
+  "quiz": 63,
+  "qno": 12,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1498,10 +3451,59 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h3-14",
+  "quiz": 63,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h3-15",
+  "quiz": 63,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-01",
+  "quiz": 64,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-02",
+  "quiz": 64,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-03",
+  "quiz": 64,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h4-04",
   "quiz": 64,
   "qno": 4,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-05",
+  "quiz": 64,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-06",
+  "quiz": 64,
+  "qno": 6,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1512,10 +3514,108 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h4-08",
+  "quiz": 64,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-09",
+  "quiz": 64,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-10",
+  "quiz": 64,
+  "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-11",
+  "quiz": 64,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-12",
+  "quiz": 64,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-13",
+  "quiz": 64,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-14",
+  "quiz": 64,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h4-15",
+  "quiz": 64,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-01",
+  "quiz": 65,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-02",
+  "quiz": 65,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-03",
+  "quiz": 65,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h5-04",
   "quiz": 65,
   "qno": 4,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-05",
+  "quiz": 65,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-06",
+  "quiz": 65,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-07",
+  "quiz": 65,
+  "qno": 7,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1536,6 +3636,62 @@
   "qid": "h5-10",
   "quiz": 65,
   "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-11",
+  "quiz": 65,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-12",
+  "quiz": 65,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-13",
+  "quiz": 65,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-14",
+  "quiz": 65,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h5-15",
+  "quiz": 65,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h6-01",
+  "quiz": 66,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h6-02",
+  "quiz": 66,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h6-03",
+  "quiz": 66,
+  "qno": 3,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1575,6 +3731,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h6-09",
+  "quiz": 66,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h6-10",
   "quiz": 66,
   "qno": 10,
@@ -1582,9 +3745,58 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h6-11",
+  "quiz": 66,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h6-12",
+  "quiz": 66,
+  "qno": 12,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h6-13",
+  "quiz": 66,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h6-14",
+  "quiz": 66,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h6-15",
+  "quiz": 66,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h7-01",
+  "quiz": 67,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h7-02",
   "quiz": 67,
   "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h7-03",
+  "quiz": 67,
+  "qno": 3,
   "type": "fill",
   "has_printed_answer": true
  },
@@ -1603,6 +3815,20 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h7-06",
+  "quiz": 67,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h7-07",
+  "quiz": 67,
+  "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h7-08",
   "quiz": 67,
   "qno": 8,
@@ -1610,9 +3836,65 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h7-09",
+  "quiz": 67,
+  "qno": 9,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h7-10",
   "quiz": 67,
   "qno": 10,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h7-11",
+  "quiz": 67,
+  "qno": 11,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h7-12",
+  "quiz": 67,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h7-13",
+  "quiz": 67,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h7-14",
+  "quiz": 67,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h7-15",
+  "quiz": 67,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h8-01",
+  "quiz": 68,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h8-02",
+  "quiz": 68,
+  "qno": 2,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1631,6 +3913,48 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h8-05",
+  "quiz": 68,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h8-06",
+  "quiz": 68,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h8-07",
+  "quiz": 68,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h8-08",
+  "quiz": 68,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h8-09",
+  "quiz": 68,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h8-10",
+  "quiz": 68,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h8-11",
   "quiz": 68,
   "qno": 11,
@@ -1645,6 +3969,20 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h8-13",
+  "quiz": 68,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h8-14",
+  "quiz": 68,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h8-15",
   "quiz": 68,
   "qno": 15,
@@ -1652,9 +3990,65 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h9-01",
+  "quiz": 69,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-02",
+  "quiz": 69,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-03",
+  "quiz": 69,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-04",
+  "quiz": 69,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-05",
+  "quiz": 69,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-06",
+  "quiz": 69,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h9-07",
   "quiz": 69,
   "qno": 7,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-08",
+  "quiz": 69,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-09",
+  "quiz": 69,
+  "qno": 9,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1666,10 +4060,122 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h9-11",
+  "quiz": 69,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-12",
+  "quiz": 69,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-13",
+  "quiz": 69,
+  "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-14",
+  "quiz": 69,
+  "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h9-15",
+  "quiz": 69,
+  "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-01",
+  "quiz": 70,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-02",
+  "quiz": 70,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-03",
+  "quiz": 70,
+  "qno": 3,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-04",
+  "quiz": 70,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-05",
+  "quiz": 70,
+  "qno": 5,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-06",
+  "quiz": 70,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-07",
+  "quiz": 70,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-08",
+  "quiz": 70,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h10-09",
   "quiz": 70,
   "qno": 9,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-10",
+  "quiz": 70,
+  "qno": 10,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-11",
+  "quiz": 70,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h10-12",
+  "quiz": 70,
+  "qno": 12,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1680,10 +4186,38 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h10-14",
+  "quiz": 70,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h10-15",
   "quiz": 70,
   "qno": 15,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h11-01",
+  "quiz": 71,
+  "qno": 1,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h11-02",
+  "quiz": 71,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h11-03",
+  "quiz": 71,
+  "qno": 3,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1701,10 +4235,24 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h11-06",
+  "quiz": 71,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h11-07",
   "quiz": 71,
   "qno": 7,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h11-08",
+  "quiz": 71,
+  "qno": 8,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1722,6 +4270,13 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h11-11",
+  "quiz": 71,
+  "qno": 11,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h11-12",
   "quiz": 71,
   "qno": 12,
@@ -1729,10 +4284,24 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h11-13",
+  "quiz": 71,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h11-14",
   "quiz": 71,
   "qno": 14,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h11-15",
+  "quiz": 71,
+  "qno": 15,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1757,10 +4326,59 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h12-04",
+  "quiz": 72,
+  "qno": 4,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h12-05",
+  "quiz": 72,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h12-06",
+  "quiz": 72,
+  "qno": 6,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h12-07",
+  "quiz": 72,
+  "qno": 7,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h12-08",
+  "quiz": 72,
+  "qno": 8,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h12-09",
+  "quiz": 72,
+  "qno": 9,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h12-10",
   "quiz": 72,
   "qno": 10,
   "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h12-11",
+  "quiz": 72,
+  "qno": 11,
+  "type": "fill",
   "has_printed_answer": true
  },
  {
@@ -1771,9 +4389,23 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h12-13",
+  "quiz": 72,
+  "qno": 13,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h12-14",
   "quiz": 72,
   "qno": 14,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h12-15",
+  "quiz": 72,
+  "qno": 15,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1785,10 +4417,59 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h13-02",
+  "quiz": 73,
+  "qno": 2,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h13-03",
+  "quiz": 73,
+  "qno": 3,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h13-04",
+  "quiz": 73,
+  "qno": 4,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h13-05",
+  "quiz": 73,
+  "qno": 5,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h13-06",
+  "quiz": 73,
+  "qno": 6,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h13-07",
   "quiz": 73,
   "qno": 7,
   "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h13-08",
+  "quiz": 73,
+  "qno": 8,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h13-09",
+  "quiz": 73,
+  "qno": 9,
+  "type": "choice",
   "has_printed_answer": true
  },
  {
@@ -1806,9 +4487,51 @@
   "has_printed_answer": true
  },
  {
+  "qid": "h13-12",
+  "quiz": 73,
+  "qno": 12,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
   "qid": "h13-13",
   "quiz": 73,
   "qno": 13,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h13-14",
+  "quiz": 73,
+  "qno": 14,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h13-15",
+  "quiz": 73,
+  "qno": 15,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h14-01",
+  "quiz": 74,
+  "qno": 1,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h14-02",
+  "quiz": 74,
+  "qno": 2,
+  "type": "fill",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h14-03",
+  "quiz": 74,
+  "qno": 3,
   "type": "choice",
   "has_printed_answer": true
  },
@@ -1893,6 +4616,13 @@
   "qid": "h14-15",
   "quiz": 74,
   "qno": 15,
+  "type": "choice",
+  "has_printed_answer": true
+ },
+ {
+  "qid": "h15-01",
+  "quiz": 75,
+  "qno": 1,
   "type": "choice",
   "has_printed_answer": true
  },
