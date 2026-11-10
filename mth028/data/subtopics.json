@@ -1,0 +1,43 @@
+{
+  "_note": "Secondary index for MTH028, taken from 'MTH028 线代期中自学课件' (12 modules / 31 考点). id = <textbook section>.<ordinal>; the courseware's own numbering is kept in 'src' so a reader can jump back to the handout. A subtopic always belongs to exactly one section, and an item's section is derived from its subtopic.",
+  "source": "MTH028 线代期中自学课件.pdf",
+  "subtopics": [
+    {"id": "1.1.1", "topic": "1.1", "src": "课件 M1 · 1.1", "zh": "方程组与增广矩阵互译", "en": "Systems ↔ augmented matrices"},
+    {"id": "1.1.2", "topic": "1.1", "src": "课件 M1 · 1.2", "zh": "初等行变换", "en": "Elementary row operations"},
+
+    {"id": "1.2.1", "topic": "1.2", "src": "课件 M2 · 2.1", "zh": "阶梯形、最简阶梯形与主元", "en": "Echelon form, RREF and pivots"},
+    {"id": "1.2.2", "topic": "1.2", "src": "课件 M2 · 2.2", "zh": "行化简求解（高斯消元）", "en": "Row reduction / Gaussian elimination"},
+    {"id": "1.2.3", "topic": "1.2", "src": "课件 M2 · 2.3", "zh": "相容性判定与参数求解", "en": "Consistency and parameter problems"},
+
+    {"id": "1.3.1", "topic": "1.3", "src": "课件 M3 · 3.1", "zh": "向量的线性运算", "en": "Vector arithmetic"},
+    {"id": "1.3.2", "topic": "1.3", "src": "课件 M3 · 3.2", "zh": "线性组合与张成空间", "en": "Linear combinations and span"},
+
+    {"id": "1.4.1", "topic": "1.4", "src": "课件 M4 · 4.1", "zh": "矩阵向量积 Ax", "en": "Matrix–vector product Ax"},
+    {"id": "1.4.2", "topic": "1.4", "src": "课件 M4 · 4.2", "zh": "Ax = b 有解的判定", "en": "When Ax = b is solvable"},
+
+    {"id": "1.5.1", "topic": "1.5", "src": "课件 M5 · 5.1", "zh": "齐次方程与非平凡解", "en": "Homogeneous systems"},
+    {"id": "1.5.2", "topic": "1.5", "src": "课件 M5 · 5.2 / 5.3", "zh": "通解与参数向量形式", "en": "General solution, parametric vector form"},
+
+    {"id": "1.7.1", "topic": "1.7", "src": "课件 M6 · 6.1", "zh": "线性无关与线性相关", "en": "Linear independence"},
+    {"id": "1.7.2", "topic": "1.7", "src": "课件 M6 · 6.1", "zh": "含参数的相关性判定", "en": "Parameter that makes a set dependent"},
+
+    {"id": "1.8.1", "topic": "1.8", "src": "课件 M7 · 7.1", "zh": "线性变换与标准矩阵", "en": "Linear transformations and the standard matrix"},
+    {"id": "1.8.2", "topic": "1.8", "src": "课件 M7 · 7.4", "zh": "单射与满射", "en": "One-to-one and onto"},
+
+    {"id": "1.9.1", "topic": "1.9", "src": "课件 M7 · 7.3", "zh": "旋转与几何变换的矩阵", "en": "Rotation and geometric maps"},
+    {"id": "1.9.2", "topic": "1.9", "src": "课件 M7 · 7.1", "zh": "由公式求标准矩阵", "en": "Standard matrix from a formula"},
+
+    {"id": "2.1.1", "topic": "2.1", "src": "课件 M8 · 8.1", "zh": "矩阵的线性运算与转置", "en": "Matrix algebra and transpose"},
+    {"id": "2.1.2", "topic": "2.1", "src": "课件 M8 · 8.1", "zh": "矩阵乘法与 uᵀv / uvᵀ", "en": "Products, uᵀv and uvᵀ"},
+
+    {"id": "2.2.1", "topic": "2.2", "src": "课件 M9 · 9.1", "zh": "求逆矩阵", "en": "Computing an inverse"},
+    {"id": "2.2.2", "topic": "2.2", "src": "课件 M9 · 9.2", "zh": "初等矩阵", "en": "Elementary matrices"},
+    {"id": "2.2.3", "topic": "2.2", "src": "课件 M9 · 9.3 / 9.4", "zh": "用逆解方程与可逆矩阵代数", "en": "A⁻¹b and algebra with inverses"},
+
+    {"id": "2.3.1", "topic": "2.3", "src": "课件 M10", "zh": "可逆矩阵定理（IMT）", "en": "Invertible Matrix Theorem"},
+    {"id": "2.3.2", "topic": "2.3", "src": "课件 M10 / M12", "zh": "奇异判定、幂运算与逆变换", "en": "Singularity, matrix powers, inverse maps"},
+
+    {"id": "2.8.1", "topic": "2.8", "src": "课件 M11 · 11.1", "zh": "子空间与列空间", "en": "Subspaces and Col A"},
+    {"id": "2.8.2", "topic": "2.8", "src": "课件 M11 · 11.2", "zh": "零空间与基", "en": "Nul A and bases"}
+  ]
+}

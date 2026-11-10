@@ -110,7 +110,7 @@ A.ITEMS.length; A.BYTOPIC['2.1']; A.gradeChoice(A.ITEMS[0], 'B');
 |---|---|---|
 | `id` | int | **进度主键**。规则见 7.1，改动会让学生进度错位 |
 | `qid` | str | 内部标签 `p3-13` / `b8-07`，只用于图片与数据 join |
-| `label` | str | 显示用 `Q3-13` / `B8-07` |
+| `label` | str | 显示用三级编码 `1.2.3-04`；变体为 `1.2.3-04-v2` |
 | `quiz`,`qno` | int | 来源文件与题号（`quiz` 21–35 表示题库2） |
 | `type` | `choice`\|`fill`\|`cloze` | 决定判分与输入框数量 |
 | `blanks` | int | choice 为 0，fill 为 1，cloze 为 2/4 |
@@ -121,7 +121,9 @@ A.ITEMS.length; A.BYTOPIC['2.1']; A.gradeChoice(A.ITEMS[0], 'B');
 | `aiGenerated` | bool | true → 页面显示「答案由 AI 生成」横幅 |
 | `answerImg` | str\|null | 原卷反馈卡截图 |
 | `img` | str | 题目截图（**唯一可靠题面**） |
-| `topic` | str | 考点 id，如 `2.3` |
+| `topic` | str | 小节 id，如 `2.3`（由 `sub` 推出，不独立判定） |
+| `sub` | str\|null | **二级考点 id**，如 `1.2.3`（见 3.3.2） |
+| `src` | str | 原始来源题号 `Q1-01` / `B8-07` / `H2-15`，只用于回溯原卷 |
 | `chapter` | int | 0/1，由 `topic` 推导 |
 | `stem` | str | OCR 文本，**无空格、顺序会乱**，只用于搜索 |
 | `options` | str[] | `["A","B","C","D"]`，只给按钮用 |
@@ -147,6 +149,28 @@ Moodle 每次 attempt 重抽数字，同一道题因此有多个版本。数据�
 变体在题卡底部以 `<details class="vbox">` 呈现（`variantsBlock(it)`）：模板卡列出全部
 变体，变体卡列出「模板 + 其余兄弟」。没有印刷答案的变体（390 中的 89 条）chip 为虚线
 并标「自评」，点开后走 `revealSelf()`（看图自评），不会假装自动判分。
+
+#### 3.3.2 二级目录（`sub`）与题号
+
+`data/subtopics.json` 是唯一权威：26 个考点，每个带 `id`（`1.1.1`）、`topic`（所属小节）、
+`zh` / `en`、`src`（课件的模块·考号，如 `课件 M1 · 1.2`）。
+
+分类器 `build/classify_subtopics.py` 用 `data/subtopic_rules.json` 的正则打分（同一考点可有多条规则，
+权重相加取最高），人工修正写 `data/subtopic_overrides.json`（`{qid: "1.2.3"}`）。
+关键不变量：
+
+1. **`topic` 由 `sub` 推出**，不再独立判定——第一版关键词分类器把线性无关、向量运算、列空间
+   都塞进了 1.1，这次一并纠正（1.1 由 63 题降到 33 题）。
+2. **变体必须继承模板的 `sub`**（`variant-of-rep` 修正）：同模板的两次导出的 OCR 文本会有细微差别，
+   否则同一道题会被拆到两个小节（曾出现模板在 2.3.2、变体落在 1.1.1）。
+3. 题号在 `merge_bank.py` 里生成：按 `(sub, quiz, qno)` 排序，每个考点内 `01..nn`；
+   变体不占位，编成 `<模板题号>-v<k>`。`id` 不变，所以进度、收藏、错题本不受影响。
+
+前端：`SUBMAP` / `SUBSOF[topic]` / `BYSUB[sub]`，题库页三行筛选（章节 → 小节 → 二级考点），
+考点梳理页每个小节下列出考点与题量，题卡头部显示 `1.1.2 初等行变换` 胶囊。
+
+`bank.subtopics` 也要过 `normaliseBank()`——它同样是白名单，忘了加就会被整段丢掉，
+表现为所有 `sub` 变成孤儿 id、题库页二级考点行空白。
 
 ### 3.4 两层存储
 
@@ -315,6 +339,11 @@ merge28(old, new)           # h 按 t 取新（整条替换，避免旧 resp 残
 | `extract_v2.json` | `extract_v2.py` | 675 条原始记录：每题一页卡片的精确矩形、选项、印刷答案、学生填值、是否作答 |
 | `selection_all.json` | `select_items.py` | **全部 675 条**（`isRep` / `variantOf`），渲染图片与后台索引用 |
 | `selection.json` | `select_items.py` | 285 个模板（`variantOf=null`），只用于考点分类 |
+| `subtopics.json` | 手工维护 | **二级目录权威表**：26 个考点（id / 所属小节 / 中英名 / 课件出处） |
+| `subtopic_rules.json` | 手工维护 | 正则 → 二级考点，带权重；分类器读它 |
+| `subtopic_overrides.json` | 手工维护 | `{qid: "1.2.3"}`，人工修正优先于规则 |
+| `subtopic_map.json` | `classify_subtopics.py` | 每题最终二级考点 + 判定方式（rules / manual / variant-of-rep） |
+| `subtopic_report.txt` | `classify_subtopics.py` | 被移动的题与未匹配项，改规则时先看它 |
 | `selection.json` | `select_items.py` | **最终 285 条**：定好的 key/answers/blanks、去重后的代表、`aiGenerated` |
 | `duplicates.json` | `select_items.py` | 被合并掉的题号 → 保留题号（追溯用；修正项靠它跟随） |
 | `answer_fixes.json` | **人工** | 唯一的人工修正入口：`{"fill":{qid:{answers,blanks}}, "choice":{qid:"B"}}` |
@@ -501,6 +530,11 @@ ssh ... "python3 -" < admin_check.py   # login → GET /api/admin/bank28 → 打
 13. **PDF 文字层的空格会丢**（`augmentedmatrix`）：所有文本匹配都要同时试「有空格」和「去空格」两种写法。
 14. **`answer_fixes.json` 的修正只对同一 `qid` 生效，绝不跨模板复用**。同一模板的不同 attempt 数字不同、答案也不同：曾把「求 A⁻¹ 第一列」的答案沿去重组合套到另一道矩阵不同的题上，直接教错。若某题的修正值来自原卷说明（而不是自己算的），加 `"from": "paper"`，这样不会被打上 AI 标记。
 15. **同一题在不同批次里可能是不同 qid**（去重代表会变）：修正项若指向一个已被合并掉的 qid，它就静默失效，该题会重新出现在「fill needing an answer」里——这是**正确**行为，重算那一道即可，不要改成按组合查找。
+16. **`bank.subtopics` 也要过 `normaliseBank()` 的白名单**（同 `normItem`）。漏了不会报错，只是页面里二级考点整行消失、所有 `sub` 变孤儿 id。
+17. **改了 `sub` 就等于改了题号和筛选**：`label` 由 `merge_bank.py` 重新生成，同一考点的序号会整体位移。只修一题的归类时先改 `subtopic_overrides.json` 再重跑，别手改 `bank.js`。
+18. **变体不参与编号，但必须跟模板同一 `sub`**：否则题卡底部的 `1.5.1-02-v3` 会指向不属于它的考点。
+19. **中文查询过不了 `labelMatch` 的归一化**：`[^a-z0-9]` 会把汉字全部抹掉，`nq` 变成空串后被当成「无查询」匹配全部。已加 CJK 分支，新增搜索入口时注意同样问题。
+20. **来源题号不能按去标点形式比对**：`Q1-01` 与 `Q10-10` 归一化后是 `q101` / `q1010`，前者是后者的前缀，会多命中。`src` 用保留连字符的原串比较。
 
 ---
 
@@ -511,6 +545,8 @@ ssh ... "python3 -" < admin_check.py   # login → GET /api/admin/bank28 → 打
 | attempt review | Moodle 交卷后的复盘页，本项目的题源 |
 | 反馈卡 | 复盘页黄框，含解题过程与 `The correct answer is:` |
 | 代表题 | 同一模板（题干+选项，数字掩码后相同）里保留的那一道 |
+| 二级目录 / 二级考点 | `sub`，课件的 26 个考点（如 `1.2.3 相容性判定与参数求解`），挂在 17 个小节下 |
+| 变体 | 同一模板的另一次抽题（数字不同），题号 `<模板>-v<k>`，收在题卡底部 |
 | 题库2 | 第二批 15 份导出（`题库2/2-1…2-15.pdf`），题号前缀 B |
 | 双层错题本 | `store.h`（最近一次）+ `store.miss`（只增不删的档案） |
 | 自评题 | 没有可靠答案的题，展示原卷答案后由学生自己判对错（`self:1`） |

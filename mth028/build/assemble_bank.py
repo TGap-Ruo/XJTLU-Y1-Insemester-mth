@@ -96,6 +96,10 @@ def main(out_override=None):
         print("  ! topics.json not delivered -> using topics_fallback.json")
         topics_doc = load("topics_fallback.json", {"chapters": [], "topics": []})
     glossary = load("glossary.json", {"groups": []})
+    subtopics_doc = load("subtopics.json", {"subtopics": []})
+    subtopics = [{"id": x["id"], "topic": x["topic"], "zh": x.get("zh", ""),
+                  "en": x.get("en", ""), "src": x.get("src", "")}
+                 for x in subtopics_doc.get("subtopics", [])]
     ai_doc = load("ai_answers.json", {"items": []})
     ai = {x["qid"]: x for x in ai_doc.get("items", [])}
 
@@ -201,6 +205,9 @@ def main(out_override=None):
             "quiz": r["quiz"], "qno": r["qno"],
             "type": qtype, "blanks": blanks,
             "topic": topic, "chapter": sec_ch.get(topic, 0),
+            # secondary index (二级目录) and the original source label
+            "sub": s.get("sub") or None,
+            "src": s.get("src") or None,
             "img": c.get("img"),
             "answerImg": c.get("answer_img"),
             "key": key,
@@ -229,6 +236,7 @@ def main(out_override=None):
                  "topics": len(topics)},
         "chapters": chapters,
         "topics": topics,
+        "subtopics": subtopics,
         "items": items,
         "glossary": {"groups": glossary.get("groups", [])},
     }
@@ -243,7 +251,9 @@ def main(out_override=None):
     print("  items", len(items), "main", bank["meta"]["main"],
           "variants", bank["meta"]["variants"],
           "types", dict(Counter(i["type"] for i in items)))
-    print("  topics", len(topics), "chapters", len(chapters),
+    print("  subtopics", len(subtopics),
+          "| used", len({i["sub"] for i in items if i.get("sub")}),
+          "chapters", len(chapters),
           "glossary", sum(len(g.get("items", [])) for g in bank["glossary"]["groups"]))
     print("  key(auto-grade choice)", sum(1 for i in items if i["key"]))
     print("  answers(auto-grade fill)", sum(1 for i in items if i["answers"]))

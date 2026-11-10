@@ -101,7 +101,10 @@ function normItem(it,i){
     options:options, stem:it.stem||'', notes:it.notes||'',
     /* the template this record is a re-drawn copy of, or null for the
        template itself (see MAIN below) */
-    variantOf:(it.variantOf==null? null : String(it.variantOf))
+    variantOf:(it.variantOf==null? null : String(it.variantOf)),
+    /* secondary index: "1.1.2" + the source label the number used to be */
+    sub:(it.sub==null? null : String(it.sub)),
+    src:(it.src==null? null : String(it.src))
   };
 }
 function normGlossGroup(g,i){
@@ -124,8 +127,15 @@ function normaliseBank(b){
     for(var i=0;i<=maxCh;i++) chapters.push({n:String(i+1),en:'Chapter '+(i+1),zh:'第 '+(i+1)+' 章'});
   }
   var items=(Array.isArray(b.items)? b.items : []).map(normItem);
+  /* the secondary index is data, not code: it must survive normalisation or
+     every item's `sub` becomes an orphan id */
+  var subtopics=(Array.isArray(b.subtopics)? b.subtopics : []).map(function(x,i){
+    x=x||{}; return {id:String(x.id!=null? x.id : ('s'+i)), topic:String(x.topic!=null? x.topic : ''),
+                     zh:x.zh||'', en:x.en||'', src:x.src||''};
+  });
   var groups=((b.glossary && Array.isArray(b.glossary.groups))? b.glossary.groups : []).map(normGlossGroup);
-  return {meta:meta, chapters:chapters, topics:topics, items:items, glossary:{groups:groups}};
+  return {meta:meta, chapters:chapters, topics:topics, subtopics:subtopics,
+          items:items, glossary:{groups:groups}};
 }
 
 var BANK   = normaliseBank(G.MTH028_BANK || defaultBank());
@@ -149,6 +159,28 @@ ITEMS.forEach(function(it){
   if(it.variantOf && VARIANTS[it.variantOf]) VARIANTS[it.variantOf].push(it.id);
   if(it.variantOf && BYQID[it.variantOf]) REP_OF[it.id]=BYQID[it.variantOf];
 });
+/* ---------- secondary index (二级目录) ----------
+   bank.subtopics comes from the midterm handout: 26 考点 nested under the 17
+   textbook sections.  SUBSOF[topic] keeps them in handout order, BYSUB counts
+   the questions each one holds (MAIN only — a variant is practice of the same
+   cell, not another number in it). */
+var SUBTOPICS = (BANK.subtopics || []);
+var SUBMAP={}, SUBSOF={}, BYSUB={};
+SUBTOPICS.forEach(function(x){
+  SUBMAP[x.id]=x;
+  (SUBSOF[x.topic]=SUBSOF[x.topic]||[]).push(x.id);
+});
+MAIN.forEach(function(it){ if(it.sub){ (BYSUB[it.sub]=BYSUB[it.sub]||[]).push(it.id); } });
+function subInfo(id){ return SUBMAP[id] || {id:id||'',zh:'',en:''}; }
+function subsWithItems(topic){
+  return (SUBSOF[topic]||[]).filter(function(id){ return (BYSUB[id]||[]).length; });
+}
+function subTagHtml(it,cls){
+  if(!it || !it.sub) return '';
+  var x=subInfo(it.sub);
+  return '<span class="qsub'+(cls?' '+cls:'')+'" title="'+escAttr(x.id+' · '+(x.zh||'')+' · '+(x.en||''))+'">'
+    +escHtml(x.id)+' '+escHtml(x.zh||x.en||'')+'</span>';
+}
 function topicInfo(id){
   if(id!=null && TOPICMAP[id]) return TOPICMAP[id];
   return {id:null,en:'Unsorted',zh:'未归类',ch:null,focus:'',steps:[],note:'',trap:''};
@@ -857,6 +889,7 @@ function viewQuiz(){
    +'<div class="qcard"><div class="qhead">'
    +'<span class="qno'+typeBadge+'">'+escHtml(it.label)+'</span>'
    +'<span class="qsec" title="'+escAttr(t.en)+'">'+chLabel+escHtml(t.en)+'<span class="tz"> '+escHtml(t.zh)+'</span></span>'
+   +subTagHtml(it)
    +aiTagHtml(it)
    +starBtn(it.id)
    +'<div class="qprog"><span class="muted" style="font-size:12px">'
@@ -980,64 +1013,123 @@ function viewHome(){
 function labelMatch(it,q){
   if(!q) return true;
   var n=function(s){ return String(s==null?'':s).toLowerCase().replace(/[^a-z0-9]/g,''); };
-  var nq=n(q); if(!nq) return true;
+  var nq=n(q);
+  if(!nq){
+    /* a CJK query has no latin/digit characters left after stripping, so it
+       must be matched against the raw text (考点名 / 二级考点名) */
+    var sub=SUBMAP[it.sub]||{}, top=TOPICMAP[it.topic]||{};
+    var hay=[it.label,it.qid,it.src,it.topic,it.sub,sub.zh,sub.en,top.zh,top.en]
+      .join(' ').toLowerCase();
+    return hay.indexOf(String(q).toLowerCase().trim())>=0;
+  }
   if(n(it.label).indexOf(nq)>=0) return true;
   if(n(it.qid).indexOf(nq)>=0) return true;
+  /* compare the source label with its dash kept: stripping punctuation turns
+     "Q1-01" and "Q10-10" into "q101" / "q1010", and the shorter one then
+     matches the longer one as a prefix */
+  if(it.src && String(it.src).toLowerCase().indexOf(String(q).toLowerCase().trim())>=0) return true;
   if(it.topic && n(it.topic).indexOf(nq)>=0) return true;
+  if(it.sub){
+    if(n(it.sub).indexOf(nq)>=0) return true;
+    var sx=SUBMAP[it.sub];
+    if(sx && (n(sx.zh).indexOf(nq)>=0 || n(sx.en).indexOf(nq)>=0)) return true;
+  }
   return false;
 }
 
-/* ---------- Bank index ---------- */
-var bankCh='all', bankType='all', bankQ='';
+/* ---------- Bank index (two-level: section -> 考点) ---------- */
+var bankCh='all', bankTopic='all', bankSub='all', bankType='all', bankQ='';
+function bankPickCh(ch){ bankCh=ch; bankTopic='all'; bankSub='all'; viewBank(); }
+function bankPickTopic(t){ bankTopic=t; bankSub='all'; paintBank(); }
+function bankPickSub(x){ bankSub=x; paintBank(); }
+function setBankType(k){ bankType=k; paintBank(); }
+function setBankQ(v){ bankQ=v; paintBank(); }
+
+function bankTypeRow(){
+  var f=function(k){ return MAIN.filter(function(i){ return i.type===k; }).length; };
+  return [['all','All <span class="zhx">全部</span> '+MAIN.length],
+          ['choice','Choice <span class="zhx">选择题</span> '+f('choice')],
+          ['fill','Fill <span class="zhx">填空题</span> '+f('fill')],
+          ['cloze','Cloze <span class="zhx">多空题</span> '+f('cloze')]]
+    .map(function(p){ return '<button class="'+(bankType===p[0]?'on':'')+'" onclick="setBankType(\''+p[0]+'\')">'+p[1]+'</button>'; }).join('');
+}
+function bankChRow(){
+  return ['<button class="'+(bankCh==='all'?'on':'')+'" onclick="bankPickCh(\'all\')">All chapters <span class="zhx">全部章节</span></button>']
+    .concat(CHAPTERS.map(function(c,i){
+      return '<button class="'+(bankCh===i?'on':'')+'" onclick="bankPickCh('+i+')">Ch '+escHtml(c.n)+'</button>';
+    })).join('');
+}
+function bankTopicRow(){
+  var list=TOPICS.filter(function(t){ return bankCh==='all' || t.ch===bankCh; });
+  return ['<button class="'+(bankTopic==='all'?'on':'')+'" onclick="bankPickTopic(\'all\')">All 考点 <span class="zhx">全部小节</span></button>']
+    .concat(list.map(function(t){
+      var n=(BYTOPIC[t.id]||[]).length;
+      return '<button class="'+(bankTopic===t.id?'on':'')+(n?'':' empty')+'" onclick="bankPickTopic(\''+escAttr(t.id)+'\')" '
+        +'title="'+escAttr(t.en+' · '+t.zh)+'">'+escHtml(t.id)+' '+escHtml(t.en)+' <b>'+n+'</b></button>';
+    })).join('');
+}
+function bankSubRow(){
+  if(bankTopic==='all') return '';
+  var ids=subsWithItems(bankTopic);
+  if(!ids.length) return '<span class="muted" style="font-size:12px">这个考点还没有二级分类。</span>';
+  return ['<button class="'+(bankSub==='all'?'on':'')+'" onclick="bankPickSub(\'all\')">All <span class="zhx">全部</span></button>']
+    .concat(ids.map(function(id){
+      var x=subInfo(id), n=(BYSUB[id]||[]).length;
+      return '<button class="'+(bankSub===id?'on':'')+'" onclick="bankPickSub(\''+escAttr(id)+'\')" '
+        +'title="'+escAttr(x.src||'')+'">'+escHtml(id)+' '+escHtml(x.zh||x.en)+' <b>'+n+'</b></button>';
+    })).join('');
+}
 function viewBank(ch){
   if(ch!==undefined) bankCh=ch;
-  var typeHtml=[['all','All <span class="zhx">全部</span> '+MAIN.length],
-    ['choice','Choice <span class="zhx">选择题</span> '+MAIN.filter(function(i){return i.type==='choice';}).length],
-    ['fill','Fill <span class="zhx">填空题</span> '+MAIN.filter(function(i){return i.type==='fill';}).length],
-    ['cloze','Cloze <span class="zhx">多空题</span> '+MAIN.filter(function(i){return i.type==='cloze';}).length]]
-    .map(function(p){ return '<button class="'+(bankType===p[0]?'on':'')+'" onclick="setBankType(\''+p[0]+'\')">'+p[1]+'</button>'; }).join('');
-  var chHtml=['<button class="'+(bankCh==='all'?'on':'')+'" onclick="viewBank(\'all\')">All chapters <span class="zhx">全部章节</span></button>']
-    .concat(CHAPTERS.map(function(c,i){ return '<button class="'+(bankCh===i?'on':'')+'" onclick="viewBank('+i+')">Ch '+escHtml(c.n)+'</button>'; })).join('');
   document.getElementById('view').innerHTML=
    '<div class="wrap"><div class="res"><div class="card">'
    +'<h3 style="margin-bottom:2px">The whole bank <span class="tz" style="font-size:12.5px">全部题库</span></h3>'
-   +'<p class="muted">All '+MAIN.length+' templates in one index, distinguished by <code>type</code>. '
-   +'Tap a number to open it on its own. <span class="zhx">统一 items 数组，点编号单独打开。</span><br>'
-      +'<span style="font-size:12px">Q<span style="opacity:.6">xx</span> = MTH028-Quizzes &nbsp;·&nbsp; '
-   +'B<span style="opacity:.6">xx</span> = 题库2 &nbsp;·&nbsp; H<span style="opacity:.6">xx</span> = HJT'
-   +'<span class="zhx">　前缀只表示来自哪一批导出（同一份练习的另一次尝试），题目同等有效。</span><br>'
-   +'<span style="font-size:12px">Moodle 每次抽题都会重抽数字，同一道题因此有多个版本：'
-   +'主列表每个模板只列一次（'+MAIN.length+'），其余 '+META.variants+' 个版本收在题卡底部的「同模板的另外 N 组数字」里，点开即可练。'
-   +'<span style="opacity:.7"> Every attempt re-draws the numbers, so a template has several versions; '
-   +'the list shows one per template and folds the rest under it.</span></span></p>' 
-   +'<div class="filter" id="bankType">'+typeHtml+'</div>'
-   +'<div class="filter" id="bankCh">'+chHtml+'</div>'
-   +'<div class="idxsearch"><input id="bankQ" value="'+escAttr(bankQ)+'" placeholder="Find a number or topic — Q1-01 / 1-01 / 1.2 · 搜题号或考点" oninput="setBankQ(this.value)"></div>'
+   +'<p class="muted">'+MAIN.length+' 个题目模板，按 <b>章节 → 小节 → 二级考点</b> 三层编排；'
+   +'题号 <code>1.1.2-04</code> 依次表示 小节 · 二级考点 · 该考点内序号。'
+   +'<br><span style="font-size:12px">Every number carries its position: <code>section.subtopic-index</code>. '
+   +'Tap a number to open it on its own.</span></p>'
+   +'<p class="muted" style="font-size:12px;margin-top:-4px">'
+   +'二级考点取自《MTH028 线代期中自学课件》的 12 模块 / 考点，共 '+SUBTOPICS.length+' 个，'
+   +'已用 '+SUBTOPICS.filter(function(x){return (BYSUB[x.id]||[]).length;}).length+' 个。'
+   +' <span style="opacity:.7">Second level follows the midterm handout.</span><br>'
+   +'原始题号（Q1-01 = MTH028-Quizzes、B… = 题库2、H… = HJT）保留在悬停提示里；'
+   +'同一模板的另几次抽题编号为 <code>…-v2</code>，收在题卡底部。</p>'
+   +'<div class="filter" id="bankType">'+bankTypeRow()+'</div>'
+   +'<div class="filter" id="bankCh">'+bankChRow()+'</div>'
+   +'<div class="filter" id="bankTopic">'+bankTopicRow()+'</div>'
+   +'<div class="filter" id="bankSub">'+bankSubRow()+'</div>'
+   +'<div class="idxsearch"><input id="bankQ" value="'+escAttr(bankQ)+'" placeholder="找题号 / 考点 / 来源 — 1.1.2-04 · 初等行变换 · Q1-01 · 1.2" oninput="setBankQ(this.value)"></div>'
    +'<div class="idxmeta" id="bankMeta"></div>'
    +'<div class="idxgrid" id="bankGrid"></div>'
    +'</div><div style="margin-top:14px"><button class="btn ghost" onclick="route(\'home\')">Back <span class="zhx">返回</span></button></div>'
    +'</div></div>';
   paintBank(); paintTop();
 }
-function setBankType(k){ bankType=k; viewBank(); }
-function setBankQ(v){ bankQ=v; paintBank(); }
 function paintBank(){
-  var tEl=document.getElementById('bankType'), g=document.getElementById('bankGrid');
+  var g=document.getElementById('bankGrid');
   if(!g) return;
-  if(tEl) tEl.innerHTML=[['all','All'],['choice','Choice'],['fill','Fill'],['cloze','Cloze']]
-    .map(function(p){ return '<button class="'+(bankType===p[0]?'on':'')+'" onclick="setBankType(\''+p[0]+'\')">'+p[1]+'</button>'; }).join('');
+  var set=function(id,html){ var el=document.getElementById(id); if(el) el.innerHTML=html; };
+  set('bankType', bankTypeRow());
+  set('bankCh', bankChRow());
+  set('bankTopic', bankTopicRow());
+  set('bankSub', bankSubRow());
   var list=MAIN.filter(function(it){
     if(bankCh!=='all' && itemChapter(it)!==bankCh) return false;
+    if(bankTopic!=='all' && it.topic!==bankTopic) return false;
+    if(bankSub!=='all' && it.sub!==bankSub) return false;
     if(bankType!=='all' && it.type!==bankType) return false;
     return labelMatch(it,bankQ);
   });
+  /* the grid follows the numbering (section -> 考点 -> index), not the order the
+     items happen to sit in bank.js */
+  list.sort(function(a,b){ return a.label<b.label? -1 : (a.label>b.label? 1:0); });
   var ok=0,seen=0;
   var cells=list.map(function(it){
     var r=store.h[it.id]; if(r){ seen++; if(r.ok) ok++; }
-    var st=r?(r.ok?'ok':'bad'):'new', t=topicInfo(it.topic);
+    var st=r?(r.ok?'ok':'bad'):'new', x=subInfo(it.sub);
     return '<button class="idx-b '+st+(isFav(it.id)?' fav':'')+'" onclick="startSingle('+it.id+')" '
-      +'title="'+escAttr(it.label+' · '+it.topic+' · '+t.en)+'"><b>'+escHtml(it.label)+'</b>'
-      +'<i>'+escHtml(it.topic||'—')+'</i>'+(r?(r.ok?'<u>✓</u>':'<u>✕</u>'):'')+'</button>';
+      +'title="'+escAttr(it.label+' · '+(x.zh||'')+' · 来源 '+(it.src||it.qid))+'""><b>'+escHtml(it.label)+'</b>'
+      +'<i>'+escHtml(it.sub||it.topic||'—')+'</i>'+(r?(r.ok?'<u>✓</u>':'<u>✕</u>'):'')+'</button>';
   }).join('');
   var m=document.getElementById('bankMeta');
   if(m) m.textContent=list.length? (list.length+' items · '+seen+' attempted · '+ok+' correct ／ 共 '+list.length+' 题，已做 '+seen+'，正确 '+ok)
@@ -1095,6 +1187,7 @@ function previewCard(id){
   return '<article class="pv-card" data-id="'+id+'" id="pv'+id+'">'
     +'<div class="pv-hd"><span class="qno'+tb+'">'+escHtml(it.label)+'</span>'
     +'<span class="pv-sec" title="'+escAttr(t.en)+'">'+escHtml(it.topic||'—')+' · '+escHtml(t.en)+'<span class="tz"> '+escHtml(t.zh)+'</span></span>'
+    +subTagHtml(it,'sm')
     +starBtn(id)+done+'</div>'
     +(it.aiGenerated? '<div class="ai-strip" style="margin:10px 14px 0">'+aiTagHtml(it)+'</div>':'')
     +'<div class="pv-img">'+(it.img? '<img src="'+escAttr(it.img)+'" alt="'+escAttr(it.label)+'" loading="lazy">':'')+'</div>'
@@ -1185,6 +1278,14 @@ function viewRef(ch){
       return '<div class="ref-card" id="r'+escAttr(t.id)+'">'
         +'<div class="ref-h"><span class="ref-id">'+escHtml(t.id)+'</span>'
         +'<span class="ref-en">'+escHtml(t.en)+'</span><span class="ref-zh">'+escHtml(t.zh)+'</span></div>'
+        +(function(){
+          var ids=subsWithItems(t.id);
+          if(!ids.length) return '';
+          return '<div class="ref-subs"><span class="ref-sublbl">二级考点</span>'
+            +ids.map(function(id){ var x=subInfo(id), c=(BYSUB[id]||[]).length;
+                return '<span class="ref-sub" title="'+escAttr(x.src||x.en||'')+'">'+escHtml(id)+' '
+                  +escHtml(x.zh||x.en||'')+'<b>'+c+'</b></span>'; }).join('')+'</div>';
+        })()
         +(t.focus? '<div class="ref-k">What it tests <span class="zhx">考什么</span></div><p class="ref-focus">'+escHtml(t.focus)+(t.focus_zh? ' <span class="tz">'+escHtml(t.focus_zh)+'</span>':'')+'</p>':'')
         +(t.steps.length? '<div class="ref-k">How to do it <span class="zhx">怎么做</span></div><ol class="ref-steps">'+t.steps.map(function(s){ return '<li>'+escHtml(s)+'</li>'; }).join('')+'</ol>':'')
         +(t.note? '<p class="ref-note">'+escHtml(t.note)+'</p>':'')
@@ -1392,7 +1493,9 @@ if(typeof window!=='undefined'&&window.addEventListener)
 /* ---------- expose for Node mock-DOM smoke tests ---------- */
 var API={
   BANK:BANK, META:META, CHAPTERS:CHAPTERS, TOPICS:TOPICS, ITEMS:ITEMS, GLOSS:GLOSS,
-  BYID:BYID, BYTOPIC:BYTOPIC, MAIN:MAIN, VARIANTS:VARIANTS, BYQID:BYQID, GROUPS:GROUPS, GROUP_BY_ID:GROUP_BY_ID,
+  BYID:BYID, BYTOPIC:BYTOPIC, MAIN:MAIN, VARIANTS:VARIANTS, BYQID:BYQID,
+  SUBTOPICS:SUBTOPICS, SUBMAP:SUBMAP, SUBSOF:SUBSOF, BYSUB:BYSUB, subInfo:subInfo,
+  bankPickTopic:bankPickTopic, bankPickSub:bankPickSub, bankPickCh:bankPickCh, GROUPS:GROUPS, GROUP_BY_ID:GROUP_BY_ID,
   normAns:normAns, ansEqual:ansEqual, autoGradeable:autoGradeable,
   gradeChoice:gradeChoice, gradeFill:gradeFill, gradeCloze:gradeCloze,
   normFav:normFav, normMiss:normMiss, emptyStore:emptyStore, logMiss:logMiss, repaired:repaired,
@@ -1435,6 +1538,7 @@ var GLOBAL_HANDLERS={
   pickChoice:pickChoice, submitAnswer:submitAnswer, selfGrade:selfGrade,
   toggleFav:toggleFav,
   viewBank:viewBank, viewRef:viewRef, setBankQ:setBankQ, setBankType:setBankType,
+  bankPickCh:bankPickCh, bankPickTopic:bankPickTopic, bankPickSub:bankPickSub,
   setGlossQ:setGlossQ,
   pvGo:pvGo, pvPageGo:pvPageGo, pvSetCh:pvSetCh, pvSetQ:pvSetQ,
   pvSetTopic:pvSetTopic, pvSetType:pvSetType

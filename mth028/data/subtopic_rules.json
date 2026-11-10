@@ -1,0 +1,347 @@
+[
+ {
+  "sub": "1.1.1",
+  "re": "whichsystemcorrespondstothefollowingaugmentedmatrix",
+  "w": 6
+ },
+ {
+  "sub": "1.1.1",
+  "re": "giventheaugmentedmatrix",
+  "w": 5
+ },
+ {
+  "sub": "1.1.1",
+  "re": "writethesystem|writetheaugmented",
+  "w": 5
+ },
+ {
+  "sub": "1.1.1",
+  "re": "whatisthesolutionofthesystem",
+  "w": 2
+ },
+ {
+  "sub": "1.1.2",
+  "re": "replacerow",
+  "w": 6
+ },
+ {
+  "sub": "1.1.2",
+  "re": "whichpairofoperationstransforms",
+  "w": 6
+ },
+ {
+  "sub": "1.1.2",
+  "re": "elementaryrowoperation",
+  "w": 6
+ },
+ {
+  "sub": "1.1.2",
+  "re": "pairofrowoperations",
+  "w": 5
+ },
+ {
+  "sub": "1.2.1",
+  "re": "isinechelonform|butnotinreducedechelonform",
+  "w": 7
+ },
+ {
+  "sub": "1.2.1",
+  "re": "pivotposition|pivotcolumn|pivots",
+  "w": 4
+ },
+ {
+  "sub": "1.2.1",
+  "re": "echelonform",
+  "w": 2
+ },
+ {
+  "sub": "1.2.2",
+  "re": "findthereducedechelonform|reducedechelonformof",
+  "w": 7
+ },
+ {
+  "sub": "1.2.2",
+  "re": "reducetheaugmentedmatrix",
+  "w": 6
+ },
+ {
+  "sub": "1.2.2",
+  "re": "findthegeneralsolution",
+  "w": 3
+ },
+ {
+  "sub": "1.2.3",
+  "re": "findthevalueofh",
+  "w": 7
+ },
+ {
+  "sub": "1.2.3",
+  "re": "isconsistent|consistentfor|systemisconsistent",
+  "w": 5
+ },
+ {
+  "sub": "1.2.3",
+  "re": "consistent",
+  "w": 2
+ },
+ {
+  "sub": "1.3.1",
+  "re": "computethevector|computethefollowingvector",
+  "w": 7
+ },
+ {
+  "sub": "1.3.1",
+  "re": "cudv",
+  "w": 6
+ },
+ {
+  "sub": "1.3.2",
+  "re": "writeavectorequation",
+  "w": 7
+ },
+ {
+  "sub": "1.3.2",
+  "re": "isinspan|doesnotspan|span\\{",
+  "w": 6
+ },
+ {
+  "sub": "1.3.2",
+  "re": "linearcombination",
+  "w": 5
+ },
+ {
+  "sub": "1.4.1",
+  "re": "computetheproduct",
+  "w": 7
+ },
+ {
+  "sub": "1.4.2",
+  "re": "doestheequation|istheequation",
+  "w": 5
+ },
+ {
+  "sub": "1.5.1",
+  "re": "nontrivialsolution|nontrivial",
+  "w": 7
+ },
+ {
+  "sub": "1.5.1",
+  "re": "homogeneous",
+  "w": 5
+ },
+ {
+  "sub": "1.5.1",
+  "re": "trivialsolution",
+  "w": 4
+ },
+ {
+  "sub": "1.5.1",
+  "re": "ax=0|ax0",
+  "w": 2
+ },
+ {
+  "sub": "1.5.2",
+  "re": "parametricvectorform",
+  "w": 8
+ },
+ {
+  "sub": "1.5.2",
+  "re": "allsolutionstotheequation",
+  "w": 6
+ },
+ {
+  "sub": "1.7.1",
+  "re": "linearlyindependent|linearlydependent",
+  "w": 5
+ },
+ {
+  "sub": "1.7.1",
+  "re": "setofvectors",
+  "w": 3
+ },
+ {
+  "sub": "1.7.2",
+  "re": "linearlydependent.{0,80}findthevalueof",
+  "w": 8
+ },
+ {
+  "sub": "1.7.2",
+  "re": "dependent.{0,40}x",
+  "w": 1
+ },
+ {
+  "sub": "1.8.1",
+  "re": "thenm=|thenm,n|thenm,",
+  "w": 7
+ },
+ {
+  "sub": "1.8.1",
+  "re": "bealineartransformationdefinedby|bealineartransformationsatisfying",
+  "w": 3
+ },
+ {
+  "sub": "1.8.1",
+  "re": "beamatrixtransformation",
+  "w": 3
+ },
+ {
+  "sub": "1.8.2",
+  "re": "one-to-one|onetoone",
+  "w": 6
+ },
+ {
+  "sub": "1.8.2",
+  "re": "mapsonto|mapson",
+  "w": 6
+ },
+ {
+  "sub": "1.8.2",
+  "re": "injective|surjective",
+  "w": 6
+ },
+ {
+  "sub": "1.9.1",
+  "re": "rotationabouttheorigin|rotation",
+  "w": 8
+ },
+ {
+  "sub": "1.9.2",
+  "re": "standardmatrixforthelineartransformation",
+  "w": 4
+ },
+ {
+  "sub": "1.9.2",
+  "re": "t\\(x1,x2,x3\\)|t\\(x1,x2\\)",
+  "w": 5
+ },
+ {
+  "sub": "2.1.1",
+  "re": "entryofthematrixat|entryofthematrixatb",
+  "w": 7
+ },
+ {
+  "sub": "2.1.1",
+  "re": "entryofthematrix",
+  "w": 4
+ },
+ {
+  "sub": "2.1.2",
+  "re": "finduvt|findu\\^?tv|finduv",
+  "w": 7
+ },
+ {
+  "sub": "2.1.2",
+  "re": "utv|uvt",
+  "w": 4
+ },
+ {
+  "sub": "2.2.1",
+  "re": "whichoneofthefollowingmatricesistheinverseof",
+  "w": 8
+ },
+ {
+  "sub": "2.2.1",
+  "re": "findtheinverse",
+  "w": 6
+ },
+ {
+  "sub": "2.2.2",
+  "re": "e1e2e3|elementarymatri",
+  "w": 7
+ },
+ {
+  "sub": "2.2.3",
+  "re": "givena-1andb|givena−1andb",
+  "w": 8
+ },
+ {
+  "sub": "2.2.3",
+  "re": "c-1\\(ax\\)|invertiblematrices",
+  "w": 6
+ },
+ {
+  "sub": "2.3.1",
+  "re": "mustbefalse|mustbetrue",
+  "w": 12
+ },
+ {
+  "sub": "2.3.1",
+  "re": "howmanyofthefollowingstatements|whichofthefollowingstatements",
+  "w": 12
+ },
+ {
+  "sub": "2.3.2",
+  "re": "isnotinvertible",
+  "w": 8
+ },
+ {
+  "sub": "2.3.2",
+  "re": "a2000|a2024|a3=i3|a\\^3=i",
+  "w": 7
+ },
+ {
+  "sub": "2.8.1",
+  "re": "isnotincola|notincol|columnspace|columna",
+  "w": 7
+ },
+ {
+  "sub": "2.8.2",
+  "re": "basisforthenullspace|nullspace|nula",
+  "w": 8
+ },
+ {
+  "sub": "1.3.2",
+  "re": "thevectorequation|equivalenttoalinearsystem",
+  "w": 6
+ },
+ {
+  "sub": "1.5.2",
+  "re": "describesthesolutionset",
+  "w": 6
+ },
+ {
+  "sub": "2.8.1",
+  "re": "notina\\?col|isnotincol|notincola",
+  "w": 6
+ },
+ {
+  "sub": "2.2.3",
+  "re": "a-1baxb|axbgiven",
+  "w": 7
+ },
+ {
+  "sub": "2.2.3",
+  "re": "c-1\\(a\\+x\\)b-1|c-1\\(ax\\)b-1|c-1\\(ax\\)",
+  "w": 7
+ },
+ {
+  "sub": "2.3.2",
+  "re": "t-1\\(e1\\)|t-1\\(e2\\)|t-1\\(",
+  "w": 7
+ },
+ {
+  "sub": "1.8.1",
+  "re": "mnthen|thenm=",
+  "w": 7
+ },
+ {
+  "sub": "1.2.3",
+  "re": "(?:^|[^a-z])k(?:[^a-z]|$)",
+  "w": 7
+ },
+ {
+  "sub": "2.3.1",
+  "re": "statementsaretrue|statementsarea|followingstatements",
+  "w": 8
+ },
+ {
+  "sub": "1.7.2",
+  "re": "linearlydependent.{0,60}thenx|linearlydependent.{0,40}x\\.=",
+  "w": 9
+ },
+ {
+  "sub": "1.8.2",
+  "re": "beamatrixtransformation.{0,200}statements|beamatrixtransformation.{0,200}whichoneofthefollowing",
+  "w": 10
+ }
+]

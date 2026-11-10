@@ -20,8 +20,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = os.path.join(ROOT, "data")
 
 
-def label_for(r):
-    """Display label: Q<n>-<qno> / B<n>-<qno> (题库2) / H<n>-<qno> (HJT)."""
+def source_label(r):
+    """Where the record came from: Q<n>-<qno> / B<n>-<qno> / H<n>-<qno>.
+
+    This used to BE the display label; now the display label follows the
+    secondary index (1.1.1-04), so the source is kept only as a traceable
+    reference (hover text, admin console, duplicates report).
+    """
     if r["qid"].startswith("b"):
         return "B%d-%02d" % (r["quiz"] - 20, r["qno"])
     if r["qid"].startswith("h"):
@@ -38,12 +43,52 @@ def main():
     tmap = {m["qid"]: m["topic"] for m in
             json.load(open(os.path.join(D, "topic_map.json")))["mapping"]}
 
+    # ---------- secondary index + renumbering ----------
+    # The label now carries the two-level position: <section>.<sub>-<nn>.  The
+    # numbering runs in subtopic order, so browsing the bank (or reading a
+    # subtopic list) shows consecutive numbers inside each 考点.  A variant is
+    # not a position in that list, so it is labelled "<its template>-v<k>".
+    smap = json.load(open(os.path.join(D, "subtopic_map.json")))
+    subs_doc = json.load(open(os.path.join(D, "subtopics.json")))
+    subs = {s["id"]: s for s in subs_doc["subtopics"]}
+
+    def sub_key(sid):
+        return tuple(int(x) for x in sid.split("."))
+
+    ordered = sorted(sel, key=lambda r: (sub_key(smap.get(r["qid"], {}).get("sub", "9.9.9")),
+                                         r["quiz"], r["qno"]))
+    label, seq = {}, {}
+    for r in ordered:
+        if r.get("variantOf"):
+            continue
+        sid = smap.get(r["qid"], {}).get("sub")
+        if not sid:
+            continue
+        seq[sid] = seq.get(sid, 0) + 1
+        label[r["qid"]] = "%s-%02d" % (sid, seq[sid])
+    # variants follow their template, in a stable order
+    vcount = {}
+    for r in ordered:
+        rep = r.get("variantOf")
+        if not rep:
+            continue
+        base = label.get(rep)
+        if not base:
+            continue
+        vcount[base] = vcount.get(base, 1) + 1
+        label[r["qid"]] = "%s-v%d" % (base, vcount[base])
+
     idx, structured = [], []
     for r in sel:
         qid = r["qid"]
         c = crops.get(qid, {})
         ident = r["quiz"] * 1000 + r["qno"]
-        label = label_for(r)
+        src = source_label(r)
+        lab = label.get(qid) or src
+        sub = (smap.get(qid) or {}).get("sub")
+        # the subtopic is authoritative for the section too (it fixed the items
+        # the first classifier had filed under the wrong chapter)
+        topic = (subs.get(sub) or {}).get("topic") or tmap.get(qid) or None
         blanks = int(r.get("blanks") or (1 if r["type"] == "fill" else 0))
         idx.append({
             "qid": qid, "quiz": r["quiz"], "qno": r["qno"],
@@ -52,15 +97,14 @@ def main():
         })
         structured.append({
             "qid": qid, "quiz": r["quiz"], "qno": r["qno"],
-            "id": ident, "label": label,
+            "id": ident, "label": lab, "src": src, "sub": sub,
             # a fill item that asks for several values ("m = __, n = __") is a
             # cloze in this data model: the page renders one input per blank
             # and grades them one by one
             "type": ("cloze" if r["type"] == "fill" and blanks > 1 else r["type"]),
             "blanks": blanks,
-            # a variant inherits its template's section (only the reps are
-            # classified; the variants are the same question with new numbers)
-            "topic": tmap.get(qid) or tmap.get(r.get("variantOf") or ""),
+            "topic": topic,
+            "sub": sub,
             "variant_of": r.get("variantOf"),
             "stem": r["stem"],
             "options": [{"L": o["L"], "text": o["text"]} for o in r["options"]],

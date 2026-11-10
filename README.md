@@ -12,7 +12,7 @@ first before changing anything.
 
 | Course | Entry | Bank | Topics | Glossary |
 |---|---|---|---|---|
-| **MTH028 · Linear Algebra I** | `/` → `index.html` | 285 templates / 675 records (420 choice · 195 fill · 60 cloze) | 17 (1.1–2.8) | 33 groups / 212 terms |
+| **MTH028 · Linear Algebra I** | `/` → `index.html` | 285 templates / 675 records (420 choice · 195 fill · 60 cloze) | 17 sections × 26 sub-topics | 33 groups / 212 terms |
 | **MTH026 · Calculus I** | `/mth026.html` | 674 items (351 + 323) | 54 | 9 groups / 80 terms |
 
 Progress is **isolated per course**: MTH028 uses the `progress28` table and the
@@ -42,8 +42,8 @@ favourites or mistake book can leak into the other.
   → `data/extract_v2.json`; `build/select_items.py` decides answer keys, merges
   duplicate templates and writes `data/selection.json` + `data/duplicates.json`;
   `build/render_crops.py` renders the two images per item; `build/map_topics_v2.py`
-  assigns a section; `build/merge_bank.py` writes the four files the assembler
-  consumes. Re-run them in that order, then
+  assigns a section; `build/classify_subtopics.py` assigns the sub-topic;
+  `build/merge_bank.py` writes the four files the assembler consumes. Re-run them in that order, then
   `assemble_bank.py --out ../mth026/repo/bank.js`.
 - **Sources.** The 285 items come from **45** Moodle *attempt review* exports in
   three folders — `MTH028-Quizzes/1.pdf … 15.pdf` (prefix `Q`), `题库2/2-1.pdf …
@@ -62,6 +62,18 @@ favourites or mistake book can leak into the other.
   「同模板的另外 N 组数字」 — one click opens that draw and grades it on its own
   numbers. 89 of the 390 have no printed answer at all and open in self-check
   mode (chips are dashed and say 自评).
+- **Two-level index (二级目录).** Every item also carries `sub`, a subtopic id
+  taken from the midterm handout (`MTH028 线代期中自学课件.pdf`, 12 modules /
+  ~31 考点): 26 sub-topics under the 17 textbook sections, 25 of them in use.
+  `mth028/data/subtopics.json` is the list, `subtopic_rules.json` the classifier
+  (regex → subtopic, weighted), `subtopic_overrides.json` the human fixes,
+  `subtopic_map.json` the result and `subtopic_report.txt` what moved.
+  An item's **section is derived from its subtopic**, so the classifier also
+  repaired the first level (linear independence had been filed under 1.1).
+- **Numbering.** Labels are now positions, not sources: `1.2.3-04` = section 1.2,
+  sub-topic 1.2.3, 4th question there. The old `Q1-01` / `B…` / `H…` label is
+  kept as `src` (hover text, admin console, this repo's cross-references). A
+  variant is `1.5.1-02-v3` — it has no position of its own.
 - **Data files.** `selection.json` = the 285 representatives;
   `selection_all.json` = all 675 (this is what renders the images, what
   `merge_bank.py` reads and what the admin console indexes). Question
