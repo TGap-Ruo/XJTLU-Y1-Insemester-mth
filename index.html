@@ -1170,6 +1170,7 @@ function pvList(){
   /* favourites and the mistake book are per record, so they may hold a
      variant; those two views therefore walk the full set */
   var pool=(pvScope==='fav'||pvType==='fav')? ITEMS : MAIN;
+  pool=pool.slice().sort(function(a,b){ return a.label<b.label? -1 : (a.label>b.label? 1:0); });
   return pool.filter(function(it){
     if(pvScope==='fav' && !isFav(it.id)) return false;
     if(pvType==='fav' && !isFav(it.id)) return false;
