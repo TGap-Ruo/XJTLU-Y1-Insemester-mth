@@ -605,7 +605,21 @@ function addSkip(kind,key){
   store.skip[kind][key]=Date.now(); save();
 }
 function clearSkips(){ store.skip={q:{},s:{}}; save(); viewHome(); paintTop(); }
-function cycleState(){ if(!store.cyc||!store.cyc.seen) store.cyc={n:(store.cyc&&store.cyc.n)||1,seen:{}}; return store.cyc; }
+function cycleState(){
+  if(!store.cyc||!store.cyc.seen) store.cyc={n:(store.cyc&&store.cyc.n)||1,seen:{}};
+  /* The round used to be keyed by section (1.1); it is keyed by 考点 (1.1.1)
+     now.  Drop the stale one-dot keys, otherwise a returning user starts a
+     25-group round already 12 groups "seen".  Idempotent: no flag needed, a
+     sub-topic key always has three parts. */
+  var stale=false;
+  Object.keys(store.cyc.seen).forEach(function(k){ if(String(k).split('.').length<3) stale=true; });
+  if(stale){
+    var keep={};
+    Object.keys(store.cyc.seen).forEach(function(k){ if(String(k).split('.').length>=3) keep[k]=1; });
+    store.cyc.seen=keep;
+  }
+  return store.cyc;
+}
 function activeGroupCount(){
   // 25 sub-topics rather than 12 sections: a section split into two 考点 counts
   // twice, which is what makes one round cover the whole bank properly
