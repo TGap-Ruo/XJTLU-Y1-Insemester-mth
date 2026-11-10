@@ -171,6 +171,14 @@ SUBTOPICS.forEach(function(x){
   (SUBSOF[x.topic]=SUBSOF[x.topic]||[]).push(x.id);
 });
 MAIN.forEach(function(it){ if(it.sub){ (BYSUB[it.sub]=BYSUB[it.sub]||[]).push(it.id); } });
+/* One group per 二级考点.  This is the unit the smart round walks: a section
+   with two sub-topics (1.1.1 / 1.1.2) therefore contributes two questions per
+   round instead of one.  Empty sub-topics are dropped (nothing to pick). */
+var SUBGROUPS = SUBTOPICS.filter(function(x){ return (BYSUB[x.id]||[]).length; })
+  .map(function(x){
+    var t=TOPICMAP[x.topic]||{};
+    return {id:x.id, en:x.en||'', zh:x.zh||'', topic:x.topic, ch:t.ch, ids:BYSUB[x.id]};
+  });
 function subInfo(id){ return SUBMAP[id] || {id:id||'',zh:'',en:''}; }
 function subsWithItems(topic){
   return (SUBSOF[topic]||[]).filter(function(id){ return (BYSUB[id]||[]).length; });
@@ -599,7 +607,9 @@ function addSkip(kind,key){
 function clearSkips(){ store.skip={q:{},s:{}}; save(); viewHome(); paintTop(); }
 function cycleState(){ if(!store.cyc||!store.cyc.seen) store.cyc={n:(store.cyc&&store.cyc.n)||1,seen:{}}; return store.cyc; }
 function activeGroupCount(){
-  return Object.keys(BYTOPIC).filter(function(k){ return BYTOPIC[k].length>0; }).length;
+  // 25 sub-topics rather than 12 sections: a section split into two 考点 counts
+  // twice, which is what makes one round cover the whole bank properly
+  return Math.max(1, SUBGROUPS.length);
 }
 function cycleInfo(){ var c=cycleState(); return {n:c.n||1,seen:Object.keys(c.seen).length,all:Math.max(1,activeGroupCount())}; }
 function markCycle(gid){
@@ -608,7 +618,9 @@ function markCycle(gid){
   return false;
 }
 function diag(gid){
-  var ids=BYTOPIC[gid]||[];                       // secStat(): walk BYTOPIC only
+  // gid is a section id (1.1) or a sub-topic id (1.1.1); the id spaces do not
+  // overlap, so one lookup covers both
+  var ids=BYTOPIC[gid]||BYSUB[gid]||[];
   var done=0,ok=0,miss=0,rep=0,unseen=0,last=Infinity, M=store.miss||{};
   ids.forEach(function(i){
     var r=store.h[i];
@@ -656,8 +668,8 @@ function whyText(d,c){
 }
 function pickSmart(){
   var sk=skips();
-  var pool=GROUPS.filter(function(g){ return g.ids.length && !sk.s[g.id]; });
-  if(!pool.length){ store.skip={q:{},s:{}}; save(true); pool=GROUPS.filter(function(g){ return g.ids.length; }); }
+  var pool=SUBGROUPS.filter(function(g){ return g.ids.length && !sk.s[g.id]; });
+  if(!pool.length){ store.skip={q:{},s:{}}; save(true); pool=SUBGROUPS.filter(function(g){ return g.ids.length; }); }
   var ds=pool.map(function(g){ return diag(g.id); });
   var un=ds.filter(function(d){ return d.done===0; });          // phase 1: coverage
   for(var i=0;i<un.length;i++){ var c=pickFrom(un[i],sk); if(c) return {id:c.id,why:whyText(un[i],c),phase:1,sec:un[i].id,kind:c.kind}; }
@@ -671,7 +683,7 @@ function pickSmart(){
   if(best) return {id:best.c.id,why:whyText(best.d,best.c),phase:2,sec:best.d.id,kind:best.c.kind};
   return null;
 }
-function untouchedGroups(){ return GROUPS.filter(function(g){ return g.ids.length && diag(g.id).done===0; }); }
+function untouchedGroups(){ return SUBGROUPS.filter(function(g){ return g.ids.length && diag(g.id).done===0; }); }
 function wrongQueue(){ return mistakeBook().filter(function(id){ return !repaired(id); }); }
 
 /* ---------- round state ---------- */
@@ -690,6 +702,7 @@ function start(mode,arg){
     route('quiz'); return;
   }
   if(mode==='topic'){ var g=GROUP_BY_ID[arg]; list=g? g.ids.slice() : []; }
+  else if(mode==='sub'){ list=(BYSUB[arg]||[]).slice(); }
   else if(mode==='wrong'){ list=wrongQueue(); }
   else if(mode==='fav'){ list=Object.keys(store.fav||{}).filter(isFav).map(Number).filter(function(id){ return !!BYID[id]; }); }
   else if(mode==='single'){ list=[arg]; }
@@ -700,6 +713,7 @@ function start(mode,arg){
 }
 function startSingle(id){ start('single',id); }
 function startTopic(id){ start('topic',id); }
+function startSub(id){ start('sub',id); }
 function advance(){
   round.i++; round.picked=null; round.fills=null; round.shown=false; round.self=false;
   round.grade=null; round.marked=false; round.selfOk=null;
@@ -708,7 +722,8 @@ function advance(){
 }
 function skipQ(){ addSkip('q',round.list[round.i]); toast('Skipped · 已跳过这题'); start('smart'); }
 function skipTopic(){
-  var it=currentItem(); addSkip('s', it && it.topic? it.topic : '__untagged__');
+  var it=currentItem();
+  addSkip('s', it && (it.sub || it.topic) ? (it.sub || it.topic) : '__untagged__');
   if(round.sec) markCycle(round.sec); save();
   toast('Skipping this topic · 暂时跳过这类'); start('smart');
 }
@@ -919,7 +934,7 @@ function viewQuiz(){
    +'<div style="display:flex;gap:8px;margin-top:14px;align-items:center;flex-wrap:wrap">'
    +'<button class="btn ghost" onclick="route(\'home\')">Exit <span class="zhx">退出</span></button>'
    +(round.mode==='smart'? '<button class="btn ghost sm" onclick="skipQ()">Skip question <span class="zhx">跳过这题</span></button>'
-     +'<button class="btn ghost sm" onclick="skipTopic()">Skip topic <span class="zhx">跳过这类</span></button>':'')
+     +'<button class="btn ghost sm" onclick="skipTopic()">Skip 考点 <span class="zhx">跳过这个二级考点</span></button>':'')
    +'<div class="spacer"></div>'
    +(canNext? (round.mode==='smart'
      ? '<button class="btn pri" onclick="start(\'smart\')">Next question &rarr; <span class="zhx">下一题</span></button>'
@@ -955,6 +970,14 @@ function viewRes(){
   paintTop();
 }
 
+/* collapse / expand the sub-topic rows under one section row */
+function toggleSec(id){
+  var box=document.getElementById('sbr'+id); if(!box) return;
+  box.classList.toggle('open');
+  var c=document.getElementById('sc'+id);
+  if(c) c.innerHTML = box.classList.contains('open') ? '&#9662;' : '&#9656;';
+}
+
 /* ---------- home ---------- */
 function viewHome(){
   var o=overall(), un=untouchedGroups().length, cy=cycleInfo();
@@ -962,29 +985,50 @@ function viewHome(){
   var rows=GROUPS.filter(function(g){ return g.real; }).map(function(g){
     var d=diag(g.id);
     if(d.n===0){
-      return '<div class="sec-row pending"><span class="sec-id empty">'+escHtml(g.id)+'</span>'
+      return '<div class="sec-block"><div class="sec-row pending"><span class="sec-id empty">'+escHtml(g.id)+'</span>'
         +'<span class="sec-t">'+escHtml(g.en)+'<span class="tz">'+escHtml(g.zh)+'</span></span>'
         +'<span class="tag-pending">暂无题目 · 题目待补充 / Questions to be added</span>'
-        +'<span class="sec-n">—</span></div>';
+        +'<span class="sec-n">—</span></div></div>';
     }
     var pct=Math.round(d.acc*100), cov=Math.round(d.cov*100);
     var cls=d.done===0?'':(pct>=80?'ok':(pct>=50?'warn':'bad'));
-    return '<div class="sec-row" onclick="startTopic(\''+escAttr(g.id)+'\')" style="cursor:pointer" '
+    /* second level: one row per 考点, folded under the section row */
+    var subs=(SUBSOF[g.id]||[]).filter(function(sid){ return (BYSUB[sid]||[]).length; });
+    var subRows=subs.map(function(sid){
+      var sd=diag(sid), sx=subInfo(sid);
+      var sp=Math.round(sd.acc*100), sc=Math.round(sd.cov*100);
+      var scls=sd.done===0?'':(sp>=80?'ok':(sp>=50?'warn':'bad'));
+      return '<div class="sec-row sub" onclick="startSub(\''+escAttr(sid)+'\')" style="cursor:pointer" '
+        +'title="'+escAttr(sid+' · '+sd.ok+'/'+sd.done+' correct, '+sd.miss+' open')+'">'
+        +'<span class="sec-id">'+escHtml(sid)+'</span>'
+        +'<span class="sec-t">'+escHtml(sx.zh||sx.en)+'<span class="tz">'+escHtml(sx.en||'')+'</span></span>'
+        +'<span class="bar" title="'+sc+'% covered · '+sp+'% correct"><i class="'+scls+'" style="width:'+(sd.done? Math.max(sc,5):0)+'%"></i></span>'
+        +'<span class="sec-n">'+sd.done+'/'+sd.n+(sd.miss? '<span class="miss">'+sd.miss+'&#10005;</span>':'')+'</span></div>';
+    }).join('');
+    var caret=subs.length
+      ? '<button class="sec-caret" id="sc'+escAttr(g.id)+'" onclick="event.stopPropagation();toggleSec(\''+escAttr(g.id)+'\')" '
+        +'title="展开 '+subs.length+' 个二级考点 · show the '+subs.length+' sub-topics" aria-label="expand sub-topics">&#9656;</button>'
+      : '';
+    return '<div class="sec-block">'
+      +'<div class="sec-row" onclick="startTopic(\''+escAttr(g.id)+'\')" style="cursor:pointer" '
       +'title="'+escAttr(g.id)+' · '+d.ok+'/'+d.done+' correct, '+d.miss+' open">'
       +'<span class="sec-id">'+escHtml(g.id)+'</span>'
       +'<span class="sec-t">'+escHtml(g.en)+'<span class="tz">'+escHtml(g.zh)+'</span></span>'
+      +caret
       +'<span class="bar" title="'+cov+'% covered · '+pct+'% correct"><i class="'+cls+'" style="width:'+(d.done? Math.max(cov,5):0)+'%"></i></span>'
-      +'<span class="sec-n">'+d.done+'/'+d.n+(d.miss? '<span class="miss">'+d.miss+'&#10005;</span>':'')+'</span></div>';
+      +'<span class="sec-n">'+d.done+'/'+d.n+(d.miss? '<span class="miss">'+d.miss+'&#10005;</span>':'')+'</span></div>'
+      +(subs.length? '<div class="sec-subrows" id="sbr'+escAttr(g.id)+'">'+subRows+'</div>':'')
+      +'</div>';
   }).join('');
   var fresh=o.answered===0;
   document.getElementById('view').innerHTML=
    '<div class="wrap"><div class="hero">'
    +'<h1>'+(fresh?'Start where it matters':'Keep the streak alive')+'</h1>'
    +'<p>'+(fresh
-      ? 'The engine walks you through <b>one question from every topic first</b> — all <b>'+MAIN.length+'</b> templates in one bank — then scores every topic on open mistakes, weakness and forgetting, so what you got wrong comes back first.'
-      : 'You have answered <b>'+o.answered+'</b> of <b>'+MAIN.length+'</b> items. Round '+cy.n+' has covered '+cy.seen+'/'+cy.all+' topics.')+'</p>'
+      ? 'The engine walks you through <b>one question from every sub-topic first</b> — all <b>'+MAIN.length+'</b> templates in one bank — then scores every sub-topic on open mistakes, weakness and forgetting, so what you got wrong comes back first.'
+      : 'You have answered <b>'+o.answered+'</b> of <b>'+MAIN.length+'</b> items. Round '+cy.n+' has covered '+cy.seen+'/'+cy.all+' sub-topics.')+'</p>'
    +'<p class="zh">'+(fresh
-      ? '先每个考点过一遍（共 <b>'+MAIN.length+'</b> 道，统一题库），之后按「<b>未订正错题</b> → 薄弱程度 → 多久没练」给考点打分，错得多的题型优先回来。'
+      ? '先每个二级考点过一遍（共 <b>'+cy.all+'</b> 组，覆盖 <b>'+MAIN.length+'</b> 道），之后按「<b>未订正错题</b> → 薄弱程度 → 多久没练」给考点打分，错得多的题型优先回来。'
       : '本轮已过 <b>'+cy.seen+'/'+cy.all+'</b> 个考点，还有 <b>'+openMiss+'</b> 道错题没订正，它们会排在下一轮最前面。')+'</p>'
    +'<div class="row">'
    +'<button class="btn white" onclick="start(\'smart\')">'+(un<activeGroupCount()?'Continue smart round':'Start smart round')+' <span class="zhx">开始智能刷题</span></button>'
@@ -993,7 +1037,7 @@ function viewHome(){
    +'<button class="btn light" onclick="route(\'mistakes\')">Mistake book <span class="zhx">错题本</span></button>'
    +'</div></div>'
    +'<div class="eng"><span>Round <b>'+cy.n+'</b> <span class="zhx">第 '+cy.n+' 轮</span></span><span class="sep">|</span>'
-   +'<span><b>'+cy.seen+'/'+cy.all+'</b> topics this round <span class="zhx">本轮已过考点</span></span><span class="sep">|</span>'
+   +'<span><b>'+cy.seen+'/'+cy.all+'</b> 考点 this round <span class="zhx">本轮已过二级考点</span></span><span class="sep">|</span>'
    +'<span><b>'+openMiss+'</b> open mistakes <span class="zhx">待订正错题</span></span><span class="sep">|</span>'
    +'<span class="zhx">推荐依据：未订正错题 → 已订正复习 → 未做过 → 最久没碰</span></div>'
    +'<div class="grid g4" style="margin-bottom:18px">'
@@ -1005,7 +1049,9 @@ function viewHome(){
    +'<div class="card" style="padding:16px 20px 6px">'
    +'<div style="display:flex;align-items:baseline;gap:10px;margin-bottom:2px;flex-wrap:wrap">'
    +'<h3 style="margin:0">Topic mastery <span class="tz" style="font-size:12.5px">考点掌握度</span></h3>'
-   +'<span class="muted">coverage + accuracy · 覆盖度与正确率</span><div class="spacer" style="flex:1"></div>'
+   +'<span class="muted">coverage + accuracy · 覆盖度与正确率</span>'
+   +'<span class="muted" style="font-size:11.5px">（'+GROUPS.filter(function(g){return g.real&&g.ids.length;}).length+' 个小节 · '+SUBGROUPS.length+' 个二级考点，点 ▸ 展开）</span>'
+   +'<div class="spacer" style="flex:1"></div>'
    +'<span class="muted">answered <span class="zhx">已做/总题</span></span></div>'
    +'<p class="muted" style="margin:0 0 8px;font-size:11.5px">Bar = coverage, colour = accuracy · 进度条为覆盖度，颜色代表正确率</p>'
    +rows
@@ -1505,7 +1551,8 @@ if(typeof window!=='undefined'&&window.addEventListener)
 var API={
   BANK:BANK, META:META, CHAPTERS:CHAPTERS, TOPICS:TOPICS, ITEMS:ITEMS, GLOSS:GLOSS,
   BYID:BYID, BYTOPIC:BYTOPIC, MAIN:MAIN, VARIANTS:VARIANTS, BYQID:BYQID,
-  SUBTOPICS:SUBTOPICS, SUBMAP:SUBMAP, SUBSOF:SUBSOF, BYSUB:BYSUB, subInfo:subInfo,
+  SUBTOPICS:SUBTOPICS, SUBMAP:SUBMAP, SUBSOF:SUBSOF, BYSUB:BYSUB, subInfo:subInfo, SUBGROUPS:SUBGROUPS,
+  startSub:startSub, toggleSec:toggleSec, markCycle:markCycle,
   bankPickTopic:bankPickTopic, bankPickSub:bankPickSub, bankPickCh:bankPickCh, GROUPS:GROUPS, GROUP_BY_ID:GROUP_BY_ID,
   normAns:normAns, ansEqual:ansEqual, autoGradeable:autoGradeable,
   gradeChoice:gradeChoice, gradeFill:gradeFill, gradeCloze:gradeCloze,
@@ -1523,7 +1570,8 @@ var API={
   viewRes:viewRes, renderPv:renderPv, pvPaint:pvPaint, paintGloss:paintGloss,
   setGlossQ:setGlossQ,
   pickChoice:pickChoice, submitAnswer:submitAnswer, selfGrade:selfGrade, revealSelf:revealSelf,
-  start:start, startSingle:startSingle, startTopic:startTopic, advance:advance,
+  start:start, startSingle:startSingle, startTopic:startTopic, startSub:startSub, advance:advance,
+  toggleSec:toggleSec,
   toggleFav:toggleFav, isFav:isFav, favCount:favCount,
   route:route, routeFromHash:routeFromHash, HASHV:HASHV, HASHROUTE:HASHROUTE,
   renderMath:renderMath, boot:boot, paintTop:paintTop,
@@ -1544,7 +1592,8 @@ var GLOBAL_HANDLERS={
   route:route, openAcct:openAcct, closeAcct:closeAcct, switchAcct:switchAcct,
   renderAcct:renderAcct, submitAcct:submitAcct, doLogout:doLogout,
   syncNow:syncNow, resetAll:resetAll, clearFav:clearFav,
-  start:start, startSingle:startSingle, startTopic:startTopic, advance:advance,
+  start:start, startSingle:startSingle, startTopic:startTopic, startSub:startSub, advance:advance,
+  toggleSec:toggleSec,
   skipQ:skipQ, skipTopic:skipTopic,
   pickChoice:pickChoice, submitAnswer:submitAnswer, selfGrade:selfGrade,
   toggleFav:toggleFav,
