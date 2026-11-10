@@ -5330,7 +5330,7 @@
    "inputs": [],
    "pua": []
   },
-  "key": "B",
+  "key": "A",
   "keySrc": "vision",
   "keyConf": "high",
   "blanks": 0,
@@ -18762,8 +18762,8 @@
     ]
    ]
   },
-  "key": "A",
-  "keySrc": "vision",
+  "key": "C",
+  "keySrc": "tick",
   "keyConf": "high",
   "blanks": 0,
   "answers": null,
@@ -20112,8 +20112,8 @@
    "pua": []
   },
   "key": "C",
-  "keySrc": "contain",
-  "keyConf": "medium",
+  "keySrc": "vision",
+  "keyConf": "high",
   "blanks": 0,
   "answers": null,
   "answerText": "",
@@ -21239,8 +21239,8 @@
    "pua": []
   },
   "key": "A",
-  "keySrc": "fuzzy",
-  "keyConf": "medium",
+  "keySrc": "vision",
+  "keyConf": "high",
   "blanks": 0,
   "answers": null,
   "answerText": "",
@@ -21593,8 +21593,8 @@
    "pua": []
   },
   "key": "A",
-  "keySrc": "fuzzy",
-  "keyConf": "medium",
+  "keySrc": "vision",
+  "keyConf": "high",
   "blanks": 0,
   "answers": null,
   "answerText": "",
@@ -21881,8 +21881,8 @@
    "pua": []
   },
   "key": "C",
-  "keySrc": "fuzzy",
-  "keyConf": "medium",
+  "keySrc": "vision",
+  "keyConf": "high",
   "blanks": 0,
   "answers": null,
   "answerText": "",
@@ -22744,8 +22744,8 @@
    "inputs": [],
    "pua": []
   },
-  "key": "D",
-  "keySrc": "vision",
+  "key": "B",
+  "keySrc": "contain",
   "keyConf": "high",
   "blanks": 0,
   "answers": null,
@@ -23128,7 +23128,7 @@
    "inputs": [],
    "pua": []
   },
-  "key": "C",
+  "key": "B",
   "keySrc": "vision",
   "keyConf": "high",
   "blanks": 0,
@@ -23609,7 +23609,7 @@
    "pua": []
   },
   "key": "B",
-  "keySrc": "vision",
+  "keySrc": "contain",
   "keyConf": "high",
   "blanks": 0,
   "answers": null,
@@ -23867,8 +23867,8 @@
    "pua": []
   },
   "key": "C",
-  "keySrc": "fuzzy",
-  "keyConf": "medium",
+  "keySrc": "vision",
+  "keyConf": "high",
   "blanks": 0,
   "answers": null,
   "answerText": "",
@@ -24155,8 +24155,8 @@
    "pua": []
   },
   "key": "D",
-  "keySrc": "fuzzy",
-  "keyConf": "medium",
+  "keySrc": "vision",
+  "keyConf": "high",
   "blanks": 0,
   "answers": null,
   "answerText": "",
@@ -24655,12 +24655,12 @@
   "keyConf": "none",
   "blanks": 2,
   "answers": [
-   "-6",
-   "-1"
+   "-1/9",
+   "9"
   ],
-  "answerText": "-6, -1",
-  "answerSrc": "ai",
-  "aiGenerated": true
+  "answerText": "-1/9, 9",
+  "answerSrc": "pdf",
+  "aiGenerated": false
  },
  {
   "qid": "h14-12",
@@ -25448,12 +25448,12 @@
   "keyConf": "none",
   "blanks": 2,
   "answers": [
-   "2",
-   "3"
+   "-5",
+   "5"
   ],
-  "answerText": "2, 3",
-  "answerSrc": "ai",
-  "aiGenerated": true
+  "answerText": "-5, 5",
+  "answerSrc": "pdf",
+  "aiGenerated": false
  },
  {
   "qid": "h15-08",
@@ -25836,8 +25836,8 @@
    "inputs": [],
    "pua": []
   },
-  "key": "D",
-  "keySrc": "vision",
+  "key": "C",
+  "keySrc": "contain",
   "keyConf": "high",
   "blanks": 0,
   "answers": null,
@@ -25998,7 +25998,7 @@
    "inputs": [],
    "pua": []
   },
-  "key": "D",
+  "key": "A",
   "keySrc": "vision",
   "keyConf": "high",
   "blanks": 0,
