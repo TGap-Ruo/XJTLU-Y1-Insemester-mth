@@ -29,6 +29,7 @@ ROOT = "/Users/zhj/WorkBuddy/2026-11-05-22-50-04/mth028"
 MAT = os.path.join(os.path.dirname(ROOT), "mth028-material")
 SRC = os.path.join(MAT, "MTH028-Quizzes")
 T2 = os.path.join(MAT, "题库2")
+HJT = os.path.join(MAT, "HJT")
 OUT = os.path.join(ROOT, "data", "extract_v2.json")
 
 # border colours of the three card types (RGB 0-1, from the PDF content stream)
@@ -139,6 +140,11 @@ def main():
     files = [(os.path.join(SRC, "%d.pdf" % i), "%d" % i, "p%d" % i, i)
              for i in range(1, 16)]
     files += [(os.path.join(T2, "2-%d.pdf" % i), "B%d" % i, "b%d" % i, 20 + i)
+              for i in range(1, 16)]
+    # HJT: same Moodle print style as MTH028-Quizzes, another 15 attempts
+    # (3-1 … 3-15, quizzes 1/2/3).  quiz numbers 61..75 keep their ids clear of
+    # both previous sets (1..15 -> 1xxx, 21..35 -> 21xxx).
+    files += [(os.path.join(HJT, "3-%d.pdf" % i), "H%d" % i, "h%d" % i, 60 + i)
               for i in range(1, 16)]
 
     rows = []

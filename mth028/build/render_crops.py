@@ -30,15 +30,22 @@ from PIL import Image, ImageDraw
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAT = os.path.join(os.path.dirname(ROOT), "mth028-material")
 D = os.path.join(ROOT, "data")
-QDIR = os.path.join(ROOT, "out", "img", "q")
-ADIR = os.path.join(ROOT, "out", "img", "a")
+OUTBASE = os.path.join(ROOT, "out")
+QDIR = os.path.join(OUTBASE, "img", "q")
+ADIR = os.path.join(OUTBASE, "img", "a")
 SCALE = 2.0
 MAX_W = 1500
 INSET = 2.0
 
 
 def src_path(row):
-    sub = "题库2" if row["qid"].startswith("b") else "MTH028-Quizzes"
+    """Where the source PDF lives: three print styles, three folders."""
+    if row.get("qid", "").startswith("h"):
+        sub = "HJT"
+    elif row.get("qid", "").startswith("b"):
+        sub = "题库2"
+    else:
+        sub = "MTH028-Quizzes"
     return os.path.join(MAT, sub, row["file"])
 
 
@@ -81,8 +88,17 @@ def render(page, clip, path, radios, inputs, pua, grayscale_guard=True):
     return im.size
 
 
-def main():
-    rows = json.load(open(os.path.join(D, "selection.json")))
+def main(src_json=None, out_root=None, ids=None):
+    import sys
+    rows = json.load(open(src_json or os.path.join(D, "selection.json")))
+    if ids:
+        want = {x.strip() for x in ids.split(",") if x.strip()}
+        rows = [r for r in rows if r["qid"] in want]
+    global OUTBASE, QDIR, ADIR
+    if out_root:
+        OUTBASE = os.path.abspath(out_root)
+        QDIR = os.path.join(OUTBASE, "img", "q")
+        ADIR = os.path.join(OUTBASE, "img", "a")
     os.makedirs(QDIR, exist_ok=True)
     os.makedirs(ADIR, exist_ok=True)
     docs, manifest = {}, []
@@ -100,7 +116,7 @@ def main():
         pua = [pymupdf.Rect(*x) for x in r["rects"]["pua"]]
 
         qrel = "img/q/%s.png" % r["qid"]
-        qsize = render(page, clip, os.path.join(ROOT, "out", qrel), radios, inputs, pua)
+        qsize = render(page, clip, os.path.join(OUTBASE, qrel), radios, inputs, pua)
 
         arel = None
         if r["rects"].get("feed"):
@@ -109,13 +125,13 @@ def main():
             # the solution box needs no redaction: it is only shown after the
             # student commits an answer
             arel = "img/a/%s.png" % r["qid"]
-            render(page, aclip, os.path.join(ROOT, "out", arel), [], [], [], False)
+            render(page, aclip, os.path.join(OUTBASE, arel), [], [], [], False)
 
         manifest.append({"qid": r["qid"], "img": qrel, "answer_img": arel,
                          "w": qsize[0], "h": qsize[1]})
 
     json.dump(manifest, open(os.path.join(D, "crops.json"), "w"), ensure_ascii=False, indent=1)
-    sizes = [os.path.getsize(os.path.join(ROOT, "out", m["img"])) for m in manifest]
+    sizes = [os.path.getsize(os.path.join(OUTBASE, m["img"])) for m in manifest]
     print("rendered", len(manifest), "questions,",
           sum(1 for m in manifest if m["answer_img"]), "answer crops")
     print("bytes min/median/max", min(sizes), sorted(sizes)[len(sizes) // 2], max(sizes))
@@ -123,4 +139,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    ap = argparse.ArgumentParser(description="render question/answer crops")
+    ap.add_argument("--in", dest="src", default=None, help="records json (default data/selection.json)")
+    ap.add_argument("--out", dest="out", default=None, help="output root (default mth028/out)")
+    ap.add_argument("--ids", dest="ids", default=None, help="comma separated qids, for spot checks")
+    a = ap.parse_args()
+    main(a.src, a.out, a.ids)

@@ -954,9 +954,9 @@ function viewBank(ch){
    +'<h3 style="margin-bottom:2px">The whole bank <span class="tz" style="font-size:12.5px">全部题库</span></h3>'
    +'<p class="muted">All '+ITEMS.length+' items in one index, distinguished by <code>type</code>. '
    +'Tap a number to open it on its own. <span class="zhx">统一 items 数组，点编号单独打开。</span><br>'
-   +'<span style="font-size:12px">Q<span style="opacity:.6">xx</span> = MTH028-Quizzes 1–15 &nbsp;·&nbsp; '
-   +'B<span style="opacity:.6">xx</span> = 题库2 的同名练习（另一次尝试）'
-   +'<span class="zhx">　前缀 Q 与 B 只是来源不同，题目同等有效。</span></span></p>'
+      +'<span style="font-size:12px">Q<span style="opacity:.6">xx</span> = MTH028-Quizzes &nbsp;·&nbsp; '
+   +'B<span style="opacity:.6">xx</span> = 题库2 &nbsp;·&nbsp; H<span style="opacity:.6">xx</span> = HJT'
+   +'<span class="zhx">　前缀只表示来自哪一批导出（同一份练习的另一次尝试），题目同等有效。</span></span></p>' 
    +'<div class="filter" id="bankType">'+typeHtml+'</div>'
    +'<div class="filter" id="bankCh">'+chHtml+'</div>'
    +'<div class="idxsearch"><input id="bankQ" value="'+escAttr(bankQ)+'" placeholder="Find a number or topic — Q1-01 / 1-01 / 1.2 · 搜题号或考点" oninput="setBankQ(this.value)"></div>'
@@ -1025,8 +1025,10 @@ function previewCard(id){
   var it=BYID[id]; if(!it) return '';
   var t=topicInfo(it.topic), ans='';
   if(it.type==='choice'&&it.key) ans='<div class="pv-ans">Answer: <b>'+escHtml(it.key)+'</b> <span class="tz">正确选项 · 自动判分</span></div>';
-  else if(Array.isArray(it.answers)&&it.answers.length) ans='<div class="pv-ans">Answer: <b>'+escHtml(it.answers.join(' · '))+'</b> <span class="tz">参考答案</span></div>';
-  else if(it.answerText) ans='<div class="pv-ans unknown">Answer · 参考答案 <b>'+escHtml(it.answerText)+'</b> <span class="tz">原卷 / AI 补全</span></div>';
+  else if(Array.isArray(it.answers)&&it.answers.length) ans='<div class="pv-ans">Answer: <b>'+escHtml(it.answers.join(' · '))+'</b> '
+    +'<span class="tz">参考答案</span>'+aiTagHtml(it)+'</div>';
+  else if(it.answerText) ans='<div class="pv-ans unknown">Answer · 参考答案 <b>'+escHtml(it.answerText)+'</b> '
+    +'<span class="tz">原卷 / AI 补全</span>'+aiTagHtml(it)+'</div>';
   else ans='<div class="pv-ans unknown">No reliable key · 无可靠标准答案 <span class="tz">以原卷答案裁图为准</span></div>';
   var aimg=it.answerImg? '<div class="pv-aimg"><a href="'+escAttr(it.answerImg)+'" target="_blank" title="Open full size">'
     +'<img src="'+escAttr(it.answerImg)+'" alt="Printed answer" loading="lazy"></a></div>' : '';

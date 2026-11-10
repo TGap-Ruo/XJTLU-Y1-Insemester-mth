@@ -12,7 +12,7 @@ first before changing anything.
 
 | Course | Entry | Bank | Topics | Glossary |
 |---|---|---|---|---|
-| **MTH028 · Linear Algebra I** | `/` → `index.html` | 228 items (178 choice · 36 fill · 14 cloze) | 17 (1.1–2.8) | 33 groups / 212 terms |
+| **MTH028 · Linear Algebra I** | `/` → `index.html` | 285 items (228 choice · 43 fill · 14 cloze) | 17 (1.1–2.8) | 33 groups / 212 terms |
 | **MTH026 · Calculus I** | `/mth026.html` | 674 items (351 + 323) | 54 | 9 groups / 80 terms |
 
 Progress is **isolated per course**: MTH028 uses the `progress28` table and the
@@ -45,12 +45,13 @@ favourites or mistake book can leak into the other.
   assigns a section; `build/merge_bank.py` writes the four files the assembler
   consumes. Re-run them in that order, then
   `assemble_bank.py --out ../mth026/repo/bank.js`.
-- **Sources.** The 228 items come from **30** Moodle *attempt review* exports:
-  `MTH028-Quizzes/1.pdf … 15.pdf` and `题库2/2-1.pdf … 2-15.pdf`, 15 questions
-  each — 450 raw questions. Moodle re-draws the numbers for every attempt, so
+- **Sources.** The 285 items come from **60** Moodle *attempt review* exports in
+  three folders — `MTH028-Quizzes/1.pdf … 15.pdf` (prefix `Q`), `题库2/2-1.pdf …
+  2-15.pdf` (prefix `B`) and `HJT/3-1.pdf … 3-15.pdf` (prefix `H`) — 15
+  questions each, 900 raw questions. Moodle re-draws the numbers for every attempt, so
   the same template appears in many exports; items are grouped by
   stem+options with digits masked and one representative survives
-  (**450 → 228**, the merged list is `mth028/data/duplicates.json`). Question
+  (**900 → 285**, the merged list is `mth028/data/duplicates.json`). Question
   crops live in `img/q/<qid>.png`, printed answer crops in `img/a/<qid>.png`.
 - **Cropping (why it cannot leak).** Every card in those exports is a drawn
   rounded rectangle with a fixed border colour, so the crop is the **exact stem
@@ -61,11 +62,11 @@ favourites or mistake book can leak into the other.
   answer box (redrawn as an empty box). The feedback card is never part of the
   question image, which is what used to slice the worked solution into the
   screenshot.
-- **Answer keys.** 178 choice items all carry a letter: 24 from the Moodle tick,
+- **Answer keys.** 228 choice items all carry a letter: 24 from the Moodle tick,
   the rest by matching the printed answer box against the options (exact /
   containment / digit-multiset); the 29 that stayed ambiguous were re-read from
   the rendered answer box and, where that disagreed, corrected —
-  `mth028/data/answer_fixes.json` records every such key. 36 fill items grade
+  `mth028/data/answer_fixes.json` records every such key. 43 fill items grade
   from the printed answer line, 14 multi-blank items (`cloze`, 2 or 4 blanks)
   grade blank by blank. **13 items printed no answer at all** — those were
   computed and verified with sympy, flagged `答案由 AI 生成 / AI-generated

@@ -21,8 +21,11 @@ D = os.path.join(ROOT, "data")
 
 
 def label_for(r):
+    """Display label: Q<n>-<qno> / B<n>-<qno> (题库2) / H<n>-<qno> (HJT)."""
     if r["qid"].startswith("b"):
         return "B%d-%02d" % (r["quiz"] - 20, r["qno"])
+    if r["qid"].startswith("h"):
+        return "H%d-%02d" % (r["quiz"] - 60, r["qno"])
     return "Q%d-%02d" % (r["quiz"], r["qno"])
 
 

@@ -21,8 +21,8 @@ MTH026_ROOT=$PWD MTH026_DB=/tmp/dev.db MTH026_PORT=8088 python3 server/server.py
 
 ```bash
 cd mth028
-python3 build/extract_v2.py          # 30 份 PDF → data/extract_v2.json（450 条原始记录）
-python3 build/select_items.py        # 定答案、去重  → data/selection.json / duplicates.json
+python3 build/extract_v2.py          # 60 份 PDF（Q/B/H 三批）→ data/extract_v2.json（900 条原始记录）
+python3 build/select_items.py        # 定答案、去重  → data/selection.json / duplicates.json（900 → 285）
 python3 build/render_crops.py        # 出图          → out/img/{q,a}/<qid>.png + data/crops.json
 python3 build/map_topics_v2.py       # 归考点        → data/topic_map.json
 python3 build/merge_bank.py          # 落成 4 个文件  → data/quiz_{index,structured}.json
@@ -38,7 +38,7 @@ python3 build/export_bank_index.py   # 后台用索引    → out/bank_index28.j
 |---|---|---|
 | `index.html` | **MTH028 前端（真身）** | 单文件 SPA，含全部逻辑；线上就是这份 |
 | `mth026.html` | MTH026 前端（真身） | 旧的单文件站，不与 028 共享 JS |
-| `bank.js` | **MTH028 题库（真身）** | `window.MTH028_BANK = {...}`，生成物但直接手改也生效 |
+| `bank.js` | **MTH028 题库（真身）** | `window.MTH028_BANK = {...}`，285 题，来自 Q/B/H 三批导出 |
 | `app.css` / `katex/` | 样式与公式 | 028 与 026 共用 |
 | `img/q/<qid>.png` `img/a/<qid>.png` | 028 题图 / 答案图 | 每个 item 两张 |
 | `q/` `pq/` | 026 的题图（351 + 323） | 命名与 028 无关 |
@@ -291,8 +291,8 @@ merge28(old, new)           # h 按 t 取新（整条替换，避免旧 resp 残
 
 | 文件 | 谁写 | 内容 |
 |---|---|---|
-| `extract_v2.json` | `extract_v2.py` | 450 条原始记录：每题一页卡片的精确矩形、选项、印刷答案、学生填值、是否作答 |
-| `selection.json` | `select_items.py` | **最终 228 条**：定好的 key/answers/blanks、去重后的代表、`aiGenerated` |
+| `extract_v2.json` | `extract_v2.py` | 900 条原始记录：每题一页卡片的精确矩形、选项、印刷答案、学生填值、是否作答 |
+| `selection.json` | `select_items.py` | **最终 285 条**：定好的 key/answers/blanks、去重后的代表、`aiGenerated` |
 | `duplicates.json` | `select_items.py` | 被合并掉的题号 → 保留题号（追溯用；修正项靠它跟随） |
 | `answer_fixes.json` | **人工** | 唯一的人工修正入口：`{"fill":{qid:{answers,blanks}}, "choice":{qid:"B"}}` |
 | `crops.json` | `render_crops.py` | qid → `img/q/x.png`、`img/a/x.png` |
@@ -311,8 +311,9 @@ merge28(old, new)           # h 按 t 取新（整条替换，避免旧 resp 残
 ### 7.1 item.id（= 进度主键）
 
 ```
-MTH028-Quizzes/N.pdf  → id = N*1000 + qno      (1..15  → 1001..15015)
-题库2/2-N.pdf          → quiz = 20+N，id = quiz*1000 + qno  (21001..35015)
+MTH028-Quizzes/N.pdf  → quiz = N     (1..15)  → id = N*1000 + qno        (1001..15015)
+题库2/2-N.pdf          → quiz = 20+N  (21..35) → id = quiz*1000 + qno     (21001..35015)
+HJT/3-N.pdf            → quiz = 60+N  (61..75) → id = quiz*1000 + qno     (61001..75015)
 ```
 
 - `id` 必须**稳定**：换代表、重新去重都不应改变已上线题目的 id，否则学生进度对不上。
@@ -321,8 +322,9 @@ MTH028-Quizzes/N.pdf  → id = N*1000 + qno      (1..15  → 1001..15015)
 
 ### 7.2 qid / label
 
-- `qid`：`p<quiz>-<qno>`（MTH028-Quizzes）/ `b<n>-<qno>`（题库2 第 n 份）。用于图片文件名与数据 join。
-- `label`：`Q<quiz>-<qno>` / `B<n>-<qno>`。只用于显示；题库页顶部有一行图例解释 Q/B 前缀。
+- `qid`：`p<quiz>-<qno>`（MTH028-Quizzes）/ `b<n>-<qno>`（题库2 第 n 份）/ `h<n>-<qno>`（HJT 第 n 份）。
+  用于图片文件名与数据 join。
+- `label`：`Q…` / `B…` / `H…`。只用于显示；题库页顶部有一行图例解释三种前缀。
 
 ### 7.3 type 与 blanks
 
@@ -398,7 +400,7 @@ it.forEach(x=>{ if(ids.has(x.id))bad.push('dup '+x.id); ids.add(x.id);
 console.log(it.length,'bad',bad.length,bad.slice(0,5));"
 ```
 
-期望输出：`228 bad 0`。
+期望输出：`285 bad 0`。
 
 ### 10.2 前端行为断言（无头 Edge 注入）
 

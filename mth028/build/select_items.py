@@ -254,19 +254,23 @@ def main():
         # a fix is keyed by qid, but the qid that represents a template can
         # change when a better copy is picked; follow the merge trail so a fix
         # follows its question instead of silently dropping out
-        alias = {}
+        # duplicates.json maps every merged-away qid straight to the qid that
+        # represents it, so a fix must be looked up through the *group*, not
+        # only by its own key -- otherwise a fix silently stops applying as
+        # soon as a different copy of the same question becomes the
+        # representative.
+        members = {}
         dup_path = os.path.join(D, "duplicates.json")
         if os.path.exists(dup_path):
             for d in json.load(open(dup_path)):
-                alias[d["qid"]] = d["mergedInto"]
+                members.setdefault(d["mergedInto"], set()).add(d["qid"])
 
         def lookup(bucket, qid):
-            for _ in range(6):
-                if qid in bucket:
-                    return bucket[qid]
-                if qid not in alias:
-                    return None
-                qid = alias[qid]
+            if qid in bucket:
+                return bucket[qid]
+            for m in sorted(members.get(qid, ())):
+                if m in bucket:
+                    return bucket[m]
             return None
 
         nf = nc = 0
