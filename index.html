@@ -735,7 +735,25 @@ function advance(){
   if(round.i>=round.list.length){ round.done=true; return viewRes(); }
   viewQuiz();
 }
-function skipQ(){ addSkip('q',round.list[round.i]); toast('Skipped · 已跳过这题'); start('smart'); }
+/* "Skip question" now means "I already know this one": the item is recorded as
+   CORRECT and the round moves on.  It no longer goes into the 12h skip pool —
+   the correct record is what removes it from the coverage gap, and hiding it a
+   second time would only make the home page report a skip that is really a done
+   question.  "Skip 考点" is untouched: that one still hides the whole 考点. */
+function skipQ(){
+  var it=currentItem();
+  if(!it){ start('smart'); return; }
+  var extra={};
+  if(it.type==='choice'){ extra.a=it.key||'A'; }
+  else {
+    var n=(it.type==='cloze')? (it.blanks||1) : 1;
+    var vals=(it.answers||[]).slice(0,n);
+    extra.resp=(it.type==='cloze')? vals : (vals[0]||'');
+  }
+  recordAttempt(it,true,extra);
+  toast('Skipped · recorded as correct · 已跳过并记为答对');
+  start('smart');
+}
 function skipTopic(){
   var it=currentItem();
   addSkip('s', it && (it.sub || it.topic) ? (it.sub || it.topic) : '__untagged__');
@@ -948,7 +966,7 @@ function viewQuiz(){
    +'</div>'
    +'<div style="display:flex;gap:8px;margin-top:14px;align-items:center;flex-wrap:wrap">'
    +'<button class="btn ghost" onclick="route(\'home\')">Exit <span class="zhx">退出</span></button>'
-   +(round.mode==='smart'? '<button class="btn ghost sm" onclick="skipQ()">Skip question <span class="zhx">跳过这题</span></button>'
+   +(round.mode==='smart'? '<button class="btn ghost sm" onclick="skipQ()" title="记为答对并继续 · marks the question correct">Skip &middot; mark correct <span class="zhx">跳过（记为答对）</span></button>'
      +'<button class="btn ghost sm" onclick="skipTopic()">Skip 考点 <span class="zhx">跳过这个二级考点</span></button>':'')
    +'<div class="spacer"></div>'
    +(canNext? (round.mode==='smart'

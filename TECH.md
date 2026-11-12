@@ -219,7 +219,10 @@ ansEqual(a, b)      // 归一后比较：全角→半角、−/–/— → '-'�
 
 1. **阶段 1 覆盖**：`untouchedGroups()` = 该 `sub` 的 `done===0`，按考点顺序优先出一个没做过的题；
 2. **阶段 2 弱点**：全部考点都碰过后，按 `weakness(diag(sub))` 打分取最高（错得多、久未练的优先）；
-3. `skips()` 记录「跳过这题 / 跳过这个考点」，本次会话内不再出（`skipTopic()` 存的是 `it.sub`）；
+3. **跳过此题 = 记为答对**（2026-11-12 改）：`skipQ()` 不再往 12h 跳过池写东西，而是
+   `recordAttempt(it,true,{a|resp})` 直接把这道题记成正确（选择题存 `a = it.key`，填空/多空存
+   `resp`），覆盖度 +1，然后 `start('smart')` 出下一题。首页的「已跳过」只剩考点口径。
+   **跳过考点不变**：`skipTopic()` 仍只把 `it.sub` 放进 12h 跳过池，不写任何进度；
 4. 同一考点内 `pickFrom()` 先出没做过、再出错题、最后出最久未见的；
 5. 轮次计数 `markCycle(gid)` 在「已过 25 个不同考点」时才 `n+1`（`activeGroupCount()` 返回 `SUBGROUPS.length`）。
 
