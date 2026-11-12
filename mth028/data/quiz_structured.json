@@ -905,10 +905,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-10"
+   ],
+   "answer_text": "-10",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p2-07.png",
    "answer_img": "img/a/p2-07.png",
    "notes": ""
@@ -1263,12 +1265,12 @@
    "verdict": "",
    "printed_answer_text": "[67]",
    "suggested_key": "C",
-   "key_confidence": "low",
-   "key_method": "fuzzy",
+   "key_confidence": "high",
+   "key_method": "ai-computed",
    "answers": null,
    "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p3-01.png",
    "answer_img": "img/a/p3-01.png",
    "notes": ""
@@ -1833,10 +1835,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "16"
+   ],
+   "answer_text": "16",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p3-15.png",
    "answer_img": "img/a/p3-15.png",
    "notes": ""
@@ -1951,10 +1955,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "10"
+   ],
+   "answer_text": "10",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p4-03.png",
    "answer_img": "img/a/p4-03.png",
    "notes": ""
@@ -2684,10 +2690,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "2"
+   ],
+   "answer_text": "2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p5-06.png",
    "answer_img": "img/a/p5-06.png",
    "notes": ""
@@ -3722,10 +3730,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "13"
+   ],
+   "answer_text": "13",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p7-02.png",
    "answer_img": "img/a/p7-02.png",
    "notes": ""
@@ -4050,10 +4060,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "16"
+   ],
+   "answer_text": "16",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p7-10.png",
    "answer_img": "img/a/p7-10.png",
    "notes": ""
@@ -4078,10 +4090,15 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "1",
+    "-5",
+    "8",
+    "-9"
+   ],
+   "answer_text": "1, -5, 8, -9",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p7-11.png",
    "answer_img": "img/a/p7-11.png",
    "notes": ""
@@ -4196,10 +4213,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "4",
+    "3"
+   ],
+   "answer_text": "4, 3",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p7-14.png",
    "answer_img": "img/a/p7-14.png",
    "notes": ""
@@ -4224,10 +4244,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-3",
+    "3"
+   ],
+   "answer_text": "-3, 3",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p7-15.png",
    "answer_img": "img/a/p7-15.png",
    "notes": ""
@@ -4252,10 +4275,15 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "9",
+    "7",
+    "6",
+    "7"
+   ],
+   "answer_text": "9, 7, 6, 7",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p8-01.png",
    "answer_img": "img/a/p8-01.png",
    "notes": ""
@@ -4280,10 +4308,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "2",
+    "5"
+   ],
+   "answer_text": "2, 5",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p8-02.png",
    "answer_img": "img/a/p8-02.png",
    "notes": ""
@@ -4398,10 +4429,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "3"
+   ],
+   "answer_text": "3",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p8-05.png",
    "answer_img": "img/a/p8-05.png",
    "notes": ""
@@ -4591,10 +4624,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-3",
+    "-2"
+   ],
+   "answer_text": "-3, -2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p8-10.png",
    "answer_img": "img/a/p8-10.png",
    "notes": ""
@@ -4754,10 +4790,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-16"
+   ],
+   "answer_text": "-16",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p8-14.png",
    "answer_img": "img/a/p8-14.png",
    "notes": ""
@@ -5037,10 +5075,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "9"
+   ],
+   "answer_text": "9",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p9-06.png",
    "answer_img": "img/a/p9-06.png",
    "notes": ""
@@ -5065,10 +5105,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-12"
+   ],
+   "answer_text": "-12",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p9-07.png",
    "answer_img": "img/a/p9-07.png",
    "notes": ""
@@ -5093,10 +5135,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "1",
+    "-1"
+   ],
+   "answer_text": "1, -1",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p9-08.png",
    "answer_img": "img/a/p9-08.png",
    "notes": ""
@@ -5301,10 +5346,15 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "3",
+    "-10",
+    "-3",
+    "5"
+   ],
+   "answer_text": "3, -10, -3, 5",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p9-13.png",
    "answer_img": "img/a/p9-13.png",
    "notes": ""
@@ -5329,10 +5379,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "2",
+    "3"
+   ],
+   "answer_text": "2, 3",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p9-14.png",
    "answer_img": "img/a/p9-14.png",
    "notes": ""
@@ -5523,10 +5576,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-14"
+   ],
+   "answer_text": "-14",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p10-04.png",
    "answer_img": "img/a/p10-04.png",
    "notes": ""
@@ -5717,10 +5772,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-6"
+   ],
+   "answer_text": "-6",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p10-09.png",
    "answer_img": "img/a/p10-09.png",
    "notes": ""
@@ -6303,10 +6360,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-4",
+    "1"
+   ],
+   "answer_text": "-4, 1",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p11-09.png",
    "answer_img": "img/a/p11-09.png",
    "notes": ""
@@ -6706,10 +6766,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-1",
+    "-1"
+   ],
+   "answer_text": "-1, -1",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p12-05.png",
    "answer_img": "img/a/p12-05.png",
    "notes": ""
@@ -8311,10 +8374,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "2",
+    "6"
+   ],
+   "answer_text": "2, 6",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/p15-02.png",
    "answer_img": "img/a/p15-02.png",
    "notes": ""
@@ -9164,10 +9230,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-2"
+   ],
+   "answer_text": "-2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b1-09.png",
    "answer_img": "img/a/b1-09.png",
    "notes": ""
@@ -9327,12 +9395,12 @@
    "verdict": "",
    "printed_answer_text": "[78]",
    "suggested_key": "A",
-   "key_confidence": "low",
-   "key_method": "fuzzy",
+   "key_confidence": "high",
+   "key_method": "ai-computed",
    "answers": null,
    "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b1-13.png",
    "answer_img": "img/a/b1-13.png",
    "notes": ""
@@ -9522,10 +9590,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-16"
+   ],
+   "answer_text": "-16",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b2-03.png",
    "answer_img": "img/a/b2-03.png",
    "notes": ""
@@ -10405,12 +10475,12 @@
    "verdict": "",
    "printed_answer_text": "[54]",
    "suggested_key": "C",
-   "key_confidence": "low",
-   "key_method": "fuzzy",
+   "key_confidence": "high",
+   "key_method": "ai-computed",
    "answers": null,
    "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b3-09.png",
    "answer_img": "img/a/b3-09.png",
    "notes": ""
@@ -10555,10 +10625,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-18"
+   ],
+   "answer_text": "-18",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b3-13.png",
    "answer_img": "img/a/b3-13.png",
    "notes": ""
@@ -10822,13 +10894,13 @@
    "student_answer": "",
    "verdict": "",
    "printed_answer_text": "[0]",
-   "suggested_key": "C",
-   "key_confidence": "low",
-   "key_method": "fuzzy",
+   "suggested_key": "A",
+   "key_confidence": "high",
+   "key_method": "ai-computed",
    "answers": null,
    "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b4-04.png",
    "answer_img": "img/a/b4-04.png",
    "notes": ""
@@ -10913,12 +10985,12 @@
    "verdict": "",
    "printed_answer_text": "[3]",
    "suggested_key": "D",
-   "key_confidence": "low",
-   "key_method": "fuzzy",
+   "key_confidence": "high",
+   "key_method": "ai-computed",
    "answers": null,
    "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b4-06.png",
    "answer_img": "img/a/b4-06.png",
    "notes": ""
@@ -11048,10 +11120,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "14"
+   ],
+   "answer_text": "14",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b4-10.png",
    "answer_img": "img/a/b4-10.png",
    "notes": ""
@@ -11826,10 +11900,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-14"
+   ],
+   "answer_text": "-14",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b5-14.png",
    "answer_img": "img/a/b5-14.png",
    "notes": ""
@@ -12274,10 +12350,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "1",
+    "-3"
+   ],
+   "answer_text": "1, -3",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b6-10.png",
    "answer_img": "img/a/b6-10.png",
    "notes": ""
@@ -12392,10 +12471,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-1"
+   ],
+   "answer_text": "-1",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b6-13.png",
    "answer_img": "img/a/b6-13.png",
    "notes": ""
@@ -12420,10 +12501,15 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-1",
+    "-6",
+    "3",
+    "10"
+   ],
+   "answer_text": "-1, -6, 3, 10",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b6-14.png",
    "answer_img": "img/a/b6-14.png",
    "notes": ""
@@ -12448,10 +12534,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "3",
+    "2"
+   ],
+   "answer_text": "3, 2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b6-15.png",
    "answer_img": "img/a/b6-15.png",
    "notes": ""
@@ -12476,10 +12565,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-10"
+   ],
+   "answer_text": "-10",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b7-01.png",
    "answer_img": "img/a/b7-01.png",
    "notes": ""
@@ -12534,10 +12625,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "3",
+    "4"
+   ],
+   "answer_text": "3, 4",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b7-03.png",
    "answer_img": "img/a/b7-03.png",
    "notes": ""
@@ -12742,10 +12836,15 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "4",
+    "9",
+    "9",
+    "8"
+   ],
+   "answer_text": "4, 9, 9, 8",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b7-08.png",
    "answer_img": "img/a/b7-08.png",
    "notes": ""
@@ -12770,10 +12869,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-6"
+   ],
+   "answer_text": "-6",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b7-09.png",
    "answer_img": "img/a/b7-09.png",
    "notes": ""
@@ -12843,10 +12944,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "4",
+    "2"
+   ],
+   "answer_text": "4, 2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b7-11.png",
    "answer_img": "img/a/b7-11.png",
    "notes": ""
@@ -13141,10 +13245,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-18"
+   ],
+   "answer_text": "-18",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b8-03.png",
    "answer_img": "img/a/b8-03.png",
    "notes": ""
@@ -13169,10 +13275,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "0"
+   ],
+   "answer_text": "0",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b8-04.png",
    "answer_img": "img/a/b8-04.png",
    "notes": ""
@@ -13561,10 +13669,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-3",
+    "-4"
+   ],
+   "answer_text": "-3, -4",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b8-14.png",
    "answer_img": "img/a/b8-14.png",
    "notes": ""
@@ -13830,10 +13941,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-6"
+   ],
+   "answer_text": "-6",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b9-06.png",
    "answer_img": "img/a/b9-06.png",
    "notes": ""
@@ -13993,10 +14106,15 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-6",
+    "-7",
+    "-3",
+    "-6"
+   ],
+   "answer_text": "-6, -7, -3, -6",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b9-10.png",
    "answer_img": "img/a/b9-10.png",
    "notes": ""
@@ -14186,10 +14304,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-2",
+    "1"
+   ],
+   "answer_text": "-2, 1",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b9-15.png",
    "answer_img": "img/a/b9-15.png",
    "notes": ""
@@ -14259,10 +14380,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "2"
+   ],
+   "answer_text": "2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b10-02.png",
    "answer_img": "img/a/b10-02.png",
    "notes": ""
@@ -14682,10 +14805,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-2"
+   ],
+   "answer_text": "-2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b10-13.png",
    "answer_img": "img/a/b10-13.png",
    "notes": ""
@@ -15055,10 +15180,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-9",
+    "1"
+   ],
+   "answer_text": "-9, 1",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b11-08.png",
    "answer_img": "img/a/b11-08.png",
    "notes": ""
@@ -15143,12 +15271,12 @@
    "verdict": "",
    "printed_answer_text": "10 ⎨⎬ ,",
    "suggested_key": "A",
-   "key_confidence": "low",
-   "key_method": "fuzzy",
+   "key_confidence": "high",
+   "key_method": "ai-computed",
    "answers": null,
    "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b11-10.png",
    "answer_img": "img/a/b11-10.png",
    "notes": ""
@@ -15818,10 +15946,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-6",
+    "-6"
+   ],
+   "answer_text": "-6, -6",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b12-13.png",
    "answer_img": "img/a/b12-13.png",
    "notes": ""
@@ -16251,10 +16382,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-2",
+    "-9"
+   ],
+   "answer_text": "-2, -9",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/b13-09.png",
    "answer_img": "img/a/b13-09.png",
    "notes": ""
@@ -18231,10 +18365,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-2"
+   ],
+   "answer_text": "-2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h1-15.png",
    "answer_img": "img/a/h1-15.png",
    "notes": ""
@@ -19174,10 +19310,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-6"
+   ],
+   "answer_text": "-6",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h3-08.png",
    "answer_img": "img/a/h3-08.png",
    "notes": ""
@@ -19502,12 +19640,12 @@
    "verdict": "",
    "printed_answer_text": "[−9]",
    "suggested_key": "B",
-   "key_confidence": "low",
-   "key_method": "fuzzy",
+   "key_confidence": "high",
+   "key_method": "ai-computed",
    "answers": null,
    "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h4-01.png",
    "answer_img": "img/a/h4-01.png",
    "notes": ""
@@ -19577,10 +19715,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-12"
+   ],
+   "answer_text": "-12",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h4-03.png",
    "answer_img": "img/a/h4-03.png",
    "notes": ""
@@ -20070,12 +20210,12 @@
    "verdict": "",
    "printed_answer_text": "[]",
    "suggested_key": "B",
-   "key_confidence": "low",
-   "key_method": "fuzzy",
+   "key_confidence": "high",
+   "key_method": "ai-computed",
    "answers": null,
    "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h4-15.png",
    "answer_img": "img/a/h4-15.png",
    "notes": ""
@@ -20280,10 +20420,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-8"
+   ],
+   "answer_text": "-8",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h5-05.png",
    "answer_img": "img/a/h5-05.png",
    "notes": ""
@@ -20743,10 +20885,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "4"
+   ],
+   "answer_text": "4",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h6-02.png",
    "answer_img": "img/a/h6-02.png",
    "notes": ""
@@ -21116,10 +21260,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "5",
+    "2"
+   ],
+   "answer_text": "5, 2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h6-11.png",
    "answer_img": "img/a/h6-11.png",
    "notes": ""
@@ -21222,10 +21369,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-4",
+    "2"
+   ],
+   "answer_text": "-4, 2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h6-14.png",
    "answer_img": "img/a/h6-14.png",
    "notes": ""
@@ -21370,10 +21520,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-7",
+    "-9"
+   ],
+   "answer_text": "-7, -9",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h7-03.png",
    "answer_img": "img/a/h7-03.png",
    "notes": ""
@@ -21488,10 +21641,15 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "6",
+    "-2",
+    "7",
+    "5"
+   ],
+   "answer_text": "6, -2, 7, 5",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h7-06.png",
    "answer_img": "img/a/h7-06.png",
    "notes": ""
@@ -21696,10 +21854,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "3",
+    "2"
+   ],
+   "answer_text": "3, 2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h7-11.png",
    "answer_img": "img/a/h7-11.png",
    "notes": ""
@@ -21724,10 +21885,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-1"
+   ],
+   "answer_text": "-1",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h7-12.png",
    "answer_img": "img/a/h7-12.png",
    "notes": ""
@@ -21797,10 +21960,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "6"
+   ],
+   "answer_text": "6",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h7-14.png",
    "answer_img": "img/a/h7-14.png",
    "notes": ""
@@ -22125,10 +22290,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-18"
+   ],
+   "answer_text": "-18",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h8-07.png",
    "answer_img": "img/a/h8-07.png",
    "notes": ""
@@ -22153,10 +22320,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "5",
+    "4"
+   ],
+   "answer_text": "5, 4",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h8-08.png",
    "answer_img": "img/a/h8-08.png",
    "notes": ""
@@ -22181,10 +22351,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "4",
+    "3"
+   ],
+   "answer_text": "4, 3",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h8-09.png",
    "answer_img": "img/a/h8-09.png",
    "notes": ""
@@ -22209,10 +22382,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "7"
+   ],
+   "answer_text": "7",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h8-10.png",
    "answer_img": "img/a/h8-10.png",
    "notes": ""
@@ -22372,10 +22547,15 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "1",
+    "-1",
+    "-10",
+    "10"
+   ],
+   "answer_text": "1, -1, -10, 10",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h8-14.png",
    "answer_img": "img/a/h8-14.png",
    "notes": ""
@@ -22445,10 +22625,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "4"
+   ],
+   "answer_text": "4",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h9-01.png",
    "answer_img": "img/a/h9-01.png",
    "notes": ""
@@ -22473,10 +22655,15 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "1",
+    "-1",
+    "-3",
+    "-9"
+   ],
+   "answer_text": "1, -1, -3, -9",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h9-02.png",
    "answer_img": "img/a/h9-02.png",
    "notes": ""
@@ -22621,10 +22808,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "4",
+    "5"
+   ],
+   "answer_text": "4, 5",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h9-06.png",
    "answer_img": "img/a/h9-06.png",
    "notes": ""
@@ -22694,10 +22884,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-1",
+    "-1"
+   ],
+   "answer_text": "-1, -1",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h9-08.png",
    "answer_img": "img/a/h9-08.png",
    "notes": ""
@@ -22857,10 +23050,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "1"
+   ],
+   "answer_text": "1",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h9-12.png",
    "answer_img": "img/a/h9-12.png",
    "notes": ""
@@ -23065,10 +23260,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "1",
+    "1"
+   ],
+   "answer_text": "1, 1",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h10-02.png",
    "answer_img": "img/a/h10-02.png",
    "notes": ""
@@ -23228,10 +23426,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "6"
+   ],
+   "answer_text": "6",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h10-06.png",
    "answer_img": "img/a/h10-06.png",
    "notes": ""
@@ -23256,10 +23456,12 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-14"
+   ],
+   "answer_text": "-14",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h10-07.png",
    "answer_img": "img/a/h10-07.png",
    "notes": ""
@@ -23449,10 +23651,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "4",
+    "2"
+   ],
+   "answer_text": "4, 2",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h10-12.png",
    "answer_img": "img/a/h10-12.png",
    "notes": ""
@@ -23522,10 +23727,15 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-1",
+    "-4",
+    "4",
+    "-4"
+   ],
+   "answer_text": "-1, -4, 4, -4",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h10-14.png",
    "answer_img": "img/a/h10-14.png",
    "notes": ""
@@ -23850,10 +24060,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "7",
+    "9"
+   ],
+   "answer_text": "7, 9",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h11-08.png",
    "answer_img": "img/a/h11-08.png",
    "notes": ""
@@ -24403,10 +24616,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "-9",
+    "-3"
+   ],
+   "answer_text": "-9, -3",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h12-07.png",
    "answer_img": "img/a/h12-07.png",
    "notes": ""
@@ -25241,10 +25457,13 @@
    "suggested_key": null,
    "key_confidence": "none",
    "key_method": "none",
-   "answers": null,
-   "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answers": [
+    "2",
+    "9"
+   ],
+   "answer_text": "2, 9",
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h13-14.png",
    "answer_img": "img/a/h13-14.png",
    "notes": ""
@@ -25389,12 +25608,12 @@
    "verdict": "",
    "printed_answer_text": "⎨⎬ ,",
    "suggested_key": "D",
-   "key_confidence": "low",
-   "key_method": "fuzzy",
+   "key_confidence": "high",
+   "key_method": "ai-computed",
    "answers": null,
    "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h14-03.png",
    "answer_img": "img/a/h14-03.png",
    "notes": ""
@@ -25885,12 +26104,12 @@
    "verdict": "",
    "printed_answer_text": "",
    "suggested_key": "D",
-   "key_confidence": "low",
-   "key_method": "fuzzy",
+   "key_confidence": "high",
+   "key_method": "ai-computed",
    "answers": null,
    "answer_text": "",
-   "answer_source": "none",
-   "ai_generated": false,
+   "answer_source": "ai",
+   "ai_generated": true,
    "img": "img/q/h15-01.png",
    "answer_img": "img/a/h15-01.png",
    "notes": ""

@@ -60,8 +60,9 @@ favourites or mistake book can leak into the other.
   `mth028/data/duplicates.json`). The page lists, counts, schedules and grades
   by template (`MAIN` = the 285), and folds the other draws under the card as
   「同模板的另外 N 组数字」 — one click opens that draw and grades it on its own
-  numbers. 89 of the 390 have no printed answer at all and open in self-check
-  mode (chips are dashed and say 自评).
+  numbers. Every one of the 390 is now auto-gradable: the 89 that printed no
+  answer at all were computed (see `MTH028_AI_Answers.md`) and carry the
+  AI badge, so no chip needs self-check mode any more.
 - **Two-level index (二级目录).** Every item also carries `sub`, a subtopic id
   taken from the midterm handout (`MTH028 线代期中自学课件.pdf`, 12 modules /
   ~31 考点): 26 sub-topics under the 17 textbook sections, 25 of them in use.
@@ -91,18 +92,16 @@ favourites or mistake book can leak into the other.
   the rest by matching the printed answer box against the options (exact /
   containment / digit-multiset); the 29 that stayed ambiguous were re-read from
   the rendered answer box and, where that disagreed, corrected —
-  `mth028/data/answer_fixes.json` records every such key. 43 fill items grade
-  from the printed answer line, 14 multi-blank items (`cloze`, 2 or 4 blanks)
-  grade blank by blank. **13 items printed no answer at all** — those were
-  computed and verified with sympy, flagged `答案由 AI 生成 / AI-generated
-  answer`, and listed in `MTH028_AI_Answers.md`.
-- **Answers.** 56 of the 100 choice items have a reliable letter (19 from the
-  Moodle tick, 37 from an exact text match against the printed answer); the
-  other 44 show the printed-answer crop and ask you to self-mark. 45 fill/cloze
-  items grade automatically; 5 matrix/vector answers self-mark. **30 items had
-  no printed answer at all** — their answers were computed independently and are
-  flagged `答案由 AI 生成 / AI-generated answer` in the UI. The full list with
-  question numbers, working and confidence is `MTH028_AI_Answers.md`.
+  `mth028/data/answer_fixes.json` records every such key. Fill items grade from
+  the printed answer line, multi-blank items (`cloze`, 2 or 4 blanks) grade blank
+  by blank. **Nothing is left ungraded**: the 89 records that printed no answer at
+  all were computed (determinant / null space / inverse / matrix-equation
+  identities), verified with sympy, flagged `答案由 AI 生成`, and listed in
+  `MTH028_AI_Answers.md` — 104 records carry that badge in total.
+- **Answers (historical note, first delivery).** The very first 150-item
+  delivery had 56 of 100 choice keys and left 30 items without an answer. Both
+  gaps are closed now: every one of the 675 records grades automatically, and the
+  104 computed answers are listed in `MTH028_AI_Answers.md`.
 - **Topic coverage.** The slides cover 1.1–1.5, 1.7–1.9, 2.1–2.4 and 2.8.
   Sections 1.6, 2.5, 2.6 and 2.7 have no slides; they are still listed with a
   textbook title and marked 「课件暂缺」. Quiz 3 (exports 11–15 and 题库2 2-11…2-15)

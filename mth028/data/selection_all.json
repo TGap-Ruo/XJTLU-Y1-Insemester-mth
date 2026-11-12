@@ -2068,10 +2068,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-10"
+  ],
+  "answerText": "-10",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p2-08",
@@ -2855,15 +2857,15 @@
    "pua": []
   },
   "key": "C",
-  "keySrc": "fuzzy",
-  "keyConf": "low",
+  "keySrc": "ai-computed",
+  "keyConf": "high",
   "isRep": false,
   "variantOf": "p1-08",
   "blanks": 0,
   "answers": null,
   "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p3-02",
@@ -4103,10 +4105,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "16"
+  ],
+  "answerText": "16",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p4-01",
@@ -4358,10 +4362,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "10"
+  ],
+  "answerText": "10",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p4-04",
@@ -5963,10 +5969,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "2"
+  ],
+  "answerText": "2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p5-07",
@@ -8360,10 +8368,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "13"
+  ],
+  "answerText": "13",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p7-03",
@@ -9075,10 +9085,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "16"
+  ],
+  "answerText": "16",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p7-11",
@@ -9152,10 +9164,15 @@
   "isRep": false,
   "variantOf": "p10-13",
   "blanks": 4,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "1",
+   "-5",
+   "8",
+   "-9"
+  ],
+  "answerText": "1, -5, 8, -9",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p7-12",
@@ -9413,10 +9430,13 @@
   "isRep": false,
   "variantOf": "p10-08",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "4",
+   "3"
+  ],
+  "answerText": "4, 3",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p7-15",
@@ -9478,10 +9498,13 @@
   "isRep": false,
   "variantOf": "p10-02",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-3",
+   "3"
+  ],
+  "answerText": "-3, 3",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p8-01",
@@ -9580,10 +9603,15 @@
   "isRep": false,
   "variantOf": "p10-13",
   "blanks": 4,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "9",
+   "7",
+   "6",
+   "7"
+  ],
+  "answerText": "9, 7, 6, 7",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p8-02",
@@ -9645,10 +9673,13 @@
   "isRep": false,
   "variantOf": "p6-05",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "2",
+   "5"
+  ],
+  "answerText": "2, 5",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p8-03",
@@ -9900,10 +9931,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "3"
+  ],
+  "answerText": "3",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p8-06",
@@ -10327,10 +10360,13 @@
   "isRep": false,
   "variantOf": "p6-13",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-3",
+   "-2"
+  ],
+  "answerText": "-3, -2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p8-11",
@@ -10680,10 +10716,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-16"
+  ],
+  "answerText": "-16",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p8-15",
@@ -11297,10 +11335,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "9"
+  ],
+  "answerText": "9",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p9-07",
@@ -11356,10 +11396,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-12"
+  ],
+  "answerText": "-12",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p9-08",
@@ -11421,10 +11463,13 @@
   "isRep": false,
   "variantOf": "p6-13",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "1",
+   "-1"
+  ],
+  "answerText": "1, -1",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p9-09",
@@ -11890,10 +11935,15 @@
   "isRep": false,
   "variantOf": "p6-07",
   "blanks": 4,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "3",
+   "-10",
+   "-3",
+   "5"
+  ],
+  "answerText": "3, -10, -3, 5",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p9-14",
@@ -11955,10 +12005,13 @@
   "isRep": false,
   "variantOf": "p6-05",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "2",
+   "3"
+  ],
+  "answerText": "2, 3",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p9-15",
@@ -12376,10 +12429,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-14"
+  ],
+  "answerText": "-14",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p10-05",
@@ -12797,10 +12852,12 @@
   "isRep": false,
   "variantOf": "b6-01",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-6"
+  ],
+  "answerText": "-6",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p10-10",
@@ -14118,10 +14175,13 @@
   "isRep": false,
   "variantOf": "h15-07",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-4",
+   "1"
+  ],
+  "answerText": "-4, 1",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p11-10",
@@ -15026,10 +15086,13 @@
   "isRep": false,
   "variantOf": "h15-07",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-1",
+   "-1"
+  ],
+  "answerText": "-1, -1",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p12-06",
@@ -18608,10 +18671,13 @@
   "isRep": false,
   "variantOf": "h15-07",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "2",
+   "6"
+  ],
+  "answerText": "2, 6",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "p15-03",
@@ -20485,10 +20551,12 @@
   "isRep": false,
   "variantOf": "b6-01",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-2"
+  ],
+  "answerText": "-2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b1-10",
@@ -20842,15 +20910,15 @@
    "pua": []
   },
   "key": "A",
-  "keySrc": "fuzzy",
-  "keyConf": "low",
+  "keySrc": "ai-computed",
+  "keyConf": "high",
   "isRep": false,
   "variantOf": "h1-08",
   "blanks": 0,
   "answers": null,
   "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b1-14",
@@ -21268,10 +21336,12 @@
   "isRep": false,
   "variantOf": "b6-01",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-16"
+  ],
+  "answerText": "-16",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b2-04",
@@ -23201,15 +23271,15 @@
    "pua": []
   },
   "key": "C",
-  "keySrc": "fuzzy",
-  "keyConf": "low",
+  "keySrc": "ai-computed",
+  "keyConf": "high",
   "isRep": false,
   "variantOf": "p1-08",
   "blanks": 0,
   "answers": null,
   "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b3-10",
@@ -23529,10 +23599,12 @@
   "isRep": false,
   "variantOf": "b6-01",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-18"
+  ],
+  "answerText": "-18",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b3-14",
@@ -24111,16 +24183,16 @@
    "inputs": [],
    "pua": []
   },
-  "key": "C",
-  "keySrc": "fuzzy",
-  "keyConf": "low",
+  "key": "A",
+  "keySrc": "ai-computed",
+  "keyConf": "high",
   "isRep": false,
   "variantOf": "p5-08",
   "blanks": 0,
   "answers": null,
   "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b4-05",
@@ -24308,15 +24380,15 @@
    "pua": []
   },
   "key": "D",
-  "keySrc": "fuzzy",
-  "keyConf": "low",
+  "keySrc": "ai-computed",
+  "keyConf": "high",
   "isRep": false,
   "variantOf": "h1-08",
   "blanks": 0,
   "answers": null,
   "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b4-07",
@@ -24606,10 +24678,12 @@
   "isRep": false,
   "variantOf": "b6-01",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "14"
+  ],
+  "answerText": "14",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b4-11",
@@ -26309,10 +26383,12 @@
   "isRep": false,
   "variantOf": "b6-01",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-14"
+  ],
+  "answerText": "-14",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b5-15",
@@ -27356,10 +27432,13 @@
   "isRep": false,
   "variantOf": "p6-13",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "1",
+   "-3"
+  ],
+  "answerText": "1, -3",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b6-11",
@@ -27611,10 +27690,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-1"
+  ],
+  "answerText": "-1",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b6-14",
@@ -27688,10 +27769,15 @@
   "isRep": false,
   "variantOf": "b10-06",
   "blanks": 4,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-1",
+   "-6",
+   "3",
+   "10"
+  ],
+  "answerText": "-1, -6, 3, 10",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b6-15",
@@ -27766,10 +27852,13 @@
   "isRep": false,
   "variantOf": "b9-05",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "3",
+   "2"
+  ],
+  "answerText": "3, 2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b7-01",
@@ -27832,10 +27921,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-10"
+  ],
+  "answerText": "-10",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b7-02",
@@ -27965,10 +28056,13 @@
   "isRep": false,
   "variantOf": "b10-11",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "3",
+   "4"
+  ],
+  "answerText": "3, 4",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b7-04",
@@ -28434,10 +28528,15 @@
   "isRep": false,
   "variantOf": "b10-06",
   "blanks": 4,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "4",
+   "9",
+   "9",
+   "8"
+  ],
+  "answerText": "4, 9, 9, 8",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b7-09",
@@ -28493,10 +28592,12 @@
   "isRep": false,
   "variantOf": "b6-01",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-6"
+  ],
+  "answerText": "-6",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b7-10",
@@ -28656,10 +28757,13 @@
   "isRep": false,
   "variantOf": "p6-13",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "4",
+   "2"
+  ],
+  "answerText": "4, 2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b7-12",
@@ -29303,10 +29407,12 @@
   "isRep": false,
   "variantOf": "b6-01",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-18"
+  ],
+  "answerText": "-18",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b8-04",
@@ -29362,10 +29468,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "0"
+  ],
+  "answerText": "0",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b8-05",
@@ -30233,10 +30341,13 @@
   "isRep": false,
   "variantOf": "p6-13",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-3",
+   "-4"
+  ],
+  "answerText": "-3, -4",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b8-15",
@@ -30820,10 +30931,12 @@
   "isRep": false,
   "variantOf": "b6-01",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-6"
+  ],
+  "answerText": "-6",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b9-07",
@@ -31191,10 +31304,15 @@
   "isRep": false,
   "variantOf": "b10-06",
   "blanks": 4,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-6",
+   "-7",
+   "-3",
+   "-6"
+  ],
+  "answerText": "-6, -7, -3, -6",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b9-11",
@@ -31631,10 +31749,13 @@
   "isRep": false,
   "variantOf": "p6-13",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-2",
+   "1"
+  ],
+  "answerText": "-2, 1",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b10-01",
@@ -31788,10 +31909,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "2"
+  ],
+  "answerText": "2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b10-03",
@@ -32721,10 +32844,12 @@
   "isRep": false,
   "variantOf": "b6-01",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-2"
+  ],
+  "answerText": "-2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b10-14",
@@ -33561,10 +33686,13 @@
   "isRep": false,
   "variantOf": "h15-07",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-9",
+   "1"
+  ],
+  "answerText": "-9, 1",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b11-09",
@@ -33752,15 +33880,15 @@
    "pua": []
   },
   "key": "A",
-  "keySrc": "fuzzy",
-  "keyConf": "low",
+  "keySrc": "ai-computed",
+  "keyConf": "high",
   "isRep": false,
   "variantOf": "p12-11",
   "blanks": 0,
   "answers": null,
   "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b11-11",
@@ -35261,10 +35389,13 @@
   "isRep": false,
   "variantOf": "b14-08",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-6",
+   "-6"
+  ],
+  "answerText": "-6, -6",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b12-14",
@@ -36229,10 +36360,13 @@
   "isRep": false,
   "variantOf": "b14-08",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-2",
+   "-9"
+  ],
+  "answerText": "-2, -9",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "b13-10",
@@ -40698,10 +40832,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-2"
+  ],
+  "answerText": "-2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h2-01",
@@ -42840,10 +42976,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-6"
+  ],
+  "answerText": "-6",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h3-09",
@@ -43559,15 +43697,15 @@
    "pua": []
   },
   "key": "B",
-  "keySrc": "fuzzy",
-  "keyConf": "low",
+  "keySrc": "ai-computed",
+  "keyConf": "high",
   "isRep": false,
   "variantOf": "p1-08",
   "blanks": 0,
   "answers": null,
   "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h4-02",
@@ -43721,10 +43859,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-12"
+  ],
+  "answerText": "-12",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h4-04",
@@ -44802,15 +44942,15 @@
    "pua": []
   },
   "key": "B",
-  "keySrc": "fuzzy",
-  "keyConf": "low",
+  "keySrc": "ai-computed",
+  "keyConf": "high",
   "isRep": false,
   "variantOf": "h2-02",
   "blanks": 0,
   "answers": null,
   "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h5-01",
@@ -45258,10 +45398,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-8"
+  ],
+  "answerText": "-8",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h5-06",
@@ -46282,10 +46424,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "4"
+  ],
+  "answerText": "4",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h6-03",
@@ -47163,10 +47307,13 @@
   "isRep": false,
   "variantOf": "p6-05",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "5",
+   "2"
+  ],
+  "answerText": "5, 2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h6-12",
@@ -47453,10 +47600,13 @@
   "isRep": false,
   "variantOf": "p6-13",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-4",
+   "2"
+  ],
+  "answerText": "-4, 2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h6-15",
@@ -47789,10 +47939,13 @@
   "isRep": false,
   "variantOf": "p6-13",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-7",
+   "-9"
+  ],
+  "answerText": "-7, -9",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h7-04",
@@ -48062,10 +48215,15 @@
   "isRep": false,
   "variantOf": "p6-07",
   "blanks": 4,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "6",
+   "-2",
+   "7",
+   "5"
+  ],
+  "answerText": "6, -2, 7, 5",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h7-07",
@@ -48519,10 +48677,13 @@
   "isRep": false,
   "variantOf": "p6-05",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "3",
+   "2"
+  ],
+  "answerText": "3, 2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h7-12",
@@ -48578,10 +48739,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-1"
+  ],
+  "answerText": "-1",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h7-13",
@@ -48735,10 +48898,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "6"
+  ],
+  "answerText": "6",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h7-15",
@@ -49450,10 +49615,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-18"
+  ],
+  "answerText": "-18",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h8-08",
@@ -49515,10 +49682,13 @@
   "isRep": false,
   "variantOf": "p6-05",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "5",
+   "4"
+  ],
+  "answerText": "5, 4",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h8-09",
@@ -49580,10 +49750,13 @@
   "isRep": false,
   "variantOf": "p6-13",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "4",
+   "3"
+  ],
+  "answerText": "4, 3",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h8-10",
@@ -49639,10 +49812,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "7"
+  ],
+  "answerText": "7",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h8-11",
@@ -50010,10 +50185,15 @@
   "isRep": false,
   "variantOf": "p6-07",
   "blanks": 4,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "1",
+   "-1",
+   "-10",
+   "10"
+  ],
+  "answerText": "1, -1, -10, 10",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h8-15",
@@ -50174,10 +50354,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "4"
+  ],
+  "answerText": "4",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h9-02",
@@ -50251,10 +50433,15 @@
   "isRep": false,
   "variantOf": "p10-13",
   "blanks": 4,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "1",
+   "-1",
+   "-3",
+   "-9"
+  ],
+  "answerText": "1, -1, -3, -9",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h9-03",
@@ -50580,10 +50767,13 @@
   "isRep": false,
   "variantOf": "p6-05",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "4",
+   "5"
+  ],
+  "answerText": "4, 5",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h9-07",
@@ -50743,10 +50933,13 @@
   "isRep": false,
   "variantOf": "p10-02",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-1",
+   "-1"
+  ],
+  "answerText": "-1, -1",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h9-09",
@@ -51096,10 +51289,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "1"
+  ],
+  "answerText": "1",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h9-13",
@@ -51553,10 +51748,13 @@
   "isRep": false,
   "variantOf": "p6-13",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "1",
+   "1"
+  ],
+  "answerText": "1, 1",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h10-03",
@@ -51906,10 +52104,12 @@
   "isRep": false,
   "variantOf": "p6-02",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "6"
+  ],
+  "answerText": "6",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h10-07",
@@ -51965,10 +52165,12 @@
   "isRep": false,
   "variantOf": "p6-10",
   "blanks": 1,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-14"
+  ],
+  "answerText": "-14",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h10-08",
@@ -52392,10 +52594,13 @@
   "isRep": false,
   "variantOf": "p6-05",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "4",
+   "2"
+  ],
+  "answerText": "4, 2",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h10-13",
@@ -52567,10 +52772,15 @@
   "isRep": false,
   "variantOf": "p6-07",
   "blanks": 4,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-1",
+   "-4",
+   "4",
+   "-4"
+  ],
+  "answerText": "-1, -4, 4, -4",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h10-15",
@@ -53309,10 +53519,13 @@
   "isRep": false,
   "variantOf": "h15-07",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "7",
+   "9"
+  ],
+  "answerText": "7, 9",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h11-09",
@@ -54541,10 +54754,13 @@
   "isRep": false,
   "variantOf": "h15-07",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "-9",
+   "-3"
+  ],
+  "answerText": "-9, -3",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h12-08",
@@ -56407,10 +56623,13 @@
   "isRep": false,
   "variantOf": "h15-07",
   "blanks": 2,
-  "answers": null,
-  "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answers": [
+   "2",
+   "9"
+  ],
+  "answerText": "2, 9",
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h13-15",
@@ -56734,15 +56953,15 @@
    "pua": []
   },
   "key": "D",
-  "keySrc": "fuzzy",
-  "keyConf": "low",
+  "keySrc": "ai-computed",
+  "keyConf": "high",
   "isRep": false,
   "variantOf": "p14-06",
   "blanks": 0,
   "answers": null,
   "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h14-04",
@@ -57841,15 +58060,15 @@
    "pua": []
   },
   "key": "D",
-  "keySrc": "fuzzy",
-  "keyConf": "low",
+  "keySrc": "ai-computed",
+  "keyConf": "high",
   "isRep": false,
   "variantOf": "b15-14",
   "blanks": 0,
   "answers": null,
   "answerText": "",
-  "answerSrc": "none",
-  "aiGenerated": false
+  "answerSrc": "ai",
+  "aiGenerated": true
  },
  {
   "qid": "h15-02",

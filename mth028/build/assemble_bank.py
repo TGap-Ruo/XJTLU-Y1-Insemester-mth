@@ -155,7 +155,11 @@ def main(out_override=None):
             source = s["answer_source"]
             ai_generated = bool(s.get("ai_generated"))
         elif qtype == "choice":
-            source = "pdf" if r["has_printed_answer"] else "none"
+            # a key we computed ourselves (no tick, no printed answer) is AI
+            if s.get("key_method") == "ai-computed":
+                source, ai_generated = "ai", True
+            else:
+                source = "pdf" if r["has_printed_answer"] else "none"
             # Choice questions: the key letter + printed-answer image are the
             # reference.  The OCR'd text of a matrix/system answer is garbled
             # (e.g. "−656 | −98−3") and would confuse students, so suppress it.

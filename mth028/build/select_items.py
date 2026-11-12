@@ -312,8 +312,16 @@ def main():
                 nf += 1
             c = lookup(fx.get("choice") or {}, r["qid"])
             if c:
-                r["key"] = c
-                r["keySrc"] = "vision"
+                if isinstance(c, dict):
+                    # computed key (no printed answer existed) -> must carry the
+                    # AI badge on the site
+                    r["key"] = c.get("key")
+                    r["keySrc"] = "ai-computed"
+                    r["aiGenerated"] = True
+                    r["answerSrc"] = "ai"
+                else:
+                    r["key"] = c
+                    r["keySrc"] = "vision"
                 r["keyConf"] = "high"
                 nc += 1
         print("fixes applied: %d fill answers, %d choice keys" % (nf, nc))
