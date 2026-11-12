@@ -95,6 +95,7 @@ A.ITEMS.length; A.BYTOPIC['2.1']; A.gradeChoice(A.ITEMS[0], 'B');
 | `#home` | `viewHome()` | 首页：考点掌握度、开始智能轮次 |
 | `#ref` | `viewRef()` | 考点梳理（方法卡、公式、易错点） |
 | `#bank` | `viewBank()` | 题库索引（按类型/章/搜索） |
+| `#exam` | `viewExam()` | 模拟卷：25 题 / 90 分钟，交卷后才给答案（详见 3.8） |
 | `#preview` | `viewPreview()` | 预览板：题目 + 答案直接展示，不计分 |
 | `#fav` | `viewFav()` | 收藏 |
 | `#mistakes` | `viewMistakes()` | 错题本（双层：latest + archive） |
@@ -236,6 +237,34 @@ ansEqual(a, b)      // 归一后比较：全角→半角、−/–/— → '-'�
 ```
 
 所以**后台改答案不需要重建 bank.js**，也不需要重启服务；代价是覆盖只存在数据库里，重建 `bank.js` 不会丢它（这是有意的）。
+
+### 3.8 模拟卷（mock paper）
+
+顶栏 `Mock`（`route('exam')`）进入，三个界面：`examIntro()` 说明页 → `examPaint()` 答题页 →
+`viewExamRes()` 结果页。状态机只有一个对象 `exam`。
+
+**抽题 `examDraw()`**：从 `MAIN`（285 个模板，不含变体）抽 25 题，**每个二级考点恰好 1 题**
+（25 个考点 = 25 题），最后按考点顺序排序，读起来就是一张从 1.1 到 2.8 的真卷。
+
+题型配比 `EXAM_MIX = 17 choice / 5 fill / 3 cloze`。这不是随手定的：cloze 只存在于
+1.5.1 / 1.8.1 / 2.3.2 三个考点，能出填空的考点一共 8 个（含这 3 个），所以在「一考点一题」
+的约束下非选择题最多 8 道 —— **17/5/3 已经是这张卷子能做到的最均衡配比**。分配顺序是
+cloze → fill → choice（稀缺的先分），配比才不会随洗牌漂；某个考点供不出所需题型时，
+该题回落到本考点还有的题型，所以改题库后也不会抽不满 25 题。
+
+| 关注点 | 实现 |
+|---|---|
+| 状态 | `exam = {on,list,i,ans,start,deadline,submitted,res}`；`ans[item.id]` 是 `{a:'B'}`（选择）或 `{resp:['4','2']}`（填空/多空） |
+| 作答期反馈 | **不写 `store.h`、不渲染 `.fb`**，所以页面上看不到任何对错 |
+| 计时 | `deadline = start + 90min` 是绝对时间戳，不是每秒自减；`examTick()` 每秒只刷 `#exClock`，归零自动 `examSubmit(true)` |
+| 刷新续考 | 每次作答 `examSave()` 写 `localStorage[lsKey()+'.exam']`（游客 `mth028.en.v1.exam`，登录用户 `…@<user>.exam`）；`examLoad()` 校验 25 题 + `deadline > now` 才恢复，交卷即删 |
+| 右侧答题卡 | `examSideHtml()` 渲染 25 个 `.ex-cell`；`done` 由 `examIsDone()` 判定（多空必须每空都填）；点击 `examGo(k)` 跳题并回到页首 |
+| 填空输入 | `oninput → examType()` 只补计数和格子状态，**不整页重绘**（重绘会丢焦点）；选项点击会重绘，但恢复 `scrollY` |
+| 交卷 | 逐题 `gradeChoice/gradeFill/gradeCloze`；**只有已作答的题**写 `recordAttempt()`（进进度与错题本），空题只算卷面分不写进度，避免计时结束留空把正确率带崩 |
+| 结果页 | 总分按 25 题算（空题算错）+ 分题型小计 + 每题「你的答案 / 正确答案 / ✓✕—」，点行展开原题与答案裁图；AI 补答的题带 AI 标记 |
+
+键盘：`A–D` 选项、`←/→` 翻题；答题时 **Enter 不会触发交卷**（`onKey` 在 `curView==='exam'`
+时提前 return，避免落到「点最后一个 `.pri` 按钮」的老逻辑上）。
 
 ---
 
@@ -546,6 +575,9 @@ ssh ... "python3 -" < admin_check.py   # login → GET /api/admin/bank28 → 打
 18. **变体不参与编号，但必须跟模板同一 `sub`**：否则题卡底部的 `1.5.1-02-v3` 会指向不属于它的考点。
 19. **中文查询过不了 `labelMatch` 的归一化**：`[^a-z0-9]` 会把汉字全部抹掉，`nq` 变成空串后被当成「无查询」匹配全部。已加 CJK 分支，新增搜索入口时注意同样问题。
 20. **来源题号不能按去标点形式比对**：`Q1-01` 与 `Q10-10` 归一化后是 `q101` / `q1010`，前者是后者的前缀，会多命中。`src` 用保留连字符的原串比较。
+21. **同名函数会静默互相覆盖**：抽题函数和「点选项」函数一开始都叫 `examPick`，后者声明在后，直接顶掉前者 → `examDraw()` 返回 `undefined`、卷子建不出来，而控制台只有一句 `ids is undefined`。JS 对重复函数声明不报错，**命名要带用途**（`examDraw` 抽题 / `examPick` 选项），测试里先 `typeof` 再调用。
+22. **`<details>` 折叠行会留约 100px 的固有高度**：closed 状态下 Chromium 仍为内容保留 `content-visibility` 占位，结果页每行下面拖着一条空白带，`display:none` 也压不平。结果行已改成 `div` + `.open` 类（`examRowToggle`）。
+23. **`.blank` 是全局类名，不能拿来当行状态**：结果行写过 `class="ex-row blank"`，被填题输入框的 `.blank{flex:1 1 140px}` 命中，整行被拉成 140px、内容顶到上边。新增状态类前先在 `app.css` 搜一遍全局类名（`blank`、`bar`、`card`、`sec-*` 都有主了），行状态统一用 `isblank` 这种带前缀的名字。
 
 ---
 

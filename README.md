@@ -110,6 +110,21 @@ favourites or mistake book can leak into the other.
   still show 「暂无题目 · 待补充」 rather than a fake 0/0 bar.
 - **Glossary.** 212 English/Chinese terms with short definitions, taken from
   the department's *Vocabulary Booklet for Linear Algebra*.
+- **Mock paper · 模拟卷** (`Mock` in the top bar, `#exam`). A 25-question,
+  90-minute paper drawn at random but **stratified**: exactly one question from
+  each of the 25 sub-topics, so the syllabus is always fully covered, and the
+  type mix is pinned to 17 choice / 5 fill / 3 cloze (the bank only has 8
+  sub-topics that can give a non-choice item, so that is the most balanced
+  split a 25-question paper can have). Nothing is graded while you write — no
+  verdict, no answer crops, no green/red. The **question map on the right** is
+  the navigator: click any number to jump back and change an answer; filled
+  cells are blue, the current one is outlined. The clock is wall-clock (refresh
+  or close the tab and the same paper resumes with the time it has left), and
+  it auto-submits at 00:00. On submit you get a score, a per-type breakdown and
+  all 25 answers with your own answer next to the correct one; each row expands
+  to the original question and answer crop. Only answered questions feed your
+  progress and mistake book — blanks count for the paper but not for practice
+  accuracy.
 
 The two WeChat reference PDFs (题库分类汇总 / 线代考点梳理) were used only to
 check topic categorisation; **none of their questions entered this bank**.

@@ -15,6 +15,7 @@
   <button class="nav-b" data-view="home" onclick="route('home')" title="Practice 练习"><span class="ic">&#8962;</span><span class="tx">Practice<span class="tz">练习</span></span></button>
   <button class="nav-b" data-view="ref" onclick="route('ref')" title="Reference 考点梳理"><span class="ic">&#9708;</span><span class="tx">Reference<span class="tz">考点梳理</span></span></button>
   <button class="nav-b" data-view="bank" onclick="route('bank')" title="Bank 题库"><span class="ic">&#9638;</span><span class="tx">Bank<span class="tz">题库</span></span></button>
+  <button class="nav-b" data-view="exam" onclick="route('exam')" title="Mock paper 模拟卷"><span class="ic">&#9201;</span><span class="tx">Mock<span class="tz">模拟卷</span></span></button>
   <button class="nav-b" data-view="preview" onclick="route('preview')" title="Preview 预览"><span class="ic">&#9707;</span><span class="tx">Preview<span class="tz">预览</span></span></button>
   <button class="nav-b nav-star" data-view="fav" onclick="route('fav')" title="Favourites 收藏"><span class="ic">&#9733;</span><span class="tx">&#9733; Favourites<span class="tz">收藏</span></span></button>
   <button class="nav-b" data-view="mistakes" onclick="route('mistakes')" title="Mistake book 错题本"><span class="ic">&#9873;</span><span class="tx">Mistakes<span class="tz">错题本</span></span></button>
@@ -959,6 +960,445 @@ function viewQuiz(){
   paintTop(); renderMath();
 }
 
+/* ============================================================================
+   MOCK PAPER · 模拟卷
+   ----------------------------------------------------------------------------
+   25 questions, 90 minutes, one paper = the whole syllabus.
+
+   Sampling is stratified, not plain random: every paper takes exactly one
+   question from every non-empty 二级考点 (25 of them), so coverage is 100% by
+   construction; within each 考点 the record is random.  The type mix is pinned
+   to 17 choice / 5 fill / 3 cloze.  That is NOT an arbitrary ratio: with one
+   question per 考点 and 25 考点, the fill-capable 考点 are exactly 8 (three of
+   them also hold every cloze item), so 8 non-choice is the maximum a 25-question
+   paper can hold — the mix below is the most balanced one that exists.
+   Scarce types are allocated first (cloze, then fill), which keeps the mix
+   stable from paper to paper instead of drifting with plain shuffling.
+
+   No feedback while writing: answers live in `exam.ans` and are graded once,
+   on 交卷.  The state is mirrored to localStorage so a refresh (or a closed
+   tab) resumes the same paper with the same deadline; the clock is wall-clock,
+   never a per-tick counter, so background tabs cannot stretch the 90 minutes.
+
+   The right-hand question map is the navigation: clicking any number jumps
+   straight back to that question, with the current answers intact.
+   ========================================================================== */
+var EXAM_N=25, EXAM_MS=90*60*1000;
+var EXAM_MIX={choice:17,fill:5,cloze:3};
+var exam={on:false,list:[],i:0,ans:{},start:0,deadline:0,submitted:false,res:null,
+  usedMs:0,auto:false,timer:null};
+
+function shuffleArr(a){
+  for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; }
+  return a;
+}
+/* one record per template (MAIN), so a paper never repeats the same question
+   twice with different numbers */
+function examDraw(){
+  var groups=SUBGROUPS.filter(function(g){ return g.ids.length; }).map(function(g){
+    return {id:g.id, ids:g.ids.slice(), taken:false};
+  });
+  if(!groups.length) return [];
+  shuffleArr(groups);
+  var used={}, picked=[];
+  function has(g,type){
+    return g.ids.some(function(id){ return !used[id] && BYID[id] && BYID[id].type===type; });
+  }
+  function take(g,type){
+    var cand=g.ids.filter(function(id){ return !used[id] && BYID[id] && BYID[id].type===type; });
+    if(!cand.length) return false;
+    var id=cand[Math.floor(Math.random()*cand.length)];
+    used[id]=1; picked.push(id); return true;
+  }
+  /* scarce types first: cloze (3 sub-topics) then fill */
+  ['cloze','fill'].forEach(function(t){
+    var need=EXAM_MIX[t];
+    shuffleArr(groups);
+    for(var i=0;i<groups.length && need>0;i++){
+      var g=groups[i];
+      if(g.taken || !has(g,t)) continue;
+      if(take(g,t)){ g.taken=true; need--; }
+    }
+  });
+  /* the rest: one choice question per remaining 考点 */
+  groups.forEach(function(g){
+    if(g.taken || picked.length>=EXAM_N) return;
+    if(take(g,'choice') || take(g,'fill') || take(g,'cloze')){
+      g.taken=true; return;
+    }
+    var rest=g.ids.filter(function(id){ return !used[id]; });
+    if(rest.length){ used[rest[0]]=1; picked.push(rest[0]); g.taken=true; }
+  });
+  /* top up if some 考点 had nothing left (never happens with the current bank,
+     but a paper must always have 25 questions) */
+  if(picked.length<EXAM_N){
+    var pool=MAIN.filter(function(it){ return !used[it.id]; });
+    shuffleArr(pool);
+    for(var k=0;k<pool.length && picked.length<EXAM_N;k++){ used[pool[k].id]=1; picked.push(pool[k].id); }
+  }
+  picked=picked.slice(0,EXAM_N);
+  /* present in syllabus order, the way a real paper reads */
+  var ord={}; SUBGROUPS.forEach(function(g,k){ ord[g.id]=k; });
+  picked.sort(function(a,b){
+    var x=BYID[a], y=BYID[b];
+    var ox=ord[x.sub]!=null? ord[x.sub] : 999, oy=ord[y.sub]!=null? ord[y.sub] : 999;
+    return ox-oy || (a-b);
+  });
+  return picked;
+}
+
+function examKey(){ return lsKey()+'.exam'; }
+function examSave(){
+  try{
+    if(!exam.on || exam.submitted){ LS_DRIVER.removeItem(examKey()); return; }
+    LS_DRIVER.setItem(examKey(), JSON.stringify({list:exam.list,i:exam.i,ans:exam.ans,
+      start:exam.start,deadline:exam.deadline}));
+  }catch(e){}
+}
+function examLoad(){
+  try{
+    var raw=LS_DRIVER.getItem(examKey()); if(!raw) return null;
+    var d=JSON.parse(raw); if(!d||!Array.isArray(d.list)) return null;
+    var list=d.list.filter(function(id){ return !!BYID[id]; });
+    if(list.length<EXAM_N) return null;
+    if(!(d.deadline>Date.now())) return null;          // expired -> start over
+    return {on:true,list:list,i:Math.min(Math.max(0,d.i||0),list.length-1),
+      ans:d.ans||{},start:d.start||0,deadline:d.deadline,
+      submitted:false,res:null,usedMs:0,auto:false,timer:null};
+  }catch(e){ return null; }
+}
+function examStart(){
+  var saved=exam.on && !exam.submitted? exam : examLoad();
+  if(saved && typeof G.confirm==='function' &&
+     !G.confirm('开始一份新试卷会丢弃当前这份的作答。\nStart a new paper and discard the answers in progress?')) return;
+  var ids=examDraw();
+  if(!ids.length){ toast('Not enough questions to build a paper.'); return; }
+  var t=Date.now();
+  exam={on:true,list:ids,i:0,ans:{},start:t,deadline:t+EXAM_MS,
+    submitted:false,res:null,usedMs:0,auto:false,timer:null};
+  examSave(); route('exam');
+}
+function examResume(){
+  var e=examLoad();
+  if(!e){ toast('没有未完成的试卷 · No paper in progress.'); viewExam(); return; }
+  exam=e; route('exam');
+}
+function examMMSS(ms){
+  ms=Math.max(0,ms);
+  var s=Math.floor(ms/1000), m=Math.floor(s/60), sec=s%60;
+  return (m<10?'0':'')+m+':'+(sec<10?'0':'')+sec;
+}
+
+/* an item counts as answered only when it has something in every blank */
+function examIsDone(it,a){
+  if(!it||!a) return false;
+  if(it.type==='choice') return !!a.a;
+  var r=a.resp||[];
+  if(it.type==='cloze'){
+    var n=it.blanks||1;
+    for(var k=0;k<n;k++){ if(!String(r[k]==null?'':r[k]).trim()) return false; }
+    return true;
+  }
+  return !!String(r[0]==null?'':r[0]).trim();
+}
+function examDone(){
+  var n=0;
+  exam.list.forEach(function(id){ if(examIsDone(BYID[id],exam.ans[id])) n++; });
+  return n;
+}
+function examBlankCount(){ return exam.list.length - examDone(); }
+
+/* ---------- exam body ---------- */
+function examAnswerHtml(it){
+  var a=exam.ans[it.id]||{};
+  if(it.type==='choice'){
+    var opts=it.options||['A','B','C','D'];
+    return '<div class="opts">'+opts.map(function(L){
+      return '<button class="opt'+(a.a===L?' sel':'')+'" onclick="examPick(\''+L+'\')">'+L+'</button>';
+    }).join('')+'</div>'
+    +'<div class="ans-area" style="padding:6px 18px 16px"><span class="ans-hint">'
+    +'选择后不会立刻判分 · No verdict until you submit. 再次点击可取消选择.</span></div>';
+  }
+  var n=(it.type==='cloze')? (it.blanks||1) : 1, arr=[];
+  for(var k=0;k<n;k++){
+    var v=(a.resp&&a.resp[k]!=null)? a.resp[k] : '';
+    var label=(it.type==='cloze')? ('空 '+(k+1)+' · Blank '+(k+1)) : 'Your answer · 你的答案';
+    arr.push('<div class="blank"><label>'+label+'</label>'
+      +'<input class="ans-in" id="exIn'+k+'" value="'+escAttr(v)+'" placeholder="…" '
+      +'oninput="examType('+it.id+','+k+',this.value)" '
+      +'onkeydown="if(event.key===\'Enter\'){event.preventDefault();examNext();}"></div>');
+  }
+  return '<div class="ans-area"><div class="blank-row">'+arr.join('')+'</div>'
+    +'<div class="ans-hint">填空答案在交卷前不判分 · Graded only on submit.</div></div>';
+}
+function examSideHtml(){
+  var cells=exam.list.map(function(id,k){
+    var it=BYID[id]||{}, done=examIsDone(it,exam.ans[id]), cur=(k===exam.i);
+    return '<button class="ex-cell'+(done?' done':'')+(cur?' cur':'')+'" onclick="examGo('+k+')" '
+      +'title="Q'+(k+1)+' · '+escAttr(it.label||'')+' · '+escAttr(typeNameOf(it))+'"'
+      +' aria-label="Question '+(k+1)+'">'+(k+1)+'</button>';
+  }).join('');
+  var done=examDone(), n=exam.list.length;
+  return '<aside class="ex-side">'
+   +'<div class="ex-side-hd"><span>Question map<span class="tz"> 答题卡</span></span>'
+   +'<b id="exSideCount">'+done+'/'+n+'</b></div>'
+   +'<div class="ex-grid">'+cells+'</div>'
+   +'<div class="ex-legend"><span><i class="sw done"></i>Answered</span>'
+   +'<span><i class="sw"></i>Blank</span><span><i class="sw cur"></i>Current</span></div>'
+   +'<button class="btn pri ex-submit" onclick="examAskSubmit()">Submit paper <span class="zhx">交卷</span></button>'
+   +'<p class="ex-note">点题号可回退改答案 · Click a number to jump back and edit.</p>'
+   +'<p class="ex-note dim">答案在交卷后显示 · Answers are shown after submission.</p>'
+   +'</aside>';
+}
+function viewExam(){
+  if(!exam.on){ var saved=examLoad(); if(saved) exam=saved; }
+  if(exam.submitted) return viewExamRes();
+  if(!exam.on) return examIntro();
+  if(Date.now()>=exam.deadline) return examSubmit(true);
+  examPaint();
+}
+function examIntro(){
+  var saved=exam.on && !exam.submitted? exam : examLoad();
+  var left=saved? Math.max(0,saved.deadline-Date.now()) : 0;
+  document.getElementById('view').innerHTML=
+   '<div class="wrap"><div class="ex-intro">'
+   +'<div class="ex-hero"><div class="k">Mock paper <span class="zhx">模拟卷</span></div>'
+   +'<h2>MTH028 · 期中小测模拟卷</h2>'
+   +'<p>'+EXAM_N+' 题 · '+Math.round(EXAM_MS/60000)+' 分钟 · 覆盖全部 25 个二级考点</p></div>'
+   +'<div class="ex-rules">'
+   +'<div><b>25</b><span>Questions<br>题目数量</span></div>'
+   +'<div><b>'+Math.round(EXAM_MS/60000)+' min</b><span>Timed<br>计时交卷</span></div>'
+   +'<div><b>17 / 5 / 3</b><span>Choice / Fill / Cloze<br>题型构成</span></div>'
+   +'<div><b>100%</b><span>Syllabus coverage<br>考点覆盖</span></div>'
+   +'</div>'
+   +'<ul class="ex-list">'
+   +'<li>随机抽题：每个二级考点各 1 题，题型按 17 选择 / 5 填空 / 3 多空配比。<span class="tz">Every paper samples one question from each of the 25 sub-topics.</span></li>'
+   +'<li>作答期间不显示对错；交卷后统一给出每题答案与原始裁图。<span class="tz">No feedback until you submit.</span></li>'
+   +'<li>右侧答题卡可随时点回任意题修改；计时结束自动交卷。<span class="tz">The question map jumps back to any question; the paper auto-submits at 00:00.</span></li>'
+   +'<li>刷新或关掉页面不会丢卷，剩余时间照常走。<span class="tz">Refresh-safe: the deadline is wall-clock.</span></li>'
+   +'</ul>'
+   +'<div class="ex-acts">'
+   +'<button class="btn pri" onclick="examStart()">'+(saved?'Start a new paper':'Start paper')+' <span class="zhx">'+(saved?'重新开始':'开始考试')+'</span></button>'
+   +(saved? '<button class="btn ghost" onclick="examResume()">Resume · 继续未完成的试卷（剩 '+examMMSS(left)+'）</button>':'')
+   +'<button class="btn ghost" onclick="route(\'home\')">Back <span class="zhx">返回</span></button>'
+   +'</div></div></div>';
+  paintTop();
+}
+function examPaint(){
+  var it=BYID[exam.list[exam.i]];
+  if(!it){ return examIntro(); }
+  var t=topicInfo(it.topic), n=exam.list.length;
+  var typeBadge=(it.type==='choice')?'':(it.type==='fill'?' fill':' cloze');
+  document.getElementById('view').innerHTML=
+   '<div class="wrap ex-wrap">'
+   +'<div class="ex-main">'
+   +'<div class="ex-bar"><span class="ex-tag">Mock paper · 模拟卷</span>'
+   +'<span class="ex-sub">'+n+' Q · '+Math.round(EXAM_MS/60000)+' min</span>'
+   +'<span class="spacer"></span>'
+   +'<span class="ex-count" id="exCount">'+examDone()+' / '+n+' answered</span>'
+   +'<span class="ex-clock" id="exClock">'+examMMSS(exam.deadline-Date.now())+'</span></div>'
+   +'<div class="qcard">'
+   +'<div class="qhead">'
+   +'<span class="qno'+typeBadge+'">Q'+(exam.i+1)+'</span>'
+   +'<span class="qsec" title="'+escAttr(t.en)+'">'+escHtml(t.en)+'<span class="tz"> '+escHtml(t.zh)+'</span></span>'
+   +subTagHtml(it)
+   +aiTagHtml(it)
+   +starBtn(it.id)
+   +'<div class="qprog"><span class="muted" style="font-size:12px">'+(exam.i+1)+'/'+n+'</span>'
+   +'<span class="track"><i style="width:'+Math.round((exam.i+1)/n*100)+'%"></i></span></div>'
+   +'</div>'
+   +'<div class="qbody"><span class="muted" style="font-size:11.5px">'+typeNameOf(it)
+   +' · '+escHtml(it.label)+'</span>'
+   +(it.img? '<img class="qimg" src="'+escAttr(it.img)+'" alt="'+escAttr(it.label)+'" loading="lazy">':'')
+   +((it.stem && !it.img)? '<p class="qstem">'+escHtml(it.stem)+'</p>':'')
+   +'</div>'
+   +examAnswerHtml(it)
+   +'</div>'
+   +'<div class="ex-foot">'
+   +'<button class="btn ghost sm" onclick="examPrev()"'+(exam.i?'':' disabled')+'>&larr; Prev</button>'
+   +'<button class="btn ghost sm" onclick="examNext()"'+(exam.i+1<n?'':' disabled')+'>Next &rarr;</button>'
+   +'<button class="btn ghost sm" onclick="examClear()">Clear <span class="zhx">清除</span></button>'
+   +'<span class="spacer"></span>'
+   +'<button class="btn ghost sm" onclick="route(\'home\')">Save &amp; exit <span class="zhx">保存退出</span></button>'
+   +'<button class="btn pri sm" onclick="examAskSubmit()">Submit <span class="zhx">交卷</span></button>'
+   +'</div>'
+   +'</div>'
+   +examSideHtml()
+   +'</div>';
+  paintTop(); renderMath(); examClock(); examTick();
+}
+function examGo(k){
+  k=+k; if(!(k>=0&&k<exam.list.length)) return;
+  exam.i=k; examSave(); examPaint();
+  try{ if(typeof G.scrollTo==='function') G.scrollTo(0,0); }catch(e){}
+}
+function examNext(){
+  if(exam.i+1<exam.list.length){ examGo(exam.i+1); }
+  else { examAskSubmit(); }
+}
+function examPrev(){ if(exam.i>0) examGo(exam.i-1); }
+function examClear(){
+  var it=BYID[exam.list[exam.i]]; if(!it) return;
+  delete exam.ans[it.id]; examSave(); examPaint();
+  toast('已清除本题作答 · Answer cleared');
+}
+function examPick(L){
+  var it=BYID[exam.list[exam.i]]; if(!it||it.type!=='choice') return;
+  var a=exam.ans[it.id]||{};
+  if(a.a===L) delete a.a; else a.a=L;
+  if(a.a) exam.ans[it.id]=a; else delete exam.ans[it.id];
+  var y=(typeof G.scrollY==='number')? G.scrollY : 0;
+  examSave(); examPaint();
+  /* the card is re-rendered in place: keep the reader where they were */
+  try{ if(y && typeof G.scrollTo==='function') G.scrollTo(0,y); }catch(e){}
+}
+function examType(id,k,v){
+  var it=BYID[id]; if(!it) return;
+  var a=exam.ans[id]||{}, n=(it.type==='cloze')? (it.blanks||1) : 1;
+  if(it.type==='cloze'){ a.resp=a.resp||[]; a.resp[k]=v; }
+  else { a.resp=[v]; }
+  var empty=true;
+  for(var j=0;j<n;j++){ if(String((a.resp||[])[j]==null?'':(a.resp||[])[j]).trim()){ empty=false; break; } }
+  if(empty) delete exam.ans[id]; else exam.ans[id]=a;
+  examSave();
+  /* repainting would steal the caret — patch only the counter + the map cell */
+  var done=examDone(), total=exam.list.length;
+  var c=document.getElementById('exCount'); if(c) c.textContent=done+' / '+total+' answered';
+  var sc=document.getElementById('exSideCount'); if(sc) sc.textContent=done+'/'+total;
+  if(document.querySelectorAll){
+    var cells=document.querySelectorAll('.ex-cell'), b=cells[exam.i];
+    if(b&&b.classList) b.classList.toggle('done',examIsDone(it,exam.ans[id]));
+  }
+}
+function examClock(){ examStopClock(); exam.timer=setInterval(examTick,1000); }
+function examStopClock(){ if(exam.timer){ clearInterval(exam.timer); exam.timer=null; } }
+function examTick(){
+  if(!exam.on||exam.submitted) return;
+  var left=exam.deadline-Date.now();
+  if(left<=0){ examSubmit(true); return; }
+  var el=document.getElementById('exClock');
+  if(el){ el.textContent=examMMSS(left); if(el.classList) el.classList.toggle('warn',left<5*60*1000); }
+}
+function examAskSubmit(){
+  if(!exam.on||exam.submitted) return;
+  var blank=examBlankCount();
+  var msg=blank
+    ? '还有 '+blank+' 题未作答，确定交卷吗？\n'+blank+' question(s) are still blank. Submit anyway?'
+    : '确定交卷？交卷后不能修改答案。\nSubmit the paper now? You cannot change answers afterwards.';
+  if(typeof G.confirm==='function' && !G.confirm(msg)) return;
+  examSubmit(false);
+}
+function examSubmit(auto){
+  if(!exam.on||exam.submitted) return;
+  if(auto && Date.now()<exam.deadline) auto=false;   // only flag a real timeout
+  examStopClock();
+  var rows=[], okN=0, answered=0;
+  exam.list.forEach(function(id,k){
+    var it=BYID[id]||{}, a=exam.ans[id]||null, g=null, blank=!a;
+    if(!blank){
+      if(it.type==='choice') g=gradeChoice(it,a.a);
+      else if(it.type==='cloze') g=gradeCloze(it,a.resp||[]);
+      else g=gradeFill(it,(a.resp||[])[0]||'');
+      if(!g){ blank=true; }
+    }
+    if(!blank){
+      answered++;
+      if(g.ok) okN++;
+      var extra={};
+      if(it.type==='choice') extra.a=a.a;
+      else extra.resp=(it.type==='cloze')? (a.resp||[]) : ((a.resp||[])[0]||'');
+      recordAttempt(it,!!g.ok,extra);
+    }
+    rows.push({id:id,blank:blank,g:g});
+  });
+  exam.submitted=true; exam.auto=!!auto;
+  exam.usedMs=Math.min(Date.now()-(exam.start||Date.now()),EXAM_MS);
+  exam.res={rows:rows,ok:okN,answered:answered};
+  try{ LS_DRIVER.removeItem(examKey()); }catch(e){}
+  route('exam');
+}
+function examReset(){
+  examStopClock();
+  exam={on:false,list:[],i:0,ans:{},start:0,deadline:0,submitted:false,res:null,
+    usedMs:0,auto:false,timer:null};
+}
+function examAnswerTxt(it){
+  if(!it) return '—';
+  if(it.type==='choice') return it.key||'—';
+  var a=it.answers||[];
+  return a.length? a.join(' · ') : (it.answerText||'—');
+}
+function examYourTxt(it,a){
+  if(!it||!a) return '';
+  if(it.type==='choice') return a.a||'';
+  var r=a.resp||[];
+  return it.type==='cloze'? r.join(' · ') : (r[0]||'');
+}
+/* rows are plain divs, not <details>: Chromium keeps an intrinsic height for
+   the closed content of a <details>, which left a blank gap under every row */
+function examRowToggle(hd){
+  var row=hd&&hd.parentNode; if(!row) return;
+  if(row.classList) row.classList.toggle('open');
+}
+function viewExamRes(){
+  if(!exam.submitted||!exam.res){ return examIntro(); }
+  var R=exam.res, n=exam.list.length, ok=R.ok||0;
+  var blank=0, byT={choice:[0,0],fill:[0,0],cloze:[0,0]};
+  R.rows.forEach(function(r){
+    var it=BYID[r.id]||{}, t=byT[it.type]? it.type : 'fill';
+    byT[t][1]++;
+    if(r.blank){ blank++; return; }
+    if(r.g&&r.g.ok){ byT[t][0]++; }
+  });
+  var pct=n? Math.round(ok/n*100):0;
+  var rows=R.rows.map(function(r,k){
+    var it=BYID[r.id]||{}, a=exam.ans[r.id]||null;
+    var cls=r.blank?'isblank':(r.g&&r.g.ok?'ok':'bad');   /* not 'blank': that class is the fill input */
+    var verdict=r.blank?'—':(r.g&&r.g.ok?'✓':'✕');
+    var yours=examYourTxt(it,a)||'未作答 · blank';
+    var right=examAnswerTxt(it);
+    var imgs=(it.img? '<img class="qimg" src="'+escAttr(it.img)+'" alt="'+escAttr(it.label||'')+'" loading="lazy">':'')
+      +(it.answerImg? '<div class="fb-aimg" style="margin-top:8px"><a href="'+escAttr(it.answerImg)+'" target="_blank">'
+        +'<img src="'+escAttr(it.answerImg)+'" alt="Printed answer" loading="lazy"></a></div>':'');
+    return '<div class="ex-row '+cls+'">'
+      +'<div class="ex-row-hd" onclick="examRowToggle(this)"><span class="ex-n">'+(k+1)+'</span>'
+      +'<span class="ex-lb">'+escHtml(it.label||('Q'+(k+1)))+'</span>'
+      +'<span class="ex-ty">'+escHtml(typeNameOf(it))+'</span>'
+      +'<span class="ex-yours">你：'+escHtml(yours)+'</span>'
+      +'<span class="ex-right">答：'+escHtml(right)+'</span>'
+      +'<span class="ex-verdict">'+verdict+'</span>'
+      +'<span class="ex-chev">&#9662;</span></div>'
+      +'<div class="ex-row-body"><div class="ex-ans-line"><b>正确答案 · Answer</b> '+escHtml(right)
+      +aiTagHtml(it)+'</div>'+imgs+'</div></div>';
+  }).join('');
+  document.getElementById('view').innerHTML=
+   '<div class="wrap"><div class="res">'
+   +'<div class="ex-res-hd">'
+   +'<div class="k">Paper submitted <span class="zhx">已交卷'+(exam.auto?' · 时间到自动交卷':'')+'</span></div>'
+   +'<div class="bigscore">'+pct+'%</div>'
+   +'<div class="ex-res-sub">'+ok+' / '+n+' 题正确 · 用时 '+examMMSS(exam.usedMs)
+   +(blank? ' · 未答 '+blank+' 题':'')+'</div>'
+   +'<div class="ex-res-mix">'
+   +'<span>Choice <b>'+byT.choice[0]+'/'+byT.choice[1]+'</b></span>'
+   +'<span>Fill <b>'+byT.fill[0]+'/'+byT.fill[1]+'</b></span>'
+   +'<span>Cloze <b>'+byT.cloze[0]+'/'+byT.cloze[1]+'</b></span>'
+   +'</div>'
+   +'<p class="muted" style="margin-top:10px">已作答的题目已写入刷题进度与错题本；未作答不计入正确率统计。'
+   +'<span class="tz">Answered questions feed your progress and mistake book; blanks are left out of practice accuracy.</span></p>'
+   +'</div>'
+   +'<div class="ex-rows">'+rows+'</div>'
+   +'<div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">'
+   +'<button class="btn pri" onclick="examNew()">再来一份 <span class="zhx">New paper</span></button>'
+   +'<button class="btn ghost" onclick="start(\'wrong\')">只练错题 <span class="zhx">Drill mistakes</span></button>'
+   +'<button class="btn ghost" onclick="route(\'home\')">Back <span class="zhx">返回首页</span></button>'
+   +'</div></div>';
+  paintTop(); renderMath();
+}
+function examNew(){
+  examReset();
+  examStart();
+}
+
 /* ---------- results ---------- */
 function viewRes(){
   var ok=0,scored=0;
@@ -1476,10 +1916,11 @@ function toast(m){
   t.textContent=m; if(t.classList) t.classList.add('on');
   clearTimeout(t._t); t._t=setTimeout(function(){ if(t.classList) t.classList.remove('on'); },1600);
 }
-var HASHV={home:'#home',ref:'#ref',bank:'#bank',preview:'#preview',fav:'#fav',mistakes:'#mistakes',glossary:'#glossary'};
-var HASHROUTE={'#home':'home','#ref':'ref','#bank':'bank','#preview':'preview','#fav':'fav','#mistakes':'mistakes','#glossary':'glossary'};
+var HASHV={home:'#home',ref:'#ref',bank:'#bank',exam:'#exam',preview:'#preview',fav:'#fav',mistakes:'#mistakes',glossary:'#glossary'};
+var HASHROUTE={'#home':'home','#ref':'ref','#bank':'bank','#exam':'exam','#preview':'preview','#fav':'fav','#mistakes':'mistakes','#glossary':'glossary'};
 function route(v,arg){
   curView=v;
+  if(v!=='exam') examStopClock();
   try{ if(typeof window!=='undefined'&&window.scrollTo) window.scrollTo(0,0); }catch(e){}
   var h=HASHV[v];
   try{ if(h&&typeof history!=='undefined'&&typeof location!=='undefined'&&location.hash!==h)
@@ -1488,6 +1929,7 @@ function route(v,arg){
   else if(v==='bank') viewBank(arg); else if(v==='preview') viewPreview();
   else if(v==='fav') viewFav(); else if(v==='mistakes') viewMistakes();
   else if(v==='glossary') viewGlossary(); else if(v==='quiz') viewQuiz();
+  else if(v==='exam') viewExam();
   else if(v==='res') viewRes(); else viewHome();
   paintTop();
 }
@@ -1516,6 +1958,17 @@ function onKey(e){
   if(m&&m.classList&&m.classList.contains&&m.classList.contains('on')) return;
   var k=(e.key||'').toLowerCase();
   if(k==='f'){ var id=currentCardId(); if(id!=null){ if(e.preventDefault)e.preventDefault(); toggleFav(id); } return; }
+  /* mock paper: A–D answers, ← → move, Enter never fires 交卷 by accident */
+  if(curView==='exam'){
+    if(!exam.on||exam.submitted) return;
+    var eit=BYID[exam.list[exam.i]];
+    if(eit&&eit.type==='choice'&&['a','b','c','d'].indexOf(k)>=0){
+      if(e.preventDefault)e.preventDefault(); examPick(k.toUpperCase()); return;
+    }
+    if(e.key==='ArrowRight'){ if(e.preventDefault)e.preventDefault(); examNext(); return; }
+    if(e.key==='ArrowLeft'){ if(e.preventDefault)e.preventDefault(); examPrev(); return; }
+    return;
+  }
   if(curView==='quiz'&&!round.shown&&document.querySelectorAll){
     var L=['a','b','c','d'];
     if(L.indexOf(k)>=0){ var it=currentItem();
@@ -1585,6 +2038,11 @@ var API={
   setGlossQ:setGlossQ,
   pickChoice:pickChoice, submitAnswer:submitAnswer, selfGrade:selfGrade, revealSelf:revealSelf,
   start:start, startSingle:startSingle, startTopic:startTopic, startSub:startSub, advance:advance,
+  examStart:examStart, examResume:examResume, examNew:examNew, examPick:examPick, examType:examType,
+  examGo:examGo, examNext:examNext, examPrev:examPrev, examClear:examClear,
+  examAskSubmit:examAskSubmit, examSubmit:examSubmit, examReset:examReset,
+  examPickIds:examDraw, examDraw:examDraw, examTick:examTick, examSave:examSave, examLoad:examLoad, examIntros:examIntro, examResultView:viewExamRes,
+  getExam:function(){ return exam; }, setExam:function(e){ exam=e; },
   toggleSec:toggleSec,
   toggleFav:toggleFav, isFav:isFav, favCount:favCount,
   route:route, routeFromHash:routeFromHash, HASHV:HASHV, HASHROUTE:HASHROUTE,
@@ -1607,6 +2065,9 @@ var GLOBAL_HANDLERS={
   renderAcct:renderAcct, submitAcct:submitAcct, doLogout:doLogout,
   syncNow:syncNow, resetAll:resetAll, clearFav:clearFav,
   start:start, startSingle:startSingle, startTopic:startTopic, startSub:startSub, advance:advance,
+  examStart:examStart, examResume:examResume, examNew:examNew, examPick:examPick,
+  examType:examType, examGo:examGo, examNext:examNext, examPrev:examPrev,
+  examClear:examClear, examAskSubmit:examAskSubmit, examSubmit:examSubmit, examRowToggle:examRowToggle,
   toggleSec:toggleSec,
   skipQ:skipQ, skipTopic:skipTopic,
   pickChoice:pickChoice, submitAnswer:submitAnswer, selfGrade:selfGrade,
