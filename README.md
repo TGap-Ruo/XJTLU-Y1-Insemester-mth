@@ -110,6 +110,16 @@ favourites or mistake book can leak into the other.
   still show 「暂无题目 · 待补充」 rather than a fake 0/0 bar.
 - **Glossary.** 212 English/Chinese terms with short definitions, taken from
   the department's *Vocabulary Booklet for Linear Algebra*.
+- **Topic drills · 考点练习.** Clicking a section or a sub-topic on the home board
+  (or in Reference) opens that group as a drill that **starts on a question you
+  have never answered** — the list is reordered 未做 → 做过错 → 已做对, so you never
+  re-open a topic on question 1 you did last week. The left-hand question map is
+  the same grid the mock paper uses, coloured by your own history (green = right,
+  red = missed, plain = untried, outline = current): click a number to jump back,
+  and an answered question returns exactly as you left it, with 重做 to try again.
+  **Skip** jumps to the next untouched question without recording anything.
+  Single-question cards (bank / preview / mistake book) and the smart round keep
+  their one-card layout.
 - **Mock paper · 模拟卷** (`Mock` in the top bar, `#exam`). A 25-question,
   90-minute paper drawn at random but **stratified**: exactly one question from
   each of the 25 sub-topics, so the syllabus is always fully covered, and the

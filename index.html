@@ -703,7 +703,7 @@ function wrongQueue(){ return mistakeBook().filter(function(id){ return !repaire
 
 /* ---------- round state ---------- */
 var round={list:[],i:0,mode:'smart',picked:null,fills:null,shown:false,self:false,
-  grade:null,marked:false,selfOk:null,done:false,t0:0,ok:0,ans:0,why:'',sec:null,phase:1};
+  grade:null,marked:false,selfOk:null,done:false,t0:0,ok:0,ans:0,why:'',sec:null,phase:1,replay:false};
 function currentItem(){ return BYID[round.list[round.i]]||null; }
 function start(mode,arg){
   var list=[];
@@ -713,17 +713,22 @@ function start(mode,arg){
     if(!p){ toast('Everything is answered — clearing skips.'); return; }
     list=[p.id]; store.lastTopic=p.sec; save(true);
     round={list:list,i:0,mode:mode,picked:null,fills:null,shown:false,self:false,grade:null,
-      marked:false,selfOk:null,done:false,t0:Date.now(),ok:0,ans:0,why:p.why,sec:p.sec,phase:p.phase};
+      marked:false,selfOk:null,done:false,t0:Date.now(),ok:0,ans:0,why:p.why,sec:p.sec,
+      phase:p.phase,replay:false};
     route('quiz'); return;
   }
-  if(mode==='topic'){ var g=GROUP_BY_ID[arg]; list=g? g.ids.slice() : []; }
-  else if(mode==='sub'){ list=(BYSUB[arg]||[]).slice(); }
+  /* A 考点 drill opens on a question you have never answered: the list is
+     partitioned into 未做 → 做过错 → 已做对, so index 0 is always the best next
+     thing to practise.  The order inside each band is the syllabus order. */
+  if(mode==='topic'){ var g=GROUP_BY_ID[arg]; list=g? drillOrder(g.ids.slice()) : []; }
+  else if(mode==='sub'){ list=drillOrder((BYSUB[arg]||[]).slice()); }
   else if(mode==='wrong'){ list=wrongQueue(); }
   else if(mode==='fav'){ list=Object.keys(store.fav||{}).filter(isFav).map(Number).filter(function(id){ return !!BYID[id]; }); }
   else if(mode==='single'){ list=[arg]; }
   if(!list.length){ toast('Nothing to review here.'); return; }
   round={list:list,i:0,mode:mode,picked:null,fills:null,shown:false,self:false,grade:null,
-    marked:false,selfOk:null,done:false,t0:Date.now(),ok:0,ans:0,why:'',sec:null,phase:2};
+    marked:false,selfOk:null,done:false,t0:Date.now(),ok:0,ans:0,why:'',sec:null,phase:2,
+    replay:false};
   route('quiz');
 }
 function startSingle(id){ start('single',id); }
@@ -731,7 +736,7 @@ function startTopic(id){ start('topic',id); }
 function startSub(id){ start('sub',id); }
 function advance(){
   round.i++; round.picked=null; round.fills=null; round.shown=false; round.self=false;
-  round.grade=null; round.marked=false; round.selfOk=null;
+  round.grade=null; round.marked=false; round.selfOk=null; round.replay=false;
   if(round.i>=round.list.length){ round.done=true; return viewRes(); }
   viewQuiz();
 }
@@ -759,6 +764,102 @@ function skipTopic(){
   addSkip('s', it && (it.sub || it.topic) ? (it.sub || it.topic) : '__untagged__');
   if(round.sec) markCycle(round.sec); save();
   toast('Skipping this topic · 暂时跳过这类'); start('smart');
+}
+/* ---------- 考点练习：左侧题号表 + 跳转 ----------
+   Opening a 考点 from Topic mastery now gives the same "question map" the mock
+   paper has, only on the left and coloured by your own history (✓ / ✕ / 未做).
+   Clicking a number is a REVIEW: that item comes back exactly as you left it
+   (previous answer + verdict), with 重做 to practise it again.  Next keeps the
+   old behaviour — a blank card — so walking forward is still real practice. */
+function drillMode(){ return round.mode==='topic' || round.mode==='sub'; }
+function drillOrder(ids){
+  var fresh=[], miss=[], good=[];
+  ids.forEach(function(id){
+    var r=store.h[id];
+    if(!r) fresh.push(id);
+    else if(!r.ok) miss.push(id);
+    else good.push(id);
+  });
+  return fresh.concat(miss, good);
+}
+function drillStats(){
+  var s={n:round.list.length,fresh:0,ok:0,bad:0};
+  round.list.forEach(function(id){
+    var r=store.h[id];
+    if(!r) s.fresh++; else if(r.ok) s.ok++; else s.bad++;
+  });
+  s.answered=s.ok+s.bad;
+  return s;
+}
+function drillSideHtml(){
+  var st=drillStats();
+  var cells=round.list.map(function(id,k){
+    var it=BYID[id]||{}, r=store.h[id];
+    var cls=!r? 'new' : (r.ok? 'ok':'bad');
+    if(k===round.i) cls+=' cur';
+    var state=!r? '未做 · not tried' : (r.ok? '已做对 · correct':'做过错 · missed');
+    return '<button class="ex-cell '+cls+'" onclick="jumpTo('+k+')" '
+      +'title="Q'+(k+1)+' · '+escAttr(it.label||'')+' · '+state+'">'+(k+1)+'</button>';
+  }).join('');
+  return '<aside class="ex-side qn-side">'
+    +'<div class="ex-side-hd"><span>Questions<span class="tz"> 题目</span></span>'
+    +'<b id="qnFresh">'+st.fresh+' 未做</b></div>'
+    +'<div class="ex-grid">'+cells+'</div>'
+    +'<div class="ex-legend"><span><i class="sw"></i>未做</span>'
+    +'<span><i class="sw ok"></i>做对</span>'
+    +'<span><i class="sw bad"></i>做过错</span>'
+    +'<span><i class="sw cur"></i>当前</span></div>'
+    +'<p class="ex-note">点题号回看那一题 · click a number to jump</p>'
+    +'<button class="btn ghost sm qn-act" onclick="skipDrill()">Skip <span class="zhx">跳过这题</span></button>'
+    +'<button class="btn ghost sm qn-act" onclick="route(\'home\')">Exit <span class="zhx">退出</span></button>'
+    +'</aside>';
+}
+/* put a recorded attempt back on the card (review mode) */
+function replayAttempt(it){
+  var r=store.h[it.id]; if(!r) return false;
+  if(it.type==='choice'){
+    if(!r.a) return false;
+    round.picked=String(r.a).toUpperCase();
+    round.grade=gradeChoice(it,round.picked);
+  } else {
+    var vals, n=(it.type==='cloze')? (it.blanks||1) : 1;
+    if(it.type==='cloze'){ vals=Array.isArray(r.resp)? r.resp.slice() : [r.resp||'']; }
+    else { vals=[Array.isArray(r.resp)? (r.resp[0]||'') : (r.resp||'')]; }
+    while(vals.length<n) vals.push('');
+    round.fills=vals;
+    round.grade=(it.type==='cloze')? gradeCloze(it,vals) : gradeFill(it,vals[0]);
+  }
+  round.shown=true;
+  round.self=!!r.self || !round.grade;
+  round.marked=!!r.self;
+  round.selfOk=r.self? !!r.ok : null;
+  round.replay=true;
+  return true;
+}
+function jumpTo(k){
+  k=+k; if(!(k>=0&&k<round.list.length)) return;
+  round.i=k; round.picked=null; round.fills=null; round.shown=false; round.self=false;
+  round.grade=null; round.marked=false; round.selfOk=null; round.replay=false;
+  var it=currentItem(); if(it) replayAttempt(it);
+  viewQuiz();
+  try{ if(typeof G.scrollTo==='function') G.scrollTo(0,0); }catch(e){}
+}
+function retryCurrent(){
+  round.picked=null; round.fills=null; round.shown=false; round.self=false;
+  round.grade=null; round.marked=false; round.selfOk=null; round.replay=false;
+  viewQuiz();
+}
+/* skip = jump to the next question you have not answered yet (records nothing;
+   the "mark correct" version is skipQ() and belongs to the smart round only) */
+function skipDrill(){
+  var n=round.list.length, start=round.i;
+  for(var step=1; step<=n; step++){
+    var k=(start+step)%n;
+    if(k===start) break;
+    if(!store.h[round.list[k]]){ jumpTo(k); toast('跳到没做过的题 · jumped to an untouched one'); return; }
+  }
+  if(start+1<n){ jumpTo(start+1); toast('没有未做的题了，已到下一题 · no untouched left'); }
+  else toast('这个考点都做过了 · every question here has an attempt');
 }
 /* store.h[id] may only carry fields the backend clean_progress28() keeps:
    {a, ok, t, self?, resp}.  Choice answers go in `a` (letter); fill / cloze
@@ -941,8 +1042,11 @@ function viewQuiz(){
   var typeBadge=(it.type==='choice')?'':(it.type==='fill'?' fill':' cloze');
   var shown=round.shown;
   var canNext=shown&&(round.self? round.marked : true);
+  var drill=drillMode();
   document.getElementById('view').innerHTML=
-   '<div class="wrap"><div class="qwrap">'
+   '<div class="wrap'+(drill?' qn-wrap':'')+'">'
+   +(drill? drillSideHtml() : '')
+   +'<div class="qwrap">'
    +(round.mode==='smart'&&round.why? '<div class="why"><span class="tag">Why this one · 为什么推这题</span><span>'+escHtml(round.why)+'</span></div>':'')
    +'<div class="qcard"><div class="qhead">'
    +'<span class="qno'+typeBadge+'">'+escHtml(it.label)+'</span>'
@@ -968,6 +1072,8 @@ function viewQuiz(){
    +'<button class="btn ghost" onclick="route(\'home\')">Exit <span class="zhx">退出</span></button>'
    +(round.mode==='smart'? '<button class="btn ghost sm" onclick="skipQ()" title="记为答对并继续 · marks the question correct">Skip &middot; mark correct <span class="zhx">跳过（记为答对）</span></button>'
      +'<button class="btn ghost sm" onclick="skipTopic()">Skip 考点 <span class="zhx">跳过这个二级考点</span></button>':'')
+   +(drill? '<button class="btn ghost sm" onclick="skipDrill()" title="跳到还没做过的题 · no record is written">Skip <span class="zhx">跳过这题</span></button>':'')
+   +(round.replay? '<button class="btn ghost sm" onclick="retryCurrent()">Retry <span class="zhx">重做这题</span></button>':'')
    +'<div class="spacer"></div>'
    +(canNext? (round.mode==='smart'
      ? '<button class="btn pri" onclick="start(\'smart\')">Next question &rarr; <span class="zhx">下一题</span></button>'
@@ -2056,6 +2162,8 @@ var API={
   setGlossQ:setGlossQ,
   pickChoice:pickChoice, submitAnswer:submitAnswer, selfGrade:selfGrade, revealSelf:revealSelf,
   start:start, startSingle:startSingle, startTopic:startTopic, startSub:startSub, advance:advance,
+  drillMode:drillMode, drillOrder:drillOrder, drillStats:drillStats, drillSideHtml:drillSideHtml,
+  jumpTo:jumpTo, skipDrill:skipDrill, retryCurrent:retryCurrent, replayAttempt:replayAttempt,
   examStart:examStart, examResume:examResume, examNew:examNew, examPick:examPick, examType:examType,
   examGo:examGo, examNext:examNext, examPrev:examPrev, examClear:examClear,
   examAskSubmit:examAskSubmit, examSubmit:examSubmit, examReset:examReset,
@@ -2083,9 +2191,12 @@ var GLOBAL_HANDLERS={
   renderAcct:renderAcct, submitAcct:submitAcct, doLogout:doLogout,
   syncNow:syncNow, resetAll:resetAll, clearFav:clearFav,
   start:start, startSingle:startSingle, startTopic:startTopic, startSub:startSub, advance:advance,
+  drillMode:drillMode, drillOrder:drillOrder, drillStats:drillStats, drillSideHtml:drillSideHtml,
+  jumpTo:jumpTo, skipDrill:skipDrill, retryCurrent:retryCurrent, replayAttempt:replayAttempt,
   examStart:examStart, examResume:examResume, examNew:examNew, examPick:examPick,
   examType:examType, examGo:examGo, examNext:examNext, examPrev:examPrev,
   examClear:examClear, examAskSubmit:examAskSubmit, examSubmit:examSubmit, examRowToggle:examRowToggle,
+  jumpTo:jumpTo, skipDrill:skipDrill, retryCurrent:retryCurrent,
   toggleSec:toggleSec,
   skipQ:skipQ, skipTopic:skipTopic,
   pickChoice:pickChoice, submitAnswer:submitAnswer, selfGrade:selfGrade,
