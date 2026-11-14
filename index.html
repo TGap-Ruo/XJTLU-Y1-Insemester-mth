@@ -626,10 +626,18 @@ function activeGroupCount(){
   // twice, which is what makes one round cover the whole bank properly
   return Math.max(1, SUBGROUPS.length);
 }
-function cycleInfo(){ var c=cycleState(); return {n:c.n||1,seen:Object.keys(c.seen).length,all:Math.max(1,activeGroupCount())}; }
+/* how many groups this round can actually serve: empty ones and those in the
+   12h "skip 考点" pool are out, so the counter must not wait for them */
+function roundGroupCount(){
+  var sk=skips();
+  var n=SUBGROUPS.filter(function(g){ return g.ids.length && !sk.s[g.id]; }).length;
+  return Math.max(1, n);
+}
+function cycleInfo(){ var c=cycleState(); return {n:c.n||1,seen:Object.keys(c.seen).length,all:roundGroupCount()}; }
 function markCycle(gid){
   var c=cycleState(); c.seen[gid]=1;
-  if(Object.keys(c.seen).length>=Math.max(1,activeGroupCount())){ c.n=(c.n||1)+1; c.seen={}; return true; }
+  var need=roundGroupCount();
+  if(Object.keys(c.seen).length>=need){ c.n=(c.n||1)+1; c.seen={}; return true; }
   return false;
 }
 function diag(gid){
@@ -687,14 +695,39 @@ function pickSmart(){
   if(!pool.length){ store.skip={q:{},s:{}}; save(true); pool=SUBGROUPS.filter(function(g){ return g.ids.length; }); }
   var ds=pool.map(function(g){ return diag(g.id); });
   var un=ds.filter(function(d){ return d.done===0; });          // phase 1: coverage
-  for(var i=0;i<un.length;i++){ var c=pickFrom(un[i],sk); if(c) return {id:c.id,why:whyText(un[i],c),phase:1,sec:un[i].id,kind:c.kind}; }
-  var best=null,bestSc=-9e9;                                     // phase 2: weakness
-  for(var j=0;j<ds.length;j++){
-    if(ds[j].done===0) continue;
-    var c2=pickFrom(ds[j],sk); if(!c2) continue;
-    var sc=weakness(ds[j]);
-    if(sc>bestSc){ bestSc=sc; best={d:ds[j],c:c2}; }
+  /* an untouched 考点 whose items are all sitting in the 12h skip pool would
+     block phase 1 for ever (the round would freeze at 24/25): drop the item
+     skips and try again */
+  if(un.length && !un.some(function(d){ return pickFrom(d,sk); })){
+    store.skip={q:{},s:{}}; save(true); sk=skips();
   }
+  for(var i=0;i<un.length;i++){ var c=pickFrom(un[i],sk); if(c) return {id:c.id,why:whyText(un[i],c),phase:1,sec:un[i].id,kind:c.kind}; }
+  /* Phase 2: cover the rest of THIS round before repeating anything.
+     It used to score every group and take the global maximum, so once phase 1
+     was empty the same few weak 考点 won every draw: a user with 4 mistakes
+     got those 4 for ever and the round counter froze at 4/25 (they were already
+     in `seen`, so marking them again could never reach 25).  Now the candidates
+     are the groups this cycle has not served yet, ranked by weakness — the
+     round walks all 25 考点 and only then resets. */
+  var cyc=cycleState();
+  var answered=ds.filter(function(d){ return d.done>0; });
+  var pending=answered.filter(function(d){ return !cyc.seen[d.id]; });
+  var best=null,bestSc=-9e9;
+  function rank(set){
+    for(var j=0;j<set.length;j++){
+      var c2=pickFrom(set[j],sk); if(!c2) continue;
+      var sc=weakness(set[j]);
+      if(sc>bestSc){ bestSc=sc; best={d:set[j],c:c2}; }
+    }
+  }
+  rank(pending);
+  if(!best && pending.length){
+    /* every pending 考点 is fully hidden by the 12h item skips: clear them so
+       the round can finish instead of stopping one group short for ever */
+    store.skip={q:{},s:{}}; save(true); sk=skips();
+    rank(pending);
+  }
+  if(!best) rank(answered);        // every group exhausted this cycle (skips/empties)
   if(best) return {id:best.c.id,why:whyText(best.d,best.c),phase:2,sec:best.d.id,kind:best.c.kind};
   return null;
 }
@@ -762,7 +795,10 @@ function skipQ(){
 function skipTopic(){
   var it=currentItem();
   addSkip('s', it && (it.sub || it.topic) ? (it.sub || it.topic) : '__untagged__');
-  if(round.sec) markCycle(round.sec); save();
+  /* do NOT markCycle() here: a skipped 考点 leaves the round (pickSmart stops
+     serving it), so counting it as covered would make the round finish one
+     group early and the next cycle could never reach 25/25. */
+  save();
   toast('Skipping this topic · 暂时跳过这类'); start('smart');
 }
 /* ---------- 考点练习：左侧题号表 + 跳转 ----------
@@ -1055,7 +1091,7 @@ function viewQuiz(){
    +aiTagHtml(it)
    +starBtn(it.id)
    +'<div class="qprog"><span class="muted" style="font-size:12px">'
-   +(round.mode==='smart'? ('Phase '+(untouchedGroups().length?1:2)) : ((round.i+1)+'/'+round.list.length))
+   +(round.mode==='smart'? ('Round '+cy.n+' · '+cy.seen+'/'+cy.all) : ((round.i+1)+'/'+round.list.length))
    +'</span><span class="track"><i style="width:'+pct+'%"></i></span></div></div>'
    +'<div class="qbody"><span class="muted" style="font-size:11.5px">'+typeNameOf(it)+'</span>'
    +(it.img? '<img class="qimg" src="'+escAttr(it.img)+'" alt="'+escAttr(it.label)+'" loading="lazy">':'')
