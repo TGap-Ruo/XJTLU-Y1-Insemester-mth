@@ -1772,15 +1772,13 @@ function paintBank(){
 }
 
 /* ---------- Preview / Favourites board (pure browsing, NEVER writes store.h) ---------- */
-var pvType='all', pvCh='all', pvTopic='all', pvQ='', pvPage=0, pvScope='all', pvMode='preview';
-var PV_PER=6;
-function viewPreview(){ pvPage=0; renderPv('preview'); }
-function viewFav(){ pvPage=0; renderPv('fav'); }
-function pvSetType(k){ pvType=k; pvPage=0; renderPv(pvMode); }
-function pvSetCh(c){ pvCh=c; pvPage=0; renderPv(pvMode); }
-function pvSetTopic(t){ pvTopic=t; pvPage=0; renderPv(pvMode); }
-function pvSetQ(v){ pvQ=v; pvPage=0; pvPaint(); }
-function pvPageGo(n){ pvPage=n; pvPaint(); }
+var pvType='all', pvCh='all', pvTopic='all', pvQ='', pvIdx=0, pvScope='all', pvMode='preview';
+function viewPreview(){ pvIdx=0; renderPv('preview'); }
+function viewFav(){ pvIdx=0; renderPv('fav'); }
+function pvSetType(k){ pvType=k; pvIdx=0; renderPv(pvMode); }
+function pvSetCh(c){ pvCh=c; pvIdx=0; renderPv(pvMode); }
+function pvSetTopic(t){ pvTopic=t; pvIdx=0; renderPv(pvMode); }
+function pvSetQ(v){ pvQ=v; pvIdx=0; pvPaint(); }
 function pvMatch(it,q){
   if(!q) return true;
   q=q.toLowerCase();
@@ -1831,35 +1829,86 @@ function previewCard(id){
     +'<div class="pv-ft"><button class="btn ghost" onclick="startSingle('+id+')">Practice this <span class="zhx">做这题</span></button>'
     +favBtn(id)+'</div></article>';
 }
-function pvPaint(){
-  var g=document.getElementById('pvGrid'), c=document.getElementById('pvCards');
-  if(!g||!c) return;
-  var list=pvList(), pages=Math.max(1,Math.ceil(list.length/PV_PER));
-  if(pvPage>=pages) pvPage=pages-1; if(pvPage<0) pvPage=0;
-  var page=list.slice(pvPage*PV_PER,(pvPage+1)*PV_PER);
-  g.innerHTML=list.map(function(it){
-    var r=store.h[it.id], st=r?(r.ok?'ok':'bad'):'new';
-    return '<button class="idx-b '+st+(isFav(it.id)?' fav':'')+'" onclick="pvGo('+it.id+')" '
-      +'title="'+escAttr(it.label)+'"><b>'+escHtml(it.label)+'</b><i>'+escHtml(it.topic||'—')+'</i>'
-      +(r?(r.ok?'<u>✓</u>':'<u>✕</u>'):'')+'</button>';
-  }).join('') || '<p class="muted" style="grid-column:1/-1">No item in this slice.</p>';
-  c.innerHTML=list.length? page.map(function(it){ return previewCard(it.id); }).join('')
-    : '<div class="card pv-empty"><div class="big">☆</div><h3 style="margin:8px 0 4px">'
-      +(pvScope==='fav'?'No favourites yet':'Nothing matches')+'</h3>'
-      +'<p class="muted">'+(pvScope==='fav'?'Tap the ★ on any question to keep it here.':'Try another type, topic or search term.')+'</p>'
-      +'<button class="btn ghost" style="margin-top:10px" onclick="route(\'bank\')">Browse the bank <span class="zhx">去题库</span></button></div>';
-  var meta=document.getElementById('pvMeta');
-  if(meta) meta.textContent=list.length? (list.length+' items · page '+(pvPage+1)+'/'+pages+' ／ 共 '+list.length+' 题，第 '+(pvPage+1)+'/'+pages+' 页') : '0 items ／ 共 0 题';
-  var pager=document.getElementById('pvPager');
-  if(pager) pager.innerHTML='<button class="btn ghost" '+(pvPage<=0?'disabled':'')+' onclick="pvPageGo('+(pvPage-1)+')">&larr; Prev <span class="zhx">上一页</span></button>'
-    +'<span class="muted">Page '+(pvPage+1)+' / '+pages+'</span>'
-    +'<button class="btn ghost" '+(pvPage>=pages-1?'disabled':'')+' onclick="pvPageGo('+(pvPage+1)+')">Next <span class="zhx">下一页</span> &rarr;</button>';
-  renderMath();
+
+/* ---------- preview map (题号表) ----------
+   Same idea as the 考点 drill: one card on the right, a number table on the
+   left.  Here the table covers every item in the current filter and is grouped
+   by 二级考点, so 285 numbers stay findable: the group header tells you where you
+   are, the cell shows the item's own number inside that 考点 (01, 02, …).
+   A cell is green / red / plain by your own history and ringed when current. */
+function pvMapHtml(list,cur){
+  var out=[], row=[], last=null;
+  function flush(){ if(row.length){ out.push('<div class="ex-grid">'+row.join('')+'</div>'); row=[]; } }
+  list.forEach(function(it,k){
+    var grp=it.sub || it.topic || '—';
+    if(grp!==last){
+      flush();
+      var x=subInfo(it.sub);
+      out.push('<div class="qn-grp"><b>'+escHtml(grp)+'</b><span>'+escHtml(x.zh||x.en||'')+'</span></div>');
+      last=grp;
+    }
+    var r=store.h[it.id], cls=!r? 'new' : (r.ok? 'ok':'bad');
+    if(k===cur) cls+=' cur';
+    var tail=String(it.label||'').split('-').pop();
+    row.push('<button class="ex-cell '+cls+'" onclick="pvJump('+k+')" '
+      +'title="'+escAttr(it.label+' · '+(r? (r.ok?'已做对':'做过错') : '未做'))+'">'+escHtml(tail)+'</button>');
+  });
+  flush();
+  return out.join('');
+}
+/* keep the card in view when jumping from the map */
+function pvScroll(){
+  try{
+    var el=document.querySelector('.pv-cards'); if(!el||!el.getBoundingClientRect) return;
+    var y=el.getBoundingClientRect().top + (G.pageYOffset||0) - 64;
+    if(y>0 && Math.abs((G.pageYOffset||0)-y)>4 && typeof G.scrollTo==='function') G.scrollTo(0,y);
+  }catch(e){}
+}
+function pvJump(k){
+  var list=pvList();
+  k=+k; if(!(k>=0&&k<list.length)) return;
+  pvIdx=k; pvPaint(); pvScroll();
+}
+function pvStep(d){
+  var list=pvList();
+  if(!list.length) return;
+  var k=pvIdx+(+d||0);
+  if(k<0) k=0; if(k>list.length-1) k=list.length-1;
+  if(k===pvIdx && d) return;
+  pvIdx=k; pvPaint(); pvScroll();
 }
 function pvGo(id){
   var list=pvList(), idx=list.findIndex(function(x){ return x.id===id; });
   if(idx<0) return;
-  pvPage=Math.floor(idx/PV_PER); pvPaint();
+  pvIdx=idx; pvPaint(); pvScroll();
+}
+function pvEmptyHtml(){
+  return '<div class="card pv-empty"><div class="big">☆</div><h3 style="margin:8px 0 4px">'
+    +(pvScope==='fav'?'No favourites yet':'Nothing matches')+'</h3>'
+    +'<p class="muted">'+(pvScope==='fav'?'Tap the ★ on any question to keep it here.':'Try another type, topic or search term.')+'</p>'
+    +'<button class="btn ghost" style="margin-top:10px" onclick="route(\'bank\')">Browse the bank <span class="zhx">去题库</span></button></div>';
+}
+function pvPaint(){
+  var cards=document.getElementById('pvCards'); if(!cards) return;
+  var list=pvList();
+  if(pvIdx>=list.length) pvIdx=Math.max(0,list.length-1);
+  if(pvIdx<0) pvIdx=0;
+  var cur=list[pvIdx];
+  var map=document.getElementById('pvMap');
+  if(map) map.innerHTML=list.length? pvMapHtml(list,pvIdx)
+    : '<p class="muted" style="font-size:11.5px;padding:4px 2px">No item ／ 没有题目</p>';
+  cards.innerHTML=cur? previewCard(cur.id) : pvEmptyHtml();
+  var pos=document.getElementById('pvPos');
+  if(pos) pos.textContent=list.length? ((pvIdx+1)+' / '+list.length) : '0 / 0';
+  var meta=document.getElementById('pvMeta');
+  if(meta) meta.textContent=list.length? (list.length+' items ／ 共 '+list.length+' 题'+(cur? ' · '+cur.label : '')) : '0 items ／ 共 0 题';
+  var pager=document.getElementById('pvPager');
+  if(pager) pager.innerHTML=list.length
+    ? '<button class="btn ghost" '+(pvIdx<=0?'disabled':'')+' onclick="pvStep(-1)">&larr; Prev <span class="zhx">上一题</span></button>'
+      +'<span class="muted">'+(pvIdx+1)+' / '+list.length+'</span>'
+      +'<button class="btn ghost" '+(pvIdx>=list.length-1?'disabled':'')+' onclick="pvStep(1)">Next <span class="zhx">下一题</span> &rarr;</button>'
+    : '';
+  renderMath();
 }
 function renderPv(mode){
   pvMode=mode; pvScope=(mode==='fav')?'fav':'all';
@@ -1887,9 +1936,18 @@ function renderPv(mode){
    +'<div class="filter" id="pvTopic">'+topicHtml+'</div>'
    +'<div class="idxsearch"><input id="pvQ" value="'+escAttr(pvQ)+'" placeholder="Find Q1-01 / 1-01 / a topic · 搜题号或考点" oninput="pvSetQ(this.value)"></div>'
    +'<div class="pv-count" id="pvMeta"></div>'
-   +'<div class="idxgrid pv-grid" id="pvGrid"></div></div>'
-   +'<div class="pv-cards" id="pvCards"></div>'
-   +'<div class="pv-pager" id="pvPager"></div>'
+   +'</div>'
+   +'<div class="pv-split">'
+   +'<aside class="ex-side qn-side pv-side"><div class="ex-side-hd"><span>Questions<span class="tz"> 题号</span></span>'
+   +'<b id="pvPos">1 / 1</b></div>'
+   +'<div class="qn-map" id="pvMap"></div>'
+   +'<div class="ex-legend"><span><i class="sw"></i>未做</span><span><i class="sw ok"></i>做对</span>'
+   +'<span><i class="sw bad"></i>做过错</span><span><i class="sw cur"></i>当前</span></div>'
+   +'<p class="ex-note">点题号直接跳转 · click a number to jump</p>'
+   +'</aside>'
+   +'<div class="pv-main"><div class="pv-cards" id="pvCards"></div>'
+   +'<div class="pv-pager" id="pvPager"></div></div>'
+   +'</div>'
    +'<div style="margin:6px 0 40px"><button class="btn ghost" onclick="route(\'home\')">Back <span class="zhx">返回</span></button></div></div>';
   pvPaint(); paintTop();
 }
@@ -2082,6 +2140,12 @@ function onKey(e){
   if(m&&m.classList&&m.classList.contains&&m.classList.contains('on')) return;
   var k=(e.key||'').toLowerCase();
   if(k==='f'){ var id=currentCardId(); if(id!=null){ if(e.preventDefault)e.preventDefault(); toggleFav(id); } return; }
+  /* preview & favourites: ← → step through the bank, the map stays in sync */
+  if((curView==='preview'||curView==='fav') && (e.key==='ArrowRight'||e.key==='ArrowLeft')){
+    if(e.preventDefault)e.preventDefault();
+    pvStep(e.key==='ArrowRight'? 1 : -1);
+    return;
+  }
   /* mock paper: A–D answers, ← → move, Enter never fires 交卷 by accident */
   if(curView==='exam'){
     if(!exam.on||exam.submitted) return;
@@ -2158,7 +2222,9 @@ var API={
   previewCard:previewCard, answerAreaHtml:answerAreaHtml,
   viewHome:viewHome, viewQuiz:viewQuiz, viewBank:viewBank, viewPreview:viewPreview,
   viewRef:viewRef, viewGlossary:viewGlossary, viewMistakes:viewMistakes, viewFav:viewFav,
-  viewRes:viewRes, renderPv:renderPv, pvPaint:pvPaint, paintGloss:paintGloss,
+  viewRes:viewRes, renderPv:renderPv, pvPaint:pvPaint, pvList:pvList,
+  pvGo:pvGo, pvJump:pvJump, pvStep:pvStep, pvMapHtml:pvMapHtml,
+  pvSetType:pvSetType, pvSetCh:pvSetCh, pvSetTopic:pvSetTopic, pvSetQ:pvSetQ, paintGloss:paintGloss,
   setGlossQ:setGlossQ,
   pickChoice:pickChoice, submitAnswer:submitAnswer, selfGrade:selfGrade, revealSelf:revealSelf,
   start:start, startSingle:startSingle, startTopic:startTopic, startSub:startSub, advance:advance,
@@ -2204,7 +2270,7 @@ var GLOBAL_HANDLERS={
   viewBank:viewBank, viewRef:viewRef, setBankQ:setBankQ, setBankType:setBankType,
   bankPickCh:bankPickCh, bankPickTopic:bankPickTopic, bankPickSub:bankPickSub,
   setGlossQ:setGlossQ,
-  pvGo:pvGo, pvPageGo:pvPageGo, pvSetCh:pvSetCh, pvSetQ:pvSetQ,
+  pvGo:pvGo, pvJump:pvJump, pvStep:pvStep, pvSetCh:pvSetCh, pvSetQ:pvSetQ,
   pvSetTopic:pvSetTopic, pvSetType:pvSetType
 };
 Object.keys(GLOBAL_HANDLERS).forEach(function(k){ G[k]=GLOBAL_HANDLERS[k]; });

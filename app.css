@@ -619,3 +619,27 @@ a{color:inherit;text-decoration:none}
   .qn-wrap{grid-template-columns:1fr;gap:12px}
   .qn-side{position:sticky;top:58px;z-index:20;order:-1}
 }
+
+/* ---------- preview: number map on the LEFT, one card on the right ----------
+   Preview is a reading surface, so the card gets the room and the map takes
+   over navigation: every item in the current filter, grouped by 二级考点
+   (header = 考点, cell = the item's own number inside it). */
+.pv-split{display:grid;grid-template-columns:232px minmax(0,1fr);gap:18px;
+  align-items:start;margin-top:14px}
+.pv-side{position:sticky;top:70px}
+.qn-map{max-height:calc(100vh - 300px);overflow:auto;padding-right:2px;margin:0 -2px}
+.qn-grp{display:flex;align-items:baseline;gap:6px;margin:9px 0 4px;padding-left:2px;
+  font-size:10.5px;color:var(--ink4);min-width:0}
+.qn-grp:first-child{margin-top:0}
+.qn-grp b{font-size:11px;color:var(--ink2);font-variant-numeric:tabular-nums;flex:0 0 auto}
+.qn-grp span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pv-side .ex-grid{grid-template-columns:repeat(5,1fr);gap:5px}
+.pv-side .ex-cell{height:29px;font-size:11.5px}
+.pv-main{min-width:0}
+.pv-main .pv-cards{margin:0}
+@media(max-width:980px){
+  .pv-split{grid-template-columns:1fr;gap:12px}
+  .pv-side{position:sticky;top:58px;z-index:20;order:-1}
+  .qn-map{max-height:132px}
+  .pv-side .ex-cell{height:28px}
+}

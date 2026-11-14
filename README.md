@@ -120,6 +120,13 @@ favourites or mistake book can leak into the other.
   **Skip** jumps to the next untouched question without recording anything.
   Single-question cards (bank / preview / mistake book) and the smart round keep
   their one-card layout.
+- **Preview · 题库速览** (`#preview`). Every question with its answer shown — nothing
+  is graded and nothing is written. It uses the same shape as the topic drills: a
+  number map on the left, one card on the right. The map covers the whole filter
+  (285 by default) grouped by 二级考点, so `1.2.3` is a header and `04` is a cell
+  under it; clicking a number swaps the card instantly, `← →` step through, and
+  the filters (type / chapter / topic / search) narrow the map itself. Favourites
+  reuse the same screen with the starred items as the map.
 - **Mock paper · 模拟卷** (`Mock` in the top bar, `#exam`). A 25-question,
   90-minute paper drawn at random but **stratified**: exactly one question from
   each of the 25 sub-topics, so the syllabus is always fully covered, and the
